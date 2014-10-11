@@ -1,0 +1,39 @@
+/*
+Theme Name: Basis Framework
+Theme URI: http://basiswp.com/
+Author: UpThemes
+Author URI: http://upthemes.com/
+Description: Basis is the ultimate theme for pastors and ministry leaders.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: basis
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+
+Basis includes code from Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+*/
+
+@import "variables/variables";
+@import "mixins/functions";
+@import "mixins/global";
+@import "mixins/grid";
+@import "mixins/color-contrast";
+@import "partials/typography";
+@import "partials/forms";
+@import "partials/navigation";
+@import "partials/accessibility";
+@import "partials/alignments";
+@import "partials/clearings";
+@import "partials/widgets";
+@import "partials/content";
+@import "partials/infinite-scroll";
+@import "partials/media";
+@import "partials/layout";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/featured-content";
+@import "partials/genericons";
+@import "partials/social";

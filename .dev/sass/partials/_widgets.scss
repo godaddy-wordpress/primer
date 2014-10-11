@@ -1,0 +1,249 @@
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget */
+.widget_search {
+	padding-right: 1.25em;
+	padding-right: 1.25rem;
+
+	@media screen and (max-width: 600px) {
+		padding-right: 0;
+	}
+
+	.search-field {
+		width: 100%;
+		background: #fff;
+		border-radius: 2px;
+		box-sizing: border-box;
+
+		&:focus {
+			background: #fff;
+		}
+	}
+
+	.search-submit {
+		display: none;
+	}
+}
+
+.widget-title {
+	font-family: $sans-font-family;
+	padding: 1em 0em 1em 1.25em;
+	padding: 1rem 0rem 1rem 1.25rem;
+	left: -1.25em;
+	left: -1.25rem;
+	position: relative;
+	box-sizing: content-box;
+	width: 100%;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 0 $global-radius $global-radius 0;
+	background: desaturate( darken( $body-bg, 10% ), 5% );
+
+	@media screen and (max-width: 600px) {
+		padding: 1em 1.25em 1em 1.25em;
+		padding: 1rem 1.25rem 1rem 1.25rem;
+		border-radius: 0;
+	}
+}
+
+.widget {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		a {
+			display: block;
+			padding: .5em 0;
+			padding: .5rem 0;
+			border-bottom: 1px solid desaturate( darken( $body-bg, 10% ), 5% );
+		}
+	}
+
+	> ul:last-child > li:last-child > a,
+	> div > ul:last-child > li:last-child > a {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+/* Author Widget */
+.widget_author {
+
+	.widget-title {
+		margin-bottom: 1.25em;
+		margin-bottom: 1.25rem;
+	}
+
+	.avatar {
+		width: 80px;
+		border-radius: 4px;
+		float: left;
+		margin-right: 1em;
+		margin-right: 1rem;
+		margin-bottom: .5em;
+		margin-bottom: .5rem;
+		overflow: hidden;
+	}
+
+	.author-name {
+		font-size: rem-calc(18);
+		font-weight: bold;
+		margin-bottom: .5em;
+		margin-bottom: .5rem;
+	}
+
+	p {
+		font-size: rem-calc(16);
+		line-height: 1.5;
+	}
+}
+
+/* Calendar Widget */
+
+.widget_recent_comments {
+	li {
+		padding: .5em 0;
+		padding: .5rem 0;
+		border-bottom: 1px solid desaturate( darken( $body-bg, 10% ), 5% );
+
+		&:last-child {
+			border-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		a {
+			border: 0;
+		}
+	}
+}
+
+/* Calendar Widget */
+
+.widget_calendar {
+	margin-bottom: 1.25em;
+	margin-bottom: 1.25rem;
+
+	.widget-title {
+		margin-bottom: 1.25em;
+		margin-bottom: 1.25rem;
+	}
+
+	#calendar_wrap {
+		padding-right: 1.25em;
+		padding-right: 1.25rem;
+
+		#wp-calendar {
+			width: 100%;
+			color: $body-font-color;
+			border-collapse: collapse;
+			font-size: .9em;
+			border-radius: 0 0 2px 2px;
+			overflow: hidden;
+
+			td,th{
+				width: 14.285714286%;
+				background: #fff;
+				border: 0;
+			}
+
+			&,td,th,caption{
+				text-align: center;
+			}
+
+			caption {
+				color: contrast-color($primary-color,#222,white,30%);
+				padding: .75em .25em;
+				font-weight: bold;
+				background-color: $primary-color;
+				border-radius: 2px 2px 0 0;
+			}
+
+			thead th {
+				padding: .25em 0;
+				background-color: lighten($primary-color, 30%);
+
+				&:last-child { border: none; }
+			}
+
+			tbody tr {
+
+				&:last-child { border: none; }
+
+				td {
+					height: 2em;
+					padding: 0;
+					margin: 0;
+
+					&#today {
+						position: relative;
+						&:after {
+							content: "";
+							border-radius: 2px;
+							border: 1px solid $primary-color;
+							position: absolute;
+							top: 2px;
+							right: 3px;
+							bottom: 3px;
+							left: 3px;
+						}
+					}
+
+					a {
+						color: contrast-color($primary-color,#222,white,30%);
+						background: lighten(desaturate( darken( $body-bg, 10% ), 5% ), 10%);
+						border-radius: 2px;
+						margin: 0 3px;
+						display: block;
+						font-weight: bold;
+						border-bottom: none;
+						-webkit-transition: 200ms color linear;
+							 -moz-transition: 200ms color linear;
+								-ms-transition: 200ms color linear;
+							 	 -o-transition: 200ms color linear;
+										transition: 200ms color linear;
+					}
+				}
+			}
+
+			tfoot {
+				background: desaturate( darken( $body-bg, 10% ), 5% );
+
+				td {
+					padding: .5em 1em;
+					font-weight: bold;
+
+					a{
+						color: $body-font-color;
+						-webkit-transition: 200ms color linear;
+							 -moz-transition: 200ms color linear;
+								-ms-transition: 200ms color linear;
+							 	 -o-transition: 200ms color linear;
+										transition: 200ms color linear;
+
+						&:hover{
+							color: $primary-color;
+						}
+					}
+
+					&#prev{
+						text-align: left;
+					}
+
+					&#next{
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+}

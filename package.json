@@ -1,0 +1,30 @@
+{
+  "name": "basis-pro",
+  "version": "0.0.1",
+  "description": "A blog theme for pastors.",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/UpThemes/basis-pro.git"
+  },
+  "author": "UpThemes",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/UpThemes/basis-pro/issues"
+  },
+  "homepage": "https://github.com/UpThemes/basis-pro",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-autoprefixer": "~1.0.0",
+    "grunt-browser-sync": "~1.3.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-pot": "~0.1.2",
+    "grunt-sass": "^0.14.0",
+    "grunt-cssjanus": "~0.2.2"
+  }
+}
