@@ -9,13 +9,13 @@ What it offers:
 	* Sass compilation with experimental libsass compiler [grunt-sass](https://github.com/sindresorhus/grunt-sass)
 	* RTL styles with [CSSJanus](https://code.google.com/p/cssjanus/)
 	* Live browser syncing across connected devices over Wi-Fi with [Browser Sync](http://www.browsersync.io)
-	* JSHint for checking
+	* JSHint for testing JavaScript.
 * Sass (uses SCSS syntax)
 	* Automated WYSIWYG editor styles
 	* Foundation grid system
-	* Color contrast functions from Compass Framework
+	* Color contrast function from [Compass](http://compass-style.org/)
 * WordPress Coding Standards
-* Customizer (coming soon)
+* Awesome Customizer controls (coming soon)
 
 ### Important Things to Note
 
