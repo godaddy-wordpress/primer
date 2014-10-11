@@ -1,6 +1,8 @@
 <?php
 /**
  * This file contains many of the hook-ups for parts of our theme.
+ *
+ * @package basis
  */
 
 /**
