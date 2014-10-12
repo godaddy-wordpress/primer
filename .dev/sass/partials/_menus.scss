@@ -11,22 +11,6 @@ $menu-height: 3.5rem !default;
 	position: relative;
 	z-index: 100;
 
-	.site-title{
-		float: left;
-		font-size: emCalc(24);
-		font-size: rem-calc(24);
-		font-weight: bold;
-		color: contrast-color($menu-background-color, #fff, #000, 50%);
-		margin-bottom: 0;
-		line-height: $menu-height;
-		text-transform: uppercase;
-
-		a{
-			padding: 0 1em;
-			padding: 0 1rem;
-		}
-	}
-
 	ul {
 		font-size: emCalc(13);
 		font-size: rem-calc(13);

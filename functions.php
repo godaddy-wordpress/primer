@@ -84,23 +84,6 @@ function basis_setup() {
 endif; // basis_setup
 add_action( 'after_setup_theme', 'basis_setup' );
 
-
-function basis_single_header(){
-
-	if( is_singular() ){
-
-		if ( has_post_thumbnail( get_the_ID() ) ){
-			add_action( 'basis_header' , 'basis_single_title' );
-		} else {
-			add_action( 'basis_article_header' , 'basis_single_title' );
-		}
-
-	}
-
-}
-
-add_action( 'wp_head', 'basis_single_header' );
-
 /**
  * Register widget area.
  *

@@ -1,11 +1,30 @@
 $entry-title-bg: rgba(0,0,0,.6) !default;
 
-.site-header {
+.site-title-wrapper{
+	@extend .row;
+}
 
-	.site-title {
-		font-family: $sans-font-family;
+.site-title {
+	font-family: $sans-font-family;
+	float: left;
+	font-size: emCalc(24);
+	font-size: rem-calc(24);
+	font-weight: bold;
+	color: contrast-color($menu-background-color, #fff, #000, 50%);
+	margin-bottom: 40px;
+	line-height: $menu-height;
+
+	a{
+		padding: 0 1em;
+		padding: 0 1rem;
 	}
+}
 
+.site-header {
+	padding: 40px 0 0;
+}
+
+.featured-content{
 	.entry-header{
 		background-size: cover;
 

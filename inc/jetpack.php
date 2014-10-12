@@ -31,7 +31,7 @@ function basis_jetpack_init(){
 
 }
 
-add_action( 'basis_header', 'basis_jetpack_init' );
+add_action( 'basis_after_header', 'basis_jetpack_init' );
 
 /**
  * Adds Jetpack featured posts.

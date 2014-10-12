@@ -6,6 +6,25 @@
  */
 
 /**
+ * Single header article hookups.
+ */
+function basis_single_header(){
+
+	if( is_singular() ){
+
+		if ( has_post_thumbnail( get_the_ID() ) ){
+			add_action( 'basis_after_header' , 'basis_single_title' );
+		} else {
+			add_action( 'basis_article_header' , 'basis_single_title' );
+		}
+
+	}
+
+}
+
+add_action( 'wp_head', 'basis_single_header' );
+
+/**
  * Adds the site title to the header.
  *
  * Grabs the template part for the site title and attaches it.
@@ -15,7 +34,7 @@
  */
 function basis_add_site_title(){
 
-	get_template_part( 'parts/header/site-title' );
+	get_template_part( 'templates/parts/site-title' );
 
 }
 
@@ -31,7 +50,7 @@ add_action( 'basis_header', 'basis_add_site_title', 1 );
  */
 function basis_add_primary_navigation(){
 
-	get_template_part( 'parts/header/primary-navigation' );
+	get_template_part( 'templates/parts/primary-navigation' );
 
 }
 

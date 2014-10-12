@@ -22,10 +22,14 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'basis' ); ?></a>
 
+	<?php do_action( 'basis_before_header' ); ?>
+
 	<header id="masthead" class="site-header" role="banner">
 
 		<?php do_action( 'basis_header' ); ?>
 
 	</header><!-- #masthead -->
+
+	<?php do_action( 'basis_after_header' ); ?>
 
 	<div id="content" class="site-content">

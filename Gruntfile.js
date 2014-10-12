@@ -90,7 +90,7 @@ module.exports = function(grunt) {
 
 		watch: {
 			css: {
-				files: '**/*.scss',
+				files: '.dev/**/*.scss',
 				tasks: ['sass','autoprefixer','cssjanus']
 			},
 			scripts: {
