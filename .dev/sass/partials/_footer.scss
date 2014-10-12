@@ -1,13 +1,13 @@
 $site-footer-background: #222 !default;
-$site-footer-text-color: contrast-color($site-footer-background, darken($site-footer-background,25%),lighten($site-footer-background,25%),50%);
-$site-footer-anchor-color: contrast-color($site-footer-background, darken($site-footer-background,35%),lighten($site-footer-background,35%),50%);
-$site-footer-anchor-color-hover: contrast-color($site-footer-background, darken($site-footer-background,40%),lighten($site-footer-background,40%),50%);
+$site-footer-text-color: contrast-color($site-footer-background, #222, #fff, 50%);
+$site-footer-border-color: contrast-color($site-footer-background, darken($site-footer-background,15%), lighten($site-footer-background,15%), 50%);
+$site-footer-anchor-color: contrast-color($site-footer-background, #222, #fff, 50%);
+$site-footer-anchor-color-hover: contrast-color($site-footer-background, #222, #fff, 50%);
 
 .site-footer{
 	background-color: $site-footer-background;
 	color: $site-footer-text-color;
-	padding: 2em 0;
-	padding: 2rem 0;
+	padding: 40px 0 0 0;
 
 	a{
 		color: $site-footer-anchor-color;
@@ -23,6 +23,11 @@ $site-footer-anchor-color-hover: contrast-color($site-footer-background, darken(
 
 	.footer-widget {
 		padding: 0 20px;
+
+		.widget{
+			background-color: lighten($site-footer-background,10%);
+			color: $site-footer-text-color;
+		}
 
 		@media #{$large-up} {
 			width: 33.3333333333%;
@@ -46,12 +51,9 @@ $site-footer-anchor-color-hover: contrast-color($site-footer-background, darken(
 
 		.widget-title {
 			color: $site-footer-anchor-color;
-			padding: 0 0 .5em 0;
-			padding: 0 0 .5rem 0;
-			left: auto;
 			background: transparent;
 			font-weight: bold;
-			border-bottom: 2px solid $site-footer-text-color;
+			border-bottom: 2px solid $site-footer-border-color;
 			border-radius: 0;
 		}
 
@@ -60,8 +62,7 @@ $site-footer-anchor-color-hover: contrast-color($site-footer-background, darken(
 			margin-bottom: 2.25rem;
 
 			li, a {
-				border-color: $site-footer-text-color;
-				border-color: rgba($site-footer-text-color,.3);
+				border-color: $site-footer-border-color;
 			}
 		}
 
@@ -72,5 +73,25 @@ $site-footer-anchor-color-hover: contrast-color($site-footer-background, darken(
 }
 
 .site-info{
-	text-align: center;
+	padding: 20px 0;
+	background: $site-footer-border-color;
+	color: $site-footer-text-color;
+	line-height: 35px;
+
+	a{
+		color: $site-footer-anchor-color;
+
+		&:hover{
+			color: $site-footer-anchor-color-hover;
+		}
+	}
+
+	.site-info-text{
+		float: left;
+		width: 50%;
+	}
+
+	.site-info-inner{
+		@extend .row;
+	}
 }

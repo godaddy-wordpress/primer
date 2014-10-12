@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: basis-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-11 19:47-0500\n"
+"POT-Creation-Date: 2014-10-11 22:37-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -212,20 +212,6 @@ msgstr ""
 msgid "Filed under: %1$s"
 msgstr ""
 
-#: footer.php:27
-msgid "http://wordpress.org/"
-msgstr ""
-
-#: footer.php:27
-#, php-format
-msgid "Proudly powered by %s"
-msgstr ""
-
-#: footer.php:29
-#, php-format
-msgid "Theme: %1$s by %2$s."
-msgstr ""
-
 #: functions.php:50
 msgid "Primary Menu"
 msgstr ""
@@ -322,4 +308,18 @@ msgstr ""
 #: search.php:16
 #, php-format
 msgid "Search Results for: %s"
+msgstr ""
+
+#: templates/parts/site-info.php:13
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: templates/parts/site-info.php:13
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: templates/parts/site-info.php:15
+#, php-format
+msgid "Theme: %1$s by %2$s."
 msgstr ""

@@ -17,9 +17,8 @@ $featured-content-bg: rgba(0,0,0,.6) !default;
 		@extend .medium-12;
 		@extend .small-12;
 		@extend .columns;
-
 		background-color: $featured-content-bg;
-		color: contrast-color($featured-content-bg,#000,#fff,50%);
+		color: contrast-color($featured-content-bg, #000, #fff, 50%);
 		margin-top: 6em;
 		margin-top: 6rem;
 		padding: 1.5em 4em 0;
@@ -40,7 +39,7 @@ $featured-content-bg: rgba(0,0,0,.6) !default;
 	}
 
 	.entry-meta{
-		color: contrast-color($featured-content-bg,#000,#fff,50%);
+		color: contrast-color($featured-content-bg, #000, #fff, 50%);
 		border-bottom: 1px solid rgba(255,255,255,.2);
 		line-height: 3rem;
 
@@ -73,7 +72,7 @@ $featured-content-bg: rgba(0,0,0,.6) !default;
 		padding: .5em 1em;
 		padding: .5rem 1rem;
 		background-color: $primary-color;
-		color: contrast-color($primary-color,#fff,#000,50%);
+		color: contrast-color($primary-color, #fff, #000, 50%);
 		display: inline-block;
 		font-family: $sans-font-family;
 		text-transform: uppercase;
@@ -82,7 +81,7 @@ $featured-content-bg: rgba(0,0,0,.6) !default;
 		font-size: rem-calc(13);
 
 		&:hover{
-			background-color: darken($primary-color,10%);
+			background-color: darken($primary-color, 10%);
 		}
 	}
 }

@@ -1,27 +1,31 @@
 $entry-title-bg: rgba(0,0,0,.6) !default;
 
-.site-title-wrapper{
+.site-info-container{
 	@extend .row;
+	margin-bottom: 40px;
 }
 
 .site-title {
 	font-family: $sans-font-family;
-	float: left;
-	font-size: emCalc(24);
-	font-size: rem-calc(24);
+	font-size: emCalc(32);
+	font-size: rem-calc(32);
 	font-weight: bold;
 	color: contrast-color($menu-background-color, #fff, #000, 50%);
-	margin-bottom: 40px;
-	line-height: $menu-height;
+	line-height: 1;
 
 	a{
-		padding: 0 1em;
-		padding: 0 1rem;
+		color: $body-font-color;
 	}
+}
+
+.site-description{
+	font-size: emCalc(18);
+	font-size: rem-calc(18);
 }
 
 .site-header {
 	padding: 40px 0 0;
+	background-color: $header-bg;
 }
 
 .featured-content{

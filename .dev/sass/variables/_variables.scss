@@ -97,7 +97,7 @@ $total-columns: 12;
 $column-gutter: rem-calc(40);
 
 // We use these to control various global styles
-$body-bg: #e7e7e2;
+$body-bg: #e7e7e7;
 $heading-font-color: #222;
 $body-font-color: #444;
 $body-font-subtle-color: #aaa;
@@ -106,6 +106,8 @@ $sans-font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, s
 $font-weight-normal:normal;
 $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
+$widget-bg: #fff;
+$header-bg: #fff;
 
 // We use this to control font-smoothing
 $font-smoothing: antialiased;

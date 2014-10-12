@@ -1,5 +1,8 @@
+$widget-bg: #fff !default;
+
 .widget {
 	margin: 0 0 1.5em;
+	padding: 20px;
 }
 
 /* Make sure select elements fit in widgets */
@@ -11,6 +14,12 @@
 .widget_search {
 	padding-right: 1.25em;
 	padding-right: 1.25rem;
+
+	#secondary &{
+		padding-top: 0;
+		padding-left: 0;
+		padding-bottom: 0;
+	}
 
 	@media screen and (max-width: 600px) {
 		padding-right: 0;
@@ -36,15 +45,13 @@
 	font-family: $sans-font-family;
 	padding: 1em 0em 1em 1.25em;
 	padding: 1rem 0rem 1rem 1.25rem;
-	left: -1.25em;
-	left: -1.25rem;
+	margin: -20px -20px 1em;
+	margin-bottom: 1rem;
 	position: relative;
 	box-sizing: content-box;
-	width: 100%;
 	text-transform: uppercase;
 	font-weight: bold;
-	border-radius: 0 $global-radius $global-radius 0;
-	background: desaturate( darken( $body-bg, 10% ), 5% );
+	border-bottom: 1px solid $body-bg;
 
 	@media screen and (max-width: 600px) {
 		padding: 1em 1.25em 1em 1.25em;
@@ -54,6 +61,8 @@
 }
 
 .widget {
+	background-color: $widget-bg;
+
 	ul {
 		list-style: none;
 		margin: 0;
@@ -65,7 +74,7 @@
 			display: block;
 			padding: .5em 0;
 			padding: .5rem 0;
-			border-bottom: 1px solid desaturate( darken( $body-bg, 10% ), 5% );
+			border-bottom: 1px solid $body-bg;
 		}
 	}
 
@@ -114,7 +123,7 @@
 	li {
 		padding: .5em 0;
 		padding: .5rem 0;
-		border-bottom: 1px solid desaturate( darken( $body-bg, 10% ), 5% );
+		border-bottom: 1px solid $body-bg;
 
 		&:last-child {
 			border-bottom: 0;
@@ -164,13 +173,13 @@
 				color: contrast-color($primary-color,#222,white,30%);
 				padding: .75em .25em;
 				font-weight: bold;
-				background-color: $primary-color;
+				background-color: $body-bg;
 				border-radius: 2px 2px 0 0;
 			}
 
 			thead th {
 				padding: .25em 0;
-				background-color: lighten($primary-color, 30%);
+				background-color: lighten($body-bg, 30%);
 
 				&:last-child { border: none; }
 			}
@@ -186,31 +195,17 @@
 
 					&#today {
 						position: relative;
-						&:after {
-							content: "";
-							border-radius: 2px;
-							border: 1px solid $primary-color;
-							position: absolute;
-							top: 2px;
-							right: 3px;
-							bottom: 3px;
-							left: 3px;
-						}
 					}
 
 					a {
-						color: contrast-color($primary-color,#222,white,30%);
+						color: contrast-color($body-bg, #222, white, 30%);
 						background: lighten(desaturate( darken( $body-bg, 10% ), 5% ), 10%);
 						border-radius: 2px;
 						margin: 0 3px;
 						display: block;
 						font-weight: bold;
 						border-bottom: none;
-						-webkit-transition: 200ms color linear;
-							 -moz-transition: 200ms color linear;
-								-ms-transition: 200ms color linear;
-							 	 -o-transition: 200ms color linear;
-										transition: 200ms color linear;
+						transition: 200ms color linear;
 					}
 				}
 			}
@@ -224,11 +219,7 @@
 
 					a{
 						color: $body-font-color;
-						-webkit-transition: 200ms color linear;
-							 -moz-transition: 200ms color linear;
-								-ms-transition: 200ms color linear;
-							 	 -o-transition: 200ms color linear;
-										transition: 200ms color linear;
+						transition: 200ms color linear;
 
 						&:hover{
 							color: $primary-color;

@@ -1,14 +1,12 @@
 .social-menu {
+	@extend .cf;
+	float: right;
+	width: 50%;
 
 	&:hover {
 		a {
 			opacity: .6;
 		}
-	}
-
-	footer & {
-		margin-top: .5em;
-		margin-top: .5rem;
 	}
 
 	ul {
@@ -17,6 +15,7 @@
 		margin: 0 1.25em 0 0;
 		margin: 0 1.25rem 0 0;
 		font-size: 0;
+		text-align: right;
 
 		li {
 			display:  inline-block;
@@ -46,7 +45,7 @@
 					display: inline-block;
 					font-size: 18px;
 
-					footer & {
+					.site-info & {
 						color: $site-footer-background;
 						background: $site-footer-text-color;
 					}
