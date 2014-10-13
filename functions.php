@@ -9,7 +9,7 @@
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
+	$content_width = 675; /* pixels */
 }
 
 if ( ! function_exists( 'basis_setup' ) ) :
@@ -154,7 +154,7 @@ add_action( 'wp_enqueue_scripts', 'basis_scripts' );
 /**
  * Returns the Google font stylesheet URL, if available.
  *
- * The use of PT Sans and Merriweather by default is localized. For languages
+ * The use of Lato and Merriweather by default is localized. For languages
  * that use characters not supported by the font, the font can be disabled.
  *
  * @return string	$fonts_url 	Font stylesheet or empty string if disabled.
@@ -163,10 +163,10 @@ function basis_fonts_url() {
 	$fonts_url = '';
 
 	/* Translators: If there are characters in your language that are not
-	 * supported by PT Sans, translate this to 'off'. Do not translate
+	 * supported by Lato, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$pt_sans = _x( 'on', 'PT Sans font: on or off', 'basis' );
+	$lato = _x( 'on', 'Lato font: on or off', 'basis' );
 
 	/* Translators: If there are characters in your language that are not
 	 * supported by Merriweather, translate this to 'off'. Do not translate into your
@@ -174,11 +174,11 @@ function basis_fonts_url() {
 	 */
 	$poly = _x( 'on', 'Merriweather font: on or off', 'basis' );
 
-	if ( 'off' !== $pt_sans || 'off' !== $poly ) {
+	if ( 'off' !== $lato || 'off' !== $poly ) {
 		$font_families = array();
 
-		if ( 'off' !== $pt_sans )
-			$font_families[] = 'PT Sans:400,600,700';
+		if ( 'off' !== $lato )
+			$font_families[] = 'Lato:300,700';
 
 		if ( 'off' !== $poly )
 			$font_families[] = 'Merriweather:400,400italic';

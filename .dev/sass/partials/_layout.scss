@@ -1,19 +1,24 @@
 #content{
 	@extend .row;
+	padding: 40px 0;
 }
 
 #primary{
 	@extend .large-8;
 	@extend .columns;
+
+	.layout-content-sidebar &{
+		@extend .large-push-4;
+	}
 }
 
 #secondary{
 	@extend .large-4;
 	@extend .columns;
-	padding-top: 1.5em;
-	padding-top: 1.5rem;
-	padding-bottom: 1.5em;
-	padding-bottom: 1.5rem;
+
+	.layout-content-sidebar &{
+	@extend .large-pull-8;
+	}
 }
 
 .site-branding-container{

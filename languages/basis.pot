@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: basis-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-11 22:37-0500\n"
+"POT-Creation-Date: 2014-10-13 11:34-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -237,7 +237,7 @@ msgid "Footer Right"
 msgstr ""
 
 #: functions.php:169
-msgctxt "PT Sans font: on or off"
+msgctxt "Lato font: on or off"
 msgid "on"
 msgstr ""
 

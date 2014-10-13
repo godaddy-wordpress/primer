@@ -56,7 +56,7 @@ body {
   color: #444;
   padding: 0;
   margin: 0;
-  font-family: "PT Serif", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 150%;
@@ -113,7 +113,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 62.5rem; }
+  max-width: 73.75rem; }
   .row:before, #content:before, .site-branding-container:before, .main-navigation:before, .site-footer .site-footer-inner:before, .site-info-container:before, .featured-content .entry-header .entry-header-row:before, .site-info .site-info-inner:before, .featured-content .featured-content-inner:before, .row:after, #content:after, .site-branding-container:after, .main-navigation:after, .site-footer .site-footer-inner:after, .site-info-container:after, .featured-content .entry-header .entry-header-row:after, .site-info .site-info-inner:after, .featured-content .featured-content-inner:after {
     content: " ";
     display: table; }
@@ -630,7 +630,7 @@ select {
     position: relative;
     right: 25%;
     left: auto; }
-  .large-push-4 {
+  .large-push-4, .layout-content-sidebar #primary {
     position: relative;
     left: 33.3333333333%;
     right: auto; }
@@ -666,7 +666,7 @@ select {
     position: relative;
     left: 66.6666666667%;
     right: auto; }
-  .large-pull-8 {
+  .large-pull-8, .layout-content-sidebar #secondary {
     position: relative;
     right: 66.6666666667%;
     left: auto; }
@@ -1732,7 +1732,6 @@ Content imports
 10.1 Posts and pages
 --------------------------------------------------------------*/
 #primary {
-  background-color: #fff;
   padding-left: 0;
   padding-right: 0; }
 
@@ -1748,10 +1747,12 @@ Content imports
       padding: 0rem 1rem 0.5rem 1rem; } }
 
 .hentry {
-  margin: 0;
+  margin: 0 0 1.5em;
+  margin: 0 0 1.5rem;
   padding: 2.5em 3.5em;
   padding: 2.5rem 3.5rem;
-  border-bottom: 2px solid #eee; }
+  border-bottom: 2px solid #eee;
+  background-color: #fff; }
   @media screen and (max-width: 600px) {
     .hentry {
       padding: 0em 1em 0.5em 1em;
@@ -1866,7 +1867,7 @@ Content imports
 
 .posted-on {
   float: right;
-  font-family: "PT Serif", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 0.8125rem; }
   .posted-on a {
@@ -2085,11 +2086,8 @@ img[class*="wp-image-"] {
 .gallery-columns-9 .gallery-item {
   max-width: 11.11%; }
 
-#secondary {
-  padding-top: 1.5em;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5em;
-  padding-bottom: 1.5rem; }
+#content {
+  padding: 40px 0; }
 
 .site-info-container {
   margin-bottom: 40px; }

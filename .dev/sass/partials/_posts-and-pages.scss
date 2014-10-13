@@ -1,5 +1,4 @@
 #primary{
-	background-color: #fff;
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -25,10 +24,12 @@
 }
 
 .hentry {
-	margin: 0;
+	margin: 0 0 1.5em;
+	margin: 0 0 1.5rem;
 	padding: 2.5em 3.5em;
 	padding: 2.5rem 3.5rem;
 	border-bottom: 2px solid #eee;
+	background-color: $widget-bg;
 
 	@media screen and (max-width: 600px) {
 		padding: 0em 1em .5em 1em;
