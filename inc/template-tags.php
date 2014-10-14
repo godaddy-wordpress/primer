@@ -85,6 +85,24 @@ function basis_posted_on() {
 }
 endif;
 
+if( function_exists('basis_post_format') ):
+/**
+ * Prints the post format for the current post.
+ */
+function basis_post_format(){
+	global $post;
+
+	$format = get_post_format( get_the_ID() );
+
+	if ( false === $format ) {
+		$format = 'standard';
+	}
+
+	echo '<span class="post-format">' . $format . '</span>';
+}
+
+endif;
+
 /**
  * Returns true if a blog has more than 1 category.
  *

@@ -17,15 +17,10 @@
 	<?php } else { ?>
 		<header class="entry-header">
 	<?php } ?>
+
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php
-			$format = get_post_format( get_the_ID() );
-			if ( false === $format ) {
-				$format = 'standard';
-			}
-			echo '<span class="post-format">' . $format . '</span>';
-			?>
+			<?php basis_post_format(); ?>
 			<?php basis_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
