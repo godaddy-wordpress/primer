@@ -85,7 +85,7 @@ function basis_posted_on() {
 }
 endif;
 
-if( function_exists('basis_post_format') ):
+if( ! function_exists('basis_post_format') ):
 /**
  * Prints the post format for the current post.
  */
