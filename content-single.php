@@ -8,11 +8,7 @@
  */
 ?>
 
-<?php
-	if ( basis_get_featured_image_url() )
-		$extra_classes[] = "has-featured-image";
-?>
-<article id="post-<?php the_ID(); ?>" class="<?php echo implode( " ", get_post_class($extra_classes) ); ?>">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php do_action( 'basis_article_header' ); ?>
 

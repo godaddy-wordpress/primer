@@ -13,7 +13,7 @@ function basis_single_header(){
 	if( is_singular() ){
 
 		if ( has_post_thumbnail( get_the_ID() ) ){
-			add_action( 'basis_after_header' , 'basis_single_title' );
+			add_action( 'basis_header_after' , 'basis_single_title' );
 		} else {
 			add_action( 'basis_article_header' , 'basis_single_title' );
 		}
@@ -54,7 +54,7 @@ function basis_add_primary_navigation(){
 
 }
 
-add_action( 'basis_header', 'basis_add_primary_navigation', 20 );
+add_action( 'basis_header_after', 'basis_add_primary_navigation', 20 );
 
 /**
  * Adds the footer widgets to the footer.

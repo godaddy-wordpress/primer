@@ -7,16 +7,15 @@
  * @package Basis
  */
 ?>
-<?php
-	if ( basis_get_featured_image_url() )
-		$extra_classes[] = "has-featured-image";
-?>
-<article id="post-<?php the_ID(); ?>" class="<?php echo implode( " ", get_post_class($extra_classes) ); ?>">
-	<?php if ( basis_get_featured_image_url() ) { ?>
-		<header class="entry-header" style="background-image: url('<?php echo basis_get_featured_image_url(); ?>')">
-	<?php } else { ?>
-		<header class="entry-header">
-	<?php } ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<?php if( has_post_thumbnail() ): ?>
+	<div class="featured-image">
+		<?php the_post_thumbnail( 'basis-featured' ); ?>
+	</div><!-- .featured-image -->
+	<?php endif; ?>
+
+	<header class="entry-header">
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
@@ -26,6 +25,7 @@
 		<?php endif; ?>
 
 		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

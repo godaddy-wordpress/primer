@@ -4,11 +4,16 @@
 }
 
 #primary{
-	@extend .large-8;
 	@extend .columns;
+	@extend .large-8;
 
-	.layout-content-sidebar &{
+	body.layout-two-column-reversed &{
 		@extend .large-push-4;
+	}
+
+	body.layout-one-column-wide &,
+	body.layout-one-column-narrow &{
+		@extend .large-12;
 	}
 }
 
@@ -16,8 +21,13 @@
 	@extend .large-4;
 	@extend .columns;
 
-	.layout-content-sidebar &{
-	@extend .large-pull-8;
+	body.layout-two-column-reversed &{
+		@extend .large-pull-8;
+	}
+
+	body.layout-one-column-wide &,
+	body.layout-one-column-narrow &{
+		@extend .large-12;
 	}
 }
 
@@ -43,5 +53,19 @@
 		@extend .large-12;
 		@extend .large-centered;
 		@extend .columns;
+	}
+}
+
+body.layout-one-column-narrow &{
+	.row,
+	.navigation,
+	#content, .site-branding-container,
+	.main-navigation,
+	.site-footer .site-footer-inner,
+	.site-title-wrapper,
+	.featured-content .entry-header .entry-header-row,
+	.site-info .site-info-inner,
+	.featured-content .featured-content-inner{
+		max-width: 50em;
 	}
 }

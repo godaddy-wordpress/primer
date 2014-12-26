@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: basis-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-13 11:34-0500\n"
+"POT-Creation-Date: 2014-12-26 16:05-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,76 +35,6 @@ msgstr ""
 #: 404.php:44
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
-
-#: archive.php:27
-#, php-format
-msgid "Author: %s"
-msgstr ""
-
-#: archive.php:30
-#, php-format
-msgid "Day: %s"
-msgstr ""
-
-#: archive.php:33
-#, php-format
-msgid "Month: %s"
-msgstr ""
-
-#: archive.php:33
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
-#: archive.php:36
-#, php-format
-msgid "Year: %s"
-msgstr ""
-
-#: archive.php:36
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr ""
-
-#: archive.php:39
-msgid "Asides"
-msgstr ""
-
-#: archive.php:42
-msgid "Galleries"
-msgstr ""
-
-#: archive.php:45
-msgid "Images"
-msgstr ""
-
-#: archive.php:48
-msgid "Videos"
-msgstr ""
-
-#: archive.php:51
-msgid "Quotes"
-msgstr ""
-
-#: archive.php:54
-msgid "Links"
-msgstr ""
-
-#: archive.php:57
-msgid "Statuses"
-msgstr ""
-
-#: archive.php:60
-msgid "Audios"
-msgstr ""
-
-#: archive.php:63
-msgid "Chats"
-msgstr ""
-
-#: archive.php:66
-msgid "Archives"
 msgstr ""
 
 #: comments.php:28
@@ -161,92 +91,108 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content-page.php:18 content-quote.php:26 content-single.php:23
-#: content.php:40
+#: content-page.php:18 content-quote.php:20 content-single.php:19
+#: content.php:35
 msgid "Pages:"
 msgstr ""
 
-#: content-page.php:24 content-search.php:67 content-single.php:31
-#: content.php:52
+#: content-page.php:24 content-search.php:63 content-single.php:27
+#: content.php:47
 msgid "Edit"
 msgstr ""
 
-#: content-quote.php:23 content.php:37
+#: content-quote.php:17 content.php:32
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: content-search.php:44 content-search.php:54 content-single.php:37
-#: content-single.php:47 content.php:58 content.php:68
+#: content-search.php:40 content-search.php:50 content-single.php:33
+#: content-single.php:43 content.php:53 content.php:63
 msgid ", "
 msgstr ""
 
-#: content-search.php:48
+#: content-search.php:44
 #, php-format
 msgid "Posted in %1$s"
 msgstr ""
 
-#: content-search.php:58
+#: content-search.php:54
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
 
-#: content-search.php:64 content.php:49
+#: content-search.php:60 content.php:44
 msgid "Leave a comment"
 msgstr ""
 
-#: content-search.php:64 content.php:49
+#: content-search.php:60 content.php:44
 msgid "1 Comment"
 msgstr ""
 
-#: content-search.php:64 content.php:49
+#: content-search.php:60 content.php:44
 msgid "% Comments"
 msgstr ""
 
-#: content-single.php:41 content.php:62
+#: content-single.php:37 content.php:57
 #, php-format
 msgid "Posted in: %1$s"
 msgstr ""
 
-#: content-single.php:51 content.php:72
+#: content-single.php:47 content.php:67
 #, php-format
 msgid "Filed under: %1$s"
 msgstr ""
 
-#: functions.php:50
+#: functions.php:93
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:51
+#: functions.php:94
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:94
-msgid "Sidebar"
+#: functions.php:101
+msgid "1 Column Wide"
+msgstr ""
+
+#: functions.php:102
+msgid "1 Column Narrow"
+msgstr ""
+
+#: functions.php:103
+msgid "2 Columns: Content / Sidebar"
 msgstr ""
 
 #: functions.php:104
+msgid "2 Columns: Sidebar / Content"
+msgstr ""
+
+#: functions.php:149
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:159
 msgid "Footer Left"
 msgstr ""
 
-#: functions.php:114
+#: functions.php:169
 msgid "Footer Center"
 msgstr ""
 
-#: functions.php:124
+#: functions.php:179
 msgid "Footer Right"
 msgstr ""
 
-#: functions.php:169
+#: functions.php:224
 msgctxt "Lato font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:175
+#: functions.php:230
 msgctxt "Merriweather font: on or off"
 msgid "on"
 msgstr ""
 
-#: header.php:23
+#: header.php:26
 msgid "Skip to content"
 msgstr ""
 
@@ -283,6 +229,20 @@ msgstr ""
 #: inc/template-tags.php:56
 msgctxt "Next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/theme-layouts.php:364
+msgctxt "theme layout"
+msgid "Default"
+msgstr ""
+
+#: inc/theme-layouts.php:459 inc/theme-layouts.php:566
+#: inc/theme-layouts.php:651
+msgid "Layout"
+msgstr ""
+
+#: inc/theme-layouts.php:684
+msgid "Global Layout"
 msgstr ""
 
 #: node_modules/grunt-pot/test/fixtures/some-file.php:3

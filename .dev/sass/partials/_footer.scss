@@ -7,7 +7,7 @@ $site-footer-anchor-color-hover: contrast-color($site-footer-background, #222, #
 .site-footer{
 	background-color: $site-footer-background;
 	color: $site-footer-text-color;
-	padding: 40px 0 0 0;
+	padding: 0;
 
 	a{
 		color: $site-footer-anchor-color;
@@ -20,6 +20,7 @@ $site-footer-anchor-color-hover: contrast-color($site-footer-background, #222, #
 
 .footer-widget-area {
 	overflow: hidden;
+	padding: 20px 0;
 
 	.footer-widget {
 		padding: 0 20px;

@@ -1,17 +1,23 @@
 $entry-title-bg: rgba(0,0,0,.6) !default;
 
-.site-info-container{
+.site-title-wrapper{
 	@extend .row;
 	margin-bottom: 40px;
 }
 
+.site-title-wrapper-inner{
+	@extend .large-12;
+	@extend .columns;
+}
+
 .site-title {
 	font-family: $sans-font-family;
-	font-size: emCalc(32);
-	font-size: rem-calc(32);
-	font-weight: bold;
+	font-size: emCalc(36);
+	font-size: rem-calc(36);
+	font-weight: normal;
 	color: contrast-color($menu-background-color, #fff, #000, 50%);
 	line-height: 1;
+	letter-spacing: -.03em;
 
 	a{
 		color: $body-font-color;
@@ -19,8 +25,8 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 }
 
 .site-description{
-	font-size: emCalc(18);
-	font-size: rem-calc(18);
+	font-size: emCalc(16);
+	font-size: rem-calc(16);
 }
 
 .site-header {

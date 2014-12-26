@@ -7,11 +7,7 @@
  * @package Basis
  */
 ?>
-<?php
-	if ( basis_get_featured_image_url() )
-		$extra_classes[] = "has-featured-image";
-?>
-<article id="post-<?php the_ID(); ?>" class="<?php echo implode( " ", get_post_class($extra_classes) ); ?>">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if ( basis_get_featured_image_url() ) { ?>
 		<header class="entry-header" style="background-image: url('<?php echo basis_get_featured_image_url(); ?>')">
 	<?php } else { ?>

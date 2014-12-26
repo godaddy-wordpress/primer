@@ -6,10 +6,53 @@
  */
 
 /**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Custom functions that act independently of the theme templates.
+ */
+require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Includes template parts within the theme.
+ */
+require get_template_directory() . '/inc/action-hooks.php';
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load custom theme layout functionality.
+ */
+require get_template_directory() . '/inc/theme-layouts.php';
+
+/**
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 675; /* pixels */
+
+	global $content_width;
+
+	$layout = theme_layouts_get_layout();
+
+	switch( $layout ):
+		case 'one-column-wide':
+			$content_width = 1068;
+		case 'one-column-narrow':
+			$content_width = 688;
+		default:
+		$content_width = 688;
+	endswitch;
+
 }
 
 if ( ! function_exists( 'basis_setup' ) ) :
@@ -33,7 +76,7 @@ function basis_setup() {
 	load_theme_textdomain( 'basis', get_template_directory() . '/languages' );
 
 	// Add image size for featured images
-	add_image_size( 'featured', 1600, 900, 1 );
+	add_image_size( 'basis-featured', 1600, 900, 1 );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -50,6 +93,18 @@ function basis_setup() {
 		'primary' => __( 'Primary Menu', 'basis' ),
 		'social' => __( 'Social Menu', 'basis' ),
 	) );
+
+	// Hybrid Core Theme Layouts
+	add_theme_support(
+		'theme-layouts',
+		array(
+			'one-column-wide'       => __( '1 Column Wide',                'basis' ),
+			'one-column-narrow'     => __( '1 Column Narrow',              'basis' ),
+			'two-column-default'    => __( '2 Columns: Content / Sidebar', 'basis' ),
+			'two-column-reversed'   => __( '2 Columns: Sidebar / Content', 'basis' )
+		),
+		array( 'default' => 'two-column-default' )
+	);
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -209,32 +264,3 @@ function new_excerpt_more( $more ) {
 	return '&hellip;';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
-
-/**
- * Includes template parts within the theme.
- */
-require get_template_directory() . '/inc/action-hooks.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';

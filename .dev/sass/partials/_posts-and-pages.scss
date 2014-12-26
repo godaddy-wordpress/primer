@@ -1,8 +1,3 @@
-#primary{
-	padding-left: 0;
-	padding-right: 0;
-}
-
 .content-area {
 	.page-header {
 		padding: 1.5em 3.5em;
@@ -20,10 +15,9 @@
 	}
 }
 
-.sticky {
-}
+.sticky {}
 
-.hentry {
+.panel{
 	margin: 0 0 1.5em;
 	margin: 0 0 1.5rem;
 	padding: 2.5em 3.5em;
@@ -35,6 +29,36 @@
 		padding: 0em 1em .5em 1em;
 		padding: 0rem 1rem .5rem 1rem;
 	}
+}
+
+.no-results,
+.not-found{
+	@extend .panel;
+
+	.page-header{
+		padding: 0;
+		border-bottom: 0;
+		margin-bottom: 1em;
+	}
+
+	.page-content{
+		padding: 0;
+	}
+}
+
+.hentry {
+	@extend .panel;
+
+	.featured-image{
+		margin-top: -2.5rem;
+		margin-right: -3.5rem;
+		margin-left: -3.5rem;
+	}
+
+	.attachment-basis-featured{
+		width: 100%;
+		height: auto;
+	}
 
 	.entry-header {
 		color: $heading-font-color;
@@ -44,8 +68,8 @@
 		padding: 0;
 
 		.entry-header {
-			padding: 2.5em 3.5em;
-			padding: 2.5rem 3.5rem;
+			padding: 3em;
+			padding: 3rem;
 			background-size: cover;
 			position: relative;
 
@@ -71,13 +95,13 @@
 		}
 
 		.entry-content {
-			margin: 2.5em 3.5em;
-			margin: 2.5rem 3.5rem;
+			margin: 3em;
+			margin: 3rem;
 		}
 
 		.entry-footer {
-			margin: 2.5em 3.5em;
-			margin: 2.5rem 3.5rem;
+			margin: 3em;
+			margin: 3rem;
 		}
 	}
 }
@@ -95,18 +119,13 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
-
-	.has-featured-image & {
-		padding: 0 3.5em;
-		padding: 0 3.5rem;
-	}
+	margin: 1.5em 0;
 }
 
 .page-content {
 	margin-top: 0;
-	padding: 2.5em 3.5em;
-	padding: 2.5rem 3.5rem;
+	padding: 3em;
+	padding: 3rem;
 
 	@media screen and (max-width: 600px) {
 		padding: 0em 1em .5em 1em;

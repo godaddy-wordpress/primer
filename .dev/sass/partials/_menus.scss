@@ -4,16 +4,21 @@ $menu-height: 3.5rem !default;
 
 .main-navigation-container{
 	background-color: $menu-background-color;
-	@include clearfix;
 }
 
-.main-navigation {
+.main-navigation{
 	position: relative;
 	z-index: 100;
+	@extend .row;
+
+	.menu{
+		@extend .large-12;
+		@extend .columns;
+	}
 
 	ul {
-		font-size: emCalc(13);
-		font-size: rem-calc(13);
+		font-size: emCalc(14);
+		font-size: rem-calc(14);
 		position:relative;
 		display: block;
 		z-index:1;
@@ -44,14 +49,14 @@ $menu-height: 3.5rem !default;
 				line-height: $menu-height;
 				font-weight: normal;
 				color: contrast-color($menu-background-color,darken($menu-background-color,65%),lighten($menu-background-color,65%),50%);
-				padding: 0 .6em;
-				padding: 0 .6rem;
+				padding: 0 .8em;
+				padding: 0 .8rem;
 				position: relative;
 				text-transform: uppercase;
 			}
 
 			&:hover {
-				background-color: contrast-color($menu-background-color,darken($menu-background-color,20%),lighten($menu-background-color,20%),50%);
+				background-color: contrast-color($menu-background-color,darken($menu-background-color,10%),lighten($menu-background-color,10%),50%);
 				text-decoration: none;
 			}
 		}
@@ -98,7 +103,6 @@ $menu-height: 3.5rem !default;
 
 				> a {
 					color: contrast-color($menu-background-color,#000,#fff,50%);
-					background-color: $menu-background-color;
 
 					&:after {
 						border-color: contrast-color($menu-background-color,#000,#fff,50%);
@@ -252,14 +256,15 @@ $menu-height: 3.5rem !default;
 	}
 }
 
-.site-main .comment-navigation,
-.site-main .paging-navigation,
-.site-main .post-navigation {
+.navigation {
+	@extend .row;
 
-	padding: 1.5em 3.5em;
-	padding: 1.5rem 3.5rem;
-	overflow: hidden;
-	border-bottom: 2px solid #eee;
+	.nav-links{
+		@extend .large-12;
+		@extend .columns;
+		margin-bottom: 1em;
+		margin-bottom: 1rem;
+	}
 }
 
 .comment-navigation .nav-previous,

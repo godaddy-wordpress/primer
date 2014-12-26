@@ -7,13 +7,7 @@
 }
 
 .comments-area {
-	padding: 2.5em 3.5em;
-	padding: 2.5rem 3.5rem;
-
-	@media screen and (max-width: 600px) {
-		padding: 1em;
-		padding: 1rem;
-	}
+	@extend .panel;
 }
 
 /* Comments */

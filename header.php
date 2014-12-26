@@ -16,13 +16,16 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
-</head>
 
+</head>
 <body <?php body_class(); ?>>
+
+<?php do_action( 'basis_body_inside' ); ?>
+
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'basis' ); ?></a>
 
-	<?php do_action( 'basis_before_header' ); ?>
+	<?php do_action( 'basis_header_before' ); ?>
 
 	<header id="masthead" class="site-header" role="banner">
 
@@ -30,6 +33,6 @@
 
 	</header><!-- #masthead -->
 
-	<?php do_action( 'basis_after_header' ); ?>
+	<?php do_action( 'basis_header_after' ); ?>
 
 	<div id="content" class="site-content">

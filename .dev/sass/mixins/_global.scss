@@ -366,7 +366,6 @@ $cursor-text-value: text !default;
 			font-weight: $body-font-weight;
 			font-style: $body-font-style;
 			line-height: $base-line-height; // Set to $base-line-height to take on browser default of 150%
-			position: relative;
 			cursor: $cursor-default-value;
 			-webkit-font-smoothing: antialiased;
 		}
