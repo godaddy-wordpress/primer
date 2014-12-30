@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: basis-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-26 16:05-0600\n"
+"POT-Creation-Date: 2014-12-29 22:17-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,57 +91,6 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content-page.php:18 content-quote.php:20 content-single.php:19
-#: content.php:35
-msgid "Pages:"
-msgstr ""
-
-#: content-page.php:24 content-search.php:63 content-single.php:27
-#: content.php:47
-msgid "Edit"
-msgstr ""
-
-#: content-quote.php:17 content.php:32
-msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: content-search.php:40 content-search.php:50 content-single.php:33
-#: content-single.php:43 content.php:53 content.php:63
-msgid ", "
-msgstr ""
-
-#: content-search.php:44
-#, php-format
-msgid "Posted in %1$s"
-msgstr ""
-
-#: content-search.php:54
-#, php-format
-msgid "Tagged %1$s"
-msgstr ""
-
-#: content-search.php:60 content.php:44
-msgid "Leave a comment"
-msgstr ""
-
-#: content-search.php:60 content.php:44
-msgid "1 Comment"
-msgstr ""
-
-#: content-search.php:60 content.php:44
-msgid "% Comments"
-msgstr ""
-
-#: content-single.php:37 content.php:57
-#, php-format
-msgid "Posted in: %1$s"
-msgstr ""
-
-#: content-single.php:47 content.php:67
-#, php-format
-msgid "Filed under: %1$s"
-msgstr ""
-
 #: functions.php:93
 msgid "Primary Menu"
 msgstr ""
@@ -166,28 +115,74 @@ msgstr ""
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
-#: functions.php:149
+#: functions.php:105
+msgid "3 Columns: Content / Sidebar / Sidebar"
+msgstr ""
+
+#: functions.php:106
+msgid "3 Columns: Sidebar / Content / Sidebar"
+msgstr ""
+
+#: functions.php:107
+msgid "3 Columns: Sidebar / Sidebar / Content"
+msgstr ""
+
+#: functions.php:152
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:159
+#: functions.php:154
+msgid ""
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
+msgstr ""
+
+#: functions.php:162
+msgid "Secondary Sidebar"
+msgstr ""
+
+#: functions.php:164
+msgid ""
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
+msgstr ""
+
+#: functions.php:172
 msgid "Footer Left"
 msgstr ""
 
-#: functions.php:169
+#: functions.php:174
+msgid ""
+"The footer left sidebar appears in the first column of the footer widget "
+"area."
+msgstr ""
+
+#: functions.php:182
 msgid "Footer Center"
 msgstr ""
 
-#: functions.php:179
+#: functions.php:184
+msgid ""
+"The footer center sidebar appears in the second column of the footer widget "
+"area."
+msgstr ""
+
+#: functions.php:192
 msgid "Footer Right"
 msgstr ""
 
-#: functions.php:224
+#: functions.php:194
+msgid ""
+"The footer right sidebar appears in the third column of the footer widget "
+"area."
+msgstr ""
+
+#: functions.php:237
 msgctxt "Lato font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:230
+#: functions.php:243
 msgctxt "Merriweather font: on or off"
 msgid "on"
 msgstr ""
@@ -270,16 +265,73 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: templates/parts/site-info.php:13
+#: templates/parts/loop/page-content.php:12
+#: templates/parts/loop/post-content.php:14
+msgid "Pages:"
+msgstr ""
+
+#: templates/parts/loop/page-footer.php:9
+#: templates/parts/loop/post-footer.php:16
+#: templates/parts/loop/post-search-footer.php:37
+msgid "Edit"
+msgstr ""
+
+#: templates/parts/loop/post-content.php:11
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: templates/parts/loop/post-footer.php:13
+#: templates/parts/loop/post-search-footer.php:34
+msgid "Leave a comment"
+msgstr ""
+
+#: templates/parts/loop/post-footer.php:13
+#: templates/parts/loop/post-search-footer.php:34
+msgid "1 Comment"
+msgstr ""
+
+#: templates/parts/loop/post-footer.php:13
+#: templates/parts/loop/post-search-footer.php:34
+msgid "% Comments"
+msgstr ""
+
+#: templates/parts/loop/post-footer.php:22
+#: templates/parts/loop/post-footer.php:32
+#: templates/parts/loop/post-search-footer.php:14
+#: templates/parts/loop/post-search-footer.php:24
+msgid ", "
+msgstr ""
+
+#: templates/parts/loop/post-footer.php:26
+#, php-format
+msgid "Posted in: %1$s"
+msgstr ""
+
+#: templates/parts/loop/post-footer.php:36
+#, php-format
+msgid "Filed under: %1$s"
+msgstr ""
+
+#: templates/parts/loop/post-search-footer.php:18
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: templates/parts/loop/post-search-footer.php:28
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: templates/parts/site-info.php:14
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: templates/parts/site-info.php:13
+#: templates/parts/site-info.php:14
 #, php-format
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: templates/parts/site-info.php:15
+#: templates/parts/site-info.php:16
 #, php-format
 msgid "Theme: %1$s by %2$s."
 msgstr ""

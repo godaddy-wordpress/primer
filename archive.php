@@ -19,9 +19,11 @@ get_header(); ?>
 					<?php the_archive_title(); ?>
 				</h1>
 
+				<?php if( get_the_archive_description() ): ?>
 				<div class="archive-description">
 					<?php the_archive_description(); ?>
 				</div>
+				<?php endif; ?>
 
 			</header><!-- .page-header -->
 
@@ -50,4 +52,5 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php get_sidebar(); ?>
+<?php get_sidebar( 'tertiary' ); ?>
 <?php get_footer(); ?>

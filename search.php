@@ -42,4 +42,5 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php get_sidebar(); ?>
+<?php get_sidebar( 'tertiary' ); ?>
 <?php get_footer(); ?>

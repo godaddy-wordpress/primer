@@ -98,10 +98,13 @@ function basis_setup() {
 	add_theme_support(
 		'theme-layouts',
 		array(
-			'one-column-wide'       => __( '1 Column Wide',                'basis' ),
-			'one-column-narrow'     => __( '1 Column Narrow',              'basis' ),
-			'two-column-default'    => __( '2 Columns: Content / Sidebar', 'basis' ),
-			'two-column-reversed'   => __( '2 Columns: Sidebar / Content', 'basis' )
+			'one-column-wide'       => __( '1 Column Wide',                          'basis' ),
+			'one-column-narrow'     => __( '1 Column Narrow',                        'basis' ),
+			'two-column-default'    => __( '2 Columns: Content / Sidebar',           'basis' ),
+			'two-column-reversed'   => __( '2 Columns: Sidebar / Content',           'basis' ),
+			'three-column-default'  => __( '3 Columns: Content / Sidebar / Sidebar', 'basis' ),
+			'three-column-center'   => __( '3 Columns: Sidebar / Content / Sidebar', 'basis' ),
+			'three-column-reversed' => __( '3 Columns: Sidebar / Sidebar / Content', 'basis' ),
 		),
 		array( 'default' => 'two-column-default' )
 	);
@@ -148,7 +151,17 @@ function basis_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'basis' ),
 		'id'            => 'sidebar-1',
-		'description'   => '',
+		'description'   => __( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'basis' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h6 class="widget-title">',
+		'after_title'   => '</h6>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Secondary Sidebar', 'basis' ),
+		'id'            => 'sidebar-2',
+		'description'   => __( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'basis' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h6 class="widget-title">',
@@ -158,7 +171,7 @@ function basis_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Footer Left', 'basis' ),
 		'id'            => 'footer-1',
-		'description'   => '',
+		'description'   => __( 'The footer left sidebar appears in the first column of the footer widget area.', 'basis' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h6 class="widget-title">',
@@ -168,7 +181,7 @@ function basis_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Footer Center', 'basis' ),
 		'id'            => 'footer-2',
-		'description'   => '',
+		'description'   => __( 'The footer center sidebar appears in the second column of the footer widget area.', 'basis' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h6 class="widget-title">',
@@ -178,7 +191,7 @@ function basis_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Footer Right', 'basis' ),
 		'id'            => 'footer-3',
-		'description'   => '',
+		'description'   => __( 'The footer right sidebar appears in the third column of the footer widget area.', 'basis' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h6 class="widget-title">',
