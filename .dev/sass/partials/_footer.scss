@@ -73,11 +73,11 @@ $site-footer-anchor-color-hover: contrast-color($site-footer-background, #222, #
 	}
 }
 
-.site-info{
+.site-info-wrapper{
 	padding: 20px 0;
 	background: $site-footer-border-color;
 	color: $site-footer-text-color;
-	line-height: 35px;
+	line-height: 1.5;
 
 	a{
 		color: $site-footer-anchor-color;
@@ -90,9 +90,17 @@ $site-footer-anchor-color-hover: contrast-color($site-footer-background, #222, #
 	.site-info-text{
 		float: left;
 		width: 50%;
+		margin-top: 4px;
+		margin-bottom: 4px;
+	}
+
+	.site-info{
+		@extend .row;
+		overflow: hidden;
 	}
 
 	.site-info-inner{
-		@extend .row;
+		@extend .large-12;
+		@extend .columns;
 	}
 }
