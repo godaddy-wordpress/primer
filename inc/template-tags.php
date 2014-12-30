@@ -150,35 +150,6 @@ function basis_get_featured_image_url() {
 		return $featured_image_url;
 }
 
-function basis_single_title(){
-
-	if ( basis_get_featured_image_url() ) { ?>
-		<header class="entry-header entry-header-wrapper" style="background-image: url('<?php echo basis_get_featured_image_url(); ?>')">
-	<?php } else { ?>
-		<header class="entry-header">
-	<?php } ?>
-		<div class="entry-header-row">
-			<div class="entry-header-column">
-				<?php if ( 'post' == get_post_type() ) : ?>
-				<div class="entry-meta">
-					<?php
-					$format = get_post_format( get_the_ID() );
-					if ( false === $format ) {
-						$format = 'standard';
-					}
-					echo '<span class="post-format">' . $format . '</span>';
-					?>
-					<?php basis_posted_on(); ?>
-				</div><!-- .entry-meta -->
-				<?php endif; ?>
-
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			</div><!-- .entry-header-column -->
-		</div><!-- .entry-header-row -->
-	</header><!-- .entry-header -->
-<?php
-}
-
 /**
  * Flush out the transients used in basis_categorized_blog.
  */

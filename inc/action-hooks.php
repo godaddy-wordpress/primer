@@ -6,25 +6,6 @@
  */
 
 /**
- * Single header article hookups.
- */
-function basis_single_header(){
-
-	if( is_singular() ){
-
-		if ( has_post_thumbnail( get_the_ID() ) ){
-			add_action( 'basis_header_after' , 'basis_single_title' );
-		} else {
-			add_action( 'basis_article_header' , 'basis_single_title' );
-		}
-
-	}
-
-}
-
-add_action( 'wp_head', 'basis_single_header' );
-
-/**
  * Adds the site title to the header.
  *
  * Grabs the template part for the site title and attaches it.
