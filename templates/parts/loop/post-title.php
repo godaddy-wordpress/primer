@@ -4,26 +4,22 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Basis
+ * @package basis
  */
 ?>
 <header class="entry-header">
 	<div class="entry-header-row">
 		<div class="entry-header-column">
-			<?php if ( 'post' == get_post_type() ) : ?>
-			<div class="entry-meta">
-				<?php
-				$format = get_post_format( get_the_ID() );
-				if ( false === $format ) {
-					$format = 'standard';
-				}
-				echo '<span class="post-format">' . $format . '</span>';
-				?>
-				<?php basis_posted_on(); ?>
-			</div><!-- .entry-meta -->
-			<?php endif; ?>
 
-			<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
+			<?php do_action( 'basis_before_post_title' ); ?>
+
+			<?php $tag = is_single() ? 'h1' : 'h2'; ?>
+			<<?php echo $tag; ?> class="entry-title">
+				<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a>
+			</<?php echo $tag; ?>>
+
+			<?php do_action( 'basis_after_post_title' ); ?>
+
 		</div><!-- .entry-header-column -->
 	</div><!-- .entry-header-row -->
 </header><!-- .entry-header -->

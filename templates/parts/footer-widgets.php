@@ -2,7 +2,7 @@
 /**
  * Displays the footer widget zones.
  *
- * @package Basis
+ * @package basis
  */
 ?>
 

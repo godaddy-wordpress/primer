@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Basis
+ * @package basis
  */
 ?>
 <div class="entry-content">

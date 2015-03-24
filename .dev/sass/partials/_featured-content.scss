@@ -39,13 +39,7 @@ $featured-content-bg: rgba(0,0,0,.6) !default;
 	}
 
 	.entry-meta{
-		color: contrast-color($featured-content-bg, #000, #fff, 50%);
-		border-bottom: 1px solid rgba(255,255,255,.2);
-		line-height: 3rem;
 
-		.entry-date{
-			float: right;
-		}
 	}
 
 	.entry-title{
@@ -62,10 +56,6 @@ $featured-content-bg: rgba(0,0,0,.6) !default;
 			font-size: rem-calc(19);
 			font-weight: 200;
 		}
-	}
-
-	.post-format{
-		color: $primary-color;
 	}
 
 	.read-more{

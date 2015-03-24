@@ -186,6 +186,24 @@ $base-line-height: 150% !default;
 
 // @mixins
 //
+// For panels
+
+@mixin panel(){
+	padding: 1.5em;
+	padding: 1.5rem;
+	margin: 0 0 1.5em;
+	margin: 0 0 1.5rem;
+	background-color: $widget-bg;
+
+	@media #{$medium-up} {
+		padding: 2.5em 3.5em;
+		padding: 2.5rem 3.5rem;
+	}
+}
+
+
+// @mixins
+//
 // We use this to translate elements in 2D
 // $horizontal: Default: 0
 // $vertical: Default: 0

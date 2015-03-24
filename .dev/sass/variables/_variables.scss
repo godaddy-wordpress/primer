@@ -32,11 +32,12 @@ $alert-color: #c60f13;
 $success-color: #5da423;
 
 // Backgrounds
-$color-background-screen: #f1f1f1;
-$color-background-hr: #ccc;
-$color-background-button: $primary-color;
-$color-background-pre: #eee;
-$color-background-ins: #fff9c0;
+$color-background-screen: blue; // body
+$color-background-hr: #ccc; // horizontal rule
+$color-background-button: $primary-color; // buttons
+
+$color-background-pre: #eee; // preformatted text output
+$color-background-ins: #fff9c0; // text that has been inserted into a document
 
 // Text
 $color-text-screen: #21759b;
@@ -101,8 +102,9 @@ $body-bg: #e7e7e7;
 $heading-font-color: #222;
 $body-font-color: #444;
 $body-font-subtle-color: #aaa;
-$body-font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$sans-font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$sans-font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$serif-font-family: Merriweather, Georgia, "Times New Roman", serif;
+$body-font-family: $serif-font-family;
 $font-weight-normal:normal;
 $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
@@ -168,17 +170,17 @@ $cursor-text-value: text;
 $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-$header-font-family: "PT Serif", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: $sans-font-family;
 $header-font-weight: normal;
 $header-font-style: bold;
 $header-font-color: #222;
 $header-line-height: 1.4;
 $header-top-margin: 0;
-$header-bottom-margin: .5rem;
+$header-bottom-margin: 1rem;
 $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(47);
+$h1-font-size: rem-calc(48);
 $h2-font-size: rem-calc(26);
 $h3-font-size: rem-calc(24);
 $h4-font-size: rem-calc(22);
@@ -187,7 +189,7 @@ $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
 $h1-font-reduction: rem-calc(10) !default;
-$h2-font-reduction: rem-calc(10) !default;
+$h2-font-reduction: rem-calc(8) !default;
 $h3-font-reduction: rem-calc(5) !default;
 $h4-font-reduction: rem-calc(5) !default;
 $h5-font-reduction: 0 !default;
@@ -207,7 +209,7 @@ $small-font-color: scale-color($header-font-color, $lightness: 35%);
 // We use these to style paragraphs
 $paragraph-font-family: inherit;
 $paragraph-font-weight: $font-weight-normal;
-$paragraph-font-size: 1rem;
+$paragraph-font-size: rem-calc(18);
 $paragraph-line-height: 1.6;
 $paragraph-margin-bottom: rem-calc(20);
 $paragraph-aside-font-size: rem-calc(14);
@@ -260,6 +262,10 @@ $blockquote-border: 2px solid #ddd;
 $blockquote-cite-font-size: rem-calc(13);
 $blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%);
 $blockquote-cite-link-color: $blockquote-cite-font-color;
+
+// We use these to style widgets
+$widget-font-size: rem-calc(14);
+$widget-font-family: $sans-font-family;
 
 // Acronym styles
 $acronym-underline: 1px dotted #ddd;

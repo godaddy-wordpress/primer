@@ -2,7 +2,7 @@
 /**
  * Displays the site title.
  *
- * @package Basis
+ * @package basis
  */
 ?>
 

@@ -3,6 +3,11 @@ $widget-bg: #fff !default;
 .widget {
 	margin: 0 0 1.5em;
 	padding: 20px;
+
+	&,p,ul,ol{
+		font-family: $widget-font-family;
+		font-size: $widget-font-size;
+	}
 }
 
 /* Make sure select elements fit in widgets */
@@ -43,25 +48,15 @@ $widget-bg: #fff !default;
 
 .widget-title {
 	font-family: $sans-font-family;
-	padding: 1em 0em 1em 1.25em;
-	padding: 1rem 0rem 1rem 1.25rem;
-	margin: -20px -20px 1em;
-	margin-bottom: 1rem;
 	position: relative;
 	box-sizing: content-box;
-	text-transform: uppercase;
 	font-weight: bold;
-	border-bottom: 1px solid $body-bg;
-
-	@media screen and (max-width: 600px) {
-		padding: 1em 1.25em 1em 1.25em;
-		padding: 1rem 1.25rem 1rem 1.25rem;
-		border-radius: 0;
-	}
 }
 
 .widget {
 	background-color: $widget-bg;
+	padding: 2em;
+	padding: 2rem;
 
 	ul {
 		list-style: none;
@@ -117,7 +112,7 @@ $widget-bg: #fff !default;
 	}
 }
 
-/* Calendar Widget */
+/* Recent Comments Widget */
 
 .widget_recent_comments {
 	li {
@@ -132,6 +127,7 @@ $widget-bg: #fff !default;
 
 		a {
 			border: 0;
+			display: inline;
 		}
 	}
 }
@@ -148,8 +144,6 @@ $widget-bg: #fff !default;
 	}
 
 	#calendar_wrap {
-		padding-right: 1.25em;
-		padding-right: 1.25rem;
 
 		#wp-calendar {
 			width: 100%;
@@ -158,6 +152,7 @@ $widget-bg: #fff !default;
 			font-size: .9em;
 			border-radius: 0 0 2px 2px;
 			overflow: hidden;
+			margin-bottom: 0;
 
 			td,th{
 				width: 14.285714286%;

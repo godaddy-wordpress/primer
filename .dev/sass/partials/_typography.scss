@@ -13,7 +13,7 @@ $header-font-style: $font-weight-normal !default;
 $header-font-color: #222 !default;
 $header-line-height: 1.4 !default;
 $header-top-margin: .2rem !default;
-$header-bottom-margin: .5rem !default;
+$header-bottom-margin: 1rem !default;
 $header-text-rendering: optimizeLegibility !default;
 
 // We use these to control header font sizes
@@ -430,11 +430,18 @@ $align-class-breakpoints:
 			padding: $blockquote-padding;
 			border-#{$default-float}: $blockquote-border;
 			overflow: hidden;
+			font-family: $header-font-family;
+			font-style: italic;
 
 			cite {
 				display: block;
 				font-size: $blockquote-cite-font-size;
 				color: $blockquote-cite-font-color;
+				margin-top: .5em;
+				margin-top: .5rem;
+				font-size: 1.1em;
+				font-size: 1.1rem;
+
 				&:before {
 					content: "\2014 \0020";
 				}
@@ -449,6 +456,9 @@ $align-class-breakpoints:
 		blockquote p {
 			line-height: $paragraph-line-height;
 			color: $blockquote-font-color;
+			font-size: 1.4em;
+			font-size: 1.4rem;
+			line-height: 1.4;
 		}
 
 		@media #{$medium-up} {

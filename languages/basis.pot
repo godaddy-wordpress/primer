@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: basis-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-29 22:17-0600\n"
+"POT-Creation-Date: 2015-03-23 17:21-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -270,8 +270,8 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: templates/parts/loop/page-footer.php:9
-#: templates/parts/loop/post-footer.php:16
+#: templates/parts/loop/page-footer.php:8
+#: templates/parts/loop/post-footer.php:12
 #: templates/parts/loop/post-search-footer.php:37
 msgid "Edit"
 msgstr ""
@@ -280,36 +280,41 @@ msgstr ""
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: templates/parts/loop/post-footer.php:13
-#: templates/parts/loop/post-search-footer.php:34
-msgid "Leave a comment"
-msgstr ""
-
-#: templates/parts/loop/post-footer.php:13
-#: templates/parts/loop/post-search-footer.php:34
-msgid "1 Comment"
-msgstr ""
-
-#: templates/parts/loop/post-footer.php:13
-#: templates/parts/loop/post-search-footer.php:34
-msgid "% Comments"
-msgstr ""
-
-#: templates/parts/loop/post-footer.php:22
-#: templates/parts/loop/post-footer.php:32
+#: templates/parts/loop/post-footer.php:18
+#: templates/parts/loop/post-footer.php:28
 #: templates/parts/loop/post-search-footer.php:14
 #: templates/parts/loop/post-search-footer.php:24
 msgid ", "
 msgstr ""
 
-#: templates/parts/loop/post-footer.php:26
+#: templates/parts/loop/post-footer.php:22
 #, php-format
 msgid "Posted in: %1$s"
 msgstr ""
 
-#: templates/parts/loop/post-footer.php:36
+#: templates/parts/loop/post-footer.php:32
 #, php-format
 msgid "Filed under: %1$s"
+msgstr ""
+
+#: templates/parts/loop/post-meta.php:4
+#, php-format
+msgid "%s by %s"
+msgstr ""
+
+#: templates/parts/loop/post-meta.php:11
+#: templates/parts/loop/post-search-footer.php:34
+msgid "Leave a comment"
+msgstr ""
+
+#: templates/parts/loop/post-meta.php:11
+#: templates/parts/loop/post-search-footer.php:34
+msgid "1 Comment"
+msgstr ""
+
+#: templates/parts/loop/post-meta.php:11
+#: templates/parts/loop/post-search-footer.php:34
+msgid "% Comments"
 msgstr ""
 
 #: templates/parts/loop/post-search-footer.php:18
@@ -323,15 +328,6 @@ msgid "Tagged %1$s"
 msgstr ""
 
 #: templates/parts/site-info.php:14
-msgid "http://wordpress.org/"
-msgstr ""
-
-#: templates/parts/site-info.php:14
 #, php-format
-msgid "Proudly powered by %s"
-msgstr ""
-
-#: templates/parts/site-info.php:16
-#, php-format
-msgid "Theme: %1$s by %2$s."
+msgid "Built on %1$s by %2$s."
 msgstr ""

@@ -2,7 +2,7 @@
 /**
  * Displays the primary navigation.
  *
- * @package Basis
+ * @package basis
  */
 ?>
 

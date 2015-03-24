@@ -2,7 +2,7 @@
 /**
  * Displays the footer site info.
  *
- * @package Basis
+ * @package basis
  */
 ?>
 
@@ -11,13 +11,15 @@
 		<div class="site-info-inner">
 
 			<div class="site-info-text">
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'basis' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'basis' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( __( 'Theme: %1$s by %2$s.', 'basis' ), 'Basis', '<a href="https://upthemes.com/" rel="designer">UpThemes</a>' ); ?>
+				<?php printf( __( 'Built on %1$s by %2$s.', 'basis' ), 'the <a href="https://basiswp.com" rel="designer">Basis Theme</a>', '<a href="https://upthemes.com/" rel="designer">UpThemes</a>' ); ?>
 			</div><!-- .site-info-text -->
 
 			<div class="social-menu">
-				<?php wp_nav_menu( array( 'theme_location' => 'social' ) ); ?>
+				<?php wp_nav_menu(
+					array(
+						'theme_location' => 'social',
+						'depth'          => 1,
+					) ); ?>
 			</div><!-- .social-menu -->
 
 		</div><!-- .site-info-inner -->

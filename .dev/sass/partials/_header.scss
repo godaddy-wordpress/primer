@@ -12,12 +12,14 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 
 .site-title {
 	font-family: $sans-font-family;
-	font-size: emCalc(36);
-	font-size: rem-calc(36);
+	font-size: emCalc(32);
+	font-size: rem-calc(32);
 	font-weight: normal;
 	color: contrast-color($menu-background-color, #fff, #000, 50%);
 	line-height: 1;
 	letter-spacing: -.03em;
+	font-weight: 700;
+	margin-bottom: .25em;
 
 	a{
 		color: $body-font-color;
@@ -27,11 +29,14 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 .site-description{
 	font-size: emCalc(16);
 	font-size: rem-calc(16);
+	color: lighten($body-font-color,20%);
+	font-family: $sans-font-family;
 }
 
 .site-header {
 	padding: 40px 0 0;
 	background-color: $header-bg;
+	letter-spacing: -.01em;
 }
 
 .featured-content{

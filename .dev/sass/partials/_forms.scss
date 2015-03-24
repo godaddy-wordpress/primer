@@ -1,4 +1,5 @@
 button,
+a.button,
 input,
 select,
 textarea {
@@ -9,6 +10,8 @@ textarea {
 }
 
 button,
+a.button,
+a.button:visited,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -16,14 +19,17 @@ input[type="submit"] {
 	border: none;
 	color: contrast-color($color-background-button,#fff,#000,50%);
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
-	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	-webkit-appearance: none; /* Corrects inability to style clickable 'input' types in iOS */
+	-webkit-font-smoothing: auto;
 	font-size: rem-calc(16);
 	line-height: 1;
 	border-radius: 3px;
 	padding: .75em 1em;
 	padding: .75rem 1rem;
+	display: inline-block;
 
 	&:hover {
+		color: contrast-color($color-background-button,#fff,#000,50%);
 		background: darken($color-background-button, 5%);
 	}
 
@@ -50,6 +56,7 @@ input[type="search"]::-webkit-search-decoration { /* Corrects inner padding disp
 }
 
 button::-moz-focus-inner,
+a.button::-moz-focus-inner,
 input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
 	border: 0;
 	padding: 0;
