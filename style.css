@@ -2100,12 +2100,19 @@ embed, iframe, object {
     max-width: 100%;
     margin: 0;
     padding: 0; }
+  body.page-template-page-builder #content {
+    padding: 0;
+    max-width: none; }
 
 body.layout-one-column-full #primary {
   margin: 0;
   padding: 0;
   max-width: none;
   width: 100%; }
+body.page-template-page-builder #primary {
+  width: 100%;
+  padding: 0;
+  float: none; }
 
 body.layout-one-column-narrow #content {
   max-width: 50em; }

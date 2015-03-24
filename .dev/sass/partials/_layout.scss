@@ -7,6 +7,11 @@
 		margin: 0;
 		padding: 0;
 	}
+
+	body.page-template-page-builder &{
+		padding: 0;
+		max-width: none;
+	}
 }
 
 #primary{
@@ -41,6 +46,12 @@
 
 	body.layout-three-column-reversed &{
 		@extend .large-push-6;
+	}
+
+	body.page-template-page-builder &{
+		width: 100%;
+		padding: 0;
+		float: none;
 	}
 }
 
