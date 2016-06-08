@@ -139,9 +139,12 @@ function basis_setup() {
 	) );
 
 }
+
 endif; // basis_setup
+
 add_action( 'after_setup_theme', 'basis_setup' );
 
+if ( ! function_exists( 'basis_widgets_init' ) ) :
 /**
  * Register widget area.
  *
@@ -198,8 +201,11 @@ function basis_widgets_init() {
 		'after_title'   => '</h6>',
 	) );
 }
+endif;
+
 add_action( 'widgets_init', 'basis_widgets_init' );
 
+if ( ! function_exists( 'basis_scripts' ) ) :
 /**
  * Enqueue scripts and styles.
  */
@@ -217,8 +223,11 @@ function basis_scripts() {
 	}
 
 }
+endif;
+
 add_action( 'wp_enqueue_scripts', 'basis_scripts' );
 
+if ( ! function_exists( 'basis_fonts_url' ) ) :
 /**
  * Returns the Google font stylesheet URL, if available.
  *
@@ -261,19 +270,28 @@ function basis_fonts_url() {
 	return $fonts_url;
 }
 
+endif;
+
+if ( ! function_exists( 'basis_custom_excerpt_length' ) ) :
 /**
  * Define a custom excerpt length.
  */
-function custom_excerpt_length( $length ) {
+function basis_custom_excerpt_length( $length ) {
 	return 20;
 }
 
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+endif;
 
+add_filter( 'excerpt_length', 'basis_custom_excerpt_length', 999 );
+
+if ( ! function_exists( 'basis_new_excerpt_more' ) ) :
 /**
  * Define custom excerpt more.
  */
-function new_excerpt_more( $more ) {
+function basis_new_excerpt_more( $more ) {
 	return '&hellip;';
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+
+endif;
+
+add_filter('excerpt_more', 'basis_new_excerpt_more');
