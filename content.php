@@ -13,7 +13,15 @@
 
 	<?php get_template_part( 'templates/parts/loop/post', 'thumbnail' ); ?>
 
-	<?php get_template_part( 'templates/parts/loop/post', 'content' ); ?>
+	<?php
+
+	if( is_single() ):
+		get_template_part( 'templates/parts/loop/post', 'content' );
+	else:
+		get_template_part( 'templates/parts/loop/post', 'excerpt' );
+	endif;
+
+	?>
 
 	<?php get_template_part( 'templates/parts/loop/post', 'footer' ); ?>
 
