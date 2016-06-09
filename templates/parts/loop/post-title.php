@@ -15,7 +15,15 @@
 
 			<?php $tag = is_single() ? 'h1' : 'h2'; ?>
 			<<?php echo $tag; ?> class="entry-title">
-				<a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a>
+				<?php if( ! is_singular() ): ?>
+					<a href="<?php the_permalink(); ?>" rel="permalink">
+				<?php endif; ?>
+
+				<?php the_title(); ?>
+
+				<?php if( ! is_singular() ): ?>
+					</a>
+				<?php endif; ?>
 			</<?php echo $tag; ?>>
 
 			<?php do_action( 'basis_after_post_title' ); ?>
