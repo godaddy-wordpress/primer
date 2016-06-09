@@ -211,7 +211,11 @@ if ( ! function_exists( 'basis_scripts' ) ) :
  */
 function basis_scripts() {
 
-	wp_enqueue_style( 'basis', get_stylesheet_uri(), false, false );
+	$basis_theme = wp_get_theme();
+
+	$version = apply_filters( 'theme_version', $basis_theme->Version );
+
+	wp_enqueue_style( 'basis', get_stylesheet_uri(), false, $version );
 
 	wp_style_add_data( 'basis', 'rtl', 'replace' );
 
