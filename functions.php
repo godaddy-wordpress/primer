@@ -82,8 +82,8 @@ function basis_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	// Enable plugins to manage the document title
-  // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
-  add_theme_support('title-tag');
+	// http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
+	add_theme_support('title-tag');
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
