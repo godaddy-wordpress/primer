@@ -81,6 +81,10 @@ function basis_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
+	// Enable plugins to manage the document title
+  // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
+  add_theme_support('title-tag');
+
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
