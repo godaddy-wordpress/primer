@@ -15,7 +15,7 @@
 			if ( $categories_list && primer_categorized_blog() ) :
 		?>
 		<span class="cat-links">
-			<?php printf( __( 'Posted in %1$s', 'primer' ), $categories_list ); ?>
+			<?php printf( _x( 'Posted in %s', 'category list', 'primer' ), $categories_list ); ?>
 		</span>
 		<?php endif; // End if categories ?>
 
@@ -25,7 +25,7 @@
 			if ( $tags_list ) :
 		?>
 		<span class="tags-links">
-			<?php printf( __( 'Tagged %1$s', 'primer' ), $tags_list ); ?>
+			<?php printf( _x( 'Tagged %s', 'tag list', 'primer' ), $tags_list ); ?>
 		</span>
 		<?php endif; // End if $tags_list ?>
 	<?php endif; // End if 'post' == get_post_type() ?>
