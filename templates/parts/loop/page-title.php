@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page title within the loop.
  *
- * @package basis
+ * @package Primer
  */
 ?>
 <header class="page-header">

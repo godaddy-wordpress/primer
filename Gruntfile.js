@@ -40,7 +40,7 @@ module.exports = function(grunt) {
 
 		pot: {
 				options:{
-					text_domain: 'basis', //Your text domain. Produces my-text-domain.pot
+					text_domain: 'primer', //Your text domain. Produces my-text-domain.pot
 					dest: 'languages/', //directory to place the pot file
 					keywords: [ //WordPress localisation functions
 						'__:1',

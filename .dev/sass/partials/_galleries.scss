@@ -8,8 +8,8 @@
 
 // we want the Gallery page width to be 100% all the time. the page does
 // not support a sidebar, but lets write styles just to make sure
-.page-template-page-templatesgalleries-php.basis-no-sidebar #basis-content,
-.page-template-page-templatesgalleries-php.basis-has-sidebar #basis-content {
+.page-template-page-templatesgalleries-php.primer-no-sidebar #primer-content,
+.page-template-page-templatesgalleries-php.primer-has-sidebar #primer-content {
 	width: 100%;
 }
 

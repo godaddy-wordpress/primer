@@ -1,8 +1,8 @@
 <?php
 /**
- * Basis functions and definitions
+ * Primer functions and definitions
  *
- * @package Basis
+ * @package Primer
  */
 
 /**
@@ -55,7 +55,7 @@ if ( ! isset( $content_width ) ) {
 
 }
 
-if ( ! function_exists( 'basis_setup' ) ) :
+if ( ! function_exists( 'primer_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -63,20 +63,20 @@ if ( ! function_exists( 'basis_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function basis_setup() {
+function primer_setup() {
 
 	global $post;
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Basis, use a find and replace
-	 * to change 'basis' to the name of your theme in all the template files
+	 * If you're building a theme based on Primer, use a find and replace
+	 * to change 'primer' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'basis', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'primer', get_template_directory() . '/languages' );
 
 	// Add image size for featured images
-	add_image_size( 'basis-featured', 1600, 900, 1 );
+	add_image_size( 'primer-featured', 1600, 900, 1 );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -94,21 +94,21 @@ function basis_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'basis' ),
-		'social' => __( 'Social Menu', 'basis' ),
+		'primary' => __( 'Primary Menu', 'primer' ),
+		'social' => __( 'Social Menu', 'primer' ),
 	) );
 
 	// Hybrid Core Theme Layouts
 	add_theme_support(
 		'theme-layouts',
 		array(
-			'one-column-wide'       => __( '1 Column Wide',                          'basis' ),
-			'one-column-narrow'     => __( '1 Column Narrow',                        'basis' ),
-			'two-column-default'    => __( '2 Columns: Content / Sidebar',           'basis' ),
-			'two-column-reversed'   => __( '2 Columns: Sidebar / Content',           'basis' ),
-			'three-column-default'  => __( '3 Columns: Content / Sidebar / Sidebar', 'basis' ),
-			'three-column-center'   => __( '3 Columns: Sidebar / Content / Sidebar', 'basis' ),
-			'three-column-reversed' => __( '3 Columns: Sidebar / Sidebar / Content', 'basis' ),
+			'one-column-wide'       => __( '1 Column Wide',                          'primer' ),
+			'one-column-narrow'     => __( '1 Column Narrow',                        'primer' ),
+			'two-column-default'    => __( '2 Columns: Content / Sidebar',           'primer' ),
+			'two-column-reversed'   => __( '2 Columns: Sidebar / Content',           'primer' ),
+			'three-column-default'  => __( '3 Columns: Content / Sidebar / Sidebar', 'primer' ),
+			'three-column-center'   => __( '3 Columns: Sidebar / Content / Sidebar', 'primer' ),
+			'three-column-reversed' => __( '3 Columns: Sidebar / Sidebar / Content', 'primer' ),
 		),
 		array( 'default' => 'two-column-default' )
 	);
@@ -130,35 +130,35 @@ function basis_setup() {
 	) );
 
 	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'basis_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'primer_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 
 	// Add support for Jetpack featured content
 	add_theme_support( 'featured-content', array(
-		'filter'     => 'basis_get_featured_posts',
+		'filter'     => 'primer_get_featured_posts',
 		'max_posts'  => 1,
 		'post_types' => array( 'post', 'page' ),
 	) );
 
 }
 
-endif; // basis_setup
+endif; // primer_setup
 
-add_action( 'after_setup_theme', 'basis_setup' );
+add_action( 'after_setup_theme', 'primer_setup' );
 
-if ( ! function_exists( 'basis_widgets_init' ) ) :
+if ( ! function_exists( 'primer_widgets_init' ) ) :
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function basis_widgets_init() {
+function primer_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'basis' ),
+		'name'          => __( 'Sidebar', 'primer' ),
 		'id'            => 'sidebar-1',
-		'description'   => __( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'basis' ),
+		'description'   => __( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'primer' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h6 class="widget-title">',
@@ -166,9 +166,9 @@ function basis_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Secondary Sidebar', 'basis' ),
+		'name'          => __( 'Secondary Sidebar', 'primer' ),
 		'id'            => 'sidebar-2',
-		'description'   => __( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'basis' ),
+		'description'   => __( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'primer' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h6 class="widget-title">',
@@ -176,9 +176,9 @@ function basis_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer Left', 'basis' ),
+		'name'          => __( 'Footer Left', 'primer' ),
 		'id'            => 'footer-1',
-		'description'   => __( 'The footer left sidebar appears in the first column of the footer widget area.', 'basis' ),
+		'description'   => __( 'The footer left sidebar appears in the first column of the footer widget area.', 'primer' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h6 class="widget-title">',
@@ -186,9 +186,9 @@ function basis_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer Center', 'basis' ),
+		'name'          => __( 'Footer Center', 'primer' ),
 		'id'            => 'footer-2',
-		'description'   => __( 'The footer center sidebar appears in the second column of the footer widget area.', 'basis' ),
+		'description'   => __( 'The footer center sidebar appears in the second column of the footer widget area.', 'primer' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h6 class="widget-title">',
@@ -196,9 +196,9 @@ function basis_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer Right', 'basis' ),
+		'name'          => __( 'Footer Right', 'primer' ),
 		'id'            => 'footer-3',
-		'description'   => __( 'The footer right sidebar appears in the third column of the footer widget area.', 'basis' ),
+		'description'   => __( 'The footer right sidebar appears in the third column of the footer widget area.', 'primer' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h6 class="widget-title">',
@@ -207,25 +207,25 @@ function basis_widgets_init() {
 }
 endif;
 
-add_action( 'widgets_init', 'basis_widgets_init' );
+add_action( 'widgets_init', 'primer_widgets_init' );
 
-if ( ! function_exists( 'basis_scripts' ) ) :
+if ( ! function_exists( 'primer_scripts' ) ) :
 /**
  * Enqueue scripts and styles.
  */
-function basis_scripts() {
+function primer_scripts() {
 
-	$basis_theme = wp_get_theme();
+	$primer_theme = wp_get_theme();
 
-	$version = apply_filters( 'theme_version', $basis_theme->Version );
+	$version = apply_filters( 'theme_version', $primer_theme->Version );
 
-	wp_enqueue_style( 'basis', get_stylesheet_uri(), false, $version );
+	wp_enqueue_style( 'primer', get_stylesheet_uri(), false, $version );
 
-	wp_style_add_data( 'basis', 'rtl', 'replace' );
+	wp_style_add_data( 'primer', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'basis-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'basis-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -234,9 +234,9 @@ function basis_scripts() {
 }
 endif;
 
-add_action( 'wp_enqueue_scripts', 'basis_scripts' );
+add_action( 'wp_enqueue_scripts', 'primer_scripts' );
 
-if ( ! function_exists( 'basis_fonts_url' ) ) :
+if ( ! function_exists( 'primer_fonts_url' ) ) :
 /**
  * Returns the Google font stylesheet URL, if available.
  *
@@ -245,20 +245,20 @@ if ( ! function_exists( 'basis_fonts_url' ) ) :
  *
  * @return string	$fonts_url 	Font stylesheet or empty string if disabled.
  */
-function basis_fonts_url() {
+function primer_fonts_url() {
 	$fonts_url = '';
 
 	/* Translators: If there are characters in your language that are not
 	 * supported by Lato, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$lato = _x( 'on', 'Lato font: on or off', 'basis' );
+	$lato = _x( 'on', 'Lato font: on or off', 'primer' );
 
 	/* Translators: If there are characters in your language that are not
 	 * supported by Merriweather, translate this to 'off'. Do not translate into your
 	 * own language.
 	 */
-	$poly = _x( 'on', 'Merriweather font: on or off', 'basis' );
+	$poly = _x( 'on', 'Merriweather font: on or off', 'primer' );
 
 	if ( 'off' !== $lato || 'off' !== $poly ) {
 		$font_families = array();
@@ -281,26 +281,26 @@ function basis_fonts_url() {
 
 endif;
 
-if ( ! function_exists( 'basis_custom_excerpt_length' ) ) :
+if ( ! function_exists( 'primer_custom_excerpt_length' ) ) :
 /**
  * Define a custom excerpt length.
  */
-function basis_custom_excerpt_length( $length ) {
+function primer_custom_excerpt_length( $length ) {
 	return 20;
 }
 
 endif;
 
-add_filter( 'excerpt_length', 'basis_custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'primer_custom_excerpt_length', 999 );
 
-if ( ! function_exists( 'basis_new_excerpt_more' ) ) :
+if ( ! function_exists( 'primer_new_excerpt_more' ) ) :
 /**
  * Define custom excerpt more.
  */
-function basis_new_excerpt_more( $more ) {
+function primer_new_excerpt_more( $more ) {
 	return '&hellip;';
 }
 
 endif;
 
-add_filter('excerpt_more', 'basis_new_excerpt_more');
+add_filter('excerpt_more', 'primer_new_excerpt_more');

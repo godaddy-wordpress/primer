@@ -4,29 +4,29 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Basis
+ * @package Primer
  */
 
-if ( ! function_exists( 'basis_paging_nav' ) ) :
+if ( ! function_exists( 'primer_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  */
-function basis_paging_nav() {
+function primer_paging_nav() {
 	// Don't print empty markup if there's only one page.
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
 	}
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'basis' ); ?></h1>
+		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'primer' ); ?></h1>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'basis' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'primer' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'basis' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'primer' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -35,11 +35,11 @@ function basis_paging_nav() {
 }
 endif;
 
-if ( ! function_exists( 'basis_post_nav' ) ) :
+if ( ! function_exists( 'primer_post_nav' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
  */
-function basis_post_nav() {
+function primer_post_nav() {
 	// Don't print empty markup if there's nowhere to navigate.
 	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 	$next     = get_adjacent_post( false, '', false );
@@ -49,11 +49,11 @@ function basis_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'basis' ); ?></h1>
+		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'primer' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'basis' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'basis' ) );
+				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'primer' ) );
+				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'primer' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -61,11 +61,11 @@ function basis_post_nav() {
 }
 endif;
 
-if ( ! function_exists( 'basis_posted_on' ) ) :
+if ( ! function_exists( 'primer_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function basis_posted_on() {
+function primer_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
@@ -85,11 +85,11 @@ function basis_posted_on() {
 }
 endif;
 
-if( ! function_exists('basis_post_format') ):
+if( ! function_exists('primer_post_format') ):
 /**
  * Prints the post format for the current post.
  */
-function basis_post_format(){
+function primer_post_format(){
 	global $post;
 
 	$format = get_post_format( get_the_ID() );
@@ -108,8 +108,8 @@ endif;
  *
  * @return bool
  */
-function basis_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'basis_categories' ) ) ) {
+function primer_categorized_blog() {
+	if ( false === ( $all_the_cool_cats = get_transient( 'primer_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
@@ -122,14 +122,14 @@ function basis_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'basis_categories', $all_the_cool_cats );
+		set_transient( 'primer_categories', $all_the_cool_cats );
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so basis_categorized_blog should return true.
+		// This blog has more than 1 category so primer_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so basis_categorized_blog should return false.
+		// This blog has only 1 category so primer_categorized_blog should return false.
 		return false;
 	}
 }
@@ -139,7 +139,7 @@ function basis_categorized_blog() {
  *
  * @return bool/string
  */
-function basis_get_featured_image_url() {
+function primer_get_featured_image_url() {
 	$featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'featured' );
 
 	$featured_image_url = $featured_image_url[0];
@@ -151,11 +151,11 @@ function basis_get_featured_image_url() {
 }
 
 /**
- * Flush out the transients used in basis_categorized_blog.
+ * Flush out the transients used in primer_categorized_blog.
  */
-function basis_category_transient_flusher() {
+function primer_category_transient_flusher() {
 	// Like, beat it. Dig?
-	delete_transient( 'basis_categories' );
+	delete_transient( 'primer_categories' );
 }
-add_action( 'edit_category', 'basis_category_transient_flusher' );
-add_action( 'save_post',     'basis_category_transient_flusher' );
+add_action( 'edit_category', 'primer_category_transient_flusher' );
+add_action( 'save_post',     'primer_category_transient_flusher' );

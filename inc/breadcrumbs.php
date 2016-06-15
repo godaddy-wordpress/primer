@@ -4,10 +4,10 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package basis
+ * @package Primer
  */
 
-if ( ! function_exists( 'basis_breadcrumbs' ) ) :
+if ( ! function_exists( 'primer_breadcrumbs' ) ) :
 
 /**
  * Simple breadcrumbs
@@ -16,7 +16,7 @@ if ( ! function_exists( 'basis_breadcrumbs' ) ) :
  *
  * @link https://wordpress.org/plugins/really-simple-breadcrumb/ 	Adapted from Christoph Weil's Really Simple Breadcrumb plugin.
  */
-function basis_breadcrumbs() {
+function primer_breadcrumbs() {
 
     global $post;
 
@@ -30,7 +30,7 @@ function basis_breadcrumbs() {
 
 		if( get_option( 'show_on_front') == 'page' ){
 
-			echo '<a href="' . esc_url( basis_get_posts_url() ) . '">' . __( 'Blog' ) . '</a> ' . $separator;
+			echo '<a href="' . esc_url( primer_get_posts_url() ) . '">' . __( 'Blog' ) . '</a> ' . $separator;
 
 		}
 
@@ -81,7 +81,7 @@ function basis_breadcrumbs() {
 }
 endif;
 
-if ( ! function_exists( 'basis_get_posts_url' ) ) :
+if ( ! function_exists( 'primer_get_posts_url' ) ) :
 
 /**
  * Retrieve the posts page URI.
@@ -90,7 +90,7 @@ if ( ! function_exists( 'basis_get_posts_url' ) ) :
  *
  * @return 	string 	$posts_page_uri 	URL for the posts page if a custom homepage exists.
  */
-function basis_get_posts_url() {
+function primer_get_posts_url() {
 
 	if( get_option( 'show_on_front' ) == 'page') {
 

@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package Basis
+ * @package Primer
  */
 
 get_header(); ?>
@@ -14,7 +14,7 @@ get_header(); ?>
 
 			<?php get_template_part( 'content' ); ?>
 
-			<?php basis_post_nav(); ?>
+			<?php primer_post_nav(); ?>
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template

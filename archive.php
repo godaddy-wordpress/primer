@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Basis
+ * @package Primer
  */
 
 get_header(); ?>
@@ -40,7 +40,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php basis_paging_nav(); ?>
+			<?php primer_paging_nav(); ?>
 
 		<?php else : ?>
 

@@ -4,14 +4,14 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package basis
+ * @package Primer
  */
 ?>
 <header class="entry-header">
 	<div class="entry-header-row">
 		<div class="entry-header-column">
 
-			<?php do_action( 'basis_before_post_title' ); ?>
+			<?php do_action( 'primer_before_post_title' ); ?>
 
 			<?php $tag = is_single() ? 'h1' : 'h2'; ?>
 			<<?php echo $tag; ?> class="entry-title">
@@ -26,7 +26,7 @@
 				<?php endif; ?>
 			</<?php echo $tag; ?>>
 
-			<?php do_action( 'basis_after_post_title' ); ?>
+			<?php do_action( 'primer_after_post_title' ); ?>
 
 		</div><!-- .entry-header-column -->
 	</div><!-- .entry-header-row -->

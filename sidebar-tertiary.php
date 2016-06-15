@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the alternate widget area.
  *
- * @package Basis
+ * @package Primer
  */
 
 /**

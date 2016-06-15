@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Basis
+ * @package Primer
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -19,19 +19,19 @@
 </head>
 <body <?php body_class(); ?>>
 
-<?php do_action( 'basis_body_inside' ); ?>
+<?php do_action( 'primer_body_inside' ); ?>
 
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'basis' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'primer' ); ?></a>
 
-	<?php do_action( 'basis_header_before' ); ?>
+	<?php do_action( 'primer_header_before' ); ?>
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<?php do_action( 'basis_header' ); ?>
+		<?php do_action( 'primer_header' ); ?>
 
 	</header><!-- #masthead -->
 
-	<?php do_action( 'basis_header_after' ); ?>
+	<?php do_action( 'primer_header_after' ); ?>
 
 	<div id="content" class="site-content">

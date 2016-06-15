@@ -1,21 +1,18 @@
 {
-  "name": "basis-pro",
-  "version": "0.0.1",
-  "description": "A blog theme for pastors.",
+  "name": "primer",
+  "version": "1.0.0",
+  "description": "Primer is a modern WordPress theme based on _s.",
   "main": "index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/UpThemes/basis-pro.git"
-  },
-  "author": "UpThemes",
-  "license": "GPLv2",
+  "repository": "godaddy/wp-primer-theme",
+  "author": "GoDaddy",
+  "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/UpThemes/basis-pro/issues"
+    "url": "https://github.com/godaddy/wp-primer-theme/issues"
   },
-  "homepage": "https://github.com/UpThemes/basis-pro",
+  "homepage": "https://wordpress.org/themes/primer/",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-autoprefixer": "~1.0.0",

@@ -1,20 +1,15 @@
-/*
-Theme Name: Basis Framework
-Theme URI: http://basiswp.com/
-Author: UpThemes
-Author URI: https://upthemes.com/
-Description: Basis is a WordPress theme framework with modern development build tools developed with one goal in mind: speeding up design, development, and release of commercial themes to the WordPress.com theme marketplace.
-Version: 1.2.1
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: basis
-Domain Path: /languages/
-Tags:
-
-This theme, like WordPress, is licensed under the GPL.
-
-Basis includes code from Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
-*/
+/**
+ * Theme Name: Primer
+ * Theme URI: https://wordpress.org/themes/primer/
+ * Author: GoDaddy
+ * Author URI: https://www.godaddy.com/
+ * Description: Primer is a modern WordPress theme based on _s.
+ * Version: 1.0.0
+ * License: GPL-2.0
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: primer
+ * Domain Path: /languages
+ */
 /*--------------------------------------------------------------
 Variables
 --------------------------------------------------------------*/
@@ -1309,7 +1304,6 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   background-color: #eee;
   border: none;
   -webkit-transform: 200ms background linear;
-      -ms-transform: 200ms background linear;
           transform: 200ms background linear;
   border-radius: 3px;
   resize: none; }
@@ -1712,7 +1706,7 @@ a {
     .hentry {
       padding: 2.5em 3.5em;
       padding: 2.5rem 3.5rem; } }
-  .hentry .attachment-basis-featured {
+  .hentry .attachment-primer-featured {
     width: 100%;
     height: auto; }
   .hentry .entry-header {
@@ -1829,13 +1823,13 @@ article.format-link {
 .entry-media.audio {
   margin-bottom: 1.5em; }
 
-.basis-event-full-map, .entry-media.video {
+.primer-event-full-map, .entry-media.video {
   height: 0;
   position: relative;
   margin-top: 2em;
   margin-bottom: 2em;
   padding-bottom: 66%; }
-  .basis-event-full-map > *, .entry-media.video > * {
+  .primer-event-full-map > *, .entry-media.video > * {
     position: absolute;
     top: 0;
     right: 0;
@@ -1843,7 +1837,7 @@ article.format-link {
     bottom: 0;
     width: 100% !important;
     height: 100% !important; }
-  .basis-event-full-map .mejs-container, .entry-media.video .mejs-container {
+  .primer-event-full-map .mejs-container, .entry-media.video .mejs-container {
     width: 100% !important;
     height: 100% !important; }
 
@@ -1991,7 +1985,7 @@ img[class*="wp-image-"] {
   * Gallery Archive Page
   *
   */
-.page-template-page-templatesgalleries-php.basis-no-sidebar #basis-content, .page-template-page-templatesgalleries-php.basis-has-sidebar #basis-content {
+.page-template-page-templatesgalleries-php.primer-no-sidebar #primer-content, .page-template-page-templatesgalleries-php.primer-has-sidebar #primer-content {
   width: 100%; }
 
 /* Galleries */

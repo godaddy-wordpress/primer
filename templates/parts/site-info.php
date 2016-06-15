@@ -2,7 +2,7 @@
 /**
  * Displays the footer site info.
  *
- * @package basis
+ * @package Primer
  */
 ?>
 
@@ -11,9 +11,9 @@
 		<div class="site-info-inner">
 
 			<div class="site-info-text">
-				<?php printf( __( 'Built on %1$s by %2$s.', 'basis' ), 'the <a href="https://basiswp.com" rel="designer">Basis Theme</a>', '<a href="https://upthemes.com/" rel="designer">UpThemes</a>' ); ?>
+				<?php printf( __( 'Built on %1$s by %2$s.', 'primer' ), 'the <a href="https://wordpress.org/themes/primer/" rel="designer">Primer</a>', '<a href="https://www.godaddy.com/" rel="designer">GoDaddy</a>' ); ?>
 			</div><!-- .site-info-text -->
-			
+
 			<?php if( has_nav_menu( 'social' ) ): ?>
 				<div class="social-menu">
 					<?php wp_nav_menu(

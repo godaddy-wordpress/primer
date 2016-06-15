@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page footer within the loop.
  *
- * @package basis
+ * @package Primer
  */
 ?>
-<?php edit_post_link( __( 'Edit', 'basis' ), '<span class="edit-link">', '</span>' ); ?>
+<?php edit_post_link( __( 'Edit', 'primer' ), '<span class="edit-link">', '</span>' ); ?>
