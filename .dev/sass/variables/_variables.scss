@@ -20,7 +20,7 @@ $font-weight-bold: bold;
 $font-smoothing: subpixel-antialiased;
 
 // We use these as default colors throughout
-$primary-color: #e91f2e;
+$primary-color: #00a63f;
 $secondary-color: #000000;
 $alert-color: #f04124;
 $success-color: #43AC6A;
@@ -45,8 +45,8 @@ $color-text-input: #666;
 $color-text-input-focus: #111;
 $color-text-input-background: #eee;
 $color-link: $primary-color;
-$color-link-visited: darken($primary-color,10%);
-$color-link-hover: darken($primary-color,10%);
+$color-link-visited: $primary-color;
+$color-link-hover: lighten($primary-color,3%);
 $color-text-main: #404040;
 
 // Borders

@@ -10,9 +10,20 @@ $widget-bg: #fff !default;
 	}
 }
 
-/* Make sure select elements fit in widgets */
-.widget select {
-	max-width: 100%;
+/* Make sure form fields fit in widgets */
+.widget {
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	textarea,
+	select,
+	 {
+		max-width: 100%;
+		width: 100%;
+	}
 }
 
 /* Search widget */

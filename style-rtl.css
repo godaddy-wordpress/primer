@@ -982,11 +982,11 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, t
 
 /* Default Link Styles */
 a {
-  color: #e91f2e;
+  color: #00a63f;
   text-decoration: none;
   line-height: inherit; }
   a:hover, a:focus {
-    color: #cf1424; }
+    color: #008f34; }
   a img {
     border: none; }
 
@@ -1266,7 +1266,7 @@ button, a.button, input, select, textarea {
   font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
 
 button, a.button, a.button:visited, input[type="button"], input[type="reset"], input[type="submit"] {
-  background: #e91f2e;
+  background: #00a63f;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -1282,9 +1282,9 @@ button, a.button, a.button:visited, input[type="button"], input[type="reset"], i
   display: inline-block; }
   button:hover, a.button:hover, a.button:visited:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
     color: #fff;
-    background: #d91526; }
+    background: #00b542; }
   button:focus button:active, a.button:focus a.button:active, a.button:visited:focus a.button:visited:active, input[type="button"]:focus input[type="button"]:active, input[type="reset"]:focus input[type="reset"]:active, input[type="submit"]:focus input[type="submit"]:active {
-    background: #c21322; }
+    background: #00b542; }
 
 input[type="checkbox"], input[type="radio"] {
   padding: 0;
@@ -1334,11 +1334,11 @@ textarea {
   width: 100%; }
 
 a {
-  color: #e91f2e; }
+  color: #00a63f; }
   a:visited {
-    color: #c21322; }
+    color: #00a63f; }
   a:hover, a:focus, a:active {
-    color: #c21322; }
+    color: #00b542; }
 
 .main-navigation-container {
   background-color: #222; }
@@ -1543,9 +1543,10 @@ a {
     font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-size: 0.875rem; }
 
-/* Make sure select elements fit in widgets */
-.widget select {
-  max-width: 100%; }
+/* Make sure form fields fit in widgets */
+.widget input[type="text"], .widget input[type="email"], .widget input[type="url"], .widget input[type="password"], .widget input[type="search"], .widget input[type="number"], .widget textarea, .widget select {
+  max-width: 100%;
+  width: 100%; }
 
 /* Search widget */
 .widget_search {
@@ -1683,7 +1684,7 @@ a {
           color: #444;
           transition: 200ms color linear; }
           .widget_calendar #calendar_wrap #wp-calendar tfoot td a:hover {
-            color: #e91f2e; }
+            color: #00a63f; }
         .widget_calendar #calendar_wrap #wp-calendar tfoot td#prev {
           text-align: right; }
         .widget_calendar #calendar_wrap #wp-calendar tfoot td#next {
@@ -1759,7 +1760,7 @@ a {
   .entry-footer:after {
     clear: both; }
   .entry-footer a {
-    color: #e91f2e; }
+    color: #00a63f; }
   .entry-footer .entry-footer-right {
     float: left; }
   .entry-footer .cat-links, .entry-footer .tags-links {
@@ -1805,7 +1806,7 @@ a {
     line-height: 2; }
 
 .post-format {
-  color: #e91f2e;
+  color: #00a63f;
   text-transform: uppercase;
   font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 0.8125rem;
@@ -1815,7 +1816,7 @@ a {
   font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   border-radius: 3px;
-  border: 1px solid #e91f2e;
+  border: 1px solid #00a63f;
   padding: 0.5em 1em;
   padding: 0.5rem 1rem; }
 
@@ -1903,6 +1904,8 @@ article.format-link {
       margin-bottom: 1em;
       font-size: 0.8125rem;
       line-height: 1em; }
+      .comment-list li .comment-metadata .edit-link {
+        float: left; }
   .comment-list .comment-reply-link:after {
     content: " \2192"; }
   .comment-list .comment-awaiting-moderation {
@@ -2180,12 +2183,12 @@ body.layout-one-column-narrow #content {
     font-size: 1.1875rem;
     font-weight: 200; }
   .featured-content .entry-header .post-format {
-    color: #e91f2e; }
+    color: #00a63f; }
   .featured-content .entry-header .read-more {
     padding: 0.5em 1em;
     padding: 0.5rem 1rem;
-    background-color: #e91f2e;
-    color: #fff;
+    background-color: #00a63f;
+    color: #000;
     display: inline-block;
     font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -2193,7 +2196,7 @@ body.layout-one-column-narrow #content {
     font-size: 0.8125rem;
     font-size: 0.8125rem; }
     .featured-content .entry-header .read-more:hover {
-      background-color: #c21322; }
+      background-color: #00732a; }
 
 .site-footer {
   background-color: #111;
@@ -2261,7 +2264,7 @@ body.layout-one-column-narrow #content {
       background-color: #222; }
       .site-info-wrapper .site-info .social-menu a:hover {
         color: #fff;
-        background-color: #e91f2e; }
+        background-color: #00a63f; }
 
 .featured-content {
   background-size: cover; }
@@ -2295,8 +2298,8 @@ body.layout-one-column-narrow #content {
   .featured-content .read-more {
     padding: 0.5em 1em;
     padding: 0.5rem 1rem;
-    background-color: #e91f2e;
-    color: #fff;
+    background-color: #00a63f;
+    color: #000;
     display: inline-block;
     font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -2304,7 +2307,7 @@ body.layout-one-column-narrow #content {
     font-size: 0.8125rem;
     font-size: 0.8125rem; }
     .featured-content .read-more:hover {
-      background-color: #c21322; }
+      background-color: #00732a; }
 
 /**
 
@@ -2740,7 +2743,7 @@ body.layout-one-column-narrow #content {
     height: 32px;
     transition: 200ms opacity;
     color: #e7e7e7;
-    background: #e91f2e;
+    background: #00a63f;
     border-radius: 3px; }
     .social-menu a:before {
       -webkit-font-smoothing: subpixel-antialiased;
@@ -2748,7 +2751,7 @@ body.layout-one-column-narrow #content {
       display: inline-block;
       font-size: 18px; }
     .social-menu a:hover {
-      background: #e91f2e; }
+      background: #00a63f; }
   .social-menu a[href*="wordpress.org"]:before, .social-menu a[href*="wordpress.com"]:before {
     content: '\f205'; }
     .social-menu a[href*="wordpress.org"]:before:hover, .social-menu a[href*="wordpress.com"]:before:hover {
