@@ -2,21 +2,27 @@
 /**
  * The sidebar containing the alternate widget area.
  *
+ * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#sidebar-php
+ *
  * @package Primer
  */
 
-/**
- * Get the activate theme layout.
- */
-$layout = theme_layouts_get_layout();
+$layouts = array(
+	'layout-three-column-default',
+	'layout-three-column-center',
+	'layout-three-column-reversed',
+);
 
-if ( ! is_active_sidebar( 'sidebar-2' ) || ( $layout !== 'layout-three-column-default' && $layout !== 'layout-three-column-center' && $layout !== 'layout-three-column-reversed' ) ) {
+if ( ! is_active_sidebar( 'sidebar-2' ) || ! in_array( theme_layouts_get_layout(), $layouts ) ) {
+
 	return;
+
 }
+
 ?>
 
 <div id="tertiary" class="widget-area" role="complementary">
 
-	<?php dynamic_sidebar( 'sidebar-2' ); ?>
+	<?php dynamic_sidebar( 'sidebar-2' ) ?>
 
 </div><!-- #tertiary -->

@@ -6,42 +6,40 @@
  * and one of the two required files for a theme (the other being style.css).
  * It is used to display a page when nothing more specific matches a query.
  * E.g., it puts together the home page when no home.php file exists.
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Primer
  */
 
-get_header(); ?>
+get_header() ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
 
-		<?php if ( have_posts() ) : ?>
+	<main id="main" class="site-main" role="main">
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+	<?php if ( have_posts() ) : ?>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+		<?php while ( have_posts() ) : the_post() ?>
 
-			<?php endwhile; ?>
+			<?php get_template_part( 'content', get_post_format() ) ?>
 
-			<?php primer_paging_nav(); ?>
+		<?php endwhile; ?>
 
-		<?php else : ?>
+		<?php primer_paging_nav() ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+	<?php else : ?>
 
-		<?php endif; ?>
+		<?php get_template_part( 'content', 'none' ) ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	<?php endif; ?>
 
-<?php get_sidebar(); ?>
-<?php get_sidebar( 'tertiary' ); ?>
-<?php get_footer(); ?>
+	</main><!-- #main -->
+
+</div><!-- #primary -->
+
+<?php get_sidebar() ?>
+
+<?php get_sidebar( 'tertiary' ) ?>
+
+<?php get_footer() ?>

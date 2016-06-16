@@ -2,32 +2,35 @@
 /**
  * Template Name: Page Builder
  *
+ * @link https://developer.wordpress.org/themes/template-files-section/page-template-files/page-templates/
+ *
  * @package Primer
  */
 
-get_header(); ?>
+get_header() ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
 
-		<?php if ( have_posts() ) : ?>
+	<main id="main" class="site-main" role="main">
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+	<?php if ( have_posts() ) : ?>
 
-				<?php the_content(); ?>
+		<?php while ( have_posts() ) : the_post() ?>
 
-			<?php endwhile; ?>
+			<?php the_content() ?>
 
-			<?php primer_paging_nav(); ?>
+		<?php endwhile; ?>
 
-		<?php else : ?>
+		<?php primer_paging_nav() ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+	<?php else : ?>
 
-		<?php endif; ?>
+		<?php get_template_part( 'content', 'none' ) ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	<?php endif; ?>
 
-<?php get_footer(); ?>
+	</main><!-- #main -->
+
+</div><!-- #primary -->
+
+<?php get_footer() ?>
