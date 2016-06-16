@@ -1305,7 +1305,7 @@ button::-moz-focus-inner, a.button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea {
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
   color: #666;
   background-color: #eee;
   border: none;
@@ -1313,12 +1313,12 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
           transform: 200ms background linear;
   border-radius: 3px;
   resize: none; }
-  input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus {
+  input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus {
     color: #111;
     outline: none;
     background-color: #e1e1e1; }
 
-input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea {
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
   padding: 0.75em;
   padding: 0.75rem; }
 
@@ -1544,7 +1544,7 @@ a {
     font-size: 0.875rem; }
 
 /* Make sure form fields fit in widgets */
-.widget input[type="text"], .widget input[type="email"], .widget input[type="url"], .widget input[type="password"], .widget input[type="search"], .widget input[type="number"], .widget textarea, .widget select {
+.widget input[type="text"], .widget input[type="email"], .widget input[type="url"], .widget input[type="password"], .widget input[type="search"], .widget input[type="number"], .widget input[type="tel"], .widget input[type="range"], .widget input[type="date"], .widget input[type="month"], .widget input[type="week"], .widget input[type="time"], .widget input[type="datetime"], .widget input[type="datetime-local"], .widget input[type="color"], .widget textarea, .widget select {
   max-width: 100%;
   width: 100%; }
 
