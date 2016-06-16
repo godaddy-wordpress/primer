@@ -4,7 +4,7 @@
 Primer is a modern WordPress theme based on _s.
 
 **Contributors:** [godaddy](https://profiles.wordpress.org/godaddy), [fjarrett](https://profiles.wordpress.org/fjarrett), [jonathanbardo](https://profiles.wordpress.org/jonathanbardo)  
-**Tags:** TODO 
+**Tags:** TODO  
 **Requires at least:** 4.4.2  
 **Tested up to:** 4.5  
 **Stable tag:** 1.0.0  
