@@ -1,5 +1,10 @@
 .DS_Store
-node_modules/
-bower_components/
 .sass-cache/
 .sublime-grunt.cache
+bower_components/
+build/
+node_modules/
+svn-url
+svn-username
+tests/codeception/_output/*
+vendor/
