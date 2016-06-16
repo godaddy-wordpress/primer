@@ -1,3 +1,7 @@
 [submodule "assets/genericons"]
 	path = assets/genericons
 	url = git@github.com:Automattic/Genericons.git
+[submodule ".dev/dev-lib"]
+	path = .dev/dev-lib
+	url = https://github.com/xwp/wp-dev-lib.git
+	branch = master
