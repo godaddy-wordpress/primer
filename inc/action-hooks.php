@@ -7,6 +7,8 @@
 
 /**
  * Display site title in the header.
+ *
+ * @action primer_header
  */
 function primer_add_site_title(){
 
@@ -17,6 +19,8 @@ add_action( 'primer_header', 'primer_add_site_title', 5 );
 
 /**
  * Display primary navigation menu after the header.
+ *
+ * @action primer_after_header
  */
 function primer_add_primary_navigation(){
 
@@ -27,6 +31,8 @@ add_action( 'primer_after_header', 'primer_add_primary_navigation', 20 );
 
 /**
  * Display widget areas in the footer.
+ *
+ * @action primer_footer
  */
 function primer_add_footer_widgets(){
 
@@ -37,6 +43,8 @@ add_action( 'primer_footer', 'primer_add_footer_widgets', 5 );
 
 /**
  * Display site info after the footer.
+ *
+ * @action primer_after_footer
  */
 function primer_add_site_info(){
 
