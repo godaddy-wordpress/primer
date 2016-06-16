@@ -1,6 +1,6 @@
 <?php
 /**
- * Primer functions and definitions.
+ * Theme functions and definitions.
  *
  * @package Primer
  */
@@ -183,7 +183,7 @@ if ( ! function_exists( 'primer_setup' ) ) {
 			apply_filters(
 				'primer_custom_background_args',
 				array(
-					'default-color' => 'ffffff',
+					'default-color' => 'e7e7e7',
 					'default-image' => '',
 				)
 			)

@@ -28,6 +28,38 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 	overflow: hidden;
 	padding: 20px 0;
 
+	&.columns-1 {
+		.footer-widget {
+			@media #{$large-up} {
+				width: 100%;
+			}
+		}
+	}
+
+	&.columns-2 {
+		.footer-widget {
+			@media #{$large-up} {
+				width: 50%;
+			}
+		}
+	}
+
+	&.columns-3 {
+		.footer-widget {
+			@media #{$large-up} {
+				width: 33.3333333333%;
+			}
+		}
+	}
+
+	&.columns-4 {
+		.footer-widget {
+			@media #{$large-up} {
+				width: 25%;
+			}
+		}
+	}
+
 	.footer-widget {
 		padding: 0 20px;
 
@@ -37,7 +69,6 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 		}
 
 		@media #{$large-up} {
-			width: 33.3333333333%;
 			padding: 0 15px;
 			float: left;
 		}

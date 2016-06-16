@@ -34,7 +34,7 @@
 
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'primer' ) ?></a>
 
-		<?php do_action( 'primer_header_before' ) ?>
+		<?php do_action( 'primer_before_header' ) ?>
 
 		<header id="masthead" class="site-header" role="banner">
 
@@ -42,6 +42,6 @@
 
 		</header><!-- #masthead -->
 
-		<?php do_action( 'primer_header_after' ) ?>
+		<?php do_action( 'primer_after_header' ) ?>
 
 		<div id="content" class="site-content">

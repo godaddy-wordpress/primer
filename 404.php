@@ -30,7 +30,7 @@ get_header() ?>
 
 				<?php the_widget( 'WP_Widget_Recent_Posts' ) ?>
 
-				<?php if ( primer_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+				<?php if ( primer_has_active_categories() ) : ?>
 
 					<div class="widget widget_categories">
 
@@ -38,6 +38,7 @@ get_header() ?>
 
 						<ul>
 							<?php
+
 							wp_list_categories(
 								array(
 									'orderby'    => 'count',
@@ -47,6 +48,7 @@ get_header() ?>
 									'number'     => 10,
 								)
 							);
+
 							?>
 						</ul>
 
