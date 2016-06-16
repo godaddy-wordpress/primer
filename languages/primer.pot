@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-15 18:08-0500\n"
+"POT-Creation-Date: 2016-06-16 17:31-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,26 +18,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: 404.php:15
+#. //codex.wordpress.org/Creating_an_Error_404_Page
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#404-php
+#. *
+#. * @package Primer
+#.
+#: 404.php:21
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:19
+#: 404.php:27
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
 
-#: 404.php:27
+#: 404.php:37
 msgid "Most Used Categories"
 msgstr ""
 
-#: 404.php:44
+#: 404.php:61
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: comments.php:28
+#: comments.php:32
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -45,153 +50,157 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:35 comments.php:52
+#: comments.php:41 comments.php:66
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:36 comments.php:53
+#: comments.php:43 comments.php:68
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:37 comments.php:54
+#: comments.php:45 comments.php:70
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:64
+#: comments.php:80
 msgid "Comments are closed."
 msgstr ""
 
-#: content-featured.php:25
+#: content-featured.php:30
 msgid "Featured"
 msgstr ""
 
-#: content-featured.php:35
+#: content-featured.php:40
 msgid "Read More"
 msgstr ""
 
-#. //codex.wordpress.org/Template_Hierarchy
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
 #. *
 #. * @package Primer
 #.
-#: content-none.php:13
+#: content-none.php:15
 msgid "Nothing Found"
 msgstr ""
 
-#: content-none.php:19
+#: content-none.php:23
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: content-none.php:23
+#: content-none.php:27
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: content-none.php:28
+#: content-none.php:32
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
 
-#: functions.php:97
+#: functions.php:122
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:98
+#: functions.php:123
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:133
 msgid "1 Column Wide"
 msgstr ""
 
-#: functions.php:106
+#: functions.php:134
 msgid "1 Column Narrow"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:135
 msgid "2 Columns: Content / Sidebar"
 msgstr ""
 
-#: functions.php:108
+#: functions.php:136
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
-#: functions.php:109
+#: functions.php:137
 msgid "3 Columns: Content / Sidebar / Sidebar"
 msgstr ""
 
-#: functions.php:110
+#: functions.php:138
 msgid "3 Columns: Sidebar / Content / Sidebar"
 msgstr ""
 
-#: functions.php:111
+#: functions.php:139
 msgid "3 Columns: Sidebar / Sidebar / Content"
 msgstr ""
 
-#: functions.php:159
+#: functions.php:223
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:161
+#: functions.php:225
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr ""
 
-#: functions.php:169
+#: functions.php:235
 msgid "Secondary Sidebar"
 msgstr ""
 
-#: functions.php:171
+#: functions.php:237
 msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr ""
 
-#: functions.php:179
+#: functions.php:247
 msgid "Footer Left"
 msgstr ""
 
-#: functions.php:181
+#: functions.php:249
 msgid ""
 "The footer left sidebar appears in the first column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:189
+#: functions.php:259
 msgid "Footer Center"
 msgstr ""
 
-#: functions.php:191
+#: functions.php:261
 msgid ""
 "The footer center sidebar appears in the second column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:199
+#: functions.php:271
 msgid "Footer Right"
 msgstr ""
 
-#: functions.php:201
+#: functions.php:273
 msgid ""
 "The footer right sidebar appears in the third column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:255
+#: functions.php:337
 msgctxt "Lato font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:261
+#: functions.php:343
 msgctxt "Merriweather font: on or off"
 msgid "on"
 msgstr ""
 
-#: header.php:25
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
+#. *
+#. * @package Primer
+#.
+#: header.php:35
 msgid "Skip to content"
 msgstr ""
 
@@ -204,29 +213,29 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
-#: inc/template-tags.php:21
+#: inc/template-tags.php:56
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:25
+#: inc/template-tags.php:62
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: inc/template-tags.php:29
+#: inc/template-tags.php:68
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/template-tags.php:52
+#: inc/template-tags.php:102
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:55
-msgctxt "Previous post link"
+#: inc/template-tags.php:106
+msgctxt "previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 msgstr ""
 
-#: inc/template-tags.php:56
-msgctxt "Next post link"
+#: inc/template-tags.php:108
+msgctxt "next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
@@ -264,86 +273,77 @@ msgstr[1] ""
 msgid "yyyy-mm-dd"
 msgstr ""
 
-#: search.php:16
+#. //developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+#. *
+#. * @package Primer
+#.
+#: search.php:20
 #, php-format
+msgctxt "search term"
 msgid "Search Results for: %s"
 msgstr ""
 
-#: templates/parts/loop/page-content.php:12
-#: templates/parts/loop/post-content.php:14
+#: templates/parts/loop/page-content.php:17
+#: templates/parts/loop/post-content.php:17
 msgid "Pages:"
 msgstr ""
 
-#. //codex.wordpress.org/Template_Hierarchy
-#. *
-#. * @package Primer
-#.
 #: templates/parts/loop/page-footer.php:8
-#: templates/parts/loop/post-footer.php:12
-#: templates/parts/loop/post-search-footer.php:37
+#: templates/parts/loop/post-footer.php:13
+#: templates/parts/loop/post-search-footer.php:45
 msgid "Edit"
 msgstr ""
 
-#. //codex.wordpress.org/Template_Hierarchy
-#. *
-#. * @package Primer
-#.
-#: templates/parts/loop/post-content.php:11
+#: templates/parts/loop/post-content.php:13
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: templates/parts/loop/post-footer.php:18
-#: templates/parts/loop/post-footer.php:28
-#: templates/parts/loop/post-search-footer.php:14
-#: templates/parts/loop/post-search-footer.php:24
+#: templates/parts/loop/post-footer.php:19
+#: templates/parts/loop/post-footer.php:31
+#: templates/parts/loop/post-search-footer.php:13
+#: templates/parts/loop/post-search-footer.php:25
+msgctxt "separator for items in a list"
 msgid ", "
 msgstr ""
 
-#: templates/parts/loop/post-footer.php:22
+#: templates/parts/loop/post-footer.php:25
+#: templates/parts/loop/post-search-footer.php:19
 #, php-format
-msgid "Posted in: %1$s"
+msgctxt "category list"
+msgid "Posted in: %s"
 msgstr ""
 
-#: templates/parts/loop/post-footer.php:32
+#: templates/parts/loop/post-footer.php:37
+#: templates/parts/loop/post-search-footer.php:31
 #, php-format
-msgid "Filed under: %1$s"
+msgctxt "tag list"
+msgid "Filed under: %s"
 msgstr ""
 
-#. //codex.wordpress.org/Template_Hierarchy
-#. *
-#. * @package Primer
-#.
 #: templates/parts/loop/post-meta.php:13
 #, php-format
-msgid "%s by %s"
+msgctxt "1. post date, 2. author name"
+msgid "%1$s by %2$s"
 msgstr ""
 
-#: templates/parts/loop/post-meta.php:20
-#: templates/parts/loop/post-search-footer.php:34
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
 msgid "Leave a comment"
 msgstr ""
 
-#: templates/parts/loop/post-meta.php:20
-#: templates/parts/loop/post-search-footer.php:34
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
 msgid "1 Comment"
 msgstr ""
 
-#: templates/parts/loop/post-meta.php:20
-#: templates/parts/loop/post-search-footer.php:34
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgctxt "number of comments"
 msgid "% Comments"
 msgstr ""
 
-#: templates/parts/loop/post-search-footer.php:18
+#: templates/parts/site-info.php:17
 #, php-format
-msgid "Posted in %1$s"
-msgstr ""
-
-#: templates/parts/loop/post-search-footer.php:28
-#, php-format
-msgid "Tagged %1$s"
-msgstr ""
-
-#: templates/parts/site-info.php:14
-#, php-format
-msgid "Built on %1$s by %2$s."
+msgctxt "1. theme name link, 2. theme author link"
+msgid "Built with %1$s by %2$s."
 msgstr ""
