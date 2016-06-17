@@ -34,7 +34,7 @@
 
 			<span class="tags-links">
 
-				<?php printf( esc_html_x( 'Filed under: %s', 'tag list', 'primer' ), $tags_list ) ?>
+				<?php printf( esc_html_x( 'Filed under: %s', 'tag list', 'primer' ), $tag_list ) ?>
 
 			</span>
 
