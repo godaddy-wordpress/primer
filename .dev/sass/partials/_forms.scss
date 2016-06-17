@@ -42,6 +42,9 @@ input[type="submit"] {
 input[type="checkbox"],
 input[type="radio"] {
 	padding: 0; /* Addresses excess padding in IE8/9 */
+	margin: 0 3px;
+	width: 1rem;
+	height: 1rem;
 }
 
 input[type="search"] {
@@ -110,6 +113,10 @@ input[type="color"],
 textarea {
 	padding: .75em;
 	padding: .75rem;
+}
+
+input[type="file"] {
+	font-size: 1rem;
 }
 
 label{

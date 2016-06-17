@@ -1288,7 +1288,10 @@ button, a.button, a.button:visited, input[type="button"], input[type="reset"], i
 
 input[type="checkbox"], input[type="radio"] {
   padding: 0;
-  /* Addresses excess padding in IE8/9 */ }
+  /* Addresses excess padding in IE8/9 */
+  margin: 0 3px;
+  width: 1rem;
+  height: 1rem; }
 
 input[type="search"] {
   -webkit-appearance: textfield;
@@ -1321,6 +1324,9 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
   padding: 0.75em;
   padding: 0.75rem; }
+
+input[type="file"] {
+  font-size: 1rem; }
 
 label {
   font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
