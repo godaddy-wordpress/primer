@@ -1538,7 +1538,9 @@ a {
 
 .widget {
   margin: 0 0 1.5em;
-  padding: 20px; }
+  padding: 2rem; }
+  .widget:last-child {
+    margin-bottom: 0; }
   .widget, .widget p, .widget ul, .widget ol {
     font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-size: 0.875rem; }
@@ -2098,7 +2100,7 @@ embed, iframe, object {
   max-width: 100%; }
 
 #content {
-  padding: 40px 0; }
+  padding: 2.25rem 0; }
   body.layout-one-column-full #content {
     max-width: 100%;
     margin: 0;
