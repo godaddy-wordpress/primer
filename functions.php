@@ -36,6 +36,11 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/theme-layouts.php';
 
 /**
+ * Load WooCommerce compatibility file.
+ */
+require get_template_directory() . '/inc/woocommerce.php';
+
+/**
  * Set the content width based on the theme design and stylesheet.
  *
  * @link https://codex.wordpress.org/Content_Width
@@ -111,6 +116,13 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		 * @link https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 		 */
 		add_theme_support( 'post-thumbnails' );
+
+		/**
+		 * Enable support for WooCommerce.
+		 *
+		 * @link https://docs.woothemes.com/document/third-party-custom-theme-compatibility/
+		 */
+		add_theme_support( 'woocommerce' );
 
 		/**
 		 * Register custom Custom Navigation Menus.
