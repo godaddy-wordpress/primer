@@ -122,3 +122,18 @@ textarea {
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	width: 100%;
 }
+
+fieldset {
+	border: 1px solid rgba(117, 117, 117, 0.28);
+	padding: 25px;
+	margin-bottom: rem-calc(20);
+}
+
+legend {
+	color: $body-font-color;
+	font-size: rem-calc(16);
+	font-family: $sans-font-family;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 0 15px;
+}

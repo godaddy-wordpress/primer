@@ -1333,6 +1333,19 @@ textarea {
   /* Improves readability and alignment in all browsers */
   width: 100%; }
 
+fieldset {
+  border: 1px solid rgba(117, 117, 117, 0.28);
+  padding: 25px;
+  margin-bottom: 1.25rem; }
+
+legend {
+  color: #444;
+  font-size: 1rem;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 15px; }
+
 a {
   color: #00a63f; }
   a:visited {
