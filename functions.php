@@ -201,20 +201,6 @@ if ( ! function_exists( 'primer_setup' ) ) {
 			)
 		);
 
-		/**
-		 * Enable support for featured content in Jetpack.
-		 *
-		 * @link https://jetpack.com/support/featured-content/#theme-support
-		 */
-		add_theme_support(
-			'featured-content',
-			array(
-				'filter'     => 'primer_get_featured_posts',
-				'max_posts'  => 1,
-				'post_types' => array( 'post', 'page' ),
-			)
-		);
-
 	}
 
 }
@@ -306,15 +292,12 @@ if ( ! function_exists( 'primer_scripts' ) ) {
 	 */
 	function primer_scripts() {
 
-		$primer  = wp_get_theme();
-		$version = apply_filters( 'theme_version', $primer->Version );
-
-		wp_enqueue_style( 'primer', get_stylesheet_uri(), false, $version );
+		wp_enqueue_style( 'primer', get_stylesheet_uri(), false, primer_get_version() );
 
 		wp_style_add_data( 'primer', 'rtl', 'replace' );
 
-		wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), $version, true );
-		wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), $version, true );
+		wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), primer_get_version(), true );
+		wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), primer_get_version(), true );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 

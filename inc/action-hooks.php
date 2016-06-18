@@ -1,6 +1,6 @@
 <?php
 /**
- * This file contains many of the hook-ups for parts of our theme.
+ * Custom actions for this theme.
  *
  * @package Primer
  */
