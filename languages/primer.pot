@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-17 20:41-0500\n"
+"POT-Creation-Date: 2016-06-17 20:53-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -262,4 +262,69 @@ msgstr ""
 
 #: inc/theme-layouts.php:684
 msgid "Global Layout"
+msgstr ""
+
+#: templates/parts/loop/page-content.php:17
+#: templates/parts/loop/post-content.php:17
+msgid "Pages:"
+msgstr ""
+
+#: templates/parts/loop/page-footer.php:8
+#: templates/parts/loop/post-footer.php:13
+#: templates/parts/loop/post-search-footer.php:45
+msgid "Edit"
+msgstr ""
+
+#: templates/parts/loop/post-content.php:13
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: templates/parts/loop/post-footer.php:19
+#: templates/parts/loop/post-footer.php:31
+#: templates/parts/loop/post-search-footer.php:13
+#: templates/parts/loop/post-search-footer.php:25
+msgctxt "separator for items in a list"
+msgid ", "
+msgstr ""
+
+#: templates/parts/loop/post-footer.php:25
+#: templates/parts/loop/post-search-footer.php:19
+#, php-format
+msgctxt "category list"
+msgid "Posted in: %s"
+msgstr ""
+
+#: templates/parts/loop/post-footer.php:37
+#: templates/parts/loop/post-search-footer.php:31
+#, php-format
+msgctxt "tag list"
+msgid "Filed under: %s"
+msgstr ""
+
+#: templates/parts/loop/post-meta.php:13
+#, php-format
+msgctxt "1. post date, 2. author name"
+msgid "%1$s by %2$s"
+msgstr ""
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgid "Leave a comment"
+msgstr ""
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgid "1 Comment"
+msgstr ""
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgctxt "number of comments"
+msgid "% Comments"
+msgstr ""
+
+#: templates/parts/site-info.php:17
+#, php-format
+msgctxt "1. theme name link, 2. theme author link"
+msgid "Built with %1$s by %2$s."
 msgstr ""

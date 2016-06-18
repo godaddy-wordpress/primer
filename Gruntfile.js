@@ -72,10 +72,17 @@ module.exports = function(grunt) {
 			files:{
 				src: [
 					'*.php',
-					'inc/*.php',
-					'templates/*.php'
+					'inc/**/*.php',
+					'templates/**/*.php'
 				],
 				expand: true,
+			}
+		},
+
+		po2mo: {
+			files: {
+				src: 'languages/*.po',
+				expand: true
 			}
 		},
 
