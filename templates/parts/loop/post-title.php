@@ -1,33 +1,33 @@
 <?php
 /**
- * The template part for displaying the post title.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * Template part for displaying the post title inside The Loop.
  *
  * @package Primer
  */
 ?>
+
 <header class="entry-header">
+
 	<div class="entry-header-row">
+
 		<div class="entry-header-column">
 
-			<?php do_action( 'primer_before_post_title' ); ?>
+			<?php do_action( 'primer_before_post_title' ) ?>
 
-			<?php $tag = is_single() ? 'h1' : 'h2'; ?>
-			<<?php echo $tag; ?> class="entry-title">
-				<?php if( ! is_singular() ): ?>
-					<a href="<?php the_permalink(); ?>" rel="permalink">
-				<?php endif; ?>
+			<?php if ( is_singular() ) : ?>
 
-				<?php the_title(); ?>
+				<h1 class="entry-title"><?php the_title() ?></h1>
 
-				<?php if( ! is_singular() ): ?>
-					</a>
-				<?php endif; ?>
-			</<?php echo $tag; ?>>
+			<?php else : ?>
 
-			<?php do_action( 'primer_after_post_title' ); ?>
+				<h2 class="page-title"><a href="<?php the_permalink() ?>" rel="permalink"><?php the_title() ?></a></h2>
+
+			<?php endif; ?>
+
+			<?php do_action( 'primer_after_post_title' ) ?>
 
 		</div><!-- .entry-header-column -->
+
 	</div><!-- .entry-header-row -->
+
 </header><!-- .entry-header -->

@@ -20,7 +20,7 @@ $font-weight-bold: bold;
 $font-smoothing: subpixel-antialiased;
 
 // We use these as default colors throughout
-$primary-color: #e91f2e;
+$primary-color: #00a63f;
 $secondary-color: #000000;
 $alert-color: #f04124;
 $success-color: #43AC6A;
@@ -45,8 +45,8 @@ $color-text-input: #666;
 $color-text-input-focus: #111;
 $color-text-input-background: #eee;
 $color-link: $primary-color;
-$color-link-visited: darken($primary-color,10%);
-$color-link-hover: darken($primary-color,10%);
+$color-link-visited: $primary-color;
+$color-link-hover: lighten($primary-color,3%);
 $color-text-main: #404040;
 
 // Borders
@@ -127,8 +127,8 @@ $shiny-edge-active-color: rgba(#000, .2);
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 $small-range: (0em, 40em);
-$medium-range: (40.063em, 64em);
-$large-range: (64.063em, 90em);
+$medium-range: (40.063em, 61em);
+$large-range: (61.063em, 90em);
 $xlarge-range: (90.063em, 120em);
 $xxlarge-range: (120.063em, 99999999em);
 

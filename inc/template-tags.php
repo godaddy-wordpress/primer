@@ -2,160 +2,238 @@
 /**
  * Custom template tags for this theme.
  *
- * Eventually, some of the functionality here could be replaced by core features.
- *
  * @package Primer
  */
 
-if ( ! function_exists( 'primer_paging_nav' ) ) :
-/**
- * Display navigation to next/previous set of posts when applicable.
- */
-function primer_paging_nav() {
-	// Don't print empty markup if there's only one page.
-	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
-		return;
+if ( ! function_exists( 'primer_active_footer_areas_count' ) ) {
+
+	/**
+	 * Return the number of active footer widget areas.
+	 *
+	 * @return int
+	 */
+	function primer_active_footer_areas_count() {
+
+		global $wp_registered_sidebars;
+
+		$count    = 0;
+		$sidebars = preg_grep( '/^footer-(.*)/', array_keys( $wp_registered_sidebars ) );
+
+		foreach ( $sidebars as $sidebar ) {
+
+			if ( is_active_sidebar( $sidebar ) ) {
+
+				$count++;
+
+			}
+
+		}
+
+		return $count;
+
 	}
-	?>
-	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'primer' ); ?></h1>
-		<div class="nav-links">
+
+}
+
+if ( ! function_exists( 'primer_paging_nav' ) ) {
+
+	/**
+	 * Display navigation to next/previous set of posts when applicable.
+	 */
+	function primer_paging_nav() {
+
+		global $wp_query;
+
+		if ( ! isset( $wp_query->max_num_pages ) || $wp_query->max_num_pages < 2 ) {
+
+			return;
+
+		}
+
+		?>
+		<nav class="navigation paging-navigation" role="navigation">
+
+			<h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'primer' ) ?></h1>
+
+			<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'primer' ) ); ?></div>
+
+				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'primer' ) ) ?></div>
+
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'primer' ) ); ?></div>
+
+				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'primer' ) ) ?></div>
+
 			<?php endif; ?>
 
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
-	<?php
-}
-endif;
+			</div><!-- .nav-links -->
 
-if ( ! function_exists( 'primer_post_nav' ) ) :
-/**
- * Display navigation to next/previous post when applicable.
- */
-function primer_post_nav() {
-	// Don't print empty markup if there's nowhere to navigate.
-	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-	$next     = get_adjacent_post( false, '', false );
+		</nav><!-- .navigation -->
+		<?php
 
-	if ( ! $next && ! $previous ) {
-		return;
-	}
-	?>
-	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'primer' ); ?></h1>
-		<div class="nav-links">
-			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'primer' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'primer' ) );
-			?>
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
-	<?php
-}
-endif;
-
-if ( ! function_exists( 'primer_posted_on' ) ) :
-/**
- * Prints HTML with meta information for the current post-date/time and author.
- */
-function primer_posted_on() {
-	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
 	}
 
-	$time_string = sprintf( $time_string,
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( get_the_modified_date() )
-	);
-
-	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
-
-	echo '<span class="posted-on">' . $posted_on . '</span>';
-
 }
-endif;
 
-if( ! function_exists('primer_post_format') ):
-/**
- * Prints the post format for the current post.
- */
-function primer_post_format(){
-	global $post;
+if ( ! function_exists( 'primer_post_nav' ) ) {
 
-	$format = get_post_format( get_the_ID() );
+	/**
+	 * Display navigation to next/previous post when applicable.
+	 */
+	function primer_post_nav() {
 
-	if ( false === $format ) {
-		$format = 'standard';
+		global $post;
+
+		$previous = is_attachment() ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
+		$next     = get_adjacent_post( false, '', false );
+
+		if ( ! $next && ! $previous ) {
+
+			return;
+
+		}
+
+		?>
+		<nav class="navigation post-navigation" role="navigation">
+
+			<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'primer' ) ?></h1>
+
+			<div class="nav-links">
+
+				<?php previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'previous post link', 'primer' ) ) ?>
+
+				<?php next_post_link( '<div class="nav-next">%link</div>', _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'next post link', 'primer' ) ) ?>
+
+			</div><!-- .nav-links -->
+
+		</nav><!-- .navigation -->
+		<?php
+
 	}
 
-	echo '<span class="post-format">' . $format . '</span>';
 }
 
-endif;
+if ( ! function_exists( 'primer_posted_on' ) ) {
+
+	/**
+	 * Prints HTML with meta information for the current post-date/time and author.
+	 */
+	function primer_posted_on() {
+
+		$time = sprintf(
+			'<time class="entry-date published" datetime="%s">%s</time>',
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date() )
+		);
+
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+
+			$time .= sprintf(
+				'<time class="updated" datetime="%s">%s</time>',
+				esc_attr( get_the_modified_date( 'c' ) ),
+				esc_html( get_the_modified_date() )
+			);
+
+		}
+
+		printf(
+			'<span class="posted-on"><a href="%s" rel="bookmark">%s</a><span>',
+			get_permalink(),
+			$time // xss ok
+		);
+
+	}
+
+}
+
+if ( ! function_exists( 'primer_post_format' ) ) {
+
+	/**
+	 * Prints the post format for the current post.
+	 */
+	function primer_post_format() {
+
+		$format = get_post_format();
+		$format = empty( $format ) ? 'standard' : $format;
+
+		printf( '<span class="post-format">%s</span>', esc_html( $format ) );
+
+	}
+
+}
+
+if ( ! function_exists( 'primer_get_featured_image_url' ) ) {
+
+	/**
+	 * Return the featured image URL.
+	 *
+	 * @return string|false
+	 */
+	function primer_get_featured_image_url() {
+
+		$featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'featured' );
+
+		return empty( $featured_image_url[0] ) ? false : $featured_image_url;
+
+	}
+
+}
+
+if ( ! function_exists( 'primer_has_active_categories' ) ) {
+
+	/**
+	 * Check if the site has active categories.
+	 *
+	 * We will store the result in a transient so this function
+	 * can be called frequently without any performance concern.
+	 *
+	 * @see primer_has_active_categories_reset()
+	 *
+	 * @return bool
+	 */
+	function primer_has_active_categories() {
+
+		if ( WP_DEBUG || false === ( $has_active_categories = get_transient( 'primer_has_active_categories' ) ) ) {
+
+			$categories = get_categories(
+				array(
+					'fields'     => 'ids',
+					'hide_empty' => 1,
+					'number'     => 2, // We only care if more than 1 exists
+				)
+			);
+
+			$has_active_categories = ( count( $categories ) > 1 );
+
+			set_transient( 'primer_has_active_categories', $has_active_categories );
+
+		}
+
+		return ! empty( $has_active_categories );
+
+	}
+
+}
 
 /**
- * Returns true if a blog has more than 1 category.
+ * Reset the transient for the active categories check.
  *
- * @return bool
- */
-function primer_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'primer_categories' ) ) ) {
-		// Create an array of all the categories that are attached to posts.
-		$all_the_cool_cats = get_categories( array(
-			'fields'     => 'ids',
-			'hide_empty' => 1,
-
-			// We only need to know if there is more than one category.
-			'number'     => 2,
-		) );
-
-		// Count the number of categories that are attached to the posts.
-		$all_the_cool_cats = count( $all_the_cool_cats );
-
-		set_transient( 'primer_categories', $all_the_cool_cats );
-	}
-
-	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so primer_categorized_blog should return true.
-		return true;
-	} else {
-		// This blog has only 1 category so primer_categorized_blog should return false.
-		return false;
-	}
-}
-
-/**
- * Returns the URL of the featured image if it exists, otherwise returns false
+ * @action create_category
+ * @action edit_category
+ * @action delete_category
+ * @action save_post
  *
- * @return bool/string
+ * @see primer_has_active_categories()
  */
-function primer_get_featured_image_url() {
-	$featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'featured' );
+function primer_has_active_categories_reset() {
 
-	$featured_image_url = $featured_image_url[0];
+	delete_transient( 'primer_has_active_categories' );
 
-	if ( $featured_image_url == "" )
-		return false;
-	else
-		return $featured_image_url;
 }
-
-/**
- * Flush out the transients used in primer_categorized_blog.
- */
-function primer_category_transient_flusher() {
-	// Like, beat it. Dig?
-	delete_transient( 'primer_categories' );
-}
-add_action( 'edit_category', 'primer_category_transient_flusher' );
-add_action( 'save_post',     'primer_category_transient_flusher' );
+add_action( 'create_category', 'primer_has_active_categories_reset' );
+add_action( 'edit_category',   'primer_has_active_categories_reset' );
+add_action( 'delete_category', 'primer_has_active_categories_reset' );
+add_action( 'save_post',       'primer_has_active_categories_reset' );

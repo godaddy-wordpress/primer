@@ -2,32 +2,37 @@
 /**
  * The template for displaying all single posts.
  *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
  * @package Primer
  */
 
-get_header(); ?>
+get_header() ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+	<main id="main" class="site-main" role="main">
 
-			<?php get_template_part( 'content' ); ?>
+	<?php while ( have_posts() ) : the_post() ?>
 
-			<?php primer_post_nav(); ?>
+		<?php get_template_part( 'content' ) ?>
 
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
+		<?php primer_post_nav() ?>
 
-		<?php endwhile; // end of the loop. ?>
+		<?php if ( comments_open() || get_comments_number() ) : ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			<?php comments_template() ?>
 
-<?php get_sidebar(); ?>
-<?php get_sidebar( 'tertiary' ); ?>
-<?php get_footer(); ?>
+		<?php endif; ?>
+
+	<?php endwhile; ?>
+
+	</main><!-- #main -->
+
+</div><!-- #primary -->
+
+<?php get_sidebar() ?>
+
+<?php get_sidebar( 'tertiary' ) ?>
+
+<?php get_footer() ?>

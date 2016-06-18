@@ -2,7 +2,11 @@ $widget-bg: #fff !default;
 
 .widget {
 	margin: 0 0 1.5em;
-	padding: 20px;
+	padding: 2rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 
 	&,p,ul,ol{
 		font-family: $widget-font-family;
@@ -10,9 +14,29 @@ $widget-bg: #fff !default;
 	}
 }
 
-/* Make sure select elements fit in widgets */
-.widget select {
-	max-width: 100%;
+/* Make sure form fields fit in widgets */
+.widget {
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	textarea,
+	select,
+	 {
+		max-width: 100%;
+		width: 100%;
+	}
 }
 
 /* Search widget */

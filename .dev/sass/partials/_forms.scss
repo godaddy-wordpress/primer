@@ -17,7 +17,7 @@ input[type="reset"],
 input[type="submit"] {
 	background: $color-background-button;
 	border: none;
-	color: contrast-color($color-background-button,#fff,#000,50%);
+	color: contrast-color($color-background-button,#fff,#000,25%);
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: none; /* Corrects inability to style clickable 'input' types in iOS */
 	-webkit-font-smoothing: auto;
@@ -29,19 +29,22 @@ input[type="submit"] {
 	display: inline-block;
 
 	&:hover {
-		color: contrast-color($color-background-button,#fff,#000,50%);
-		background: darken($color-background-button, 5%);
+		color: contrast-color($color-background-button,#fff,#000,25%);
+		background: lighten($color-background-button,3%);
 	}
 
 	&:focus
 	&:active{
-		background: darken($color-background-button, 10%);
+		background: lighten($color-background-button,3%);
 	}
 }
 
 input[type="checkbox"],
 input[type="radio"] {
 	padding: 0; /* Addresses excess padding in IE8/9 */
+	margin: 0 3px;
+	width: 1rem;
+	height: 1rem;
 }
 
 input[type="search"] {
@@ -67,6 +70,16 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
 textarea {
 	color: $color-text-input;
 	background-color: $color-text-input-background;
@@ -87,9 +100,23 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
 textarea {
 	padding: .75em;
 	padding: .75rem;
+}
+
+input[type="file"] {
+	font-size: 1rem;
 }
 
 label{
@@ -101,4 +128,19 @@ textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	width: 100%;
+}
+
+fieldset {
+	border: 1px solid rgba(117, 117, 117, 0.28);
+	padding: 25px;
+	margin-bottom: rem-calc(20);
+}
+
+legend {
+	color: $body-font-color;
+	font-size: rem-calc(16);
+	font-family: $sans-font-family;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 0 15px;
 }

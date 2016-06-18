@@ -26,10 +26,42 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 
 .footer-widget-area {
 	overflow: hidden;
-	padding: 20px 0;
+	padding: 2.25rem 1.25rem 0;
+
+	&.columns-1 {
+		.footer-widget {
+			@media #{$large-up} {
+				width: 100%;
+			}
+		}
+	}
+
+	&.columns-2 {
+		.footer-widget {
+			@media #{$large-up} {
+				width: 50%;
+			}
+		}
+	}
+
+	&.columns-3 {
+		.footer-widget {
+			@media #{$large-up} {
+				width: 33.3333333333%;
+			}
+		}
+	}
+
+	&.columns-4 {
+		.footer-widget {
+			@media #{$large-up} {
+				width: 25%;
+			}
+		}
+	}
 
 	.footer-widget {
-		padding: 0 20px;
+		padding: 0;
 
 		.widget{
 			background-color: lighten($site-footer-background,10%);
@@ -37,21 +69,20 @@ $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-backgroun
 		}
 
 		@media #{$large-up} {
-			width: 33.3333333333%;
 			padding: 0 15px;
 			float: left;
 		}
 
 		&:first-child {
 			@media #{$large-up} {
-				padding-right: 30px;
+				padding-right: 15px;
 				padding-left: 0;
 			}
 		}
 
 		&:last-child {
 			@media #{$large-up} {
-				padding-left: 30px;
+				padding-left: 15px;
 				padding-right: 0;
 			}
 		}

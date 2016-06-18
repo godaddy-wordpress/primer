@@ -2,45 +2,45 @@
 /**
  * The template for displaying search results pages.
  *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ *
  * @package Primer
  */
 
-get_header(); ?>
+get_header() ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<section id="primary" class="content-area">
 
-		<?php if ( have_posts() ) : ?>
+	<main id="main" class="site-main" role="main">
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'primer' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+	<?php if ( have_posts() ) : ?>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+		<header class="page-header">
 
-				<?php
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'content', 'search' );
-				?>
+			<h1 class="page-title"><?php printf( esc_html_x( 'Search Results for: %s', 'search term', 'primer' ), sprintf( '<span>%s</span>', get_search_query() ) ) ?></h1>
 
-			<?php endwhile; ?>
+		</header><!-- .page-header -->
 
-			<?php primer_paging_nav(); ?>
+		<?php while ( have_posts() ) : the_post() ?>
 
-		<?php else : ?>
+			<?php get_template_part( 'content', 'search' ) ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+		<?php endwhile; ?>
 
-		<?php endif; ?>
+		<?php primer_paging_nav() ?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+	<?php else : ?>
 
-<?php get_sidebar(); ?>
-<?php get_sidebar( 'tertiary' ); ?>
-<?php get_footer(); ?>
+		<?php get_template_part( 'content', 'none' ) ?>
+
+	<?php endif; ?>
+
+	</main><!-- #main -->
+
+</section><!-- #primary -->
+
+<?php get_sidebar() ?>
+
+<?php get_sidebar( 'tertiary' ) ?>
+
+<?php get_footer() ?>
