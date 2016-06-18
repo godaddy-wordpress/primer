@@ -5,6 +5,23 @@
  * @package Primer
  */
 
+if ( ! function_exists( 'primer_get_version' ) ) {
+
+	/**
+	 * Return the theme version.
+	 *
+	 * @return string
+	 */
+	function primer_get_version() {
+
+		$primer = wp_get_theme();
+
+		return (string) apply_filters( 'theme_version', $primer->Version );
+
+	}
+
+}
+
 if ( ! function_exists( 'primer_active_footer_areas_count' ) ) {
 
 	/**
@@ -217,23 +234,3 @@ if ( ! function_exists( 'primer_has_active_categories' ) ) {
 	}
 
 }
-
-/**
- * Reset the transient for the active categories check.
- *
- * @action create_category
- * @action edit_category
- * @action delete_category
- * @action save_post
- *
- * @see primer_has_active_categories()
- */
-function primer_has_active_categories_reset() {
-
-	delete_transient( 'primer_has_active_categories' );
-
-}
-add_action( 'create_category', 'primer_has_active_categories_reset' );
-add_action( 'edit_category',   'primer_has_active_categories_reset' );
-add_action( 'delete_category', 'primer_has_active_categories_reset' );
-add_action( 'save_post',       'primer_has_active_categories_reset' );
