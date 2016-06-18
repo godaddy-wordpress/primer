@@ -1,7 +1,10 @@
 module.exports = function(grunt) {
 
+	var pkg = grunt.file.readJSON( 'package.json' );
+
 	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
+
+		pkg: pkg,
 
 		sass: {
 			dist: {
@@ -39,30 +42,37 @@ module.exports = function(grunt) {
 		},
 
 		pot: {
-				options:{
-					text_domain: 'primer', //Your text domain. Produces my-text-domain.pot
-					dest: 'languages/', //directory to place the pot file
-					keywords: [ //WordPress localisation functions
-						'__:1',
-						'_e:1',
-						'_x:1,2c',
-						'esc_html__:1',
-						'esc_html_e:1',
-						'esc_html_x:1,2c',
-						'esc_attr__:1',
-						'esc_attr_e:1',
-						'esc_attr_x:1,2c',
-						'_ex:1,2c',
-						'_n:1,2',
-						'_nx:1,2,4c',
-						'_n_noop:1,2',
-						'_nx_noop:1,2,3c'
-					],
-				},
-				files:{
-					src:  [ '**/*.php' ], //Parse all php files
-					expand: true,
-				}
+			options:{
+				omit_header: false,
+				text_domain: pkg.name,
+				encoding: 'UTF-8',
+				dest: 'languages/',
+				keywords: [
+					'__',
+					'_e',
+					'__ngettext:1,2',
+					'_n:1,2',
+					'__ngettext_noop:1,2',
+					'_n_noop:1,2',
+					'_c',
+					'_nc:4c,1,2',
+					'_x:1,2c',
+					'_nx:4c,1,2',
+					'_nx_noop:4c,1,2',
+					'_ex:1,2c',
+					'esc_attr__',
+					'esc_attr_e',
+					'esc_attr_x:1,2c',
+					'esc_html__',
+					'esc_html_e',
+					'esc_html_x:1,2c'
+				],
+				msgmerge: true
+			},
+			files:{
+				src:  [ '**/*.php' ],
+				expand: true,
+			}
 		},
 
 		phplint: {
@@ -70,22 +80,6 @@ module.exports = function(grunt) {
 				swapPath: '/.phplint'
 			},
 			all: ['**/*.php']
-		},
-
-		browserSync: {
-		    dev: {
-			bsFiles: {
-				src: [
-					"*.css",
-					"**/*.php",
-					"*.js"
-				]
-			},
-			options: {
-				//proxy: "localhost", // enter your local WP URL here
-				watchTask: true
-			}
-		    }
 		},
 
 		watch: {
@@ -104,19 +98,27 @@ module.exports = function(grunt) {
 				files: [ '**/*.php' ],
 				tasks: ['pot'],
 			},
+		},
+
+		replace: {
+			pot: {
+				src: 'languages/' + pkg.name + '.pot',
+				overwrite: true,
+				replacements: [
+					{
+						from: 'charset=CHARSET',
+						to: 'charset=UTF-8'
+					}
+				]
+			}
 		}
+
 	});
 
+	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
 
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-sass');
-	grunt.loadNpmTasks('grunt-browser-sync');
-	grunt.loadNpmTasks('grunt-cssjanus');
-	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-pot');
-	grunt.registerTask('default',['browserSync', 'watch']);
-	grunt.registerTask('lint',['jshint']);
-	grunt.registerTask('translate',['pot']);
+	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('lint', ['jshint']);
+	grunt.registerTask('update-pot', ['pot', 'replace:pot']);
 
 };
