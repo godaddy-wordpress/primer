@@ -37,3 +37,23 @@ function primer_woo_wrapper_end() {
 
 }
 add_action( 'woocommerce_after_main_content', 'primer_woo_wrapper_end', 10 );
+
+/**
+ * Filter the theme layout for the WooCommerce shop page.
+ *
+ * @param  string $theme_layout
+ *
+ * @return string
+ */
+function primer_woo_shop_theme_layout( $theme_layout ) {
+
+	if ( ! function_exists( 'is_shop' ) || ! is_shop() ) {
+
+		return $theme_layout;
+
+	}
+
+	return get_post_layout( wc_get_page_id( 'shop' ) );
+
+}
+add_filter( 'theme_mod_theme_layout', 'primer_woo_shop_theme_layout' );
