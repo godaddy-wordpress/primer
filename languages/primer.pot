@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-17 20:53-0500\n"
+"POT-Creation-Date: 2016-06-20 17:31-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,27 +42,27 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: comments.php:32
+#: comments.php:34
 #, php-format
-msgctxt "comments title"
+msgctxt "1. number of comments, 2. post title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$d thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:41 comments.php:66
+#: comments.php:50 comments.php:75
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:43 comments.php:68
+#: comments.php:52 comments.php:77
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:45 comments.php:70
+#: comments.php:54 comments.php:79
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:80
+#: comments.php:89
 msgid "Comments are closed."
 msgstr ""
 
