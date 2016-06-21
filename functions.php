@@ -287,10 +287,9 @@ if ( ! function_exists( 'primer_scripts' ) ) {
 	 */
 	function primer_scripts() {
 
-		$rtl    = is_rtl() ? '-rtl' : '';
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-		wp_enqueue_style( 'primer', get_template_directory_uri() . "/style{$rtl}.css", false, PRIMER_VERSION );
+		wp_enqueue_style( 'primer', get_stylesheet_uri(), false, PRIMER_VERSION );
 
 		wp_style_add_data( 'primer', 'rtl', 'replace' );
 
