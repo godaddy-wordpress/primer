@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-20 17:31-0500\n"
+"POT-Creation-Date: 2016-06-21 16:39-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,98 +100,98 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: functions.php:122
+#: functions.php:129
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:123
+#: functions.php:130
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:133
+#: functions.php:140
 msgid "1 Column Wide"
 msgstr ""
 
-#: functions.php:134
+#: functions.php:141
 msgid "1 Column Narrow"
 msgstr ""
 
-#: functions.php:135
-msgid "2 Columns: Content / Sidebar"
-msgstr ""
-
-#: functions.php:136
+#: functions.php:142 functions.php:143
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
-#: functions.php:137
-msgid "3 Columns: Content / Sidebar / Sidebar"
+#: functions.php:142 functions.php:143
+msgid "2 Columns: Content / Sidebar"
 msgstr ""
 
-#: functions.php:138
-msgid "3 Columns: Sidebar / Content / Sidebar"
-msgstr ""
-
-#: functions.php:139
+#: functions.php:144 functions.php:146
 msgid "3 Columns: Sidebar / Sidebar / Content"
 msgstr ""
 
-#: functions.php:209
+#: functions.php:144 functions.php:146
+msgid "3 Columns: Content / Sidebar / Sidebar"
+msgstr ""
+
+#: functions.php:145
+msgid "3 Columns: Sidebar / Content / Sidebar"
+msgstr ""
+
+#: functions.php:216
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:211
+#: functions.php:218
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr ""
 
-#: functions.php:221
+#: functions.php:228
 msgid "Secondary Sidebar"
 msgstr ""
 
-#: functions.php:223
+#: functions.php:230
 msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr ""
 
-#: functions.php:233
+#: functions.php:240
 msgid "Footer Left"
 msgstr ""
 
-#: functions.php:235
+#: functions.php:242
 msgid ""
 "The footer left sidebar appears in the first column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:245
+#: functions.php:252
 msgid "Footer Center"
 msgstr ""
 
-#: functions.php:247
+#: functions.php:254
 msgid ""
 "The footer center sidebar appears in the second column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:257
+#: functions.php:264
 msgid "Footer Right"
 msgstr ""
 
-#: functions.php:259
+#: functions.php:266
 msgid ""
 "The footer right sidebar appears in the third column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:320
+#: functions.php:329
 msgctxt "Lato font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:326
+#: functions.php:335
 msgctxt "Merriweather font: on or off"
 msgid "on"
 msgstr ""
@@ -224,28 +224,28 @@ msgctxt "page number"
 msgid "Page %d"
 msgstr ""
 
-#: inc/template-tags.php:73
+#: inc/template-tags.php:56
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:79
+#: inc/template-tags.php:62
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: inc/template-tags.php:85
+#: inc/template-tags.php:68
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/template-tags.php:119
+#: inc/template-tags.php:102
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:123
+#: inc/template-tags.php:106
 msgctxt "previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 msgstr ""
 
-#: inc/template-tags.php:125
+#: inc/template-tags.php:108
 msgctxt "next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
