@@ -6,25 +6,13 @@ module.exports = function(grunt) {
 
 		pkg: pkg,
 
-		sass: {
-			dist: {
-				files: {
-					'style.css' : '.dev/sass/style.scss'
-				}
-			}
-		},
-
-		jshint: {
-			all: ['js/**/*.js', 'Gruntfile.js']
-		},
-
 		autoprefixer: {
 			options: {
 				// Task-specific options go here.
 			},
 			your_target: {
 				src: '*.css'
-			},
+			}
 		},
 
 		cssjanus: {
@@ -38,6 +26,17 @@ module.exports = function(grunt) {
 						dest: 'style-rtl.css'
 					}
 				]
+			}
+		},
+
+		jshint: {
+			all: ['assets/js/*.js', 'Gruntfile.js']
+		},
+
+		po2mo: {
+			files: {
+				src: 'languages/*.po',
+				expand: true
 			}
 		},
 
@@ -75,40 +74,8 @@ module.exports = function(grunt) {
 					'inc/**/*.php',
 					'templates/**/*.php'
 				],
-				expand: true,
-			}
-		},
-
-		po2mo: {
-			files: {
-				src: 'languages/*.po',
 				expand: true
 			}
-		},
-
-		phplint: {
-			options: {
-				swapPath: '/.phplint'
-			},
-			all: ['**/*.php']
-		},
-
-		watch: {
-			css: {
-				files: '.dev/**/*.scss',
-				tasks: ['sass','autoprefixer','cssjanus']
-			},
-			scripts: {
-				files: ['js/**/*.js', 'Gruntfile.js' ],
-				tasks: ['jshint'],
-				options: {
-					interrupt: true,
-				}
-			},
-			pot: {
-				files: [ '**/*.php' ],
-				tasks: ['pot'],
-			},
 		},
 
 		replace: {
@@ -122,6 +89,46 @@ module.exports = function(grunt) {
 					}
 				]
 			}
+		},
+
+		sass: {
+			dist: {
+				files: {
+					'style.css' : '.dev/sass/style.scss'
+				}
+			}
+		},
+
+		uglify: {
+			options: {
+				ASCIIOnly: true
+			},
+			core: {
+				expand: true,
+				cwd: 'assets/js',
+				src: ['*.js', '!*.min.js'],
+				dest: 'assets/js',
+				ext: '.min.js'
+			}
+		},
+
+		watch: {
+			css: {
+				files: '.dev/**/*.scss',
+				tasks: ['sass','autoprefixer','cssjanus']
+			},
+			scripts: {
+				files: ['assets/js/*.js', 'Gruntfile.js'],
+				tasks: ['jshint'],
+				options: {
+					interrupt: true
+				}
+			},
+
+			pot: {
+				files: [ '**/*.php' ],
+				tasks: ['pot']
+			}
 		}
 
 	});
@@ -129,7 +136,7 @@ module.exports = function(grunt) {
 	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
 
 	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('lint', ['jshint']);
+	grunt.registerTask('lint', ['jshint', 'phplint']);
 	grunt.registerTask('update-pot', ['pot', 'replace:pot']);
 
 };
