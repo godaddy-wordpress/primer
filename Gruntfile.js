@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 		},
 
 		jshint: {
-			all: ['assets/js/*.js', 'Gruntfile.js']
+			all: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js']
 		},
 
 		po2mo: {
@@ -114,21 +114,20 @@ module.exports = function(grunt) {
 
 		watch: {
 			css: {
-				files: '.dev/**/*.scss',
+				files: '.dev/sass/**/*.scss',
 				tasks: ['sass','autoprefixer','cssjanus']
 			},
 			scripts: {
-				files: ['assets/js/*.js', 'Gruntfile.js'],
+				files: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js'],
 				tasks: ['jshint'],
 				options: {
 					interrupt: true
 				}
 			},
-
 			pot: {
 				files: [ '**/*.php' ],
-				tasks: ['pot']
-			}
+				tasks: ['update-pot']
+			},
 		}
 
 	});
