@@ -1,6 +1,6 @@
 === Primer ===
 Contributors:      godaddy, fjarrett, jonathanbardo
-Tags:              todo
+Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, fixed-layout, flexible-header, left-sidebar, light, one-column, responsive-layout, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.1
 Tested up to:      4.5
 Stable tag:        1.0.0
@@ -52,10 +52,10 @@ You can fork and contribute to Primer by visiting [our public repo on GitHub](ht
 
 == Installation ==
 
-1. In your admin panel, nagivate to 'Appearance > Themes' and click the 'Add New' button.
-2. Type 'Primer' in the search form and press the 'Enter' key on your keyboard.
-3. Click the 'Activate' button to begin using Primer on your website.
-4. In your admin panel, navigate to 'Appearance > Customize'.
+1. In your admin panel, nagivate to **Appearance > Themes** and click the **Add New** button.
+2. Type **Primer** in the search form and press the **Enter** key on your keyboard.
+3. Click the **Activate** button to begin using Primer on your website.
+4. In your admin panel, navigate to **Appearance > Customize**.
 5. Put the finishing touches on your website by adding a logo, header image, and custom colors.
 
 == Copyright ==

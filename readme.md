@@ -4,8 +4,8 @@
 Primer is a modern WordPress theme based on _s.
 
 **Contributors:** [godaddy](https://profiles.wordpress.org/godaddy), [fjarrett](https://profiles.wordpress.org/fjarrett), [jonathanbardo](https://profiles.wordpress.org/jonathanbardo)  
-**Tags:** TODO  
-**Requires at least:** 4.4.2  
+**Tags:** [custom-background](https://wordpress.org/plugins/tags/custom-background), [custom-colors](https://wordpress.org/plugins/tags/custom-colors), [custom-header](https://wordpress.org/plugins/tags/custom-header), [custom-menu](https://wordpress.org/plugins/tags/custom-menu), [editor-style](https://wordpress.org/plugins/tags/editor-style), [featured-images](https://wordpress.org/plugins/tags/featured-images), [fixed-layout](https://wordpress.org/plugins/tags/fixed-layout), [flexible-header](https://wordpress.org/plugins/tags/flexible-header), [left-sidebar](https://wordpress.org/plugins/tags/left-sidebar), [light](https://wordpress.org/plugins/tags/light), [one-column](https://wordpress.org/plugins/tags/one-column), [responsive-layout](https://wordpress.org/plugins/tags/responsive-layout), [right-sidebar](https://wordpress.org/plugins/tags/right-sidebar), [rtl-language-support](https://wordpress.org/plugins/tags/rtl-language-support), [sticky-post](https://wordpress.org/plugins/tags/sticky-post), [threaded-comments](https://wordpress.org/plugins/tags/threaded-comments), [three-columns](https://wordpress.org/plugins/tags/three-columns), [translation-ready](https://wordpress.org/plugins/tags/translation-ready), [two-columns](https://wordpress.org/plugins/tags/two-columns)  
+**Requires at least:** 4.1  
 **Tested up to:** 4.5  
 **Stable tag:** 1.0.0  
 **License:** [GPL-2.0](https://www.gnu.org/licenses/gpl-2.0.html)  
@@ -55,10 +55,10 @@ You can fork and contribute to Primer by visiting [our public repo on GitHub](ht
 
 ## Installation ##
 
-1. In your admin panel, nagivate to 'Appearance > Themes' and click the 'Add New' button.
-2. Type 'Primer' in the search form and press the 'Enter' key on your keyboard.
-3. Click the 'Activate' button to begin using Primer on your website.
-4. In your admin panel, navigate to 'Appearance > Customize'.
+1. In your admin panel, nagivate to **Appearance > Themes** and click the **Add New** button.
+2. Type **Primer** in the search form and press the **Enter** key on your keyboard.
+3. Click the **Activate** button to begin using Primer on your website.
+4. In your admin panel, navigate to **Appearance > Customize**.
 5. Put the finishing touches on your website by adding a logo, header image, and custom colors.
 
 ## Copyright ##
