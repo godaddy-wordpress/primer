@@ -126,8 +126,8 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		 */
 		register_nav_menus(
 			array(
-				'primary' => __( 'Primary Menu', 'primer' ),
-				'social'  => __( 'Social Menu', 'primer' ),
+				'primary' => esc_html__( 'Primary Menu', 'primer' ),
+				'social'  => esc_html__( 'Social Menu', 'primer' ),
 			)
 		);
 
@@ -137,13 +137,13 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		add_theme_support(
 			'theme-layouts',
 			array(
-				'one-column-wide'       => __( '1 Column Wide', 'primer' ),
-				'one-column-narrow'     => __( '1 Column Narrow', 'primer' ),
-				'two-column-default'    => is_rtl() ? __( '2 Columns: Sidebar / Content', 'primer' ) : __( '2 Columns: Content / Sidebar', 'primer' ),
-				'two-column-reversed'   => is_rtl() ? __( '2 Columns: Content / Sidebar', 'primer' ) : __( '2 Columns: Sidebar / Content', 'primer' ),
-				'three-column-default'  => is_rtl() ? __( '3 Columns: Sidebar / Sidebar / Content', 'primer' ) : __( '3 Columns: Content / Sidebar / Sidebar', 'primer' ),
-				'three-column-center'   => __( '3 Columns: Sidebar / Content / Sidebar', 'primer' ),
-				'three-column-reversed' => is_rtl() ? __( '3 Columns: Content / Sidebar / Sidebar', 'primer' ) : __( '3 Columns: Sidebar / Sidebar / Content', 'primer' ),
+				'one-column-wide'       => esc_html__( '1 Column Wide', 'primer' ),
+				'one-column-narrow'     => esc_html__( '1 Column Narrow', 'primer' ),
+				'two-column-default'    => is_rtl() ? esc_html__( '2 Columns: Sidebar / Content', 'primer' ) : esc_html__( '2 Columns: Content / Sidebar', 'primer' ),
+				'two-column-reversed'   => is_rtl() ? esc_html__( '2 Columns: Content / Sidebar', 'primer' ) : esc_html__( '2 Columns: Sidebar / Content', 'primer' ),
+				'three-column-default'  => is_rtl() ? esc_html__( '3 Columns: Sidebar / Sidebar / Content', 'primer' ) : esc_html__( '3 Columns: Content / Sidebar / Sidebar', 'primer' ),
+				'three-column-center'   => esc_html__( '3 Columns: Sidebar / Content / Sidebar', 'primer' ),
+				'three-column-reversed' => is_rtl() ? esc_html__( '3 Columns: Content / Sidebar / Sidebar', 'primer' ) : esc_html__( '3 Columns: Sidebar / Sidebar / Content', 'primer' ),
 			),
 			array( 'default' => 'two-column-default' )
 		);
@@ -213,9 +213,9 @@ if ( ! function_exists( 'primer_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Sidebar', 'primer' ),
+				'name'          => esc_html__( 'Sidebar', 'primer' ),
 				'id'            => 'sidebar-1',
-				'description'   => __( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'primer' ),
+				'description'   => esc_html__( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h6 class="widget-title">',
@@ -225,9 +225,9 @@ if ( ! function_exists( 'primer_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Secondary Sidebar', 'primer' ),
+				'name'          => esc_html__( 'Secondary Sidebar', 'primer' ),
 				'id'            => 'sidebar-2',
-				'description'   => __( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'primer' ),
+				'description'   => esc_html__( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h6 class="widget-title">',
@@ -237,9 +237,9 @@ if ( ! function_exists( 'primer_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Footer Left', 'primer' ),
+				'name'          => esc_html__( 'Footer Left', 'primer' ),
 				'id'            => 'footer-1',
-				'description'   => __( 'The footer left sidebar appears in the first column of the footer widget area.', 'primer' ),
+				'description'   => esc_html__( 'The footer left sidebar appears in the first column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h6 class="widget-title">',
@@ -249,9 +249,9 @@ if ( ! function_exists( 'primer_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Footer Center', 'primer' ),
+				'name'          => esc_html__( 'Footer Center', 'primer' ),
 				'id'            => 'footer-2',
-				'description'   => __( 'The footer center sidebar appears in the second column of the footer widget area.', 'primer' ),
+				'description'   => esc_html__( 'The footer center sidebar appears in the second column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h6 class="widget-title">',
@@ -261,9 +261,9 @@ if ( ! function_exists( 'primer_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Footer Right', 'primer' ),
+				'name'          => esc_html__( 'Footer Right', 'primer' ),
 				'id'            => 'footer-3',
-				'description'   => __( 'The footer right sidebar appears in the third column of the footer widget area.', 'primer' ),
+				'description'   => esc_html__( 'The footer right sidebar appears in the third column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h6 class="widget-title">',
