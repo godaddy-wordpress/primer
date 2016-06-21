@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 16:39-0500\n"
+"POT-Creation-Date: 2016-06-21 16:55-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -238,16 +238,6 @@ msgstr ""
 
 #: inc/template-tags.php:102
 msgid "Post navigation"
-msgstr ""
-
-#: inc/template-tags.php:106
-msgctxt "previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-msgstr ""
-
-#: inc/template-tags.php:108
-msgctxt "next post link"
-msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: inc/theme-layouts.php:364

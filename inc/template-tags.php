@@ -103,9 +103,19 @@ if ( ! function_exists( 'primer_post_nav' ) ) {
 
 			<div class="nav-links">
 
-				<?php previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'previous post link', 'primer' ) ) ?>
+			<?php if ( is_rtl() ) : ?>
 
-				<?php next_post_link( '<div class="nav-next">%link</div>', _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'next post link', 'primer' ) ) ?>
+				<div class="nav-next"><?php next_post_link( '%link &larr;' ) ?></div>
+
+				<div class="nav-previous"><?php previous_post_link( '&rarr; %link' ) ?></div>
+
+			<?php else : ?>
+
+				<div class="nav-previous"><?php previous_post_link( '&larr; %link' ) ?></div>
+
+				<div class="nav-next"><?php next_post_link( '%link &rarr;' ) ?></div>
+
+			<?php endif; ?>
 
 			</div><!-- .nav-links -->
 
