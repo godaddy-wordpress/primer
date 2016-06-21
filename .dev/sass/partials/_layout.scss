@@ -1,121 +1,128 @@
-#content{
-	@extend .row;
-	padding: 2.25rem 0;
+#content {
+    @extend .row !optional;
 
-	body.layout-one-column-full & {
-		max-width: 100%;
-		margin: 0;
-		padding: 0;
-	}
+    padding: 2.25rem 0;
 
-	body.page-template-page-builder &{
-		padding: 0;
-		max-width: none;
-	}
+    body.layout-one-column-full & {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body.page-template-page-builder & {
+        padding: 0;
+        max-width: none;
+    }
 }
 
-#primary{
-	@extend .columns;
-	@extend .large-8;
+#primary {
+    @extend .columns !optional;
 
-	body.layout-one-column-full & {
-		margin: 0;
-		padding: 0;
-		max-width: none;
-		width: 100%;
-	}
+    @extend .large-8 !optional;
 
-	body.layout-two-column-reversed &{
-		@extend .large-push-4;
-	}
+    body.layout-one-column-full & {
+        margin: 0;
+        padding: 0;
+        max-width: none;
+        width: 100%;
+    }
 
-	body.layout-one-column-wide &,
-	body.layout-one-column-narrow &{
-		@extend .large-12;
-	}
+    body.layout-two-column-reversed & {
+        @extend .large-push-4 !optional;
+    }
 
-	body.layout-three-column-default &,
-	body.layout-three-column-reversed &,
-	body.layout-three-column-center &{
-		@extend .large-6;
-	}
+    body.layout-one-column-wide &,
+    body.layout-one-column-narrow & {
+        @extend .large-12 !optional;
+    }
 
-	body.layout-three-column-center &{
-		@extend .large-push-3;
-	}
+    body.layout-three-column-default &,
+    body.layout-three-column-reversed &,
+    body.layout-three-column-center & {
+        @extend .large-6 !optional;
+    }
 
-	body.layout-three-column-reversed &{
-		@extend .large-push-6;
-	}
+    body.layout-three-column-center & {
+        @extend .large-push-3 !optional;
+    }
 
-	body.page-template-page-builder &{
-		width: 100%;
-		padding: 0;
-		float: none;
-	}
+    body.layout-three-column-reversed & {
+        @extend .large-push-6 !optional;
+    }
+
+    body.page-template-page-builder & {
+        width: 100%;
+        padding: 0;
+        float: none;
+    }
 }
 
-#secondary{
-	@extend .large-4;
-	@extend .columns;
+#secondary {
+    @extend .large-4 !optional;
 
-	body.layout-two-column-reversed &{
-		@extend .large-pull-8;
-	}
+    @extend .columns !optional;
 
-	body.layout-one-column-wide &,
-	body.layout-one-column-narrow &{
-		@extend .large-12;
-	}
+    body.layout-two-column-reversed & {
+        @extend .large-pull-8 !optional;
+    }
 
-	body.layout-three-column-default &,
-	body.layout-three-column-reversed &,
-	body.layout-three-column-center &{
-		@extend .large-3;
-	}
+    body.layout-one-column-wide &,
+    body.layout-one-column-narrow & {
+        @extend .large-12 !optional;
+    }
 
-	body.layout-three-column-center &,
-	body.layout-three-column-reversed &{
-		@extend .large-pull-6;
-	}
+    body.layout-three-column-default &,
+    body.layout-three-column-reversed &,
+    body.layout-three-column-center & {
+        @extend .large-3 !optional;
+    }
+
+    body.layout-three-column-center &,
+    body.layout-three-column-reversed & {
+        @extend .large-pull-6 !optional;
+    }
 }
 
-#tertiary{
-	@extend .large-3;
-	@extend .columns;
+#tertiary {
+    @extend .large-3 !optional;
 
-	body.layout-three-column-reversed &{
-		@extend .large-pull-6;
-	}
+    @extend .columns !optional;
+
+    body.layout-three-column-reversed & {
+        @extend .large-pull-6 !optional;
+    }
 }
 
-.site-branding-container{
-	@extend .row;
+.site-branding-container {
+    @extend .row !optional;
 }
 
-.main-navigation{
-	@extend .row;
+.main-navigation {
+    @extend .row !optional;
 }
 
-.site-branding{
-	@extend .large-12;
-	@extend .columns;
+.site-branding {
+    @extend .large-12 !optional;
+
+    @extend .columns !optional;
 }
 
-.site-footer{
-	.site-footer-inner{
-		@extend .row;
-	}
+.site-footer {
+    .site-footer-inner {
+        @extend .row !optional;
+    }
 
-	.site-info{
-		@extend .large-12;
-		@extend .large-centered;
-		@extend .columns;
-	}
+    .site-info {
+        @extend .large-12 !optional;
+
+        @extend .large-centered !optional;
+
+        @extend .columns !optional;
+    }
 }
 
-body.layout-one-column-narrow &{
-	#content{
-		max-width: 50em;
-	}
+body.layout-one-column-narrow {
+    #content {
+        max-width: 50em;
+    }
 }
