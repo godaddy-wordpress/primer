@@ -137,13 +137,13 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		add_theme_support(
 			'theme-layouts',
 			array(
-				'one-column-wide'       => __( '1 Column Wide',                          'primer' ),
-				'one-column-narrow'     => __( '1 Column Narrow',                        'primer' ),
-				'two-column-default'    => __( '2 Columns: Content / Sidebar',           'primer' ),
-				'two-column-reversed'   => __( '2 Columns: Sidebar / Content',           'primer' ),
-				'three-column-default'  => __( '3 Columns: Content / Sidebar / Sidebar', 'primer' ),
+				'one-column-wide'       => __( '1 Column Wide', 'primer' ),
+				'one-column-narrow'     => __( '1 Column Narrow', 'primer' ),
+				'two-column-default'    => is_rtl() ? __( '2 Columns: Sidebar / Content', 'primer' ) : __( '2 Columns: Content / Sidebar', 'primer' ),
+				'two-column-reversed'   => is_rtl() ? __( '2 Columns: Content / Sidebar', 'primer' ) : __( '2 Columns: Sidebar / Content', 'primer' ),
+				'three-column-default'  => is_rtl() ? __( '3 Columns: Sidebar / Sidebar / Content', 'primer' ) : __( '3 Columns: Content / Sidebar / Sidebar', 'primer' ),
 				'three-column-center'   => __( '3 Columns: Sidebar / Content / Sidebar', 'primer' ),
-				'three-column-reversed' => __( '3 Columns: Sidebar / Sidebar / Content', 'primer' ),
+				'three-column-reversed' => is_rtl() ? __( '3 Columns: Content / Sidebar / Sidebar', 'primer' ) : __( '3 Columns: Sidebar / Sidebar / Content', 'primer' ),
 			),
 			array( 'default' => 'two-column-default' )
 		);
