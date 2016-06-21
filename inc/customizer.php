@@ -24,7 +24,9 @@ add_action( 'customize_register', 'primer_customize_register' );
  */
 function primer_customize_preview_js() {
 
-	wp_enqueue_script( 'primer_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), primer_get_version(), true );
+	$suffix = SCRIPT_DEBUG ? '' : '.min';
+
+	wp_enqueue_script( 'primer_customizer', get_template_directory_uri() . "/assets/js/customizer{$suffix}.js", array( 'customize-preview' ), PRIMER_VERSION, true );
 
 }
 add_action( 'customize_preview_init', 'primer_customize_preview_js' );

@@ -6,6 +6,13 @@
  */
 
 /**
+ * Primer theme version.
+ *
+ * @var string
+ */
+define( 'PRIMER_VERSION', '1.0.0' );
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -280,12 +287,15 @@ if ( ! function_exists( 'primer_scripts' ) ) {
 	 */
 	function primer_scripts() {
 
-		wp_enqueue_style( 'primer', get_stylesheet_uri(), false, primer_get_version() );
+		$rtl    = is_rtl() ? '-rtl' : '';
+		$suffix = SCRIPT_DEBUG ? '' : '.min';
+
+		wp_enqueue_style( 'primer', get_template_directory_uri() . "/style{$rtl}.css", false, PRIMER_VERSION );
 
 		wp_style_add_data( 'primer', 'rtl', 'replace' );
 
-		wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), primer_get_version(), true );
-		wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), primer_get_version(), true );
+		wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", array(), PRIMER_VERSION, true );
+		wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), PRIMER_VERSION, true );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 

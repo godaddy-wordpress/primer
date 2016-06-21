@@ -5,23 +5,6 @@
  * @package Primer
  */
 
-if ( ! function_exists( 'primer_get_version' ) ) {
-
-	/**
-	 * Return the theme version.
-	 *
-	 * @return string
-	 */
-	function primer_get_version() {
-
-		$primer = wp_get_theme();
-
-		return (string) apply_filters( 'theme_version', $primer->Version );
-
-	}
-
-}
-
 if ( ! function_exists( 'primer_active_footer_areas_count' ) ) {
 
 	/**
