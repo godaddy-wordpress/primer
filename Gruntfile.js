@@ -119,7 +119,7 @@ module.exports = function(grunt) {
 			},
 			scripts: {
 				files: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js'],
-				tasks: ['jshint'],
+				tasks: ['jshint', 'uglify'],
 				options: {
 					interrupt: true
 				}
@@ -135,7 +135,7 @@ module.exports = function(grunt) {
 	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
 
 	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('lint', ['jshint', 'phplint']);
+	grunt.registerTask('lint', ['jshint']);
 	grunt.registerTask('update-pot', ['pot', 'replace:pot']);
 
 };
