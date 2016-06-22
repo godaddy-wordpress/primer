@@ -46,8 +46,6 @@ html, body {
   height: 100%; }
 
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html, body {
@@ -1298,9 +1296,7 @@ input[type="checkbox"], input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* Addresses appearance set to searchfield in S5, Chrome */
-  -webkit-box-sizing: content-box;
   /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-  -moz-box-sizing: content-box;
   box-sizing: content-box; }
 
 input[type="search"]::-webkit-search-decoration {
@@ -1316,7 +1312,8 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   color: #666;
   background-color: #eee;
   border: none;
-  transform: 200ms background linear;
+  -webkit-transform: 200ms background linear;
+          transform: 200ms background linear;
   border-radius: 3px;
   resize: none; }
   input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus {
@@ -1577,9 +1574,7 @@ a {
   padding-right: 1.25em;
   padding-right: 1.25rem; }
   #secondary .widget_search {
-    padding-top: 0;
-    padding-left: 0;
-    padding-bottom: 0; }
+    padding: 0; }
   @media screen and (max-width: 600px) {
     .widget_search {
       padding-right: 0; } }
@@ -1590,6 +1585,8 @@ a {
     box-sizing: border-box; }
     .widget_search .search-field:focus {
       background: #fff; }
+    .widget_search .search-field::-webkit-search-cancel-button {
+      z-index: 1; }
   .widget_search .search-submit {
     display: none; }
 
@@ -1698,7 +1695,8 @@ a {
         display: block;
         font-weight: bold;
         border-bottom: none;
-        transition: 200ms color linear; }
+        -webkit-transition: 200ms color linear;
+                transition: 200ms color linear; }
     .widget_calendar #calendar_wrap #wp-calendar tfoot {
       background: #cbd0d0; }
       .widget_calendar #calendar_wrap #wp-calendar tfoot td {
@@ -1706,7 +1704,8 @@ a {
         font-weight: bold; }
         .widget_calendar #calendar_wrap #wp-calendar tfoot td a {
           color: #444;
-          transition: 200ms color linear; }
+          -webkit-transition: 200ms color linear;
+                  transition: 200ms color linear; }
           .widget_calendar #calendar_wrap #wp-calendar tfoot td a:hover {
             color: #00a63f; }
         .widget_calendar #calendar_wrap #wp-calendar tfoot td#prev {
@@ -2050,42 +2049,34 @@ img[class*="wp-image-"] {
 
 .gallery-columns-2 .gallery-item {
   max-width: 48%;
-  max-width: -webkit-calc(50% - 4px);
   max-width: calc(50% - 4px); }
 
 .gallery-columns-3 .gallery-item {
   max-width: 32%;
-  max-width: -webkit-calc(33.3% - 4px);
   max-width: calc(33.3% - 4px); }
 
 .gallery-columns-4 .gallery-item {
   max-width: 23%;
-  max-width: -webkit-calc(25% - 4px);
   max-width: calc(25% - 4px); }
 
 .gallery-columns-5 .gallery-item {
   max-width: 19%;
-  max-width: -webkit-calc(20% - 4px);
   max-width: calc(20% - 4px); }
 
 .gallery-columns-6 .gallery-item {
   max-width: 15%;
-  max-width: -webkit-calc(16.7% - 4px);
   max-width: calc(16.7% - 4px); }
 
 .gallery-columns-7 .gallery-item {
   max-width: 13%;
-  max-width: -webkit-calc(14.28% - 4px);
   max-width: calc(14.28% - 4px); }
 
 .gallery-columns-8 .gallery-item {
   max-width: 11%;
-  max-width: -webkit-calc(12.5% - 4px);
   max-width: calc(12.5% - 4px); }
 
 .gallery-columns-9 .gallery-item {
   max-width: 9%;
-  max-width: -webkit-calc(11.1% - 4px);
   max-width: calc(11.1% - 4px); }
 
 .gallery-columns-1 .gallery-item:nth-of-type(1n), .gallery-columns-2 .gallery-item:nth-of-type(2n), .gallery-columns-3 .gallery-item:nth-of-type(3n), .gallery-columns-4 .gallery-item:nth-of-type(4n), .gallery-columns-5 .gallery-item:nth-of-type(5n), .gallery-columns-6 .gallery-item:nth-of-type(6n), .gallery-columns-7 .gallery-item:nth-of-type(7n), .gallery-columns-8 .gallery-item:nth-of-type(8n), .gallery-columns-9 .gallery-item:nth-of-type(9n) {
@@ -2093,8 +2084,6 @@ img[class*="wp-image-"] {
 
 .gallery-caption {
   background-color: rgba(0, 0, 0, 0.7);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: #fff;
   margin: 0;
@@ -2786,7 +2775,8 @@ body.layout-one-column-narrow #content {
     border: 0;
     width: 32px;
     height: 32px;
-    transition: 200ms opacity;
+    -webkit-transition: 200ms opacity;
+            transition: 200ms opacity;
     color: #e7e7e7;
     background: #00a63f;
     border-radius: 3px; }

@@ -45,9 +45,7 @@ $widget-bg: #fff !default;
 	padding-right: 1.25rem;
 
 	#secondary &{
-		padding-top: 0;
-		padding-left: 0;
-		padding-bottom: 0;
+		padding: 0;
 	}
 
 	@media screen and (max-width: 600px) {
@@ -62,6 +60,10 @@ $widget-bg: #fff !default;
 
 		&:focus {
 			background: #fff;
+		}
+
+		&::-webkit-search-cancel-button {
+			z-index: 1;
 		}
 	}
 
