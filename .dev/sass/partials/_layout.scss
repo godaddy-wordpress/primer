@@ -1,128 +1,121 @@
-#content {
-    @extend .row !optional;
+#content{
+	@extend .row;
+	padding: 2.25rem 0;
 
-    padding: 2.25rem 0;
+	body.layout-one-column-full & {
+		max-width: 100%;
+		margin: 0;
+		padding: 0;
+	}
 
-    body.layout-one-column-full & {
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    body.page-template-page-builder & {
-        padding: 0;
-        max-width: none;
-    }
+	body.page-template-page-builder &{
+		padding: 0;
+		max-width: none;
+	}
 }
 
-#primary {
-    @extend .columns !optional;
+#primary{
+	@extend .columns;
+	@extend .large-8;
 
-    @extend .large-8 !optional;
+	body.layout-one-column-full & {
+		margin: 0;
+		padding: 0;
+		max-width: none;
+		width: 100%;
+	}
 
-    body.layout-one-column-full & {
-        margin: 0;
-        padding: 0;
-        max-width: none;
-        width: 100%;
-    }
+	body.layout-two-column-reversed &{
+		@extend .large-push-4;
+	}
 
-    body.layout-two-column-reversed & {
-        @extend .large-push-4 !optional;
-    }
+	body.layout-one-column-wide &,
+	body.layout-one-column-narrow &{
+		@extend .large-12;
+	}
 
-    body.layout-one-column-wide &,
-    body.layout-one-column-narrow & {
-        @extend .large-12 !optional;
-    }
+	body.layout-three-column-default &,
+	body.layout-three-column-reversed &,
+	body.layout-three-column-center &{
+		@extend .large-6;
+	}
 
-    body.layout-three-column-default &,
-    body.layout-three-column-reversed &,
-    body.layout-three-column-center & {
-        @extend .large-6 !optional;
-    }
+	body.layout-three-column-center &{
+		@extend .large-push-3;
+	}
 
-    body.layout-three-column-center & {
-        @extend .large-push-3 !optional;
-    }
+	body.layout-three-column-reversed &{
+		@extend .large-push-6;
+	}
 
-    body.layout-three-column-reversed & {
-        @extend .large-push-6 !optional;
-    }
-
-    body.page-template-page-builder & {
-        width: 100%;
-        padding: 0;
-        float: none;
-    }
+	body.page-template-page-builder &{
+		width: 100%;
+		padding: 0;
+		float: none;
+	}
 }
 
-#secondary {
-    @extend .large-4 !optional;
+#secondary{
+	@extend .large-4;
+	@extend .columns;
 
-    @extend .columns !optional;
+	body.layout-two-column-reversed &{
+		@extend .large-pull-8;
+	}
 
-    body.layout-two-column-reversed & {
-        @extend .large-pull-8 !optional;
-    }
+	body.layout-one-column-wide &,
+	body.layout-one-column-narrow &{
+		@extend .large-12;
+	}
 
-    body.layout-one-column-wide &,
-    body.layout-one-column-narrow & {
-        @extend .large-12 !optional;
-    }
+	body.layout-three-column-default &,
+	body.layout-three-column-reversed &,
+	body.layout-three-column-center &{
+		@extend .large-3;
+	}
 
-    body.layout-three-column-default &,
-    body.layout-three-column-reversed &,
-    body.layout-three-column-center & {
-        @extend .large-3 !optional;
-    }
-
-    body.layout-three-column-center &,
-    body.layout-three-column-reversed & {
-        @extend .large-pull-6 !optional;
-    }
+	body.layout-three-column-center &,
+	body.layout-three-column-reversed &{
+		@extend .large-pull-6;
+	}
 }
 
-#tertiary {
-    @extend .large-3 !optional;
+#tertiary{
+	@extend .large-3;
+	@extend .columns;
 
-    @extend .columns !optional;
-
-    body.layout-three-column-reversed & {
-        @extend .large-pull-6 !optional;
-    }
+	body.layout-three-column-reversed &{
+		@extend .large-pull-6;
+	}
 }
 
-.site-branding-container {
-    @extend .row !optional;
+.site-branding-container{
+	@extend .row;
 }
 
-.main-navigation {
-    @extend .row !optional;
+.main-navigation{
+	@extend .row;
 }
 
-.site-branding {
-    @extend .large-12 !optional;
-
-    @extend .columns !optional;
+.site-branding{
+	@extend .large-12;
+	@extend .columns;
 }
 
-.site-footer {
-    .site-footer-inner {
-        @extend .row !optional;
-    }
+.site-footer{
+	.site-footer-inner{
+		@extend .row;
+	}
 
-    .site-info {
-        @extend .large-12 !optional;
-
-        @extend .large-centered !optional;
-
-        @extend .columns !optional;
-    }
+	.site-info{
+		@extend .large-12;
+		@extend .large-centered;
+		@extend .columns;
+	}
 }
 
-body.layout-one-column-narrow {
-    #content {
-        max-width: 50em;
-    }
+body.layout-one-column-narrow &{
+	#content{
+		max-width: 50em;
+	}
 }

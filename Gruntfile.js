@@ -92,11 +92,10 @@ module.exports = function(grunt) {
 		},
 
 		sass: {
+			options: {
+				sourceMap: false
+			},
 			dist: {
-				options: {
-					sourcemap: 'none',
-					style: 'nested'
-				},
 				files: {
 					'style.css': '.dev/sass/style.scss'
 				}

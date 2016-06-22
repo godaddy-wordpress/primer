@@ -1,79 +1,77 @@
-$featured-content-bg: rgba(0, 0, 0, 0.6) !default;
+$featured-content-bg: rgba(0,0,0,.6) !default;
 
-.featured-content {
-    background-size: cover;
+.featured-content{
+	background-size: cover;
 
-    &,
-    .entry-title a {
-        color: white;
-    }
+	&,
+	.entry-title a{
+		color: white;
+	}
 
-    .featured-content-inner {
-        @extend .row !optional;
-    }
+	.featured-content-inner{
+		@extend .row;
+	}
 
-    article {
-        @extend .large-8 !optional;
+	article{
+		@extend .large-8;
+		@extend .medium-12;
+		@extend .small-12;
+		@extend .columns;
+		background-color: $featured-content-bg;
+		color: contrast-color($featured-content-bg, #000, #fff, 50%);
+		margin-top: 6em;
+		margin-top: 6rem;
+		padding: 1.5em 4em 0;
+		margin-bottom: 0;
+		border-bottom: 0;
 
-        @extend .medium-12 !optional;
+		@media screen and (max-width: 600px) {
+			margin-top: 0;
+			padding: 0em 1em;
+			padding: 0rem 1rem;
+		}
+	}
 
-        @extend .small-12 !optional;
+	.entry-meta,
+	.entry-title,
+	.entry-excerpt{
+		margin-bottom: 1.5rem;
+	}
 
-        @extend .columns !optional;
+	.entry-meta{
 
-        background-color: $featured-content-bg;
-        color: contrast-color($featured-content-bg, #000, #fff, 50%);
-        margin-top: 6em;
-        margin-top: 6rem;
-        padding: 1.5em 4em 0;
-        margin-bottom: 0;
-        border-bottom: 0;
+	}
 
-        @media screen and (max-width: 600px) {
-            margin-top: 0;
-            padding: 0em 1em;
-            padding: 0rem 1rem;
-        }
-    }
+	.entry-title{
+		font-size: rem-calc(42);
+		line-height: 1.2;
+		font-family: $sans-font-family;
+		font-weight: bold;
+	}
 
-    .entry-meta,
-    .entry-title,
-    .entry-excerpt {
-        margin-bottom: 1.5rem;
-    }
+	.entry-excerpt {
+		p{
+			font-style: italic;
+			font-size: emCalc(19);
+			font-size: rem-calc(19);
+			font-weight: 200;
+		}
+	}
 
-    .entry-meta {}
+	.read-more{
+		padding: .5em 1em;
+		padding: .5rem 1rem;
+		background-color: $primary-color;
+		color: contrast-color($primary-color, #fff, #000, 50%);
+		display: inline-block;
+		font-family: $sans-font-family;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: emCalc(13);
+		font-size: rem-calc(13);
 
-    .entry-title {
-        font-size: rem-calc(42);
-        line-height: 1.2;
-        font-family: $sans-font-family;
-        font-weight: bold;
-    }
-
-    .entry-excerpt {
-        p {
-            font-style: italic;
-            font-size: emCalc(19);
-            font-size: rem-calc(19);
-            font-weight: 200;
-        }
-    }
-
-    .read-more {
-        padding: .5em 1em;
-        padding: .5rem 1rem;
-        background-color: $primary-color;
-        color: contrast-color($primary-color, #fff, #000, 50%);
-        display: inline-block;
-        font-family: $sans-font-family;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: emCalc(13);
-        font-size: rem-calc(13);
-
-        &:hover {
-            background-color: darken($primary-color, 10%);
-        }
-    }
+		&:hover{
+			background-color: darken($primary-color, 10%);
+		}
+	}
 }

@@ -46,7 +46,7 @@ $color-text-input-focus: #111;
 $color-text-input-background: #eee;
 $color-link: $primary-color;
 $color-link-visited: $primary-color;
-$color-link-hover: lighten($primary-color, 3%);
+$color-link-hover: lighten($primary-color,3%);
 $color-text-main: #404040;
 
 // Borders
@@ -62,8 +62,8 @@ $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
 $shiny-edge-size: 0 1px 0;
-$shiny-edge-color: rgba(#fff, 0.5);
-$shiny-edge-active-color: rgba(#000, 0.2);
+$shiny-edge-color: rgba(#fff, .5);
+$shiny-edge-active-color: rgba(#000, .2);
 
 // a. Base
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -105,7 +105,7 @@ $body-font-subtle-color: #aaa;
 $sans-font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $serif-font-family: Merriweather, Georgia, "Times New Roman", serif;
 $body-font-family: $serif-font-family;
-$font-weight-normal: normal;
+$font-weight-normal:normal;
 $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
 $widget-bg: #fff;
@@ -120,17 +120,17 @@ $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
 $shiny-edge-size: 0 1px 0;
-$shiny-edge-color: rgba(#fff, 0.5);
-$shiny-edge-active-color: rgba(#000, 0.2);
+$shiny-edge-color: rgba(#fff, .5);
+$shiny-edge-active-color: rgba(#000, .2);
 
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$small-range: 0em, 40em;
-$medium-range: 40.063em, 61em;
-$large-range: 61.063em, 90em;
-$xlarge-range: 90.063em, 120em;
-$xxlarge-range: 120.063em, 99999999em;
+$small-range: (0em, 40em);
+$medium-range: (40.063em, 61em);
+$large-range: (61.063em, 90em);
+$xlarge-range: (90.063em, 120em);
+$xxlarge-range: (120.063em, 99999999em);
 
 $screen: "only screen";
 
@@ -200,7 +200,7 @@ $subheader-line-height: 1.4;
 $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
 $subheader-font-weight: $font-weight-normal;
 $subheader-top-margin: 0;
-$subheader-bottom-margin: 0.5rem;
+$subheader-bottom-margin: .5rem;
 
 // A general <small> styling
 $small-font-size: 60%;
@@ -219,13 +219,13 @@ $paragraph-text-rendering: optimizeLegibility;
 
 // We use these to style <code> tags
 $code-color: #333;
-$code-font-family: Consolas, "Liberation Mono", Courier, monospace;
+$code-font-family: Consolas, 'Liberation Mono', Courier, monospace;
 $code-font-weight: $font-weight-normal;
 $code-font-size: 1em;
-$code-background-color: contrast-color($code-color, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+$code-background-color: contrast-color($code-color,rgba(255,255,255,.1),rgba(0,0,0,0.1));
 $code-border-size: 1px;
 $code-border-style: solid;
-$code-border-color: contrast-color($code-color, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+$code-border-color: contrast-color($code-color,rgba(255,255,255,.1),rgba(0,0,0,0.1));
 $code-border-radius: 2px;
 $code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
 
@@ -252,7 +252,7 @@ $list-ordered-side-margin: 1.4rem;
 $list-side-margin-no-bullet: 0;
 $list-nested-margin: rem-calc(20);
 $definition-list-header-weight: $font-weight-bold;
-$definition-list-header-margin-bottom: 0.3rem;
+$definition-list-header-margin-bottom: .3rem;
 $definition-list-margin-bottom: rem-calc(12);
 
 // We use these to style blockquotes

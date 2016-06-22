@@ -19,11 +19,11 @@
     "grunt-browser-sync": "~2.2.0",
     "grunt-cssjanus": "~0.3.2",
     "grunt-contrib-jshint": "~1.0.0",
-    "grunt-contrib-sass": "~1.0.0",
     "grunt-contrib-uglify": "~1.0.1",
     "grunt-contrib-watch": "~1.0.0",
     "grunt-pot": "~0.2.1",
     "grunt-po2mo": "~0.1.2",
+    "grunt-sass": "0.15.0",
     "grunt-text-replace": "~0.4.0",
     "matchdep": "~1.0.1"
   }
