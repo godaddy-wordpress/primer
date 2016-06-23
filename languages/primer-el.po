@@ -1,0 +1,337 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: primer 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-21 16:55-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#. //codex.wordpress.org/Creating_an_Error_404_Page
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#404-php
+#. *
+#. * @package Primer
+#.
+#: 404.php:21
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ωχ! Δεν είναι δυνατή η εύρεση αυτής της σελίδας."
+
+#: 404.php:27
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Μάλλον δεν βρέθηκε τίποτα σε αυτή την τοποθεσία. Θέλετε να δοκιμάσετε μια από "
+"τις παρακάτω συνδέσεις ή μια αναζήτηση;"
+
+#: 404.php:37
+msgid "Most Used Categories"
+msgstr "Κατηγορίες που χρησιμοποιούνται συχνότερα"
+
+#: 404.php:61
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Δοκιμάστε να κάνετε αναζήτηση στα μηνιαία αρχεία. %1$s"
+
+#: comments.php:34
+#, php-format
+msgctxt "1. number of comments, 2. post title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$d thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Μια σκέψη για το &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$d thoughts on &ldquo;%2$s&rdquo;"
+
+#: comments.php:50 comments.php:75
+msgid "Comment navigation"
+msgstr "Περιήγηση στα σχόλια"
+
+#: comments.php:52 comments.php:77
+msgid "&larr; Older Comments"
+msgstr "&larr; Παλιότερα σχόλια"
+
+#: comments.php:54 comments.php:79
+msgid "Newer Comments &rarr;"
+msgstr "Νεότερα σχόλια &rarr;"
+
+#: comments.php:89
+msgid "Comments are closed."
+msgstr "Τα σχόλια είναι κλειστά."
+
+#: content-featured.php:30
+msgid "Featured"
+msgstr "Προβεβλημένα"
+
+#: content-featured.php:40
+msgid "Read More"
+msgstr "Διαβάστε περισσότερα"
+
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
+#. *
+#. * @package Primer
+#.
+#: content-none.php:15
+msgid "Nothing Found"
+msgstr "Δεν βρέθηκε τίποτα"
+
+#: content-none.php:23
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Είστε έτοιμοι για να δημοσιεύσετε την πρώτη σας ανάρτηση; <a "
+"href=\"%1$s\">Ξεκινήστε εδώ</a>."
+
+#: content-none.php:27
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Λυπούμαστε, αλλά τίποτα δεν ταιριάζει με τους όρους αναζήτησης. Δοκιμάστε "
+"ξανά με διαφορετικές λέξεις-κλειδιά."
+
+#: content-none.php:32
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Μάλλον δεν μπορούμε να βρούμε αυτό που ψάχνετε. Ίσως μπορεί να σας βοηθήσει η αναζήτηση."
+
+#: functions.php:129
+msgid "Primary Menu"
+msgstr "Κύριο μενού"
+
+#: functions.php:130
+msgid "Social Menu"
+msgstr "Μενού κοινωνικής δικτύωσης"
+
+#: functions.php:140
+msgid "1 Column Wide"
+msgstr "1 στήλης πλατύ"
+
+#: functions.php:141
+msgid "1 Column Narrow"
+msgstr "1 στήλης στενό"
+
+#: functions.php:142 functions.php:143
+msgid "2 Columns: Sidebar / Content"
+msgstr "2 στηλών: Πλευρική γραμμή / περιεχόμενο"
+
+#: functions.php:142 functions.php:143
+msgid "2 Columns: Content / Sidebar"
+msgstr "2 στηλών: Περιεχόμενο / πλευρική γραμμή"
+
+#: functions.php:144 functions.php:146
+msgid "3 Columns: Sidebar / Sidebar / Content"
+msgstr "3 στηλών: Πλευρική γραμμή / πλευρική γραμμή / περιεχόμενο"
+
+#: functions.php:144 functions.php:146
+msgid "3 Columns: Content / Sidebar / Sidebar"
+msgstr "3 στηλών: Περιεχόμενο / πλευρική γραμμή / πλευρική γραμμή"
+
+#: functions.php:145
+msgid "3 Columns: Sidebar / Content / Sidebar"
+msgstr "3 στηλών: Πλευρική γραμμή / Περιεχόμενο / πλευρική γραμμή"
+
+#: functions.php:216
+msgid "Sidebar"
+msgstr "Πλευρική γραμμή"
+
+#: functions.php:218
+msgid ""
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
+msgstr ""
+"Η κύρια πλευρική γραμμή εμφανίζεται δίπλα από το περιεχόμενο κάθε σελίδας, "
+"ανάρτησης, αρχείου και προτύπου αναζήτησης."
+
+#: functions.php:228
+msgid "Secondary Sidebar"
+msgstr "Δευτερεύουσα πλευρική γραμμή"
+
+#: functions.php:230
+msgid ""
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
+msgstr ""
+"Η δευτερεύουσα πλευρική γραμμή θα εμφανίζεται μόνο όταν έχετε επιλέξει "
+"διάταξη τριών στηλών."
+
+#: functions.php:240
+msgid "Footer Left"
+msgstr "Υποσέλιδο αριστερά"
+
+#: functions.php:242
+msgid ""
+"The footer left sidebar appears in the first column of the footer widget "
+"area."
+msgstr ""
+"Η πλευρική γραμμή υποσέλιδου αριστερά εμφανίζεται στην πρώτη στήλη της "
+"περιοχής widget στο υποσέλιδο."
+
+#: functions.php:252
+msgid "Footer Center"
+msgstr "Υποσέλιδο κέντρο"
+
+#: functions.php:254
+msgid ""
+"The footer center sidebar appears in the second column of the footer widget "
+"area."
+msgstr ""
+"Η πλευρική γραμμή υποσέλιδου κέντρο εμφανίζεται στη δεύτερη στήλη της "
+"περιοχής widget στο υποσέλιδο."
+
+#: functions.php:264
+msgid "Footer Right"
+msgstr "Υποσέλιδο δεξιά"
+
+#: functions.php:266
+msgid ""
+"The footer right sidebar appears in the third column of the footer widget "
+"area."
+msgstr ""
+"Η πλευρική γραμμή υποσέλιδου δεξιά εμφανίζεται στην τρίτη στήλη της περιοχής "
+"widget στο υποσέλιδο."
+
+#: functions.php:329
+msgctxt "Lato font: on or off"
+msgid "on"
+msgstr "ενεργό"
+
+#: functions.php:335
+msgctxt "Merriweather font: on or off"
+msgid "on"
+msgstr "ενεργό"
+
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
+#. *
+#. * @package Primer
+#.
+#: header.php:35
+msgid "Skip to content"
+msgstr "Μετάβαση απευθείας στο περιεχόμενο"
+
+#. //developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+#. *
+#. * @package Primer
+#.
+#: search.php:20
+#, php-format
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr "Αποτελέσματα αναζήτησης για: %s"
+
+#: inc/breadcrumbs.php:39
+msgid "Blog"
+msgstr "Blog"
+
+#: inc/extras.php:91
+#, php-format
+msgctxt "page number"
+msgid "Page %d"
+msgstr "Σελίδα %d"
+
+#: inc/template-tags.php:56
+msgid "Posts navigation"
+msgstr "Πλοήγηση στις αναρτήσεις"
+
+#: inc/template-tags.php:62
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "  <span class=\"meta-nav\">&larr;</span> Παλιότερες αναρτήσεις"
+
+#: inc/template-tags.php:68
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Νεότερες αναρτήσεις <span class=\"meta-nav\">&rarr;</span>  "
+
+#: inc/template-tags.php:102
+msgid "Post navigation"
+msgstr "Πλοήγηση στις αναρτήσεις"
+
+#: inc/theme-layouts.php:364
+msgctxt "theme layout"
+msgid "Default"
+msgstr "Προεπιλογή"
+
+#: inc/theme-layouts.php:459 inc/theme-layouts.php:566
+#: inc/theme-layouts.php:651
+msgid "Layout"
+msgstr "Διάταξη"
+
+#: inc/theme-layouts.php:684
+msgid "Global Layout"
+msgstr "Γενική διάταξη"
+
+#: templates/parts/loop/page-content.php:17
+#: templates/parts/loop/post-content.php:17
+msgid "Pages:"
+msgstr "Σελίδες:"
+
+#: templates/parts/loop/page-footer.php:8
+#: templates/parts/loop/post-footer.php:13
+#: templates/parts/loop/post-search-footer.php:45
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#: templates/parts/loop/post-content.php:13
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Διαβάστε περισσότερα <span class=\"meta-nav\">&rarr;</span>"
+
+#: templates/parts/loop/post-footer.php:19
+#: templates/parts/loop/post-footer.php:31
+#: templates/parts/loop/post-search-footer.php:13
+#: templates/parts/loop/post-search-footer.php:25
+msgctxt "separator for items in a list"
+msgid ", "
+msgstr ", "
+
+#: templates/parts/loop/post-footer.php:25
+#: templates/parts/loop/post-search-footer.php:19
+#, php-format
+msgctxt "category list"
+msgid "Posted in: %s"
+msgstr "Ανάρτηση στην κατηγορία: %s"
+
+#: templates/parts/loop/post-footer.php:37
+#: templates/parts/loop/post-search-footer.php:31
+#, php-format
+msgctxt "tag list"
+msgid "Filed under: %s"
+msgstr "Καταχωρήθηκε με ετικέτα: %s"
+
+#: templates/parts/loop/post-meta.php:13
+#, php-format
+msgctxt "1. post date, 2. author name"
+msgid "%1$s by %2$s"
+msgstr "%1$s από %2$s"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgid "Leave a comment"
+msgstr "Αφήστε σχόλιο"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgid "1 Comment"
+msgstr "1 σχόλιο"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgctxt "number of comments"
+msgid "% Comments"
+msgstr "% σχόλια"
+
+#: templates/parts/site-info.php:17
+#, php-format
+msgctxt "1. theme name link, 2. theme author link"
+msgid "Built with %1$s by %2$s."
+msgstr "Κατασκευάστηκε με το %1$s από την %2$s."

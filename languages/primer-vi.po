@@ -1,0 +1,334 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: primer 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-21 16:55-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#. //codex.wordpress.org/Creating_an_Error_404_Page
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#404-php
+#. *
+#. * @package Primer
+#.
+#: 404.php:21
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Rất tiếc! Không thể tìm được trang đó."
+
+#: 404.php:27
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Có vẻ như không tìm thấy thông tin gì tại địa điểm này. Bạn có muốn thử một "
+"trong những liên kết bên dưới hoặc thử tìm kiếm không?"
+
+#: 404.php:37
+msgid "Most Used Categories"
+msgstr "Các nhóm được sử dụng nhiều nhất"
+
+#: 404.php:61
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Thử tìm trong các mục lưu trữ hàng tháng. %1$s"
+
+#: comments.php:34
+#, php-format
+msgctxt "1. number of comments, 2. post title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$d thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Một nhận xét về &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$d thoughts on &ldquo;%2$s&rdquo;"
+
+#: comments.php:50 comments.php:75
+msgid "Comment navigation"
+msgstr "Điều hướng nhận xét"
+
+#: comments.php:52 comments.php:77
+msgid "&larr; Older Comments"
+msgstr "&larr; Nhận xét trước đó"
+
+#: comments.php:54 comments.php:79
+msgid "Newer Comments &rarr;"
+msgstr "Nhận xét gần đây&rarr;"
+
+#: comments.php:89
+msgid "Comments are closed."
+msgstr "Đã đóng nhận xét."
+
+#: content-featured.php:30
+msgid "Featured"
+msgstr "Nổi bật"
+
+#: content-featured.php:40
+msgid "Read More"
+msgstr "Đọc thêm"
+
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
+#. *
+#. * @package Primer
+#.
+#: content-none.php:15
+msgid "Nothing Found"
+msgstr "Không tìm thấy gì"
+
+#: content-none.php:23
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Đã sẵn sàng đăng tải bài đăng đầu tiên của bạn? <a href=\"%1$s\">Bắt đầu tại đây</a>."
+
+#: content-none.php:27
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Rất tiếc nhưng không có nội dung nào khớp với từ khóa tìm kiếm của bạn. Vui "
+"lòng thử lại với một vài từ khóa khác."
+
+#: content-none.php:32
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Có vẻ như chúng tôi không thể tìm được nội dung bạn cần tìm. Có lẽ bạn nên "
+"thử tìm kiếm xem."
+
+#: functions.php:129
+msgid "Primary Menu"
+msgstr "Menu chính"
+
+#: functions.php:130
+msgid "Social Menu"
+msgstr "Menu xã hội"
+
+#: functions.php:140
+msgid "1 Column Wide"
+msgstr "1 cột rộng"
+
+#: functions.php:141
+msgid "1 Column Narrow"
+msgstr "1 cột hẹp"
+
+#: functions.php:142 functions.php:143
+msgid "2 Columns: Sidebar / Content"
+msgstr "2 cột: Thanh bên / Nội dung"
+
+#: functions.php:142 functions.php:143
+msgid "2 Columns: Content / Sidebar"
+msgstr "2 cột: Nội dung / Thanh bên"
+
+#: functions.php:144 functions.php:146
+msgid "3 Columns: Sidebar / Sidebar / Content"
+msgstr "3 cột: Thanh bên / Thanh bên / Nội dung"
+
+#: functions.php:144 functions.php:146
+msgid "3 Columns: Content / Sidebar / Sidebar"
+msgstr "3 cột: Nội dung / Thanh bên / Thanh bên"
+
+#: functions.php:145
+msgid "3 Columns: Sidebar / Content / Sidebar"
+msgstr "3 cột: Thanh bên / Nội dung / Thanh bên"
+
+#: functions.php:216
+msgid "Sidebar"
+msgstr "Thanh bên"
+
+#: functions.php:218
+msgid ""
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
+msgstr ""
+"Thanh bên chính sẽ xuất hiện cùng với nội dung của mỗi trang, bài đăng, mục "
+"lưu trữ và mẫu tìm kiếm."
+
+#: functions.php:228
+msgid "Secondary Sidebar"
+msgstr "Thanh bên phụ"
+
+#: functions.php:230
+msgid ""
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
+msgstr "Thanh bên phụ sẽ chỉ xuất hiện khi bạn chọn bố cục ba cột."
+
+#: functions.php:240
+msgid "Footer Left"
+msgstr "Chân trang trái"
+
+#: functions.php:242
+msgid ""
+"The footer left sidebar appears in the first column of the footer widget "
+"area."
+msgstr ""
+"Thanh bên chân trang trái sẽ xuất hiện ở cột đầu tiên trong khu vực widget "
+"chân trang."
+
+#: functions.php:252
+msgid "Footer Center"
+msgstr "Chân trang giữa"
+
+#: functions.php:254
+msgid ""
+"The footer center sidebar appears in the second column of the footer widget "
+"area."
+msgstr ""
+"Thanh bên chân trang giữa sẽ xuất hiện ở cột thứ hai trong khu vực widget "
+"chân trang."
+
+#: functions.php:264
+msgid "Footer Right"
+msgstr "Chân trang phải"
+
+#: functions.php:266
+msgid ""
+"The footer right sidebar appears in the third column of the footer widget "
+"area."
+msgstr ""
+"Thanh bên chân trang phải sẽ xuất hiện ở cột thứ ba trong khu vực widget chân trang."
+
+#: functions.php:329
+msgctxt "Lato font: on or off"
+msgid "on"
+msgstr "bật"
+
+#: functions.php:335
+msgctxt "Merriweather font: on or off"
+msgid "on"
+msgstr "bật"
+
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
+#. *
+#. * @package Primer
+#.
+#: header.php:35
+msgid "Skip to content"
+msgstr "Chuyển tới phần nội dung"
+
+#. //developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+#. *
+#. * @package Primer
+#.
+#: search.php:20
+#, php-format
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr "Kết quả tìm kiếm của: %s"
+
+#: inc/breadcrumbs.php:39
+msgid "Blog"
+msgstr "Blog"
+
+#: inc/extras.php:91
+#, php-format
+msgctxt "page number"
+msgid "Page %d"
+msgstr "Trang %d"
+
+#: inc/template-tags.php:56
+msgid "Posts navigation"
+msgstr "Điều hướng bài đăng"
+
+#: inc/template-tags.php:62
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Bài đăng trước đó"
+
+#: inc/template-tags.php:68
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Bài đăng gần đây <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:102
+msgid "Post navigation"
+msgstr "Điều hướng bài đăng"
+
+#: inc/theme-layouts.php:364
+msgctxt "theme layout"
+msgid "Default"
+msgstr "Mặc định"
+
+#: inc/theme-layouts.php:459 inc/theme-layouts.php:566
+#: inc/theme-layouts.php:651
+msgid "Layout"
+msgstr "Bố cục"
+
+#: inc/theme-layouts.php:684
+msgid "Global Layout"
+msgstr "Bố cục chung"
+
+#: templates/parts/loop/page-content.php:17
+#: templates/parts/loop/post-content.php:17
+msgid "Pages:"
+msgstr "Trang:"
+
+#: templates/parts/loop/page-footer.php:8
+#: templates/parts/loop/post-footer.php:13
+#: templates/parts/loop/post-search-footer.php:45
+msgid "Edit"
+msgstr "Sửa"
+
+#: templates/parts/loop/post-content.php:13
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Đọc thêm <span class=\"meta-nav\">&rarr;</span>"
+
+#: templates/parts/loop/post-footer.php:19
+#: templates/parts/loop/post-footer.php:31
+#: templates/parts/loop/post-search-footer.php:13
+#: templates/parts/loop/post-search-footer.php:25
+msgctxt "separator for items in a list"
+msgid ", "
+msgstr ", "
+
+#: templates/parts/loop/post-footer.php:25
+#: templates/parts/loop/post-search-footer.php:19
+#, php-format
+msgctxt "category list"
+msgid "Posted in: %s"
+msgstr "Được đăng trong: %s"
+
+#: templates/parts/loop/post-footer.php:37
+#: templates/parts/loop/post-search-footer.php:31
+#, php-format
+msgctxt "tag list"
+msgid "Filed under: %s"
+msgstr "Được sắp xếp bên dưới: %s"
+
+#: templates/parts/loop/post-meta.php:13
+#, php-format
+msgctxt "1. post date, 2. author name"
+msgid "%1$s by %2$s"
+msgstr "%1$s bởi %2$s"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgid "Leave a comment"
+msgstr "Đưa ra nhận xét"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgid "1 Comment"
+msgstr "1 nhận xét"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgctxt "number of comments"
+msgid "% Comments"
+msgstr "% nhận xét"
+
+#: templates/parts/site-info.php:17
+#, php-format
+msgctxt "1. theme name link, 2. theme author link"
+msgid "Built with %1$s by %2$s."
+msgstr "Được xây dựng với %1$s bởi %2$s."

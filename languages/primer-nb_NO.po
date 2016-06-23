@@ -1,0 +1,336 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: primer 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-21 16:55-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#. //codex.wordpress.org/Creating_an_Error_404_Page
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#404-php
+#. *
+#. * @package Primer
+#.
+#: 404.php:21
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ops! Fant ikke den siden."
+
+#: 404.php:27
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Det virker ikke som om noe ble funnet på denne plasseringen. Kanskje du kan "
+"prøve en av koblingene nedenfor eller et søk?"
+
+#: 404.php:37
+msgid "Most Used Categories"
+msgstr "Mest brukte kategorier"
+
+#: 404.php:61
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Prøv å lete i de månedlige arkivene. %1$s"
+
+#: comments.php:34
+#, php-format
+msgctxt "1. number of comments, 2. post title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$d thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "En tanke angående &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$d thoughts on &ldquo;%2$s&rdquo;"
+
+#: comments.php:50 comments.php:75
+msgid "Comment navigation"
+msgstr "Kommenter navigering"
+
+#: comments.php:52 comments.php:77
+msgid "&larr; Older Comments"
+msgstr "&larr; Eldre kommentarer"
+
+#: comments.php:54 comments.php:79
+msgid "Newer Comments &rarr;"
+msgstr "Nyere kommentarer &rarr;"
+
+#: comments.php:89
+msgid "Comments are closed."
+msgstr "Kommentarer er lukket."
+
+#: content-featured.php:30
+msgid "Featured"
+msgstr "Profilert"
+
+#: content-featured.php:40
+msgid "Read More"
+msgstr "Les mer"
+
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
+#. *
+#. * @package Primer
+#.
+#: content-none.php:15
+msgid "Nothing Found"
+msgstr "Ingen resultat"
+
+#: content-none.php:23
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Er du klar til å publisere den første posten din? <a href=\"%1$s\">Kom i gang her</a>."
+
+#: content-none.php:27
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Beklager, men ingenting stemte overens med søkeordene dine. Prøv på nytt med "
+"noen andre søkeord."
+
+#: content-none.php:32
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Det virker ikke som om vi kan finne det du leter etter. Kanskje det kan "
+"hjelpe å søke."
+
+#: functions.php:129
+msgid "Primary Menu"
+msgstr "Hovedmeny"
+
+#: functions.php:130
+msgid "Social Menu"
+msgstr "Sosial meny"
+
+#: functions.php:140
+msgid "1 Column Wide"
+msgstr "1 kolonne bred"
+
+#: functions.php:141
+msgid "1 Column Narrow"
+msgstr "1 kolonne smal"
+
+#: functions.php:142 functions.php:143
+msgid "2 Columns: Sidebar / Content"
+msgstr "2 kolonner: Sidestolpe / innhold"
+
+#: functions.php:142 functions.php:143
+msgid "2 Columns: Content / Sidebar"
+msgstr "2 kolonner: Innhold / sidestolpe"
+
+#: functions.php:144 functions.php:146
+msgid "3 Columns: Sidebar / Sidebar / Content"
+msgstr "3 kolonner: Sidestolpe / sidestolpe / innhold"
+
+#: functions.php:144 functions.php:146
+msgid "3 Columns: Content / Sidebar / Sidebar"
+msgstr "3 kolonner: Innhold / sidestolpe / sidestolpe"
+
+#: functions.php:145
+msgid "3 Columns: Sidebar / Content / Sidebar"
+msgstr "3 kolonner: Sidestolpe / innhold / sidestolpe"
+
+#: functions.php:216
+msgid "Sidebar"
+msgstr "Sidestolpe"
+
+#: functions.php:218
+msgid ""
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
+msgstr ""
+"Den primære sidestolpen vises sammen med innholdet på hver side, post, arkiv "
+"eller søkemal."
+
+#: functions.php:228
+msgid "Secondary Sidebar"
+msgstr "Sekundær sidestolpe"
+
+#: functions.php:230
+msgid ""
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
+msgstr ""
+"Den sekundære sidestolpen vil kun vises når du har valgt en utforming med tre kolonner."
+
+#: functions.php:240
+msgid "Footer Left"
+msgstr "Bunntekst venstre"
+
+#: functions.php:242
+msgid ""
+"The footer left sidebar appears in the first column of the footer widget "
+"area."
+msgstr ""
+"Sidestolpen med bunntekst til venstre vises i den første kolonnen av "
+"kontrollprogramområdet for bunnteksten."
+
+#: functions.php:252
+msgid "Footer Center"
+msgstr "Bunntekst midstilt"
+
+#: functions.php:254
+msgid ""
+"The footer center sidebar appears in the second column of the footer widget "
+"area."
+msgstr ""
+"Sidestolpen med bunntekst til venstre vises i den andre kolonnen av "
+"kontrollprogramområdet for bunnteksten."
+
+#: functions.php:264
+msgid "Footer Right"
+msgstr "Bunntekst høyre"
+
+#: functions.php:266
+msgid ""
+"The footer right sidebar appears in the third column of the footer widget "
+"area."
+msgstr ""
+"Sidestolpen med bunntekst til venstre vises i den tredje kolonnen av "
+"kontrollprogramområdet for bunnteksten."
+
+#: functions.php:329
+msgctxt "Lato font: on or off"
+msgid "on"
+msgstr "på"
+
+#: functions.php:335
+msgctxt "Merriweather font: on or off"
+msgid "on"
+msgstr "på"
+
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
+#. *
+#. * @package Primer
+#.
+#: header.php:35
+msgid "Skip to content"
+msgstr "Hopp til innhold"
+
+#. //developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+#. *
+#. * @package Primer
+#.
+#: search.php:20
+#, php-format
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr "Søkeresultater for: %s"
+
+#: inc/breadcrumbs.php:39
+msgid "Blog"
+msgstr "Blogg"
+
+#: inc/extras.php:91
+#, php-format
+msgctxt "page number"
+msgid "Page %d"
+msgstr "Side %d"
+
+#: inc/template-tags.php:56
+msgid "Posts navigation"
+msgstr "Post-navigering"
+
+#: inc/template-tags.php:62
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Eldre poster"
+
+#: inc/template-tags.php:68
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nyere poster <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:102
+msgid "Post navigation"
+msgstr "Post-navigering"
+
+#: inc/theme-layouts.php:364
+msgctxt "theme layout"
+msgid "Default"
+msgstr "Standard"
+
+#: inc/theme-layouts.php:459 inc/theme-layouts.php:566
+#: inc/theme-layouts.php:651
+msgid "Layout"
+msgstr "Layout"
+
+#: inc/theme-layouts.php:684
+msgid "Global Layout"
+msgstr "Global utforming"
+
+#: templates/parts/loop/page-content.php:17
+#: templates/parts/loop/post-content.php:17
+msgid "Pages:"
+msgstr "Sider:"
+
+#: templates/parts/loop/page-footer.php:8
+#: templates/parts/loop/post-footer.php:13
+#: templates/parts/loop/post-search-footer.php:45
+msgid "Edit"
+msgstr "Rediger"
+
+#: templates/parts/loop/post-content.php:13
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Les mer <span class=\"meta-nav\">&rarr;</span>"
+
+#: templates/parts/loop/post-footer.php:19
+#: templates/parts/loop/post-footer.php:31
+#: templates/parts/loop/post-search-footer.php:13
+#: templates/parts/loop/post-search-footer.php:25
+msgctxt "separator for items in a list"
+msgid ", "
+msgstr ", "
+
+#: templates/parts/loop/post-footer.php:25
+#: templates/parts/loop/post-search-footer.php:19
+#, php-format
+msgctxt "category list"
+msgid "Posted in: %s"
+msgstr "Postet i: %s"
+
+#: templates/parts/loop/post-footer.php:37
+#: templates/parts/loop/post-search-footer.php:31
+#, php-format
+msgctxt "tag list"
+msgid "Filed under: %s"
+msgstr "Arkivert under: %s"
+
+#: templates/parts/loop/post-meta.php:13
+#, php-format
+msgctxt "1. post date, 2. author name"
+msgid "%1$s by %2$s"
+msgstr "%1$s av %2$s"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgid "Leave a comment"
+msgstr "Legg inn en kommentar"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgid "1 Comment"
+msgstr "1 kommentar"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgctxt "number of comments"
+msgid "% Comments"
+msgstr "% kommentarer"
+
+#: templates/parts/site-info.php:17
+#, php-format
+msgctxt "1. theme name link, 2. theme author link"
+msgid "Built with %1$s by %2$s."
+msgstr "Bygget med %1$s av %2$s."

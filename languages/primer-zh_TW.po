@@ -1,0 +1,320 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: primer 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-21 16:55-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#. //codex.wordpress.org/Creating_an_Error_404_Page
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#404-php
+#. *
+#. * @package Primer
+#.
+#: 404.php:21
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "糟糕了！ 找不到該頁面。"
+
+#: 404.php:27
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr "在此位置中找不到。 請嘗試下列其中一個連結或搜尋項目。"
+
+#: 404.php:37
+msgid "Most Used Categories"
+msgstr "最常用分類"
+
+#: 404.php:61
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "請嘗試在每月封存中尋找。 %1$s"
+
+#: comments.php:34
+#, php-format
+msgctxt "1. number of comments, 2. post title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$d thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "對於 &ldquo;%2$s&rdquo; 的看法"
+msgstr[1] "%1$d thoughts on &ldquo;%2$s&rdquo;"
+
+#: comments.php:50 comments.php:75
+msgid "Comment navigation"
+msgstr "評論瀏覽"
+
+#: comments.php:52 comments.php:77
+msgid "&larr; Older Comments"
+msgstr "&larr; 較舊的評論"
+
+#: comments.php:54 comments.php:79
+msgid "Newer Comments &rarr;"
+msgstr "較新的評論 &rarr;"
+
+#: comments.php:89
+msgid "Comments are closed."
+msgstr "意見已關閉。"
+
+#: content-featured.php:30
+msgid "Featured"
+msgstr "特色"
+
+#: content-featured.php:40
+msgid "Read More"
+msgstr "參閱更多"
+
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
+#. *
+#. * @package Primer
+#.
+#: content-none.php:15
+msgid "Nothing Found"
+msgstr "找不到項目"
+
+#: content-none.php:23
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "準備好發佈第一則貼文嗎？ <a href=\"%1$s\">立即開始</a>。"
+
+#: content-none.php:27
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "抱歉，沒有與您的搜尋相符的項目。 請用其他關鍵字再試一次。"
+
+#: content-none.php:32
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "我們找不到您要尋找的項目。 請試試搜尋功能。"
+
+#: functions.php:129
+msgid "Primary Menu"
+msgstr "主功能表"
+
+#: functions.php:130
+msgid "Social Menu"
+msgstr "社交選單"
+
+#: functions.php:140
+msgid "1 Column Wide"
+msgstr "1 個欄寬"
+
+#: functions.php:141
+msgid "1 Column Narrow"
+msgstr "1 個欄窄"
+
+#: functions.php:142 functions.php:143
+msgid "2 Columns: Sidebar / Content"
+msgstr "2 欄： 側邊欄/內容"
+
+#: functions.php:142 functions.php:143
+msgid "2 Columns: Content / Sidebar"
+msgstr "2 欄： 內容/側邊欄"
+
+#: functions.php:144 functions.php:146
+msgid "3 Columns: Sidebar / Sidebar / Content"
+msgstr "3 欄： 側邊欄/側邊欄/內容"
+
+#: functions.php:144 functions.php:146
+msgid "3 Columns: Content / Sidebar / Sidebar"
+msgstr "3 欄： 內容/側邊欄/側邊欄"
+
+#: functions.php:145
+msgid "3 Columns: Sidebar / Content / Sidebar"
+msgstr "3 欄： 側邊欄/內容/側邊欄"
+
+#: functions.php:216
+msgid "Sidebar"
+msgstr "側邊欄"
+
+#: functions.php:218
+msgid ""
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
+msgstr "主要側邊欄會出現在每個頁面、貼文、封存和搜尋範本的內容旁。"
+
+#: functions.php:228
+msgid "Secondary Sidebar"
+msgstr "次要側邊欄"
+
+#: functions.php:230
+msgid ""
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
+msgstr "次要側邊欄只會在您選取三欄版面配置時才會出現。"
+
+#: functions.php:240
+msgid "Footer Left"
+msgstr "頁尾靠左"
+
+#: functions.php:242
+msgid ""
+"The footer left sidebar appears in the first column of the footer widget "
+"area."
+msgstr "頁尾左側的側邊欄會出現在頁尾小工具區域的第一欄中。"
+
+#: functions.php:252
+msgid "Footer Center"
+msgstr "頁尾置中"
+
+#: functions.php:254
+msgid ""
+"The footer center sidebar appears in the second column of the footer widget "
+"area."
+msgstr "頁尾置中的側邊欄會出現在頁尾小工具區域的第二欄中。"
+
+#: functions.php:264
+msgid "Footer Right"
+msgstr "頁尾靠右"
+
+#: functions.php:266
+msgid ""
+"The footer right sidebar appears in the third column of the footer widget "
+"area."
+msgstr "頁尾靠右的側邊欄會出現在頁尾小工具區域的第三欄中。"
+
+#: functions.php:329
+msgctxt "Lato font: on or off"
+msgid "on"
+msgstr "在"
+
+#: functions.php:335
+msgctxt "Merriweather font: on or off"
+msgid "on"
+msgstr "在"
+
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
+#. *
+#. * @package Primer
+#.
+#: header.php:35
+msgid "Skip to content"
+msgstr "略過內容"
+
+#. //developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+#. *
+#. * @package Primer
+#.
+#: search.php:20
+#, php-format
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr "搜尋以下項目的結果： %s"
+
+#: inc/breadcrumbs.php:39
+msgid "Blog"
+msgstr "部落格"
+
+#: inc/extras.php:91
+#, php-format
+msgctxt "page number"
+msgid "Page %d"
+msgstr "第 %d 頁"
+
+#: inc/template-tags.php:56
+msgid "Posts navigation"
+msgstr "貼文瀏覽"
+
+#: inc/template-tags.php:62
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> 較舊的貼文"
+
+#: inc/template-tags.php:68
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "較新的貼文 <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:102
+msgid "Post navigation"
+msgstr "貼文瀏覽"
+
+#: inc/theme-layouts.php:364
+msgctxt "theme layout"
+msgid "Default"
+msgstr "預設"
+
+#: inc/theme-layouts.php:459 inc/theme-layouts.php:566
+#: inc/theme-layouts.php:651
+msgid "Layout"
+msgstr "版面"
+
+#: inc/theme-layouts.php:684
+msgid "Global Layout"
+msgstr "全域版面配置"
+
+#: templates/parts/loop/page-content.php:17
+#: templates/parts/loop/post-content.php:17
+msgid "Pages:"
+msgstr "網頁："
+
+#: templates/parts/loop/page-footer.php:8
+#: templates/parts/loop/post-footer.php:13
+#: templates/parts/loop/post-search-footer.php:45
+msgid "Edit"
+msgstr "編輯"
+
+#: templates/parts/loop/post-content.php:13
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr "閱讀更多 <span class=\"meta-nav\">&rarr;</span>"
+
+#: templates/parts/loop/post-footer.php:19
+#: templates/parts/loop/post-footer.php:31
+#: templates/parts/loop/post-search-footer.php:13
+#: templates/parts/loop/post-search-footer.php:25
+msgctxt "separator for items in a list"
+msgid ", "
+msgstr "、 "
+
+#: templates/parts/loop/post-footer.php:25
+#: templates/parts/loop/post-search-footer.php:19
+#, php-format
+msgctxt "category list"
+msgid "Posted in: %s"
+msgstr "發佈位置： %s"
+
+#: templates/parts/loop/post-footer.php:37
+#: templates/parts/loop/post-search-footer.php:31
+#, php-format
+msgctxt "tag list"
+msgid "Filed under: %s"
+msgstr "歸檔位置： %s"
+
+#: templates/parts/loop/post-meta.php:13
+#, php-format
+msgctxt "1. post date, 2. author name"
+msgid "%1$s by %2$s"
+msgstr "%1$s，作者 %2$s"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgid "Leave a comment"
+msgstr "留下評論"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgid "1 Comment"
+msgstr "1 則評論"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgctxt "number of comments"
+msgid "% Comments"
+msgstr "% 則評論"
+
+#: templates/parts/site-info.php:17
+#, php-format
+msgctxt "1. theme name link, 2. theme author link"
+msgid "Built with %1$s by %2$s."
+msgstr "主題為 %2$s，作者 %1$s。"
