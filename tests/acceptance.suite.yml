@@ -10,3 +10,5 @@ modules:
         - PhpBrowser:
             url: http://wp.dev
         - \Helper\Acceptance
+        - Db
+
