@@ -88,7 +88,7 @@
 
 		// Add additional color.
 		// jscs:disable
-		colors.border_color = Color( colors.main_text_color ).toCSS( 'rgba', 0.2 );
+		colors.hover_color = Color( colors.link_color ).toCSS( 'rgba', 0.8 );
 		// jscs:enable
 
 		css = cssTemplate( colors );

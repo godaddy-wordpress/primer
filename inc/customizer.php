@@ -366,7 +366,7 @@ function primer_color_scheme_css() {
 		'link_color'            => $color_scheme[3],
 		'main_text_color'       => $color_scheme[4],
 		'secondary_text_color'  => $color_scheme[5],
-		'hover_color'          => vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.75)', $hover_color_rgb ),
+		'hover_color'          => vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.8)', $hover_color_rgb ),
 	);
 
 	$color_scheme_css = primer_get_color_scheme_css( $colors );
@@ -477,7 +477,7 @@ function primer_color_scheme_css_template() {
 		'link_color'            => '{{ data.link_color }}',
 		'main_text_color'       => '{{ data.main_text_color }}',
 		'secondary_text_color'  => '{{ data.secondary_text_color }}',
-		'hover_color'          	=> '{{ data.link_color }}',
+		'hover_color'          	=> '{{ data.hover_color }}',
 	);
 	?>
 	<script type="text/html" id="tmpl-primer-color-scheme">
@@ -573,7 +573,7 @@ function primer_link_color_css() {
 	}
 
 	// If we get this far, we have a custom color scheme.
-	$hover_color = vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.75)', $link_color_rgb );
+	$hover_color = vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.8)', $link_color_rgb );
 
 	$css = apply_filters(
 		'custom_link_color_css',
