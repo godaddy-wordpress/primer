@@ -1,0 +1,21 @@
+actor: Tester
+paths:
+    tests: tests/codeception
+    log: tests/codeception/_output
+    data: tests/codeception/_data
+    support: tests/codeception/_support
+    envs: tests/codeception/_envs
+settings:
+    bootstrap: _bootstrap.php
+    colors: true
+    memory_limit: 1024M
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
+modules:
+    config:
+        Db:
+            dsn: 'localhost'
+            user: 'root'
+            password: ''
+            dump: tests/codeception/_data/dump.sql
