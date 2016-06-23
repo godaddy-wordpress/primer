@@ -6,5 +6,5 @@ build/
 node_modules/
 svn-url
 svn-username
-tests/codeception/_output/*
+tests/_output/*
 vendor/
