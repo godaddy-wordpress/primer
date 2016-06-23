@@ -28,9 +28,19 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/action-hooks.php';
 
 /**
+ * Custom fonts.
+ */
+require get_template_directory() . '/inc/custom-fonts.php';
+
+/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Custom header.
+ */
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Load Jetpack compatibility file.
@@ -48,29 +58,19 @@ require get_template_directory() . '/inc/theme-layouts.php';
  * @link https://codex.wordpress.org/Content_Width
  */
 if ( ! isset( $content_width ) ) {
-
 	global $content_width;
 
 	switch ( theme_layouts_get_layout() ) {
-
 		case 'one-column-wide' :
-
 			$content_width = 1068;
-
 		case 'one-column-narrow' :
-
 			$content_width = 688;
-
 		default :
-
 			$content_width = 688;
-
 	}
-
 }
 
 if ( ! function_exists( 'primer_setup' ) ) {
-
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -118,6 +118,13 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		 * @link https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 		 */
 		add_theme_support( 'post-thumbnails' );
+
+		/**
+		 * Enable editor style support
+		 *
+		 * @link https://developer.wordpress.org/reference/functions/add_editor_style/
+		 */
+		add_editor_style();
 
 		/**
 		 * Register custom Custom Navigation Menus.
@@ -195,22 +202,17 @@ if ( ! function_exists( 'primer_setup' ) ) {
 				)
 			)
 		);
-
 	}
-
 }
-
 add_action( 'after_setup_theme', 'primer_setup' );
 
 if ( ! function_exists( 'primer_widgets_init' ) ) {
-
 	/**
 	 * Register widget area.
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/register_sidebar
 	 */
 	function primer_widgets_init() {
-
 		register_sidebar(
 			array(
 				'name'          => esc_html__( 'Sidebar', 'primer' ),
@@ -270,15 +272,11 @@ if ( ! function_exists( 'primer_widgets_init' ) ) {
 				'after_title'   => '</h6>',
 			)
 		);
-
 	}
-
 }
-
 add_action( 'widgets_init', 'primer_widgets_init' );
 
 if ( ! function_exists( 'primer_scripts' ) ) {
-
 	/**
 	 * Enqueue theme scripts and styles.
 	 *
@@ -286,7 +284,6 @@ if ( ! function_exists( 'primer_scripts' ) ) {
 	 * @link https://codex.wordpress.org/Function_Reference/wp_enqueue_script
 	 */
 	function primer_scripts() {
-
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
 		wp_enqueue_style( 'primer', get_stylesheet_uri(), false, PRIMER_VERSION );
@@ -297,19 +294,13 @@ if ( ! function_exists( 'primer_scripts' ) ) {
 		wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), PRIMER_VERSION, true );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-
 			wp_enqueue_script( 'comment-reply' );
-
 		}
-
 	}
-
 }
-
 add_action( 'wp_enqueue_scripts', 'primer_scripts' );
 
 if ( ! function_exists( 'primer_fonts_url' ) ) {
-
 	/**
 	 * Returns the Google font stylesheet URL, if available.
 	 *
@@ -319,7 +310,6 @@ if ( ! function_exists( 'primer_fonts_url' ) ) {
 	 * @return string|null
 	 */
 	function primer_fonts_url() {
-
 		$fonts_url = null;
 
 		/* Translators: If there are characters in your language that are not
@@ -335,19 +325,14 @@ if ( ! function_exists( 'primer_fonts_url' ) ) {
 		$poly = _x( 'on', 'Merriweather font: on or off', 'primer' );
 
 		if ( 'off' !== $lato || 'off' !== $poly ) {
-
 			$font_families = array();
 
 			if ( 'off' !== $lato ) {
-
 				$font_families[] = 'Lato:300,700';
-
 			}
 
 			if ( 'off' !== $poly ) {
-
 				$font_families[] = 'Merriweather:400,400italic';
-
 			}
 
 			$query_args = array(
@@ -355,18 +340,13 @@ if ( ! function_exists( 'primer_fonts_url' ) ) {
 				'subset' => urlencode( 'latin,latin-ext' ),
 			);
 
-			$fonts_url = add_query_arg( $query_args, "//fonts.googleapis.com/css" );
-
+			$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 		}
-
 		return $fonts_url;
-
 	}
-
 }
 
 if ( ! function_exists( 'primer_custom_excerpt_length' ) ) {
-
 	/**
 	 * Custom length (in words) for excerpts before they are truncated.
 	 *
@@ -375,17 +355,13 @@ if ( ! function_exists( 'primer_custom_excerpt_length' ) ) {
 	 * @return int
 	 */
 	function primer_custom_excerpt_length( $length ) {
-
 		return 20;
-
 	}
-
 }
 
 add_filter( 'excerpt_length', 'primer_custom_excerpt_length', 999 );
 
 if ( ! function_exists( 'primer_new_excerpt_more' ) ) {
-
 	/**
 	 * Custom ending for excerpts when they have been truncated.
 	 *
@@ -394,11 +370,7 @@ if ( ! function_exists( 'primer_new_excerpt_more' ) ) {
 	 * @return string
 	 */
 	function primer_new_excerpt_more( $more ) {
-
 		return '&hellip;';
-
 	}
-
 }
-
 add_filter( 'excerpt_more', 'primer_new_excerpt_more' );

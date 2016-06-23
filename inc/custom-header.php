@@ -23,9 +23,12 @@
  * @uses primer_admin_header_image()
  */
 function primer_custom_header_setup() {
+	$color_scheme             	 = primer_get_color_scheme();
+	$default_header_textcolor  	= trim( $color_scheme[0], '#' );
+
 	add_theme_support( 'custom-header', apply_filters( 'primer_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000000',
+		'default-text-color'     => $default_header_textcolor,
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
