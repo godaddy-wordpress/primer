@@ -50,7 +50,7 @@ msgctxt "1. number of comments, 2. post title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$d thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "Un pensamiento en &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$d thoughts on &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s pensamientos acerca de &ldquo;%2$s&rdquo;"
 
 #: comments.php:50 comments.php:75
 msgid "Comment navigation"
