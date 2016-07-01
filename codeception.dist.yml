@@ -13,9 +13,13 @@ extensions:
     enabled:
         - Codeception\Extension\RunFailed
 modules:
+    enabled:
+        - Db
     config:
-        Db:
-            dsn: 'localhost'
-            user: 'root'
+        - Db:
+            dsn: mysql:host=localhost;dbname=wp
+            user: root
             password: ''
             dump: tests/_data/dump.sql
+            populate: false
+            cleanup: true

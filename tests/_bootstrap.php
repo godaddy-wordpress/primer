@@ -1,18 +1,17 @@
 <?php
-// This is global bootstrap for autoloading
 
-// So we know this is only a test
+// Load WordPress first.
+if ( ! defined( 'ABSPATH' ) ) {
+
+	$abspath = explode( 'wp-content', __DIR__ );
+
+	require_once $abspath[0] . 'wp-load.php';
+
+}
+
+// Define constants.
 define( 'DOING_TESTS', true );
+define( 'TESTS_DIR', __DIR__ );
 
-// Find the ABSPATH
-$abspath = explode( 'wp-content', getcwd() );
-
-// Load WordPress
-require_once $abspath[0] . 'wp-load.php';
-
-// Switch theme
+// Activate the theme.
 switch_theme( 'primer' );
-
-// Make sure these are installed for our tests
-exec( 'wp core language install es_ES' );
-exec( 'wp plugin install monster-widget --activate' );

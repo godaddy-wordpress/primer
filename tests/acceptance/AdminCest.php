@@ -2,118 +2,190 @@
 
 class AdminCest {
 
-    public function _before( AcceptanceTester $I ) {
+	public function _before( AcceptanceTester $I ) {
 
-        $this->login( $I );
+		$this->login( $I );
 
-    }
+	}
 
-    public function _after( AcceptanceTester $I ) {}
+	public function _after( AcceptanceTester $I ) {}
 
-    protected function login( AcceptanceTester $I ) {
+	private function login( AcceptanceTester $I ) {
 
-        static $cookie = null;
+		$I->amOnPage( wp_login_url() );
+		$I->fillField( [ 'id' => 'user_login' ], 'admin' );
+		$I->fillField( [ 'id' => 'user_pass' ], 'password' );
+		$I->click( [ 'id' => 'wp-submit' ] );
 
-        if ( ! is_null( $cookie ) ) {
+	}
 
-            $I->setCookie( AUTH_COOKIE, $cookie );
+	public function pageLayout( AcceptanceTester $I ) {
 
-            return;
+		global $wpdb;
 
-        }
+		$page_id = (int) $wpdb->get_var( "SELECT ID FROM `{$wpdb->posts}` WHERE `post_status` = 'publish' AND `post_type` = 'page' LIMIT 1;" );
 
-        $I->wantTo( 'log into wp-admin' );
-        $I->amOnPage( wp_login_url() );
-        $I->fillField( [ 'id' => 'user_login' ], 'admin' );
-        $I->fillField( [ 'id' => 'user_pass' ], 'password' );
-        $I->click( [ 'id' => 'wp-submit' ] );
+		$I->wantTo( 'change the page layouts' );
 
-        $cookie = $I->grabCookie( AUTH_COOKIE );
+		// 1 Column Wide
+		$I->amOnPage( self_admin_url( "post.php?post={$page_id}&action=edit" ) );
+		$I->selectOption( 'input[name=post-layout]', 'one-column-wide' );
+		$I->click( [ 'id' => 'publish' ] );
+		$I->amOnPage( get_permalink( $page_id ) );
+		$I->seeElement( [ 'css' => 'body.layout-one-column-wide' ] );
+		$I->seeElement( [ 'id' => 'secondary' ] );
+		$I->dontSeeElement( [ 'id' => 'tertiary' ] );
 
-    }
+		// 1 Column Narrow
+		$I->amOnPage( self_admin_url( "post.php?post={$page_id}&action=edit" ) );
+		$I->selectOption( 'input[name=post-layout]', 'one-column-narrow' );
+		$I->click( [ 'id' => 'publish' ] );
+		$I->amOnPage( get_permalink( $page_id ) );
+		$I->seeElement( [ 'css' => 'body.layout-one-column-narrow' ] );
+		$I->seeElement( [ 'id' => 'secondary' ] );
+		$I->dontSeeElement( [ 'id' => 'tertiary' ] );
 
-    public function pageLayout( AcceptanceTester $I ) {
+		// 2 Columns: Sidebar / Content
+		$I->amOnPage( self_admin_url( "post.php?post={$page_id}&action=edit" ) );
+		$I->selectOption( 'input[name=post-layout]', 'two-column-reversed' );
+		$I->click( [ 'id' => 'publish' ] );
+		$I->amOnPage( get_permalink( $page_id ) );
+		$I->seeElement( [ 'css' => 'body.layout-two-column-reversed' ] );
+		$I->seeElement( [ 'id' => 'secondary' ] );
+		$I->dontSeeElement( [ 'id' => 'tertiary' ] );
 
-        $I->wantTo( 'change the page layout' );
-        $I->amOnPage( self_admin_url( 'post.php?post=2&action=edit' ) );
-        $I->selectOption( 'input[name=post-layout]', 'one-column-narrow' );
-        $I->click( [ 'id' => 'publish' ] );
-        $I->amOnPage( home_url( '?p=2' ) );
-        $I->seeElement( 'body.layout-one-column-narrow' );
-        $I->dontSeeElement( [ 'id' => 'secondary' ] );
+		// 3 Columns: Content / Sidebar / Sidebar
+		$I->amOnPage( self_admin_url( "post.php?post={$page_id}&action=edit" ) );
+		$I->selectOption( 'input[name=post-layout]', 'three-column-default' );
+		$I->click( [ 'id' => 'publish' ] );
+		$I->amOnPage( get_permalink( $page_id ) );
+		$I->seeElement( [ 'css' => 'body.layout-three-column-default' ] );
+		$I->seeElement( [ 'id' => 'secondary' ] );
+		$I->seeElement( [ 'id' => 'tertiary' ] );
 
-    }
+		// 3 Columns: Sidebar / Content / Sidebar
+		$I->amOnPage( self_admin_url( "post.php?post={$page_id}&action=edit" ) );
+		$I->selectOption( 'input[name=post-layout]', 'three-column-center' );
+		$I->click( [ 'id' => 'publish' ] );
+		$I->amOnPage( get_permalink( $page_id ) );
+		$I->seeElement( [ 'css' => 'body.layout-three-column-center' ] );
+		$I->seeElement( [ 'id' => 'secondary' ] );
+		$I->seeElement( [ 'id' => 'tertiary' ] );
 
-    public function primaryMenu( AcceptanceTester $I ) {
+		// 3 Columns: Sidebar / Sidebar / Content
+		$I->amOnPage( self_admin_url( "post.php?post={$page_id}&action=edit" ) );
+		$I->selectOption( 'input[name=post-layout]', 'three-column-reversed' );
+		$I->click( [ 'id' => 'publish' ] );
+		$I->amOnPage( get_permalink( $page_id ) );
+		$I->seeElement( [ 'css' => 'body.layout-three-column-reversed' ] );
+		$I->seeElement( [ 'id' => 'secondary' ] );
+		$I->seeElement( [ 'id' => 'tertiary' ] );
 
-        $I->wantTo( 'assign a primary menu' );
+		// Default
+		$I->amOnPage( self_admin_url( "post.php?post={$page_id}&action=edit" ) );
+		$I->selectOption( 'input[name=post-layout]', 'default' );
+		$I->click( [ 'id' => 'publish' ] );
+		$I->amOnPage( get_permalink( $page_id ) );
+		$I->seeElement( [ 'css' => 'body.layout-two-column-default' ] );
+		$I->seeElement( [ 'id' => 'secondary' ] );
+		$I->dontSeeElement( [ 'id' => 'tertiary' ] );
 
-    }
+	}
 
-    public function socialMenu( AcceptanceTester $I ) {
+	private function primaryMenu( AcceptanceTester $I ) {
 
-        $I->wantTo( 'assign a social menu' );
+		// TODO: Make public
 
-    }
+		$I->wantTo( 'assign a primary menu' );
 
-    public function customLogo( AcceptanceTester $I ) {
+	}
 
-        $I->wantTo( 'upload a custom logo' );
+	private function socialMenu( AcceptanceTester $I ) {
 
-    }
+		// TODO: Make public
 
-    public function headerImage( AcceptanceTester $I ) {
+		$I->wantTo( 'assign a social menu' );
 
-        $I->wantTo( 'upload a custom header image' );
+	}
 
-    }
+	private function customLogo( AcceptanceTester $I ) {
 
-    public function backgroundImage( AcceptanceTester $I ) {
+		// TODO: Make public
 
-        $I->wantTo( 'upload a custom background image' );
+		$I->wantTo( 'upload a custom logo' );
 
-    }
+	}
 
-    public function backgroundColor( AcceptanceTester $I ) {
+	private function headerImage( AcceptanceTester $I ) {
 
-        $I->wantTo( 'change the background color' );
+		// TODO: Make public
 
-    }
+		$I->wantTo( 'upload a custom header image' );
 
-    public function linkTextColor( AcceptanceTester $I ) {
+	}
 
-        $I->wantTo( 'change the link text color' );
+	private function backgroundImage( AcceptanceTester $I ) {
 
-    }
+		// TODO: Make public
 
-    public function mainTextColor( AcceptanceTester $I ) {
+		$I->wantTo( 'upload a custom background image' );
 
-        $I->wantTo( 'change the main text color' );
+	}
 
-    }
+	private function backgroundColor( AcceptanceTester $I ) {
 
-    public function secondaryTextColor( AcceptanceTester $I ) {
+		// TODO: Make public
 
-        $I->wantTo( 'change the secondary text color' );
+		$I->wantTo( 'change the background color' );
 
-    }
+	}
 
-    public function sidebarWidgets( AcceptanceTester $I ) {
+	private function linkTextColor( AcceptanceTester $I ) {
 
-        $I->wantTo( 'add widgets to the sidebar' );
+		// TODO: Make public
 
-    }
+		$I->wantTo( 'change the link text color' );
 
-    public function secondarySidebarWidgets( AcceptanceTester $I ) {
+	}
 
-        $I->wantTo( 'add widgets to the secondary sidebar' );
+	private function mainTextColor( AcceptanceTester $I ) {
 
-    }
+		// TODO: Make public
 
-    public function footerSidebarWidgets( AcceptanceTester $I ) {
+		$I->wantTo( 'change the main text color' );
 
-        $I->wantTo( 'add widgets to the footer sidebars' );
+	}
 
-    }
+	private function secondaryTextColor( AcceptanceTester $I ) {
+
+		// TODO: Make public
+
+		$I->wantTo( 'change the secondary text color' );
+
+	}
+
+	private function sidebarWidgets( AcceptanceTester $I ) {
+
+		// TODO: Make public
+
+		$I->wantTo( 'add widgets to the sidebar' );
+
+	}
+
+	private function secondarySidebarWidgets( AcceptanceTester $I ) {
+
+		// TODO: Make public
+
+		$I->wantTo( 'add widgets to the secondary sidebar' );
+
+	}
+
+	private function footerSidebarWidgets( AcceptanceTester $I ) {
+
+		// TODO: Make public
+
+		$I->wantTo( 'add widgets to the footer sidebars' );
+
+	}
 
 }
