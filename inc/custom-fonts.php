@@ -101,8 +101,12 @@ function primer_fonts_css() {
 	$main_font              = get_theme_mod( 'main_font', $default_font );
 
 	$font = primer_get_font();
-	$font_url = '//fonts.googleapis.com/css?family=' . $font . ':600,600italic,800,300,300italic,400,400italic,700,700italic,800italic';
-	wp_enqueue_style( 'ascension-google-fonts', $font_url, false );
+
+	$query_args = apply_filters( 'google_font_query_args', array(
+		'family' => $font . ':600,600italic,800,300,300italic,400,400italic,700,700italic,800italic',
+		'subset' => 'latin',
+	) );
+	wp_enqueue_style( 'ascension-google-fonts', add_query_arg( $query_args, '//fonts.googleapis.com/css' ), false );
 
 	if ( $main_font === $default_font ) {
 		return;
