@@ -94,7 +94,19 @@ function primer_customize_register( $wp_customize ) {
 		'priority' => 1,
 	) );
 
-	// Add page background color setting and control.
+	// Add menu background color setting and control.
+	$wp_customize->add_setting( 'menu_background_color', array(
+		'default'           => $color_scheme[3],
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'         => 'postMessage',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'menu_background_color', array(
+		'label'       => __( 'Menu Background Color', 'primer' ),
+		'section'     => 'colors',
+	) ) );
+
+	// Add tagline text color setting and control.
 	$wp_customize->add_setting( 'tagline_text_color', array(
 		'default'           => $color_scheme[2],
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -209,10 +221,11 @@ function primer_get_color_schemes() {
 		'default' => array(
 			'label'  => __( 'Default', 'primer' ),
 			'colors' => array(
+				'#222222',
 				'#ffffff',
-				'#1a1a1a',
-				'#ffffff',
-				'#007acc',
+				'#4db790',
+				'#7c7c7c',
+				'#4db790',
 				'#1a1a1a',
 				'#686868',
 			),
@@ -222,8 +235,9 @@ function primer_get_color_schemes() {
 			'colors' => array(
 				'#ffffff',
 				'#262626',
+				'#589ef2',
 				'#1a1a1a',
-				'#9adffd',
+				'#589ef2',
 				'#e5e5e5',
 				'#c1c1c1',
 			),
@@ -233,6 +247,7 @@ function primer_get_color_schemes() {
 			'colors' => array(
 				'#ffffff',
 				'#616a73',
+				'#c7c7c7',
 				'#4d545c',
 				'#c7c7c7',
 				'#f2f2f2',
@@ -244,6 +259,7 @@ function primer_get_color_schemes() {
 			'colors' => array(
 				'#ffffff',
 				'#ffffff',
+				'#640c1f',
 				'#ff675f',
 				'#640c1f',
 				'#402b30',
@@ -255,6 +271,7 @@ function primer_get_color_schemes() {
 			'colors' => array(
 				'#ffffff',
 				'#3b3721',
+				'#774e24',
 				'#ffef8e',
 				'#774e24',
 				'#3b3721',
@@ -360,13 +377,14 @@ function primer_color_scheme_css() {
 
 	// If we get this far, we have a custom color scheme.
 	$colors = array(
-		'header_textcolor'			=> $color_scheme[0],
+		'header_textcolor'      => $color_scheme[0],
 		'background_color'      => $color_scheme[1],
-		'tagline_text_color' 		=> $color_scheme[2],
-		'link_color'            => $color_scheme[3],
-		'main_text_color'       => $color_scheme[4],
-		'secondary_text_color'  => $color_scheme[5],
-		'hover_color'          => vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.8)', $hover_color_rgb ),
+		'menu_background_color' => $color_scheme[2],
+		'tagline_text_color'    => $color_scheme[3],
+		'link_color'            => $color_scheme[4],
+		'main_text_color'       => $color_scheme[5],
+		'secondary_text_color'  => $color_scheme[6],
+		'hover_color'           => vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.8)', $hover_color_rgb ),
 	);
 
 	$color_scheme_css = primer_get_color_scheme_css( $colors );
@@ -410,9 +428,10 @@ add_action( 'customize_preview_init', 'primer_customize_preview_js' );
  */
 function primer_get_color_scheme_css( $colors ) {
 	$colors = wp_parse_args( $colors, array(
-		'header_textcolor'			=> '',
+		'header_textcolor'      => '',
 		'background_color'      => '',
-		'tagline_text_color' 		=> '',
+		'menu_background_color' => '',
+		'tagline_text_color'    => '',
 		'link_color'            => '',
 		'main_text_color'       => '',
 		'secondary_text_color'  => '',
@@ -423,17 +442,17 @@ function primer_get_color_scheme_css( $colors ) {
 	/* Color Scheme */
 
 	/* Header Text Color */
-	.header_textcolor {
+	.site-title a {
 		color: {$colors['header_textcolor']};
 	}
 
 	/* Background Color */
-	.background_color {
+	body {
 		background-color: {$colors['background_color']};
 	}
 
 	/* Page Background Color */
-	.tagline_text_color {
+	.site-description {
 		color: {$colors['tagline_text_color']};
 	}
 
@@ -445,13 +464,51 @@ function primer_get_color_scheme_css( $colors ) {
 		color: {$colors['hover_color']};
 	}
 
+	button,
+	a.button,
+	a.button:visited,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	.site-info-wrapper .site-info .social-menu a{
+		background-color: {$colors['link_color']};
+	}
+
+	button:hover,
+	a.button:hover,
+	input[type="button"]:hover,
+	input[type="reset"]:hover,
+	input[type="submit"]:hover,
+	.site-info-wrapper .site-info .social-menu a:hover{
+		background-color: {$colors['hover_color']};
+	}
+
+	/* Menu Background Color */
+	.main-navigation-container,
+	.main-navigation li a{
+		background-color: {$colors['menu_background_color']};
+	}
+
+	.main-navigation li a:hover{
+		color: {$colors['hover_color']};
+	}
+
 	/* Main Text Color */
-	.main_text_color {
+	.site-content,
+	.site-content h1,
+	.site-content h2,
+	.site-content h3,
+	.site-content h4,
+	.site-content h5,
+	.site-content h6,
+	.site-content p,
+	.site-content blockquote {
 		color: {$colors['main_text_color']};
 	}
 
 	/* Secondary Text Color */
-	.secondary_text_color {
+	.secondary_text_color,
+	.site-info-text {
 		color: {$colors['secondary_text_color']};
 	}
 
@@ -471,13 +528,14 @@ CSS;
  */
 function primer_color_scheme_css_template() {
 	$colors = array(
-		'header_textcolor'			=> '{{ data.header_textcolor }}',
+		'header_textcolor'      => '{{ data.header_textcolor }}',
 		'background_color'      => '{{ data.background_color }}',
-		'tagline_text_color' 		=> '{{ data.tagline_text_color }}',
+		'menu_background_color' => '{{ data.menu_background_color }}',
+		'tagline_text_color'    => '{{ data.tagline_text_color }}',
 		'link_color'            => '{{ data.link_color }}',
 		'main_text_color'       => '{{ data.main_text_color }}',
 		'secondary_text_color'  => '{{ data.secondary_text_color }}',
-		'hover_color'          	=> '{{ data.hover_color }}',
+		'hover_color'           => '{{ data.hover_color }}',
 	);
 	?>
 	<script type="text/html" id="tmpl-primer-color-scheme">
@@ -499,7 +557,7 @@ add_action( 'customize_controls_print_footer_scripts', 'primer_color_scheme_css_
 function primer_header_textcolor_css() {
 	$color_scheme          = primer_get_color_scheme();
 	$default_color         = $color_scheme[0];
-	$header_textcolor			 = '#' . get_theme_mod( 'header_textcolor', $default_color );  // No hash before
+	$header_textcolor      = '#' . get_theme_mod( 'header_textcolor', $default_color );  // No hash before
 
 	// Don't do anything if the current color is the default.
 	if ( $header_textcolor === $default_color ) {
@@ -548,6 +606,42 @@ function primer_tagline_text_color_css() {
 add_action( 'wp_enqueue_scripts', 'primer_tagline_text_color_css', 11 );
 
 /**
+ * Enqueues front-end CSS for the menu background color.
+ *
+ * @since primer 1.0
+ *
+ * @see wp_add_inline_style()
+ */
+function primer_menu_background_color_css() {
+	$color_scheme          = primer_get_color_scheme();
+	$default_color         = $color_scheme[3];
+	$menu_background_color = get_theme_mod( 'menu_background_color', $default_color );
+
+	// Don't do anything if the current color is the default.
+	if ( $menu_background_color === $default_color ) {
+		return;
+	}
+
+	$menu_background_text_color = 'rgba(255,255,255,.9)';
+
+	$css = apply_filters(
+		'custom_menu_background_color_css',
+		'/* Menu Background Color */
+		.main-navigation-container,
+		.main-navigation li a{
+			background-color: %1$s;
+		}
+
+		.main-navigation li a{
+			color: %2$s;
+		}'
+	);
+
+	wp_add_inline_style( 'primer', sprintf( $css, $menu_background_color, $menu_background_text_color ) );
+}
+add_action( 'wp_enqueue_scripts', 'primer_menu_background_color_css', 11 );
+
+/**
  * Enqueues front-end CSS for the link color.
  *
  * @since primer 1.0
@@ -557,7 +651,7 @@ add_action( 'wp_enqueue_scripts', 'primer_tagline_text_color_css', 11 );
 function primer_link_color_css() {
 	$color_scheme    = primer_get_color_scheme();
 	$default_color   = $color_scheme[3];
-	$link_color 		 = get_theme_mod( 'link_color', $default_color );
+	$link_color      = get_theme_mod( 'link_color', $default_color );
 
 	// Don't do anything if the current color is the default.
 	if ( $link_color === $default_color ) {
@@ -610,7 +704,15 @@ function primer_main_text_color_css() {
 	$css = apply_filters(
 		'custom_main_text_color_css',
 		'/* Custom Main Text Color */
-		.main_text_color
+		.site-content,
+		.site-content h1,
+		.site-content h2,
+		.site-content h3,
+		.site-content h4,
+		.site-content h5,
+		.site-content h6,
+		.site-content p,
+		.site-content blockquote {
 			color: %1$s;
 		}'
 	);
@@ -639,7 +741,8 @@ function primer_secondary_text_color_css() {
 	$css = apply_filters(
 		'custom_secondary_text_color_css',
 		'/* Custom Secondary Text Color */
-		.secondary_text_color {
+		.secondary_text_color,
+		.site-info-text {
 			color: %1$s;
 		}'
 	);
