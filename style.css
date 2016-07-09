@@ -1497,8 +1497,8 @@ a {
       margin-left: 10px; } }
 
 .navigation .nav-links {
-  margin-bottom: 1em;
-  margin-bottom: 1rem; }
+  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem; }
 
 .comment-navigation .nav-previous, .paging-navigation .nav-previous, .post-navigation .nav-previous {
   float: left;
