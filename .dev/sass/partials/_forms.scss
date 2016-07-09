@@ -81,17 +81,16 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: $color-text-input;
-	background-color: $color-text-input-background;
+	color: $input-color;
+	background-color: $input-background;
 	border: none;
 	transform: 200ms background linear;
 	border-radius: 3px;
 	resize: none;
 
 	&:focus {
-		color: $color-text-input-focus;
 		outline: none;
-		background-color: darken($color-text-input-background,5%);
+		background-color: darken($input-background,5%);
 	}
 }
 

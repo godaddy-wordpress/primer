@@ -222,7 +222,7 @@ function primer_get_color_schemes() {
 			'label'  => __( 'Default', 'primer' ),
 			'colors' => array(
 				'#222222',
-				'#ffffff',
+				'#f9f9f9',
 				'#4db790',
 				'#7c7c7c',
 				'#4db790',
