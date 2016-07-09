@@ -485,7 +485,8 @@ function primer_get_color_scheme_css( $colors ) {
 
 	/* Menu Background Color */
 	.main-navigation-container,
-	.main-navigation li a{
+	.main-navigation li a,
+	.main-navigation li.menu-item-has-children ul{
 		background-color: {$colors['menu_background_color']};
 	}
 
@@ -628,7 +629,8 @@ function primer_menu_background_color_css() {
 		'custom_menu_background_color_css',
 		'/* Menu Background Color */
 		.main-navigation-container,
-		.main-navigation li a{
+		.main-navigation li a,
+		.main-navigation li.menu-item-has-children ul{
 			background-color: %1$s;
 		}
 

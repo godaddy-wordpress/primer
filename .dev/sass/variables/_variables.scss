@@ -26,7 +26,7 @@ $black: #0a0a0a;
 $white: #fefefe;
 $color-background-button: map-get($foundation-palette, primary);
 $body-font-color: $black;
-$sans-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$sans-font-family: 'Open Sans', sans-serif;
 $global-weight-normal: normal;
 $global-radius: 0;
 
@@ -45,7 +45,6 @@ $breakpoints: (
 // ------------------
 
 $header-font-family: $sans-font-family;
-$header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;

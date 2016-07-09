@@ -145,13 +145,13 @@ function enqueue_google_fonts() {
 		$secondary_font = primer_get_font( 'secondary_font' );
 
 		$font_families = array(
-			$primary_font . ':300,700',
-			$secondary_font . ':300,700',
+			$primary_font . ':300,400,700',
+			$secondary_font . ':300,400,700',
 		);
 		$font_families = implode( '|', $font_families );
 
 	} else {
-		$font_families = $primary_font . ':400,700';
+		$font_families = $primary_font . ':300,400,700';
 	}
 
 	$query_args = apply_filters( 'google_font_query_args', array(
@@ -207,7 +207,7 @@ function primer_secondary_font_css() {
 		$css = apply_filters(
 			'secondary_font_css',
 			'/* Secondary Font */
-			p, blockquote {
+			p, blockquote, .fl-callout-text {
 				font-family: "%1$s", serif;
 			}
 		' );

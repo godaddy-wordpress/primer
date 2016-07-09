@@ -8,8 +8,8 @@ $include-html-type-classes: $include-html-classes !default;
 
 // We use these to control header font styles
 $header-font-family: $body-font-family !default;
-$header-font-weight: $font-weight-normal !default;
-$header-font-style: $font-weight-normal !default;
+$header-font-weight: $font-weight-bold !default;
+$header-font-style: $font-weight-bold !default;
 $header-font-color: #222 !default;
 $header-line-height: 1.4 !default;
 $header-top-margin: .2rem !default;
@@ -18,9 +18,9 @@ $header-text-rendering: optimizeLegibility !default;
 
 // We use these to control header font sizes
 $h1-font-size: rem-calc(44) !default;
-$h2-font-size: rem-calc(37) !default;
-$h3-font-size: rem-calc(27) !default;
-$h4-font-size: rem-calc(23) !default;
+$h2-font-size: rem-calc(28) !default;
+$h3-font-size: rem-calc(24) !default;
+$h4-font-size: rem-calc(20) !default;
 $h5-font-size: rem-calc(18) !default;
 $h6-font-size: 1rem !default;
 

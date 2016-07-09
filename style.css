@@ -1966,8 +1966,8 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight: normal;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
   font-style: normal;
   color: #222;
   text-rendering: optimizeLegibility;
@@ -1983,13 +1983,13 @@ h1 {
   font-size: 2.125rem; }
 
 h2 {
-  font-size: 1.6875rem; }
+  font-size: 1.125rem; }
 
 h3 {
-  font-size: 1.375rem; }
+  font-size: 1.1875rem; }
 
 h4 {
-  font-size: 1.125rem; }
+  font-size: 0.9375rem; }
 
 h5 {
   font-size: 1.125rem; }
@@ -2140,7 +2140,7 @@ blockquote {
   padding: rem-calc(9 20 0 19);
   border-left: 1px solid #cacaca;
   overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: italic; }
   blockquote cite {
     display: block;
@@ -2170,11 +2170,11 @@ blockquote p {
   h1 {
     font-size: 2.75rem; }
   h2 {
-    font-size: 2.3125rem; }
+    font-size: 1.75rem; }
   h3 {
-    font-size: 1.6875rem; }
+    font-size: 1.5rem; }
   h4 {
-    font-size: 1.4375rem; }
+    font-size: 1.25rem; }
   h5 {
     font-size: 1.125rem; }
   h6 {
@@ -2249,7 +2249,7 @@ textarea {
   /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
   vertical-align: baseline;
   /* Improves appearance and consistency in all browsers */
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 button,
 a.button,
@@ -2432,7 +2432,7 @@ input[type="file"] {
   font-size: 1rem; }
 
 label {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: bold; }
 
 textarea {
@@ -2450,7 +2450,7 @@ fieldset {
 legend {
   color: #0a0a0a;
   font-size: 1rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 0 15px; }
@@ -2486,9 +2486,8 @@ a {
     list-style: none;
     text-align: center; }
     .main-navigation li a {
-      background-color: #222;
       display: block;
-      font-family: Helvetica, Arial, sans-serif;
+      font-family: "Open Sans", sans-serif;
       line-height: 1.2;
       font-weight: normal;
       color: #c8c8c8;
@@ -2496,13 +2495,15 @@ a {
       padding: 1.5rem 1rem;
       position: relative; }
       .main-navigation li a:hover {
-        background-color: #3c3c3c;
+        background-color: rgba(0, 0, 0, 0.05);
         text-decoration: none; }
   .main-navigation .menu-item-has-children li > a {
     padding-top: 1em;
     padding-top: 1rem;
     padding-bottom: 1em;
     padding-bottom: 1rem; }
+    .main-navigation .menu-item-has-children li > a:hover {
+      background-color: rgba(0, 0, 0, 0.05); }
   @media all and (min-width: 480px) {
     .main-navigation {
       clear: both; }
@@ -2685,7 +2686,7 @@ a {
   .widget:last-child {
     margin-bottom: 0; }
   .widget, .widget p, .widget ul, .widget ol {
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: rem-calc(0.9); }
 
 /* Make sure form fields fit in widgets */
@@ -2731,7 +2732,7 @@ a {
     display: none; }
 
 .widget-title {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   position: relative;
   box-sizing: content-box;
   font-weight: bold; }
@@ -2924,7 +2925,7 @@ a {
 
 .entry-footer {
   color: #6f6f6f;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   padding-top: 1em; }
   .entry-footer:before, .entry-footer:after {
@@ -2951,7 +2952,7 @@ a {
   padding-bottom: 1em;
   padding-bottom: 1rem;
   font-size: .9em;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+  font-family: "Open Sans", sans-serif; }
   .entry-meta i {
     vertical-align: middle;
     line-height: .8; }
@@ -2971,7 +2972,7 @@ a {
 .person-meta {
   margin-bottom: 1em;
   margin-bottom: 1rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+  font-family: "Open Sans", sans-serif; }
   .event-meta .genericon, .event-meta .social-menu a, .social-menu .event-meta a,
   .sermon-meta .genericon,
   .sermon-meta .social-menu a, .social-menu
@@ -2997,12 +2998,12 @@ a {
 .post-format {
   color: #008CBA;
   text-transform: uppercase;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 0.8125rem;
   font-weight: bold; }
 
 .more-link {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: normal;
   border-radius: 0;
   border: 1px solid #008CBA;
@@ -3012,7 +3013,7 @@ a {
 article.format-link {
   background: #f5f5f5; }
   article.format-link .entry-title {
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: bold;
     font-size: 1.75rem; }
 
@@ -3095,7 +3096,7 @@ article.format-link {
       font-weight: bold; }
     .comment-list li .comment-author,
     .comment-list li .comment-metadata {
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+      font-family: "Open Sans", sans-serif; }
     .comment-list li .comment-metadata {
       margin-bottom: 1em;
       font-size: 0.8125rem;
@@ -3130,7 +3131,7 @@ article.format-link {
 
 #respond {
   margin-top: 10px;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+  font-family: "Open Sans", sans-serif; }
   #respond h3#reply-title {
     font-size: 1.5em !important; }
   #respond .logged-in-as {
@@ -3342,7 +3343,7 @@ body.layout-one-column-narrow #content {
   margin-bottom: 40px; }
 
 .site-title {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 2rem;
   font-size: 2rem;
   font-weight: normal;
@@ -3358,7 +3359,7 @@ body.layout-one-column-narrow #content {
   font-size: 1rem;
   font-size: 1rem;
   color: #3d3d3d;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 .site-header {
   padding: 40px 0 0;
@@ -3397,7 +3398,7 @@ body.layout-one-column-narrow #content {
   .featured-content .entry-header .entry-title {
     font-size: 2.625rem;
     line-height: 1.2;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: bold; }
   .featured-content .entry-header .entry-excerpt p {
     font-style: italic;
@@ -3412,7 +3413,7 @@ body.layout-one-column-narrow #content {
     background-color: #008CBA;
     color: #000;
     display: inline-block;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.8125rem;
@@ -3524,7 +3525,7 @@ body.layout-one-column-narrow #content {
   .featured-content .entry-title {
     font-size: 2.625rem;
     line-height: 1.2;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: bold; }
   .featured-content .entry-excerpt p {
     font-style: italic;
@@ -3537,7 +3538,7 @@ body.layout-one-column-narrow #content {
     background-color: #008CBA;
     color: #000;
     display: inline-block;
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.8125rem;
