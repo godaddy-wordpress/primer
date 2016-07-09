@@ -233,7 +233,7 @@ function primer_get_color_schemes() {
 		'dark' => array(
 			'label'  => __( 'Dark', 'primer' ),
 			'colors' => array(
-				'#ffffff',
+				'#1a1a1a',
 				'#262626',
 				'#589ef2',
 				'#1a1a1a',
@@ -242,40 +242,28 @@ function primer_get_color_schemes() {
 				'#c1c1c1',
 			),
 		),
-		'gray' => array(
-			'label'  => __( 'Gray', 'primer' ),
+		'muted' => array(
+			'label'  => __( 'Muted', 'primer' ),
 			'colors' => array(
-				'#ffffff',
-				'#616a73',
-				'#c7c7c7',
-				'#4d545c',
-				'#c7c7c7',
-				'#f2f2f2',
-				'#f2f2f2',
+				'#5a6175',
+				'#d5d6e0',
+				'#5a6175',
+				'#888c99',
+				'#3e4c75',
+				'#4f5875',
+				'#888c99',
 			),
 		),
 		'red' => array(
 			'label'  => __( 'Red', 'primer' ),
 			'colors' => array(
-				'#ffffff',
+				'#222222',
 				'#ffffff',
 				'#640c1f',
-				'#ff675f',
+				'#999999',
 				'#640c1f',
 				'#402b30',
-				'#402b30',
-			),
-		),
-		'yellow' => array(
-			'label'  => __( 'Yellow', 'primer' ),
-			'colors' => array(
-				'#ffffff',
-				'#3b3721',
-				'#774e24',
-				'#ffef8e',
-				'#774e24',
-				'#3b3721',
-				'#5b4d3e',
+				'#222222',
 			),
 		),
 	) );
