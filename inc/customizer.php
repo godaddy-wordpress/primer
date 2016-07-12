@@ -667,6 +667,25 @@ function primer_link_color_css() {
 		}
 		a:hover {
 			color: %2$s;
+		}
+
+		button,
+		a.button,
+		a.button:visited,
+		input[type="button"],
+		input[type="reset"],
+		input[type="submit"],
+		.site-info-wrapper .site-info .social-menu a{
+			background-color: %1$s;
+		}
+
+		button:hover,
+		a.button:hover,
+		input[type="button"]:hover,
+		input[type="reset"]:hover,
+		input[type="submit"]:hover,
+		.site-info-wrapper .site-info .social-menu a:hover{
+			background-color: %2$s;
 		}'
 	);
 
