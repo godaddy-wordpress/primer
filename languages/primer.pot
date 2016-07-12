@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the Primer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: primer 1.0.0\n"
+"Project-Id-Version: Primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 16:55-0500\n"
+"POT-Creation-Date: 2016-07-09 16:45-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,98 +100,98 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: functions.php:129
+#: functions.php:136
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:130
+#: functions.php:137
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:140
+#: functions.php:147
 msgid "1 Column Wide"
 msgstr ""
 
-#: functions.php:141
+#: functions.php:148
 msgid "1 Column Narrow"
 msgstr ""
 
-#: functions.php:142 functions.php:143
+#: functions.php:149 functions.php:150
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
-#: functions.php:142 functions.php:143
+#: functions.php:149 functions.php:150
 msgid "2 Columns: Content / Sidebar"
 msgstr ""
 
-#: functions.php:144 functions.php:146
+#: functions.php:151 functions.php:153
 msgid "3 Columns: Sidebar / Sidebar / Content"
 msgstr ""
 
-#: functions.php:144 functions.php:146
+#: functions.php:151 functions.php:153
 msgid "3 Columns: Content / Sidebar / Sidebar"
 msgstr ""
 
-#: functions.php:145
+#: functions.php:152
 msgid "3 Columns: Sidebar / Content / Sidebar"
 msgstr ""
 
-#: functions.php:216
+#: functions.php:218
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:218
+#: functions.php:220
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr ""
 
-#: functions.php:228
+#: functions.php:230
 msgid "Secondary Sidebar"
 msgstr ""
 
-#: functions.php:230
+#: functions.php:232
 msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr ""
 
-#: functions.php:240
+#: functions.php:242
 msgid "Footer Left"
 msgstr ""
 
-#: functions.php:242
+#: functions.php:244
 msgid ""
 "The footer left sidebar appears in the first column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:252
+#: functions.php:254
 msgid "Footer Center"
 msgstr ""
 
-#: functions.php:254
+#: functions.php:256
 msgid ""
 "The footer center sidebar appears in the second column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:264
+#: functions.php:266
 msgid "Footer Right"
 msgstr ""
 
-#: functions.php:266
+#: functions.php:268
 msgid ""
 "The footer right sidebar appears in the third column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:329
+#: functions.php:319
 msgctxt "Lato font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:335
+#: functions.php:325
 msgctxt "Merriweather font: on or off"
 msgid "on"
 msgstr ""
@@ -216,6 +216,58 @@ msgstr ""
 
 #: inc/breadcrumbs.php:39
 msgid "Blog"
+msgstr ""
+
+#: inc/custom-fonts.php:27
+msgid "Typography"
+msgstr ""
+
+#: inc/custom-fonts.php:37
+msgid "Primary Font"
+msgstr ""
+
+#: inc/custom-fonts.php:51
+msgid "Secondary Font"
+msgstr ""
+
+#: inc/customizer.php:90
+msgid "Base Color Scheme"
+msgstr ""
+
+#: inc/customizer.php:105
+msgid "Menu Background Color"
+msgstr ""
+
+#: inc/customizer.php:117
+msgid "Tagline Text Color"
+msgstr ""
+
+#: inc/customizer.php:129
+msgid "Link Color"
+msgstr ""
+
+#: inc/customizer.php:141
+msgid "Main Text Color"
+msgstr ""
+
+#: inc/customizer.php:153
+msgid "Secondary Text Color"
+msgstr ""
+
+#: inc/customizer.php:222
+msgid "Default"
+msgstr ""
+
+#: inc/customizer.php:234
+msgid "Dark"
+msgstr ""
+
+#: inc/customizer.php:246
+msgid "Muted"
+msgstr ""
+
+#: inc/customizer.php:258
+msgid "Red"
 msgstr ""
 
 #: inc/extras.php:91

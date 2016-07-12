@@ -9,6 +9,7 @@
 		colorSchemeKeys = [
 			'header_textcolor',
 			'background_color',
+			'menu_background_color',
 			'tagline_text_color',
 			'link_color',
 			'main_text_color',
@@ -17,6 +18,7 @@
 		colorSettings = [
 			'header_textcolor',
 			'background_color',
+			'menu_background_color',
 			'tagline_text_color',
 			'link_color',
 			'main_text_color',
@@ -29,7 +31,7 @@
 				this.setting.bind( 'change', function( value ) {
 					var colors = colorScheme[value].colors;
 
-					// Update Background Color.
+					// Update Header Text Color.
 					var color = colors[0];
 					api( 'header_textcolor' ).set( color );
 					api.control( 'header_textcolor' ).container.find( '.color-picker-hex' )
@@ -37,35 +39,42 @@
 						.wpColorPicker( 'defaultColor', color );
 
 					// Update Background Color.
-					var color = colors[1];
+					color = colors[1];
 					api( 'background_color' ).set( color );
 					api.control( 'background_color' ).container.find( '.color-picker-hex' )
 						.data( 'data-default-color', color )
 						.wpColorPicker( 'defaultColor', color );
 
-					// Update Tagline Text Color.
+					// Update Menu Background Color.
 					color = colors[2];
+					api( 'menu_background_color' ).set( color );
+					api.control( 'menu_background_color' ).container.find( '.color-picker-hex' )
+						.data( 'data-default-color', color )
+						.wpColorPicker( 'defaultColor', color );
+
+					// Update Tagline Text Color.
+					color = colors[3];
 					api( 'tagline_text_color' ).set( color );
 					api.control( 'tagline_text_color' ).container.find( '.color-picker-hex' )
 						.data( 'data-default-color', color )
 						.wpColorPicker( 'defaultColor', color );
 
 					// Update Link Color.
-					color = colors[3];
+					color = colors[4];
 					api( 'link_color' ).set( color );
 					api.control( 'link_color' ).container.find( '.color-picker-hex' )
 						.data( 'data-default-color', color )
 						.wpColorPicker( 'defaultColor', color );
 
 					// Update Main Text Color.
-					color = colors[4];
+					color = colors[5];
 					api( 'main_text_color' ).set( color );
 					api.control( 'main_text_color' ).container.find( '.color-picker-hex' )
 						.data( 'data-default-color', color )
 						.wpColorPicker( 'defaultColor', color );
 
 					// Update Secondary Text Color.
-					color = colors[5];
+					color = colors[6];
 					api( 'secondary_text_color' ).set( color );
 					api.control( 'secondary_text_color' ).container.find( '.color-picker-hex' )
 						.data( 'data-default-color', color )

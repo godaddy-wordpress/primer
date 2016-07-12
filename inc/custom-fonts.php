@@ -34,7 +34,7 @@ function primer_font_switcher( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'primary_font', array(
-		'label'    => __( 'Primary Font', 'ascension' ),
+		'label'    => __( 'Primary Font', 'primer' ),
 		'section'  => 'typography',
 		'type'     => 'select',
 		'choices'  => primer_get_font_choices(),
@@ -48,7 +48,7 @@ function primer_font_switcher( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( 'secondary_font', array(
-			'label'   => __( 'Secondary Font', 'ascension' ),
+			'label'   => __( 'Secondary Font', 'primer' ),
 			'section' => 'typography',
 			'type'    => 'select',
 			'choices' => primer_get_font_choices(),
@@ -145,20 +145,20 @@ function enqueue_google_fonts() {
 		$secondary_font = primer_get_font( 'secondary_font' );
 
 		$font_families = array(
-			$primary_font . ':600,600italic,800,300,300italic,400,400italic,700,700italic,800italic',
-			$secondary_font . ':600,600italic,800,300,300italic,400,400italic,700,700italic,800italic',
+			$primary_font . ':300,400,700',
+			$secondary_font . ':300,400,700',
 		);
 		$font_families = implode( '|', $font_families );
 
 	} else {
-		$font_families = $primary_font . ':600,600italic,800,300,300italic,400,400italic,700,700italic,800italic';
+		$font_families = $primary_font . ':300,400,700';
 	}
 
 	$query_args = apply_filters( 'google_font_query_args', array(
 		'family' => $font_families,
 		'subset' => 'latin',
 	) );
-	wp_enqueue_style( 'ascension-google-fonts', add_query_arg( $query_args, '//fonts.googleapis.com/css' ), false );
+	wp_enqueue_style( 'primer-google-fonts', add_query_arg( $query_args, '//fonts.googleapis.com/css' ), false );
 
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_google_fonts', 11 );
@@ -179,8 +179,8 @@ function primer_primary_font_css() {
 	$css = apply_filters(
 		'primary_font_css',
 		'/* Primary Font */
-		body {
-			font-family: "%1$s", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+		body, h1, h2, h3, h4, h5, h6, label {
+			font-family: "%1$s", sans-serif;
 		}
 	');
 
@@ -207,8 +207,8 @@ function primer_secondary_font_css() {
 		$css = apply_filters(
 			'secondary_font_css',
 			'/* Secondary Font */
-			body {
-				font-family: "%1$s", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+			p, blockquote, .fl-callout-text {
+				font-family: "%1$s", serif;
 			}
 		' );
 

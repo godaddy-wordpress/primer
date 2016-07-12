@@ -110,59 +110,6 @@ $base-line-height: 150% !default;
 	}
 }
 
-// @mixins
-//
-// We use this to create the icon with three lines aka the hamburger icon, the menu-icon or the navicon
-// $width - Width of hamburger icon in rem
-// $left - If false, icon will be centered horizontally || explicitly set value in rem
-// $top - If false, icon will be centered vertically || explicitly set value in rem
-// $thickness - thickness of lines in hamburger icon, set value in px
-// $gap - spacing between the lines in hamburger icon, set value in px
-// $color - icon color
-// $hover-color - icon color during hover
-// $offcanvas - Set to true of @include in offcanvas
-@mixin hamburger($width, $left, $top, $thickness, $gap, $color, $hover-color, $offcanvas) {
-	span::after {
-		content: "";
-		position: absolute;
-		display: block;
-		height: 0;
-
-		@if $offcanvas {
-			@if $top {
-				top: $top;
-			}
-			@else {
-				top: 50%;
-				margin-top: -$width/2;
-			}
-			@if $left {
-				left: $left;
-			}
-			@else {
-				left: ($tabbar-menu-icon-width - $width)/2;
-			}
-		}
-		@else {
-			top: 50%;
-			margin-top: -$width/2;
-			#{$opposite-direction}: $topbar-link-padding;
-		}
-
-		box-shadow:
-			0 0px 0 $thickness $color,
-			0 $gap + $thickness 0 $thickness $color,
-			0 (2 * $gap + 2*$thickness) 0 $thickness $color;
-		width: $width;
-	}
-	span:hover:after {
-		box-shadow:
-			0 0px 0 $thickness $hover-color,
-			0 $gap + $thickness 0 $thickness $hover-color,
-			0 (2 * $gap + 2*$thickness) 0 $thickness $hover-color;
-	}
-}
-
 // We use this to do clear floats
 @mixin clearfix {
 	&:before, &:after { content: " "; display: table; }
@@ -241,12 +188,9 @@ $font-weight-bold: bold !default;
 // We use these to control various global styles
 $body-bg: #fff !default;
 $body-font-color: #222 !default;
-$body-font-family: "PT Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$body-font-family: Georgia, serif !default;
 $body-font-weight: $font-weight-normal !default;
 $body-font-style: normal !default;
-
-// We use this to control font-smoothing
-$font-smoothing: antialiased !default;
 
 // We use these to control text direction settings
 $text-direction: ltr !default;
@@ -261,15 +205,9 @@ $opposite-direction: right !default;
 }
 // We use these as default colors throughout
 $primary-color: #008CBA !default;
-$secondary-color: #e7e7e7 !default;
-$alert-color: #f04124 !default;
-$success-color: #43AC6A !default;
-$warning-color: #f08a24 !default;
-$info-color: #a0d3e8 !default;
 
 // We use these to make sure border radius matches unless we want it different.
 $global-radius: 3px !default;
-$global-rounded: 1000px !default;
 
 // We use these to control inset shadow shiny edges and depressions.
 $shiny-edge-size: 0 1px 0 !default;
@@ -311,124 +249,112 @@ $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max
 $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})" !default;
 $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})" !default;
 
-// Legacy
-$small: $medium-up;
-$medium: $medium-up;
-$large: $large-up;
-
 
 //We use this as cursors values for enabling the option of having custom cursors in the whole site's stylesheet
-$cursor-crosshair-value: crosshair !default;
 $cursor-default-value: default !default;
 $cursor-pointer-value: pointer !default;
 $cursor-help-value: help !default;
-$cursor-text-value: text !default;
 
-@include exports("global") {
 
-	// Meta styles are included in all builds, as they are a dependancy of the Javascript.
-	// Used to provide media query values for javascript components.
-	// Forward slash placed around everything to convince PhantomJS to read the value.
+// Meta styles are included in all builds, as they are a dependancy of the Javascript.
+// Used to provide media query values for javascript components.
+// Forward slash placed around everything to convince PhantomJS to read the value.
 
-	meta.foundation-mq-small {
-		font-family: "/" + unquote($small-up) + "/";
-		width: lower-bound($small-range);
-	}
+meta.foundation-mq-small {
+	font-family: "/" + unquote($small-up) + "/";
+	width: lower-bound($small-range);
+}
 
-	meta.foundation-mq-medium {
-		font-family: "/" + unquote($medium-up) + "/";
-		width: lower-bound($medium-range);
-	}
+meta.foundation-mq-medium {
+	font-family: "/" + unquote($medium-up) + "/";
+	width: lower-bound($medium-range);
+}
 
-	meta.foundation-mq-large {
-		font-family: "/" + unquote($large-up) + "/";
-		width: lower-bound($large-range);
-	}
+meta.foundation-mq-large {
+	font-family: "/" + unquote($large-up) + "/";
+	width: lower-bound($large-range);
+}
 
-	meta.foundation-mq-xlarge {
-		font-family: "/" + unquote($xlarge-up) + "/";
-		width: lower-bound($xlarge-range);
-	}
+meta.foundation-mq-xlarge {
+	font-family: "/" + unquote($xlarge-up) + "/";
+	width: lower-bound($xlarge-range);
+}
 
-	meta.foundation-mq-xxlarge {
-		font-family: "/" + unquote($xxlarge-up) + "/";
-		width: lower-bound($xxlarge-range);
-	}
+meta.foundation-mq-xxlarge {
+	font-family: "/" + unquote($xxlarge-up) + "/";
+	width: lower-bound($xxlarge-range);
+}
 
-	meta.foundation-data-attribute-namespace {
-		font-family: #{$namespace};
-	}
+meta.foundation-data-attribute-namespace {
+	font-family: #{$namespace};
+}
 
-	@if $include-html-global-classes {
+// Must be 100% for off canvas to work
+html, body { height: 100%; }
 
-		// Must be 100% for off canvas to work
-		html, body { height: 100%; }
+// Set box-sizing globally to handle padding and border widths
+*,
+*:before,
+*:after {
+	@include box-sizing(border-box);
+}
 
-		// Set box-sizing globally to handle padding and border widths
-		*,
-		*:before,
-		*:after {
-			@include box-sizing(border-box);
-		}
+html,
+body { font-size: $base-font-size; }
 
-		html,
-		body { font-size: $base-font-size; }
+// Default body styles
+body {
+	background: $body-bg;
+	color: $body-font-color;
+	padding: 0;
+	margin: 0;
+	font-family: $body-font-family;
+	font-weight: $body-font-weight;
+	font-style: $body-font-style;
+	line-height: $base-line-height; // Set to $base-line-height to take on browser default of 150%
+	cursor: $cursor-default-value;
+	-webkit-font-smoothing: antialiased;
+}
 
-		// Default body styles
-		body {
-			background: $body-bg;
-			color: $body-font-color;
-			padding: 0;
-			margin: 0;
-			font-family: $body-font-family;
-			font-weight: $body-font-weight;
-			font-style: $body-font-style;
-			line-height: $base-line-height; // Set to $base-line-height to take on browser default of 150%
-			cursor: $cursor-default-value;
-			-webkit-font-smoothing: antialiased;
-		}
+a:hover { cursor: $cursor-pointer-value; }
 
-	a:hover { cursor: $cursor-pointer-value; }
+// Grid Defaults to get images and embeds to work properly
+img { max-width: 100%; height: auto; }
 
-		// Grid Defaults to get images and embeds to work properly
-		img { max-width: 100%; height: auto; }
+img { -ms-interpolation-mode: bicubic; }
 
-		img { -ms-interpolation-mode: bicubic; }
-
-		#map_canvas,
-		.map_canvas {
-			img,
-			embed,
-			object { max-width: none !important;
-			}
-		}
-
-		// Miscellaneous useful HTML classes
-		.left   { float: left !important; }
-		.right  { float: right !important; }
-		.clearfix     { @include clearfix; }
-		.hide         { display: none; }
-
-		// Font smoothing
-		// Antialiased font smoothing works best for light text on a dark background.
-		// Apply to single elements instead of globally to body.
-		// Note this only applies to webkit-based desktop browsers and Firefox 25 (and later) on the Mac.
-		.antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-
-		// Get rid of gap under images by making them display: inline-block; by default
-		img {
-			display: inline-block;
-			vertical-align: middle;
-		}
-
-		//
-		// Global resets for forms
-		//
-
-		// Make sure textarea takes on height automatically
-		textarea { height: auto; min-height: 50px; }
-
-		// Make select elements 100% width by default
-		select { width: 100%; }
+#map_canvas,
+.map_canvas {
+	img,
+	embed,
+	object { max-width: none !important;
 	}
 }
+
+// Miscellaneous useful HTML classes
+.left   { float: left !important; }
+.right  { float: right !important; }
+.clearfix     { @include clearfix; }
+.hide         { display: none; }
+
+// Font smoothing
+// Antialiased font smoothing works best for light text on a dark background.
+// Apply to single elements instead of globally to body.
+// Note this only applies to webkit-based desktop browsers and Firefox 25 (and later) on the Mac.
+.antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+// Get rid of gap under images by making them display: inline-block; by default
+img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+//
+// Global resets for forms
+//
+
+// Make sure textarea takes on height automatically
+textarea { height: auto; min-height: 50px; }
+
+// Make select elements 100% width by default
+select { width: 100%; }

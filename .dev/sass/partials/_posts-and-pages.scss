@@ -18,7 +18,7 @@
 	}
 
 	.entry-header {
-		color: $heading-font-color;
+		color: $header-color;
 	}
 }
 
@@ -52,7 +52,7 @@
 	font-size: rem-calc(28);
 
 	a{
-		color: $heading-font-color;
+		color: $header-color;
 	}
 
 	.single &{

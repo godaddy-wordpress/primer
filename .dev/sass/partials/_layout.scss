@@ -121,7 +121,7 @@ body.no-max-width .site-info {
 	}
 }
 
-body.layout-one-column-narrow &{
+body.layout-one-column-narrow {
 	#content{
 		max-width: 50em;
 	}

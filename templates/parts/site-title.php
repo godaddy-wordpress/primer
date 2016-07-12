@@ -2,7 +2,7 @@
 /**
  * Displays the site title.
  *
- * @package ascension
+ * @package primer
  */
 ?>
 
