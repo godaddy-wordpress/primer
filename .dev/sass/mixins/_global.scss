@@ -2,7 +2,6 @@
 // foundation.zurb.com
 // Licensed under MIT Open Source
 
-@import "functions";
 //
 // Foundation Variables
 //
@@ -288,9 +287,6 @@ meta.foundation-mq-xxlarge {
 meta.foundation-data-attribute-namespace {
 	font-family: #{$namespace};
 }
-
-// Must be 100% for off canvas to work
-html, body { height: 100%; }
 
 // Set box-sizing globally to handle padding and border widths
 *,
