@@ -96,7 +96,7 @@ function primer_customize_register( $wp_customize ) {
 
 	// Add menu background color setting and control.
 	$wp_customize->add_setting( 'menu_background_color', array(
-		'default'           => $color_scheme[3],
+		'default'           => $color_scheme[2],
 		'sanitize_callback' => 'sanitize_hex_color',
 		'transport'         => 'postMessage',
 	) );
@@ -108,7 +108,7 @@ function primer_customize_register( $wp_customize ) {
 
 	// Add tagline text color setting and control.
 	$wp_customize->add_setting( 'tagline_text_color', array(
-		'default'           => $color_scheme[2],
+		'default'           => $color_scheme[3],
 		'sanitize_callback' => 'sanitize_hex_color',
 		'transport'         => 'postMessage',
 	) );
@@ -120,7 +120,7 @@ function primer_customize_register( $wp_customize ) {
 
 	// Add link color setting and control.
 	$wp_customize->add_setting( 'link_color', array(
-		'default'           => $color_scheme[3],
+		'default'           => $color_scheme[4],
 		'sanitize_callback' => 'sanitize_hex_color',
 		'transport'         => 'postMessage',
 	) );
@@ -132,7 +132,7 @@ function primer_customize_register( $wp_customize ) {
 
 	// Add main text color setting and control.
 	$wp_customize->add_setting( 'main_text_color', array(
-		'default'           => $color_scheme[4],
+		'default'           => $color_scheme[5],
 		'sanitize_callback' => 'sanitize_hex_color',
 		'transport'         => 'postMessage',
 	) );
@@ -144,7 +144,7 @@ function primer_customize_register( $wp_customize ) {
 
 	// Add secondary text color setting and control.
 	$wp_customize->add_setting( 'secondary_text_color', array(
-		'default'           => $color_scheme[5],
+		'default'           => $color_scheme[6],
 		'sanitize_callback' => 'sanitize_hex_color',
 		'transport'         => 'postMessage',
 	) );
