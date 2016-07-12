@@ -26,6 +26,19 @@ $entry-title-bg: rgba(0,0,0,.6) !default;
 	}
 }
 
+.custom-logo {
+	max-height: 50px;
+	width: auto;
+
+	@media #{$medium-up} {
+		max-height:75px;
+	}
+
+	@media #{$large-up} {
+		max-height:100px;
+	}
+}
+
 .site-description{
 	font-size: emCalc(16);
 	font-size: rem-calc(16);

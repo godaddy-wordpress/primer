@@ -3315,7 +3315,10 @@ iframe,
 object {
   max-width: 100%; }
 
-body.no-max-width .site-title-wrapper, body.no-max-width .main-navigation, body.no-max-width .site-footer-inner, body.no-max-width .site-info {
+body.no-max-width .site-title-wrapper,
+body.no-max-width .main-navigation,
+body.no-max-width .site-footer-inner,
+body.no-max-width .site-info {
   max-width: none; }
 
 #content {
@@ -3357,6 +3360,16 @@ body.layout-one-column-narrow #content {
   margin-bottom: .25em; }
   .site-title a {
     color: #0a0a0a; }
+
+.custom-logo {
+  max-height: 50px;
+  width: auto; }
+  @media only screen and (min-width: 40.063em) {
+    .custom-logo {
+      max-height: 75px; } }
+  @media only screen and (min-width: 64.063em) {
+    .custom-logo {
+      max-height: 100px; } }
 
 .site-description {
   font-size: 1rem;
