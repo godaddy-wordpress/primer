@@ -270,72 +270,72 @@ function primer_get_color_schemes() {
 }
 
 if ( ! function_exists( 'primer_get_color_scheme' ) ) :
-/**
- * Retrieves the current primer color scheme.
- *
- * Create your own primer_get_color_scheme() function to override in a child theme.
- *
- * @since primer 1.0
- *
- * @return array An associative array of either the current or default color scheme HEX values.
- */
-function primer_get_color_scheme() {
-	$color_scheme_option = get_theme_mod( 'color_scheme', 'default' );
-	$color_schemes       = primer_get_color_schemes();
+	/**
+	 * Retrieves the current primer color scheme.
+	 *
+	 * Create your own primer_get_color_scheme() function to override in a child theme.
+	 *
+	 * @since primer 1.0
+	 *
+	 * @return array An associative array of either the current or default color scheme HEX values.
+	 */
+	function primer_get_color_scheme() {
+		$color_scheme_option = get_theme_mod( 'color_scheme', 'default' );
+		$color_schemes       = primer_get_color_schemes();
 
-	if ( array_key_exists( $color_scheme_option, $color_schemes ) ) {
-		return $color_schemes[ $color_scheme_option ]['colors'];
+		if ( array_key_exists( $color_scheme_option, $color_schemes ) ) {
+			return $color_schemes[ $color_scheme_option ]['colors'];
+		}
+
+		return $color_schemes['default']['colors'];
 	}
-
-	return $color_schemes['default']['colors'];
-}
 endif; // primer_get_color_scheme
 
 if ( ! function_exists( 'primer_get_color_scheme_choices' ) ) :
-/**
- * Retrieves an array of color scheme choices registered for primer.
- *
- * Create your own primer_get_color_scheme_choices() function to override
- * in a child theme.
- *
- * @since primer 1.0
- *
- * @return array Array of color schemes.
- */
-function primer_get_color_scheme_choices() {
-	$color_schemes                = primer_get_color_schemes();
-	$color_scheme_control_options = array();
+	/**
+	 * Retrieves an array of color scheme choices registered for primer.
+	 *
+	 * Create your own primer_get_color_scheme_choices() function to override
+	 * in a child theme.
+	 *
+	 * @since primer 1.0
+	 *
+	 * @return array Array of color schemes.
+	 */
+	function primer_get_color_scheme_choices() {
+		$color_schemes                = primer_get_color_schemes();
+		$color_scheme_control_options = array();
 
-	foreach ( $color_schemes as $color_scheme => $value ) {
-		$color_scheme_control_options[ $color_scheme ] = $value['label'];
+		foreach ( $color_schemes as $color_scheme => $value ) {
+			$color_scheme_control_options[ $color_scheme ] = $value['label'];
+		}
+
+		return $color_scheme_control_options;
 	}
-
-	return $color_scheme_control_options;
-}
 endif; // primer_get_color_scheme_choices
 
 
 if ( ! function_exists( 'primer_sanitize_color_scheme' ) ) :
-/**
- * Handles sanitization for primer color schemes.
- *
- * Create your own primer_sanitize_color_scheme() function to override
- * in a child theme.
- *
- * @since primer 1.0
- *
- * @param string $value Color scheme name value.
- * @return string Color scheme name.
- */
-function primer_sanitize_color_scheme( $value ) {
-	$color_schemes = primer_get_color_scheme_choices();
+	/**
+	 * Handles sanitization for primer color schemes.
+	 *
+	 * Create your own primer_sanitize_color_scheme() function to override
+	 * in a child theme.
+	 *
+	 * @since primer 1.0
+	 *
+	 * @param string $value Color scheme name value.
+	 * @return string Color scheme name.
+	 */
+	function primer_sanitize_color_scheme( $value ) {
+		$color_schemes = primer_get_color_scheme_choices();
 
-	if ( ! array_key_exists( $value, $color_schemes ) ) {
-		return 'default';
+		if ( ! array_key_exists( $value, $color_schemes ) ) {
+			return 'default';
+		}
+
+		return $value;
 	}
-
-	return $value;
-}
 endif; // primer_sanitize_color_scheme
 
 /**
@@ -402,7 +402,7 @@ add_action( 'customize_controls_enqueue_scripts', 'primer_customize_control_js' 
  */
 function primer_customize_preview_js() {
 	$suffix = SCRIPT_DEBUG ? '' : '.min';
-	wp_enqueue_script( 'primer-customize-preview', get_template_directory_uri() . "/assets/js/customizer{$suffix}.js", array( 'customize-preview' ), PRIMER_VERSION, true);
+	wp_enqueue_script( 'primer-customize-preview', get_template_directory_uri() . "/assets/js/customizer{$suffix}.js", array( 'customize-preview' ), PRIMER_VERSION, true );
 }
 add_action( 'customize_preview_init', 'primer_customize_preview_js' );
 
