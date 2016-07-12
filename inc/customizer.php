@@ -356,7 +356,7 @@ function primer_color_scheme_css() {
 	$color_scheme = primer_get_color_scheme();
 
 	// Convert main text hex color to rgba.
-	$hover_color_rgb = primer_hex2rgb( $color_scheme[3] );
+	$hover_color_rgb = primer_hex2rgb( $color_scheme[4] );
 
 	// If the rgba values are empty return early.
 	if ( empty( $hover_color_rgb ) ) {
