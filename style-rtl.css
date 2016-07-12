@@ -1858,6 +1858,9 @@ code {
   border-radius: 2px;
   padding: rem-calc(2 5 1); }
 
+address {
+  margin-bottom: 1em; }
+
 table {
   border-collapse: collapse;
   margin-bottom: 1rem; }
