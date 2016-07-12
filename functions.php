@@ -359,23 +359,25 @@ if ( ! function_exists( 'primer_new_excerpt_more' ) ) {
 }
 add_filter( 'excerpt_more', 'primer_new_excerpt_more' );
 
-/**
- * Enqueue jQuery.
- *
- * Wraps jQuery in a conditional comment that will allow
- * non-IE 9 (and lower) browsers to use the newest version
- * of jQuery.
- *
- * @action  wp_enqueue_scripts
- */
-function primer_enqueue_jquery() {
+if ( ! function_exists( 'primer_conditional_jquery_tag' ) ) {
+	/**
+	 * Filter the script tag for jQuery.
+	 *
+	 * Wraps jQuery in a conditional comment that will allow
+	 * non-IE 9 (and lower) browsers to use the newest version
+	 * of jQuery.
+	 *
+	 * @filter script_loader_tag
+	 *
+	 * @param  string $tag
+	 * @param  string $handle
+	 *
+	 * @return string
+	 */
+	function primer_conditional_jquery_tag( $tag, $handle ) {
 
-	add_filter( 'script_loader_tag', function( $tag, $handle ) {
-		if ( $handle === 'jquery-core' ) {
-			$tag = "<!--[if (gte IE 9) | (!IE)]><!-->$tag<!--<![endif]-->";
-		}
-		return $tag;
-	}, 10, 2 );
+		return ( 'jquery' === $handle ) ? "<!--[if (gte IE 9) | (!IE)]><!-->$tag<!--<![endif]-->" : $tag;
 
+	}
 }
-add_action( 'wp_enqueue_scripts', 'primer_enqueue_jquery', 0 );
+add_filter( 'script_loader_tag', 'primer_conditional_jquery_tag', 10, 2 );
