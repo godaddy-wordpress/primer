@@ -186,22 +186,6 @@ if ( ! function_exists( 'primer_setup' ) ) {
 				'link',
 			)
 		);
-
-		/**
-		 * Enable support for Custom Background.
-		 *
-		 * @link https://codex.wordpress.org/Function_Reference/add_theme_support#Custom_Background
-		 */
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'primer_custom_background_args',
-				array(
-					'default-color' => 'e7e7e7',
-					'default-image' => '',
-				)
-			)
-		);
 	}
 }
 add_action( 'after_setup_theme', 'primer_setup' );
