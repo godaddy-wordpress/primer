@@ -56,27 +56,41 @@ require get_template_directory() . '/inc/theme-layouts.php';
  * Set the content width based on the theme design and stylesheet.
  *
  * @link https://codex.wordpress.org/Content_Width
+ *
+ * @global int $content_width
  */
 if ( ! isset( $content_width ) ) {
+
 	global $content_width;
 
 	switch ( theme_layouts_get_layout() ) {
+
 		case 'one-column-wide' :
+
 			$content_width = 1068;
+
 		case 'one-column-narrow' :
+
 			$content_width = 688;
+
 		default :
+
 			$content_width = 688;
+
 	}
+
 }
 
 if ( ! function_exists( 'primer_setup' ) ) {
+
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
 	 * Note that this function is hooked into the 'after_setup_theme' hook, which
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
+	 *
+	 * @since 1.0.0
 	 */
 	function primer_setup() {
 
@@ -186,17 +200,23 @@ if ( ! function_exists( 'primer_setup' ) ) {
 				'link',
 			)
 		);
+
 	}
+
 }
 add_action( 'after_setup_theme', 'primer_setup' );
 
 if ( ! function_exists( 'primer_widgets_init' ) ) {
+
 	/**
 	 * Register widget area.
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+	 *
+	 * @since 1.0.0
 	 */
 	function primer_widgets_init() {
+
 		register_sidebar(
 			array(
 				'name'          => esc_html__( 'Sidebar', 'primer' ),
@@ -256,18 +276,24 @@ if ( ! function_exists( 'primer_widgets_init' ) ) {
 				'after_title'   => '</h6>',
 			)
 		);
+
 	}
+
 }
 add_action( 'widgets_init', 'primer_widgets_init' );
 
 if ( ! function_exists( 'primer_scripts' ) ) {
+
 	/**
 	 * Enqueue theme scripts and styles.
 	 *
 	 * @link https://codex.wordpress.org/Function_Reference/wp_enqueue_style
 	 * @link https://codex.wordpress.org/Function_Reference/wp_enqueue_script
+	 *
+	 * @since 1.0.0
 	 */
 	function primer_scripts() {
+
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
 		wp_enqueue_style( 'primer', get_stylesheet_uri(), false, PRIMER_VERSION );
@@ -278,88 +304,118 @@ if ( ! function_exists( 'primer_scripts' ) ) {
 		wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), PRIMER_VERSION, true );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+
 			wp_enqueue_script( 'comment-reply' );
+
 		}
+
 	}
+
 }
 add_action( 'wp_enqueue_scripts', 'primer_scripts' );
 
 if ( ! function_exists( 'primer_fonts_url' ) ) {
+
 	/**
 	 * Returns the Google font stylesheet URL, if available.
 	 *
 	 * The use of Lato and Merriweather by default is localized. For languages
 	 * that use characters not supported by the font, the font can be disabled.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @return string|null
 	 */
 	function primer_fonts_url() {
-		$fonts_url = null;
 
-		/* Translators: If there are characters in your language that are not
+		/**
+		 * Translators: If there are characters in your language that are not
 		 * supported by Lato, translate this to 'off' and do not translate
 		 * into your own language.
 		 */
 		$lato = _x( 'on', 'Lato font: on or off', 'primer' );
 
-		/* Translators: If there are characters in your language that are not
+		/**
+		 * Translators: If there are characters in your language that are not
 		 * supported by Merriweather, translate this to 'off' and do not translate
 		 * into your own language.
 		 */
 		$poly = _x( 'on', 'Merriweather font: on or off', 'primer' );
 
-		if ( 'off' !== $lato || 'off' !== $poly ) {
-			$font_families = array();
+		if ( 'off' === $lato && 'off' === $poly ) {
 
-			if ( 'off' !== $lato ) {
-				$font_families[] = 'Lato:300,700';
-			}
+			return;
 
-			if ( 'off' !== $poly ) {
-				$font_families[] = 'Merriweather:400,400italic';
-			}
-
-			$query_args = array(
-				'family' => urlencode( implode( '|', $font_families ) ),
-				'subset' => urlencode( 'latin,latin-ext' ),
-			);
-
-			$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 		}
+
+		$font_families = array();
+
+		if ( 'off' !== $lato ) {
+
+			$font_families[] = 'Lato:300,700';
+		}
+
+		if ( 'off' !== $poly ) {
+
+			$font_families[] = 'Merriweather:400,400italic';
+
+		}
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+
 		return $fonts_url;
+
 	}
+
 }
 
 if ( ! function_exists( 'primer_custom_excerpt_length' ) ) {
+
 	/**
 	 * Custom length (in words) for excerpts before they are truncated.
 	 *
 	 * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_length
 	 *
+	 * @since 1.0.0
+	 *
 	 * @return int
 	 */
 	function primer_custom_excerpt_length( $length ) {
-		return 20;
-	}
-}
 
+		return 20;
+
+	}
+
+}
 add_filter( 'excerpt_length', 'primer_custom_excerpt_length', 999 );
 
 if ( ! function_exists( 'primer_new_excerpt_more' ) ) {
+
 	/**
 	 * Custom ending for excerpts when they have been truncated.
 	 *
 	 * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_more
 	 *
+	 * @since 1.0.0
+	 *
 	 * @return string
 	 */
 	function primer_new_excerpt_more( $more ) {
+
 		return '&hellip;';
+
 	}
+
 }
 add_filter( 'excerpt_more', 'primer_new_excerpt_more' );
 
 if ( ! function_exists( 'primer_conditional_jquery_tag' ) ) {
+
 	/**
 	 * Filter the script tag for jQuery.
 	 *
@@ -368,6 +424,8 @@ if ( ! function_exists( 'primer_conditional_jquery_tag' ) ) {
 	 * of jQuery.
 	 *
 	 * @filter script_loader_tag
+	 *
+	 * @since 1.0.0
 	 *
 	 * @param  string $tag
 	 * @param  string $handle
@@ -379,5 +437,6 @@ if ( ! function_exists( 'primer_conditional_jquery_tag' ) ) {
 		return ( 'jquery' === $handle ) ? "<!--[if (gte IE 9) | (!IE)]><!-->$tag<!--<![endif]-->" : $tag;
 
 	}
+
 }
 add_filter( 'script_loader_tag', 'primer_conditional_jquery_tag', 10, 2 );

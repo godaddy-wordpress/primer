@@ -1,60 +1,96 @@
 <?php
 /**
- * Customizer support for custom fonts
+ * Customizer support for custom fonts.
  *
  * @package Primer
- * @subpackage primer
- * @since primer 1.0
  */
 
 /**
- * If you want to disable the secondary font please add this to your child theme.
+ * Check if a secondary font is enabled.
  *
- * add_filter( 'show_secondary_font', false, 5, 1 );
+ * If you want to disable the secondary font please use
+ * this filter to your child theme:
+ *
+ * add_filter( 'primer_has_secondary_font', false );
+ *
+ * @since 1.0.0
+ *
+ * @return bool
  */
+function primer_has_secondary_font() {
+
+	/**
+	 * Filter if the secondary font should be enabled.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var bool
+	 */
+	return (bool) apply_filters( 'primer_has_secondary_font', true );
+
+}
 
 /**
  * Font customization controls.
  *
  * Adds control for font pair selection.
  *
- * @action  customize_register
+ * @action customize_register
+ *
+ * @since 1.0.0
  *
  * @param $wp_customize
  */
 function primer_font_switcher( $wp_customize ) {
-	$wp_customize->add_section( 'typography' , array(
-		'title'      => __( 'Typography', 'primer' ),
-		'priority'   => 40,
-	) );
 
-	$wp_customize->add_setting( 'primary_font', array(
-		'default'			=> primer_get_default_font( 'primary_font' ),
-		'sanitize_callback' => 'sanitize_text_field',
-	) );
+	$wp_customize->add_section(
+		'typography',
+		array(
+			'title'    => __( 'Typography', 'primer' ),
+			'priority' => 40,
+		)
+	);
 
-	$wp_customize->add_control( 'primary_font', array(
-		'label'    => __( 'Primary Font', 'primer' ),
-		'section'  => 'typography',
-		'type'     => 'select',
-		'choices'  => primer_get_font_choices(),
-	) );
-
-	if ( apply_filters( 'show_secondary_font', true ) ) {
-
-		$wp_customize->add_setting( 'secondary_font', array(
-			'default'           => primer_get_default_font( 'secondary_font' ),
+	$wp_customize->add_setting(
+		'primary_font',
+		array(
+			'default'           => primer_get_default_font( 'primary_font' ),
 			'sanitize_callback' => 'sanitize_text_field',
-		) );
+		)
+	);
 
-		$wp_customize->add_control( 'secondary_font', array(
-			'label'   => __( 'Secondary Font', 'primer' ),
+	$wp_customize->add_control(
+		'primary_font',
+		array(
+			'label'   => __( 'Primary Font', 'primer' ),
 			'section' => 'typography',
 			'type'    => 'select',
 			'choices' => primer_get_font_choices(),
-		) );
+		)
+	);
+
+	if ( primer_has_secondary_font() ) {
+
+		$wp_customize->add_setting(
+			'secondary_font',
+			array(
+				'default'           => primer_get_default_font( 'secondary_font' ),
+				'sanitize_callback' => 'sanitize_text_field',
+			)
+		);
+
+		$wp_customize->add_control(
+			'secondary_font',
+			array(
+				'label'   => __( 'Secondary Font', 'primer' ),
+				'section' => 'typography',
+				'type'    => 'select',
+				'choices' => primer_get_font_choices(),
+			)
+		);
 
 	}
+
 }
 add_action( 'customize_register', 'primer_font_switcher' );
 
@@ -64,10 +100,11 @@ add_action( 'customize_register', 'primer_font_switcher' );
  * Returns a filterable list of font families for site
  * customization.
  *
- * @filter  primer_fonts
+ * @since 1.0.0
  */
 function primer_get_fonts() {
-	return apply_filters( 'primer_fonts', array(
+
+	$fonts = array(
 		'Open Sans',
 		'Source Sans Pro',
 		'Roboto',
@@ -80,143 +117,191 @@ function primer_get_fonts() {
 		'Oxygen',
 		'Source Serif Pro',
 		'PT Serif',
-	));
+	);
+
+	/**
+	 * Filter the array of registered Primer fonts.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var array
+	 */
+	return (array) apply_filters( 'primer_fonts', $fonts );
+
 }
 
 /**
- * Return the default font
+ * Return the default font for a font type.
  *
- * @param $font
+ * @since 1.0.0
  *
- * @return mixed
+ * @param  string $font_type (optional)
+ *
+ * @return string
  */
-function primer_get_default_font( $font ) {
+function primer_get_default_font( $font_type = 'primary_font' ) {
+
 	$fonts = primer_get_fonts();
 
-	if ( 'primary_font' === $font ) {
-		return $fonts[0];
-	} elseif ( 'secondary_font' === $font ) {
-		return $fonts[1];
-	}
-	return $fonts[0];
+	return ( 'secondary_font' === $font_type && ! empty( $fonts[1] ) ) ? $fonts[1] : $fonts[0];
+
 }
 
 /**
- * Return primary or default font
+ * Return primary or default font.
  *
- * @param $font
+ * @since 1.0.0
+ *
+ * @param  string $font
  *
  * @return string
  */
 function primer_get_font( $font ) {
-	$font_option    = get_theme_mod( $font, primer_get_default_font( $font ) );
-	$fonts          = primer_get_fonts();
 
-	if ( in_array( $font_option, $fonts ) ) {
-		return $font_option;
-	}
+	$option = get_theme_mod( $font, primer_get_default_font( $font ) );
+	$fonts  = primer_get_fonts();
 
-	return $fonts[0];
+	return in_array( $option, $fonts ) ? $option : $fonts[0];
+
 }
 
 /**
- * Return font options
- *
  * Return the full set of font family options.
+ *
+ * @since 1.0.0
  */
 function primer_get_font_choices() {
-	$fonts                  = primer_get_fonts();
-	$font_control_options   = array();
 
-	foreach ( $fonts as $font ) {
-		$font_control_options[ $font ] = $font;
-	}
+	$fonts = primer_get_fonts();
 
-	return $font_control_options;
+	return array_combine( $fonts, $fonts );
+
 }
 
 /**
- * Enqueue Google fonts
+ * Enqueue Google fonts.
+ *
+ * @action wp_enqueue_scripts
+ *
+ * @since 1.0.0
  */
-function enqueue_google_fonts() {
-	$primary_font = primer_get_font( 'primary_font' );
+function primer_enqueue_google_fonts() {
 
-	if ( apply_filters( 'show_secondary_font', true ) ) {
+	$primary_font  = primer_get_font( 'primary_font' );
+	$font_families = $primary_font . ':300,400,700';
+
+	if ( primer_has_secondary_font() ) {
+
 		$secondary_font = primer_get_font( 'secondary_font' );
 
 		$font_families = array(
 			$primary_font . ':300,400,700',
 			$secondary_font . ':300,400,700',
 		);
+
 		$font_families = implode( '|', $font_families );
 
-	} else {
-		$font_families = $primary_font . ':300,400,700';
 	}
 
-	$query_args = apply_filters( 'google_font_query_args', array(
+	$query_args = array(
 		'family' => $font_families,
 		'subset' => 'latin',
-	) );
+	);
+
+	/**
+	 * Filter the Google font query args.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var array
+	 */
+	$query_args = (array) apply_filters( 'primer_google_font_query_args', $query_args );
+
 	wp_enqueue_style( 'primer-google-fonts', add_query_arg( $query_args, '//fonts.googleapis.com/css' ), false );
 
 }
-add_action( 'wp_enqueue_scripts', 'enqueue_google_fonts', 11 );
+add_action( 'wp_enqueue_scripts', 'primer_enqueue_google_fonts', 11 );
 
 /**
- * Return font options
+ * Add inline CSS for the primary font.
  *
- * Return the full set of font family options.
+ * @action wp_enqueue_scripts
+ *
+ * @since 1.0.0
  */
 function primer_primary_font_css() {
-	$default_primary_font      = primer_get_default_font( 'primary_font' );
-	$primary_font              = get_theme_mod( 'primary_font', $default_primary_font );
 
-	if ( $primary_font === $default_primary_font ) {
+	$default = primer_get_default_font();
+	$font    = get_theme_mod( 'primary_font', $default );
+
+	if ( $font === $default ) {
+
 		return;
+
 	}
 
-	$css = apply_filters(
-		'primary_font_css',
-		'/* Primary Font */
+	$css = <<<CSS
+		/* Primary Font */
 		body, h1, h2, h3, h4, h5, h6, label {
-			font-family: "%1$s", sans-serif;
+			font-family: "%s", sans-serif;
 		}
-	');
+CSS;
 
-	wp_add_inline_style( 'primer', sprintf( $css, $primary_font ) );
+	/**
+	 * Filter the primary font inline CSS.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var string
+	 */
+	$css = (string) apply_filters( 'primer_primary_font_css', $css );
+
+	wp_add_inline_style( 'primer', sprintf( $css, $font ) );
+
 }
 add_action( 'wp_enqueue_scripts', 'primer_primary_font_css', 11 );
 
 /**
- * Return font options
+ * Add inline CSS for the secondary font.
  *
- * Return the full set of font family options.
+ * @action wp_enqueue_scripts
+ *
+ * @since 1.0.0
  */
 function primer_secondary_font_css() {
 
-	if ( apply_filters( 'show_secondary_font', true ) ) {
+	if ( ! primer_has_secondary_font() ) {
 
-		$default_secondary_font = primer_get_default_font( 'secondary_font' );
-		$secondary_font         = get_theme_mod( 'secondary_font', $default_secondary_font );
-
-		if ( $secondary_font === $default_secondary_font ) {
-			return;
-		}
-
-		$css = apply_filters(
-			'secondary_font_css',
-			'/* Secondary Font */
-			p, blockquote, .fl-callout-text {
-				font-family: "%1$s", serif;
-			}
-		' );
-
-		wp_add_inline_style( 'primer', sprintf( $css, $secondary_font ) );
+		return;
 
 	}
 
+	$default = primer_get_default_font( 'secondary_font' );
+	$font    = get_theme_mod( 'secondary_font', $default );
+
+	if ( $font === $default ) {
+
+		return;
+
+	}
+
+	$css = <<<CSS
+	/* Secondary Font */
+	p, blockquote, .fl-callout-text {
+		font-family: "%s", serif;
+	}
+CSS;
+
+	/**
+	 * Filter the secondary font inline CSS.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var string
+	 */
+	$css = (string) apply_filters( 'primer_secondary_font_css', $css );
+
+	wp_add_inline_style( 'primer', sprintf( $css, $font ) );
+
 }
 add_action( 'wp_enqueue_scripts', 'primer_secondary_font_css', 11 );
-
-?>
