@@ -650,36 +650,6 @@ function primer_header_textcolor_css() {
 add_action( 'wp_enqueue_scripts', 'primer_header_textcolor_css', 11 );
 
 /**
- * Enqueues front-end CSS for the page background color.
- *
- * @see wp_add_inline_style()
- */
-function primer_tagline_text_color_css() {
-
-	$color_scheme       = primer_get_color_scheme();
-	$default_color      = $color_scheme[2];
-	$tagline_text_color = get_theme_mod( 'tagline_text_color', $default_color );
-
-	if ( $tagline_text_color === $default_color ) {
-
-		return;
-
-	}
-
-	$css = apply_filters(
-		'custom_tagline_text_color_css',
-		'/* Custom Tagline Text Color */
-		.tagline_text_color {
-			color: %1$s;
-		}'
-	);
-
-	wp_add_inline_style( 'primer', sprintf( $css, $tagline_text_color ) );
-
-}
-add_action( 'wp_enqueue_scripts', 'primer_tagline_text_color_css', 11 );
-
-/**
  * Enqueues front-end CSS for the menu background color.
  *
  * @see wp_add_inline_style()
@@ -687,7 +657,7 @@ add_action( 'wp_enqueue_scripts', 'primer_tagline_text_color_css', 11 );
 function primer_menu_background_color_css() {
 
 	$color_scheme          = primer_get_color_scheme();
-	$default_color         = $color_scheme[3];
+	$default_color         = $color_scheme[2];
 	$menu_background_color = get_theme_mod( 'menu_background_color', $default_color );
 
 	if ( $menu_background_color === $default_color ) {
@@ -718,6 +688,36 @@ function primer_menu_background_color_css() {
 add_action( 'wp_enqueue_scripts', 'primer_menu_background_color_css', 11 );
 
 /**
+ * Enqueues front-end CSS for the page background color.
+ *
+ * @see wp_add_inline_style()
+ */
+function primer_tagline_text_color_css() {
+
+	$color_scheme       = primer_get_color_scheme();
+	$default_color      = $color_scheme[3];
+	$tagline_text_color = get_theme_mod( 'tagline_text_color', $default_color );
+
+	if ( $tagline_text_color === $default_color ) {
+
+		return;
+
+	}
+
+	$css = apply_filters(
+		'custom_tagline_text_color_css',
+		'/* Custom Tagline Text Color */
+		.tagline_text_color {
+			color: %1$s;
+		}'
+	);
+
+	wp_add_inline_style( 'primer', sprintf( $css, $tagline_text_color ) );
+
+}
+add_action( 'wp_enqueue_scripts', 'primer_tagline_text_color_css', 11 );
+
+/**
  * Enqueues front-end CSS for the link color.
  *
  * @see wp_add_inline_style()
@@ -725,7 +725,7 @@ add_action( 'wp_enqueue_scripts', 'primer_menu_background_color_css', 11 );
 function primer_link_color_css() {
 
 	$color_scheme  = primer_get_color_scheme();
-	$default_color = $color_scheme[3];
+	$default_color = $color_scheme[4];
 	$link_color    = get_theme_mod( 'link_color', $default_color );
 
 	if ( $link_color === $default_color ) {
@@ -787,7 +787,7 @@ add_action( 'wp_enqueue_scripts', 'primer_link_color_css', 11 );
 function primer_main_text_color_css() {
 
 	$color_scheme    = primer_get_color_scheme();
-	$default_color   = $color_scheme[4];
+	$default_color   = $color_scheme[5];
 	$main_text_color = get_theme_mod( 'main_text_color', $default_color );
 
 	if ( $main_text_color === $default_color ) {
@@ -825,7 +825,7 @@ add_action( 'wp_enqueue_scripts', 'primer_main_text_color_css', 11 );
 function primer_secondary_text_color_css() {
 
 	$color_scheme         = primer_get_color_scheme();
-	$default_color        = $color_scheme[5];
+	$default_color        = $color_scheme[6];
 	$secondary_text_color = get_theme_mod( 'secondary_text_color', $default_color );
 
 	if ( $secondary_text_color === $default_color ) {
