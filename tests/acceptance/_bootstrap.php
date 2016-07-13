@@ -12,7 +12,7 @@ exec( 'wp post generate --count=50' );
 exec( 'wp post create --post_type=page --post_title="Front Page"' );
 exec( 'wp post create --post_type=page --post_title="Blog"' );
 exec( 'wp post create --post_type=page --post_title="Contact"' );
-exec( 'wp post create ' TESTS_DIR . '/_data/html-elements.txt --post_type=page --post_title="HTML Elements"' );
+exec( 'wp post create ' . TESTS_DIR . '/_data/html-elements.txt --post_type=page --post_title="HTML Elements"' );
 
 // Set various options.
 update_option( 'show_on_front', 'page' );
