@@ -84,6 +84,18 @@ module.exports = function(grunt) {
 				overwrite: true,
 				replacements: [
 					{
+						from: 'SOME DESCRIPTIVE TITLE.',
+						to: 'Primer Theme for WordPress'
+					},
+					{
+						from: "YEAR THE PACKAGE'S COPYRIGHT HOLDER",
+						to: new Date().getFullYear()
+					},
+					{
+						from: 'FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.',
+						to: 'GoDaddy Operating Company, LLC.'
+					},
+					{
 						from: 'charset=CHARSET',
 						to: 'charset=UTF-8'
 					}
@@ -97,7 +109,8 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: {
-					'style.css': '.dev/sass/style.scss'
+					'style.css': '.dev/sass/style.scss',
+					'editor-style.css': '.dev/sass/editor-style.scss'
 				}
 			}
 		},
@@ -114,6 +127,23 @@ module.exports = function(grunt) {
 				ext: '.min.js'
 			}
 		},
+
+		devUpdate: {
+			main: {
+				options: {
+					updateType: 'force', //just report outdated packages
+					reportUpdated: false, //don't report up-to-date packages
+					semver: true, //stay within semver when updating
+					packages: {
+						devDependencies: true, //only check for devDependencies
+						dependencies: false
+					},
+					packageJson: null, //use matchdep default findup to locate package.json
+					reportOnlyPkgs: [] //use updateType action on all packages
+				}
+			}
+	    },
+
 
 		watch: {
 			css: {

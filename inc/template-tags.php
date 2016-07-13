@@ -10,6 +10,10 @@ if ( ! function_exists( 'primer_active_footer_areas_count' ) ) {
 	/**
 	 * Return the number of active footer widget areas.
 	 *
+	 * @since 1.0.0
+	 *
+	 * @global array $wp_registered_sidebars
+	 *
 	 * @return int
 	 */
 	function primer_active_footer_areas_count() {
@@ -39,6 +43,10 @@ if ( ! function_exists( 'primer_paging_nav' ) ) {
 
 	/**
 	 * Display navigation to next/previous set of posts when applicable.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @global WP_Query $wp_query
 	 */
 	function primer_paging_nav() {
 
@@ -82,6 +90,10 @@ if ( ! function_exists( 'primer_post_nav' ) ) {
 
 	/**
 	 * Display navigation to next/previous post when applicable.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @global WP_Post $post
 	 */
 	function primer_post_nav() {
 
@@ -130,6 +142,8 @@ if ( ! function_exists( 'primer_posted_on' ) ) {
 
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
+	 *
+	 * @since 1.0.0
 	 */
 	function primer_posted_on() {
 
@@ -163,6 +177,8 @@ if ( ! function_exists( 'primer_post_format' ) ) {
 
 	/**
 	 * Prints the post format for the current post.
+	 *
+	 * @since 1.0.0
 	 */
 	function primer_post_format() {
 
@@ -179,6 +195,8 @@ if ( ! function_exists( 'primer_get_featured_image_url' ) ) {
 
 	/**
 	 * Return the featured image URL.
+	 *
+	 * @since 1.0.0
 	 *
 	 * @return string|false
 	 */
@@ -201,6 +219,8 @@ if ( ! function_exists( 'primer_has_active_categories' ) ) {
 	 * can be called frequently without any performance concern.
 	 *
 	 * @see primer_has_active_categories_reset()
+	 *
+	 * @since 1.0.0
 	 *
 	 * @return bool
 	 */
