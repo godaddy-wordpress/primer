@@ -84,6 +84,18 @@ module.exports = function(grunt) {
 				overwrite: true,
 				replacements: [
 					{
+						from: 'SOME DESCRIPTIVE TITLE.',
+						to: 'Primer Theme for WordPress'
+					},
+					{
+						from: "YEAR THE PACKAGE'S COPYRIGHT HOLDER",
+						to: new Date().getFullYear()
+					},
+					{
+						from: 'FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.',
+						to: 'GoDaddy Operating Company, LLC.'
+					},
+					{
 						from: 'charset=CHARSET',
 						to: 'charset=UTF-8'
 					}
