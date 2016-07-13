@@ -1,0 +1,327 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: primer 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-21 16:55-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#. //codex.wordpress.org/Creating_an_Error_404_Page
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#404-php
+#. *
+#. * @package Primer
+#.
+#: 404.php:21
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "ขออภัย! ไม่สามารถค้นหาหน้านี้ได้"
+
+#: 404.php:27
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"ดูเหมือนว่าจะไม่พบสิ่งใดในตำแหน่งที่ตั้งนี้ ลองใช้หนึ่งในลิงก์ด้านล่างหรือค้นหาแล้วหรือยัง"
+
+#: 404.php:37
+msgid "Most Used Categories"
+msgstr "ประเภทที่ใช้งานมากสุด"
+
+#: 404.php:61
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "ลองมองหาในที่เก็บถาวรรายเดือน %1$s"
+
+#: comments.php:34
+#, php-format
+msgctxt "1. number of comments, 2. post title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$d thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "หนึ่งความคิดบน &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$d ความคิดบน &ldquo;%2$s&rdquo;"
+
+#: comments.php:50 comments.php:75
+msgid "Comment navigation"
+msgstr "การนำทางความคิดเห็น"
+
+#: comments.php:52 comments.php:77
+msgid "&larr; Older Comments"
+msgstr "&larr; ความคิดเห็นก่อนหน้า"
+
+#: comments.php:54 comments.php:79
+msgid "Newer Comments &rarr;"
+msgstr "ความคิดเห็นใหม่ &rarr;"
+
+#: comments.php:89
+msgid "Comments are closed."
+msgstr "ปิดรับความคิดเห็นแล้ว"
+
+#: content-featured.php:30
+msgid "Featured"
+msgstr "ที่น่าสนใจ"
+
+#: content-featured.php:40
+msgid "Read More"
+msgstr "อ่านเพิ่มเติม"
+
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
+#. *
+#. * @package Primer
+#.
+#: content-none.php:15
+msgid "Nothing Found"
+msgstr "ไม่พบสิ่งใด"
+
+#: content-none.php:23
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"พร้อมที่จะเผยแพร่โพสต์แรกของคุณแล้วหรือยัง <a href=\"%1$s\">เริ่มต้นที่นี่</a>"
+
+#: content-none.php:27
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"ขออภัย แต่ไม่มีสิ่งใดตรงกับเงื่อนไขการค้นหาของคุณ โปรดลองอีกครั้งด้วยคำค้นหาอื่น"
+
+#: content-none.php:32
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"ดูเหมือนเราไม่อาจค้นหาสิ่งที่คุณกำลังมองหาอยู่ได้ บางทีการค้นหาอาจช่วยได้"
+
+#: functions.php:129
+msgid "Primary Menu"
+msgstr "เมนูหลัก"
+
+#: functions.php:130
+msgid "Social Menu"
+msgstr "เมนูโซเชียล"
+
+#: functions.php:140
+msgid "1 Column Wide"
+msgstr "1 คอลัมน์กว้าง"
+
+#: functions.php:141
+msgid "1 Column Narrow"
+msgstr "1 คอลัมน์แคบ"
+
+#: functions.php:142 functions.php:143
+msgid "2 Columns: Sidebar / Content"
+msgstr "2 คอลัมน์: แถบข้าง / เนื้อหา"
+
+#: functions.php:142 functions.php:143
+msgid "2 Columns: Content / Sidebar"
+msgstr "2 คอลัมน์: เนื้อหา / แถบข้าง"
+
+#: functions.php:144 functions.php:146
+msgid "3 Columns: Sidebar / Sidebar / Content"
+msgstr "3 คอลัมน์: แถบข้าง / แถบข้าง / เนื้อหา"
+
+#: functions.php:144 functions.php:146
+msgid "3 Columns: Content / Sidebar / Sidebar"
+msgstr "3 คอลัมน์: เนื้อหา / แถบข้าง / แถบข้าง"
+
+#: functions.php:145
+msgid "3 Columns: Sidebar / Content / Sidebar"
+msgstr "3 คอลัมน์: แถบข้าง / เนื้อหา / แถบข้าง"
+
+#: functions.php:216
+msgid "Sidebar"
+msgstr "แถบข้าง"
+
+#: functions.php:218
+msgid ""
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
+msgstr ""
+"แถบข้างหลังปรากฏคู่กับเนื้อหาในทุกๆ หน้า โพสต์ ที่เก็บถาวรและเทมเพลตการค้นหา"
+
+#: functions.php:228
+msgid "Secondary Sidebar"
+msgstr "แถบข้างรอง"
+
+#: functions.php:230
+msgid ""
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
+msgstr "แถบข้างรองจะปรากฏขึ้นเมื่อคุณเลือกเค้าโครงแบบสามคอลัมน์เท่านั้น"
+
+#: functions.php:240
+msgid "Footer Left"
+msgstr "ส่วนท้ายทางด้านซ้าย"
+
+#: functions.php:242
+msgid ""
+"The footer left sidebar appears in the first column of the footer widget "
+"area."
+msgstr ""
+"แถบข้างส่วนท้ายทางด้านซ้ายปรากฏในคอลัมน์แรกของพื้นที่วิดเจ็ตของส่วนท้าย"
+
+#: functions.php:252
+msgid "Footer Center"
+msgstr "ส่วนท้ายตรงกลาง"
+
+#: functions.php:254
+msgid ""
+"The footer center sidebar appears in the second column of the footer widget "
+"area."
+msgstr "แถบข้างส่วนท้ายตรงกลางปรากฏในคอลัมน์ที่สองของพื้นที่วิดเจ็ตของส่วนท้าย"
+
+#: functions.php:264
+msgid "Footer Right"
+msgstr "ส่วนท้ายทางด้านขวา"
+
+#: functions.php:266
+msgid ""
+"The footer right sidebar appears in the third column of the footer widget "
+"area."
+msgstr ""
+"แถบข้างส่วนท้ายทางด้านขวาปรากฏในคอลัมน์ที่สามของพื้นที่วิดเจ็ตของส่วนท้าย"
+
+#: functions.php:329
+msgctxt "Lato font: on or off"
+msgid "on"
+msgstr "บน"
+
+#: functions.php:335
+msgctxt "Merriweather font: on or off"
+msgid "on"
+msgstr "บน"
+
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
+#. *
+#. * @package Primer
+#.
+#: header.php:35
+msgid "Skip to content"
+msgstr "ข้ามไปยังเนื้อหา"
+
+#. //developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+#. *
+#. * @package Primer
+#.
+#: search.php:20
+#, php-format
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr "ผลลัพธ์การค้นหาสำหรับ: %s"
+
+#: inc/breadcrumbs.php:39
+msgid "Blog"
+msgstr "บล็อก"
+
+#: inc/extras.php:91
+#, php-format
+msgctxt "page number"
+msgid "Page %d"
+msgstr "หน้า %d"
+
+#: inc/template-tags.php:56
+msgid "Posts navigation"
+msgstr "การนำทางโพสต์"
+
+#: inc/template-tags.php:62
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> โพสต์ก่อนหน้า"
+
+#: inc/template-tags.php:68
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "โพสต์ใหม่ <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:102
+msgid "Post navigation"
+msgstr "การนำทางโพสต์"
+
+#: inc/theme-layouts.php:364
+msgctxt "theme layout"
+msgid "Default"
+msgstr "ค่าดีฟอลต์"
+
+#: inc/theme-layouts.php:459 inc/theme-layouts.php:566
+#: inc/theme-layouts.php:651
+msgid "Layout"
+msgstr "เค้าโครง"
+
+#: inc/theme-layouts.php:684
+msgid "Global Layout"
+msgstr "เค้าโครงสากล"
+
+#: templates/parts/loop/page-content.php:17
+#: templates/parts/loop/post-content.php:17
+msgid "Pages:"
+msgstr "หน้าเพจ:"
+
+#: templates/parts/loop/page-footer.php:8
+#: templates/parts/loop/post-footer.php:13
+#: templates/parts/loop/post-search-footer.php:45
+msgid "Edit"
+msgstr "แก้ไข"
+
+#: templates/parts/loop/post-content.php:13
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr "อ่านเพิ่มเติม <span class=\"meta-nav\">&rarr;</span>"
+
+#: templates/parts/loop/post-footer.php:19
+#: templates/parts/loop/post-footer.php:31
+#: templates/parts/loop/post-search-footer.php:13
+#: templates/parts/loop/post-search-footer.php:25
+msgctxt "separator for items in a list"
+msgid ", "
+msgstr "  "
+
+#: templates/parts/loop/post-footer.php:25
+#: templates/parts/loop/post-search-footer.php:19
+#, php-format
+msgctxt "category list"
+msgid "Posted in: %s"
+msgstr "โพสต์ไว้ที่: %s"
+
+#: templates/parts/loop/post-footer.php:37
+#: templates/parts/loop/post-search-footer.php:31
+#, php-format
+msgctxt "tag list"
+msgid "Filed under: %s"
+msgstr "เก็บเข้าไฟล์ไว้ที่: %s"
+
+#: templates/parts/loop/post-meta.php:13
+#, php-format
+msgctxt "1. post date, 2. author name"
+msgid "%1$s by %2$s"
+msgstr "%1$s โดย %2$s"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgid "Leave a comment"
+msgstr "ฝากความคิดเห็น"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgid "1 Comment"
+msgstr "1 ความคิดเห็น"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgctxt "number of comments"
+msgid "% Comments"
+msgstr "ความคิดเห็น"
+
+#: templates/parts/site-info.php:17
+#, php-format
+msgctxt "1. theme name link, 2. theme author link"
+msgid "Built with %1$s by %2$s."
+msgstr "สร้างขึ้นด้วย %1$s โดย %2$s"
