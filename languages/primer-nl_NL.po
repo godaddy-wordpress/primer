@@ -1,25 +1,14 @@
-<<<<<<< HEAD
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the Primer package.
+# This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-=======
-# Primer Theme for WordPress
-# Copyright (C) 2016
-# This file is distributed under the same license as the primer package.
-# GoDaddy Operating Company, LLC.
->>>>>>> master
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 1.0.0\n"
+"Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-<<<<<<< HEAD
-"POT-Creation-Date: 2016-07-09 16:45-0500\n"
-=======
-"POT-Creation-Date: 2016-07-12 22:38-0500\n"
->>>>>>> master
+"POT-Creation-Date: 2016-06-21 16:55-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,54 +25,56 @@ msgstr ""
 #.
 #: 404.php:21
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "Helaas! Die pagina is niet gevonden."
 
 #: 404.php:27
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
+"Er is helemaal niets gevonden op deze locatie. Wil je een van de onderstaande "
+"koppelingen proberen of een zoekopdracht uitvoeren?"
 
 #: 404.php:37
 msgid "Most Used Categories"
-msgstr ""
+msgstr "Meest gebruikte categorieën"
 
 #: 404.php:61
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
+msgstr "Kijk ook in de maandarchieven. %1$s"
 
 #: comments.php:34
 #, php-format
 msgctxt "1. number of comments, 2. post title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$d thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Een opmerking over &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$d opmerkingen over &ldquo;%2$s&rdquo;"
 
 #: comments.php:50 comments.php:75
 msgid "Comment navigation"
-msgstr ""
+msgstr "Navigeren door opmerkingen"
 
 #: comments.php:52 comments.php:77
 msgid "&larr; Older Comments"
-msgstr ""
+msgstr "&larr; oudere opmerkingen"
 
 #: comments.php:54 comments.php:79
 msgid "Newer Comments &rarr;"
-msgstr ""
+msgstr "Nieuwere opmerkingen &rarr;"
 
 #: comments.php:89
 msgid "Comments are closed."
-msgstr ""
+msgstr "Opmerkingen gesloten."
 
 #: content-featured.php:30
 msgid "Featured"
-msgstr ""
+msgstr "Uitgelicht"
 
 #: content-featured.php:40
 msgid "Read More"
-msgstr ""
+msgstr "Meer informatie"
 
 #. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
 #. *
@@ -91,121 +82,134 @@ msgstr ""
 #.
 #: content-none.php:15
 msgid "Nothing Found"
-msgstr ""
+msgstr "Niets gevonden"
 
 #: content-none.php:23
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"Klaar om je eerste bericht te publiceren? <a href=\"%1$s\">Nu aan de slag</a>."
 
 #: content-none.php:27
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Er is helaas niets gevonden dat met je zoekopdracht overeenkomt. Probeer het "
+"opnieuw met andere trefwoorden."
 
 #: content-none.php:32
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
+msgstr "Wij kunnen vinden wat je zoekt. Probeer het met een zoekopdracht."
 
-#: functions.php:136
+#: functions.php:129
 msgid "Primary Menu"
-msgstr ""
+msgstr "Hoofdmenu"
 
-#: functions.php:137
+#: functions.php:130
 msgid "Social Menu"
-msgstr ""
+msgstr "Sociaal menu"
 
-#: functions.php:147
+#: functions.php:140
 msgid "1 Column Wide"
-msgstr ""
+msgstr "1 kolom breed"
 
-#: functions.php:148
+#: functions.php:141
 msgid "1 Column Narrow"
-msgstr ""
+msgstr "1 kolom smal"
 
-#: functions.php:149 functions.php:150
+#: functions.php:142 functions.php:143
 msgid "2 Columns: Sidebar / Content"
-msgstr ""
+msgstr "2 kolommen: Zijbalk/inhoud"
 
-#: functions.php:149 functions.php:150
+#: functions.php:142 functions.php:143
 msgid "2 Columns: Content / Sidebar"
-msgstr ""
+msgstr "2 kolommen: Inhoud/zijbalk"
 
-#: functions.php:151 functions.php:153
+#: functions.php:144 functions.php:146
 msgid "3 Columns: Sidebar / Sidebar / Content"
-msgstr ""
+msgstr "3 kolommen: Zijbalk/zijbalk/inhoud"
 
-#: functions.php:151 functions.php:153
+#: functions.php:144 functions.php:146
 msgid "3 Columns: Content / Sidebar / Sidebar"
-msgstr ""
+msgstr "3 kolommen: Inhoud/zijbalk/zijbalk"
 
-#: functions.php:152
+#: functions.php:145
 msgid "3 Columns: Sidebar / Content / Sidebar"
-msgstr ""
+msgstr "3 kolommen: Zijbalk/inhoud/zijbalk"
+
+#: functions.php:216
+msgid "Sidebar"
+msgstr "Zijbalk"
 
 #: functions.php:218
-msgid "Sidebar"
-msgstr ""
-
-#: functions.php:220
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr ""
+"De primaire zijbalk wordt weergegeven naast de inhoud op elk(e) pagina, "
+"bericht, archief en zoeksjabloon."
+
+#: functions.php:228
+msgid "Secondary Sidebar"
+msgstr "Secundaire zijbalk"
 
 #: functions.php:230
-msgid "Secondary Sidebar"
-msgstr ""
-
-#: functions.php:232
 msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr ""
+"De secundaire zijbalk wordt alleen weergegeven je een indeling met drie "
+"kolommen hebt geselecteerd."
+
+#: functions.php:240
+msgid "Footer Left"
+msgstr "Voettekst links"
 
 #: functions.php:242
-msgid "Footer Left"
-msgstr ""
-
-#: functions.php:244
 msgid ""
 "The footer left sidebar appears in the first column of the footer widget "
 "area."
 msgstr ""
+"De zijbalk met voettekst links wordt weergegeven in de eerste kolom van het "
+"gebied van de voettekstwidget."
+
+#: functions.php:252
+msgid "Footer Center"
+msgstr "Voettekst midden"
 
 #: functions.php:254
-msgid "Footer Center"
-msgstr ""
-
-#: functions.php:256
 msgid ""
 "The footer center sidebar appears in the second column of the footer widget "
 "area."
 msgstr ""
+"De zijbalk met voettekst in het midden wordt weergegeven in de tweede kolom "
+"van het gebied van de voettekstwidget."
+
+#: functions.php:264
+msgid "Footer Right"
+msgstr "Voettekst rechts"
 
 #: functions.php:266
-msgid "Footer Right"
-msgstr ""
-
-#: functions.php:268
 msgid ""
 "The footer right sidebar appears in the third column of the footer widget "
 "area."
 msgstr ""
+"De zijbalk met voettekst rechts wordt weergegeven in de derde kolom van het "
+"gebied van de voettekstwidget."
 
-#: functions.php:319
+#: functions.php:329
 msgctxt "Lato font: on or off"
 msgid "on"
-msgstr ""
+msgstr "aan"
 
-#: functions.php:325
+#: functions.php:335
 msgctxt "Merriweather font: on or off"
 msgid "on"
-msgstr ""
+msgstr "aan"
 
 #. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
 #. *
@@ -213,7 +217,7 @@ msgstr ""
 #.
 #: header.php:35
 msgid "Skip to content"
-msgstr ""
+msgstr "Naar inhoud gaan"
 
 #. //developer.wordpress.org/themes/basics/template-hierarchy/#search-result
 #. *
@@ -223,114 +227,62 @@ msgstr ""
 #, php-format
 msgctxt "search term"
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Zoekresultaten voor: %s"
 
 #: inc/breadcrumbs.php:39
 msgid "Blog"
-msgstr ""
-
-#: inc/custom-fonts.php:27
-msgid "Typography"
-msgstr ""
-
-#: inc/custom-fonts.php:37
-msgid "Primary Font"
-msgstr ""
-
-#: inc/custom-fonts.php:51
-msgid "Secondary Font"
-msgstr ""
-
-#: inc/customizer.php:90
-msgid "Base Color Scheme"
-msgstr ""
-
-#: inc/customizer.php:105
-msgid "Menu Background Color"
-msgstr ""
-
-#: inc/customizer.php:117
-msgid "Tagline Text Color"
-msgstr ""
-
-#: inc/customizer.php:129
-msgid "Link Color"
-msgstr ""
-
-#: inc/customizer.php:141
-msgid "Main Text Color"
-msgstr ""
-
-#: inc/customizer.php:153
-msgid "Secondary Text Color"
-msgstr ""
-
-#: inc/customizer.php:222
-msgid "Default"
-msgstr ""
-
-#: inc/customizer.php:234
-msgid "Dark"
-msgstr ""
-
-#: inc/customizer.php:246
-msgid "Muted"
-msgstr ""
-
-#: inc/customizer.php:258
-msgid "Red"
-msgstr ""
+msgstr "Blog"
 
 #: inc/extras.php:91
 #, php-format
 msgctxt "page number"
 msgid "Page %d"
-msgstr ""
+msgstr "Pagina %d"
 
 #: inc/template-tags.php:56
 msgid "Posts navigation"
-msgstr ""
+msgstr "Berichtnavigatie"
 
 #: inc/template-tags.php:62
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> oudere berichten"
 
 #: inc/template-tags.php:68
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Nieuwere berichten <span class=\"meta-nav\">&rarr;</span>"
 
 #: inc/template-tags.php:102
 msgid "Post navigation"
-msgstr ""
+msgstr "Berichtnavigatie"
 
 #: inc/theme-layouts.php:364
 msgctxt "theme layout"
 msgid "Default"
-msgstr ""
+msgstr "Standaard"
 
 #: inc/theme-layouts.php:459 inc/theme-layouts.php:566
 #: inc/theme-layouts.php:651
 msgid "Layout"
-msgstr ""
+msgstr "Lay-out"
 
 #: inc/theme-layouts.php:684
 msgid "Global Layout"
-msgstr ""
+msgstr "Algemene indeling"
 
 #: templates/parts/loop/page-content.php:17
 #: templates/parts/loop/post-content.php:17
 msgid "Pages:"
-msgstr ""
+msgstr "Pagina's:"
 
 #: templates/parts/loop/page-footer.php:8
 #: templates/parts/loop/post-footer.php:13
 #: templates/parts/loop/post-search-footer.php:45
 msgid "Edit"
-msgstr ""
+msgstr "Bewerken"
 
 #: templates/parts/loop/post-content.php:13
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Meer lezen <span class=\"meta-nav\">&rarr;</span>"
 
 #: templates/parts/loop/post-footer.php:19
 #: templates/parts/loop/post-footer.php:31
@@ -338,46 +290,46 @@ msgstr ""
 #: templates/parts/loop/post-search-footer.php:25
 msgctxt "separator for items in a list"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: templates/parts/loop/post-footer.php:25
 #: templates/parts/loop/post-search-footer.php:19
 #, php-format
 msgctxt "category list"
 msgid "Posted in: %s"
-msgstr ""
+msgstr "Gepubliceerd in: %s"
 
 #: templates/parts/loop/post-footer.php:37
 #: templates/parts/loop/post-search-footer.php:31
 #, php-format
 msgctxt "tag list"
 msgid "Filed under: %s"
-msgstr ""
+msgstr "Gearchiveerd onder: %s"
 
 #: templates/parts/loop/post-meta.php:13
 #, php-format
 msgctxt "1. post date, 2. author name"
 msgid "%1$s by %2$s"
-msgstr ""
+msgstr "%1$s door %2$s"
 
 #: templates/parts/loop/post-meta.php:25
 #: templates/parts/loop/post-search-footer.php:41
 msgid "Leave a comment"
-msgstr ""
+msgstr "Een opmerking achterlaten"
 
 #: templates/parts/loop/post-meta.php:25
 #: templates/parts/loop/post-search-footer.php:41
 msgid "1 Comment"
-msgstr ""
+msgstr "1 opmerking"
 
 #: templates/parts/loop/post-meta.php:25
 #: templates/parts/loop/post-search-footer.php:41
 msgctxt "number of comments"
 msgid "% Comments"
-msgstr ""
+msgstr "% opmerkingen"
 
 #: templates/parts/site-info.php:17
 #, php-format
 msgctxt "1. theme name link, 2. theme author link"
 msgid "Built with %1$s by %2$s."
-msgstr ""
+msgstr "Gemaakt met %1$s door %2$s."

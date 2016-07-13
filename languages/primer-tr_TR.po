@@ -1,25 +1,14 @@
-<<<<<<< HEAD
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the Primer package.
+# This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-=======
-# Primer Theme for WordPress
-# Copyright (C) 2016
-# This file is distributed under the same license as the primer package.
-# GoDaddy Operating Company, LLC.
->>>>>>> master
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 1.0.0\n"
+"Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-<<<<<<< HEAD
-"POT-Creation-Date: 2016-07-09 16:45-0500\n"
-=======
-"POT-Creation-Date: 2016-07-12 22:38-0500\n"
->>>>>>> master
+"POT-Creation-Date: 2016-06-21 16:55-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,54 +25,56 @@ msgstr ""
 #.
 #: 404.php:21
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "Üzgünüz! Bu sayfa bulunamadı &rsquo;t."
 
 #: 404.php:27
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
+"Bu konumda bulunan bir şey yok.  Belki aşağıdaki bağlantılardan birini ya da "
+"arama yapmayı deneyebilirsiniz."
 
 #: 404.php:37
 msgid "Most Used Categories"
-msgstr ""
+msgstr "En Çok Kullanılan Kategoriler"
 
 #: 404.php:61
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
+msgstr "Aylık arşivlere göz atabilirsin.  %1$s"
 
 #: comments.php:34
 #, php-format
 msgctxt "1. number of comments, 2. post title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$d thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "&ldquo;%2$s&rdquo; ile ilgili bir görüş"
+msgstr[1] "&ldquo;%2$s&rdquo; ile ilgili %1$d görüş"
 
 #: comments.php:50 comments.php:75
 msgid "Comment navigation"
-msgstr ""
+msgstr "Yorum gezinti çubuğu"
 
 #: comments.php:52 comments.php:77
 msgid "&larr; Older Comments"
-msgstr ""
+msgstr "&larr; Eski Yorumlar"
 
 #: comments.php:54 comments.php:79
 msgid "Newer Comments &rarr;"
-msgstr ""
+msgstr "Yeni Yorumlar &rarr;"
 
 #: comments.php:89
 msgid "Comments are closed."
-msgstr ""
+msgstr "Yorumlar kapalı."
 
 #: content-featured.php:30
 msgid "Featured"
-msgstr ""
+msgstr "Öne Çıkanlar"
 
 #: content-featured.php:40
 msgid "Read More"
-msgstr ""
+msgstr "Daha Fazla Bilgi"
 
 #. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
 #. *
@@ -91,121 +82,132 @@ msgstr ""
 #.
 #: content-none.php:15
 msgid "Nothing Found"
-msgstr ""
+msgstr "Hiçbir Şey Bulunamadı"
 
 #: content-none.php:23
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"İlk gönderinizi yayınlamaya hazır mısınız? <a href=\"%1$s\">Buradan başlayın</a>."
 
 #: content-none.php:27
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Üzgünüz, aradığınız terimlerle eşleşen bir şey bulunamadı. Lütfen farklı "
+"anahtar kelimeler ile tekrar deneyin."
 
 #: content-none.php:32
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
+"Görünüşe göre istediğinizi&rsquo; bulamadık&rsquo;.  Belki arama yapmanız "
+"yardımcı olabilir. "
 
-#: functions.php:136
+#: functions.php:129
 msgid "Primary Menu"
-msgstr ""
+msgstr "Birincil Menü"
 
-#: functions.php:137
+#: functions.php:130
 msgid "Social Menu"
-msgstr ""
+msgstr "Sosyal Menü"
 
-#: functions.php:147
+#: functions.php:140
 msgid "1 Column Wide"
-msgstr ""
+msgstr "1 Sütun Geniş"
 
-#: functions.php:148
+#: functions.php:141
 msgid "1 Column Narrow"
-msgstr ""
+msgstr "1 Sütun Dar"
 
-#: functions.php:149 functions.php:150
+#: functions.php:142 functions.php:143
 msgid "2 Columns: Sidebar / Content"
-msgstr ""
+msgstr "2 Sütun: Kenar Çubuğu / İçerik"
 
-#: functions.php:149 functions.php:150
+#: functions.php:142 functions.php:143
 msgid "2 Columns: Content / Sidebar"
-msgstr ""
+msgstr "2 Sütun: İçerik / Kenar Çubuğu"
 
-#: functions.php:151 functions.php:153
+#: functions.php:144 functions.php:146
 msgid "3 Columns: Sidebar / Sidebar / Content"
-msgstr ""
+msgstr "3 Sütun: Kenar Çubuğu / Kenar Çubuğu / İçerik"
 
-#: functions.php:151 functions.php:153
+#: functions.php:144 functions.php:146
 msgid "3 Columns: Content / Sidebar / Sidebar"
-msgstr ""
+msgstr "3 Sütun: İçerik / Kenar Çubuğu / Kenar Çubuğu"
 
-#: functions.php:152
+#: functions.php:145
 msgid "3 Columns: Sidebar / Content / Sidebar"
-msgstr ""
+msgstr "3 Sütun: Kenar Çubuğu / İçerik / Kenar Çubuğu"
+
+#: functions.php:216
+msgid "Sidebar"
+msgstr "Kenar Çubuğu"
 
 #: functions.php:218
-msgid "Sidebar"
-msgstr ""
-
-#: functions.php:220
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr ""
+"Birincil kenar çubuğu; her sayfanın, gönderinin, arşivin ve arama şablonunun "
+"içeriğiyle beraber görünür.  "
+
+#: functions.php:228
+msgid "Secondary Sidebar"
+msgstr "İkincil Kenar Çubuğu"
 
 #: functions.php:230
-msgid "Secondary Sidebar"
-msgstr ""
-
-#: functions.php:232
 msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr ""
+"İkincil Kenar Çubuğu, sadece üç sütunlu sayfa düzenini seçtiğinizde görünür."
+
+#: functions.php:240
+msgid "Footer Left"
+msgstr "Sol Alt Bilgi"
 
 #: functions.php:242
-msgid "Footer Left"
-msgstr ""
-
-#: functions.php:244
 msgid ""
 "The footer left sidebar appears in the first column of the footer widget "
 "area."
 msgstr ""
+"Sol alt bilgi kenar çubuğu, alt bilgi modül alanının ilk sütununda görünür."
+
+#: functions.php:252
+msgid "Footer Center"
+msgstr "Orta Alt Bilgi"
 
 #: functions.php:254
-msgid "Footer Center"
-msgstr ""
-
-#: functions.php:256
 msgid ""
 "The footer center sidebar appears in the second column of the footer widget "
 "area."
 msgstr ""
+"Orta alt bilgi kenar çubuğu, alt bilgi modül alanının ikinci sütununda görünür."
+
+#: functions.php:264
+msgid "Footer Right"
+msgstr "Sağ Alt Bilgi"
 
 #: functions.php:266
-msgid "Footer Right"
-msgstr ""
-
-#: functions.php:268
 msgid ""
 "The footer right sidebar appears in the third column of the footer widget "
 "area."
 msgstr ""
+"Sağ alt bilgi kenar çubuğu, alt bilgi modül alanının üçüncü sütununda görünür."
 
-#: functions.php:319
+#: functions.php:329
 msgctxt "Lato font: on or off"
 msgid "on"
-msgstr ""
+msgstr "açık"
 
-#: functions.php:325
+#: functions.php:335
 msgctxt "Merriweather font: on or off"
 msgid "on"
-msgstr ""
+msgstr "açık"
 
 #. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
 #. *
@@ -213,7 +215,7 @@ msgstr ""
 #.
 #: header.php:35
 msgid "Skip to content"
-msgstr ""
+msgstr "İçeriğe atla"
 
 #. //developer.wordpress.org/themes/basics/template-hierarchy/#search-result
 #. *
@@ -223,114 +225,62 @@ msgstr ""
 #, php-format
 msgctxt "search term"
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Şunun için Arama Sonuçları: %s"
 
 #: inc/breadcrumbs.php:39
 msgid "Blog"
-msgstr ""
-
-#: inc/custom-fonts.php:27
-msgid "Typography"
-msgstr ""
-
-#: inc/custom-fonts.php:37
-msgid "Primary Font"
-msgstr ""
-
-#: inc/custom-fonts.php:51
-msgid "Secondary Font"
-msgstr ""
-
-#: inc/customizer.php:90
-msgid "Base Color Scheme"
-msgstr ""
-
-#: inc/customizer.php:105
-msgid "Menu Background Color"
-msgstr ""
-
-#: inc/customizer.php:117
-msgid "Tagline Text Color"
-msgstr ""
-
-#: inc/customizer.php:129
-msgid "Link Color"
-msgstr ""
-
-#: inc/customizer.php:141
-msgid "Main Text Color"
-msgstr ""
-
-#: inc/customizer.php:153
-msgid "Secondary Text Color"
-msgstr ""
-
-#: inc/customizer.php:222
-msgid "Default"
-msgstr ""
-
-#: inc/customizer.php:234
-msgid "Dark"
-msgstr ""
-
-#: inc/customizer.php:246
-msgid "Muted"
-msgstr ""
-
-#: inc/customizer.php:258
-msgid "Red"
-msgstr ""
+msgstr "Blog"
 
 #: inc/extras.php:91
 #, php-format
 msgctxt "page number"
 msgid "Page %d"
-msgstr ""
+msgstr "Sayfa %d"
 
 #: inc/template-tags.php:56
 msgid "Posts navigation"
-msgstr ""
+msgstr "Gönderiler gezinti çubuğu"
 
 #: inc/template-tags.php:62
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> Eski gönderiler"
 
 #: inc/template-tags.php:68
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Yeni gönderiler <span class=\"meta-nav\">&rarr;</span>"
 
 #: inc/template-tags.php:102
 msgid "Post navigation"
-msgstr ""
+msgstr "Gönderi gezinti çubuğu"
 
 #: inc/theme-layouts.php:364
 msgctxt "theme layout"
 msgid "Default"
-msgstr ""
+msgstr "Varsayılan"
 
 #: inc/theme-layouts.php:459 inc/theme-layouts.php:566
 #: inc/theme-layouts.php:651
 msgid "Layout"
-msgstr ""
+msgstr "Düzen"
 
 #: inc/theme-layouts.php:684
 msgid "Global Layout"
-msgstr ""
+msgstr "Genel Sayfa Düzeni"
 
 #: templates/parts/loop/page-content.php:17
 #: templates/parts/loop/post-content.php:17
 msgid "Pages:"
-msgstr ""
+msgstr "Sayfalar:"
 
 #: templates/parts/loop/page-footer.php:8
 #: templates/parts/loop/post-footer.php:13
 #: templates/parts/loop/post-search-footer.php:45
 msgid "Edit"
-msgstr ""
+msgstr "Düzenle"
 
 #: templates/parts/loop/post-content.php:13
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Devamını Oku <span class=\"meta-nav\">&rarr;</span>"
 
 #: templates/parts/loop/post-footer.php:19
 #: templates/parts/loop/post-footer.php:31
@@ -338,46 +288,46 @@ msgstr ""
 #: templates/parts/loop/post-search-footer.php:25
 msgctxt "separator for items in a list"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: templates/parts/loop/post-footer.php:25
 #: templates/parts/loop/post-search-footer.php:19
 #, php-format
 msgctxt "category list"
 msgid "Posted in: %s"
-msgstr ""
+msgstr "Şu kategoriye gönderildi: %s"
 
 #: templates/parts/loop/post-footer.php:37
 #: templates/parts/loop/post-search-footer.php:31
 #, php-format
 msgctxt "tag list"
 msgid "Filed under: %s"
-msgstr ""
+msgstr "Şu etiketin altına yerleştirildi:  %s"
 
 #: templates/parts/loop/post-meta.php:13
 #, php-format
 msgctxt "1. post date, 2. author name"
 msgid "%1$s by %2$s"
-msgstr ""
+msgstr "%2$s tarihinde %1$s tarafından"
 
 #: templates/parts/loop/post-meta.php:25
 #: templates/parts/loop/post-search-footer.php:41
 msgid "Leave a comment"
-msgstr ""
+msgstr "Yorum bırakın"
 
 #: templates/parts/loop/post-meta.php:25
 #: templates/parts/loop/post-search-footer.php:41
 msgid "1 Comment"
-msgstr ""
+msgstr "1 Yorum"
 
 #: templates/parts/loop/post-meta.php:25
 #: templates/parts/loop/post-search-footer.php:41
 msgctxt "number of comments"
 msgid "% Comments"
-msgstr ""
+msgstr "% Yorum"
 
 #: templates/parts/site-info.php:17
 #, php-format
 msgctxt "1. theme name link, 2. theme author link"
 msgid "Built with %1$s by %2$s."
-msgstr ""
+msgstr "%2$s %1$s teması ile geliştirildi."
