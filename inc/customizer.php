@@ -467,7 +467,7 @@ function primer_customize_control_js() {
 
 	$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-	wp_enqueue_script( 'primer-color-scheme-control', get_template_directory_uri() . "/assets/js/color-scheme-control{$suffix}	.js", array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), PRIMER_VERSION, true );
+	wp_enqueue_script( 'primer-color-scheme-control', get_template_directory_uri() . "/assets/js/color-scheme-control{$suffix}.js", array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), PRIMER_VERSION, true );
 
 	wp_localize_script( 'primer-color-scheme-control', 'colorScheme', primer_get_color_schemes() );
 
