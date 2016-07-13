@@ -28,9 +28,19 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/action-hooks.php';
 
 /**
+ * Custom fonts.
+ */
+require get_template_directory() . '/inc/custom-fonts.php';
+
+/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Custom header.
+ */
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Load Jetpack compatibility file.
@@ -46,6 +56,8 @@ require get_template_directory() . '/inc/theme-layouts.php';
  * Set the content width based on the theme design and stylesheet.
  *
  * @link https://codex.wordpress.org/Content_Width
+ *
+ * @global int $content_width
  */
 if ( ! isset( $content_width ) ) {
 
@@ -77,6 +89,8 @@ if ( ! function_exists( 'primer_setup' ) ) {
 	 * Note that this function is hooked into the 'after_setup_theme' hook, which
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
+	 *
+	 * @since 1.0.0
 	 */
 	function primer_setup() {
 
@@ -118,6 +132,13 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		 * @link https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 		 */
 		add_theme_support( 'post-thumbnails' );
+
+		/**
+		 * Enable editor style support
+		 *
+		 * @link https://developer.wordpress.org/reference/functions/add_editor_style/
+		 */
+		add_editor_style();
 
 		/**
 		 * Register custom Custom Navigation Menus.
@@ -180,26 +201,9 @@ if ( ! function_exists( 'primer_setup' ) ) {
 			)
 		);
 
-		/**
-		 * Enable support for Custom Background.
-		 *
-		 * @link https://codex.wordpress.org/Function_Reference/add_theme_support#Custom_Background
-		 */
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'primer_custom_background_args',
-				array(
-					'default-color' => 'e7e7e7',
-					'default-image' => '',
-				)
-			)
-		);
-
 	}
 
 }
-
 add_action( 'after_setup_theme', 'primer_setup' );
 
 if ( ! function_exists( 'primer_widgets_init' ) ) {
@@ -208,6 +212,8 @@ if ( ! function_exists( 'primer_widgets_init' ) ) {
 	 * Register widget area.
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+	 *
+	 * @since 1.0.0
 	 */
 	function primer_widgets_init() {
 
@@ -274,7 +280,6 @@ if ( ! function_exists( 'primer_widgets_init' ) ) {
 	}
 
 }
-
 add_action( 'widgets_init', 'primer_widgets_init' );
 
 if ( ! function_exists( 'primer_scripts' ) ) {
@@ -284,6 +289,8 @@ if ( ! function_exists( 'primer_scripts' ) ) {
 	 *
 	 * @link https://codex.wordpress.org/Function_Reference/wp_enqueue_style
 	 * @link https://codex.wordpress.org/Function_Reference/wp_enqueue_script
+	 *
+	 * @since 1.0.0
 	 */
 	function primer_scripts() {
 
@@ -305,7 +312,6 @@ if ( ! function_exists( 'primer_scripts' ) ) {
 	}
 
 }
-
 add_action( 'wp_enqueue_scripts', 'primer_scripts' );
 
 if ( ! function_exists( 'primer_fonts_url' ) ) {
@@ -316,48 +322,51 @@ if ( ! function_exists( 'primer_fonts_url' ) ) {
 	 * The use of Lato and Merriweather by default is localized. For languages
 	 * that use characters not supported by the font, the font can be disabled.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @return string|null
 	 */
 	function primer_fonts_url() {
 
-		$fonts_url = null;
-
-		/* Translators: If there are characters in your language that are not
+		/**
+		 * Translators: If there are characters in your language that are not
 		 * supported by Lato, translate this to 'off' and do not translate
 		 * into your own language.
 		 */
 		$lato = _x( 'on', 'Lato font: on or off', 'primer' );
 
-		/* Translators: If there are characters in your language that are not
+		/**
+		 * Translators: If there are characters in your language that are not
 		 * supported by Merriweather, translate this to 'off' and do not translate
 		 * into your own language.
 		 */
 		$poly = _x( 'on', 'Merriweather font: on or off', 'primer' );
 
-		if ( 'off' !== $lato || 'off' !== $poly ) {
+		if ( 'off' === $lato && 'off' === $poly ) {
 
-			$font_families = array();
-
-			if ( 'off' !== $lato ) {
-
-				$font_families[] = 'Lato:300,700';
-
-			}
-
-			if ( 'off' !== $poly ) {
-
-				$font_families[] = 'Merriweather:400,400italic';
-
-			}
-
-			$query_args = array(
-				'family' => urlencode( implode( '|', $font_families ) ),
-				'subset' => urlencode( 'latin,latin-ext' ),
-			);
-
-			$fonts_url = add_query_arg( $query_args, "//fonts.googleapis.com/css" );
+			return;
 
 		}
+
+		$font_families = array();
+
+		if ( 'off' !== $lato ) {
+
+			$font_families[] = 'Lato:300,700';
+		}
+
+		if ( 'off' !== $poly ) {
+
+			$font_families[] = 'Merriweather:400,400italic';
+
+		}
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 
 		return $fonts_url;
 
@@ -372,6 +381,8 @@ if ( ! function_exists( 'primer_custom_excerpt_length' ) ) {
 	 *
 	 * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_length
 	 *
+	 * @since 1.0.0
+	 *
 	 * @return int
 	 */
 	function primer_custom_excerpt_length( $length ) {
@@ -381,7 +392,6 @@ if ( ! function_exists( 'primer_custom_excerpt_length' ) ) {
 	}
 
 }
-
 add_filter( 'excerpt_length', 'primer_custom_excerpt_length', 999 );
 
 if ( ! function_exists( 'primer_new_excerpt_more' ) ) {
@@ -390,6 +400,8 @@ if ( ! function_exists( 'primer_new_excerpt_more' ) ) {
 	 * Custom ending for excerpts when they have been truncated.
 	 *
 	 * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_more
+	 *
+	 * @since 1.0.0
 	 *
 	 * @return string
 	 */
@@ -400,5 +412,31 @@ if ( ! function_exists( 'primer_new_excerpt_more' ) ) {
 	}
 
 }
-
 add_filter( 'excerpt_more', 'primer_new_excerpt_more' );
+
+if ( ! function_exists( 'primer_conditional_jquery_tag' ) ) {
+
+	/**
+	 * Filter the script tag for jQuery.
+	 *
+	 * Wraps jQuery in a conditional comment that will allow
+	 * non-IE 9 (and lower) browsers to use the newest version
+	 * of jQuery.
+	 *
+	 * @filter script_loader_tag
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  string $tag
+	 * @param  string $handle
+	 *
+	 * @return string
+	 */
+	function primer_conditional_jquery_tag( $tag, $handle ) {
+
+		return ( 'jquery' === $handle ) ? "<!--[if (gte IE 9) | (!IE)]><!-->$tag<!--<![endif]-->" : $tag;
+
+	}
+
+}
+add_filter( 'script_loader_tag', 'primer_conditional_jquery_tag', 10, 2 );

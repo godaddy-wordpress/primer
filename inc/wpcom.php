@@ -12,6 +12,8 @@
  *
  * @action after_setup_theme
  *
+ * @since 1.0.0
+ *
  * @global array $themecolors
  */
 function primer_wpcom_setup() {

@@ -6,7 +6,6 @@ $site-footer-anchor-color-hover: contrast-color($site-footer-background, #222, #
 
 $site-footer-info-background: #fff;
 $site-footer-info-text-color: contrast-color($site-footer-info-background, #222, #fff, 50%) !default;
-$site-footer-info-border-color: contrast-color($site-footer-info-background, darken($site-footer-info-background,15%), lighten($site-footer-info-background,15%), 50%) !default;
 $site-footer-info-anchor-color: contrast-color($site-footer-info-background, #222, #fff, 50%) !default;
 $site-footer-info-anchor-color-hover: contrast-color($site-footer-info-background, #222, #fff, 50%) !default;
 

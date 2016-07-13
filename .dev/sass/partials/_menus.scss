@@ -1,7 +1,5 @@
-$menu-font-family: Helvetica, Arial, sans-serif !default;
+$menu-font-family: $header-font-family !default;
 $menu-background-color: #222 !default;
-$menu-height: 4rem !default;
-$menu-sub-item-height: $menu-height*.75 !default;
 
 .main-navigation-container{
 	background-color: $menu-background-color;
@@ -40,7 +38,6 @@ $menu-sub-item-height: $menu-height*.75 !default;
 		text-align: center;
 
 		a {
-			background-color: $menu-background-color;
 			display: block;
 			font-family: $menu-font-family;
 			line-height: 1.2;
@@ -52,7 +49,7 @@ $menu-sub-item-height: $menu-height*.75 !default;
 
 
 			&:hover {
-				background-color: contrast-color($menu-background-color,darken($menu-background-color,10%),lighten($menu-background-color,10%),50%);
+				background-color: rgba(0,0,0,.05);
 				text-decoration: none;
 			}
 		}
@@ -64,6 +61,10 @@ $menu-sub-item-height: $menu-height*.75 !default;
 			padding-top: 1rem;
 			padding-bottom: 1em;
 			padding-bottom: 1rem;
+
+			&:hover{
+				background-color: rgba(0,0,0,.05);
+			}
 		}
 	}
 
@@ -113,6 +114,7 @@ $menu-sub-item-height: $menu-height*.75 !default;
 			.sub-menu .menu-item-has-children {
 
 				&:hover {
+
 					> a:after {
 						border-left-color: contrast-color($menu-background-color,#000,#fff,50%);
 					}

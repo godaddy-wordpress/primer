@@ -10,6 +10,8 @@
  *
  * @filter wp_page_menu_args
  *
+ * @since 1.0.0
+ *
  * @param  array $args
  *
  * @return array
@@ -27,6 +29,8 @@ add_filter( 'wp_page_menu_args', 'primer_page_menu_args' );
  * Adds custom classes to the array of body classes.
  *
  * @filter body_class
+ *
+ * @since 1.0.0
  *
  * @param  array $classes
  *
@@ -49,6 +53,11 @@ add_filter( 'body_class', 'primer_body_class' );
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
  *
  * @filter wp_title
+ *
+ * @since 1.0.0
+ *
+ * @global int $page
+ * @global int $paged
  *
  * @param  string $title
  * @param  string $sep
@@ -111,7 +120,10 @@ add_filter( 'wp_title', 'primer_wp_title', 10, 2 );
  *
  * @action wp
  *
+ * @since 1.0.0
+ *
  * @global WP_Query $wp_query
+ * @global WP_User  $authordata
  */
 function primer_setup_author() {
 
@@ -137,6 +149,8 @@ add_action( 'wp', 'primer_setup_author' );
  * @action save_post
  *
  * @see primer_has_active_categories()
+ *
+ * @since 1.0.0
  */
 function primer_has_active_categories_reset() {
 
@@ -147,3 +161,38 @@ add_action( 'create_category', 'primer_has_active_categories_reset' );
 add_action( 'edit_category',   'primer_has_active_categories_reset' );
 add_action( 'delete_category', 'primer_has_active_categories_reset' );
 add_action( 'save_post',       'primer_has_active_categories_reset' );
+
+/**
+ * Convert a 3- or 6-digit hexadecimal color to an associative RGB array.
+ *
+ * @since 1.0.0
+ *
+ * @param  string $color
+ *
+ * @return array
+ */
+function primer_hex2rgb( $color ) {
+
+	$color = trim( $color, '#' );
+
+	if ( 3 === strlen( $color ) ) {
+
+		$r = hexdec( substr( $color, 0, 1 ).substr( $color, 0, 1 ) );
+		$g = hexdec( substr( $color, 1, 1 ).substr( $color, 1, 1 ) );
+		$b = hexdec( substr( $color, 2, 1 ).substr( $color, 2, 1 ) );
+
+	} elseif ( 6 === strlen( $color ) ) {
+
+		$r = hexdec( substr( $color, 0, 2 ) );
+		$g = hexdec( substr( $color, 2, 2 ) );
+		$b = hexdec( substr( $color, 4, 2 ) );
+
+	} else {
+
+		return array();
+
+	}
+
+	return array( 'red' => $r, 'green' => $g, 'blue' => $b );
+
+}
