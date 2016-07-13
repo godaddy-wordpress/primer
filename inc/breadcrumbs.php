@@ -13,6 +13,10 @@ if ( ! function_exists( 'primer_breadcrumbs' ) ) {
 	 * Adapted from Christoph Weil's Really Simple Breadcrumb plugin.
 	 *
 	 * @link https://wordpress.org/plugins/really-simple-breadcrumb/
+	 *
+	 * @since 1.0.0
+	 *
+	 * @global WP_Post $post
 	 */
 	function primer_breadcrumbs() {
 
@@ -99,13 +103,15 @@ if ( ! function_exists( 'primer_get_posts_url' ) ) {
 	 * In the event a custom homepage exists, we need
 	 * to find the posts page and return its URL.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @return string|false
 	 */
 	function primer_get_posts_url() {
 
 		if ( 'page' === get_option( 'show_on_front' ) ) {
 
-			$posts_page_id 	= get_option( 'page_for_posts' );
+			$posts_page_id  = get_option( 'page_for_posts' );
 			$posts_page_url = get_page_uri( $posts_page_id );
 
 		}

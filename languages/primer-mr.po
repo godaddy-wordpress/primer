@@ -1,0 +1,331 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: primer 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-21 16:55-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#. //codex.wordpress.org/Creating_an_Error_404_Page
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#404-php
+#. *
+#. * @package Primer
+#.
+#: 404.php:21
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "अरेरे! पृष्‍ठ सापडले जाऊ शकत नाही."
+
+#: 404.php:27
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"या स्थानावर काहीही सापडले नाही असे दिसते. खालील लिंक्सपैकी एक वापरून पाहायची "
+"किंवा शोध करायचा?"
+
+#: 404.php:37
+msgid "Most Used Categories"
+msgstr "सर्वाधिक वापरलेल्या श्रेण्या"
+
+#: 404.php:61
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "मासिक संग्रहणांमध्ये शोधून पहा. %1$s"
+
+#: comments.php:34
+#, php-format
+msgctxt "1. number of comments, 2. post title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$d thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "&ldquo;%2$s&rdquo; वरील एक विचार"
+msgstr[1] "%1$d thoughts on &ldquo;%2$s&rdquo;"
+
+#: comments.php:50 comments.php:75
+msgid "Comment navigation"
+msgstr "टिप्पणी नेव्हिगेशन"
+
+#: comments.php:52 comments.php:77
+msgid "&larr; Older Comments"
+msgstr "&larr; जुन्या टिप्पण्या"
+
+#: comments.php:54 comments.php:79
+msgid "Newer Comments &rarr;"
+msgstr "नवीन टिप्पण्‍या &rarr;"
+
+#: comments.php:89
+msgid "Comments are closed."
+msgstr "टिप्पण्या बंद केल्या आहेत."
+
+#: content-featured.php:30
+msgid "Featured"
+msgstr "वैशिष्ट्यीकृत"
+
+#: content-featured.php:40
+msgid "Read More"
+msgstr "आणखी वाचा"
+
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
+#. *
+#. * @package Primer
+#.
+#: content-none.php:15
+msgid "Nothing Found"
+msgstr "काहीही सापडले नाही"
+
+#: content-none.php:23
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"आपले प्रथम पोस्ट प्रकाशित करण्यास सज्ज? <a href=\"%1$s\">येथे प्रारंभ करा</a>."
+
+#: content-none.php:27
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"क्षमस्व, परंतु आपल्या शोध संज्ञांशी काहीही जुळले नाही. कृपया काही भिन्न "
+"कीवर्डसह पुन्हा प्रयत्न करा."
+
+#: content-none.php:32
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"आपण शोधत असलेले आम्ही शोधू शकत नाही असे दिसते. कदाचित शोधणे मदत करू शकते."
+
+#: functions.php:129
+msgid "Primary Menu"
+msgstr "प्राथमिक मेनू"
+
+#: functions.php:130
+msgid "Social Menu"
+msgstr "सामाजिक मेनू"
+
+#: functions.php:140
+msgid "1 Column Wide"
+msgstr "1 स्तंभ रूंद"
+
+#: functions.php:141
+msgid "1 Column Narrow"
+msgstr "1 स्तंभ अरूंद"
+
+#: functions.php:142 functions.php:143
+msgid "2 Columns: Sidebar / Content"
+msgstr "2 स्तंभ: साइडबार / साइडबार"
+
+#: functions.php:142 functions.php:143
+msgid "2 Columns: Content / Sidebar"
+msgstr "2 स्तंभ: सामग्री / साइडबार"
+
+#: functions.php:144 functions.php:146
+msgid "3 Columns: Sidebar / Sidebar / Content"
+msgstr "3 स्तंभ: साइडबार / साइडबार / सामग्री"
+
+#: functions.php:144 functions.php:146
+msgid "3 Columns: Content / Sidebar / Sidebar"
+msgstr "3 स्तंभ: सामग्री / साइडबार / साइडबार"
+
+#: functions.php:145
+msgid "3 Columns: Sidebar / Content / Sidebar"
+msgstr "3 स्तंभ: साइडबार / सामग्री/ साइडबार"
+
+#: functions.php:216
+msgid "Sidebar"
+msgstr "साइडबार"
+
+#: functions.php:218
+msgid ""
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
+msgstr ""
+"प्रत्येक पृष्‍ठ, पोस्ट, संग्रहण आणि शोध टेम्पलेटच्या सामग्रीच्या बाजूस "
+"प्राथमिक साइडबार दिसतो. "
+
+#: functions.php:228
+msgid "Secondary Sidebar"
+msgstr "दुय्यम साइडबार"
+
+#: functions.php:230
+msgid ""
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
+msgstr "आपण एक तृतीय-स्तंभ लेआउट निवडता केवळ तेव्हाच दुय्यम साइडबार दिसेल. "
+
+#: functions.php:240
+msgid "Footer Left"
+msgstr "तळटीपेच्या डावीकडील"
+
+#: functions.php:242
+msgid ""
+"The footer left sidebar appears in the first column of the footer widget "
+"area."
+msgstr ""
+"तळटीप विजेट क्षेत्राच्या प्रथम स्तंभामध्ये तळटीपेच्या डावीकडील साइडबार दिसतो."
+
+#: functions.php:252
+msgid "Footer Center"
+msgstr "तळटीप केंद्र"
+
+#: functions.php:254
+msgid ""
+"The footer center sidebar appears in the second column of the footer widget "
+"area."
+msgstr ""
+"तळटीप विजेट क्षेत्राच्या दुय्यम स्तंभामध्ये तळटीपेच्या केंद्रातील साइडबार दिसतो."
+
+#: functions.php:264
+msgid "Footer Right"
+msgstr "तळटीपेच्या उजवीकडील"
+
+#: functions.php:266
+msgid ""
+"The footer right sidebar appears in the third column of the footer widget "
+"area."
+msgstr ""
+"तळटीप विजेट क्षेत्राच्या तृतीय स्तंभामध्ये तळटीपेच्या उजवीकडील साइडबार दिसतो."
+
+#: functions.php:329
+msgctxt "Lato font: on or off"
+msgid "on"
+msgstr "चालू"
+
+#: functions.php:335
+msgctxt "Merriweather font: on or off"
+msgid "on"
+msgstr "चालू"
+
+#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
+#. *
+#. * @package Primer
+#.
+#: header.php:35
+msgid "Skip to content"
+msgstr "सामग्रीवर जा"
+
+#. //developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+#. *
+#. * @package Primer
+#.
+#: search.php:20
+#, php-format
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr "साठी शोध परिणाम: %s"
+
+#: inc/breadcrumbs.php:39
+msgid "Blog"
+msgstr "ब्लॉग"
+
+#: inc/extras.php:91
+#, php-format
+msgctxt "page number"
+msgid "Page %d"
+msgstr "पृष्ठ %d"
+
+#: inc/template-tags.php:56
+msgid "Posts navigation"
+msgstr "पोस्ट नेव्हिगेशन"
+
+#: inc/template-tags.php:62
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> जुने पोस्ट"
+
+#: inc/template-tags.php:68
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "नवीन पोस्ट <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:102
+msgid "Post navigation"
+msgstr "पोस्ट नेव्हिगेशन"
+
+#: inc/theme-layouts.php:364
+msgctxt "theme layout"
+msgid "Default"
+msgstr "डिफॉल्ट"
+
+#: inc/theme-layouts.php:459 inc/theme-layouts.php:566
+#: inc/theme-layouts.php:651
+msgid "Layout"
+msgstr "लेआउट"
+
+#: inc/theme-layouts.php:684
+msgid "Global Layout"
+msgstr "जागतिक लेआउट"
+
+#: templates/parts/loop/page-content.php:17
+#: templates/parts/loop/post-content.php:17
+msgid "Pages:"
+msgstr "पृष्‍ठे:"
+
+#: templates/parts/loop/page-footer.php:8
+#: templates/parts/loop/post-footer.php:13
+#: templates/parts/loop/post-search-footer.php:45
+msgid "Edit"
+msgstr "संपादित करा"
+
+#: templates/parts/loop/post-content.php:13
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr "आणखी वाचा <span class=\"meta-nav\">&rarr;</span>"
+
+#: templates/parts/loop/post-footer.php:19
+#: templates/parts/loop/post-footer.php:31
+#: templates/parts/loop/post-search-footer.php:13
+#: templates/parts/loop/post-search-footer.php:25
+msgctxt "separator for items in a list"
+msgid ", "
+msgstr ", "
+
+#: templates/parts/loop/post-footer.php:25
+#: templates/parts/loop/post-search-footer.php:19
+#, php-format
+msgctxt "category list"
+msgid "Posted in: %s"
+msgstr "यामध्ये पोस्ट केले: %s"
+
+#: templates/parts/loop/post-footer.php:37
+#: templates/parts/loop/post-search-footer.php:31
+#, php-format
+msgctxt "tag list"
+msgid "Filed under: %s"
+msgstr "या अंतर्गत फाईल केले: %s"
+
+#: templates/parts/loop/post-meta.php:13
+#, php-format
+msgctxt "1. post date, 2. author name"
+msgid "%1$s by %2$s"
+msgstr "%2$s नुसार %1$s "
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgid "Leave a comment"
+msgstr "एक टिप्पणी द्या"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgid "1 Comment"
+msgstr "1 टिप्पणी"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:41
+msgctxt "number of comments"
+msgid "% Comments"
+msgstr "% टिप्पण्या"
+
+#: templates/parts/site-info.php:17
+#, php-format
+msgctxt "1. theme name link, 2. theme author link"
+msgid "Built with %1$s by %2$s."
+msgstr "%2$s नुसार %1$s सह बिल्ट केले."

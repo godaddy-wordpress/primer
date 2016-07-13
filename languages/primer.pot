@@ -1,14 +1,25 @@
+<<<<<<< HEAD
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the Primer package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+=======
+# Primer Theme for WordPress
+# Copyright (C) 2016
+# This file is distributed under the same license as the primer package.
+# GoDaddy Operating Company, LLC.
+>>>>>>> master
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: primer 1.0.0\n"
+"Project-Id-Version: Primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-17 20:53-0500\n"
+<<<<<<< HEAD
+"POT-Creation-Date: 2016-07-09 16:45-0500\n"
+=======
+"POT-Creation-Date: 2016-07-12 22:38-0500\n"
+>>>>>>> master
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,27 +53,27 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: comments.php:32
+#: comments.php:34
 #, php-format
-msgctxt "comments title"
+msgctxt "1. number of comments, 2. post title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$d thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:41 comments.php:66
+#: comments.php:50 comments.php:75
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:43 comments.php:68
+#: comments.php:52 comments.php:77
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:45 comments.php:70
+#: comments.php:54 comments.php:79
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:80
+#: comments.php:89
 msgid "Comments are closed."
 msgstr ""
 
@@ -100,98 +111,98 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: functions.php:122
+#: functions.php:136
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:123
+#: functions.php:137
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:133
+#: functions.php:147
 msgid "1 Column Wide"
 msgstr ""
 
-#: functions.php:134
+#: functions.php:148
 msgid "1 Column Narrow"
 msgstr ""
 
-#: functions.php:135
-msgid "2 Columns: Content / Sidebar"
-msgstr ""
-
-#: functions.php:136
+#: functions.php:149 functions.php:150
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
-#: functions.php:137
-msgid "3 Columns: Content / Sidebar / Sidebar"
+#: functions.php:149 functions.php:150
+msgid "2 Columns: Content / Sidebar"
 msgstr ""
 
-#: functions.php:138
-msgid "3 Columns: Sidebar / Content / Sidebar"
-msgstr ""
-
-#: functions.php:139
+#: functions.php:151 functions.php:153
 msgid "3 Columns: Sidebar / Sidebar / Content"
 msgstr ""
 
-#: functions.php:209
+#: functions.php:151 functions.php:153
+msgid "3 Columns: Content / Sidebar / Sidebar"
+msgstr ""
+
+#: functions.php:152
+msgid "3 Columns: Sidebar / Content / Sidebar"
+msgstr ""
+
+#: functions.php:218
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:211
+#: functions.php:220
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr ""
 
-#: functions.php:221
+#: functions.php:230
 msgid "Secondary Sidebar"
 msgstr ""
 
-#: functions.php:223
+#: functions.php:232
 msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr ""
 
-#: functions.php:233
+#: functions.php:242
 msgid "Footer Left"
 msgstr ""
 
-#: functions.php:235
+#: functions.php:244
 msgid ""
 "The footer left sidebar appears in the first column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:245
+#: functions.php:254
 msgid "Footer Center"
 msgstr ""
 
-#: functions.php:247
+#: functions.php:256
 msgid ""
 "The footer center sidebar appears in the second column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:257
+#: functions.php:266
 msgid "Footer Right"
 msgstr ""
 
-#: functions.php:259
+#: functions.php:268
 msgid ""
 "The footer right sidebar appears in the third column of the footer widget "
 "area."
 msgstr ""
 
-#: functions.php:320
+#: functions.php:319
 msgctxt "Lato font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:326
+#: functions.php:325
 msgctxt "Merriweather font: on or off"
 msgid "on"
 msgstr ""
@@ -218,36 +229,78 @@ msgstr ""
 msgid "Blog"
 msgstr ""
 
+#: inc/custom-fonts.php:27
+msgid "Typography"
+msgstr ""
+
+#: inc/custom-fonts.php:37
+msgid "Primary Font"
+msgstr ""
+
+#: inc/custom-fonts.php:51
+msgid "Secondary Font"
+msgstr ""
+
+#: inc/customizer.php:90
+msgid "Base Color Scheme"
+msgstr ""
+
+#: inc/customizer.php:105
+msgid "Menu Background Color"
+msgstr ""
+
+#: inc/customizer.php:117
+msgid "Tagline Text Color"
+msgstr ""
+
+#: inc/customizer.php:129
+msgid "Link Color"
+msgstr ""
+
+#: inc/customizer.php:141
+msgid "Main Text Color"
+msgstr ""
+
+#: inc/customizer.php:153
+msgid "Secondary Text Color"
+msgstr ""
+
+#: inc/customizer.php:222
+msgid "Default"
+msgstr ""
+
+#: inc/customizer.php:234
+msgid "Dark"
+msgstr ""
+
+#: inc/customizer.php:246
+msgid "Muted"
+msgstr ""
+
+#: inc/customizer.php:258
+msgid "Red"
+msgstr ""
+
 #: inc/extras.php:91
 #, php-format
 msgctxt "page number"
 msgid "Page %d"
 msgstr ""
 
-#: inc/template-tags.php:73
+#: inc/template-tags.php:56
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:79
+#: inc/template-tags.php:62
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: inc/template-tags.php:85
+#: inc/template-tags.php:68
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/template-tags.php:119
+#: inc/template-tags.php:102
 msgid "Post navigation"
-msgstr ""
-
-#: inc/template-tags.php:123
-msgctxt "previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-msgstr ""
-
-#: inc/template-tags.php:125
-msgctxt "next post link"
-msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: inc/theme-layouts.php:364

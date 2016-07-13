@@ -1,6 +1,20 @@
 <?php
 
 /**
+ * Enable support for WooCommerce.
+ *
+ * @link https://docs.woothemes.com/document/third-party-custom-theme-compatibility/
+ *
+ * @action after_setup_theme
+ */
+function primer_woocommerce_setup() {
+
+	add_theme_support( 'woocommerce' );
+
+}
+add_action( 'after_setup_theme', 'primer_woocommerce_setup' );
+
+/**
  * Remove the default WooCommerce page wrapper.
  */
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
@@ -47,13 +61,13 @@ add_action( 'woocommerce_after_main_content', 'primer_woo_wrapper_end', 10 );
  */
 function primer_woo_shop_theme_layout( $theme_layout ) {
 
-	if ( ! function_exists( 'is_shop' ) || ! is_shop() ) {
+	if ( function_exists( 'wc_get_page_id' ) && function_exists( 'is_shop' ) && is_shop() ) {
 
-		return $theme_layout;
+		$theme_layout = get_post_layout( wc_get_page_id( 'shop' ) );
 
 	}
 
-	return get_post_layout( wc_get_page_id( 'shop' ) );
+	return $theme_layout;
 
 }
 add_filter( 'theme_mod_theme_layout', 'primer_woo_shop_theme_layout' );

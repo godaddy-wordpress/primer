@@ -5,19 +5,44 @@
  */
 
 ( function( $ ) {
-	// Site title and description.
-	wp.customize( 'blogname', function( value ) {
+	var style = $( '#primer-color-scheme-css' ),
+		api = wp.customize;
+
+	if ( ! style.length ) {
+		style = $( 'head' ).append( '<style type="text/css" id="primer-color-scheme-css" />' )
+		                    .find( '#primer-color-scheme-css' );
+	}
+
+	// Site title.
+	api( 'blogname', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-title a' ).text( to );
 		} );
 	} );
-	wp.customize( 'blogdescription', function( value ) {
+
+	// Site tagline.
+	api( 'blogdescription', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-description' ).text( to );
 		} );
 	} );
-	// Header text color.
-	wp.customize( 'header_textcolor', function( value ) {
+
+	// Add custom-background-image body class when background image is added.
+	api( 'background_image', function( value ) {
+		value.bind( function( to ) {
+			$( 'body' ).toggleClass( 'custom-background-image', '' !== to );
+		} );
+	} );
+
+	// Color Scheme CSS.
+	api.bind( 'preview-ready', function() {
+		api.preview.bind( 'update-color-scheme-css', function( css ) {
+			style.html( css );
+		} );
+	} );
+
+	// Header Text Color
+	api( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {
 			if ( 'blank' === to ) {
 				$( '.site-title, .site-description' ).css( {
@@ -27,7 +52,6 @@
 			} else {
 				$( '.site-title, .site-description' ).css( {
 					'clip': 'auto',
-					'color': to,
 					'position': 'relative'
 				} );
 			}

@@ -1,3 +1,10 @@
+body.no-max-width .site-title-wrapper,
+body.no-max-width .main-navigation,
+body.no-max-width .site-footer-inner,
+body.no-max-width .site-info {
+	max-width: none;
+}
+
 #content{
 	@extend .row;
 	padding: 2.25rem 0;
@@ -114,7 +121,7 @@
 	}
 }
 
-body.layout-one-column-narrow &{
+body.layout-one-column-narrow {
 	#content{
 		max-width: 50em;
 	}

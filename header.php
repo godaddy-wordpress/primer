@@ -24,6 +24,31 @@
 
 	<?php wp_head() ?>
 
+<!--[if lt IE 9]>
+
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/ie.css">
+
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/respond.min.js"></script>
+
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/nwmatcher.min.js"></script>
+
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.min.js"></script>
+
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/html5shiv.min.js"></script>
+
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/selectivizr.js"></script>
+
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/rem.min.js"></script>
+
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.backgroundSize.js"></script>
+
+	<script type="text/javascript">
+	$(document).ready(function($){
+		$('body .hero').css({backgroundSize: "cover"});
+	});
+	</script>
+
+<![endif] -->
 </head>
 
 <body <?php body_class() ?>>

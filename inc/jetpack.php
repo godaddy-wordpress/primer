@@ -1,7 +1,6 @@
 <?php
 /**
- * Jetpack Compatibility File
- * See: http://jetpack.me/
+ * Jetpack compatibility.
  *
  * @package Primer
  */
@@ -9,8 +8,12 @@
 /**
  * Enable support for certain Jetpack modules.
  *
+ * @action after_setup_theme
+ *
  * @link https://jetpack.com/support/featured-content/
  * @link https://jetpack.com/support/infinite-scroll/
+ *
+ * @since 1.0.0
  */
 function primer_jetpack_setup() {
 
@@ -38,6 +41,8 @@ add_action( 'after_setup_theme', 'primer_jetpack_setup' );
  * Display Featured Posts from Jetpack in the theme.
  *
  * @action primer_header_after
+ *
+ * @since 1.0.0
  */
 function primer_jetpack_init(){
 
@@ -55,16 +60,27 @@ add_action( 'primer_header_after', 'primer_jetpack_init' );
  *
  * @link http://jetpack.me/support/featured-content/
  *
+ * @since 1.0.0
+ *
  * @return array
  */
 function primer_get_featured_posts() {
 
+	/**
+	 * Filter the Featured Posts from Jetpack.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var array
+	 */
 	return (array) apply_filters( 'primer_get_featured_posts', array() );
 
 }
 
 /**
  * Check for Featured Posts in Jetpack.
+ *
+ * @since 1.0.0
  *
  * @param  int $minimum (optional)
  *
@@ -86,6 +102,8 @@ function primer_has_featured_posts( $minimum = 1 ) {
 
 /**
  * Display the featured content post loop.
+ *
+ * @since 1.0.0
  */
 function primer_display_featured_posts() {
 
@@ -97,6 +115,8 @@ function primer_display_featured_posts() {
  * Add featured post image background to header.
  *
  * @action wp_print_styles
+ *
+ * @since 1.0.0
  */
 function primer_get_featured_content_post_bg(){
 

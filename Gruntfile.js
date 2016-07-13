@@ -6,25 +6,13 @@ module.exports = function(grunt) {
 
 		pkg: pkg,
 
-		sass: {
-			dist: {
-				files: {
-					'style.css' : '.dev/sass/style.scss'
-				}
-			}
-		},
-
-		jshint: {
-			all: ['js/**/*.js', 'Gruntfile.js']
-		},
-
 		autoprefixer: {
 			options: {
 				// Task-specific options go here.
 			},
 			your_target: {
 				src: '*.css'
-			},
+			}
 		},
 
 		cssjanus: {
@@ -38,6 +26,17 @@ module.exports = function(grunt) {
 						dest: 'style-rtl.css'
 					}
 				]
+			}
+		},
+
+		jshint: {
+			all: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js']
+		},
+
+		po2mo: {
+			files: {
+				src: 'languages/*.po',
+				expand: true
 			}
 		},
 
@@ -75,40 +74,8 @@ module.exports = function(grunt) {
 					'inc/**/*.php',
 					'templates/**/*.php'
 				],
-				expand: true,
-			}
-		},
-
-		po2mo: {
-			files: {
-				src: 'languages/*.po',
 				expand: true
 			}
-		},
-
-		phplint: {
-			options: {
-				swapPath: '/.phplint'
-			},
-			all: ['**/*.php']
-		},
-
-		watch: {
-			css: {
-				files: '.dev/**/*.scss',
-				tasks: ['sass','autoprefixer','cssjanus']
-			},
-			scripts: {
-				files: ['js/**/*.js', 'Gruntfile.js' ],
-				tasks: ['jshint'],
-				options: {
-					interrupt: true,
-				}
-			},
-			pot: {
-				files: [ '**/*.php' ],
-				tasks: ['pot'],
-			},
 		},
 
 		replace: {
@@ -117,11 +84,83 @@ module.exports = function(grunt) {
 				overwrite: true,
 				replacements: [
 					{
+						from: 'SOME DESCRIPTIVE TITLE.',
+						to: 'Primer Theme for WordPress'
+					},
+					{
+						from: "YEAR THE PACKAGE'S COPYRIGHT HOLDER",
+						to: new Date().getFullYear()
+					},
+					{
+						from: 'FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.',
+						to: 'GoDaddy Operating Company, LLC.'
+					},
+					{
 						from: 'charset=CHARSET',
 						to: 'charset=UTF-8'
 					}
 				]
 			}
+		},
+
+		sass: {
+			options: {
+				sourceMap: false
+			},
+			dist: {
+				files: {
+					'style.css': '.dev/sass/style.scss',
+					'editor-style.css': '.dev/sass/editor-style.scss'
+				}
+			}
+		},
+
+		uglify: {
+			options: {
+				ASCIIOnly: true
+			},
+			core: {
+				expand: true,
+				cwd: 'assets/js',
+				src: ['*.js', '!*.min.js'],
+				dest: 'assets/js',
+				ext: '.min.js'
+			}
+		},
+
+		devUpdate: {
+			main: {
+				options: {
+					updateType: 'force', //just report outdated packages
+					reportUpdated: false, //don't report up-to-date packages
+					semver: true, //stay within semver when updating
+					packages: {
+						devDependencies: true, //only check for devDependencies
+						dependencies: false
+					},
+					packageJson: null, //use matchdep default findup to locate package.json
+					reportOnlyPkgs: [] //use updateType action on all packages
+				}
+			}
+	    },
+
+
+		watch: {
+			css: {
+				files: '.dev/sass/**/*.scss',
+				tasks: ['sass','autoprefixer','cssjanus']
+			},
+			scripts: {
+				files: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js'],
+				tasks: ['jshint', 'uglify'],
+				options: {
+					interrupt: true
+				}
+			},
+			pot: {
+				files: [ '**/*.php' ],
+				tasks: ['update-pot']
+			},
 		}
 
 	});

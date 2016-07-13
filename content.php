@@ -11,6 +11,8 @@
 
 	<?php get_template_part( 'templates/parts/loop/post', 'title' ) ?>
 
+	<?php get_template_part( 'templates/parts/loop/post', 'meta' ) ?>
+
 	<?php get_template_part( 'templates/parts/loop/post', 'thumbnail' ) ?>
 
 	<?php if ( is_single() ) : ?>

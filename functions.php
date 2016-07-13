@@ -6,6 +6,13 @@
  */
 
 /**
+ * Primer theme version.
+ *
+ * @var string
+ */
+define( 'PRIMER_VERSION', '1.0.0' );
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -21,9 +28,19 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/action-hooks.php';
 
 /**
+ * Custom fonts.
+ */
+require get_template_directory() . '/inc/custom-fonts.php';
+
+/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Custom header.
+ */
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Load Jetpack compatibility file.
@@ -31,19 +48,21 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
- * Load custom theme layout functionality.
- */
-require get_template_directory() . '/inc/theme-layouts.php';
-
-/**
  * Load WooCommerce compatibility file.
  */
 require get_template_directory() . '/inc/woocommerce.php';
 
 /**
+ * Load custom theme layout functionality.
+ */
+require get_template_directory() . '/inc/theme-layouts.php';
+
+/**
  * Set the content width based on the theme design and stylesheet.
  *
  * @link https://codex.wordpress.org/Content_Width
+ *
+ * @global int $content_width
  */
 if ( ! isset( $content_width ) ) {
 
@@ -75,6 +94,8 @@ if ( ! function_exists( 'primer_setup' ) ) {
 	 * Note that this function is hooked into the 'after_setup_theme' hook, which
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
+	 *
+	 * @since 1.0.0
 	 */
 	function primer_setup() {
 
@@ -118,11 +139,11 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		add_theme_support( 'post-thumbnails' );
 
 		/**
-		 * Enable support for WooCommerce.
+		 * Enable support for editor style.
 		 *
-		 * @link https://docs.woothemes.com/document/third-party-custom-theme-compatibility/
+		 * @link https://developer.wordpress.org/reference/functions/add_editor_style/
 		 */
-		add_theme_support( 'woocommerce' );
+		add_editor_style();
 
 		/**
 		 * Register custom Custom Navigation Menus.
@@ -131,8 +152,8 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		 */
 		register_nav_menus(
 			array(
-				'primary' => __( 'Primary Menu', 'primer' ),
-				'social'  => __( 'Social Menu', 'primer' ),
+				'primary' => esc_html__( 'Primary Menu', 'primer' ),
+				'social'  => esc_html__( 'Social Menu', 'primer' ),
 			)
 		);
 
@@ -142,13 +163,13 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		add_theme_support(
 			'theme-layouts',
 			array(
-				'one-column-wide'       => __( '1 Column Wide',                          'primer' ),
-				'one-column-narrow'     => __( '1 Column Narrow',                        'primer' ),
-				'two-column-default'    => __( '2 Columns: Content / Sidebar',           'primer' ),
-				'two-column-reversed'   => __( '2 Columns: Sidebar / Content',           'primer' ),
-				'three-column-default'  => __( '3 Columns: Content / Sidebar / Sidebar', 'primer' ),
-				'three-column-center'   => __( '3 Columns: Sidebar / Content / Sidebar', 'primer' ),
-				'three-column-reversed' => __( '3 Columns: Sidebar / Sidebar / Content', 'primer' ),
+				'one-column-wide'       => esc_html__( '1 Column Wide', 'primer' ),
+				'one-column-narrow'     => esc_html__( '1 Column Narrow', 'primer' ),
+				'two-column-default'    => is_rtl() ? esc_html__( '2 Columns: Sidebar / Content', 'primer' ) : esc_html__( '2 Columns: Content / Sidebar', 'primer' ),
+				'two-column-reversed'   => is_rtl() ? esc_html__( '2 Columns: Content / Sidebar', 'primer' ) : esc_html__( '2 Columns: Sidebar / Content', 'primer' ),
+				'three-column-default'  => is_rtl() ? esc_html__( '3 Columns: Sidebar / Sidebar / Content', 'primer' ) : esc_html__( '3 Columns: Content / Sidebar / Sidebar', 'primer' ),
+				'three-column-center'   => esc_html__( '3 Columns: Sidebar / Content / Sidebar', 'primer' ),
+				'three-column-reversed' => is_rtl() ? esc_html__( '3 Columns: Content / Sidebar / Sidebar', 'primer' ) : esc_html__( '3 Columns: Sidebar / Sidebar / Content', 'primer' ),
 			),
 			array( 'default' => 'two-column-default' )
 		);
@@ -185,26 +206,9 @@ if ( ! function_exists( 'primer_setup' ) ) {
 			)
 		);
 
-		/**
-		 * Enable support for Custom Background.
-		 *
-		 * @link https://codex.wordpress.org/Function_Reference/add_theme_support#Custom_Background
-		 */
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'primer_custom_background_args',
-				array(
-					'default-color' => 'e7e7e7',
-					'default-image' => '',
-				)
-			)
-		);
-
 	}
 
 }
-
 add_action( 'after_setup_theme', 'primer_setup' );
 
 if ( ! function_exists( 'primer_widgets_init' ) ) {
@@ -213,14 +217,16 @@ if ( ! function_exists( 'primer_widgets_init' ) ) {
 	 * Register widget area.
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+	 *
+	 * @since 1.0.0
 	 */
 	function primer_widgets_init() {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Sidebar', 'primer' ),
+				'name'          => esc_html__( 'Sidebar', 'primer' ),
 				'id'            => 'sidebar-1',
-				'description'   => __( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'primer' ),
+				'description'   => esc_html__( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h6 class="widget-title">',
@@ -230,9 +236,9 @@ if ( ! function_exists( 'primer_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Secondary Sidebar', 'primer' ),
+				'name'          => esc_html__( 'Secondary Sidebar', 'primer' ),
 				'id'            => 'sidebar-2',
-				'description'   => __( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'primer' ),
+				'description'   => esc_html__( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h6 class="widget-title">',
@@ -242,9 +248,9 @@ if ( ! function_exists( 'primer_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Footer Left', 'primer' ),
+				'name'          => esc_html__( 'Footer Left', 'primer' ),
 				'id'            => 'footer-1',
-				'description'   => __( 'The footer left sidebar appears in the first column of the footer widget area.', 'primer' ),
+				'description'   => esc_html__( 'The footer left sidebar appears in the first column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h6 class="widget-title">',
@@ -254,9 +260,9 @@ if ( ! function_exists( 'primer_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Footer Center', 'primer' ),
+				'name'          => esc_html__( 'Footer Center', 'primer' ),
 				'id'            => 'footer-2',
-				'description'   => __( 'The footer center sidebar appears in the second column of the footer widget area.', 'primer' ),
+				'description'   => esc_html__( 'The footer center sidebar appears in the second column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h6 class="widget-title">',
@@ -266,9 +272,9 @@ if ( ! function_exists( 'primer_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Footer Right', 'primer' ),
+				'name'          => esc_html__( 'Footer Right', 'primer' ),
 				'id'            => 'footer-3',
-				'description'   => __( 'The footer right sidebar appears in the third column of the footer widget area.', 'primer' ),
+				'description'   => esc_html__( 'The footer right sidebar appears in the third column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h6 class="widget-title">',
@@ -279,7 +285,6 @@ if ( ! function_exists( 'primer_widgets_init' ) ) {
 	}
 
 }
-
 add_action( 'widgets_init', 'primer_widgets_init' );
 
 if ( ! function_exists( 'primer_scripts' ) ) {
@@ -289,15 +294,19 @@ if ( ! function_exists( 'primer_scripts' ) ) {
 	 *
 	 * @link https://codex.wordpress.org/Function_Reference/wp_enqueue_style
 	 * @link https://codex.wordpress.org/Function_Reference/wp_enqueue_script
+	 *
+	 * @since 1.0.0
 	 */
 	function primer_scripts() {
 
-		wp_enqueue_style( 'primer', get_stylesheet_uri(), false, primer_get_version() );
+		$suffix = SCRIPT_DEBUG ? '' : '.min';
+
+		wp_enqueue_style( 'primer', get_stylesheet_uri(), false, PRIMER_VERSION );
 
 		wp_style_add_data( 'primer', 'rtl', 'replace' );
 
-		wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), primer_get_version(), true );
-		wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), primer_get_version(), true );
+		wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", array(), PRIMER_VERSION, true );
+		wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), PRIMER_VERSION, true );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 
@@ -308,7 +317,6 @@ if ( ! function_exists( 'primer_scripts' ) ) {
 	}
 
 }
-
 add_action( 'wp_enqueue_scripts', 'primer_scripts' );
 
 if ( ! function_exists( 'primer_fonts_url' ) ) {
@@ -319,48 +327,51 @@ if ( ! function_exists( 'primer_fonts_url' ) ) {
 	 * The use of Lato and Merriweather by default is localized. For languages
 	 * that use characters not supported by the font, the font can be disabled.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @return string|null
 	 */
 	function primer_fonts_url() {
 
-		$fonts_url = null;
-
-		/* Translators: If there are characters in your language that are not
+		/**
+		 * Translators: If there are characters in your language that are not
 		 * supported by Lato, translate this to 'off' and do not translate
 		 * into your own language.
 		 */
 		$lato = _x( 'on', 'Lato font: on or off', 'primer' );
 
-		/* Translators: If there are characters in your language that are not
+		/**
+		 * Translators: If there are characters in your language that are not
 		 * supported by Merriweather, translate this to 'off' and do not translate
 		 * into your own language.
 		 */
 		$poly = _x( 'on', 'Merriweather font: on or off', 'primer' );
 
-		if ( 'off' !== $lato || 'off' !== $poly ) {
+		if ( 'off' === $lato && 'off' === $poly ) {
 
-			$font_families = array();
-
-			if ( 'off' !== $lato ) {
-
-				$font_families[] = 'Lato:300,700';
-
-			}
-
-			if ( 'off' !== $poly ) {
-
-				$font_families[] = 'Merriweather:400,400italic';
-
-			}
-
-			$query_args = array(
-				'family' => urlencode( implode( '|', $font_families ) ),
-				'subset' => urlencode( 'latin,latin-ext' ),
-			);
-
-			$fonts_url = add_query_arg( $query_args, "//fonts.googleapis.com/css" );
+			return;
 
 		}
+
+		$font_families = array();
+
+		if ( 'off' !== $lato ) {
+
+			$font_families[] = 'Lato:300,700';
+		}
+
+		if ( 'off' !== $poly ) {
+
+			$font_families[] = 'Merriweather:400,400italic';
+
+		}
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 
 		return $fonts_url;
 
@@ -375,6 +386,8 @@ if ( ! function_exists( 'primer_custom_excerpt_length' ) ) {
 	 *
 	 * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_length
 	 *
+	 * @since 1.0.0
+	 *
 	 * @return int
 	 */
 	function primer_custom_excerpt_length( $length ) {
@@ -384,7 +397,6 @@ if ( ! function_exists( 'primer_custom_excerpt_length' ) ) {
 	}
 
 }
-
 add_filter( 'excerpt_length', 'primer_custom_excerpt_length', 999 );
 
 if ( ! function_exists( 'primer_new_excerpt_more' ) ) {
@@ -393,6 +405,8 @@ if ( ! function_exists( 'primer_new_excerpt_more' ) ) {
 	 * Custom ending for excerpts when they have been truncated.
 	 *
 	 * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_more
+	 *
+	 * @since 1.0.0
 	 *
 	 * @return string
 	 */
@@ -403,5 +417,31 @@ if ( ! function_exists( 'primer_new_excerpt_more' ) ) {
 	}
 
 }
-
 add_filter( 'excerpt_more', 'primer_new_excerpt_more' );
+
+if ( ! function_exists( 'primer_conditional_jquery_tag' ) ) {
+
+	/**
+	 * Filter the script tag for jQuery.
+	 *
+	 * Wraps jQuery in a conditional comment that will allow
+	 * non-IE 9 (and lower) browsers to use the newest version
+	 * of jQuery.
+	 *
+	 * @filter script_loader_tag
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  string $tag
+	 * @param  string $handle
+	 *
+	 * @return string
+	 */
+	function primer_conditional_jquery_tag( $tag, $handle ) {
+
+		return ( 'jquery' === $handle ) ? "<!--[if (gte IE 9) | (!IE)]><!-->$tag<!--<![endif]-->" : $tag;
+
+	}
+
+}
+add_filter( 'script_loader_tag', 'primer_conditional_jquery_tag', 10, 2 );

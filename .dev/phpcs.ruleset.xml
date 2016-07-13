@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Coding Standards for Themes">
+    <description>Generally-applicable sniffs for WordPress themes</description>
+
+    <rule ref="Generic.PHP.ForbiddenFunctions"/>
+    <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
+    <rule ref="Generic.CodeAnalysis.EmptyStatement" />
+    <rule ref="Generic.Classes.DuplicateClassName"/>
+
+    <rule ref="WordPress-Core">
+        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.BlankLineAfterEnd" />
+    </rule>
+    <rule ref="WordPress-Docs" />
+    <rule ref="WordPress.PHP.DiscouragedFunctions"/>
+    <rule ref="WordPress.PHP.StrictComparisons" />
+    <rule ref="WordPress.WP.I18n" />
+
+    <exclude-pattern>*/dev-lib/*</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+</ruleset>
