@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 16:55-0500\n"
+"POT-Creation-Date: 2016-07-14 01:22-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,12 +22,13 @@ msgstr ""
 #. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#404-php
 #. *
 #. * @package Primer
+#. * @since 1.0.0
 #.
-#: 404.php:21
+#: 404.php:22
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Ops! Fant ikke den siden."
 
-#: 404.php:27
+#: 404.php:28
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
@@ -35,16 +36,7 @@ msgstr ""
 "Det virker ikke som om noe ble funnet på denne plasseringen. Kanskje du kan "
 "prøve en av koblingene nedenfor eller et søk?"
 
-#: 404.php:37
-msgid "Most Used Categories"
-msgstr "Mest brukte kategorier"
-
-#: 404.php:61
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Prøv å lete i de månedlige arkivene. %1$s"
-
-#: comments.php:34
+#: comments.php:35
 #, php-format
 msgctxt "1. number of comments, 2. post title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -52,46 +44,48 @@ msgid_plural "%1$d thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "En tanke angående &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$d tanker angående &ldquo;%2$s&rdquo;"
 
-#: comments.php:50 comments.php:75
+#: comments.php:51 comments.php:76
 msgid "Comment navigation"
 msgstr "Kommenter navigering"
 
-#: comments.php:52 comments.php:77
+#: comments.php:53 comments.php:78
 msgid "&larr; Older Comments"
 msgstr "&larr; Eldre kommentarer"
 
-#: comments.php:54 comments.php:79
+#: comments.php:55 comments.php:80
 msgid "Newer Comments &rarr;"
 msgstr "Nyere kommentarer &rarr;"
 
-#: comments.php:89
+#: comments.php:90
 msgid "Comments are closed."
 msgstr "Kommentarer er lukket."
 
-#: content-featured.php:30
+#: content-featured.php:31
 msgid "Featured"
 msgstr "Profilert"
 
-#: content-featured.php:40
+#: content-featured.php:41
 msgid "Read More"
 msgstr "Les mer"
 
 #. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
 #. *
 #. * @package Primer
+#. * @since 1.0.0
 #.
-#: content-none.php:15
+#: content-none.php:16
 msgid "Nothing Found"
 msgstr "Ingen resultat"
 
-#: content-none.php:23
+#: content-none.php:24
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Er du klar til å publisere den første posten din? <a href=\"%1$s\">Kom i gang her</a>."
+"Er du klar til å publisere den første posten din? <a href=\"%1$s\">Kom i "
+"gang her</a>."
 
-#: content-none.php:27
+#: content-none.php:28
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -99,7 +93,7 @@ msgstr ""
 "Beklager, men ingenting stemte overens med søkeordene dine. Prøv på nytt med "
 "noen andre søkeord."
 
-#: content-none.php:32
+#: content-none.php:33
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -107,47 +101,47 @@ msgstr ""
 "Det virker ikke som om vi kan finne det du leter etter. Kanskje det kan "
 "hjelpe å søke."
 
-#: functions.php:129
+#: functions.php:175
 msgid "Primary Menu"
 msgstr "Hovedmeny"
 
-#: functions.php:130
+#: functions.php:176
 msgid "Social Menu"
 msgstr "Sosial meny"
 
-#: functions.php:140
+#: functions.php:189
 msgid "1 Column Wide"
 msgstr "1 kolonne bred"
 
-#: functions.php:141
+#: functions.php:190
 msgid "1 Column Narrow"
 msgstr "1 kolonne smal"
 
-#: functions.php:142 functions.php:143
+#: functions.php:191 functions.php:192
 msgid "2 Columns: Sidebar / Content"
 msgstr "2 kolonner: Sidestolpe / innhold"
 
-#: functions.php:142 functions.php:143
+#: functions.php:191 functions.php:192
 msgid "2 Columns: Content / Sidebar"
 msgstr "2 kolonner: Innhold / sidestolpe"
 
-#: functions.php:144 functions.php:146
+#: functions.php:193 functions.php:195
 msgid "3 Columns: Sidebar / Sidebar / Content"
 msgstr "3 kolonner: Sidestolpe / sidestolpe / innhold"
 
-#: functions.php:144 functions.php:146
+#: functions.php:193 functions.php:195
 msgid "3 Columns: Content / Sidebar / Sidebar"
 msgstr "3 kolonner: Innhold / sidestolpe / sidestolpe"
 
-#: functions.php:145
+#: functions.php:194
 msgid "3 Columns: Sidebar / Content / Sidebar"
 msgstr "3 kolonner: Sidestolpe / innhold / sidestolpe"
 
-#: functions.php:216
+#: functions.php:285
 msgid "Sidebar"
 msgstr "Sidestolpe"
 
-#: functions.php:218
+#: functions.php:287
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
@@ -155,106 +149,157 @@ msgstr ""
 "Den primære sidestolpen vises sammen med innholdet på hver side, post, arkiv "
 "eller søkemal."
 
-#: functions.php:228
+#: functions.php:294
 msgid "Secondary Sidebar"
 msgstr "Sekundær sidestolpe"
 
-#: functions.php:230
+#: functions.php:296
 msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr ""
-"Den sekundære sidestolpen vil kun vises når du har valgt en utforming med tre kolonner."
+"Den sekundære sidestolpen vil kun vises når du har valgt en utforming med "
+"tre kolonner."
 
-#: functions.php:240
-msgid "Footer Left"
+#: functions.php:303
+#, fuzzy
+msgid "Footer 1"
 msgstr "Bunntekst venstre"
 
-#: functions.php:242
-msgid ""
-"The footer left sidebar appears in the first column of the footer widget "
-"area."
+#: functions.php:305
+#, fuzzy
+msgid "This sidebar is the first column of the footer widget area."
 msgstr ""
 "Sidestolpen med bunntekst til venstre vises i den første kolonnen av "
 "kontrollprogramområdet for bunnteksten."
 
-#: functions.php:252
-msgid "Footer Center"
-msgstr "Bunntekst midstilt"
+#: functions.php:312
+#, fuzzy
+msgid "Footer 2"
+msgstr "Bunntekst venstre"
 
-#: functions.php:254
-msgid ""
-"The footer center sidebar appears in the second column of the footer widget "
-"area."
+#: functions.php:314
+#, fuzzy
+msgid "This sidebar is the second column of the footer widget area."
 msgstr ""
 "Sidestolpen med bunntekst til venstre vises i den andre kolonnen av "
 "kontrollprogramområdet for bunnteksten."
 
-#: functions.php:264
-msgid "Footer Right"
-msgstr "Bunntekst høyre"
+#: functions.php:321
+#, fuzzy
+msgid "Footer 3"
+msgstr "Bunntekst venstre"
 
-#: functions.php:266
-msgid ""
-"The footer right sidebar appears in the third column of the footer widget "
-"area."
+#: functions.php:323
+#, fuzzy
+msgid "This sidebar is the third column of the footer widget area."
 msgstr ""
 "Sidestolpen med bunntekst til venstre vises i den tredje kolonnen av "
 "kontrollprogramområdet for bunnteksten."
 
-#: functions.php:329
-msgctxt "Lato font: on or off"
-msgid "on"
-msgstr "på"
-
-#: functions.php:335
-msgctxt "Merriweather font: on or off"
-msgid "on"
-msgstr "på"
-
-#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
-#. *
-#. * @package Primer
-#.
-#: header.php:35
+#: header.php:56
 msgid "Skip to content"
 msgstr "Hopp til innhold"
 
 #. //developer.wordpress.org/themes/basics/template-hierarchy/#search-result
 #. *
 #. * @package Primer
+#. * @since 1.0.0
 #.
-#: search.php:20
+#: search.php:21
 #, php-format
 msgctxt "search term"
 msgid "Search Results for: %s"
 msgstr "Søkeresultater for: %s"
 
-#: inc/breadcrumbs.php:39
-msgid "Blog"
-msgstr "Blogg"
+#: inc/back-compat.php:58
+#, php-format
+msgid ""
+"Primer requires at least WordPress version %s. You are running version %s. "
+"Please upgrade and try again."
+msgstr ""
 
-#: inc/extras.php:91
+#: inc/customizer.php:114
+msgid "Base Color Scheme"
+msgstr ""
+
+#: inc/customizer.php:137
+msgid "Menu Background Color"
+msgstr ""
+
+#: inc/customizer.php:158
+msgid "Tagline Text Color"
+msgstr ""
+
+#: inc/customizer.php:179
+msgid "Link Color"
+msgstr ""
+
+#: inc/customizer.php:200
+msgid "Main Text Color"
+msgstr ""
+
+#: inc/customizer.php:221
+#, fuzzy
+msgid "Secondary Text Color"
+msgstr "Sekundær sidestolpe"
+
+#: inc/customizer.php:231
+msgid "Typography"
+msgstr ""
+
+#: inc/customizer.php:248
+#, fuzzy
+msgid "Primary Font"
+msgstr "Hovedmeny"
+
+#: inc/customizer.php:269
+#, fuzzy
+msgid "Secondary Font"
+msgstr "Sekundær sidestolpe"
+
+#: inc/customizer.php:342
+#, fuzzy
+msgid "Default"
+msgstr "Standard"
+
+#: inc/customizer.php:354
+msgid "Dark"
+msgstr ""
+
+#: inc/customizer.php:366
+msgid "Muted"
+msgstr ""
+
+#: inc/customizer.php:378
+msgid "Red"
+msgstr ""
+
+#: inc/hooks.php:218
 #, php-format
 msgctxt "page number"
 msgid "Page %d"
 msgstr "Side %d"
 
-#: inc/template-tags.php:56
+#: inc/template-tags.php:29
 msgid "Posts navigation"
 msgstr "Post-navigering"
 
-#: inc/template-tags.php:62
+#: inc/template-tags.php:35
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Eldre poster"
 
-#: inc/template-tags.php:68
+#: inc/template-tags.php:41
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Nyere poster <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:102
+#: inc/template-tags.php:78
 msgid "Post navigation"
 msgstr "Post-navigering"
+
+#: inc/template-tags.php:193
+msgid "Blog"
+msgstr "Blogg"
 
 #: inc/theme-layouts.php:364
 msgctxt "theme layout"
@@ -334,3 +379,23 @@ msgstr "% kommentarer"
 msgctxt "1. theme name link, 2. theme author link"
 msgid "Built with %1$s by %2$s."
 msgstr "Bygget med %1$s av %2$s."
+
+#~ msgid "Most Used Categories"
+#~ msgstr "Mest brukte kategorier"
+
+#~ msgid "Try looking in the monthly archives. %1$s"
+#~ msgstr "Prøv å lete i de månedlige arkivene. %1$s"
+
+#~ msgid "Footer Center"
+#~ msgstr "Bunntekst midstilt"
+
+#~ msgid "Footer Right"
+#~ msgstr "Bunntekst høyre"
+
+#~ msgctxt "Lato font: on or off"
+#~ msgid "on"
+#~ msgstr "på"
+
+#~ msgctxt "Merriweather font: on or off"
+#~ msgid "on"
+#~ msgstr "på"
