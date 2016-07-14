@@ -341,13 +341,13 @@ function primer_get_color_schemes() {
 			'default' => array(
 				'label'  => __( 'Default', 'primer' ),
 				'colors' => array(
-					'#222222',
-					'#f9f9f9',
-					'#4db790',
-					'#7c7c7c',
-					'#4db790',
-					'#1a1a1a',
-					'#686868',
+					'#222222', // header_textcolor
+					'#f9f9f9', // background_color
+					'#222222', // menu_background_color
+					'#7c7c7c', // tagline_text_color
+					'#1585cf', // link_color
+					'#1a1a1a', // main_text_color
+					'#686868', // secondary_text_color
 				),
 			),
 			'dark' => array(
@@ -551,7 +551,8 @@ function primer_get_color_scheme_css( array $colors ) {
 	/* Color Scheme */
 
 	/* Header Text Color */
-	.site-title a {
+	.site-title a,
+	.site-title a:visited {
 		color: {$colors['header_textcolor']};
 	}
 
@@ -566,9 +567,6 @@ function primer_get_color_scheme_css( array $colors ) {
 	.main-navigation li.menu-item-has-children ul {
 		background-color: {$colors['menu_background_color']};
 	}
-	.main-navigation li a:hover {
-		color: {$colors['hover_color']};
-	}
 
 	/* Tagline Text Color */
 	.site-description {
@@ -576,10 +574,12 @@ function primer_get_color_scheme_css( array $colors ) {
 	}
 
 	/* Link Color */
-	a {
+	a,
+	a:visited {
 		color: {$colors['link_color']};
 	}
-	a:hover {
+	a:hover,
+	a:visited:hover {
 		color: {$colors['hover_color']};
 	}
 
