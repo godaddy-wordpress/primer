@@ -1,85 +1,103 @@
 <?php
 /**
- * Theme functions and definitions.
+ * Primer functions and definitions.
+ *
+ * Set up the theme and provide some helper functions, which are used in the
+ * theme as custom template tags. Others are attached to action and filter
+ * hooks in WordPress to change core functionality.
+ *
+ * When using a child theme you can override certain functions (those wrapped
+ * in a `function_exists()` call) by defining them first in your child theme's
+ * functions.php file. The child theme's functions.php file is included before
+ * the parent theme's file, so the child theme functions would be used.
+ *
+ * @link https://codex.wordpress.org/Theme_Development
+ * @link https://codex.wordpress.org/Child_Themes
+ *
+ * Functions that are not pluggable (not wrapped in `function_exists()`) are
+ * instead attached to a filter or action hook.
+ *
+ * For more information on hooks, actions, and filters,
+ * {@link https://codex.wordpress.org/Plugin_API}
  *
  * @package Primer
+ * @since   1.0.0
  */
 
 /**
  * Primer theme version.
+ *
+ * @since 1.0.0
  *
  * @var string
  */
 define( 'PRIMER_VERSION', '1.0.0' );
 
 /**
- * Custom template tags for this theme.
+ * Minimum WordPress version required for Primer.
+ *
+ * @since 1.0.0
+ *
+ * @var string
  */
-require get_template_directory() . '/inc/template-tags.php';
+if ( ! defined( 'PRIMER_MIN_WP_VERSION' ) ) {
+
+	define( 'PRIMER_MIN_WP_VERSION', '4.1' );
+
+}
 
 /**
- * Custom functions that act independently of the theme templates.
+ * Enforce the minimum WordPress version requirement.
+ *
+ * @since 1.0.0
  */
-require get_template_directory() . '/inc/extras.php';
+if ( version_compare( get_bloginfo( 'version' ), PRIMER_MIN_WP_VERSION, '<' ) ) {
+
+	require_once get_template_directory() . '/inc/back-compat.php';
+
+}
 
 /**
- * Includes template parts within the theme.
+ * Load custom helper functions for this theme.
+ *
+ * @since 1.0.0
  */
-require get_template_directory() . '/inc/action-hooks.php';
+require_once get_template_directory() . '/inc/helpers.php';
 
 /**
- * Custom fonts.
+ * Load custom template tags for this theme.
+ *
+ * @since 1.0.0
  */
-require get_template_directory() . '/inc/custom-fonts.php';
+require_once get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Customizer additions.
+ * Load template parts and override some WordPress defaults.
+ *
+ * @since 1.0.0
  */
-require get_template_directory() . '/inc/customizer.php';
+require_once get_template_directory() . '/inc/hooks.php';
 
 /**
- * Custom header.
+ * Load Customizer additions.
+ *
+ * @since 1.0.0
  */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
+require_once get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load custom theme layout functionality.
+ *
+ * @since 1.0.0
  */
-require get_template_directory() . '/inc/theme-layouts.php';
+require_once get_template_directory() . '/inc/theme-layouts.php';
 
 /**
- * Set the content width based on the theme design and stylesheet.
+ * Load Jetpack compatibility file.
  *
- * @link https://codex.wordpress.org/Content_Width
- *
- * @global int $content_width
+ * @since 1.0.0
  */
-if ( ! isset( $content_width ) ) {
-
-	global $content_width;
-
-	switch ( theme_layouts_get_layout() ) {
-
-		case 'one-column-wide' :
-
-			$content_width = 1068;
-
-		case 'one-column-narrow' :
-
-			$content_width = 688;
-
-		default :
-
-			$content_width = 688;
-
-	}
-
-}
+require_once get_template_directory() . '/inc/jetpack.php';
 
 if ( ! function_exists( 'primer_setup' ) ) {
 
@@ -101,49 +119,56 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		 * building a theme based on Primer, use a find and replace to change
 		 * 'primer' to the name of your theme in all the template files.
 		 *
-		 * @link https://codex.wordpress.org/Function_Reference/load_theme_textdomain
+		 * @link  https://codex.wordpress.org/Function_Reference/load_theme_textdomain
+		 * @since 1.0.0
 		 */
 		load_theme_textdomain( 'primer', get_template_directory() . '/languages' );
 
 		/**
-		 * Add image size for Featured Images.
+		 * Add an image size for Featured Images.
 		 *
-		 * @link https://codex.wordpress.org/Function_Reference/add_image_size
+		 * @link  https://codex.wordpress.org/Function_Reference/add_image_size
+		 * @since 1.0.0
 		 */
 		add_image_size( 'primer-featured', 1600, 900, 1 );
 
 		/**
 		 * Enable support for Automatic Feed Links.
 		 *
-		 * @link https://codex.wordpress.org/Function_Reference/add_theme_support#Feed_Links
+		 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Feed_Links
+		 * @since 1.0.0
 		 */
 		add_theme_support( 'automatic-feed-links' );
 
 		/**
 		 * Enable support for plugins and themes to manage the document title tag.
 		 *
-		 * @link https://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
+		 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
+		 * @since 1.0.0
 		 */
 		add_theme_support( 'title-tag' );
 
 		/**
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
-		 * @link https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+		 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+		 * @since 1.0.0
 		 */
 		add_theme_support( 'post-thumbnails' );
 
 		/**
-		 * Enable editor style support
+		 * Enable support for custom editor style.
 		 *
-		 * @link https://developer.wordpress.org/reference/functions/add_editor_style/
+		 * @link  https://developer.wordpress.org/reference/functions/add_editor_style/
+		 * @since 1.0.0
 		 */
 		add_editor_style();
 
 		/**
 		 * Register custom Custom Navigation Menus.
 		 *
-		 * @link https://codex.wordpress.org/Function_Reference/register_nav_menus
+		 * @link  https://codex.wordpress.org/Function_Reference/register_nav_menus
+		 * @since 1.0.0
 		 */
 		register_nav_menus(
 			array(
@@ -153,7 +178,10 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		);
 
 		/**
-		 * Enable support for theme layouts in Hybrid Core.
+		 * Enable support for theme layouts from Hybrid Core.
+		 *
+		 * @link  https://github.com/justintadlock/hybrid-core/releases/tag/2.0.4
+		 * @since 1.0.0
 		 */
 		add_theme_support(
 			'theme-layouts',
@@ -172,7 +200,8 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		/**
 		 * Enable support for HTML5 markup.
 		 *
-		 * @link https://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
+		 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
+		 * @since 1.0.0
 		 */
 		add_theme_support(
 			'html5',
@@ -188,7 +217,8 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		/**
 		 * Enable support for Post Formats.
 		 *
-		 * @link https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Formats
+		 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Formats
+		 * @since 1.0.0
 		 */
 		add_theme_support(
 			'post-formats',
@@ -206,18 +236,51 @@ if ( ! function_exists( 'primer_setup' ) ) {
 }
 add_action( 'after_setup_theme', 'primer_setup' );
 
-if ( ! function_exists( 'primer_widgets_init' ) ) {
+/**
+ * Sets the content width in pixels, based on the theme layout.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @action after_setup_theme
+ * @global int $content_width
+ * @since  1.0.0
+ */
+function primer_content_width() {
+
+	$theme_layout  = theme_layouts_get_layout();
+	$content_width = ( 'one-column-wide' === $theme_layout ) ? 1068 : 688;
 
 	/**
-	 * Register widget area.
-	 *
-	 * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+	 * Filter the content width in pixels.
 	 *
 	 * @since 1.0.0
+	 *
+	 * @param string $theme_layout
+	 *
+	 * @var int
 	 */
-	function primer_widgets_init() {
+	$GLOBALS['content_width'] = (int) apply_filters( 'primer_content_width', $content_width, $theme_layout );
 
-		register_sidebar(
+}
+add_action( 'after_setup_theme', 'primer_content_width', 0 );
+
+/**
+ * Register sidebar areas.
+ *
+ * @link  http://codex.wordpress.org/Function_Reference/register_sidebar
+ * @since 1.0.0
+ */
+function primer_register_sidebars() {
+
+	/**
+	 * Filter registered sidebars areas.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var array
+	 */
+	$sidebars = (array) apply_filters( 'primer_register_sidebars',
+		array(
 			array(
 				'name'          => esc_html__( 'Sidebar', 'primer' ),
 				'id'            => 'sidebar-1',
@@ -226,10 +289,7 @@ if ( ! function_exists( 'primer_widgets_init' ) ) {
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h6 class="widget-title">',
 				'after_title'   => '</h6>',
-			)
-		);
-
-		register_sidebar(
+			),
 			array(
 				'name'          => esc_html__( 'Secondary Sidebar', 'primer' ),
 				'id'            => 'sidebar-2',
@@ -238,58 +298,53 @@ if ( ! function_exists( 'primer_widgets_init' ) ) {
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h6 class="widget-title">',
 				'after_title'   => '</h6>',
-			)
-		);
-
-		register_sidebar(
+			),
 			array(
-				'name'          => esc_html__( 'Footer Left', 'primer' ),
+				'name'          => esc_html__( 'Footer 1', 'primer' ),
 				'id'            => 'footer-1',
-				'description'   => esc_html__( 'The footer left sidebar appears in the first column of the footer widget area.', 'primer' ),
+				'description'   => esc_html__( 'This sidebar is the first column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h6 class="widget-title">',
 				'after_title'   => '</h6>',
-			)
-		);
-
-		register_sidebar(
+			),
 			array(
-				'name'          => esc_html__( 'Footer Center', 'primer' ),
+				'name'          => esc_html__( 'Footer 2', 'primer' ),
 				'id'            => 'footer-2',
-				'description'   => esc_html__( 'The footer center sidebar appears in the second column of the footer widget area.', 'primer' ),
+				'description'   => esc_html__( 'This sidebar is the second column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h6 class="widget-title">',
 				'after_title'   => '</h6>',
-			)
-		);
-
-		register_sidebar(
+			),
 			array(
-				'name'          => esc_html__( 'Footer Right', 'primer' ),
+				'name'          => esc_html__( 'Footer 3', 'primer' ),
 				'id'            => 'footer-3',
-				'description'   => esc_html__( 'The footer right sidebar appears in the third column of the footer widget area.', 'primer' ),
+				'description'   => esc_html__( 'This sidebar is the third column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h6 class="widget-title">',
 				'after_title'   => '</h6>',
 			)
-		);
+		)
+	);
+
+	foreach ( $sidebars as $args ) {
+
+		register_sidebar( $args );
 
 	}
 
 }
-add_action( 'widgets_init', 'primer_widgets_init' );
+add_action( 'widgets_init', 'primer_register_sidebars' );
 
 if ( ! function_exists( 'primer_scripts' ) ) {
 
 	/**
 	 * Enqueue theme scripts and styles.
 	 *
-	 * @link https://codex.wordpress.org/Function_Reference/wp_enqueue_style
-	 * @link https://codex.wordpress.org/Function_Reference/wp_enqueue_script
-	 *
+	 * @link  https://codex.wordpress.org/Function_Reference/wp_enqueue_style
+	 * @link  https://codex.wordpress.org/Function_Reference/wp_enqueue_script
 	 * @since 1.0.0
 	 */
 	function primer_scripts() {
@@ -314,129 +369,49 @@ if ( ! function_exists( 'primer_scripts' ) ) {
 }
 add_action( 'wp_enqueue_scripts', 'primer_scripts' );
 
-if ( ! function_exists( 'primer_fonts_url' ) ) {
+/**
+ * Sets the authordata global when viewing an author archive.
+ *
+ * This provides backwards compatibility with
+ * http://core.trac.wordpress.org/changeset/25574
+ *
+ * It removes the need to call the_post() and rewind_posts() in an author
+ * template to print information about the author.
+ *
+ * @action wp
+ * @global WP_Query $wp_query
+ * @global WP_User  $authordata
+ * @since  1.0.0
+ */
+function primer_setup_author() {
 
-	/**
-	 * Returns the Google font stylesheet URL, if available.
-	 *
-	 * The use of Lato and Merriweather by default is localized. For languages
-	 * that use characters not supported by the font, the font can be disabled.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return string|null
-	 */
-	function primer_fonts_url() {
+	global $wp_query;
 
-		/**
-		 * Translators: If there are characters in your language that are not
-		 * supported by Lato, translate this to 'off' and do not translate
-		 * into your own language.
-		 */
-		$lato = _x( 'on', 'Lato font: on or off', 'primer' );
+	if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
 
-		/**
-		 * Translators: If there are characters in your language that are not
-		 * supported by Merriweather, translate this to 'off' and do not translate
-		 * into your own language.
-		 */
-		$poly = _x( 'on', 'Merriweather font: on or off', 'primer' );
-
-		if ( 'off' === $lato && 'off' === $poly ) {
-
-			return;
-
-		}
-
-		$font_families = array();
-
-		if ( 'off' !== $lato ) {
-
-			$font_families[] = 'Lato:300,700';
-		}
-
-		if ( 'off' !== $poly ) {
-
-			$font_families[] = 'Merriweather:400,400italic';
-
-		}
-
-		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
-		);
-
-		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
-
-		return $fonts_url;
+		$GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
 
 	}
 
 }
+add_action( 'wp', 'primer_setup_author' );
 
-if ( ! function_exists( 'primer_custom_excerpt_length' ) ) {
+/**
+ * Reset the transient for the active categories check.
+ *
+ * @action create_category
+ * @action edit_category
+ * @action delete_category
+ * @action save_post
+ * @see    primer_has_active_categories()
+ * @since  1.0.0
+ */
+function primer_has_active_categories_reset() {
 
-	/**
-	 * Custom length (in words) for excerpts before they are truncated.
-	 *
-	 * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_length
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return int
-	 */
-	function primer_custom_excerpt_length( $length ) {
-
-		return 20;
-
-	}
+	delete_transient( 'primer_has_active_categories' );
 
 }
-add_filter( 'excerpt_length', 'primer_custom_excerpt_length', 999 );
-
-if ( ! function_exists( 'primer_new_excerpt_more' ) ) {
-
-	/**
-	 * Custom ending for excerpts when they have been truncated.
-	 *
-	 * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/excerpt_more
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return string
-	 */
-	function primer_new_excerpt_more( $more ) {
-
-		return '&hellip;';
-
-	}
-
-}
-add_filter( 'excerpt_more', 'primer_new_excerpt_more' );
-
-if ( ! function_exists( 'primer_conditional_jquery_tag' ) ) {
-
-	/**
-	 * Filter the script tag for jQuery.
-	 *
-	 * Wraps jQuery in a conditional comment that will allow
-	 * non-IE 9 (and lower) browsers to use the newest version
-	 * of jQuery.
-	 *
-	 * @filter script_loader_tag
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param  string $tag
-	 * @param  string $handle
-	 *
-	 * @return string
-	 */
-	function primer_conditional_jquery_tag( $tag, $handle ) {
-
-		return ( 'jquery' === $handle ) ? "<!--[if (gte IE 9) | (!IE)]><!-->$tag<!--<![endif]-->" : $tag;
-
-	}
-
-}
-add_filter( 'script_loader_tag', 'primer_conditional_jquery_tag', 10, 2 );
+add_action( 'create_category', 'primer_has_active_categories_reset' );
+add_action( 'edit_category',   'primer_has_active_categories_reset' );
+add_action( 'delete_category', 'primer_has_active_categories_reset' );
+add_action( 'save_post',       'primer_has_active_categories_reset' );

@@ -11,28 +11,24 @@
  * Adds support for wp.com-specific theme functions.
  *
  * @action after_setup_theme
- *
- * @since 1.0.0
- *
  * @global array $themecolors
+ * @since  1.0.0
  */
 function primer_wpcom_setup() {
 
 	global $themecolors;
 
-	if ( isset( $themecolors ) ) {
+	if ( ! isset( $themecolors ) ) {
 
-		return;
+		$themecolors = array(
+			'bg'     => '',
+			'border' => '',
+			'text'   => '',
+			'link'   => '',
+			'url'    => '',
+		);
 
 	}
-
-	$themecolors = array(
-		'bg'     => '',
-		'border' => '',
-		'text'   => '',
-		'link'   => '',
-		'url'    => '',
-	);
 
 }
 add_action( 'after_setup_theme', 'primer_wpcom_setup' );
