@@ -1,12 +1,11 @@
 <?php
 /**
- * The header for our theme.
+ * The template for displaying the header.
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
+ * Displays all of the head element and everything up until the "site-content" div.
  *
  * @package Primer
+ * @since 1.0.0
  */
 ?><!DOCTYPE html>
 
