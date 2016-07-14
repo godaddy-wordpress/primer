@@ -8,7 +8,14 @@
 
 <header class="page-header">
 
-	<?php do_action( 'primer_before_page_title' ) ?>
+	<?php
+	/**
+	 * Fires before the page title element.
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'primer_before_page_title' );
+	?>
 
 	<?php if ( is_singular() ) : ?>
 
@@ -20,6 +27,13 @@
 
 	<?php endif; ?>
 
-	<?php do_action( 'primer_after_page_title' ) ?>
+	<?php
+	/**
+	 * Fires after the page title element.
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'primer_after_page_title' );
+	?>
 
 </header><!-- .entry-header -->

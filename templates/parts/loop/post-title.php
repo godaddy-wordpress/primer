@@ -12,7 +12,14 @@
 
 		<div class="entry-header-column">
 
-			<?php do_action( 'primer_before_post_title' ) ?>
+			<?php
+			/**
+			 * Fires before the post title element.
+			 *
+			 * @since 1.0.0
+			 */
+			do_action( 'primer_before_post_title' );
+			?>
 
 			<?php if ( is_singular() ) : ?>
 
@@ -24,7 +31,14 @@
 
 			<?php endif; ?>
 
-			<?php do_action( 'primer_after_post_title' ) ?>
+			<?php
+			/**
+			 * Fires after the post title element.
+			 *
+			 * @since 1.0.0
+			 */
+			do_action( 'primer_after_post_title' );
+			?>
 
 		</div><!-- .entry-header-column -->
 

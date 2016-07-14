@@ -12,19 +12,40 @@
 
 		</div><!-- #content -->
 
-		<?php do_action( 'primer_before_footer' ) ?>
+		<?php
+		/**
+		 * Fires before the `<footer>` element.
+		 *
+		 * @since 1.0.0
+		 */
+		do_action( 'primer_before_footer' );
+		?>
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
 
 			<div class="site-footer-inner">
 
-				<?php do_action( 'primer_footer' ) ?>
+				<?php
+				/**
+				 * Fires inside the `<footer>` element.
+				 *
+				 * @since 1.0.0
+				 */
+				do_action( 'primer_footer' );
+				?>
 
 			</div><!-- .site-footer-inner -->
 
 		</footer><!-- #colophon -->
 
-		<?php do_action( 'primer_after_footer' ) ?>
+		<?php
+		/**
+		 * Fires after the `<footer>` element.
+		 *
+		 * @since 1.0.0
+		 */
+		do_action( 'primer_after_footer' );
+		?>
 
 	</div><!-- #page -->
 
