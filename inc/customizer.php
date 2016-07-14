@@ -958,19 +958,6 @@ CSS;
 add_action( 'wp_enqueue_scripts', 'primer_secondary_text_color_css', 11 );
 
 /**
- * Sample implementation of the Custom Header feature
- *
- * You can add an optional custom header image to header.php like so:
-
-	<?php if ( get_header_image() ) : ?>
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-		<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-	</a>
-	<?php endif; // End header image check. ?>
-
- */
-
-/**
  * Add custom header support.
  *
  * @action after_setup_theme

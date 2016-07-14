@@ -32,7 +32,7 @@
 	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/js/html5shiv.min.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/js/selectivizr.min.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/js/rem.min.js"></script>
-	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/js/jquery.backgroundSize.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/js/jquery.backgroundSize.min.js"></script>
 	<script type="text/javascript">
 	$( document ).ready( function( $ ) {
 		$( 'body .hero' ).css( { backgroundSize: "cover" } );
