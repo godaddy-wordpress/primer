@@ -102,7 +102,6 @@ class Primer_Customizer_Colors {
 			)
 		);
 
-
 		/**
 		 * Default color scheme.
 		 *
@@ -455,5 +454,4 @@ class Primer_Customizer_Colors {
 		return $this->color_schemes[ $this->get_current_color_scheme_name() ];
 
 	}
-
 }
