@@ -84,7 +84,7 @@ class Primer_Customizer_Colors {
 					'label'   => __( 'Main Text Color', 'primer' ),
 					'default' => '#1a1a1a',
 					'css'     => array(
-						'.site-content, .site-content h1, .site-content h2, .site-content h3, .site-content h4, .site-content h5, .site-content h6, .site-content p, .site-content blockquote' => array(
+						'.site-content, .site-content h1, .site-content h2, .site-content h3, .site-content h4, .site-content h5, .site-content h6, .site-content p, .site-content blockquote, legend' => array(
 							'color' => '%1$s',
 						),
 					),
@@ -94,7 +94,7 @@ class Primer_Customizer_Colors {
 					'label'   => __( 'Secondary Text Color', 'primer' ),
 					'default' => '#686868',
 					'css'     => array(
-						'.secondary_text_color, .site-info-text' => array(
+						'blockquote, .entry-meta, .entry-footer, .comment-list li .comment-meta .says, .comment-list li .comment-metadata, .comment-reply-link, #respond .logged-in-as, .fl-callout-text' => array(
 							'color' => '%1$s',
 						),
 					),
