@@ -895,10 +895,12 @@ class Primer_Customizer {
 	/**
 	 * Add font inline CSS.
 	 *
-	 * @action wp_enqueue_scripts
-	 * @since  1.0.0
+	 * @action   wp_enqueue_scripts
+	 * @since    1.0.0
 	 *
-	 * @param array $color
+	 * @param string $font_type
+	 *
+	 * @internal param array $color
 	 */
 	public function enqueue_fonts_inline_css( $font_type = 'primary_font' ) {
 
