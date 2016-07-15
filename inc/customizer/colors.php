@@ -7,14 +7,14 @@ class Primer_Customizer_Colors {
 	 *
 	 * @var array
 	 */
-	public $colors = array();
+	protected $colors = array();
 
 	/**
 	 * Array of available color schemes.
 	 *
 	 * @var array
 	 */
-	public $color_schemes = array();
+	protected $color_schemes = array();
 
 	/**
 	 * Class constructor.

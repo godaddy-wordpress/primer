@@ -7,7 +7,7 @@ class Primer_Customizer_Font {
 	 *
 	 * @var array
 	 */
-	public $fonts = array();
+	protected $fonts = array();
 
 
 	/**
