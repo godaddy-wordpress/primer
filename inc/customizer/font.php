@@ -40,8 +40,8 @@ class Primer_Customizer_Font {
 		);
 
 		add_action( 'customize_register', array( $this, 'typography' ), 11 );
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_fonts_inline_css' ), 11 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_google_fonts' ), 11 );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_inline_css' ), 12 );
 
 	}
 
@@ -264,7 +264,7 @@ class Primer_Customizer_Font {
 	 *
 	 * @internal param array $color
 	 */
-	public function enqueue_fonts_inline_css( $font_type = 'primary_font' ) {
+	public function enqueue_inline_css( $font_type = 'primary_font' ) {
 
 		$css = array(
 			'body, h1, h2, h3, h4, h5, h6, label' => array(
