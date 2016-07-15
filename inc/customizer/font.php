@@ -9,6 +9,12 @@ class Primer_Customizer_Font {
 	 */
 	protected $fonts = array();
 
+	/**
+	 * Array of available font types.
+	 *
+	 * @var array
+	 */
+	protected $font_types = array();
 
 	/**
 	 * Class constructor.
@@ -39,6 +45,48 @@ class Primer_Customizer_Font {
 			)
 		);
 
+		/**
+		 * Filter the array of available font types.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var array
+		 */
+		$this->font_types = (array) apply_filters( 'primer_font_types',
+			array(
+				array(
+					'name'    => 'primary_font',
+					'label'   => __( 'Primary Font', 'primer' ),
+					'default' => 'Open Sans',
+					'css'     => array(
+						'body, p' => array(
+							'font-family' => '"%s", sans-serif',
+						),
+					),
+				),
+				array(
+					'name'    => 'secondary_font',
+					'label'   => __( 'Secondary Font', 'primer' ),
+					'default' => 'Open Sans',
+					'css'     => array(
+						'blockquote, .entry-meta, .entry-footer, .comment-list li .comment-meta .says, .comment-list li .comment-metadata, .comment-reply-link, #respond .logged-in-as, .fl-callout-text' => array(
+							'font-family' => '"%s", sans-serif',
+						),
+					),
+				),
+				array(
+					'name'    => 'header_font',
+					'label'   => __( 'Header Font', 'primer' ),
+					'default' => 'Open Sans',
+					'css'     => array(
+						'h1, h2, h3, h4, h5, h6, label, legend, table th, .site-title, .entry-title, .widget-title, .main-navigation li a, button, a.button, input[type="button"], input[type="reset"], input[type="submit"]' => array(
+							'font-family' => '"%s", sans-serif',
+						),
+					),
+				),
+			)
+		);
+
 		add_action( 'customize_register', array( $this, 'typography' ), 11 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_google_fonts' ), 11 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_inline_css' ), 12 );
@@ -55,7 +103,7 @@ class Primer_Customizer_Font {
 	 */
 	public function typography( WP_Customize_Manager $wp_customize ) {
 
-		if ( ! $this->fonts ) {
+		if ( ! $this->fonts || ! $this->font_types ) {
 
 			return;
 
@@ -69,43 +117,29 @@ class Primer_Customizer_Font {
 			)
 		);
 
-		$wp_customize->add_setting(
-			'primary_font',
-			array(
-				'default'           => $this->get_default_font(),
-				'sanitize_callback' => array( $this, 'sanitize_primary_font' ),
-			)
-		);
+		foreach ( $this->font_types as $font_type ) {
 
-		$font_choices = array_combine( $this->fonts, $this->fonts );
+			if ( empty( $font_type['name'] ) || empty( $font_type['default'] ) || empty( $font_type['label'] ) ) {
 
-		$wp_customize->add_control(
-			'primary_font',
-			array(
-				'label'   => __( 'Primary Font', 'primer' ),
-				'section' => 'typography',
-				'type'    => 'select',
-				'choices' => $font_choices,
-			)
-		);
+				continue;
 
-		if ( $this->secondary_font_enabled() ) {
+			}
 
 			$wp_customize->add_setting(
-				'secondary_font',
+				$font_type['name'],
 				array(
-					'default'           => $this->get_default_font( 'secondary_font' ),
-					'sanitize_callback' => array( $this, 'sanitize_secondary_font' ),
+					'default'           => $font_type['default'],
+					'sanitize_callback' => array( $this, 'sanitize_font' ),
 				)
 			);
 
 			$wp_customize->add_control(
-				'secondary_font',
+				$font_type['name'],
 				array(
-					'label'   => __( 'Secondary Font', 'primer' ),
+					'label'   => $font_type['label'],
 					'section' => 'typography',
 					'type'    => 'select',
-					'choices' => $font_choices,
+					'choices' => array_combine( $this->fonts, $this->fonts ),
 				)
 			);
 
@@ -114,101 +148,49 @@ class Primer_Customizer_Font {
 	}
 
 	/**
+	 * Return a font by type.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  string $font_type
+	 *
+	 * @return string|null
+	 */
+	public function get_font( $font_type ) {
+
+		return $this->sanitize_font( get_theme_mod( $font_type, $this->get_default_font( $font_type ) ) );
+
+	}
+
+	/**
 	 * Return the default font for a given font type.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $font_type (optional)
+	 * @param  string $font_type
 	 *
-	 * @return string
+	 * @return string|null
 	 */
-	public function get_default_font( $font_type = 'primary_font' ) {
+	public function get_default_font( $font_type ) {
 
-		$first  = ! empty( $this->fonts[0] ) ? $this->fonts[0] : null;
-		$second = ! empty( $this->fonts[1] ) ? $this->fonts[1] : $first;
+		$defaults = wp_list_pluck( $this->font_types, 'default', 'name' );
 
-		return ( 'secondary_font' === $font_type ) ? $second : $first;
+		return isset( $defaults[ $font_type ] ) ? $defaults[ $font_type ] : ( isset( $this->fonts[0] ) ? $this->fonts[0] : null );
 
 	}
 
 	/**
-	 * Return the primary font.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return string
-	 */
-	public function get_primary_font() {
-
-		return $this->sanitize_primary_font( get_theme_mod( 'primary_font', $this->get_default_font() ) );
-
-	}
-
-	/**
-	 * Return the secondary font.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return string
-	 */
-	public function get_secondary_font() {
-
-		return $this->sanitize_secondary_font( get_theme_mod( 'secondary_font', $this->get_default_font( 'secondary_font' ) ) );
-
-	}
-
-	/**
-	 * Sanitize the primary font.
+	 * Sanitize a font.
 	 *
 	 * @since 1.0.0
 	 *
 	 * @param  string $font
 	 *
-	 * @return string
+	 * @return string|null
 	 */
-	public function sanitize_primary_font( $font ) {
+	public function sanitize_font( $font ) {
 
-		return in_array( $font, $this->fonts ) ? $font : $this->get_default_font();
-
-	}
-
-	/**
-	 * Sanitize the primary font.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param  string $font
-	 *
-	 * @return string
-	 */
-	public function sanitize_secondary_font( $font ) {
-
-		return in_array( $font, $this->fonts ) ? $font : $this->get_default_font( 'secondary_font' );
-
-	}
-
-	/**
-	 * Check if a secondary font is enabled.
-	 *
-	 * If you want to disable the secondary font please use
-	 * this filter to your child theme:
-	 *
-	 * add_filter( 'primer_secondary_font_enabled', false );
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return bool
-	 */
-	public function secondary_font_enabled() {
-
-		/**
-		 * Filter if the secondary font should be enabled.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @var bool
-		 */
-		return (bool) apply_filters( 'primer_secondary_font_enabled', true );
+		return in_array( $font, $this->fonts ) ? $font : ( isset( $this->fonts[0] ) ? $this->fonts[0] : null );
 
 	}
 
@@ -220,21 +202,19 @@ class Primer_Customizer_Font {
 	 */
 	public function enqueue_google_fonts() {
 
-		$primary_font  = $this->get_primary_font();
-		$font_families = $primary_font . ':300,400,700';
+		$font_families = array();
 
-		if ( $this->secondary_font_enabled() ) {
+		foreach ( $this->font_types as $font_type ) {
 
-			$secondary_font = $this->get_secondary_font();
+			if ( ! empty( $font_type['name'] ) ) {
 
-			$font_families = array(
-				$primary_font . ':300,400,700',
-				$secondary_font . ':300,400,700',
-			);
+				$font_families[] = $this->get_font( $font_type['name'] ) . ':300,400,700';
 
-			$font_families = implode( '|', $font_families );
+			}
 
 		}
+
+		$font_families = implode( '|', $font_families );
 
 		/**
 		 * Filter the Google fonts query args.
@@ -264,29 +244,17 @@ class Primer_Customizer_Font {
 	 *
 	 * @internal param array $color
 	 */
-	public function enqueue_inline_css( $font_type = 'primary_font' ) {
+	public function enqueue_inline_css() {
 
-		$css = array(
-			'body, h1, h2, h3, h4, h5, h6, label' => array(
-				'font-family' => '"%s", sans-serif',
-			),
-		);
+		foreach ( $this->font_types as $font_type ) {
 
-		wp_add_inline_style( 'primer-google-fonts', sprintf( Primer_Customizer::parse_css_rules( $css ), $this->get_primary_font() ) );
+			if ( ! empty( $font_type['name'] ) && ! empty( $font_type['css'] ) ) {
 
-		if ( ! $this->secondary_font_enabled() ) {
+				wp_add_inline_style( 'primer-google-fonts', sprintf( Primer_Customizer::parse_css_rules( $font_type['css'] ), $this->get_font( $font_type['name'] ) ) );
 
-			return;
+			}
 
 		}
-
-		$css = array(
-			'p, blockquote, .fl-callout-text' => array(
-				'font-family' => '"%s", sans-serif',
-			),
-		);
-
-		wp_add_inline_style( 'primer-google-fonts', sprintf( Primer_Customizer::parse_css_rules( $css ), $this->get_secondary_font() ) );
 
 	}
 
