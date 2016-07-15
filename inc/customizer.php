@@ -16,12 +16,6 @@ class Primer_Customizer {
 	 */
 	public static $color_schemes = array();
 
-	/**
-	 * Array of available fonts.
-	 *
-	 * @var array
-	 */
-	public static $fonts = array();
 
 	/**
 	 * Class constructor.
@@ -175,30 +169,6 @@ class Primer_Customizer {
 
 		self::$color_schemes = $default_scheme + $custom_schemes;
 
-		/**
-		 * Filter the array of available fonts.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @var array
-		 */
-		self::$fonts = (array) apply_filters( 'primer_fonts',
-			array(
-				'Open Sans',
-				'Source Sans Pro',
-				'Roboto',
-				'Lato',
-				'Montserrat',
-				'Raleway',
-				'PT Sans',
-				'Noto Sans',
-				'Muli',
-				'Oxygen',
-				'Source Serif Pro',
-				'PT Serif',
-			)
-		);
-
 		add_action( 'after_setup_theme', array( $this, 'background' ) );
 		add_action( 'after_setup_theme', array( $this, 'header' ) );
 		add_action( 'after_setup_theme', array( $this, 'logo' ) );
@@ -206,15 +176,34 @@ class Primer_Customizer {
 		add_action( 'customize_register', array( $this, 'selective_refresh' ), 11 );
 		add_action( 'customize_register', array( $this, 'color_scheme' ), 11 );
 		add_action( 'customize_register', array( $this, 'colors' ), 11 );
-		add_action( 'customize_register', array( $this, 'typography' ), 11 );
 
-		add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
-		add_action( 'customize_controls_enqueue_scripts', array( $this, 'color_scheme_control_js' ) );
+
+		add_action( 'customize_preview_init',                  array( $this, 'customize_preview_js' ) );
+		add_action( 'customize_controls_enqueue_scripts',      array( $this, 'color_scheme_control_js' ) );
 		add_action( 'customize_controls_print_footer_scripts', array( $this, 'color_scheme_preview_css' ) );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_colors_inline_css' ), 11 );
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_google_fonts' ), 11 );
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_fonts_inline_css' ), 11 );
+
+		/**
+		 * Include all our customizer components
+		 *
+		 * @since 1.0.0
+		 */
+		foreach( glob( dirname( __FILE__ ) . '/customizer/*.php' ) as $filename ) {
+
+			require_once $filename;
+
+			$basename  = basename( $filename, '.php' );
+			$classname = 'Primer_Customizer_' . ucfirst( $basename );
+
+			if ( apply_filters( 'primer_customizer_module_enabled', true, $basename ) ) {
+
+				new $classname;
+
+			}
+
+
+		}
 
 	}
 
@@ -680,251 +669,6 @@ class Primer_Customizer {
 	public static function get_current_color_scheme() {
 
 		return self::$color_schemes[ self::get_current_color_scheme_name() ];
-
-	}
-
-	/**
-	 * Register typography section and settings.
-	 *
-	 * @action customize_registers
-	 * @since 1.0.0
-	 *
-	 * @param WP_Customize_Manager $wp_customize
-	 */
-	public function typography( WP_Customize_Manager $wp_customize ) {
-
-		if ( ! self::$fonts ) {
-
-			return;
-
-		}
-
-		$wp_customize->add_section(
-			'typography',
-			array(
-				'title'    => __( 'Typography', 'primer' ),
-				'priority' => 40,
-			)
-		);
-
-		$wp_customize->add_setting(
-			'primary_font',
-			array(
-				'default'           => self::get_default_font(),
-				'sanitize_callback' => array( __CLASS__, 'sanitize_primary_font' ),
-			)
-		);
-
-		$font_choices = array_combine( self::$fonts, self::$fonts );
-
-		$wp_customize->add_control(
-			'primary_font',
-			array(
-				'label'   => __( 'Primary Font', 'primer' ),
-				'section' => 'typography',
-				'type'    => 'select',
-				'choices' => $font_choices,
-			)
-		);
-
-		if ( self::secondary_font_enabled() ) {
-
-			$wp_customize->add_setting(
-				'secondary_font',
-				array(
-					'default'           => self::get_default_font( 'secondary_font' ),
-					'sanitize_callback' => array( __CLASS__, 'sanitize_secondary_font' ),
-				)
-			);
-
-			$wp_customize->add_control(
-				'secondary_font',
-				array(
-					'label'   => __( 'Secondary Font', 'primer' ),
-					'section' => 'typography',
-					'type'    => 'select',
-					'choices' => $font_choices,
-				)
-			);
-
-		}
-
-	}
-
-	/**
-	 * Check if a secondary font is enabled.
-	 *
-	 * If you want to disable the secondary font please use
-	 * this filter to your child theme:
-	 *
-	 * add_filter( 'primer_secondary_font_enabled', false );
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return bool
-	 */
-	public static function secondary_font_enabled() {
-
-		/**
-		 * Filter if the secondary font should be enabled.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @var bool
-		 */
-		return (bool) apply_filters( 'primer_secondary_font_enabled', true );
-
-	}
-
-	/**
-	 * Return the default font for a given font type.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param  string $font_type (optional)
-	 *
-	 * @return string
-	 */
-	public static function get_default_font( $font_type = 'primary_font' ) {
-
-		$first  = ! empty( self::$fonts[0] ) ? self::$fonts[0] : null;
-		$second = ! empty( self::$fonts[1] ) ? self::$fonts[1] : $first;
-
-		return ( 'secondary_font' === $font_type ) ? $second : $first;
-
-	}
-
-	/**
-	 * Return the primary font.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return string
-	 */
-	public static function get_primary_font() {
-
-		return self::sanitize_primary_font( get_theme_mod( 'primary_font', self::get_default_font() ) );
-
-	}
-
-	/**
-	 * Return the secondary font.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return string
-	 */
-	public static function get_secondary_font() {
-
-		return self::sanitize_secondary_font( get_theme_mod( 'secondary_font', self::get_default_font( 'secondary_font' ) ) );
-
-	}
-
-	/**
-	 * Sanitize the primary font.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param  string $font
-	 *
-	 * @return string
-	 */
-	public static function sanitize_primary_font( $font ) {
-
-		return in_array( $font, self::$fonts ) ? $font : self::get_default_font();
-
-	}
-
-	/**
-	 * Sanitize the primary font.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param  string $font
-	 *
-	 * @return string
-	 */
-	public static function sanitize_secondary_font( $font ) {
-
-		return in_array( $font, self::$fonts ) ? $font : self::get_default_font( 'secondary_font' );
-
-	}
-
-	/**
-	 * Enqueue Google fonts.
-	 *
-	 * @action wp_enqueue_scripts
-	 * @since  1.0.0
-	 */
-	public function enqueue_google_fonts() {
-
-		$primary_font  = self::get_primary_font();
-		$font_families = $primary_font . ':300,400,700';
-
-		if ( self::secondary_font_enabled() ) {
-
-			$secondary_font = self::get_secondary_font();
-
-			$font_families = array(
-				$primary_font . ':300,400,700',
-				$secondary_font . ':300,400,700',
-			);
-
-			$font_families = implode( '|', $font_families );
-
-		}
-
-		/**
-		 * Filter the Google fonts query args.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @var array
-		 */
-		$query_args = (array) apply_filters( 'primer_google_fonts_query_args',
-			array(
-				'family' => $font_families,
-				'subset' => 'latin',
-			)
-		);
-
-		wp_enqueue_style( 'primer-google-fonts', add_query_arg( $query_args, '//fonts.googleapis.com/css' ), false );
-
-	}
-
-	/**
-	 * Add font inline CSS.
-	 *
-	 * @action   wp_enqueue_scripts
-	 * @since    1.0.0
-	 *
-	 * @param string $font_type
-	 *
-	 * @internal param array $color
-	 */
-	public function enqueue_fonts_inline_css( $font_type = 'primary_font' ) {
-
-		$css = array(
-			'body, h1, h2, h3, h4, h5, h6, label' => array(
-				'font-family' => '"%s", sans-serif',
-			),
-		);
-
-		wp_add_inline_style( 'primer-google-fonts', sprintf( self::parse_css_rules( $css ), self::get_primary_font() ) );
-
-		if ( ! self::secondary_font_enabled() ) {
-
-			return;
-
-		}
-
-		$css = array(
-			'p, blockquote, .fl-callout-text' => array(
-				'font-family' => '"%s", sans-serif',
-			),
-		);
-
-		wp_add_inline_style( 'primer-google-fonts', sprintf( self::parse_css_rules( $css ), self::get_secondary_font() ) );
 
 	}
 
