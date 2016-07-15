@@ -79,7 +79,7 @@ require_once get_template_directory() . '/inc/template-tags.php';
 require_once get_template_directory() . '/inc/hooks.php';
 
 /**
- * Load Customizer additions.
+ * Load Customizer class.
  *
  * @since 1.0.0
  */

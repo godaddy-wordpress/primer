@@ -49,7 +49,7 @@ $menu-background-color: #222 !default;
 
 
 			&:hover {
-				background-color: rgba(0,0,0,.05);
+				background-color: rgba(0,0,0,0.1);
 				text-decoration: none;
 			}
 		}
@@ -63,7 +63,7 @@ $menu-background-color: #222 !default;
 			padding-bottom: 1rem;
 
 			&:hover{
-				background-color: rgba(0,0,0,.05);
+				background-color: rgba(0,0,0,0.1);
 			}
 		}
 	}

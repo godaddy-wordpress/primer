@@ -29,6 +29,22 @@ module.exports = function(grunt) {
 			}
 		},
 
+		devUpdate: {
+			main: {
+				options: {
+					updateType: 'force', //just report outdated packages
+					reportUpdated: false, //don't report up-to-date packages
+					semver: true, //stay within semver when updating
+					packages: {
+						devDependencies: true, //only check for devDependencies
+						dependencies: false
+					},
+					packageJson: null, //use matchdep default findup to locate package.json
+					reportOnlyPkgs: [] //use updateType action on all packages
+				}
+			}
+		},
+
 		jshint: {
 			all: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js']
 		},
@@ -80,12 +96,12 @@ module.exports = function(grunt) {
 
 		replace: {
 			pot: {
-				src: 'languages/' + pkg.name + '.pot',
+				src: 'languages/*.po*',
 				overwrite: true,
 				replacements: [
 					{
 						from: 'SOME DESCRIPTIVE TITLE.',
-						to: 'Primer Theme for WordPress'
+						to: pkg.title
 					},
 					{
 						from: "YEAR THE PACKAGE'S COPYRIGHT HOLDER",
@@ -128,23 +144,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		devUpdate: {
-			main: {
-				options: {
-					updateType: 'force', //just report outdated packages
-					reportUpdated: false, //don't report up-to-date packages
-					semver: true, //stay within semver when updating
-					packages: {
-						devDependencies: true, //only check for devDependencies
-						dependencies: false
-					},
-					packageJson: null, //use matchdep default findup to locate package.json
-					reportOnlyPkgs: [] //use updateType action on all packages
-				}
-			}
-	    },
-
-
 		watch: {
 			css: {
 				files: '.dev/sass/**/*.scss',
@@ -156,11 +155,7 @@ module.exports = function(grunt) {
 				options: {
 					interrupt: true
 				}
-			},
-			pot: {
-				files: [ '**/*.php' ],
-				tasks: ['update-pot']
-			},
+			}
 		}
 
 	});

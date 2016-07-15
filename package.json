@@ -1,18 +1,18 @@
 {
-  "name": "Primer",
-  "version": "1.0.0",
+  "name": "primer",
+  "title": "Primer",
   "description": "Primer is a modern WordPress theme based on _s.",
-  "main": "index.php",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": "godaddy/wp-primer-theme",
+  "version": "1.0.0",
   "author": "GoDaddy",
   "license": "GPL-2.0",
+  "repository": "godaddy/wp-primer-theme",
+  "homepage": "https://wordpress.org/themes/primer/",
   "bugs": {
     "url": "https://github.com/godaddy/wp-primer-theme/issues"
   },
-  "homepage": "https://wordpress.org/themes/primer/",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "~3.0.4",
