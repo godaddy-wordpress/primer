@@ -219,6 +219,7 @@ class Primer_Customizer_Colors {
 	 * Register a custom color setting.
 	 *
 	 * @since 1.0.0
+	 * @see   $this->colors()
 	 *
 	 * @param WP_Customize_Manager $wp_customize
 	 * @param array                $color
@@ -287,7 +288,7 @@ class Primer_Customizer_Colors {
 
 		}
 
-		$default = $this->get_default_color_hex( $color['name'], 'default' );
+		$default = $this->get_default_color( $color['name'], 'default' );
 		$hex     = trim( get_theme_mod( $color['name'], $default ), '#' );
 
 		if ( $hex === $default ) {
@@ -309,9 +310,9 @@ class Primer_Customizer_Colors {
 	 *
 	 * @return string|null
 	 */
-	public function get_default_color_hex( $color, $scheme = '', $hash = false ) {
+	public function get_default_color( $color, $scheme = '', $hash = false ) {
 
-		$scheme = empty( $scheme ) ? $this->get_current_color_scheme() : $this->color_schemes[ $this->sanitize_color_scheme( $scheme ) ];
+		$scheme = empty( $scheme ) ? $this->get_current_color_scheme_array() : $this->color_schemes[ $this->sanitize_color_scheme( $scheme ) ];
 		$hex    = isset( $scheme['colors'][ $color ] ) ? $scheme['colors'][ $color ] : null;
 
 		return ( $hash ) ? sanitize_hex_color( '#' . trim( $hex, '#' ) ) : sanitize_hex_color_no_hash( trim( $hex, '#' ) );
@@ -319,21 +320,17 @@ class Primer_Customizer_Colors {
 	}
 
 	/**
-	 * Get header textcolor
+	 * Return an array of CSS rules for a color.
 	 *
 	 * @since 1.0.0
 	 *
+	 * @param  string $color
+	 *
 	 * @return array
 	 */
-	public function get_header_textcolor_css() {
+	public function get_color_css( $color ) {
 
-		if ( ! empty( $this->colors['header_textcolor']['css'] ) ) {
-
-			return $this->colors['header_textcolor']['css'];
-
-		}
-
-		return array();
+		return ! empty( $this->colors[ $color ]['css'] ) ? $this->colors[ $color ]['css'] : array();
 
 	}
 
@@ -379,6 +376,7 @@ class Primer_Customizer_Colors {
 	 * Enqueue color scheme control in customizer
 	 *
 	 * @action customize_controls_enqueue_scripts
+	 * @since  1.0.0
 	 */
 	public function color_scheme_control_js() {
 
@@ -455,9 +453,11 @@ class Primer_Customizer_Colors {
 	/**
 	 * Return the current color scheme name.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @return string
 	 */
-	public function get_current_color_scheme_name() {
+	public function get_current_color_scheme() {
 
 		return $this->sanitize_color_scheme( get_theme_mod( 'color_scheme', 'default' ) );
 
@@ -466,11 +466,16 @@ class Primer_Customizer_Colors {
 	/**
 	 * Return the current color scheme array.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @return array
 	 */
-	public function get_current_color_scheme() {
+	public function get_current_color_scheme_array() {
 
-		return $this->color_schemes[ $this->get_current_color_scheme_name() ];
+		return $this->color_schemes[ $this->get_current_color_scheme() ];
 
 	}
+
 }
+
+$GLOBALS['primer_customizer_colors'] = new Primer_Customizer_Colors;

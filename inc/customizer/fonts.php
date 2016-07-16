@@ -1,6 +1,6 @@
 <?php
 
-class Primer_Customizer_Font {
+class Primer_Customizer_Fonts {
 
 	/**
 	 * Array of available fonts.
@@ -215,7 +215,7 @@ class Primer_Customizer_Font {
 	}
 
 	/**
-	 * Enqueue Google fonts.
+	 * Enqueue Google Fonts.
 	 *
 	 * @action wp_enqueue_scripts
 	 * @since  1.0.0
@@ -237,7 +237,7 @@ class Primer_Customizer_Font {
 		$font_families = implode( '|', $font_families );
 
 		/**
-		 * Filter the Google fonts query args.
+		 * Filter the Google Fonts query args.
 		 *
 		 * @since 1.0.0
 		 *
@@ -255,14 +255,10 @@ class Primer_Customizer_Font {
 	}
 
 	/**
-	 * Add font inline CSS.
+	 * Add inline CSS for the font customizations.
 	 *
-	 * @action   wp_enqueue_scripts
-	 * @since    1.0.0
-	 *
-	 * @param string $font_type
-	 *
-	 * @internal param array $color
+	 * @action wp_enqueue_scripts
+	 * @since  1.0.0
 	 */
 	public function enqueue_inline_css() {
 
@@ -270,7 +266,12 @@ class Primer_Customizer_Font {
 
 			if ( ! empty( $font_type['name'] ) && ! empty( $font_type['css'] ) ) {
 
-				wp_add_inline_style( 'primer-google-fonts', sprintf( Primer_Customizer::parse_css_rules( $font_type['css'] ), $this->get_font( $font_type['name'] ) ) );
+				$css = sprintf(
+					Primer_Customizer::parse_css_rules( $font_type['css'] ),
+					$this->get_font( $font_type['name'] )
+				);
+
+				wp_add_inline_style( 'primer-google-fonts', $css );
 
 			}
 
@@ -279,3 +280,5 @@ class Primer_Customizer_Font {
 	}
 
 }
+
+new Primer_Customizer_Fonts;

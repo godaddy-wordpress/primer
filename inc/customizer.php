@@ -8,27 +8,17 @@ class Primer_Customizer {
 	public function __construct() {
 
 		/**
-		 * Include all our customizer components
+		 * Autoload all customizer components.
 		 *
 		 * @since 1.0.0
 		 */
 		foreach( glob( dirname( __FILE__ ) . '/customizer/*.php' ) as $filename ) {
 
-			require_once $filename;
+			if ( is_readable( $filename ) ) {
 
-			$basename  = basename( $filename, '.php' );
-			$classname = 'Primer_Customizer_' . ucfirst( $basename );
-			$classname = apply_filters( 'primer_customizer_component_' . $basename, $classname );
-
-			if ( ! class_exists( $classname ) ) {
-
-				trigger_error( $classname . " doesn't exist.", E_ERROR );
-
-				return;
+				require_once $filename;
 
 			}
-
-			$this->$basename = new $classname;
 
 		}
 
@@ -39,95 +29,6 @@ class Primer_Customizer {
 		add_action( 'customize_register', array( $this, 'selective_refresh' ), 11 );
 
 		add_action( 'customize_preview_init',  array( $this, 'customize_preview_js' ) );
-
-	}
-
-	/**
-	 * Add custom background support.
-	 *
-	 * @action after_setup_theme
-	 * @since  1.0.0
-	 */
-	public function background() {
-
-		/**
-		 * Filter the custom background args.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @var array
-		 */
-		$args = (array) apply_filters( 'primer_custom_background_args',
-			array(
-				'default-color' => $this->colors->get_default_color_hex( 'background_color', 'default' ),
-			)
-		);
-
-		add_theme_support( 'custom-background', $args );
-
-	}
-
-	/**
-	 * Add custom header support.
-	 *
-	 * @action after_setup_theme
-	 * @since  1.0.0
-	 * @uses   $this->header_css()
-	 */
-	public function header() {
-
-		/**
-		 * Filter the custom header args.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @var array
-		 */
-		$args = (array) apply_filters( 'primer_custom_header_args',
-			array(
-				'default-image'      => '',
-				'default-text-color' => $this->colors->get_default_color_hex( 'header_textcolor', 'default' ),
-				'width'              => 1000,
-				'height'             => 250,
-				'flex-height'        => true,
-				'wp-head-callback'   => array( $this, 'header_css' ),
-			)
-		);
-
-		add_theme_support( 'custom-header', $args );
-
-	}
-
-	/**
-	 * Custom header CSS.
-	 *
-	 * @see   $this->header()
-	 * @since 1.0.0
-	 */
-	public function header_css() {
-
-		$color = get_header_textcolor();
-		$css   = $this->colors->get_header_textcolor_css();
-
-		if ( 'blank' === $color ) {
-
-			$css = array(
-				'.site-title, .site-description' => array(
-					'position' => 'absolute',
-					'clip'     => 'rect(1px, 1px, 1px, 1px)',
-				),
-			);
-
-		}
-
-		if ( $color && $css ) {
-
-			printf(
-				"<style type='text/css'>\n%s\n</style>",
-				sprintf( self::parse_css_rules( $css ), $color )
-			);
-
-		}
 
 	}
 
@@ -157,6 +58,95 @@ class Primer_Customizer {
 		);
 
 		add_theme_support( 'custom-logo', $args );
+
+	}
+
+	/**
+	 * Add custom header support.
+	 *
+	 * @action after_setup_theme
+	 * @since  1.0.0
+	 * @uses   $this->header_css()
+	 */
+	public function header() {
+
+		/**
+		 * Filter the custom header args.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var array
+		 */
+		$args = (array) apply_filters( 'primer_custom_header_args',
+			array(
+				'default-image'      => '',
+				'default-text-color' => $GLOBALS['primer_customizer_colors']->get_default_color( 'header_textcolor', 'default' ),
+				'width'              => 1000,
+				'height'             => 250,
+				'flex-height'        => true,
+				'wp-head-callback'   => array( $this, 'header_css' ),
+			)
+		);
+
+		add_theme_support( 'custom-header', $args );
+
+	}
+
+	/**
+	 * Custom header CSS.
+	 *
+	 * @see   $this->header()
+	 * @since 1.0.0
+	 */
+	public function header_css() {
+
+		$color = get_header_textcolor();
+		$css   = $GLOBALS['primer_customizer_colors']->get_color_css( 'header_textcolor' );
+
+		if ( 'blank' === $color ) {
+
+			$css = array(
+				'.site-title, .site-description' => array(
+					'position' => 'absolute',
+					'clip'     => 'rect(1px, 1px, 1px, 1px)',
+				),
+			);
+
+		}
+
+		if ( $color && $css ) {
+
+			printf(
+				"<style type='text/css'>\n%s\n</style>",
+				sprintf( self::parse_css_rules( $css ), $color )
+			);
+
+		}
+
+	}
+
+	/**
+	 * Add custom background support.
+	 *
+	 * @action after_setup_theme
+	 * @since  1.0.0
+	 */
+	public function background() {
+
+		/**
+		 * Filter the custom background args.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var array
+		 */
+		$args = (array) apply_filters( 'primer_custom_background_args',
+			array(
+				'default-color' => $GLOBALS['primer_customizer_colors']->get_default_color( 'background_color', 'default' ),
+			)
+		);
+
+		add_theme_support( 'custom-background', $args );
 
 	}
 
@@ -227,9 +217,10 @@ class Primer_Customizer {
 	}
 
 	/**
-	 * Enqueue iframe js
+	 * Enqueue preview JS.
 	 *
 	 * @action customize_preview_init
+	 * @since 1.0.0
 	 */
 	public function customize_preview_js() {
 
@@ -240,10 +231,11 @@ class Primer_Customizer {
 	}
 
 	/**
-	 * Helper function to translate array to css declarations
+	 * Return an array of CSS rules as plain CSS.
 	 *
-	 * @param array $rules
 	 * @since 1.0.0
+	 *
+	 * @param  array $rules
 	 *
 	 * @return string
 	 */
