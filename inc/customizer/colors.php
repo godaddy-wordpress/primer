@@ -5,12 +5,16 @@ class Primer_Customizer_Colors {
 	/**
 	 * Array of customizable colors.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @var array
 	 */
 	protected $colors = array();
 
 	/**
 	 * Array of available color schemes.
+	 *
+	 * @since 1.0.0
 	 *
 	 * @var array
 	 */
@@ -175,6 +179,21 @@ class Primer_Customizer_Colors {
 		add_action( 'customize_controls_print_footer_scripts', array( $this, 'color_scheme_preview_css' ) );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_colors_inline_css' ), 11 );
+
+	}
+
+	/**
+	 * Magic property getter.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  string $property
+	 *
+	 * @return array
+	 */
+	public function __get( $property ) {
+
+		return property_exists( $this, $property ) ? $property : array();
 
 	}
 

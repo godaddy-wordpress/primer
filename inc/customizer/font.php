@@ -5,12 +5,16 @@ class Primer_Customizer_Font {
 	/**
 	 * Array of available fonts.
 	 *
+	 * @since 1.0.0
+	 *
 	 * @var array
 	 */
 	protected $fonts = array();
 
 	/**
 	 * Array of available font types.
+	 *
+	 * @since 1.0.0
 	 *
 	 * @var array
 	 */
@@ -88,8 +92,24 @@ class Primer_Customizer_Font {
 		);
 
 		add_action( 'customize_register', array( $this, 'typography' ), 11 );
+
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_google_fonts' ), 11 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_inline_css' ), 12 );
+
+	}
+
+	/**
+	 * Magic property getter.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  string $property
+	 *
+	 * @return array
+	 */
+	public function __get( $property ) {
+
+		return property_exists( $this, $property ) ? $property : array();
 
 	}
 
