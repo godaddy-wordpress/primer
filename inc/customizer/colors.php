@@ -180,6 +180,9 @@ class Primer_Customizer_Colors {
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_colors_inline_css' ), 11 );
 
+		add_action( 'after_setup_theme', array( $this, 'header' ) );
+		add_action( 'after_setup_theme', array( $this, 'background' ) );
+
 	}
 
 	/**
@@ -476,6 +479,95 @@ class Primer_Customizer_Colors {
 
 	}
 
+	/**
+	 * Add custom header support.
+	 *
+	 * @action after_setup_theme
+	 * @since  1.0.0
+	 * @uses   $this->header_css()
+	 */
+	public function header() {
+
+		/**
+		 * Filter the custom header args.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var array
+		 */
+		$args = (array) apply_filters( 'primer_custom_header_args',
+			array(
+				'default-image'      => '',
+				'default-text-color' => $this->get_default_color( 'header_textcolor', 'default' ),
+				'width'              => 1000,
+				'height'             => 250,
+				'flex-height'        => true,
+				'wp-head-callback'   => array( $this, 'header_css' ),
+			)
+		);
+
+		add_theme_support( 'custom-header', $args );
+
+	}
+
+	/**
+	 * Custom header CSS.
+	 *
+	 * @see   $this->header()
+	 * @since 1.0.0
+	 */
+	public function header_css() {
+
+		$color = get_header_textcolor();
+		$css   = $this->get_color_css( 'header_textcolor' );
+
+		if ( 'blank' === $color ) {
+
+			$css = array(
+				'.site-title, .site-description' => array(
+					'position' => 'absolute',
+					'clip'     => 'rect(1px, 1px, 1px, 1px)',
+				),
+			);
+
+		}
+
+		if ( $color && $css ) {
+
+			printf(
+				"<style type='text/css'>\n%s\n</style>",
+				sprintf( Primer_Customizer::parse_css_rules( $css ), $color )
+			);
+
+		}
+
+	}
+
+	/**
+	 * Add custom background support.
+	 *
+	 * @action after_setup_theme
+	 * @since  1.0.0
+	 */
+	public function background() {
+
+		/**
+		 * Filter the custom background args.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var array
+		 */
+		$args = (array) apply_filters( 'primer_custom_background_args',
+			array(
+				'default-color' => $this->get_default_color( 'background_color', 'default' ),
+			)
+		);
+
+		add_theme_support( 'custom-background', $args );
+
+	}
+
 }
 
-$GLOBALS['primer_customizer_colors'] = new Primer_Customizer_Colors;
+new Primer_Customizer_Colors;
