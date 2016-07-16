@@ -3,6 +3,13 @@
 class Primer_Customizer {
 
 	/**
+	 * Customizer colors class instance.
+	 *
+	 * @var Primer_Customizer_Colors
+	 */
+	private $colors;
+
+	/**
 	 * Class constructor.
 	 */
 	public function __construct() {
@@ -22,42 +29,24 @@ class Primer_Customizer {
 
 		}
 
-		add_action( 'after_setup_theme', array( $this, 'logo' ) );
-		add_action( 'after_setup_theme', array( $this, 'header' ) );
-		add_action( 'after_setup_theme', array( $this, 'background' ) );
-
-		add_action( 'customize_register', array( $this, 'selective_refresh' ), 11 );
-
-		add_action( 'customize_preview_init',  array( $this, 'customize_preview_js' ) );
-
-	}
-
-	/**
-	 * Add custom logo support.
-	 *
-	 * @action after_setup_theme
-	 * @since  1.0.0
-	 */
-	public function logo() {
-
 		/**
-		 * Filter the custom logo args.
+		 * These methods require custom colors to be available.
 		 *
-		 * @since 1.0.0
-		 *
-		 * @var array
+		 * @global Primer_Customizer_Colors primer_customizer_colors
+		 * @since  1.0.0
 		 */
-		$args = (array) apply_filters( 'primer_custom_logo_args',
-			array(
-				'height'      => 100,
-				'width'       => 400,
-				'flex-height' => true,
-				'flex-width'  => true,
-				'header-text' => array( 'site-title', 'site-description' ),
-			)
-		);
+		if ( isset( $GLOBALS['primer_customizer_colors'] ) ) {
 
-		add_theme_support( 'custom-logo', $args );
+			$this->colors = $GLOBALS['primer_customizer_colors'];
+
+			add_action( 'after_setup_theme', array( $this, 'header' ) );
+			add_action( 'after_setup_theme', array( $this, 'background' ) );
+
+		}
+
+		add_action( 'after_setup_theme',       array( $this, 'logo' ) );
+		add_action( 'customize_register',      array( $this, 'selective_refresh' ), 11 );
+		add_action( 'customize_preview_init',  array( $this, 'customize_preview_js' ) );
 
 	}
 
@@ -80,7 +69,7 @@ class Primer_Customizer {
 		$args = (array) apply_filters( 'primer_custom_header_args',
 			array(
 				'default-image'      => '',
-				'default-text-color' => $GLOBALS['primer_customizer_colors']->get_default_color( 'header_textcolor', 'default' ),
+				'default-text-color' => $this->colors->get_default_color( 'header_textcolor', 'default' ),
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
@@ -101,7 +90,7 @@ class Primer_Customizer {
 	public function header_css() {
 
 		$color = get_header_textcolor();
-		$css   = $GLOBALS['primer_customizer_colors']->get_color_css( 'header_textcolor' );
+		$css   = $this->colors->get_color_css( 'header_textcolor' );
 
 		if ( 'blank' === $color ) {
 
@@ -142,11 +131,40 @@ class Primer_Customizer {
 		 */
 		$args = (array) apply_filters( 'primer_custom_background_args',
 			array(
-				'default-color' => $GLOBALS['primer_customizer_colors']->get_default_color( 'background_color', 'default' ),
+				'default-color' => $this->colors->get_default_color( 'background_color', 'default' ),
 			)
 		);
 
 		add_theme_support( 'custom-background', $args );
+
+	}
+
+	/**
+	 * Add custom logo support.
+	 *
+	 * @action after_setup_theme
+	 * @since  1.0.0
+	 */
+	public function logo() {
+
+		/**
+		 * Filter the custom logo args.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var array
+		 */
+		$args = (array) apply_filters( 'primer_custom_logo_args',
+			array(
+				'height'      => 100,
+				'width'       => 400,
+				'flex-height' => true,
+				'flex-width'  => true,
+				'header-text' => array( 'site-title', 'site-description' ),
+			)
+		);
+
+		add_theme_support( 'custom-logo', $args );
 
 	}
 
