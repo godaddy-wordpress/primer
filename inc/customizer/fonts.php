@@ -34,18 +34,25 @@ class Primer_Customizer_Fonts {
 		 */
 		$this->fonts = (array) apply_filters( 'primer_fonts',
 			array(
-				'Open Sans',
-				'Source Sans Pro',
-				'Roboto',
+				'Asap',
+				'Cabin',
+				'Droid',
+				'Droid Sans',
+				'Josefin Sans',
 				'Lato',
+				'Merriweather',
+				'Merriweather Sans',
 				'Montserrat',
-				'Raleway',
+				'Open Sans',
+				'Oswald',
 				'PT Sans',
-				'Noto Sans',
-				'Muli',
-				'Oxygen',
-				'Source Serif Pro',
 				'PT Serif',
+				'Raleway',
+				'Roboto',
+				'Roboto Slab',
+				'Source Sans Pro',
+				'Source Serif Pro',
+				'Ubuntu',
 			)
 		);
 
