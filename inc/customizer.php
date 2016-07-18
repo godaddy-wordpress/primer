@@ -3,13 +3,6 @@
 class Primer_Customizer {
 
 	/**
-	 * Customizer colors class instance.
-	 *
-	 * @var Primer_Customizer_Colors
-	 */
-	private $colors;
-
-	/**
 	 * Class constructor.
 	 */
 	public function __construct() {
@@ -155,26 +148,26 @@ class Primer_Customizer {
 	 */
 	public static function parse_css_rules( array $rules ) {
 
-		$output = '';
+		ob_start();
 
 		foreach ( $rules as $rule => $properties ) {
 
-			$output .= sprintf(
+			printf(
 				"%s {\n",
 				implode( ",\n", array_map( 'trim', explode( ',', $rule ) ) )
 			);
 
 			foreach ( $properties as $property => $value ) {
 
-				$output .= sprintf( "\t%s: %s;\n", $property, $value );
+				printf( "\t%s: %s;\n", $property, $value );
 
 			}
 
-			$output .= "}\n";
+			echo "}\n";
 
 		}
 
-		return $output;
+		return ob_get_clean();
 
 	}
 
