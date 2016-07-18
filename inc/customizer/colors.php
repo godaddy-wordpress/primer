@@ -567,7 +567,6 @@ class Primer_Customizer_Colors {
 		add_theme_support( 'custom-background', $args );
 
 	}
-
 }
 
 new Primer_Customizer_Colors;
