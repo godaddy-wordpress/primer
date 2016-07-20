@@ -8,8 +8,6 @@
 
 <div class="site-title-wrapper">
 
-	<div class="site-title-wrapper-inner">
-
 		<?php if ( has_custom_logo() ) : ?>
 
 			<?php the_custom_logo() ?>
@@ -39,7 +37,5 @@
 			</div>
 
 		<?php endif; ?>
-
-	</div><!-- .site-info-inner -->
 
 </div><!-- .site-title-wrapper -->
