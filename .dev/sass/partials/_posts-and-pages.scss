@@ -1,4 +1,21 @@
-.sticky {}
+.sticky {
+	font-family: 'Genericons';
+	content: '\f308';
+	color: $primary-color;
+	font-size: rem-calc(20);
+	line-height: 1.4;
+	position: relative;
+	top: 2px;
+
+	@media #{$medium-up} {
+		font-size: rem-calc(30);
+		top: 5px;
+	}
+
+	@media #{$large-up} {
+		font-size: rem-calc(35);
+	}
+}
 
 .no-results,
 .not-found{
