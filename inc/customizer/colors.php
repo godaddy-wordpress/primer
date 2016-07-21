@@ -212,7 +212,7 @@ class Primer_Customizer_Colors {
 	 * Register custom colors settings.
 	 *
 	 * @action customize_register
-	 * @since 1.0.0
+	 * @since  1.0.0
 	 *
 	 * @param WP_Customize_Manager $wp_customize
 	 */
@@ -331,6 +331,18 @@ class Primer_Customizer_Colors {
 	 */
 	public function get_default_color( $color, $scheme = '', $hash = false ) {
 
+		/**
+		 * Load for backwards compatibility prior to WordPress 4.6.
+		 *
+		 * @link  https://core.trac.wordpress.org/ticket/27583
+		 * @since 1.0.0
+		 */
+		if ( ! function_exists( 'sanitize_hex_color' ) || ! function_exists( 'sanitize_hex_color_no_hash' ) ) {
+
+			require_once ABSPATH . 'wp-includes/class-wp-customize-manager.php';
+
+		}
+
 		$scheme = empty( $scheme ) ? $this->get_current_color_scheme_array() : $this->color_schemes[ $this->sanitize_color_scheme( $scheme ) ];
 		$hex    = isset( $scheme['colors'][ $color ] ) ? $scheme['colors'][ $color ] : null;
 
@@ -357,7 +369,7 @@ class Primer_Customizer_Colors {
 	 * Register a color scheme setting.
 	 *
 	 * @action customize_register
-	 * @since 1.0.0
+	 * @since  1.0.0
 	 *
 	 * @param WP_Customize_Manager $wp_customize
 	 */
