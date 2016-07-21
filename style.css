@@ -59,7 +59,7 @@ body {
   font-family: Georgia, serif;
   font-weight: normal;
   font-style: normal;
-  line-height: 150%;
+  line-height: 180%;
   cursor: default;
   -webkit-font-smoothing: antialiased; }
 
@@ -1762,12 +1762,12 @@ p {
   font-family: inherit;
   font-weight: normal;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.8;
   margin-bottom: 1rem;
   text-rendering: optimizeLegibility; }
   p.lead {
     font-size: 1.21875rem;
-    line-height: 1.6; }
+    line-height: 1.8; }
   p aside {
     font-size: 0.875rem;
     line-height: 1.35;
@@ -1879,7 +1879,7 @@ ul,
 ol,
 dl {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.8;
   margin-bottom: 1rem;
   list-style-position: outside;
   font-family: inherit; }
@@ -1970,7 +1970,7 @@ blockquote {
 
 blockquote,
 blockquote p {
-  line-height: 1.6;
+  line-height: 1.8;
   color: #6f6f6f;
   font-size: 1.4em;
   font-size: 1.4rem;
@@ -2500,7 +2500,7 @@ a {
     margin-bottom: 0; }
   .widget, .widget p, .widget ul, .widget ol {
     font-family: "Open Sans", sans-serif;
-    font-size: 0.05625rem; }
+    font-size: 1rem; }
 
 /* Make sure form fields fit in widgets */
 .widget input[type="text"],
