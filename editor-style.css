@@ -7,8 +7,8 @@ meta.foundation-mq-medium {
   width: 40.063em; }
 
 meta.foundation-mq-large {
-  font-family: "/only screen and (min-width:64.063em)/";
-  width: 64.063em; }
+  font-family: "/only screen and (min-width:61.063em)/";
+  width: 61.063em; }
 
 meta.foundation-mq-xlarge {
   font-family: "/only screen and (min-width:90.063em)/";
@@ -24,6 +24,8 @@ meta.foundation-data-attribute-namespace {
 *,
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html,
@@ -123,7 +125,7 @@ select {
   .small-text-justify {
     text-align: justify !important; } }
 
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+@media only screen and (min-width: 40.063em) and (max-width: 61em) {
   .medium-only-text-left {
     text-align: left !important; }
   .medium-only-text-right {
@@ -143,7 +145,7 @@ select {
   .medium-text-justify {
     text-align: justify !important; } }
 
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+@media only screen and (min-width: 61.063em) and (max-width: 90em) {
   .large-only-text-left {
     text-align: left !important; }
   .large-only-text-right {
@@ -153,7 +155,7 @@ select {
   .large-only-text-justify {
     text-align: justify !important; } }
 
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 61.063em) {
   .large-text-left {
     text-align: left !important; }
   .large-text-right {
@@ -555,7 +557,7 @@ blockquote p {
     .sticky {
       font-size: 1.875rem;
       top: 5px; } }
-  @media only screen and (min-width: 64.063em) {
+  @media only screen and (min-width: 61.063em) {
     .sticky {
       font-size: 2.1875rem; } }
 
