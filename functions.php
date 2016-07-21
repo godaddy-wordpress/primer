@@ -171,9 +171,18 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		 * @since 1.0.0
 		 */
 		register_nav_menus(
-			array(
-				'primary' => esc_html__( 'Primary Menu', 'primer' ),
-				'social'  => esc_html__( 'Social Menu', 'primer' ),
+			/**
+			 * Filter registered nav menus.
+			 *
+			 * @since 1.0.0
+			 *
+			 * @var array
+			 */
+			(array) apply_filters( 'primer_nav_menus',
+				array(
+					'primary' => esc_html__( 'Primary Menu', 'primer' ),
+					'social'  => esc_html__( 'Social Menu', 'primer' ),
+				)
 			)
 		);
 
