@@ -2396,7 +2396,7 @@ a {
     float: none; }
     .main-navigation li a {
       display: block;
-      background: #222;
+      background-color: #222;
       text-align: left; }
     .main-navigation li.menu-item-has-children:hover > a:after {
       border-top-color: transparent;
