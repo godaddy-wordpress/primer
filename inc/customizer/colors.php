@@ -75,7 +75,7 @@ class Primer_Customizer_Colors {
 					'label'   => __( 'Link Color', 'primer' ),
 					'default' => '#1585cf',
 					'css'     => array(
-						'a, a:visited, .entry-footer a' => array(
+						'a, a:visited, .entry-footer a, .sticky .entry-title a:before' => array(
 							'color' => '%1$s',
 						),
 						'button, a.button, a.button:visited, input[type="button"], input[type="reset"], input[type="submit"], .site-info-wrapper .site-info .social-menu a' => array(
