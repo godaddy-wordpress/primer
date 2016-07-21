@@ -1817,7 +1817,7 @@ hr {
   border: solid #ddd;
   border-width: 1px 0 0;
   clear: both;
-  margin: rem-calc(20) auto 0 rem-calc(20) auto-0.0625rem;
+  margin: 1.25rem auto 0 1.25rem auto-0.0625rem;
   height: 0; }
 
 /* Helpful Typography Defaults */
@@ -1847,7 +1847,7 @@ pre {
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
   border-radius: 2px;
-  padding: rem-calc(2 5 1);
+  padding: 0.125rem 0.3125rem 0.0625rem;
   margin-bottom: 1rem; }
 
 code {
@@ -1860,7 +1860,7 @@ code {
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
   border-radius: 2px;
-  padding: rem-calc(2 5 1); }
+  padding: 0.125rem 0.3125rem 0.0625rem; }
 
 address {
   margin-bottom: 1em; }
@@ -1949,7 +1949,7 @@ abbr {
 /* Blockquotes */
 blockquote {
   margin: 0 0 1rem;
-  padding: rem-calc(9 20 0 19);
+  padding: 0.5625rem 1.25rem 0 1.1875rem;
   border-left: 1px solid #cacaca;
   overflow: hidden;
   font-family: "Open Sans", sans-serif;
@@ -2500,7 +2500,7 @@ a {
     margin-bottom: 0; }
   .widget, .widget p, .widget ul, .widget ol {
     font-family: "Open Sans", sans-serif;
-    font-size: rem-calc(0.9); }
+    font-size: 0.05625rem; }
 
 /* Make sure form fields fit in widgets */
 .widget input[type="text"],
