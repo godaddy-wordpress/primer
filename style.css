@@ -2199,7 +2199,7 @@ input[type="color"],
 textarea {
   color: #0a0a0a;
   background-color: #fefefe;
-  border: none;
+  border: 1px solid rgba(117, 117, 117, 0.28);
   transform: 200ms background linear;
   border-radius: 3px;
   resize: none; }
@@ -2242,7 +2242,8 @@ textarea {
   padding: .75rem; }
 
 input[type="file"] {
-  font-size: 1rem; }
+  font-size: 1rem;
+  line-height: 1; }
 
 label {
   font-family: "Open Sans", sans-serif;
