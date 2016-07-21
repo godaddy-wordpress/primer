@@ -82,6 +82,14 @@ class Primer_Customizer_Colors {
 							'background-color' => '%1$s',
 						),
 					),
+					'rgba_css' => array(
+						'a:hover, a:visited:hover, .entry-footer a:hover' => array(
+							'color' => 'rgba(%1$s, 0.75)',
+						),
+						'button:hover, a.button:hover, a.button:visited:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .site-info-wrapper:hover .site-info:hover .social-menu a:hover' => array(
+							'color' => 'rgba(%1$s, 0.75)',
+						),
+					),
 				),
 				array(
 					'name'    => 'main_text_color',
@@ -300,7 +308,15 @@ class Primer_Customizer_Colors {
 
 		}
 
-		wp_add_inline_style( 'primer', sprintf( Primer_Customizer::parse_css_rules( $color['css'] ), '#' . $hex ) );
+		$css = sprintf( Primer_Customizer::parse_css_rules( $color['css'] ), '#' . $hex );
+
+		if ( ! empty( $color['rgba_css'] ) ) {
+
+			$css .= sprintf( Primer_Customizer::parse_css_rules( $color['rgba_css'] ), implode( ', ', primer_hex2rgb( $hex ) ) );
+
+		}
+
+		wp_add_inline_style( 'primer', $css );
 
 	}
 
@@ -376,7 +392,7 @@ class Primer_Customizer_Colors {
 	}
 
 	/**
-	 * Enqueue color scheme control in customizer
+	 * Enqueue color scheme control in the Customizer.
 	 *
 	 * @action customize_controls_enqueue_scripts
 	 * @since  1.0.0
@@ -399,7 +415,7 @@ class Primer_Customizer_Colors {
 	public function color_scheme_preview_css() {
 
 		?>
-		<script type="text/html" id="tmpl-primer-color-scheme">
+		<script type="text/html" id="tmpl-primer-color-scheme-css">
 			<?php
 
 			foreach ( $this->colors as $color ) {
@@ -413,6 +429,31 @@ class Primer_Customizer_Colors {
 				printf(
 					Primer_Customizer::parse_css_rules( $color['css'] ),
 					sprintf( '{{ data.%s }}', $color['name'] )
+				);
+
+			}
+
+			?>
+		</script>
+		<?php
+
+		$rgba_colors = $this->get_rgba_css();
+
+		if ( ! $rgba_colors ) {
+
+			return;
+
+		}
+
+		?>
+		<script type="text/html" id="tmpl-primer-color-scheme-css-rgba">
+			<?php
+
+			foreach ( $rgba_colors as $name => $css ) {
+
+				printf(
+					Primer_Customizer::parse_css_rules( $css ),
+					sprintf( '{{ data.%s }}', $name )
 				);
 
 			}
@@ -476,6 +517,29 @@ class Primer_Customizer_Colors {
 	public function get_current_color_scheme_array() {
 
 		return $this->color_schemes[ $this->get_current_color_scheme() ];
+
+	}
+
+	/**
+	 * Return an array of CSS for colors supporting RGBA.
+	 *
+	 * @return array
+	 */
+	public function get_rgba_css() {
+
+		$colors = array();
+
+		foreach ( $this->colors as $color ) {
+
+			if ( ! empty( $color['name'] ) && ! empty( $color['rgba_css'] ) && is_array( $color['rgba_css'] ) ) {
+
+				$colors[ $color['name'] ] = $color['rgba_css'];
+
+			}
+
+		}
+
+		return $colors;
 
 	}
 
