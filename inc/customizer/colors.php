@@ -87,7 +87,7 @@ class Primer_Customizer_Colors {
 							'color' => 'rgba(%1$s, 0.75)',
 						),
 						'button:hover, a.button:hover, a.button:visited:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .site-info-wrapper:hover .site-info:hover .social-menu a:hover' => array(
-							'color' => 'rgba(%1$s, 0.75)',
+							'background-color' => 'rgba(%1$s, 0.75)',
 						),
 					),
 				),
