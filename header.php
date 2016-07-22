@@ -66,14 +66,18 @@
 
 		<header id="masthead" class="site-header" role="banner">
 
-			<?php
-			/**
-			 * Fires inside the `<header>` element.
-			 *
-			 * @since 1.0.0
-			 */
-			do_action( 'primer_header' );
-			?>
+			<div class="site-header-wrapper">
+
+				<?php
+				/**
+				 * Fires inside the `<header>` element.
+				 *
+				 * @since 1.0.0
+				 */
+				do_action( 'primer_header' );
+				?>
+
+			</div><!-- .site-header-wrapper -->
 
 		</header><!-- #masthead -->
 

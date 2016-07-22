@@ -197,7 +197,7 @@ $menu-background-color: #222 !default;
 
 			a {
 				display: block;
-				background: #222;
+				background-color: $menu-background-color;
 				text-align: left;
 			}
 

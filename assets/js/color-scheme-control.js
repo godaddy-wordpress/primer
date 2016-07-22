@@ -6,7 +6,8 @@
 
 ( function( api ) {
 
-	var cssTemplate   = wp.template( 'primer-color-scheme' ),
+	var cssTemplate   = wp.template( 'primer-color-scheme-css' ),
+	    rgbaTemplate  = wp.template( 'primer-color-scheme-css-rgba' ),
 	    colorSettings = [];
 
 	// Grab array keys from the default scheme.
@@ -48,17 +49,34 @@
 	// Generate the CSS for the current color scheme.
 	function updateCSS() {
 
-		var scheme = api( 'color_scheme' )(),
-		    colors = _.object( colorSettings, colorSchemes[ scheme ].colors );
+		var scheme     = api( 'color_scheme' )(),
+		    colors     = _.object( colorSettings, colorSchemes[ scheme ].colors ),
+		    rgbaColors = {};
 
 		// Merge in color scheme overrides.
 		_.each( colorSettings, function( setting ) {
 
-			colors[ setting ] = api( setting )();
+			var hex = api( setting )();
+
+			colors[ setting ]     = hex;
+			rgbaColors[ setting ] = hex2rgb( hex );
 
 		} );
 
-		api.previewer.send( 'update-color-scheme-css', cssTemplate( colors ) );
+		api.previewer.send( 'primer-update-color-scheme-css', cssTemplate( colors ) );
+		api.previewer.send( 'primer-update-color-scheme-css-rgba', rgbaTemplate( rgbaColors ) );
+
+	}
+
+	// Convert a HEX color to RGB.
+	function hex2rgb( hex ) {
+
+		var hex = hex.replace( '#', '' ),
+		    r   = parseInt( hex.substring( 0, 2 ), 16 ),
+		    g   = parseInt( hex.substring( 2, 4 ), 16 ),
+		    b   = parseInt( hex.substring( 4, 6 ), 16 );
+
+		return r + ', ' + g + ', ' + b;
 
 	}
 

@@ -7,8 +7,8 @@ meta.foundation-mq-medium {
   width: 40.063em; }
 
 meta.foundation-mq-large {
-  font-family: "/only screen and (min-width:64.063em)/";
-  width: 64.063em; }
+  font-family: "/only screen and (min-width:61.063em)/";
+  width: 61.063em; }
 
 meta.foundation-mq-xlarge {
   font-family: "/only screen and (min-width:90.063em)/";
@@ -40,7 +40,7 @@ body {
   font-family: Georgia, serif;
   font-weight: normal;
   font-style: normal;
-  line-height: 150%;
+  line-height: 180%;
   cursor: default;
   -webkit-font-smoothing: antialiased; }
 
@@ -125,7 +125,7 @@ select {
   .small-text-justify {
     text-align: justify !important; } }
 
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+@media only screen and (min-width: 40.063em) and (max-width: 61em) {
   .medium-only-text-left {
     text-align: left !important; }
   .medium-only-text-right {
@@ -145,7 +145,7 @@ select {
   .medium-text-justify {
     text-align: justify !important; } }
 
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+@media only screen and (min-width: 61.063em) and (max-width: 90em) {
   .large-only-text-left {
     text-align: left !important; }
   .large-only-text-right {
@@ -155,7 +155,7 @@ select {
   .large-only-text-justify {
     text-align: justify !important; } }
 
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 61.063em) {
   .large-text-left {
     text-align: left !important; }
   .large-text-right {
@@ -243,12 +243,12 @@ p {
   font-family: inherit;
   font-weight: normal;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.8;
   margin-bottom: 1rem;
   text-rendering: optimizeLegibility; }
   p.lead {
     font-size: 1.21875rem;
-    line-height: 1.6; }
+    line-height: 1.8; }
   p aside {
     font-size: 0.875rem;
     line-height: 1.35;
@@ -360,7 +360,7 @@ ul,
 ol,
 dl {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.8;
   margin-bottom: 1rem;
   list-style-position: outside;
   font-family: inherit; }
@@ -451,7 +451,7 @@ blockquote {
 
 blockquote,
 blockquote p {
-  line-height: 1.6;
+  line-height: 1.8;
   color: #6f6f6f;
   font-size: 1.4em;
   font-size: 1.4rem;
@@ -544,6 +544,23 @@ blockquote p {
 .aligncenter {
   display: block;
   margin: 0 auto; }
+
+.sticky .entry-title a:before {
+  font-family: 'Genericons';
+  content: '\f308';
+  color: #008CBA;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  position: relative;
+  top: 2px;
+  right: 12px; }
+  @media only screen and (min-width: 40.063em) {
+    .sticky .entry-title a:before {
+      font-size: 1.875rem;
+      top: 5px; } }
+  @media only screen and (min-width: 61.063em) {
+    .sticky .entry-title a:before {
+      font-size: 2.1875rem; } }
 
 .no-results,
 .not-found {
@@ -728,6 +745,10 @@ article.format-link {
 
 .comment-content a {
   word-wrap: break-word; }
+
+.bypostauthor {
+  border: 3px solid rgba(0, 140, 186, 0.2);
+  border-radius: 5px; }
 
 .comments-area {
   padding: 1.5em;

@@ -6,12 +6,19 @@
 
 ( function( $ ) {
 
-	var style = $( '#primer-color-scheme-css' ),
-	    api   = wp.customize;
+	var style     = $( '#primer-color-scheme-css' ),
+	    rgbaStyle = $( '#primer-color-scheme-css-rgba' ),
+	    api       = wp.customize;
 
 	if ( ! style.length ) {
 
 		style = $( 'head' ).append( '<style type="text/css" id="primer-color-scheme-css" />' ).find( '#primer-color-scheme-css' );
+
+	}
+
+	if ( ! rgbaStyle.length ) {
+
+		rgbaStyle = $( 'head' ).append( '<style type="text/css" id="primer-color-scheme-css-rgba" />' ).find( '#primer-color-scheme-css-rgba' );
 
 	}
 
@@ -51,9 +58,15 @@
 	// Color scheme.
 	api.bind( 'preview-ready', function() {
 
-		api.preview.bind( 'update-color-scheme-css', function( css ) {
+		api.preview.bind( 'primer-update-color-scheme-css', function( css ) {
 
 			style.html( css );
+
+		} );
+
+		api.preview.bind( 'primer-update-color-scheme-css-rgba', function( rgbaCSS ) {
+
+			rgbaStyle.html( rgbaCSS );
 
 		} );
 

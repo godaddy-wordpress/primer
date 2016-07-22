@@ -171,9 +171,18 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		 * @since 1.0.0
 		 */
 		register_nav_menus(
-			array(
-				'primary' => esc_html__( 'Primary Menu', 'primer' ),
-				'social'  => esc_html__( 'Social Menu', 'primer' ),
+			/**
+			 * Filter registered nav menus.
+			 *
+			 * @since 1.0.0
+			 *
+			 * @var array
+			 */
+			(array) apply_filters( 'primer_nav_menus',
+				array(
+					'primary' => esc_html__( 'Primary Menu', 'primer' ),
+					'social'  => esc_html__( 'Social Menu', 'primer' ),
+				)
 			)
 		);
 
@@ -287,8 +296,8 @@ function primer_register_sidebars() {
 				'description'   => esc_html__( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
-				'before_title'  => '<h6 class="widget-title">',
-				'after_title'   => '</h6>',
+				'before_title'  => '<h4 class="widget-title">',
+				'after_title'   => '</h4>',
 			),
 			array(
 				'name'          => esc_html__( 'Secondary Sidebar', 'primer' ),
@@ -296,8 +305,8 @@ function primer_register_sidebars() {
 				'description'   => esc_html__( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
-				'before_title'  => '<h6 class="widget-title">',
-				'after_title'   => '</h6>',
+				'before_title'  => '<h4 class="widget-title">',
+				'after_title'   => '</h4>',
 			),
 			array(
 				'name'          => esc_html__( 'Footer 1', 'primer' ),
@@ -305,8 +314,8 @@ function primer_register_sidebars() {
 				'description'   => esc_html__( 'This sidebar is the first column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
-				'before_title'  => '<h6 class="widget-title">',
-				'after_title'   => '</h6>',
+				'before_title'  => '<h4 class="widget-title">',
+				'after_title'   => '</h4>',
 			),
 			array(
 				'name'          => esc_html__( 'Footer 2', 'primer' ),
@@ -314,8 +323,8 @@ function primer_register_sidebars() {
 				'description'   => esc_html__( 'This sidebar is the second column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
-				'before_title'  => '<h6 class="widget-title">',
-				'after_title'   => '</h6>',
+				'before_title'  => '<h4 class="widget-title">',
+				'after_title'   => '</h4>',
 			),
 			array(
 				'name'          => esc_html__( 'Footer 3', 'primer' ),
@@ -323,8 +332,8 @@ function primer_register_sidebars() {
 				'description'   => esc_html__( 'This sidebar is the third column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
-				'before_title'  => '<h6 class="widget-title">',
-				'after_title'   => '</h6>',
+				'before_title'  => '<h4 class="widget-title">',
+				'after_title'   => '</h4>',
 			)
 		)
 	);
