@@ -130,7 +130,7 @@ class Primer_Customizer_Layouts {
 
 		wp_enqueue_script( 'primer-layouts-meta-box', get_template_directory_uri() . "/assets/js/meta-box{$suffix}.js", array( 'jquery' ), PRIMER_VERSION );
 
-		wp_enqueue_style( 'primer-layouts-meta-box', get_template_directory_uri() . '/assets/css/meta-box.css');
+		wp_enqueue_style( 'primer-layouts-meta-box', get_template_directory_uri() . '/assets/css/meta-box.css', array(), PRIMER_VERSION );
 
 	}
 
@@ -224,11 +224,9 @@ class Primer_Customizer_Layouts {
 			</p>
 
 			<p>
-				<input type="radio" name="primer-layout-override" id="primer-layout-use-default" value="0" <?php checked( ! $has_custom ) ?>>
-				<label for="primer-layout-use-default"><?php _e( 'Default', 'primer' ) ?></label>
-				&nbsp;
-				<input type="radio" name="primer-layout-override" id="primer-layout-use-custom" value="1" <?php checked( $has_custom ) ?>>
-				<label for="primer-layout-use-custom"><?php _e( 'Custom', 'primer' ) ?></label>
+				<input type="radio" name="primer-layout-override" id="primer-layout-use-default" value="0" <?php checked( ! $has_custom ) ?>><label for="primer-layout-use-default"><?php _e( 'Default', 'primer' ) ?></label>
+				&nbsp;&nbsp;
+				<input type="radio" name="primer-layout-override" id="primer-layout-use-custom" value="1" <?php checked( $has_custom ) ?>><label for="primer-layout-use-custom"><?php _e( 'Custom', 'primer' ) ?></label>
 			</p>
 
 			<div class="primer-layout-wrap">
