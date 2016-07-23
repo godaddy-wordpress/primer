@@ -22,9 +22,9 @@ class Primer_Customizer {
 
 		}
 
-		add_action( 'after_setup_theme',       array( $this, 'logo' ) );
-		add_action( 'customize_register',      array( $this, 'selective_refresh' ), 11 );
-		add_action( 'customize_preview_init',  array( $this, 'customize_preview_js' ) );
+		add_action( 'after_setup_theme',      array( $this, 'logo' ) );
+		add_action( 'customize_register',     array( $this, 'selective_refresh' ), 11 );
+		add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
 
 	}
 

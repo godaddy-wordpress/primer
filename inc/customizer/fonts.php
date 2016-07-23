@@ -56,6 +56,12 @@ class Primer_Customizer_Fonts {
 			)
 		);
 
+		if ( ! $this->fonts ) {
+
+			return;
+
+		}
+
 		/**
 		 * Filter the array of available font types.
 		 *
@@ -98,25 +104,15 @@ class Primer_Customizer_Fonts {
 			)
 		);
 
-		add_action( 'customize_register', array( $this, 'typography' ), 11 );
+		if ( ! $this->font_types ) {
 
+			return;
+
+		}
+
+		add_action( 'customize_register', array( $this, 'typography' ), 11 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_google_fonts' ), 11 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_inline_css' ), 12 );
-
-	}
-
-	/**
-	 * Magic property getter.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param  string $property
-	 *
-	 * @return array
-	 */
-	public function __get( $property ) {
-
-		return property_exists( $this, $property ) ? $property : array();
 
 	}
 

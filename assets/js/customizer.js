@@ -6,19 +6,20 @@
 
 ( function( $ ) {
 
-	var style     = $( '#primer-color-scheme-css' ),
-	    rgbaStyle = $( '#primer-color-scheme-css-rgba' ),
-	    api       = wp.customize;
+	var $style     = $( '#primer-color-scheme-css' ),
+	    $rgbaStyle = $( '#primer-color-scheme-css-rgba' ),
+	    $body      = $( 'body' ),
+	    api        = wp.customize;
 
-	if ( ! style.length ) {
+	if ( ! $style.length ) {
 
-		style = $( 'head' ).append( '<style type="text/css" id="primer-color-scheme-css" />' ).find( '#primer-color-scheme-css' );
+		$style = $( 'head' ).append( '<style type="text/css" id="primer-color-scheme-css" />' ).find( '#primer-color-scheme-css' );
 
 	}
 
-	if ( ! rgbaStyle.length ) {
+	if ( ! $rgbaStyle.length ) {
 
-		rgbaStyle = $( 'head' ).append( '<style type="text/css" id="primer-color-scheme-css-rgba" />' ).find( '#primer-color-scheme-css-rgba' );
+		$rgbaStyle = $( 'head' ).append( '<style type="text/css" id="primer-color-scheme-css-rgba" />' ).find( '#primer-color-scheme-css-rgba' );
 
 	}
 
@@ -49,7 +50,7 @@
 
 		value.bind( function( to ) {
 
-			$( 'body' ).toggleClass( 'custom-background-image', '' !== to );
+			$body.toggleClass( 'custom-background-image', '' !== to );
 
 		} );
 
@@ -60,13 +61,26 @@
 
 		api.preview.bind( 'primer-update-color-scheme-css', function( css ) {
 
-			style.html( css );
+			$style.html( css );
 
 		} );
 
 		api.preview.bind( 'primer-update-color-scheme-css-rgba', function( rgbaCSS ) {
 
-			rgbaStyle.html( rgbaCSS );
+			$rgbaStyle.html( rgbaCSS );
+
+		} );
+
+	} );
+
+	// Custom layouts.
+	api( 'layout', function( value ) {
+
+		value.bind( function( to ) {
+
+			var classes = $body.prop( 'class' ).replace( /layout-[a-zA-Z0-9_-]*/g, '' );
+
+			$body.prop( 'class', $.trim( classes ) ).addClass( 'layout-' + to );
 
 		} );
 
@@ -76,6 +90,8 @@
 	api( 'header_textcolor', function( value ) {
 
 		value.bind( function( to ) {
+
+			var $description = $( '.site-title, .site-description' );
 
 			if ( 'blank' === to ) {
 
