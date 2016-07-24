@@ -241,11 +241,12 @@ class Primer_Customizer_Fonts {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $font (optional)
+	 * @param  string $font
+	 * @param  string $font_type
 	 *
 	 * @return array
 	 */
-	public function get_font_weights( $font ) {
+	public function get_font_weights( $font, $font_type ) {
 
 		/**
 		 * Filter the array of weights for a font.
@@ -253,12 +254,16 @@ class Primer_Customizer_Fonts {
 		 * @since 1.0.0
 		 *
 		 * @param string $font
+		 * @param string $font_type
 		 *
 		 * @var array
 		 */
-		$weights = (array) apply_filters( 'primer_font_weights', array( 300, 400, 700 ), $font );
+		$weights = (array) apply_filters( 'primer_font_weights', array( 300, 400, 700 ), $font, $font_type );
+		$weights = array_filter( array_map( 'absint', $weights ) );
 
-		return array_map( 'absint', $weights );
+		sort( $weights );
+
+		return $weights;
 
 	}
 
@@ -281,9 +286,16 @@ class Primer_Customizer_Fonts {
 			}
 
 			$font    = $this->get_font( $font_type['name'] );
-			$weights = implode( ',', $this->get_font_weights( $font ) );
+			$weights = $this->get_font_weights( $font, $font_type['name'] );
 
-			$font_families[] = sprintf( '%s:%s', $font, $weights );
+			$font_families[ $font ] = isset( $font_families[ $font ] ) ? array_merge( $font_families[ $font ], $weights ) : $weights;
+
+		}
+
+		foreach ( $font_families as $font => &$weights ) {
+
+			$weights = implode( ',', array_unique( $weights ) );
+			$weights = sprintf( '%s:%s', $font, $weights );
 
 		}
 
