@@ -24,7 +24,7 @@ window.onload = function() {
 
 window.onresize = function() {
 
-	if ( window.innerWidth < 600 ) {
+	if ( this.innerWidth < 600 ) {
 
 		return;
 
