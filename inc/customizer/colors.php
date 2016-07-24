@@ -52,10 +52,10 @@ class Primer_Customizer_Colors {
 					'label'   => __( 'Menu Background Color', 'primer' ),
 					'default' => '#222222',
 					'css'     => array(
-						'.main-navigation-container, .main-navigation li a, .main-navigation li.menu-item-has-children ul, .main-navigation li.menu-item-has-children:hover ul' => array(
+						'.main-navigation-container, .main-navigation, .main-navigation li a, .main-navigation li.menu-item-has-children ul' => array(
 							'background-color' => '%1$s',
 						),
-						'.main-navigation li a' => array(
+						'.main-navigation li a, .main-navigation li a:hover' => array(
 							'color' => '#ffffff',
 						),
 					),
