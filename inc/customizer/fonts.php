@@ -12,6 +12,15 @@ class Primer_Customizer_Fonts {
 	protected $fonts = array();
 
 	/**
+	 * Array of available font weights.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var array
+	 */
+	protected $font_weights = array();
+
+	/**
 	 * Array of available font types.
 	 *
 	 * @since 1.0.0
@@ -53,6 +62,21 @@ class Primer_Customizer_Fonts {
 				'Source Sans Pro',
 				'Source Serif Pro',
 				'Ubuntu',
+			)
+		);
+
+		/**
+		 * Filter the array of available font weights
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var array
+		 */
+		$this->font_weights = (array) apply_filters( 'primer_font_weights',
+			array(
+				300,
+				400,
+				700,
 			)
 		);
 
@@ -237,6 +261,20 @@ class Primer_Customizer_Fonts {
 	}
 
 	/**
+	 * Return font weight by type
+	 *
+	 * @param $font_type
+	 *
+	 * @return array
+	 */
+	public function get_font_weight( $font_type ) {
+
+		$defaults = wp_list_pluck( $this->font_types, 'weight', 'name' );
+
+		return isset( $defaults[ $font_type ] ) ? $defaults[ $font_type ] : $this->font_weights;
+	}
+
+	/**
 	 * Enqueue Google Fonts.
 	 *
 	 * @action wp_enqueue_scripts
@@ -250,7 +288,9 @@ class Primer_Customizer_Fonts {
 
 			if ( ! empty( $font_type['name'] ) ) {
 
-				$font_families[] = $this->get_font( $font_type['name'] ) . ':300,400,700';
+				$font_weights = implode( ',', $this->get_font_weight( $font_type['name'] ) );
+
+				$font_families[] = $this->get_font( $font_type['name'] ) . ':' . $font_weights;
 
 			}
 
