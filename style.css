@@ -1828,6 +1828,10 @@ code {
   border-radius: 2px;
   padding: 0.125rem 0.3125rem 0.0625rem; }
 
+pre code {
+  border: none;
+  padding: 0; }
+
 address {
   margin-bottom: 1em; }
 
