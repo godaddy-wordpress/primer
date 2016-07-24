@@ -280,13 +280,10 @@ class Primer_Customizer_Fonts {
 
 			}
 
-			$font = $this->get_font( $font_type['name'] );
+			$font    = $this->get_font( $font_type['name'] );
+			$weights = implode( ',', $this->get_font_weights( $font ) );
 
-			$font_families[] = sprintf(
-				'%s:%s',
-				$font,
-				implode( ',', $this->get_font_weights( $font ) )
-			);
+			$font_families[] = sprintf( '%s:%s', $font, $weights );
 
 		}
 
