@@ -16,7 +16,7 @@ window.onload = function() {
 
 	menu_toggle.onclick = function() {
 
-		nav_menu.style.display = ( ! nav_menu.style.display || 'none' === nav_menu.style.display ) ? 'block' : 'none';
+		nav_menu.style.display = ( 'none' === nav_menu.style.display || ! nav_menu.offsetHeight ) ? 'block' : 'none';
 
 	}
 
@@ -24,13 +24,15 @@ window.onload = function() {
 
 window.onresize = function() {
 
+	var nav_menu = document.getElementById( 'site-navigation' );
+
 	if ( this.innerWidth < 600 ) {
+
+		nav_menu.style.display = 'none';
 
 		return;
 
 	}
-
-	var nav_menu = document.getElementById( 'site-navigation' );
 
 	if ( 'none' === nav_menu.style.display ) {
 
