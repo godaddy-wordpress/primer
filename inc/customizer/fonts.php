@@ -12,15 +12,6 @@ class Primer_Customizer_Fonts {
 	protected $fonts = array();
 
 	/**
-	 * Array of available font weights.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @var array
-	 */
-	protected $font_weights = array();
-
-	/**
 	 * Array of available font types.
 	 *
 	 * @since 1.0.0
@@ -62,21 +53,6 @@ class Primer_Customizer_Fonts {
 				'Source Sans Pro',
 				'Source Serif Pro',
 				'Ubuntu',
-			)
-		);
-
-		/**
-		 * Filter the array of available font weights
-		 *
-		 * @since 1.0.0
-		 *
-		 * @var array
-		 */
-		$this->font_weights = (array) apply_filters( 'primer_font_weights',
-			array(
-				300,
-				400,
-				700,
 			)
 		);
 
@@ -183,7 +159,7 @@ class Primer_Customizer_Fonts {
 					'sanitize_callback' => array( $this, 'sanitize_font' ),
 				)
 			);
-			
+
 			$fonts = array_merge( $this->get_default_fonts(), $this->fonts );
 
 			$wp_customize->add_control(
@@ -261,17 +237,29 @@ class Primer_Customizer_Fonts {
 	}
 
 	/**
-	 * Return font weight by type
+	 * Return an array of weights for a font.
 	 *
-	 * @param $font_type
+	 * @since 1.0.0
+	 *
+	 * @param  string $font (optional)
 	 *
 	 * @return array
 	 */
-	public function get_font_weight( $font_type ) {
+	public function get_font_weights( $font ) {
 
-		$defaults = wp_list_pluck( $this->font_types, 'weight', 'name' );
+		/**
+		 * Filter the array of weights for a font.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param string $font
+		 *
+		 * @var array
+		 */
+		$weights = (array) apply_filters( 'primer_font_weights', array( 300, 400, 700 ), $font );
 
-		return isset( $defaults[ $font_type ] ) ? $defaults[ $font_type ] : $this->font_weights;
+		return array_map( 'absint', $weights );
+
 	}
 
 	/**
@@ -286,13 +274,19 @@ class Primer_Customizer_Fonts {
 
 		foreach ( $this->font_types as $font_type ) {
 
-			if ( ! empty( $font_type['name'] ) ) {
+			if ( empty( $font_type['name'] ) ) {
 
-				$font_weights = implode( ',', $this->get_font_weight( $font_type['name'] ) );
-
-				$font_families[] = $this->get_font( $font_type['name'] ) . ':' . $font_weights;
+				continue;
 
 			}
+
+			$font = $this->get_font( $font_type['name'] );
+
+			$font_families[] = sprintf(
+				'%s:%s',
+				$font,
+				implode( ',', $this->get_font_weights( $font ) )
+			);
 
 		}
 
