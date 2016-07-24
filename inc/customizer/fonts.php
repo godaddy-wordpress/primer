@@ -159,6 +159,8 @@ class Primer_Customizer_Fonts {
 					'sanitize_callback' => array( $this, 'sanitize_font' ),
 				)
 			);
+			
+			$fonts = array_merge( $this->get_default_fonts(), $this->fonts );
 
 			$wp_customize->add_control(
 				$font_type['name'],
@@ -166,7 +168,7 @@ class Primer_Customizer_Fonts {
 					'label'   => $font_type['label'],
 					'section' => 'typography',
 					'type'    => 'select',
-					'choices' => array_combine( $this->fonts, $this->fonts ),
+					'choices' => array_combine( $fonts, $fonts ),
 				)
 			);
 
@@ -203,6 +205,19 @@ class Primer_Customizer_Fonts {
 		$defaults = wp_list_pluck( $this->font_types, 'default', 'name' );
 
 		return isset( $defaults[ $font_type ] ) ? $defaults[ $font_type ] : ( isset( $this->fonts[0] ) ? $this->fonts[0] : null );
+
+	}
+
+	/**
+	 * Return the default font for all font types
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return array
+	 */
+	public function get_default_fonts() {
+
+		return wp_list_pluck( $this->font_types, 'default' );
 
 	}
 
