@@ -18,6 +18,24 @@ window.onload = function() {
 
 		nav_menu.style.display = ( ! nav_menu.style.display || 'none' === nav_menu.style.display ) ? 'block' : 'none';
 
-	};
+	}
 
-};
+}
+
+window.onresize = function() {
+
+	if ( window.innerWidth < 600 ) {
+
+		return;
+
+	}
+
+	var nav_menu = document.getElementById( 'site-navigation' );
+
+	if ( 'none' === nav_menu.style.display ) {
+
+		nav_menu.style.display = 'block';
+
+	}
+
+}
