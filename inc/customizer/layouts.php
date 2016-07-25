@@ -337,13 +337,37 @@ class Primer_Customizer_Layouts {
 		);
 
 		$wp_customize->add_control(
-			'layout-control',
+			'layout',
 			array(
-				'label'    => esc_html__( 'Default Layout', 'primer' ),
-				'section'  => 'layout',
-				'settings' => 'layout',
-				'type'     => 'radio',
-				'choices'  => $this->layouts,
+				'label'       => esc_html__( 'Default Layout', 'primer' ),
+				'description' => esc_html__( 'All posts and pages on your site will use this layout by default.', 'primer' ),
+				'section'     => 'layout',
+				'settings'    => 'layout',
+				'type'        => 'radio',
+				'choices'     => $this->layouts,
+			)
+		);
+
+		$wp_customize->add_setting(
+			'full_width',
+			array(
+				'default'           => 0,
+				'sanitize_callback' => 'absint',
+			)
+		);
+
+		$wp_customize->add_control(
+			'full-width',
+			array(
+				'label'       => esc_html__( 'Header & Footer Width', 'primer' ),
+				'description' => esc_html__( 'Set the header and footer width to be fixed or fluid when viewed on large screens.', 'primer' ),
+				'section'     => 'layout',
+				'settings'    => 'full_width',
+				'type'        => 'radio',
+				'choices'     => array(
+					0 => __( 'Fixed' ),
+					1 => __( 'Fluid' ),
+				),
 			)
 		);
 
@@ -382,8 +406,9 @@ class Primer_Customizer_Layouts {
 	public function body_class( array $classes ) {
 
 		$classes[] = sanitize_html_class( sprintf( 'layout-%s', $this->get_current_layout() ) );
+		$classes[] = (bool) get_theme_mod( 'full_width' ) ? 'no-max-width' : null;
 
-		return $classes;
+		return array_filter( $classes );
 
 	}
 
