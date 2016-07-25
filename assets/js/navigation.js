@@ -24,9 +24,10 @@ window.onload = function() {
 
 window.onresize = function() {
 
-	var nav_menu = document.getElementById( 'site-navigation' );
+	var nav_menu    = document.getElementById( 'site-navigation' ),
+	    menu_toggle = document.getElementById( 'menu-toggle' );
 
-	if ( this.innerWidth < 600 ) {
+	if ( menu_toggle.offsetHeight ) {
 
 		nav_menu.style.display = 'none';
 

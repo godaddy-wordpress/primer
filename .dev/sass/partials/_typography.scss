@@ -306,6 +306,11 @@ code {
 	padding: $code-padding;
 }
 
+pre code {
+	border: none;
+	padding: 0;
+}
+
 address {
 	margin-bottom: 1em;
 }

@@ -156,13 +156,15 @@ class Primer_Customizer_Fonts {
 				)
 			);
 
+			$fonts = array_merge( $this->get_default_fonts(), $this->fonts );
+
 			$wp_customize->add_control(
 				$font_type['name'],
 				array(
 					'label'   => $font_type['label'],
 					'section' => 'typography',
 					'type'    => 'select',
-					'choices' => array_combine( $this->fonts, $this->fonts ),
+					'choices' => array_combine( $fonts, $fonts ),
 				)
 			);
 
@@ -203,6 +205,19 @@ class Primer_Customizer_Fonts {
 	}
 
 	/**
+	 * Return the default font for all font types
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return array
+	 */
+	public function get_default_fonts() {
+
+		return wp_list_pluck( $this->font_types, 'default' );
+
+	}
+
+	/**
 	 * Sanitize a font.
 	 *
 	 * @since 1.0.0
@@ -218,6 +233,37 @@ class Primer_Customizer_Fonts {
 	}
 
 	/**
+	 * Return an array of weights for a font.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  string $font
+	 * @param  string $font_type
+	 *
+	 * @return array
+	 */
+	public function get_font_weights( $font, $font_type ) {
+
+		/**
+		 * Filter the array of weights for a font.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param string $font
+		 * @param string $font_type
+		 *
+		 * @var array
+		 */
+		$weights = (array) apply_filters( 'primer_font_weights', array( 300, 400, 700 ), $font, $font_type );
+		$weights = array_filter( array_map( 'absint', $weights ) );
+
+		sort( $weights );
+
+		return $weights;
+
+	}
+
+	/**
 	 * Enqueue Google Fonts.
 	 *
 	 * @action wp_enqueue_scripts
@@ -229,11 +275,23 @@ class Primer_Customizer_Fonts {
 
 		foreach ( $this->font_types as $font_type ) {
 
-			if ( ! empty( $font_type['name'] ) ) {
+			if ( empty( $font_type['name'] ) ) {
 
-				$font_families[] = $this->get_font( $font_type['name'] ) . ':300,400,700';
+				continue;
 
 			}
+
+			$font    = $this->get_font( $font_type['name'] );
+			$weights = $this->get_font_weights( $font, $font_type['name'] );
+
+			$font_families[ $font ] = isset( $font_families[ $font ] ) ? array_merge( $font_families[ $font ], $weights ) : $weights;
+
+		}
+
+		foreach ( $font_families as $font => &$weights ) {
+
+			$weights = implode( ',', array_unique( $weights ) );
+			$weights = sprintf( '%s:%s', $font, $weights );
 
 		}
 
