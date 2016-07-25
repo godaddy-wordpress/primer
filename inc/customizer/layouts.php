@@ -281,7 +281,7 @@ class Primer_Customizer_Layouts {
 						<li class="<?php echo esc_attr( $class ) ?>">
 							<label for="primer-layout-<?php echo esc_attr( $layout ) ?>">
 								<input type="radio" name="primer-layout" id="primer-layout-<?php echo esc_attr( $layout ) ?>" value="<?php echo esc_attr( $layout ) ?>" <?php checked( $this->get_current_layout( $post->ID ), $layout ) ?> <?php disabled( 'disabled' === $class ) ?>>
-								<img src="<?php echo esc_url( sprintf( '%s/assets/layouts/%s%s.png', get_template_directory_uri(), $layout, is_rtl() ? '-rtl' : '' ) ) ?>" alt="<?php echo esc_attr( $label ) ?>" title="<?php echo esc_attr( $label ) ?>">
+								<img src="<?php echo esc_url( sprintf( '%s/assets/layouts/%s%s.svg', get_template_directory_uri(), $layout, is_rtl() ? '-rtl' : '' ) ) ?>" alt="<?php echo esc_attr( $label ) ?>" title="<?php echo esc_attr( $label ) ?>">
 								<span><?php echo esc_html( $label ) ?></span>
 							</label>
 						</li>
