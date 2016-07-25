@@ -39,8 +39,8 @@ module.exports = function(grunt) {
 						dest: 'editor-style-rtl.css'
 					},
 					{
-						src: 'assets/css/meta-box.css',
-						dest: 'assets/css/meta-box-rtl.css'
+						src: 'assets/css/layouts.css',
+						dest: 'assets/css/layouts-rtl.css'
 					}
 				]
 			}
@@ -159,7 +159,7 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: {
-					'assets/css/meta-box.css': '.dev/sass/meta-box.scss',
+					'assets/css/layouts.css': '.dev/sass/layouts.scss',
 					'style.css': '.dev/sass/style.scss',
 					'editor-style.css': '.dev/sass/editor-style.scss'
 				}
