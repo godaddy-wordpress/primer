@@ -5,7 +5,7 @@
 
 		$( 'input[name="primer-layout-override"]' ).change( function() {
 
-			if ( 1 == $( this ).val() ) {
+			if ( '1' === $( this ).val() ) {
 
 				$( '.primer-layout ul li' )
 					.removeClass( 'disabled' )
