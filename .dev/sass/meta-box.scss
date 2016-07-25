@@ -1,65 +1,75 @@
-.primer-layout ul {
-	display: inline-block;
-	margin: 0;
-}
+.primer-layout {
 
-.primer-layout ul li {
-	float: left;
-	width: calc(25% - 0.375em);
-	padding: 0.3em 0.3em;
-	margin: 0;
-}
+	ul {
+		display: inline-block;
+		margin: 0;
 
-.primer-layout ul li.disabled {
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
-	filter: alpha(opacity=35);
-	opacity: 0.35;
-}
+		li {
+			float: left;
+			width: calc(25% - 0.375em);
+			padding: 0.3em 0.3em;
+			margin: 0;
 
-.primer-layout ul li span {
-	display: none;
-}
+			&.disabled {
+				-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
+				filter: alpha(opacity=35);
+				opacity: 0.35;
+			}
 
-.primer-layout ul li img {
-	width: calc(100% - 0.3em - 12px);
-	height: auto;
-	padding: 6px;
-}
+			span {
+				display: none;
+			}
 
-.primer-layout ul li label {
-	display: block;
-	position: relative;
-}
+			img {
+				width: calc(100% - 0.3em - 12px);
+				height: auto;
+				padding: 6px;
+			}
 
-.primer-layout ul li label > input {
-	visibility: hidden;
-	position: absolute;
-}
+			label {
+				display: block;
+				position: relative;
 
-.primer-layout ul li label > input + img {
-	border: 3px solid transparent;
-}
+				> input {
+					visibility: hidden;
+					position: absolute;
 
-.primer-layout ul li.active label > input + img {
-	cursor: pointer;
-}
+					+ img {
+						border: 3px solid transparent;
+					}
+				}
+			}
 
-.primer-layout ul li.disabled label > input + img {
-	cursor: default;
-}
+			&.active {
+				label > input + img {
+					cursor: pointer;
+				}
+				label > input:checked + img {
+					border-color: #1e8cbe;
+				}
+			}
 
-.primer-layout ul li.active label > input:checked + img {
-	border-color: #1e8cbe;
+			&.disabled label > input + img{
+					cursor: default;
+			}
+		}
+	}
+
 }
 
 @media only screen and (min-width: 851px) {
 
-	.primer-layout ul li:nth-child(3n+3) {
-		padding-right: 0;
-	}
+	.primer-layout ul li {
 
-	.primer-layout ul li:nth-child(3n+1) {
-		padding-left: 0;
+		&:nth-child(3n+3) {
+			padding-right: 0;
+
+		}
+
+		&:nth-child(3n+1) {
+			padding-left: 0;
+		}
+
 	}
 
 }
@@ -67,22 +77,24 @@
 @media only screen and (max-width: 850px) {
 
 	.primer-layout ul li {
+
 		float: none;
 		width: 100%;
 		padding: 0.5em 0 !important;
-	}
 
-	.primer-layout ul li span {
-		display: inline-block;
-	}
+		span {
+			display: inline-block;
+		}
 
-	.primer-layout ul li img {
-		display: none;
-	}
+		img {
+			display: none;
+		}
 
-	.primer-layout ul li label > input {
-		visibility: visible;
-		position: relative;
+		label > input {
+			visibility: visible;
+			position: relative;
+		}
+
 	}
 
 }

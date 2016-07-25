@@ -24,6 +24,8 @@ meta.foundation-data-attribute-namespace {
 *,
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html,
@@ -325,6 +327,7 @@ pre {
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   padding: 0.125rem 0.3125rem 0.0625rem;
   margin-bottom: 1rem; }
@@ -338,6 +341,7 @@ code {
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   padding: 0.125rem 0.3125rem 0.0625rem; }
 
@@ -489,6 +493,7 @@ blockquote p {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important; }
   a,
@@ -562,6 +567,7 @@ input[type="submit"] {
   -webkit-font-smoothing: auto;
   font-size: 1rem;
   line-height: 1;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: .75em 1em;
   padding: .75rem 1rem;
@@ -648,7 +654,9 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* Addresses appearance set to searchfield in S5, Chrome */
+  -webkit-box-sizing: content-box;
   /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+  -moz-box-sizing: content-box;
   box-sizing: content-box; }
 
 input[type="search"]::-webkit-search-decoration {
@@ -682,7 +690,9 @@ textarea {
   background-color: #fefefe;
   border: 1px solid rgba(117, 117, 117, 0.28);
   -webkit-transform: 200ms background linear;
-          transform: 200ms background linear;
+  -ms-transform: 200ms background linear;
+  transform: 200ms background linear;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
   resize: none; }
   input[type="text"]:focus,
@@ -923,6 +933,7 @@ legend {
 .more-link {
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
+  -webkit-border-radius: 0;
   border-radius: 0;
   border: 1px solid #008CBA;
   padding: .5em 1em;
@@ -968,6 +979,7 @@ article.format-link {
 
 .bypostauthor {
   border: 3px solid rgba(0, 140, 186, 0.2);
+  -webkit-border-radius: 5px;
   border-radius: 5px; }
 
 .comments-area {
@@ -1028,6 +1040,7 @@ article.format-link {
   .comment-list .comment-reply-link:after {
     content: " \2192"; }
   .comment-list .comment-awaiting-moderation {
+    -webkit-border-radius: 4px;
     border-radius: 4px;
     background-color: #d9d9d9;
     color: #666;
@@ -1041,6 +1054,7 @@ article.format-link {
   left: -1em;
   left: -1rem;
   position: relative;
+  -webkit-border-radius: 3px;
   border-radius: 3px; }
 
 .comment-form label .required {
