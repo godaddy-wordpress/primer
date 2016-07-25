@@ -246,7 +246,7 @@ class Primer_Customizer_Layouts {
 			<?php
 
 			printf(
-				_x( 'The site-wide Default layout setting is located in the %s.', 'link to the Customizer', 'primer' ),
+				esc_html_x( 'The site-wide Default layout setting is located in the %s.', 'link to the Customizer', 'primer' ),
 				sprintf(
 					'<a href="%s">%s</a>',
 					admin_url( 'customize.php' ),
@@ -399,8 +399,8 @@ class Primer_Customizer_Layouts {
 				'settings'    => 'full_width',
 				'type'        => 'radio',
 				'choices'     => array(
-					0 => __( 'Fixed', 'primer' ),
-					1 => __( 'Fluid', 'primer' ),
+					0 => esc_html__( 'Fixed', 'primer' ),
+					1 => esc_html__( 'Fluid', 'primer' ),
 				),
 			)
 		);
