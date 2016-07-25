@@ -73,7 +73,7 @@ class Primer_Customizer_Fonts {
 			array(
 				array(
 					'name'    => 'primary_font',
-					'label'   => __( 'Primary Font', 'primer' ),
+					'label'   => esc_html__( 'Primary Font', 'primer' ),
 					'default' => 'Open Sans',
 					'css'     => array(
 						'body, p' => array(
@@ -83,7 +83,7 @@ class Primer_Customizer_Fonts {
 				),
 				array(
 					'name'    => 'secondary_font',
-					'label'   => __( 'Secondary Font', 'primer' ),
+					'label'   => esc_html__( 'Secondary Font', 'primer' ),
 					'default' => 'Open Sans',
 					'css'     => array(
 						'blockquote, .entry-meta, .entry-footer, .comment-list li .comment-meta .says, .comment-list li .comment-metadata, .comment-reply-link, #respond .logged-in-as, .fl-callout-text' => array(
@@ -93,7 +93,7 @@ class Primer_Customizer_Fonts {
 				),
 				array(
 					'name'    => 'header_font',
-					'label'   => __( 'Header Font', 'primer' ),
+					'label'   => esc_html__( 'Header Font', 'primer' ),
 					'default' => 'Open Sans',
 					'css'     => array(
 						'h1, h2, h3, h4, h5, h6, label, legend, table th, .site-title, .entry-title, .widget-title, .main-navigation li a, button, a.button, input[type="button"], input[type="reset"], input[type="submit"]' => array(
@@ -135,7 +135,7 @@ class Primer_Customizer_Fonts {
 		$wp_customize->add_section(
 			'typography',
 			array(
-				'title'    => __( 'Typography', 'primer' ),
+				'title'    => esc_html__( 'Typography', 'primer' ),
 				'priority' => 40,
 			)
 		);

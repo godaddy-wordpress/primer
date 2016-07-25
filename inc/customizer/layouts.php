@@ -37,13 +37,13 @@ class Primer_Customizer_Layouts {
 		 */
 		$this->layouts = (array) apply_filters( 'primer_layouts',
 			array(
-				'one-column-wide'       => esc_html__( '1 Column Wide', 'primer' ),
-				'one-column-narrow'     => esc_html__( '1 Column Narrow', 'primer' ),
-				'two-column-default'    => esc_html__( '2 Columns: Content / Sidebar', 'primer' ),
-				'two-column-reversed'   => esc_html__( '2 Columns: Sidebar / Content', 'primer' ),
-				'three-column-default'  => esc_html__( '3 Columns: Content / Sidebar / Sidebar', 'primer' ),
-				'three-column-center'   => esc_html__( '3 Columns: Sidebar / Content / Sidebar', 'primer' ),
-				'three-column-reversed' => esc_html__( '3 Columns: Sidebar / Sidebar / Content', 'primer' ),
+				'one-column-wide'       => esc_html__( 'One Column Wide', 'primer' ),
+				'one-column-narrow'     => esc_html__( 'One Column Narrow', 'primer' ),
+				'two-column-default'    => esc_html__( 'Two Columns: Content / Sidebar', 'primer' ),
+				'two-column-reversed'   => esc_html__( 'Two Columns: Sidebar / Content', 'primer' ),
+				'three-column-default'  => esc_html__( 'Three Columns: Content / Sidebar / Sidebar', 'primer' ),
+				'three-column-center'   => esc_html__( 'Three Columns: Sidebar / Content / Sidebar', 'primer' ),
+				'three-column-reversed' => esc_html__( 'Three Columns: Sidebar / Sidebar / Content', 'primer' ),
 			)
 		);
 
@@ -180,7 +180,7 @@ class Primer_Customizer_Layouts {
 
 		add_meta_box(
 			'primer-layouts-meta-box',
-			__( 'Layout', 'primer' ),
+			esc_html__( 'Layout', 'primer' ),
 			array( $this, 'render_meta_box' ),
 			$post_type,
 			'side',
@@ -216,7 +216,7 @@ class Primer_Customizer_Layouts {
 				sprintf(
 					'<a href="%s">%s</a>',
 					admin_url( 'customize.php' ),
-					__( 'Customizer' )
+					esc_html__( 'Customizer' )
 				)
 			);
 
@@ -365,30 +365,10 @@ class Primer_Customizer_Layouts {
 				'settings'    => 'full_width',
 				'type'        => 'radio',
 				'choices'     => array(
-					0 => __( 'Fixed' ),
-					1 => __( 'Fluid' ),
+					0 => __( 'Fixed', 'primer' ),
+					1 => __( 'Fluid', 'primer' ),
 				),
 			)
-		);
-
-	}
-
-	public function rtl_layouts( array $layouts ) {
-
-		if ( ! is_rtl() ) {
-
-			return $layouts;
-
-		}
-
-		return array(
-			'one-column-wide'       => esc_html__( '1 Column Wide', 'primer' ),
-			'one-column-narrow'     => esc_html__( '1 Column Narrow', 'primer' ),
-			'two-column-default'    => esc_html__( '2 Columns: Sidebar / Content', 'primer' ),
-			'two-column-reversed'   => esc_html__( '2 Columns: Content / Sidebar', 'primer' ),
-			'three-column-default'  => esc_html__( '3 Columns: Sidebar / Sidebar / Content', 'primer' ),
-			'three-column-center'   => esc_html__( '3 Columns: Sidebar / Content / Sidebar', 'primer' ),
-			'three-column-reversed' => esc_html__( '3 Columns: Content / Sidebar / Sidebar', 'primer' ),
 		);
 
 	}
