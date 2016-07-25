@@ -8,14 +8,15 @@
   display: block; }
 
 .primer-layout ul {
-  display: inline-block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0; }
   .primer-layout ul li {
-    float: right;
-    width: -webkit-calc(25% - 0.5em);
-    width: calc(25% - 0.5em);
-    padding: 0.3em 0.3em;
-    margin: 0; }
+    margin: 0.3em 0.3em;
+    padding: 0; }
     .primer-layout ul li.disabled {
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
       filter: alpha(opacity=35);
@@ -42,21 +43,26 @@
     .primer-layout ul li.disabled label > input + img {
       cursor: default; }
 
-@media only screen and (min-width: 851px) {
-  .primer-layout ul li:nth-child(4n) {
-    padding-left: 0; }
-  .primer-layout ul li:nth-child(4n+1) {
-    padding-right: 0; } }
+#side-sortables .primer-layout ul {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  #side-sortables .primer-layout ul li {
+    -webkit-flex-basis: -webkit-calc(25% - 0.6em);
+    -ms-flex-preferred-size: calc(25% - 0.6em);
+    flex-basis: calc(25% - 0.6em); }
 
 @media only screen and (max-width: 850px) {
-  .primer-layout ul li {
-    float: none;
-    width: 100%;
-    padding: 0.5em 0 !important; }
-    .primer-layout ul li span {
-      display: inline-block; }
-    .primer-layout ul li img {
-      display: none; }
-    .primer-layout ul li label > input {
-      visibility: visible;
-      position: relative; } }
+  .primer-layout ul {
+    display: inline-block; }
+    .primer-layout ul li {
+      float: none;
+      width: 100%;
+      padding: 0.5em 0 !important; }
+      .primer-layout ul li span {
+        display: inline-block; }
+      .primer-layout ul li img {
+        display: none; }
+      .primer-layout ul li label > input {
+        visibility: visible;
+        position: relative; } }
