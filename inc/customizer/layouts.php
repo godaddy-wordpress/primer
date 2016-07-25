@@ -257,9 +257,9 @@ class Primer_Customizer_Layouts {
 			</p>
 
 			<p>
-				<input type="radio" name="primer-layout-override" id="primer-layout-use-default" value="0" <?php checked( ! $has_custom ) ?>><label for="primer-layout-use-default"><?php _e( 'Default', 'primer' ) ?></label>
+				<input type="radio" name="primer-layout-override" id="primer-layout-use-default" value="0" <?php checked( ! $has_custom ) ?> autocomplete="off"><label for="primer-layout-use-default"><?php _e( 'Default', 'primer' ) ?></label>
 				&nbsp;&nbsp;
-				<input type="radio" name="primer-layout-override" id="primer-layout-use-custom" value="1" <?php checked( $has_custom ) ?>><label for="primer-layout-use-custom"><?php _e( 'Custom', 'primer' ) ?></label>
+				<input type="radio" name="primer-layout-override" id="primer-layout-use-custom" value="1" <?php checked( $has_custom ) ?> autocomplete="off"><label for="primer-layout-use-custom"><?php _e( 'Custom', 'primer' ) ?></label>
 			</p>
 
 			<div class="primer-layout-wrap">
