@@ -1,5 +1,18 @@
 .primer-layout {
 
+	p {
+		label {
+			float: left;
+			margin-right: 12px;
+		}
+
+		span.clear {
+			content: '';
+			clear: both;
+			display: block;
+		}
+	}
+
 	ul {
 		display: inline-block;
 		margin: 0;
@@ -44,13 +57,14 @@
 				label > input + img {
 					cursor: pointer;
 				}
+
 				label > input:checked + img {
 					border-color: #1e8cbe;
 				}
 			}
 
-			&.disabled label > input + img{
-					cursor: default;
+			&.disabled label > input + img {
+				cursor: default;
 			}
 		}
 	}
@@ -77,7 +91,6 @@
 @media only screen and (max-width: 850px) {
 
 	.primer-layout ul li {
-
 		float: none;
 		width: 100%;
 		padding: 0.5em 0 !important;

@@ -33,8 +33,33 @@ module.exports = function(grunt) {
 					{
 						src: 'style.css',
 						dest: 'style-rtl.css'
+					},
+					{
+						src: 'editor-style.css',
+						dest: 'editor-style-rtl.css'
+					},
+					{
+						src: 'assets/css/meta-box.css',
+						dest: 'assets/css/meta-box-rtl.css'
 					}
 				]
+			}
+		},
+
+		cssmin: {
+			options: {
+				shorthandCompacting: false,
+				roundingPrecision: 5,
+				processImport: false
+			},
+			dist: {
+				files: [{
+					expand: true,
+					cwd: 'assets/css',
+					src: ['*.css', '!*.min.css'],
+					dest: 'assets/css',
+					ext: '.min.css'
+				}]
 			}
 		},
 
@@ -138,23 +163,6 @@ module.exports = function(grunt) {
 					'style.css': '.dev/sass/style.scss',
 					'editor-style.css': '.dev/sass/editor-style.scss'
 				}
-			}
-		},
-
-		cssmin: {
-			options: {
-				shorthandCompacting: false,
-				roundingPrecision: -1,
-				processImport: false
-			},
-			dist: {
-				files: [{
-					expand: true,
-					cwd: 'assets/css',
-					src: ['*.css', '!*.min.css'],
-					dest: 'assets/css',
-					ext: '.min.css'
-				}]
 			}
 		},
 

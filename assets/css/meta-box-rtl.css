@@ -1,6 +1,6 @@
 .primer-layout p label {
-  float: left;
-  margin-right: 12px; }
+  float: right;
+  margin-left: 12px; }
 
 .primer-layout p span.clear {
   content: '';
@@ -11,7 +11,7 @@
   display: inline-block;
   margin: 0; }
   .primer-layout ul li {
-    float: left;
+    float: right;
     width: -webkit-calc(25% - 0.375em);
     width: calc(25% - 0.375em);
     padding: 0.3em 0.3em;
@@ -44,9 +44,9 @@
 
 @media only screen and (min-width: 851px) {
   .primer-layout ul li:nth-child(3n+3) {
-    padding-right: 0; }
+    padding-left: 0; }
   .primer-layout ul li:nth-child(3n+1) {
-    padding-left: 0; } }
+    padding-right: 0; } }
 
 @media only screen and (max-width: 850px) {
   .primer-layout ul li {

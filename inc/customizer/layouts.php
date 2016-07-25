@@ -159,11 +159,12 @@ class Primer_Customizer_Layouts {
 
 		}
 
+		$rtl    = is_rtl() ? '-rtl' : '';
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
 		wp_enqueue_script( 'primer-layouts-meta-box', get_template_directory_uri() . "/assets/js/meta-box{$suffix}.js", array( 'jquery' ), PRIMER_VERSION );
 
-		wp_enqueue_style( 'primer-layouts-meta-box', get_template_directory_uri() . "/assets/css/meta-box{$suffix}.css", array(), PRIMER_VERSION );
+		wp_enqueue_style( 'primer-layouts-meta-box', get_template_directory_uri() . "/assets/css/meta-box{$rtl}{$suffix}.css", array(), PRIMER_VERSION );
 
 	}
 
@@ -257,9 +258,9 @@ class Primer_Customizer_Layouts {
 			</p>
 
 			<p>
-				<input type="radio" name="primer-layout-override" id="primer-layout-use-default" value="0" <?php checked( ! $has_custom ) ?> autocomplete="off"><label for="primer-layout-use-default"><?php _e( 'Default', 'primer' ) ?></label>
-				&nbsp;&nbsp;
-				<input type="radio" name="primer-layout-override" id="primer-layout-use-custom" value="1" <?php checked( $has_custom ) ?> autocomplete="off"><label for="primer-layout-use-custom"><?php _e( 'Custom', 'primer' ) ?></label>
+				<label for="primer-layout-use-default"><input type="radio" name="primer-layout-override" id="primer-layout-use-default" value="0" <?php checked( ! $has_custom ) ?> autocomplete="off"><?php _e( 'Default', 'primer' ) ?></label>
+				<label for="primer-layout-use-custom"><input type="radio" name="primer-layout-override" id="primer-layout-use-custom" value="1" <?php checked( $has_custom ) ?> autocomplete="off"><?php _e( 'Custom', 'primer' ) ?></label>
+				<span class="clear"></span>
 			</p>
 
 			<div class="primer-layout-wrap">
