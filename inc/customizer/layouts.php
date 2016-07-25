@@ -39,11 +39,11 @@ class Primer_Customizer_Layouts {
 			array(
 				'one-column-wide'       => esc_html__( 'One Column: Wide', 'primer' ),
 				'one-column-narrow'     => esc_html__( 'One Column: Narrow', 'primer' ),
-				'two-column-default'    => esc_html__( 'Two Columns: Content / Sidebar', 'primer' ),
-				'two-column-reversed'   => esc_html__( 'Two Columns: Sidebar / Content', 'primer' ),
-				'three-column-default'  => esc_html__( 'Three Columns: Content / Sidebar / Sidebar', 'primer' ),
-				'three-column-center'   => esc_html__( 'Three Columns: Sidebar / Content / Sidebar', 'primer' ),
-				'three-column-reversed' => esc_html__( 'Three Columns: Sidebar / Sidebar / Content', 'primer' ),
+				'two-column-default'    => esc_html__( 'Two Columns: Content | Sidebar', 'primer' ),
+				'two-column-reversed'   => esc_html__( 'Two Columns: Sidebar | Content', 'primer' ),
+				'three-column-default'  => esc_html__( 'Three Columns: Content | Sidebar | Sidebar', 'primer' ),
+				'three-column-center'   => esc_html__( 'Three Columns: Sidebar | Content | Sidebar', 'primer' ),
+				'three-column-reversed' => esc_html__( 'Three Columns: Sidebar | Sidebar | Content', 'primer' ),
 			)
 		);
 
@@ -107,10 +107,10 @@ class Primer_Customizer_Layouts {
 		 */
 		$rtl_layouts = (array) apply_filters( 'primer_layouts_rtl',
 			array(
-				'two-column-default'    => esc_html__( 'Two Columns: Sidebar / Content', 'primer' ),
-				'two-column-reversed'   => esc_html__( 'Two Columns: Content / Sidebar', 'primer' ),
-				'three-column-default'  => esc_html__( 'Three Columns: Sidebar / Sidebar / Content', 'primer' ),
-				'three-column-reversed' => esc_html__( 'Three Columns: Content / Sidebar / Sidebar', 'primer' ),
+				'two-column-default'    => esc_html__( 'Two Columns: Sidebar | Content', 'primer' ),
+				'two-column-reversed'   => esc_html__( 'Two Columns: Content | Sidebar', 'primer' ),
+				'three-column-default'  => esc_html__( 'Three Columns: Sidebar | Sidebar | Content', 'primer' ),
+				'three-column-reversed' => esc_html__( 'Three Columns: Content | Sidebar | Sidebar', 'primer' ),
 			)
 		);
 
