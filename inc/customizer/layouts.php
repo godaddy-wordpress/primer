@@ -54,6 +54,7 @@ class Primer_Customizer_Layouts {
 		}
 
 		add_action( 'after_setup_theme', array( $this, 'theme_support' ), 11 );
+		add_action( 'init',              array( $this, 'rtl_layouts' ), 11 );
 		add_action( 'init',              array( $this, 'post_type_support' ), 11 );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
@@ -81,7 +82,39 @@ class Primer_Customizer_Layouts {
 		$this->default  = ( ! empty( $args[0] ) && $this->layout_exists( $args[0] ) ) ? $args[0] : ( $this->layout_exists( $this->default ) ? $this->default : array_shift( $layouts ) );
 		$this->meta_box = ! empty( $args[1] ) ? (bool) $args[1] : $this->meta_box;
 
-		add_filter( 'primer_layouts', array( $this, 'rtl_layouts' ) );
+	}
+
+	/**
+	 * Alter some registered layouts when in RTL mode.
+	 *
+	 * @action init
+	 * @since  1.0.0
+	 */
+	public function rtl_layouts() {
+
+		if ( ! is_rtl() ) {
+
+			return;
+
+		}
+
+		/**
+		 * Filter changes needed for registered layouts when in RTL mode.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var array
+		 */
+		$rtl_layouts = (array) apply_filters( 'primer_layouts_rtl',
+			array(
+				'two-column-default'    => esc_html__( 'Two Columns: Sidebar / Content', 'primer' ),
+				'two-column-reversed'   => esc_html__( 'Two Columns: Content / Sidebar', 'primer' ),
+				'three-column-default'  => esc_html__( 'Three Columns: Sidebar / Sidebar / Content', 'primer' ),
+				'three-column-reversed' => esc_html__( 'Three Columns: Content / Sidebar / Sidebar', 'primer' ),
+			)
+		);
+
+		$this->layouts = array_merge( $this->layouts, $rtl_layouts );
 
 	}
 
