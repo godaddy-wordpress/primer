@@ -10,7 +10,7 @@ class Primer_Customizer_Layouts_Control extends WP_Customize_Control {
 		$rtl    = is_rtl() ? '-rtl' : '';
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-		wp_enqueue_style( 'primer-layouts', get_template_directory_uri() . "/assets/css/layouts{$rtl}{$suffix}.css", array(), PRIMER_VERSION );
+		wp_enqueue_style( 'primer-layouts', get_template_directory_uri() . "/assets/css/admin/layouts{$rtl}{$suffix}.css", array(), PRIMER_VERSION );
 
 	}
 

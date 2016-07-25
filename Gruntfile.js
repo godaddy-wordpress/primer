@@ -1,3 +1,5 @@
+/* global module, require */
+
 module.exports = function(grunt) {
 
 	var pkg = grunt.file.readJSON( 'package.json' );
@@ -20,7 +22,7 @@ module.exports = function(grunt) {
 				cascade: false
 			},
 			dist: {
-				src: [ '*.css', 'assets/css/*.css' ]
+				src: [ '*.css', 'assets/css/**/*.css' ]
 			}
 		},
 
@@ -39,7 +41,9 @@ module.exports = function(grunt) {
 						dest: 'editor-style-rtl.css'
 					},
 					{
-						src: ['assets/css/admin/*.css','!assets/css/admin/*-rtl.css'],
+						expand: true,
+						cwd: 'assets/css/admin',
+						src: ['*.css','!*-rtl.css','!*.min.css','!*-rtl.min.css'],
 						dest: 'assets/css/admin',
 						ext: '-rtl.css'
 					}
@@ -60,10 +64,8 @@ module.exports = function(grunt) {
 					src: ['*.css', '!*.min.css'],
 					dest: 'assets/css',
 					ext: '.min.css'
-				}]
-			},
-			admin: {
-				files: [{
+				},
+				{
 					expand: true,
 					cwd: 'assets/css/admin',
 					src: ['*.css', '!*.min.css'],
@@ -168,11 +170,17 @@ module.exports = function(grunt) {
 				sourceMap: false
 			},
 			dist: {
-				files: {
-					'assets/css/admin/layouts.css': '.dev/sass/admin/layouts.scss',
+				files: [{
 					'style.css': '.dev/sass/style.scss',
 					'editor-style.css': '.dev/sass/editor-style.scss'
-				}
+				},
+				{
+					expand: true,
+					cwd: '.dev/sass/admin',
+					src: ['*.scss'],
+					dest: 'assets/css/admin',
+					ext: '.css'
+				}]
 			}
 		},
 
