@@ -49,7 +49,7 @@ class Primer_Customizer_Colors {
 				),
 				array(
 					'name'    => 'menu_background_color',
-					'label'   => __( 'Menu Background Color', 'primer' ),
+					'label'   => esc_html__( 'Menu Background Color', 'primer' ),
 					'default' => '#222222',
 					'css'     => array(
 						'.main-navigation-container, .main-navigation, .main-navigation li a, .main-navigation li.menu-item-has-children ul' => array(
@@ -62,7 +62,7 @@ class Primer_Customizer_Colors {
 				),
 				array(
 					'name'    => 'tagline_text_color',
-					'label'   => __( 'Tagline Text Color', 'primer' ),
+					'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
 					'default' => '#7c7c7c',
 					'css'     => array(
 						'.site-description' => array(
@@ -72,7 +72,7 @@ class Primer_Customizer_Colors {
 				),
 				array(
 					'name'    => 'link_color',
-					'label'   => __( 'Link Color', 'primer' ),
+					'label'   => esc_html__( 'Link Color', 'primer' ),
 					'default' => '#1585cf',
 					'css'     => array(
 						'a, a:visited, .entry-footer a, .sticky .entry-title a:before' => array(
@@ -93,7 +93,7 @@ class Primer_Customizer_Colors {
 				),
 				array(
 					'name'    => 'main_text_color',
-					'label'   => __( 'Main Text Color', 'primer' ),
+					'label'   => esc_html__( 'Main Text Color', 'primer' ),
 					'default' => '#1a1a1a',
 					'css'     => array(
 						'.site-content, .site-content h1, .site-content h2, .site-content h3, .site-content h4, .site-content h5, .site-content h6, .site-content p, .site-content blockquote, legend' => array(
@@ -103,7 +103,7 @@ class Primer_Customizer_Colors {
 				),
 				array(
 					'name'    => 'secondary_text_color',
-					'label'   => __( 'Secondary Text Color', 'primer' ),
+					'label'   => esc_html__( 'Secondary Text Color', 'primer' ),
 					'default' => '#686868',
 					'css'     => array(
 						'blockquote, .entry-meta, .entry-footer, .comment-list li .comment-meta .says, .comment-list li .comment-metadata, .comment-reply-link, #respond .logged-in-as, .fl-callout-text' => array(
@@ -113,6 +113,12 @@ class Primer_Customizer_Colors {
 				),
 			)
 		);
+
+		if ( ! $this->colors ) {
+
+			return;
+
+		}
 
 		/**
 		 * Default color scheme.
@@ -125,7 +131,7 @@ class Primer_Customizer_Colors {
 		 */
 		$default_scheme = array(
 			'default' => array(
-				'label'  => __( 'Default', 'primer' ),
+				'label'  => esc_html__( 'Default', 'primer' ),
 				'colors' => wp_list_pluck( $this->colors, 'default', 'name' ),
 			),
 		);
@@ -140,7 +146,7 @@ class Primer_Customizer_Colors {
 		$custom_schemes = (array) apply_filters( 'primer_color_schemes',
 			array(
 				'dark' => array(
-					'label'  => __( 'Dark', 'primer' ),
+					'label'  => esc_html__( 'Dark', 'primer' ),
 					'colors' => array(
 						'header_textcolor'      => '#1a1a1a',
 						'background_color'      => '#262626',
@@ -152,7 +158,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'muted' => array(
-					'label'  => __( 'Muted', 'primer' ),
+					'label'  => esc_html__( 'Muted', 'primer' ),
 					'colors' => array(
 						'header_textcolor'      => '#5a6175',
 						'background_color'      => '#d5d6e0',
@@ -164,7 +170,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'red' => array(
-					'label'  => __( 'Red', 'primer' ),
+					'label'  => esc_html__( 'Red', 'primer' ),
 					'colors' => array(
 						'header_textcolor'      => '#222222',
 						'background_color'      => '#ffffff',
@@ -190,21 +196,6 @@ class Primer_Customizer_Colors {
 
 		add_action( 'after_setup_theme', array( $this, 'header' ) );
 		add_action( 'after_setup_theme', array( $this, 'background' ) );
-
-	}
-
-	/**
-	 * Magic property getter.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param  string $property
-	 *
-	 * @return array
-	 */
-	public function __get( $property ) {
-
-		return property_exists( $this, $property ) ? $property : array();
 
 	}
 
@@ -393,7 +384,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_control(
 			'color_scheme',
 			array(
-				'label'    => __( 'Base Color Scheme', 'primer' ),
+				'label'    => esc_html__( 'Base Color Scheme', 'primer' ),
 				'section'  => 'colors',
 				'type'     => 'select',
 				'choices'  => array_combine( array_keys( $this->color_schemes ), wp_list_pluck( $this->color_schemes, 'label' ) ),

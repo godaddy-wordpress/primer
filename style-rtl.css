@@ -43,6 +43,8 @@ meta.foundation-data-attribute-namespace {
 *,
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html,
@@ -1812,6 +1814,7 @@ pre {
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   padding: 0.125rem 0.3125rem 0.0625rem;
   margin-bottom: 1rem; }
@@ -1825,6 +1828,7 @@ code {
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   padding: 0.125rem 0.3125rem 0.0625rem; }
 
@@ -1976,6 +1980,7 @@ blockquote p {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important; }
   a,
@@ -2049,6 +2054,7 @@ input[type="submit"] {
   -webkit-font-smoothing: auto;
   font-size: 1rem;
   line-height: 1;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: .75em 1em;
   padding: .75rem 1rem;
@@ -2135,7 +2141,9 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* Addresses appearance set to searchfield in S5, Chrome */
+  -webkit-box-sizing: content-box;
   /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+  -moz-box-sizing: content-box;
   box-sizing: content-box; }
 
 input[type="search"]::-webkit-search-decoration {
@@ -2169,7 +2177,9 @@ textarea {
   background-color: #fefefe;
   border: 1px solid rgba(117, 117, 117, 0.28);
   -webkit-transform: 200ms background linear;
-          transform: 200ms background linear;
+  -ms-transform: 200ms background linear;
+  transform: 200ms background linear;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
   resize: none; }
   input[type="text"]:focus,
@@ -2313,7 +2323,8 @@ a {
           left: 10px;
           top: 50%;
           -webkit-transform: translateY(-50%);
-                  transform: translateY(-50%); }
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
       .main-navigation .sub-menu .sub-menu {
         right: 100%;
         top: 0; }
@@ -2347,7 +2358,9 @@ a {
   overflow: hidden; }
   .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
     background-color: white;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
     color: black;
@@ -2442,7 +2455,10 @@ a {
   .widget_search .search-field {
     width: 100%;
     background: #fff;
+    -webkit-border-radius: 2px;
     border-radius: 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box; }
     .widget_search .search-field:focus {
       background: #fff; }
@@ -2454,6 +2470,8 @@ a {
 .widget-title {
   font-family: "Open Sans", sans-serif;
   position: relative;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   font-weight: bold; }
 
@@ -2482,6 +2500,7 @@ a {
 
 .widget_author .avatar {
   width: 80px;
+  -webkit-border-radius: 4px;
   border-radius: 4px;
   float: right;
   margin-left: 1em;
@@ -2524,6 +2543,7 @@ a {
     color: #0a0a0a;
     border-collapse: collapse;
     font-size: .9em;
+    -webkit-border-radius: 0 0 2px 2px;
     border-radius: 0 0 2px 2px;
     overflow: hidden;
     margin-bottom: 0; }
@@ -2538,6 +2558,7 @@ a {
       padding: .75em .25em;
       font-weight: bold;
       background-color: #fff;
+      -webkit-border-radius: 2px 2px 0 0;
       border-radius: 2px 2px 0 0; }
     .widget_calendar #calendar_wrap #wp-calendar thead th {
       padding: .25em 0;
@@ -2555,13 +2576,14 @@ a {
       .widget_calendar #calendar_wrap #wp-calendar tbody tr td a {
         color: #222;
         background: white;
+        -webkit-border-radius: 2px;
         border-radius: 2px;
         margin: 0 3px;
         display: block;
         font-weight: bold;
         border-bottom: none;
         -webkit-transition: 200ms color linear;
-                transition: 200ms color linear; }
+        transition: 200ms color linear; }
     .widget_calendar #calendar_wrap #wp-calendar tfoot {
       background: #e6e6e6; }
       .widget_calendar #calendar_wrap #wp-calendar tfoot td {
@@ -2570,7 +2592,7 @@ a {
         .widget_calendar #calendar_wrap #wp-calendar tfoot td a {
           color: #0a0a0a;
           -webkit-transition: 200ms color linear;
-                  transition: 200ms color linear; }
+          transition: 200ms color linear; }
           .widget_calendar #calendar_wrap #wp-calendar tfoot td a:hover {
             color: #008CBA; }
         .widget_calendar #calendar_wrap #wp-calendar tfoot td#prev {
@@ -2742,6 +2764,7 @@ a {
 .more-link {
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
+  -webkit-border-radius: 0;
   border-radius: 0;
   border: 1px solid #008CBA;
   padding: .5em 1em;
@@ -2787,6 +2810,7 @@ article.format-link {
 
 .bypostauthor {
   border: 3px solid rgba(0, 140, 186, 0.2);
+  -webkit-border-radius: 5px;
   border-radius: 5px; }
 
 .comments-area {
@@ -2847,6 +2871,7 @@ article.format-link {
   .comment-list .comment-reply-link:after {
     content: " \2192"; }
   .comment-list .comment-awaiting-moderation {
+    -webkit-border-radius: 4px;
     border-radius: 4px;
     background-color: #d9d9d9;
     color: #666;
@@ -2860,6 +2885,7 @@ article.format-link {
   right: -1em;
   right: -1rem;
   position: relative;
+  -webkit-border-radius: 3px;
   border-radius: 3px; }
 
 .comment-form label .required {
@@ -2908,6 +2934,8 @@ img[class*="wp-image-"] {
   margin-bottom: 1em;
   margin-bottom: 1rem;
   max-width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
   .wp-caption img[class*="wp-image-"] {
     display: block;
@@ -2971,34 +2999,42 @@ img[class*="wp-image-"] {
 
 .gallery-columns-2 .gallery-item {
   max-width: 48%;
+  max-width: -webkit-calc(50% - 4px);
   max-width: calc(50% - 4px); }
 
 .gallery-columns-3 .gallery-item {
   max-width: 32%;
+  max-width: -webkit-calc(33.3% - 4px);
   max-width: calc(33.3% - 4px); }
 
 .gallery-columns-4 .gallery-item {
   max-width: 23%;
+  max-width: -webkit-calc(25% - 4px);
   max-width: calc(25% - 4px); }
 
 .gallery-columns-5 .gallery-item {
   max-width: 19%;
+  max-width: -webkit-calc(20% - 4px);
   max-width: calc(20% - 4px); }
 
 .gallery-columns-6 .gallery-item {
   max-width: 15%;
+  max-width: -webkit-calc(16.7% - 4px);
   max-width: calc(16.7% - 4px); }
 
 .gallery-columns-7 .gallery-item {
   max-width: 13%;
+  max-width: -webkit-calc(14.28% - 4px);
   max-width: calc(14.28% - 4px); }
 
 .gallery-columns-8 .gallery-item {
   max-width: 11%;
+  max-width: -webkit-calc(12.5% - 4px);
   max-width: calc(12.5% - 4px); }
 
 .gallery-columns-9 .gallery-item {
   max-width: 9%;
+  max-width: -webkit-calc(11.1% - 4px);
   max-width: calc(11.1% - 4px); }
 
 .gallery-columns-1 .gallery-item:nth-of-type(1n),
@@ -3014,6 +3050,8 @@ img[class*="wp-image-"] {
 
 .gallery-caption {
   background-color: rgba(0, 0, 0, 0.7);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: #fff;
   margin: 0;
@@ -3165,6 +3203,7 @@ body.layout-one-column-narrow #content {
       background: transparent;
       font-weight: bold;
       border-bottom: 2px solid #373737;
+      -webkit-border-radius: 0;
       border-radius: 0; }
     .footer-widget-area .footer-widget .widget {
       margin-bottom: 2.25em;
@@ -3199,6 +3238,7 @@ body.layout-one-column-narrow #content {
         background-color: #008CBA; }
 
 .featured-content .entry-header {
+  -webkit-background-size: cover;
   background-size: cover; }
   .featured-content .entry-header,
   .featured-content .entry-header .entry-title,
@@ -3686,9 +3726,10 @@ body.layout-one-column-narrow #content {
     width: 32px;
     height: 32px;
     -webkit-transition: 200ms opacity;
-            transition: 200ms opacity;
+    transition: 200ms opacity;
     color: #fff;
     background: #008CBA;
+    -webkit-border-radius: 0;
     border-radius: 0; }
     .social-menu a:before {
       -webkit-font-smoothing: subpixel-antialiased;

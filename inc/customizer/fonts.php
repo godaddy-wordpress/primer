@@ -56,6 +56,12 @@ class Primer_Customizer_Fonts {
 			)
 		);
 
+		if ( ! $this->fonts ) {
+
+			return;
+
+		}
+
 		/**
 		 * Filter the array of available font types.
 		 *
@@ -67,7 +73,7 @@ class Primer_Customizer_Fonts {
 			array(
 				array(
 					'name'    => 'primary_font',
-					'label'   => __( 'Primary Font', 'primer' ),
+					'label'   => esc_html__( 'Primary Font', 'primer' ),
 					'default' => 'Open Sans',
 					'css'     => array(
 						'body, p' => array(
@@ -77,7 +83,7 @@ class Primer_Customizer_Fonts {
 				),
 				array(
 					'name'    => 'secondary_font',
-					'label'   => __( 'Secondary Font', 'primer' ),
+					'label'   => esc_html__( 'Secondary Font', 'primer' ),
 					'default' => 'Open Sans',
 					'css'     => array(
 						'blockquote, .entry-meta, .entry-footer, .comment-list li .comment-meta .says, .comment-list li .comment-metadata, .comment-reply-link, #respond .logged-in-as, .fl-callout-text' => array(
@@ -87,7 +93,7 @@ class Primer_Customizer_Fonts {
 				),
 				array(
 					'name'    => 'header_font',
-					'label'   => __( 'Header Font', 'primer' ),
+					'label'   => esc_html__( 'Header Font', 'primer' ),
 					'default' => 'Open Sans',
 					'css'     => array(
 						'h1, h2, h3, h4, h5, h6, label, legend, table th, .site-title, .entry-title, .widget-title, .main-navigation li a, button, a.button, input[type="button"], input[type="reset"], input[type="submit"]' => array(
@@ -98,25 +104,15 @@ class Primer_Customizer_Fonts {
 			)
 		);
 
-		add_action( 'customize_register', array( $this, 'typography' ), 11 );
+		if ( ! $this->font_types ) {
 
+			return;
+
+		}
+
+		add_action( 'customize_register', array( $this, 'typography' ), 11 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_google_fonts' ), 11 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_inline_css' ), 12 );
-
-	}
-
-	/**
-	 * Magic property getter.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param  string $property
-	 *
-	 * @return array
-	 */
-	public function __get( $property ) {
-
-		return property_exists( $this, $property ) ? $property : array();
 
 	}
 
@@ -139,7 +135,7 @@ class Primer_Customizer_Fonts {
 		$wp_customize->add_section(
 			'typography',
 			array(
-				'title'    => __( 'Typography', 'primer' ),
+				'title'    => esc_html__( 'Typography', 'primer' ),
 				'priority' => 40,
 			)
 		);
