@@ -16,7 +16,7 @@ window.onload = function() {
 
 	menu_toggle.onclick = function() {
 
-		nav_menu.style.display = ( 'none' === nav_menu.style.display || ! nav_menu.offsetHeight ) ? 'block' : 'none';
+		nav_menu.style.display = ( ! nav_menu.offsetHeight ) ? 'block' : 'none';
 
 	};
 
