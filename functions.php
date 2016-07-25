@@ -157,14 +157,6 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		add_theme_support( 'post-thumbnails' );
 
 		/**
-		 * Enable support for custom editor style.
-		 *
-		 * @link  https://developer.wordpress.org/reference/functions/add_editor_style/
-		 * @since 1.0.0
-		 */
-		add_editor_style();
-
-		/**
 		 * Register custom Custom Navigation Menus.
 		 *
 		 * @link  https://codex.wordpress.org/Function_Reference/register_nav_menus
@@ -252,6 +244,19 @@ function primer_content_width() {
 
 }
 add_action( 'after_setup_theme', 'primer_content_width', 0 );
+
+/**
+ * Enable support for custom editor style.
+ *
+ * @link  https://developer.wordpress.org/reference/functions/add_editor_style/
+ * @since 1.0.0
+ */
+function primer_editor_style() {
+
+	add_editor_style();
+
+}
+add_action( 'admin_init', 'primer_editor_style' );
 
 /**
  * Register sidebar areas.

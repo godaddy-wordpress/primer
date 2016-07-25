@@ -5,7 +5,7 @@
 
 		$( 'input[name="primer-layout-override"]' ).change( function() {
 
-			if ( 1 == $( this ).val() ) {
+			if ( '1' === $( this ).val() ) {
 
 				$( '.primer-layout ul li' )
 					.removeClass( 'disabled' )
@@ -13,18 +13,18 @@
 					.find( 'input' )
 					.prop( 'disabled', false );
 
-			} else {
-
-				$( '.primer-layout ul li:not(.global)' )
-					.removeClass( 'active' )
-					.addClass( 'disabled' )
-					.find( 'input' )
-					.prop( 'disabled', true );
-
-				$( '.primer-layout ul li.global input' )
-					.prop( 'checked', true );
+				return;
 
 			}
+
+			$( '.primer-layout ul li:not(.global)' )
+				.removeClass( 'active' )
+				.addClass( 'disabled' )
+				.find( 'input' )
+				.prop( 'disabled', true );
+
+			$( '.primer-layout ul li.global input' )
+				.prop( 'checked', true );
 
 		} );
 

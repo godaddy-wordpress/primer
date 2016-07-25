@@ -8,10 +8,19 @@ module.exports = function(grunt) {
 
 		autoprefixer: {
 			options: {
-				// Task-specific options go here.
+				browsers: [
+					'Android >= 2.1',
+					'Chrome >= 21',
+					'Edge >= 12',
+					'Explorer >= 7',
+					'Firefox >= 17',
+					'Opera >= 12.1',
+					'Safari >= 6.0'
+				],
+				cascade: false
 			},
-			your_target: {
-				src: '*.css'
+			dist: {
+				src: [ '*.css', 'assets/css/*.css' ]
 			}
 		},
 
@@ -24,8 +33,33 @@ module.exports = function(grunt) {
 					{
 						src: 'style.css',
 						dest: 'style-rtl.css'
+					},
+					{
+						src: 'editor-style.css',
+						dest: 'editor-style-rtl.css'
+					},
+					{
+						src: 'assets/css/meta-box.css',
+						dest: 'assets/css/meta-box-rtl.css'
 					}
 				]
+			}
+		},
+
+		cssmin: {
+			options: {
+				shorthandCompacting: false,
+				roundingPrecision: 5,
+				processImport: false
+			},
+			dist: {
+				files: [{
+					expand: true,
+					cwd: 'assets/css',
+					src: ['*.css', '!*.min.css'],
+					dest: 'assets/css',
+					ext: '.min.css'
+				}]
 			}
 		},
 
@@ -46,7 +80,7 @@ module.exports = function(grunt) {
 		},
 
 		jshint: {
-			all: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js']
+			all: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js', '!assets/js/jquery.backgroundSize.js']
 		},
 
 		po2mo: {
@@ -125,6 +159,7 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: {
+					'assets/css/meta-box.css': '.dev/sass/meta-box.scss',
 					'style.css': '.dev/sass/style.scss',
 					'editor-style.css': '.dev/sass/editor-style.scss'
 				}
@@ -162,7 +197,7 @@ module.exports = function(grunt) {
 
 	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('default', ['sass','autoprefixer','cssjanus','cssmin','jshint','uglify']);
 	grunt.registerTask('lint', ['jshint']);
 	grunt.registerTask('update-pot', ['pot', 'replace:pot']);
 

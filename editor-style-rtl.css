@@ -63,10 +63,10 @@ img {
   max-width: none !important; }
 
 .left {
-  float: left !important; }
+  float: right !important; }
 
 .right {
-  float: right !important; }
+  float: left !important; }
 
 .clearfix:before, .entry-meta:before, .clearfix:after, .entry-meta:after {
   content: " ";
@@ -94,10 +94,10 @@ select {
   width: 100%; }
 
 .text-left {
-  text-align: left !important; }
+  text-align: right !important; }
 
 .text-right {
-  text-align: right !important; }
+  text-align: left !important; }
 
 .text-center {
   text-align: center !important; }
@@ -107,9 +107,9 @@ select {
 
 @media only screen and (max-width: 40em) {
   .small-only-text-left {
-    text-align: left !important; }
-  .small-only-text-right {
     text-align: right !important; }
+  .small-only-text-right {
+    text-align: left !important; }
   .small-only-text-center {
     text-align: center !important; }
   .small-only-text-justify {
@@ -117,9 +117,9 @@ select {
 
 @media only screen {
   .small-text-left {
-    text-align: left !important; }
-  .small-text-right {
     text-align: right !important; }
+  .small-text-right {
+    text-align: left !important; }
   .small-text-center {
     text-align: center !important; }
   .small-text-justify {
@@ -127,9 +127,9 @@ select {
 
 @media only screen and (min-width: 40.063em) and (max-width: 61em) {
   .medium-only-text-left {
-    text-align: left !important; }
-  .medium-only-text-right {
     text-align: right !important; }
+  .medium-only-text-right {
+    text-align: left !important; }
   .medium-only-text-center {
     text-align: center !important; }
   .medium-only-text-justify {
@@ -137,9 +137,9 @@ select {
 
 @media only screen and (min-width: 40.063em) {
   .medium-text-left {
-    text-align: left !important; }
-  .medium-text-right {
     text-align: right !important; }
+  .medium-text-right {
+    text-align: left !important; }
   .medium-text-center {
     text-align: center !important; }
   .medium-text-justify {
@@ -147,9 +147,9 @@ select {
 
 @media only screen and (min-width: 61.063em) and (max-width: 90em) {
   .large-only-text-left {
-    text-align: left !important; }
-  .large-only-text-right {
     text-align: right !important; }
+  .large-only-text-right {
+    text-align: left !important; }
   .large-only-text-center {
     text-align: center !important; }
   .large-only-text-justify {
@@ -157,9 +157,9 @@ select {
 
 @media only screen and (min-width: 61.063em) {
   .large-text-left {
-    text-align: left !important; }
-  .large-text-right {
     text-align: right !important; }
+  .large-text-right {
+    text-align: left !important; }
   .large-text-center {
     text-align: center !important; }
   .large-text-justify {
@@ -167,9 +167,9 @@ select {
 
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
   .xlarge-only-text-left {
-    text-align: left !important; }
-  .xlarge-only-text-right {
     text-align: right !important; }
+  .xlarge-only-text-right {
+    text-align: left !important; }
   .xlarge-only-text-center {
     text-align: center !important; }
   .xlarge-only-text-justify {
@@ -177,9 +177,9 @@ select {
 
 @media only screen and (min-width: 90.063em) {
   .xlarge-text-left {
-    text-align: left !important; }
-  .xlarge-text-right {
     text-align: right !important; }
+  .xlarge-text-right {
+    text-align: left !important; }
   .xlarge-text-center {
     text-align: center !important; }
   .xlarge-text-justify {
@@ -187,9 +187,9 @@ select {
 
 @media only screen and (min-width: 120.063em) and (max-width: 99999999em) {
   .xxlarge-only-text-left {
-    text-align: left !important; }
-  .xxlarge-only-text-right {
     text-align: right !important; }
+  .xxlarge-only-text-right {
+    text-align: left !important; }
   .xxlarge-only-text-center {
     text-align: center !important; }
   .xxlarge-only-text-justify {
@@ -197,9 +197,9 @@ select {
 
 @media only screen and (min-width: 120.063em) {
   .xxlarge-text-left {
-    text-align: left !important; }
-  .xxlarge-text-right {
     text-align: right !important; }
+  .xxlarge-text-right {
+    text-align: left !important; }
   .xxlarge-text-center {
     text-align: center !important; }
   .xxlarge-text-justify {
@@ -372,19 +372,19 @@ dl {
   font-family: inherit; }
 
 ul {
-  margin-left: 1.25rem; }
+  margin-right: 1.25rem; }
   ul.no-bullet {
-    margin-left: 0; }
+    margin-right: 0; }
     ul.no-bullet li ul,
     ul.no-bullet li ol {
-      margin-left: 1.25rem;
+      margin-right: 1.25rem;
       margin-bottom: 0;
       list-style: none; }
 
 /* Unordered Lists */
 ul li ul,
 ul li ol {
-  margin-left: 1.25rem;
+  margin-right: 1.25rem;
   margin-bottom: 0; }
 
 ul.square li ul, ul.circle li ul, ul.disc li ul {
@@ -392,25 +392,25 @@ ul.square li ul, ul.circle li ul, ul.disc li ul {
 
 ul.square {
   list-style-type: square;
-  margin-left: 1.25rem; }
+  margin-right: 1.25rem; }
 
 ul.circle {
   list-style-type: circle;
-  margin-left: 1.25rem; }
+  margin-right: 1.25rem; }
 
 ul.disc {
   list-style-type: disc;
-  margin-left: 1.25rem; }
+  margin-right: 1.25rem; }
 
 ul.no-bullet {
   list-style: none; }
 
 /* Ordered Lists */
 ol {
-  margin-left: 1.4rem; }
+  margin-right: 1.4rem; }
   ol li ul,
   ol li ol {
-    margin-left: 1.25rem;
+    margin-right: 1.25rem;
     margin-bottom: 0; }
 
 /* Definition Lists */
@@ -436,8 +436,8 @@ abbr {
 /* Blockquotes */
 blockquote {
   margin: 0 0 1rem;
-  padding: 0.5625rem 1.25rem 0 1.1875rem;
-  border-left: 1px solid #cacaca;
+  padding: 0.5625rem 1.1875rem 0 1.25rem;
+  border-right: 1px solid #cacaca;
   overflow: hidden;
   font-family: "Open Sans", sans-serif;
   font-style: italic; }
@@ -763,13 +763,13 @@ legend {
 
 .alignleft {
   display: inline;
-  float: left;
-  margin-right: 1.5em; }
+  float: right;
+  margin-left: 1.5em; }
 
 .alignright {
   display: inline;
-  float: right;
-  margin-left: 1.5em; }
+  float: left;
+  margin-right: 1.5em; }
 
 .aligncenter {
   display: block;
@@ -783,7 +783,7 @@ legend {
   line-height: 1.4;
   position: relative;
   top: 2px;
-  right: 12px; }
+  left: 12px; }
   @media only screen and (min-width: 40.063em) {
     .sticky .entry-title a:before {
       font-size: 1.875rem;
@@ -870,7 +870,7 @@ legend {
   .entry-footer a {
     color: #008CBA; }
   .entry-footer .entry-footer-right {
-    float: right; }
+    float: left; }
   .entry-footer .cat-links,
   .entry-footer .tags-links {
     display: block; }
@@ -894,8 +894,8 @@ legend {
     border-bottom-width: 0; }
 
 .entry-media-meta .button {
-  margin-right: 1em;
-  margin-right: 1rem; }
+  margin-left: 1em;
+  margin-left: 1rem; }
   @media only screen and (max-width: 40em) {
     .entry-media-meta .button {
       margin-bottom: 10px; } }
@@ -919,8 +919,8 @@ legend {
     -ms-word-wrap: break-word;
     word-wrap: break-word;
     white-space: nowrap;
-    margin-right: .5em;
-    margin-right: .5rem;
+    margin-left: .5em;
+    margin-left: .5rem;
     line-height: 2; }
 
 .post-format {
@@ -960,8 +960,8 @@ article.format-link {
   .entry-media.video > * {
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
+    left: 0;
     bottom: 0;
     width: 100% !important;
     height: 100% !important; }
@@ -1008,18 +1008,18 @@ article.format-link {
   .comment-list,
   .comment-list li {
     list-style: none;
-    margin-left: 0;
-    padding-left: 0; }
+    margin-right: 0;
+    padding-right: 0; }
   .comment-list li {
-    padding-left: 32px; }
+    padding-right: 32px; }
     .comment-list li article {
       margin-bottom: 56px;
-      padding-left: 1em;
-      padding-left: 1rem; }
+      padding-right: 1em;
+      padding-right: 1rem; }
     .comment-list li.pingback, .comment-list li.trackback {
       border: 2px solid #ddd;
-      border-left: 0;
       border-right: 0;
+      border-left: 0;
       padding: 1em 0;
       padding: 1rem 0;
       margin-bottom: 1.4em;
@@ -1036,7 +1036,7 @@ article.format-link {
       font-size: 0.8125rem;
       line-height: 1em; }
       .comment-list li .comment-metadata .edit-link {
-        float: right; }
+        float: left; }
   .comment-list .comment-reply-link:after {
     content: " \2192"; }
   .comment-list .comment-awaiting-moderation {
@@ -1049,10 +1049,10 @@ article.format-link {
     margin-top: 1em; }
 
 .comment-meta .avatar {
-  float: left;
-  margin-left: -32px;
-  left: -1em;
-  left: -1rem;
+  float: right;
+  margin-right: -32px;
+  right: -1em;
+  right: -1rem;
   position: relative;
   -webkit-border-radius: 3px;
   border-radius: 3px; }

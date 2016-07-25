@@ -37,13 +37,13 @@ class Primer_Customizer_Layouts {
 		 */
 		$this->layouts = (array) apply_filters( 'primer_layouts',
 			array(
-				'one-column-wide'       => esc_html__( '1 Column Wide', 'primer' ),
-				'one-column-narrow'     => esc_html__( '1 Column Narrow', 'primer' ),
-				'two-column-default'    => esc_html__( '2 Columns: Content / Sidebar', 'primer' ),
-				'two-column-reversed'   => esc_html__( '2 Columns: Sidebar / Content', 'primer' ),
-				'three-column-default'  => esc_html__( '3 Columns: Content / Sidebar / Sidebar', 'primer' ),
-				'three-column-center'   => esc_html__( '3 Columns: Sidebar / Content / Sidebar', 'primer' ),
-				'three-column-reversed' => esc_html__( '3 Columns: Sidebar / Sidebar / Content', 'primer' ),
+				'one-column-wide'       => esc_html__( 'One Column: Wide', 'primer' ),
+				'one-column-narrow'     => esc_html__( 'One Column: Narrow', 'primer' ),
+				'two-column-default'    => esc_html__( 'Two Columns: Content | Sidebar', 'primer' ),
+				'two-column-reversed'   => esc_html__( 'Two Columns: Sidebar | Content', 'primer' ),
+				'three-column-default'  => esc_html__( 'Three Columns: Content | Sidebar | Sidebar', 'primer' ),
+				'three-column-center'   => esc_html__( 'Three Columns: Sidebar | Content | Sidebar', 'primer' ),
+				'three-column-reversed' => esc_html__( 'Three Columns: Sidebar | Sidebar | Content', 'primer' ),
 			)
 		);
 
@@ -54,6 +54,7 @@ class Primer_Customizer_Layouts {
 		}
 
 		add_action( 'after_setup_theme', array( $this, 'theme_support' ), 11 );
+		add_action( 'init',              array( $this, 'rtl_layouts' ), 11 );
 		add_action( 'init',              array( $this, 'post_type_support' ), 11 );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
@@ -81,7 +82,39 @@ class Primer_Customizer_Layouts {
 		$this->default  = ( ! empty( $args[0] ) && $this->layout_exists( $args[0] ) ) ? $args[0] : ( $this->layout_exists( $this->default ) ? $this->default : array_shift( $layouts ) );
 		$this->meta_box = ! empty( $args[1] ) ? (bool) $args[1] : $this->meta_box;
 
-		add_filter( 'primer_layouts', array( $this, 'rtl_layouts' ) );
+	}
+
+	/**
+	 * Alter some registered layouts when in RTL mode.
+	 *
+	 * @action init
+	 * @since  1.0.0
+	 */
+	public function rtl_layouts() {
+
+		if ( ! is_rtl() ) {
+
+			return;
+
+		}
+
+		/**
+		 * Filter changes needed for registered layouts when in RTL mode.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var array
+		 */
+		$rtl_layouts = (array) apply_filters( 'primer_layouts_rtl',
+			array(
+				'two-column-default'    => esc_html__( 'Two Columns: Sidebar | Content', 'primer' ),
+				'two-column-reversed'   => esc_html__( 'Two Columns: Content | Sidebar', 'primer' ),
+				'three-column-default'  => esc_html__( 'Three Columns: Sidebar | Sidebar | Content', 'primer' ),
+				'three-column-reversed' => esc_html__( 'Three Columns: Content | Sidebar | Sidebar', 'primer' ),
+			)
+		);
+
+		$this->layouts = array_merge( $this->layouts, $rtl_layouts );
 
 	}
 
@@ -126,11 +159,12 @@ class Primer_Customizer_Layouts {
 
 		}
 
+		$rtl    = is_rtl() ? '-rtl' : '';
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
 		wp_enqueue_script( 'primer-layouts-meta-box', get_template_directory_uri() . "/assets/js/meta-box{$suffix}.js", array( 'jquery' ), PRIMER_VERSION );
 
-		wp_enqueue_style( 'primer-layouts-meta-box', get_template_directory_uri() . '/assets/css/meta-box.css', array(), PRIMER_VERSION );
+		wp_enqueue_style( 'primer-layouts-meta-box', get_template_directory_uri() . "/assets/css/meta-box{$rtl}{$suffix}.css", array(), PRIMER_VERSION );
 
 	}
 
@@ -180,7 +214,7 @@ class Primer_Customizer_Layouts {
 
 		add_meta_box(
 			'primer-layouts-meta-box',
-			__( 'Layout', 'primer' ),
+			esc_html__( 'Layout', 'primer' ),
 			array( $this, 'render_meta_box' ),
 			$post_type,
 			'side',
@@ -212,11 +246,11 @@ class Primer_Customizer_Layouts {
 			<?php
 
 			printf(
-				_x( 'The site-wide Default layout setting is located in the %s.', 'link to the Customizer', 'primer' ),
+				esc_html_x( 'The site-wide Default layout setting is located in the %s.', 'link to the Customizer', 'primer' ),
 				sprintf(
 					'<a href="%s">%s</a>',
 					admin_url( 'customize.php' ),
-					__( 'Customizer' )
+					esc_html__( 'Customizer' )
 				)
 			);
 
@@ -224,9 +258,9 @@ class Primer_Customizer_Layouts {
 			</p>
 
 			<p>
-				<input type="radio" name="primer-layout-override" id="primer-layout-use-default" value="0" <?php checked( ! $has_custom ) ?>><label for="primer-layout-use-default"><?php _e( 'Default', 'primer' ) ?></label>
-				&nbsp;&nbsp;
-				<input type="radio" name="primer-layout-override" id="primer-layout-use-custom" value="1" <?php checked( $has_custom ) ?>><label for="primer-layout-use-custom"><?php _e( 'Custom', 'primer' ) ?></label>
+				<label for="primer-layout-use-default"><input type="radio" name="primer-layout-override" id="primer-layout-use-default" value="0" <?php checked( ! $has_custom ) ?> autocomplete="off"><?php _e( 'Default', 'primer' ) ?></label>
+				<label for="primer-layout-use-custom"><input type="radio" name="primer-layout-override" id="primer-layout-use-custom" value="1" <?php checked( $has_custom ) ?> autocomplete="off"><?php _e( 'Custom', 'primer' ) ?></label>
+				<span class="clear"></span>
 			</p>
 
 			<div class="primer-layout-wrap">
@@ -247,7 +281,7 @@ class Primer_Customizer_Layouts {
 						<li class="<?php echo esc_attr( $class ) ?>">
 							<label for="primer-layout-<?php echo esc_attr( $layout ) ?>">
 								<input type="radio" name="primer-layout" id="primer-layout-<?php echo esc_attr( $layout ) ?>" value="<?php echo esc_attr( $layout ) ?>" <?php checked( $this->get_current_layout( $post->ID ), $layout ) ?> <?php disabled( 'disabled' === $class ) ?>>
-								<img src="<?php echo esc_url( sprintf( '%s/assets/layouts/%s%s.png', get_template_directory_uri(), $layout, is_rtl() ? '-rtl' : '' ) ) ?>" alt="<?php echo esc_attr( $label ) ?>" title="<?php echo esc_attr( $label ) ?>">
+								<img src="<?php echo esc_url( sprintf( '%s/assets/layouts/%s%s.svg', get_template_directory_uri(), $layout, is_rtl() ? '-rtl' : '' ) ) ?>" alt="<?php echo esc_attr( $label ) ?>" title="<?php echo esc_attr( $label ) ?>">
 								<span><?php echo esc_html( $label ) ?></span>
 							</label>
 						</li>
@@ -337,34 +371,38 @@ class Primer_Customizer_Layouts {
 		);
 
 		$wp_customize->add_control(
-			'layout-control',
+			'layout',
 			array(
-				'label'    => esc_html__( 'Default Layout', 'primer' ),
-				'section'  => 'layout',
-				'settings' => 'layout',
-				'type'     => 'radio',
-				'choices'  => $this->layouts,
+				'label'       => esc_html__( 'Default Layout', 'primer' ),
+				'description' => esc_html__( 'All posts and pages on your site will use this layout by default.', 'primer' ),
+				'section'     => 'layout',
+				'settings'    => 'layout',
+				'type'        => 'radio',
+				'choices'     => $this->layouts,
 			)
 		);
 
-	}
+		$wp_customize->add_setting(
+			'full_width',
+			array(
+				'default'           => 0,
+				'sanitize_callback' => 'absint',
+			)
+		);
 
-	public function rtl_layouts( array $layouts ) {
-
-		if ( ! is_rtl() ) {
-
-			return $layouts;
-
-		}
-
-		return array(
-			'one-column-wide'       => esc_html__( '1 Column Wide', 'primer' ),
-			'one-column-narrow'     => esc_html__( '1 Column Narrow', 'primer' ),
-			'two-column-default'    => esc_html__( '2 Columns: Sidebar / Content', 'primer' ),
-			'two-column-reversed'   => esc_html__( '2 Columns: Content / Sidebar', 'primer' ),
-			'three-column-default'  => esc_html__( '3 Columns: Sidebar / Sidebar / Content', 'primer' ),
-			'three-column-center'   => esc_html__( '3 Columns: Sidebar / Content / Sidebar', 'primer' ),
-			'three-column-reversed' => esc_html__( '3 Columns: Content / Sidebar / Sidebar', 'primer' ),
+		$wp_customize->add_control(
+			'full-width',
+			array(
+				'label'       => esc_html__( 'Header & Footer Width', 'primer' ),
+				'description' => esc_html__( 'Set the header and footer width to be fixed or fluid when viewed on large screens.', 'primer' ),
+				'section'     => 'layout',
+				'settings'    => 'full_width',
+				'type'        => 'radio',
+				'choices'     => array(
+					0 => esc_html__( 'Fixed', 'primer' ),
+					1 => esc_html__( 'Fluid', 'primer' ),
+				),
+			)
 		);
 
 	}
@@ -382,8 +420,9 @@ class Primer_Customizer_Layouts {
 	public function body_class( array $classes ) {
 
 		$classes[] = sanitize_html_class( sprintf( 'layout-%s', $this->get_current_layout() ) );
+		$classes[] = (bool) get_theme_mod( 'full_width' ) ? 'no-max-width' : null;
 
-		return $classes;
+		return array_filter( $classes );
 
 	}
 
