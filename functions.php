@@ -86,14 +86,9 @@ require_once get_template_directory() . '/inc/hooks.php';
 require_once get_template_directory() . '/inc/customizer.php';
 
 /**
- * Load custom theme layout functionality.
+ * Load WooCommerce compatibility file.
  *
  * @since 1.0.0
- */
-require_once get_template_directory() . '/inc/theme-layouts.php';
-
-/**
- * Load WooCommerce compatibility file.
  */
 require_once get_template_directory() . '/inc/woocommerce.php';
 
@@ -192,26 +187,6 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		);
 
 		/**
-		 * Enable support for theme layouts from Hybrid Core.
-		 *
-		 * @link  https://github.com/justintadlock/hybrid-core/releases/tag/2.0.4
-		 * @since 1.0.0
-		 */
-		add_theme_support(
-			'theme-layouts',
-			array(
-				'one-column-wide'       => esc_html__( '1 Column Wide', 'primer' ),
-				'one-column-narrow'     => esc_html__( '1 Column Narrow', 'primer' ),
-				'two-column-default'    => is_rtl() ? esc_html__( '2 Columns: Sidebar / Content', 'primer' ) : esc_html__( '2 Columns: Content / Sidebar', 'primer' ),
-				'two-column-reversed'   => is_rtl() ? esc_html__( '2 Columns: Content / Sidebar', 'primer' ) : esc_html__( '2 Columns: Sidebar / Content', 'primer' ),
-				'three-column-default'  => is_rtl() ? esc_html__( '3 Columns: Sidebar / Sidebar / Content', 'primer' ) : esc_html__( '3 Columns: Content / Sidebar / Sidebar', 'primer' ),
-				'three-column-center'   => esc_html__( '3 Columns: Sidebar / Content / Sidebar', 'primer' ),
-				'three-column-reversed' => is_rtl() ? esc_html__( '3 Columns: Content / Sidebar / Sidebar', 'primer' ) : esc_html__( '3 Columns: Sidebar / Sidebar / Content', 'primer' ),
-			),
-			array( 'default' => 'two-column-default' )
-		);
-
-		/**
 		 * Enable support for HTML5 markup.
 		 *
 		 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
@@ -261,19 +236,19 @@ add_action( 'after_setup_theme', 'primer_setup' );
  */
 function primer_content_width() {
 
-	$theme_layout  = theme_layouts_get_layout();
-	$content_width = ( 'one-column-wide' === $theme_layout ) ? 1068 : 688;
+	$layout        = primer_get_layout();
+	$content_width = ( 'one-column-wide' === $layout ) ? 1068 : 688;
 
 	/**
 	 * Filter the content width in pixels.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string $theme_layout
+	 * @param string $layout
 	 *
 	 * @var int
 	 */
-	$GLOBALS['content_width'] = (int) apply_filters( 'primer_content_width', $content_width, $theme_layout );
+	$GLOBALS['content_width'] = (int) apply_filters( 'primer_content_width', $content_width, $layout );
 
 }
 add_action( 'after_setup_theme', 'primer_content_width', 0 );

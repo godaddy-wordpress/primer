@@ -114,6 +114,12 @@ class Primer_Customizer_Colors {
 			)
 		);
 
+		if ( ! $this->colors ) {
+
+			return;
+
+		}
+
 		/**
 		 * Default color scheme.
 		 *
@@ -190,21 +196,6 @@ class Primer_Customizer_Colors {
 
 		add_action( 'after_setup_theme', array( $this, 'header' ) );
 		add_action( 'after_setup_theme', array( $this, 'background' ) );
-
-	}
-
-	/**
-	 * Magic property getter.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param  string $property
-	 *
-	 * @return array
-	 */
-	public function __get( $property ) {
-
-		return property_exists( $this, $property ) ? $property : array();
 
 	}
 

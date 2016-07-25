@@ -6,6 +6,40 @@
  */
 
 /**
+ * Return the current layout.
+ *
+ * @global string $primer_customizer_layouts
+ * @since  1.0.0
+ *
+ * @param  int $post_id (optional)
+ *
+ * @return string
+ */
+function primer_get_layout( $post_id = null ) {
+
+	global $primer_customizer_layouts;
+
+	return $primer_customizer_layouts->get_current_layout( $post_id );
+
+}
+
+/**
+ * Return the global layout.
+ *
+ * @global string $primer_customizer_layouts
+ * @since 1.0.0
+ *
+ * @return string
+ */
+function primer_get_global_layout() {
+
+	global $primer_customizer_layouts;
+
+	return $primer_customizer_layouts->get_global_layout();
+
+}
+
+/**
  * Return the featured image URL.
  *
  * @since 1.0.0

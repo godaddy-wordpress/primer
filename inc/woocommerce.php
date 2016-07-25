@@ -53,21 +53,21 @@ function primer_woo_wrapper_end() {
 add_action( 'woocommerce_after_main_content', 'primer_woo_wrapper_end', 10 );
 
 /**
- * Filter the theme layout for the WooCommerce shop page.
+ * Filter the layout for the WooCommerce shop page.
  *
- * @param  string $theme_layout
+ * @param  string $layout
  *
  * @return string
  */
-function primer_woo_shop_theme_layout( $theme_layout ) {
+function primer_woo_shop_layout( $layout ) {
 
 	if ( function_exists( 'wc_get_page_id' ) && function_exists( 'is_shop' ) && is_shop() ) {
 
-		$theme_layout = get_post_layout( wc_get_page_id( 'shop' ) );
+		$layout = primer_get_layout( wc_get_page_id( 'shop' ) );
 
 	}
 
-	return $theme_layout;
+	return $layout;
 
 }
-add_filter( 'theme_mod_theme_layout', 'primer_woo_shop_theme_layout' );
+add_filter( 'theme_mod_layout', 'primer_woo_shop_layout' );

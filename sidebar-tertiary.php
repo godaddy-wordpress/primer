@@ -9,12 +9,12 @@
  */
 
 $layouts = array(
-	'layout-three-column-default',
-	'layout-three-column-center',
-	'layout-three-column-reversed',
+	'three-column-default',
+	'three-column-center',
+	'three-column-reversed',
 );
 
-if ( ! is_active_sidebar( 'sidebar-2' ) || ! in_array( theme_layouts_get_layout(), $layouts ) ) {
+if ( ! is_active_sidebar( 'sidebar-2' ) || ! in_array( primer_get_layout(), $layouts ) ) {
 
 	return;
 
