@@ -249,7 +249,7 @@ class Primer_Customizer_Layouts {
 				esc_html_x( 'The site-wide Default layout setting is located in the %s.', 'link to the Customizer', 'primer' ),
 				sprintf(
 					'<a href="%s">%s</a>',
-					admin_url( 'customize.php' ),
+					add_query_arg( 'autofocus[section]', 'layout', admin_url( 'customize.php' ) ),
 					esc_html__( 'Customizer' )
 				)
 			);
