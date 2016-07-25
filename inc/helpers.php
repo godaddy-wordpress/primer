@@ -11,13 +11,15 @@
  * @global string $primer_customizer_layouts
  * @since  1.0.0
  *
+ * @param  int $post_id (optional)
+ *
  * @return string
  */
-function primer_get_layout() {
+function primer_get_layout( $post_id = null ) {
 
 	global $primer_customizer_layouts;
 
-	return $primer_customizer_layouts->get_current_layout();
+	return $primer_customizer_layouts->get_current_layout( $post_id );
 
 }
 
