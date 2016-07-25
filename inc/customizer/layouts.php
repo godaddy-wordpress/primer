@@ -37,8 +37,8 @@ class Primer_Customizer_Layouts {
 		 */
 		$this->layouts = (array) apply_filters( 'primer_layouts',
 			array(
-				'one-column-wide'       => esc_html__( 'One Column Wide', 'primer' ),
-				'one-column-narrow'     => esc_html__( 'One Column Narrow', 'primer' ),
+				'one-column-wide'       => esc_html__( 'One Column: Wide', 'primer' ),
+				'one-column-narrow'     => esc_html__( 'One Column: Narrow', 'primer' ),
 				'two-column-default'    => esc_html__( 'Two Columns: Content / Sidebar', 'primer' ),
 				'two-column-reversed'   => esc_html__( 'Two Columns: Sidebar / Content', 'primer' ),
 				'three-column-default'  => esc_html__( 'Three Columns: Content / Sidebar / Sidebar', 'primer' ),
