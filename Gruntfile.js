@@ -39,8 +39,9 @@ module.exports = function(grunt) {
 						dest: 'editor-style-rtl.css'
 					},
 					{
-						src: 'assets/css/layouts.css',
-						dest: 'assets/css/layouts-rtl.css'
+						src: ['assets/css/admin/*.css','!assets/css/admin/*-rtl.css'],
+						dest: 'assets/css/admin',
+						ext: '-rtl.css'
 					}
 				]
 			}
@@ -58,6 +59,15 @@ module.exports = function(grunt) {
 					cwd: 'assets/css',
 					src: ['*.css', '!*.min.css'],
 					dest: 'assets/css',
+					ext: '.min.css'
+				}]
+			},
+			admin: {
+				files: [{
+					expand: true,
+					cwd: 'assets/css/admin',
+					src: ['*.css', '!*.min.css'],
+					dest: 'assets/css/admin',
 					ext: '.min.css'
 				}]
 			}
@@ -80,7 +90,7 @@ module.exports = function(grunt) {
 		},
 
 		jshint: {
-			all: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js', '!assets/js/jquery.backgroundSize.js']
+			all: ['Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js', '!assets/js/jquery.backgroundSize.js']
 		},
 
 		po2mo: {
@@ -138,7 +148,7 @@ module.exports = function(grunt) {
 						to: pkg.title
 					},
 					{
-						from: "YEAR THE PACKAGE'S COPYRIGHT HOLDER",
+						from: 'YEAR THE PACKAGE\'S COPYRIGHT HOLDER',
 						to: new Date().getFullYear()
 					},
 					{
@@ -159,7 +169,7 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: {
-					'assets/css/layouts.css': '.dev/sass/layouts.scss',
+					'assets/css/admin/layouts.css': '.dev/sass/admin/layouts.scss',
 					'style.css': '.dev/sass/style.scss',
 					'editor-style.css': '.dev/sass/editor-style.scss'
 				}
@@ -170,11 +180,18 @@ module.exports = function(grunt) {
 			options: {
 				ASCIIOnly: true
 			},
-			core: {
+			dist: {
 				expand: true,
 				cwd: 'assets/js',
 				src: ['*.js', '!*.min.js'],
 				dest: 'assets/js',
+				ext: '.min.js'
+			},
+			admin: {
+				expand: true,
+				cwd: 'assets/js/admin',
+				src: ['*.js', '!*.min.js'],
+				dest: 'assets/js/admin',
 				ext: '.min.js'
 			}
 		},
@@ -185,7 +202,7 @@ module.exports = function(grunt) {
 				tasks: ['sass','autoprefixer','cssjanus']
 			},
 			scripts: {
-				files: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js'],
+				files: ['Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js'],
 				tasks: ['jshint', 'uglify'],
 				options: {
 					interrupt: true
