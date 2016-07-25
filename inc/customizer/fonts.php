@@ -160,7 +160,12 @@ class Primer_Customizer_Fonts {
 				)
 			);
 
-			$fonts = array_merge( $this->get_default_fonts(), $this->fonts );
+			$fonts = array_unique(
+				array_merge(
+					array( $this->get_default_font( $font_type['name'] ) ),
+					$this->fonts
+				)
+			);
 
 			$wp_customize->add_control(
 				$font_type['name'],
@@ -183,7 +188,7 @@ class Primer_Customizer_Fonts {
 	 *
 	 * @param  string $font_type
 	 *
-	 * @return string|null
+	 * @return string
 	 */
 	public function get_font( $font_type ) {
 
@@ -198,26 +203,14 @@ class Primer_Customizer_Fonts {
 	 *
 	 * @param  string $font_type
 	 *
-	 * @return string|null
+	 * @return string
 	 */
 	public function get_default_font( $font_type ) {
 
 		$defaults = wp_list_pluck( $this->font_types, 'default', 'name' );
+		$default  = isset( $defaults[ $font_type ] ) ? $defaults[ $font_type ] : $this->fonts[0];
 
-		return isset( $defaults[ $font_type ] ) ? $defaults[ $font_type ] : ( isset( $this->fonts[0] ) ? $this->fonts[0] : null );
-
-	}
-
-	/**
-	 * Return the default font for all font types
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return array
-	 */
-	public function get_default_fonts() {
-
-		return wp_list_pluck( $this->font_types, 'default' );
+		return $this->sanitize_font( $default );
 
 	}
 
@@ -228,11 +221,11 @@ class Primer_Customizer_Fonts {
 	 *
 	 * @param  string $font
 	 *
-	 * @return string|null
+	 * @return string
 	 */
 	public function sanitize_font( $font ) {
 
-		return in_array( $font, $this->fonts ) ? $font : ( isset( $this->fonts[0] ) ? $this->fonts[0] : null );
+		return in_array( $font, $this->fonts ) ? $font : array_shift( $this->fonts );
 
 	}
 
