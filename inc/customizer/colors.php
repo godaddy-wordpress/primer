@@ -42,10 +42,35 @@ class Primer_Customizer_Colors {
 							'color' => '%1$s',
 						),
 					),
+					'rgba_css' => array(
+						'.site-title a:hover, .site-title a:visited:hover' => array(
+							'color' => 'rgba(%1$s, 0.75)',
+						),
+					),
 				),
 				array(
 					'name'    => 'background_color',
 					'default' => '#f9f9f9',
+				),
+				array(
+					'name'    => 'header_background_color',
+					'label'   => esc_html__( 'Header Background Color', 'primer' ),
+					'default' => '#f9f9f9',
+					'css'     => array(
+						'.site-header' => array(
+							'background-color' => '%1$s',
+						),
+					),
+				),
+				array(
+					'name'    => 'tagline_text_color',
+					'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
+					'default' => '#7c7c7c',
+					'css'     => array(
+						'.site-description' => array(
+							'color' => '%1$s',
+						),
+					),
 				),
 				array(
 					'name'    => 'menu_background_color',
@@ -57,16 +82,6 @@ class Primer_Customizer_Colors {
 						),
 						'.main-navigation li a, .main-navigation li a:hover' => array(
 							'color' => '#ffffff',
-						),
-					),
-				),
-				array(
-					'name'    => 'tagline_text_color',
-					'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
-					'default' => '#7c7c7c',
-					'css'     => array(
-						'.site-description' => array(
-							'color' => '%1$s',
 						),
 					),
 				),
@@ -148,37 +163,40 @@ class Primer_Customizer_Colors {
 				'dark' => array(
 					'label'  => esc_html__( 'Dark', 'primer' ),
 					'colors' => array(
-						'header_textcolor'      => '#1a1a1a',
-						'background_color'      => '#262626',
-						'menu_background_color' => '#589ef2',
-						'tagline_text_color'    => '#1a1a1a',
-						'link_color'            => '#589ef2',
-						'main_text_color'       => '#e5e5e5',
-						'secondary_text_color'  => '#c1c1c1',
+						'header_textcolor'        => '#ffffff',
+						'background_color'        => '#333333',
+						'header_background_color' => '#333333',
+						'tagline_text_color'      => '#999999',
+						'menu_background_color'   => '#444444',
+						'link_color'              => '#589ef2',
+						'main_text_color'         => '#e5e5e5',
+						'secondary_text_color'    => '#c1c1c1',
 					),
 				),
 				'muted' => array(
 					'label'  => esc_html__( 'Muted', 'primer' ),
 					'colors' => array(
-						'header_textcolor'      => '#5a6175',
-						'background_color'      => '#d5d6e0',
-						'menu_background_color' => '#5a6175',
-						'tagline_text_color'    => '#888c99',
-						'link_color'            => '#3e4c75',
-						'main_text_color'       => '#4f5875',
-						'secondary_text_color'  => '#888c99',
+						'header_textcolor'        => '#5a6175',
+						'background_color'        => '#d5d6e0',
+						'header_background_color' => '#d5d6e0',
+						'tagline_text_color'      => '#888c99',
+						'menu_background_color'   => '#5a6175',
+						'link_color'              => '#3e4c75',
+						'main_text_color'         => '#4f5875',
+						'secondary_text_color'    => '#888c99',
 					),
 				),
 				'red' => array(
 					'label'  => esc_html__( 'Red', 'primer' ),
 					'colors' => array(
-						'header_textcolor'      => '#222222',
-						'background_color'      => '#ffffff',
-						'menu_background_color' => '#640c1f',
-						'tagline_text_color'    => '#999999',
-						'link_color'            => '#640c1f',
-						'main_text_color'       => '#402b30',
-						'secondary_text_color'  => '#222222',
+						'header_textcolor'        => '#402b30',
+						'background_color'        => '#f9f9f9',
+						'header_background_color' => '#f9f9f9',
+						'tagline_text_color'      => '#999999',
+						'menu_background_color'   => '#640c1f',
+						'link_color'              => '#640c1f',
+						'main_text_color'         => '#402b30',
+						'secondary_text_color'    => '#222222',
 					),
 				),
 			)
@@ -566,8 +584,8 @@ class Primer_Customizer_Colors {
 			array(
 				'default-image'      => '',
 				'default-text-color' => $this->get_default_color( 'header_textcolor', 'default' ),
-				'width'              => 1000,
-				'height'             => 250,
+				'width'              => 1600,
+				'height'             => 400,
 				'flex-height'        => true,
 				'wp-head-callback'   => array( $this, 'header_css' ),
 			)
@@ -634,6 +652,7 @@ class Primer_Customizer_Colors {
 		add_theme_support( 'custom-background', $args );
 
 	}
+
 }
 
 new Primer_Customizer_Colors;
