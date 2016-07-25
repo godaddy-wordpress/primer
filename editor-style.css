@@ -7,8 +7,8 @@ meta.foundation-mq-medium {
   width: 40.063em; }
 
 meta.foundation-mq-large {
-  font-family: "/only screen and (min-width:64.063em)/";
-  width: 64.063em; }
+  font-family: "/only screen and (min-width:61.063em)/";
+  width: 61.063em; }
 
 meta.foundation-mq-xlarge {
   font-family: "/only screen and (min-width:90.063em)/";
@@ -24,8 +24,6 @@ meta.foundation-data-attribute-namespace {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html,
@@ -40,7 +38,7 @@ body {
   font-family: Georgia, serif;
   font-weight: normal;
   font-style: normal;
-  line-height: 150%;
+  line-height: 180%;
   cursor: default;
   -webkit-font-smoothing: antialiased; }
 
@@ -125,7 +123,7 @@ select {
   .small-text-justify {
     text-align: justify !important; } }
 
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+@media only screen and (min-width: 40.063em) and (max-width: 61em) {
   .medium-only-text-left {
     text-align: left !important; }
   .medium-only-text-right {
@@ -145,7 +143,7 @@ select {
   .medium-text-justify {
     text-align: justify !important; } }
 
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+@media only screen and (min-width: 61.063em) and (max-width: 90em) {
   .large-only-text-left {
     text-align: left !important; }
   .large-only-text-right {
@@ -155,7 +153,7 @@ select {
   .large-only-text-justify {
     text-align: justify !important; } }
 
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 61.063em) {
   .large-text-left {
     text-align: left !important; }
   .large-text-right {
@@ -243,12 +241,12 @@ p {
   font-family: inherit;
   font-weight: normal;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.8;
   margin-bottom: 1rem;
   text-rendering: optimizeLegibility; }
   p.lead {
     font-size: 1.21875rem;
-    line-height: 1.6; }
+    line-height: 1.8; }
   p aside {
     font-size: 0.875rem;
     line-height: 1.35;
@@ -298,7 +296,7 @@ hr {
   border: solid #ddd;
   border-width: 1px 0 0;
   clear: both;
-  margin: rem-calc(20) auto 0 rem-calc(20) auto-0.0625rem;
+  margin: 1.25rem auto 0 1.25rem auto-0.0625rem;
   height: 0; }
 
 /* Helpful Typography Defaults */
@@ -326,9 +324,9 @@ pre {
   background-color: #eee;
   border-width: 1px;
   border-style: solid;
-  border-color: contrast-color(#0a0a0a, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+  border-color: rgba(0, 0, 0, 0.1);
   border-radius: 2px;
-  padding: rem-calc(2 5 1);
+  padding: 0.125rem 0.3125rem 0.0625rem;
   margin-bottom: 1rem; }
 
 code {
@@ -339,9 +337,13 @@ code {
   background-color: #eee;
   border-width: 1px;
   border-style: solid;
-  border-color: contrast-color(#0a0a0a, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1));
+  border-color: rgba(0, 0, 0, 0.1);
   border-radius: 2px;
-  padding: rem-calc(2 5 1); }
+  padding: 0.125rem 0.3125rem 0.0625rem; }
+
+pre code {
+  border: none;
+  padding: 0; }
 
 address {
   margin-bottom: 1em; }
@@ -360,7 +362,7 @@ ul,
 ol,
 dl {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.8;
   margin-bottom: 1rem;
   list-style-position: outside;
   font-family: inherit; }
@@ -430,7 +432,7 @@ abbr {
 /* Blockquotes */
 blockquote {
   margin: 0 0 1rem;
-  padding: rem-calc(9 20 0 19);
+  padding: 0.5625rem 1.25rem 0 1.1875rem;
   border-left: 1px solid #cacaca;
   overflow: hidden;
   font-family: "Open Sans", sans-serif;
@@ -451,7 +453,7 @@ blockquote {
 
 blockquote,
 blockquote p {
-  line-height: 1.6;
+  line-height: 1.8;
   color: #6f6f6f;
   font-size: 1.4em;
   font-size: 1.4rem;
@@ -531,6 +533,224 @@ blockquote p {
   .show-for-print {
     display: inherit !important; } }
 
+button,
+a.button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* Corrects font size not being inherited in all browsers */
+  margin: 0;
+  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+  vertical-align: baseline;
+  /* Improves appearance and consistency in all browsers */
+  font-family: "Open Sans", sans-serif; }
+
+button,
+a.button,
+a.button:visited,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background: #2199e8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  /* Improves usability and consistency of cursor style between image-type 'input' and others */
+  -webkit-appearance: none;
+  /* Corrects inability to style clickable 'input' types in iOS */
+  -webkit-font-smoothing: auto;
+  font-size: 1rem;
+  line-height: 1;
+  border-radius: 3px;
+  padding: .75em 1em;
+  padding: .75rem 1rem;
+  display: inline-block; }
+  button:hover,
+  a.button:hover,
+  a.button:visited:hover,
+  input[type="button"]:hover,
+  input[type="reset"]:hover,
+  input[type="submit"]:hover {
+    color: #fff;
+    background: #2f9fe9; }
+  button:focus button:active,
+  a.button:focus button:active,
+  a.button:visited:focus button:active,
+  input[type="button"]:focus button:active,
+  input[type="reset"]:focus button:active,
+  input[type="submit"]:focus button:active, button:focus
+  a.button:active,
+  a.button:focus
+  a.button:active,
+  a.button:visited:focus
+  a.button:active,
+  input[type="button"]:focus
+  a.button:active,
+  input[type="reset"]:focus
+  a.button:active,
+  input[type="submit"]:focus
+  a.button:active, button:focus
+  a.button:visited:active,
+  a.button:focus
+  a.button:visited:active,
+  a.button:visited:focus
+  a.button:visited:active,
+  input[type="button"]:focus
+  a.button:visited:active,
+  input[type="reset"]:focus
+  a.button:visited:active,
+  input[type="submit"]:focus
+  a.button:visited:active, button:focus
+  input[type="button"]:active,
+  a.button:focus
+  input[type="button"]:active,
+  a.button:visited:focus
+  input[type="button"]:active,
+  input[type="button"]:focus
+  input[type="button"]:active,
+  input[type="reset"]:focus
+  input[type="button"]:active,
+  input[type="submit"]:focus
+  input[type="button"]:active, button:focus
+  input[type="reset"]:active,
+  a.button:focus
+  input[type="reset"]:active,
+  a.button:visited:focus
+  input[type="reset"]:active,
+  input[type="button"]:focus
+  input[type="reset"]:active,
+  input[type="reset"]:focus
+  input[type="reset"]:active,
+  input[type="submit"]:focus
+  input[type="reset"]:active, button:focus
+  input[type="submit"]:active,
+  a.button:focus
+  input[type="submit"]:active,
+  a.button:visited:focus
+  input[type="submit"]:active,
+  input[type="button"]:focus
+  input[type="submit"]:active,
+  input[type="reset"]:focus
+  input[type="submit"]:active,
+  input[type="submit"]:focus
+  input[type="submit"]:active {
+    background: #2f9fe9; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+  /* Addresses excess padding in IE8/9 */
+  margin: 0 3px;
+  width: 1rem;
+  height: 1rem; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* Addresses appearance set to searchfield in S5, Chrome */
+  /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-decoration {
+  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner,
+a.button::-moz-focus-inner,
+input::-moz-focus-inner {
+  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+  border: 0;
+  padding: 0; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #0a0a0a;
+  background-color: #fefefe;
+  border: 1px solid rgba(117, 117, 117, 0.28);
+  -webkit-transform: 200ms background linear;
+          transform: 200ms background linear;
+  border-radius: 3px;
+  resize: none; }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  input[type="search"]:focus,
+  input[type="number"]:focus,
+  input[type="tel"]:focus,
+  input[type="range"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="week"]:focus,
+  input[type="time"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="color"]:focus,
+  textarea:focus {
+    outline: none;
+    background-color: #f1f1f1; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  padding: .75em;
+  padding: .75rem; }
+
+input[type="file"] {
+  font-size: 1rem;
+  line-height: 1; }
+
+label {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold; }
+
+textarea {
+  overflow: auto;
+  /* Removes default vertical scrollbar in IE6/7/8/9 */
+  vertical-align: top;
+  /* Improves readability and alignment in all browsers */
+  width: 100%; }
+
+fieldset {
+  border: 1px solid rgba(117, 117, 117, 0.28);
+  padding: 25px;
+  margin-bottom: 1.25rem; }
+
+legend {
+  color: #0a0a0a;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 15px; }
+
 .alignleft {
   display: inline;
   float: left;
@@ -544,6 +764,23 @@ blockquote p {
 .aligncenter {
   display: block;
   margin: 0 auto; }
+
+.sticky .entry-title a:before {
+  font-family: 'Genericons';
+  content: '\f308';
+  color: #008CBA;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  position: relative;
+  top: 2px;
+  right: 12px; }
+  @media only screen and (min-width: 40.063em) {
+    .sticky .entry-title a:before {
+      font-size: 1.875rem;
+      top: 5px; } }
+  @media only screen and (min-width: 61.063em) {
+    .sticky .entry-title a:before {
+      font-size: 2.1875rem; } }
 
 .no-results,
 .not-found {
@@ -729,6 +966,10 @@ article.format-link {
 .comment-content a {
   word-wrap: break-word; }
 
+.bypostauthor {
+  border: 3px solid rgba(0, 140, 186, 0.2);
+  border-radius: 5px; }
+
 .comments-area {
   padding: 1.5em;
   padding: 1.5rem;
@@ -828,3 +1069,6 @@ article.format-link {
     font-size: .8em;
     color: #888;
     margin-bottom: 2em; }
+
+body {
+  margin: 20px; }

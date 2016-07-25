@@ -3,30 +3,42 @@
  *
  * Handles toggling the navigation menu for small screens.
  */
-( function() {
-	var container, button, menu;
+window.onload = function() {
 
-	container = document.getElementById( 'site-navigation' );
-	if ( ! container )
+	var nav_menu    = document.getElementById( 'site-navigation' ),
+	    menu_toggle = document.getElementById( 'menu-toggle' );
+
+	if ( ! nav_menu || ! menu_toggle ) {
+
 		return;
 
-	button = container.getElementsByClassName( 'menu-toggle' )[0];
-
-	menu = container.getElementsByTagName( 'ul' )[0];
-
-	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
-		return;
 	}
 
-	if ( -1 === menu.className.indexOf( 'nav-menu' ) )
-		menu.className += ' nav-menu';
+	menu_toggle.onclick = function() {
 
-	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) )
-			container.className = container.className.replace( ' toggled', '' );
-		else
-			container.className += ' toggled';
-	};
-} )();
+		nav_menu.style.display = ( 'none' === nav_menu.style.display || ! nav_menu.offsetHeight ) ? 'block' : 'none';
+
+	}
+
+}
+
+window.onresize = function() {
+
+	var nav_menu    = document.getElementById( 'site-navigation' ),
+	    menu_toggle = document.getElementById( 'menu-toggle' );
+
+	if ( menu_toggle.offsetHeight ) {
+
+		nav_menu.style.display = 'none';
+
+		return;
+
+	}
+
+	if ( 'none' === nav_menu.style.display ) {
+
+		nav_menu.style.display = 'block';
+
+	}
+
+}

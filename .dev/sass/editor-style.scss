@@ -1,6 +1,12 @@
-@import "variables/variables";
 @import "mixins/functions";
+@import "variables/variables";
 @import "mixins/global";
+@import "mixins/color-contrast";
 @import "partials/typography";
+@import "partials/forms";
 @import "partials/alignments";
 @import "partials/content";
+
+body {
+	margin: 20px;
+}

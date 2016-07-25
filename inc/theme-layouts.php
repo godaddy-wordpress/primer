@@ -19,12 +19,12 @@
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
  * @package    Primer
- * @subpackage Inc
+ * @subpackage HybridCore
  * @version    0.7.0
  * @author     Justin Tadlock <justin@justintadlock.com>
  * @copyright  Copyright (c) 2010 - 2014, Justin Tadlock
- * @link       http://justintadlock.com
- * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @link       https://github.com/justintadlock/hybrid-core/releases/tag/2.0.4
+ * @license    https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 /* Register metadata with WordPress. */
@@ -734,28 +734,58 @@ function post_layouts_get_layout() {
 	return theme_layouts_get_layout();
 }
 
-function primer_full_width_customizer( $wp_customize ) {
-	$wp_customize->add_setting( 'full_width', array(
-		'default'           => 0,
-		'sanitize_callback' => 'sanitize_text_field',
-	));
+/**
+ * Add Customizer controls for full width mode.
+ *
+ * @action customize_register
+ * @since  1.0.0
+ *
+ * @param WP_Customize $wp_customize
+ */
+function primer_full_width_customizer( WP_Customize_Manager $wp_customize ) {
 
-	$wp_customize->add_control( 'full_width', array(
-		'label'   => 'Full Width Header / Footer',
-		'section' => 'layout',
-		'type'    => 'radio',
-		'choices' => array(
-			0 => 'Disabled',
-			1 => 'Enabled',
-		),
-	));
+	$wp_customize->add_setting(
+		'full_width',
+		array(
+			'default'           => 0,
+			'sanitize_callback' => 'absint',
+		)
+	);
+
+	$wp_customize->add_control(
+		'full_width',
+		array(
+			'label'   => 'Full Width Header / Footer',
+			'section' => 'layout',
+			'type'    => 'radio',
+			'choices' => array(
+				0 => 'Disabled',
+				1 => 'Enabled',
+			),
+		)
+	);
+
 }
 add_action( 'customize_register', 'primer_full_width_customizer' );
 
-function primer_full_width_classes( $classes ) {
-	if ( 1 == get_theme_mod( 'full_width' ) ) {
+/**
+ * Add body class for full width mode.
+ *
+ * @filter body_class
+ * @since  1.0.0
+ *
+ * @param  array $classes
+ * @return array
+ */
+function primer_full_width_body_class( $classes ) {
+
+	if ( (bool) get_theme_mod( 'full_width' ) ) {
+
 		$classes[] = 'no-max-width';
+
 	}
+
 	return $classes;
+
 }
-add_filter( 'body_class', 'primer_full_width_classes' );
+add_filter( 'body_class', 'primer_full_width_body_class' );

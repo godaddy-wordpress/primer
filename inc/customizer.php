@@ -1,85 +1,90 @@
 <?php
-/**
- * Customizer support.
- *
- * @package Primer
- */
 
-/**
- * Add custom logo support.
- */
-function primer_custom_logo_setup() {
+class Primer_Customizer {
 
 	/**
-	 * Filter the custom logo args.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @var array
+	 * Class constructor.
 	 */
-	$args = (array) apply_filters( 'primer_custom_logo_args',
-		array(
-			'height'      => 100,
-			'width'       => 400,
-			'flex-height' => true,
-			'flex-width'  => true,
-			'header-text' => array( 'site-title', 'site-description' ),
-		)
-	);
+	public function __construct() {
 
-	add_theme_support( 'custom-logo', $args );
+		/**
+		 * Autoload all customizer components.
+		 *
+		 * @since 1.0.0
+		 */
+		foreach( glob( dirname( __FILE__ ) . '/customizer/*.php' ) as $filename ) {
 
-}
-add_action( 'after_setup_theme', 'primer_custom_logo_setup' );
+			if ( is_readable( $filename ) ) {
 
-/**
- * Add custom background support.
- *
- * @see primer_header_style()
- */
-function primer_custom_background_setup() {
+				require_once $filename;
 
-	$color_scheme = primer_get_color_scheme();
+			}
+
+		}
+
+		add_action( 'after_setup_theme',       array( $this, 'logo' ) );
+		add_action( 'customize_register',      array( $this, 'selective_refresh' ), 11 );
+		add_action( 'customize_preview_init',  array( $this, 'customize_preview_js' ) );
+
+	}
 
 	/**
-	 * Filter the custom background args.
+	 * Add custom logo support.
 	 *
-	 * @since 1.0.0
-	 *
-	 * @var array
+	 * @action after_setup_theme
+	 * @since  1.0.0
 	 */
-	$args = (array) apply_filters( 'primer_custom_background_args',
-		array(
-			'default-color' => trim( $color_scheme[1], '#' ),
-		)
-	);
+	public function logo() {
 
-	add_theme_support( 'custom-background', $args );
+		/**
+		 * Filter the custom logo args.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var array
+		 */
+		$args = (array) apply_filters( 'primer_custom_logo_args',
+			array(
+				'height'      => 100,
+				'width'       => 400,
+				'flex-height' => true,
+				'flex-width'  => true,
+				'header-text' => array( 'site-title', 'site-description' ),
+			)
+		);
 
-}
-add_action( 'after_setup_theme', 'primer_custom_background_setup' );
+		add_theme_support( 'custom-logo', $args );
 
-/**
- * Adds postMessage support for site title and description for the Customizer.
- *
- * @param WP_Customize_Manager $wp_customize
- */
-function primer_customize_register( $wp_customize ) {
+	}
 
-	$color_scheme = primer_get_color_scheme();
+	/**
+	 * Adds postMessage support for site title and description for the Customizer.
+	 *
+	 * @action customize_save
+	 * @since  1.0.0
+	 * @uses   $this->blogname()
+	 * @uses   $this->blogdescription()
+	 *
+	 * @param WP_Customize_Manager $wp_customize
+	 */
+	public function selective_refresh( WP_Customize_Manager $wp_customize ) {
 
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+		$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
+		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-	if ( isset( $wp_customize->selective_refresh ) ) {
+		if ( ! isset( $wp_customize->selective_refresh ) ) {
+
+			return;
+
+		}
 
 		$wp_customize->selective_refresh->add_partial(
 			'blogname',
 			array(
 				'selector'            => '.site-title a',
 				'container_inclusive' => false,
-				'render_callback'     => 'primer_customize_partial_blogname',
+				'render_callback'     => array( $this, 'blogname' ),
 			)
 		);
 
@@ -88,762 +93,84 @@ function primer_customize_register( $wp_customize ) {
 			array(
 				'selector'            => '.site-description',
 				'container_inclusive' => false,
-				'render_callback'     => 'primer_customize_partial_blogdescription',
+				'render_callback'     => array( $this, 'blogdescription' ),
 			)
 		);
 
 	}
 
-	// Add color scheme setting and control.
-	$wp_customize->add_setting(
-		'color_scheme',
-		array(
-			'default'           => 'default',
-			'sanitize_callback' => 'primer_sanitize_color_scheme',
-			'transport'         => 'postMessage',
-		)
-	);
-
-	$wp_customize->add_control(
-		'color_scheme',
-		array(
-			'label'    => __( 'Base Color Scheme', 'primer' ),
-			'section'  => 'colors',
-			'type'     => 'select',
-			'choices'  => primer_get_color_scheme_choices(),
-			'priority' => 1,
-		)
-	);
-
-	// Add menu background color setting and control.
-	$wp_customize->add_setting(
-		'menu_background_color',
-		array(
-			'default'           => $color_scheme[2],
-			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'menu_background_color',
-			array(
-				'label'   => __( 'Menu Background Color', 'primer' ),
-				'section' => 'colors',
-			)
-		)
-	);
-
-	// Add tagline text color setting and control.
-	$wp_customize->add_setting(
-		'tagline_text_color',
-		array(
-			'default'           => $color_scheme[3],
-			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'tagline_text_color',
-			array(
-				'label'   => __( 'Tagline Text Color', 'primer' ),
-				'section' => 'colors',
-			)
-		)
-	);
-
-	// Add link color setting and control.
-	$wp_customize->add_setting(
-		'link_color',
-		array(
-			'default'           => $color_scheme[4],
-			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'link_color',
-			array(
-				'label'   => __( 'Link Color', 'primer' ),
-				'section' => 'colors',
-			)
-		)
-	);
-
-	// Add main text color setting and control.
-	$wp_customize->add_setting(
-		'main_text_color',
-		array(
-			'default'           => $color_scheme[5],
-			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'main_text_color',
-			array(
-				'label'   => __( 'Main Text Color', 'primer' ),
-				'section' => 'colors',
-			)
-		)
-	);
-
-	// Add secondary text color setting and control.
-	$wp_customize->add_setting(
-		'secondary_text_color',
-		array(
-			'default'           => $color_scheme[6],
-			'sanitize_callback' => 'sanitize_hex_color',
-			'transport'         => 'postMessage',
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'secondary_text_color',
-			array(
-				'label'   => __( 'Secondary Text Color', 'primer' ),
-				'section' => 'colors',
-			)
-		)
-	);
-
-}
-add_action( 'customize_register', 'primer_customize_register', 11 );
-
-/**
- * Render the site title for the selective refresh partial.
- *
- * @see primer_customize_register()
- */
-function primer_customize_partial_blogname() {
-
-	bloginfo( 'name' );
-
-}
-
-/**
- * Render the site tagline for the selective refresh partial.
- *
- * @see primer_customize_register()
- */
-function primer_customize_partial_blogdescription() {
-
-	bloginfo( 'description' );
-
-}
-
-/**
- * Registers color schemes for primer.
- *
- * Can be filtered with {@see 'primer_color_schemes'}.
- *
- * The order of colors in a colors array:
- * 1. Main Background Color.
- * 2. Page Background Color.
- * 3. Link Color.
- * 4. Main Text Color.
- * 5. Secondary Text Color.
- *
- * @return array An associative array of color scheme options.
- */
-function primer_get_color_schemes() {
-
 	/**
-	 * Filter the color schemes registered for use with primer.
-	 *
-	 * The default schemes include 'default', 'dark', 'gray', 'red', and 'yellow'.
+	 * Display the blog name.
 	 *
 	 * @since 1.0.0
-	 *
-	 * @var array $schemes {
-	 *     Associative array of color schemes data.
-	 *
-	 *     @type array $slug {
-	 *         Associative array of information for setting up the color scheme.
-	 *
-	 *         @type string $label  Color scheme label.
-	 *         @type array  $colors HEX codes for default colors prepended with a hash symbol ('#').
-	 *                              Colors are defined in the following order: Main background, page
-	 *                              background, link, main text, secondary text.
-	 *     }
-	 * }
+	 * @see   $this->selective_refresh()
 	 */
-	return apply_filters( 'primer_color_schemes',
-		array(
-			'default' => array(
-				'label'  => __( 'Default', 'primer' ),
-				'colors' => array(
-					'#222222',
-					'#f9f9f9',
-					'#4db790',
-					'#7c7c7c',
-					'#4db790',
-					'#1a1a1a',
-					'#686868',
-				),
-			),
-			'dark' => array(
-				'label'  => __( 'Dark', 'primer' ),
-				'colors' => array(
-					'#1a1a1a',
-					'#262626',
-					'#589ef2',
-					'#1a1a1a',
-					'#589ef2',
-					'#e5e5e5',
-					'#c1c1c1',
-				),
-			),
-			'muted' => array(
-				'label'  => __( 'Muted', 'primer' ),
-				'colors' => array(
-					'#5a6175',
-					'#d5d6e0',
-					'#5a6175',
-					'#888c99',
-					'#3e4c75',
-					'#4f5875',
-					'#888c99',
-				),
-			),
-			'red' => array(
-				'label'  => __( 'Red', 'primer' ),
-				'colors' => array(
-					'#222222',
-					'#ffffff',
-					'#640c1f',
-					'#999999',
-					'#640c1f',
-					'#402b30',
-					'#222222',
-				),
-			),
-		)
-	);
+	public function blogname() {
 
-}
-
-if ( ! function_exists( 'primer_get_color_scheme' ) ) {
-
-	/**
-	 * Return an array of the current or default color scheme HEX values.
-	 *
-	 * Create your own primer_get_color_scheme() function to override in a child theme.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return array
-	 */
-	function primer_get_color_scheme() {
-
-		$color_scheme_option = get_theme_mod( 'color_scheme', 'default' );
-		$color_schemes       = primer_get_color_schemes();
-
-		if ( array_key_exists( $color_scheme_option, $color_schemes ) ) {
-
-			return $color_schemes[ $color_scheme_option ]['colors'];
-
-		}
-
-		return $color_schemes['default']['colors'];
+		bloginfo( 'name' );
 
 	}
 
-} // primer_get_color_scheme
-
-if ( ! function_exists( 'primer_get_color_scheme_choices' ) ) {
-
 	/**
-	 * Retrieves an array of color scheme choices registered for primer.
-	 *
-	 * Create your own primer_get_color_scheme_choices() function to override
-	 * in a child theme.
+	 * Display the blog description.
 	 *
 	 * @since 1.0.0
-	 *
-	 * @return array
+	 * @see   $this->selective_refresh()
 	 */
-	function primer_get_color_scheme_choices() {
+	public function blogdescription() {
 
-		$color_schemes                = primer_get_color_schemes();
-		$color_scheme_control_options = array();
-
-		foreach ( $color_schemes as $color_scheme => $value ) {
-
-			$color_scheme_control_options[ $color_scheme ] = $value['label'];
-
-		}
-
-		return $color_scheme_control_options;
+		bloginfo( 'description' );
 
 	}
 
-} // primer_get_color_scheme_choices
+	/**
+	 * Enqueue preview JS.
+	 *
+	 * @action customize_preview_init
+	 * @since 1.0.0
+	 */
+	public function customize_preview_js() {
 
+		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-if ( ! function_exists( 'primer_sanitize_color_scheme' ) ) {
+		wp_enqueue_script( 'primer-customize-preview', get_template_directory_uri() . "/assets/js/customizer{$suffix}.js", array( 'customize-preview' ), PRIMER_VERSION, true );
+
+	}
 
 	/**
-	 * Handles sanitization for Primer color schemes.
-	 *
-	 * Create your own primer_sanitize_color_scheme() function to override
-	 * in a child theme.
+	 * Return an array of CSS rules as plain CSS.
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $value
+	 * @param  array $rules
 	 *
 	 * @return string
 	 */
-	function primer_sanitize_color_scheme( $value ) {
+	public static function parse_css_rules( array $rules ) {
 
-		return array_key_exists( $value, primer_get_color_scheme_choices() ) ? $value : 'default';
+		ob_start();
 
-	}
+		foreach ( $rules as $rule => $properties ) {
 
-} // primer_sanitize_color_scheme
+			printf(
+				"%s {\n",
+				implode( ",\n", array_map( 'trim', explode( ',', $rule ) ) )
+			);
 
-/**
- * Enqueues front-end CSS for color scheme.
- *
- * @see wp_add_inline_style()
- */
-function primer_color_scheme_css() {
+			foreach ( $properties as $property => $value ) {
 
-	$color_scheme_option = get_theme_mod( 'color_scheme', 'default' );
+				printf( "\t%s: %s;\n", $property, $value );
 
-	if ( 'default' === $color_scheme_option ) {
+			}
 
-		return;
+			echo "}\n";
 
-	}
-
-	$color_scheme    = primer_get_color_scheme();
-	$hover_color_rgb = primer_hex2rgb( $color_scheme[4] );
-
-	if ( empty( $hover_color_rgb ) ) {
-
-		return;
-
-	}
-
-	$colors = array(
-		'header_textcolor'      => $color_scheme[0],
-		'background_color'      => $color_scheme[1],
-		'menu_background_color' => $color_scheme[2],
-		'tagline_text_color'    => $color_scheme[3],
-		'link_color'            => $color_scheme[4],
-		'main_text_color'       => $color_scheme[5],
-		'secondary_text_color'  => $color_scheme[6],
-		'hover_color'           => vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.8)', $hover_color_rgb ),
-	);
-
-	$color_scheme_css = primer_get_color_scheme_css( $colors );
-
-	wp_add_inline_style( 'primer', $color_scheme_css );
-
-}
-add_action( 'wp_enqueue_scripts', 'primer_color_scheme_css', 11 );
-
-/**
- * Binds the JS listener to make Customizer color_scheme control.
- *
- * Passes color scheme data as colorScheme global.
- */
-function primer_customize_control_js() {
-
-	$suffix = SCRIPT_DEBUG ? '' : '.min';
-
-	wp_enqueue_script( 'primer-color-scheme-control', get_template_directory_uri() . "/assets/js/color-scheme-control{$suffix}.js", array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), PRIMER_VERSION, true );
-
-	wp_localize_script( 'primer-color-scheme-control', 'colorScheme', primer_get_color_schemes() );
-
-}
-add_action( 'customize_controls_enqueue_scripts', 'primer_customize_control_js' );
-
-/**
- * Binds JS handlers to make the Customizer preview reload changes asynchronously.
- */
-function primer_customize_preview_js() {
-
-	$suffix = SCRIPT_DEBUG ? '' : '.min';
-
-	wp_enqueue_script( 'primer-customize-preview', get_template_directory_uri() . "/assets/js/customizer{$suffix}.js", array( 'customize-preview' ), PRIMER_VERSION, true );
-
-}
-add_action( 'customize_preview_init', 'primer_customize_preview_js' );
-
-/**
- * Returns CSS for the color schemes.
- *
- * @param  array $colors
- *
- * @return string
- */
-function primer_get_color_scheme_css( $colors ) {
-
-	$colors = wp_parse_args(
-		$colors,
-		array(
-			'header_textcolor'      => '',
-			'background_color'      => '',
-			'menu_background_color' => '',
-			'tagline_text_color'    => '',
-			'link_color'            => '',
-			'main_text_color'       => '',
-			'secondary_text_color'  => '',
-			'hover_color'          	=> '',
-		)
-	);
-
-	$css = <<<CSS
-	/* Color Scheme */
-
-	/* Header Text Color */
-	.site-title a {
-		color: {$colors['header_textcolor']};
-	}
-
-	/* Background Color */
-	body {
-		background-color: {$colors['background_color']};
-	}
-
-	/* Page Background Color */
-	.site-description {
-		color: {$colors['tagline_text_color']};
-	}
-
-	/* Link Color */
-	a {
-		color: {$colors['link_color']};
-	}
-	a:hover {
-		color: {$colors['hover_color']};
-	}
-
-	button,
-	a.button,
-	a.button:visited,
-	input[type="button"],
-	input[type="reset"],
-	input[type="submit"],
-	.site-info-wrapper .site-info .social-menu a{
-		background-color: {$colors['link_color']};
-	}
-
-	button:hover,
-	a.button:hover,
-	input[type="button"]:hover,
-	input[type="reset"]:hover,
-	input[type="submit"]:hover,
-	.site-info-wrapper .site-info .social-menu a:hover{
-		background-color: {$colors['hover_color']};
-	}
-
-	/* Menu Background Color */
-	.main-navigation-container,
-	.main-navigation li a,
-	.main-navigation li.menu-item-has-children ul{
-		background-color: {$colors['menu_background_color']};
-	}
-
-	.main-navigation li a:hover{
-		color: {$colors['hover_color']};
-	}
-
-	/* Main Text Color */
-	.site-content,
-	.site-content h1,
-	.site-content h2,
-	.site-content h3,
-	.site-content h4,
-	.site-content h5,
-	.site-content h6,
-	.site-content p,
-	.site-content blockquote {
-		color: {$colors['main_text_color']};
-	}
-
-	/* Secondary Text Color */
-	.secondary_text_color,
-	.site-info-text {
-		color: {$colors['secondary_text_color']};
-	}
-
-CSS;
-
-	return apply_filters( 'primer_color_scheme_css', $css );
-
-}
-
-
-/**
- * Outputs an Underscore template for generating CSS for the color scheme.
- *
- * The template generates the css dynamically for instant display in the
- * Customizer preview.
- */
-function primer_color_scheme_css_template() {
-
-	$colors = array(
-		'header_textcolor'      => '{{ data.header_textcolor }}',
-		'background_color'      => '{{ data.background_color }}',
-		'menu_background_color' => '{{ data.menu_background_color }}',
-		'tagline_text_color'    => '{{ data.tagline_text_color }}',
-		'link_color'            => '{{ data.link_color }}',
-		'main_text_color'       => '{{ data.main_text_color }}',
-		'secondary_text_color'  => '{{ data.secondary_text_color }}',
-		'hover_color'           => '{{ data.hover_color }}',
-	);
-
-	?>
-	<script type="text/html" id="tmpl-primer-color-scheme">
-		<?php echo primer_get_color_scheme_css( $colors ) ?>
-	</script>
-	<?php
-
-}
-add_action( 'customize_controls_print_footer_scripts', 'primer_color_scheme_css_template' );
-
-/**
- * Enqueues front-end CSS for the page background color.
- *
- * @see wp_add_inline_style()
- */
-function primer_header_textcolor_css() {
-
-	$color_scheme     = primer_get_color_scheme();
-	$default_color    = $color_scheme[0];
-	$header_textcolor = '#' . get_theme_mod( 'header_textcolor', $default_color );  // No hash before
-
-	if ( $header_textcolor === $default_color ) {
-
-		return;
-
-	}
-
-	$css = apply_filters(
-		'custom_header_textcolor_css',
-		'/* Custom Header Text Color */
-		.header_textcolor {
-			color: %1$s;
-		}'
-	);
-
-	wp_add_inline_style( 'primer', sprintf( $css, $header_textcolor ) );
-
-}
-add_action( 'wp_enqueue_scripts', 'primer_header_textcolor_css', 11 );
-
-/**
- * Enqueues front-end CSS for the page background color.
- *
- * @see wp_add_inline_style()
- */
-function primer_tagline_text_color_css() {
-
-	$color_scheme       = primer_get_color_scheme();
-	$default_color      = $color_scheme[2];
-	$tagline_text_color = get_theme_mod( 'tagline_text_color', $default_color );
-
-	if ( $tagline_text_color === $default_color ) {
-
-		return;
-
-	}
-
-	$css = apply_filters(
-		'custom_tagline_text_color_css',
-		'/* Custom Tagline Text Color */
-		.tagline_text_color {
-			color: %1$s;
-		}'
-	);
-
-	wp_add_inline_style( 'primer', sprintf( $css, $tagline_text_color ) );
-
-}
-add_action( 'wp_enqueue_scripts', 'primer_tagline_text_color_css', 11 );
-
-/**
- * Enqueues front-end CSS for the menu background color.
- *
- * @see wp_add_inline_style()
- */
-function primer_menu_background_color_css() {
-
-	$color_scheme          = primer_get_color_scheme();
-	$default_color         = $color_scheme[3];
-	$menu_background_color = get_theme_mod( 'menu_background_color', $default_color );
-
-	if ( $menu_background_color === $default_color ) {
-
-		return;
-
-	}
-
-	$menu_background_text_color = 'rgba(255,255,255,.9)';
-
-	$css = apply_filters(
-		'custom_menu_background_color_css',
-		'/* Menu Background Color */
-		.main-navigation-container,
-		.main-navigation li a,
-		.main-navigation li.menu-item-has-children ul{
-			background-color: %1$s;
 		}
 
-		.main-navigation li a{
-			color: %2$s;
-		}'
-	);
-
-	wp_add_inline_style( 'primer', sprintf( $css, $menu_background_color, $menu_background_text_color ) );
-
-}
-add_action( 'wp_enqueue_scripts', 'primer_menu_background_color_css', 11 );
-
-/**
- * Enqueues front-end CSS for the link color.
- *
- * @see wp_add_inline_style()
- */
-function primer_link_color_css() {
-
-	$color_scheme  = primer_get_color_scheme();
-	$default_color = $color_scheme[3];
-	$link_color    = get_theme_mod( 'link_color', $default_color );
-
-	if ( $link_color === $default_color ) {
-
-		return;
+		return ob_get_clean();
 
 	}
 
-	$link_color_rgb = primer_hex2rgb( $link_color );
-
-	if ( empty( $link_color_rgb ) ) {
-
-		return;
-
-	}
-
-	$hover_color = vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.8)', $link_color_rgb );
-
-	$css = apply_filters(
-		'custom_link_color_css',
-		'/* Custom Link Color */
-		a {
-			color: %1$s;
-		}
-		a:hover {
-			color: %2$s;
-		}
-
-		button,
-		a.button,
-		a.button:visited,
-		input[type="button"],
-		input[type="reset"],
-		input[type="submit"],
-		.site-info-wrapper .site-info .social-menu a{
-			background-color: %1$s;
-		}
-
-		button:hover,
-		a.button:hover,
-		input[type="button"]:hover,
-		input[type="reset"]:hover,
-		input[type="submit"]:hover,
-		.site-info-wrapper .site-info .social-menu a:hover{
-			background-color: %2$s;
-		}'
-	);
-
-	wp_add_inline_style( 'primer', sprintf( $css, $link_color, $hover_color ) );
-
 }
-add_action( 'wp_enqueue_scripts', 'primer_link_color_css', 11 );
 
-/**
- * Enqueues front-end CSS for the main text color.
- *
- * @see wp_add_inline_style()
- */
-function primer_main_text_color_css() {
-
-	$color_scheme    = primer_get_color_scheme();
-	$default_color   = $color_scheme[4];
-	$main_text_color = get_theme_mod( 'main_text_color', $default_color );
-
-	if ( $main_text_color === $default_color ) {
-
-		return;
-
-	}
-
-	$css = apply_filters(
-		'custom_main_text_color_css',
-		'/* Custom Main Text Color */
-		.site-content,
-		.site-content h1,
-		.site-content h2,
-		.site-content h3,
-		.site-content h4,
-		.site-content h5,
-		.site-content h6,
-		.site-content p,
-		.site-content blockquote {
-			color: %1$s;
-		}'
-	);
-
-	wp_add_inline_style( 'primer', sprintf( $css, $main_text_color ) );
-
-}
-add_action( 'wp_enqueue_scripts', 'primer_main_text_color_css', 11 );
-
-/**
- * Enqueues front-end CSS for the secondary text color.
- *
- * @see wp_add_inline_style()
- */
-function primer_secondary_text_color_css() {
-
-	$color_scheme         = primer_get_color_scheme();
-	$default_color        = $color_scheme[5];
-	$secondary_text_color = get_theme_mod( 'secondary_text_color', $default_color );
-
-	if ( $secondary_text_color === $default_color ) {
-
-		return;
-
-	}
-
-	$css = apply_filters(
-		'custom_secondary_text_color_css',
-		'/* Custom Secondary Text Color */
-		.secondary_text_color,
-		.site-info-text {
-			color: %1$s;
-		}'
-	);
-
-	wp_add_inline_style( 'primer', sprintf( $css, $secondary_text_color ) );
-
-}
-add_action( 'wp_enqueue_scripts', 'primer_secondary_text_color_css', 11 );
+new Primer_Customizer;

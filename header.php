@@ -1,12 +1,11 @@
 <?php
 /**
- * The header for our theme.
+ * The template for displaying the header.
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
+ * Displays all of the head element and everything up until the "site-content" div.
  *
  * @package Primer
+ * @since 1.0.0
  */
 ?><!DOCTYPE html>
 
@@ -25,48 +24,70 @@
 	<?php wp_head() ?>
 
 <!--[if lt IE 9]>
-
-	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/ie.css">
-
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/respond.min.js"></script>
-
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/nwmatcher.min.js"></script>
-
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.min.js"></script>
-
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/html5shiv.min.js"></script>
-
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/selectivizr.js"></script>
-
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/rem.min.js"></script>
-
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.backgroundSize.js"></script>
-
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/ie.css">
+	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/js/respond.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/js/nwmatcher.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/js/html5shiv.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/js/selectivizr.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/js/rem.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/js/jquery.backgroundSize.min.js"></script>
 	<script type="text/javascript">
-	$(document).ready(function($){
-		$('body .hero').css({backgroundSize: "cover"});
+	$( document ).ready( function( $ ) {
+		$( 'body .hero' ).css( { backgroundSize: "cover" } );
 	});
 	</script>
-
 <![endif] -->
 </head>
 
 <body <?php body_class() ?>>
 
-	<?php do_action( 'primer_body_inside' ) ?>
+	<?php
+	/**
+	 * Fires inside the `<body>` element.
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'primer_body' );
+	?>
 
 	<div id="page" class="hfeed site">
 
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'primer' ) ?></a>
 
-		<?php do_action( 'primer_before_header' ) ?>
+		<?php
+		/**
+		 * Fires before the `<header>` element.
+		 *
+		 * @since 1.0.0
+		 */
+		do_action( 'primer_before_header' );
+		?>
 
 		<header id="masthead" class="site-header" role="banner">
 
-			<?php do_action( 'primer_header' ) ?>
+			<div class="site-header-wrapper">
+
+				<?php
+				/**
+				 * Fires inside the `<header>` element.
+				 *
+				 * @since 1.0.0
+				 */
+				do_action( 'primer_header' );
+				?>
+
+			</div><!-- .site-header-wrapper -->
 
 		</header><!-- #masthead -->
 
-		<?php do_action( 'primer_after_header' ) ?>
+		<?php
+		/**
+		 * Fires after the `<header>` element.
+		 *
+		 * @since 1.0.0
+		 */
+		do_action( 'primer_after_header' );
+		?>
 
 		<div id="content" class="site-content">

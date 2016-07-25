@@ -1,14 +1,14 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Primer Theme for WordPress
+# Copyright (C) 2016
+# This file is distributed under the same license as the Primer package.
+# GoDaddy Operating Company, LLC.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-21 16:55-0500\n"
+"POT-Creation-Date: 2016-07-14 01:22-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,12 +22,13 @@ msgstr ""
 #. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#404-php
 #. *
 #. * @package Primer
+#. * @since 1.0.0
 #.
-#: 404.php:21
+#: 404.php:22
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Ops! Impossibile trovare la pagina."
 
-#: 404.php:27
+#: 404.php:28
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
@@ -35,16 +36,7 @@ msgstr ""
 "Non è stato trovato nulla in questa posizione. Prova uno dei link seguenti "
 "oppure effettua una ricerca."
 
-#: 404.php:37
-msgid "Most Used Categories"
-msgstr "Categorie più utilizzate"
-
-#: 404.php:61
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
-msgstr "Prova a cercare negli archivi mensili. %1$s"
-
-#: comments.php:34
+#: comments.php:35
 #, php-format
 msgctxt "1. number of comments, 2. post title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -52,46 +44,47 @@ msgid_plural "%1$d thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "Un commento su &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$d commenti su &ldquo;%2$s&rdquo;"
 
-#: comments.php:50 comments.php:75
+#: comments.php:51 comments.php:76
 msgid "Comment navigation"
 msgstr "Navigazione tra i commenti"
 
-#: comments.php:52 comments.php:77
+#: comments.php:53 comments.php:78
 msgid "&larr; Older Comments"
 msgstr "&larr; Commenti più vecchi"
 
-#: comments.php:54 comments.php:79
+#: comments.php:55 comments.php:80
 msgid "Newer Comments &rarr;"
 msgstr "Commenti più recenti &rarr;"
 
-#: comments.php:89
+#: comments.php:90
 msgid "Comments are closed."
 msgstr "I commenti sono chiusi."
 
-#: content-featured.php:30
+#: content-featured.php:31
 msgid "Featured"
 msgstr "In primo piano"
 
-#: content-featured.php:40
+#: content-featured.php:41
 msgid "Read More"
 msgstr "Ulteriori informazioni"
 
 #. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
 #. *
 #. * @package Primer
+#. * @since 1.0.0
 #.
-#: content-none.php:15
+#: content-none.php:16
 msgid "Nothing Found"
 msgstr "Nessun risultato"
 
-#: content-none.php:23
+#: content-none.php:24
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 "Pronto a pubblicare il tuo primo post? <a href=\"%1$s\">Comincia da qui</a>."
 
-#: content-none.php:27
+#: content-none.php:28
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -99,7 +92,7 @@ msgstr ""
 "I criteri di ricerca che hai inserito non hanno portato ad alcun risultato. "
 "Riprova con parole chiave differenti."
 
-#: content-none.php:32
+#: content-none.php:33
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -107,47 +100,47 @@ msgstr ""
 "Sembra che tu non riesca a trovare quello che cerchi. Forse una ricerca ti "
 "può aiutare."
 
-#: functions.php:129
+#: functions.php:175
 msgid "Primary Menu"
 msgstr "Menu principale"
 
-#: functions.php:130
+#: functions.php:176
 msgid "Social Menu"
 msgstr "Menu Social"
 
-#: functions.php:140
+#: functions.php:189
 msgid "1 Column Wide"
 msgstr "1 colonna larga"
 
-#: functions.php:141
+#: functions.php:190
 msgid "1 Column Narrow"
 msgstr "1 colonna stretta"
 
-#: functions.php:142 functions.php:143
+#: functions.php:191 functions.php:192
 msgid "2 Columns: Sidebar / Content"
 msgstr "2 colonne: Barra laterale/Contenuto"
 
-#: functions.php:142 functions.php:143
+#: functions.php:191 functions.php:192
 msgid "2 Columns: Content / Sidebar"
 msgstr "2 colonne: Contenuto/Barra laterale"
 
-#: functions.php:144 functions.php:146
+#: functions.php:193 functions.php:195
 msgid "3 Columns: Sidebar / Sidebar / Content"
 msgstr "3 colonne: Barra laterale/Barra laterale/Contenuto"
 
-#: functions.php:144 functions.php:146
+#: functions.php:193 functions.php:195
 msgid "3 Columns: Content / Sidebar / Sidebar"
 msgstr "3 colonne: Contenuto/Barra laterale/Barra laterale"
 
-#: functions.php:145
+#: functions.php:194
 msgid "3 Columns: Sidebar / Content / Sidebar"
 msgstr "3 colonne: Barra laterale/Contenuto/Barra laterale"
 
-#: functions.php:216
+#: functions.php:285
 msgid "Sidebar"
 msgstr "Barra laterale"
 
-#: functions.php:218
+#: functions.php:287
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
@@ -155,106 +148,157 @@ msgstr ""
 "La barra laterale principale appare insieme al contenuto di ogni pagina, ai "
 "post, all'archivio e al modello di ricerca."
 
-#: functions.php:228
+#: functions.php:294
 msgid "Secondary Sidebar"
 msgstr "Barra laterale secondaria"
 
-#: functions.php:230
+#: functions.php:296
 msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr ""
-"La barra laterale secondaria appare solo se selezioni un layout a tre colonne."
+"La barra laterale secondaria appare solo se selezioni un layout a tre "
+"colonne."
 
-#: functions.php:240
-msgid "Footer Left"
+#: functions.php:303
+#, fuzzy
+msgid "Footer 1"
 msgstr "Piè di pagina sinistro"
 
-#: functions.php:242
-msgid ""
-"The footer left sidebar appears in the first column of the footer widget "
-"area."
+#: functions.php:305
+#, fuzzy
+msgid "This sidebar is the first column of the footer widget area."
 msgstr ""
 "La barra laterale del piè di pagina sinistro appare nella prima colonna "
 "dell'area widget di piè di pagina."
 
-#: functions.php:252
-msgid "Footer Center"
-msgstr "Piè di pagina centrale"
+#: functions.php:312
+#, fuzzy
+msgid "Footer 2"
+msgstr "Piè di pagina sinistro"
 
-#: functions.php:254
-msgid ""
-"The footer center sidebar appears in the second column of the footer widget "
-"area."
+#: functions.php:314
+#, fuzzy
+msgid "This sidebar is the second column of the footer widget area."
 msgstr ""
 "La barra laterale del piè di pagina centrale appare nella seconda colonna "
 "dell'area widget di piè di pagina."
 
-#: functions.php:264
-msgid "Footer Right"
-msgstr "Piè di pagina destro"
+#: functions.php:321
+#, fuzzy
+msgid "Footer 3"
+msgstr "Piè di pagina sinistro"
 
-#: functions.php:266
-msgid ""
-"The footer right sidebar appears in the third column of the footer widget "
-"area."
+#: functions.php:323
+#, fuzzy
+msgid "This sidebar is the third column of the footer widget area."
 msgstr ""
 "La barra laterale del piè di pagina destro appare nella terza colonna "
 "dell'area widget di piè di pagina."
 
-#: functions.php:329
-msgctxt "Lato font: on or off"
-msgid "on"
-msgstr "sì"
-
-#: functions.php:335
-msgctxt "Merriweather font: on or off"
-msgid "on"
-msgstr "sì"
-
-#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
-#. *
-#. * @package Primer
-#.
-#: header.php:35
+#: header.php:56
 msgid "Skip to content"
 msgstr "Passa al contenuto"
 
 #. //developer.wordpress.org/themes/basics/template-hierarchy/#search-result
 #. *
 #. * @package Primer
+#. * @since 1.0.0
 #.
-#: search.php:20
+#: search.php:21
 #, php-format
 msgctxt "search term"
 msgid "Search Results for: %s"
 msgstr "Risultati di ricerca per: %s"
 
-#: inc/breadcrumbs.php:39
-msgid "Blog"
-msgstr "Blog"
+#: inc/back-compat.php:58
+#, php-format
+msgid ""
+"Primer requires at least WordPress version %s. You are running version %s. "
+"Please upgrade and try again."
+msgstr ""
 
-#: inc/extras.php:91
+#: inc/customizer.php:114
+msgid "Base Color Scheme"
+msgstr ""
+
+#: inc/customizer.php:137
+msgid "Menu Background Color"
+msgstr ""
+
+#: inc/customizer.php:158
+msgid "Tagline Text Color"
+msgstr ""
+
+#: inc/customizer.php:179
+msgid "Link Color"
+msgstr ""
+
+#: inc/customizer.php:200
+msgid "Main Text Color"
+msgstr ""
+
+#: inc/customizer.php:221
+#, fuzzy
+msgid "Secondary Text Color"
+msgstr "Barra laterale secondaria"
+
+#: inc/customizer.php:231
+msgid "Typography"
+msgstr ""
+
+#: inc/customizer.php:248
+#, fuzzy
+msgid "Primary Font"
+msgstr "Menu principale"
+
+#: inc/customizer.php:269
+#, fuzzy
+msgid "Secondary Font"
+msgstr "Barra laterale secondaria"
+
+#: inc/customizer.php:342
+#, fuzzy
+msgid "Default"
+msgstr "Default"
+
+#: inc/customizer.php:354
+msgid "Dark"
+msgstr ""
+
+#: inc/customizer.php:366
+msgid "Muted"
+msgstr ""
+
+#: inc/customizer.php:378
+msgid "Red"
+msgstr ""
+
+#: inc/hooks.php:218
 #, php-format
 msgctxt "page number"
 msgid "Page %d"
 msgstr "Pagina %d"
 
-#: inc/template-tags.php:56
+#: inc/template-tags.php:29
 msgid "Posts navigation"
 msgstr "Navigazione tra i post"
 
-#: inc/template-tags.php:62
+#: inc/template-tags.php:35
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Post più vecchi"
 
-#: inc/template-tags.php:68
+#: inc/template-tags.php:41
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Post più recenti <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:102
+#: inc/template-tags.php:78
 msgid "Post navigation"
 msgstr "Navigazione tra i post"
+
+#: inc/template-tags.php:193
+msgid "Blog"
+msgstr "Blog"
 
 #: inc/theme-layouts.php:364
 msgctxt "theme layout"
@@ -334,3 +378,23 @@ msgstr "% commenti"
 msgctxt "1. theme name link, 2. theme author link"
 msgid "Built with %1$s by %2$s."
 msgstr "Realizzato con %1$s da %2$s."
+
+#~ msgid "Most Used Categories"
+#~ msgstr "Categorie più utilizzate"
+
+#~ msgid "Try looking in the monthly archives. %1$s"
+#~ msgstr "Prova a cercare negli archivi mensili. %1$s"
+
+#~ msgid "Footer Center"
+#~ msgstr "Piè di pagina centrale"
+
+#~ msgid "Footer Right"
+#~ msgstr "Piè di pagina destro"
+
+#~ msgctxt "Lato font: on or off"
+#~ msgid "on"
+#~ msgstr "sì"
+
+#~ msgctxt "Merriweather font: on or off"
+#~ msgid "on"
+#~ msgstr "sì"

@@ -5,48 +5,13 @@
  * @package Primer
  */
 
-if ( ! function_exists( 'primer_active_footer_areas_count' ) ) {
-
-	/**
-	 * Return the number of active footer widget areas.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @global array $wp_registered_sidebars
-	 *
-	 * @return int
-	 */
-	function primer_active_footer_areas_count() {
-
-		global $wp_registered_sidebars;
-
-		$count    = 0;
-		$sidebars = preg_grep( '/^footer-(.*)/', array_keys( $wp_registered_sidebars ) );
-
-		foreach ( $sidebars as $sidebar ) {
-
-			if ( is_active_sidebar( $sidebar ) ) {
-
-				$count++;
-
-			}
-
-		}
-
-		return $count;
-
-	}
-
-}
-
 if ( ! function_exists( 'primer_paging_nav' ) ) {
 
 	/**
 	 * Display navigation to next/previous set of posts when applicable.
 	 *
-	 * @since 1.0.0
-	 *
 	 * @global WP_Query $wp_query
+	 * @since  1.0.0
 	 */
 	function primer_paging_nav() {
 
@@ -84,16 +49,15 @@ if ( ! function_exists( 'primer_paging_nav' ) ) {
 
 	}
 
-}
+} // primer_paging_nav
 
 if ( ! function_exists( 'primer_post_nav' ) ) {
 
 	/**
 	 * Display navigation to next/previous post when applicable.
 	 *
-	 * @since 1.0.0
-	 *
 	 * @global WP_Post $post
+	 * @since  1.0.0
 	 */
 	function primer_post_nav() {
 
@@ -136,7 +100,7 @@ if ( ! function_exists( 'primer_post_nav' ) ) {
 
 	}
 
-}
+} // primer_post_nav
 
 if ( ! function_exists( 'primer_posted_on' ) ) {
 
@@ -171,7 +135,7 @@ if ( ! function_exists( 'primer_posted_on' ) ) {
 
 	}
 
-}
+} // primer_posted_on
 
 if ( ! function_exists( 'primer_post_format' ) ) {
 
@@ -189,61 +153,94 @@ if ( ! function_exists( 'primer_post_format' ) ) {
 
 	}
 
-}
+} // primer_post_format
 
-if ( ! function_exists( 'primer_get_featured_image_url' ) ) {
+if ( ! function_exists( 'primer_breadcrumbs' ) ) {
 
 	/**
-	 * Return the featured image URL.
+	 * Display very simple breadcrumbs.
+	 *
+	 * Adapted from Christoph Weil's Really Simple Breadcrumb plugin.
+	 *
+	 * @link https://wordpress.org/plugins/really-simple-breadcrumb/
 	 *
 	 * @since 1.0.0
 	 *
-	 * @return string|false
+	 * @global WP_Post $post
 	 */
-	function primer_get_featured_image_url() {
+	function primer_breadcrumbs() {
 
-		$featured_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'featured' );
+		global $post;
 
-		return empty( $featured_image_url[0] ) ? false : $featured_image_url;
+		$separator = ' <span class="sep"></span> ';
 
-	}
+		echo '<div class="breadcrumbs">';
 
-}
+		if ( ! is_front_page() ) {
 
-if ( ! function_exists( 'primer_has_active_categories' ) ) {
-
-	/**
-	 * Check if the site has active categories.
-	 *
-	 * We will store the result in a transient so this function
-	 * can be called frequently without any performance concern.
-	 *
-	 * @see primer_has_active_categories_reset()
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return bool
-	 */
-	function primer_has_active_categories() {
-
-		if ( WP_DEBUG || false === ( $has_active_categories = get_transient( 'primer_has_active_categories' ) ) ) {
-
-			$categories = get_categories(
-				array(
-					'fields'     => 'ids',
-					'hide_empty' => 1,
-					'number'     => 2, // We only care if more than 1 exists
-				)
+			printf(
+				'<a href="%s">%s</a>%s',
+				esc_url( home_url() ),
+				esc_html( get_bloginfo( 'name' ) ),
+				$separator // xss ok
 			);
 
-			$has_active_categories = ( count( $categories ) > 1 );
+			if ( 'page' === get_option( 'show_on_front' ) ) {
 
-			set_transient( 'primer_has_active_categories', $has_active_categories );
+				printf(
+					'<a href="%s">%s</a>%s',
+					esc_url( primer_get_posts_url() ),
+					esc_html__( 'Blog', 'primer' ),
+					$separator // xss ok
+				);
+
+			}
+
+			if ( is_category() || is_single() ) {
+
+				the_category( ', ' );
+
+				if ( is_single() ) {
+
+					echo $separator; // xss ok
+
+					the_title();
+
+				}
+
+			} elseif ( is_page() && $post->post_parent ) {
+
+				$home = get_page( get_option( 'page_on_front' ) );
+
+				for ( $i = count( $post->ancestors )-1; $i >= 0; $i-- ) {
+
+					if ( ( $home->ID ) != ( $post->ancestors[$i] ) ) {
+
+						echo '<a href="' . get_permalink( $post->ancestors[$i] ) . '">' . get_the_title( $post->ancestors[$i] ) . '</a>' . $separator;
+
+					}
+				}
+
+				echo the_title();
+
+			} elseif ( is_page() ) {
+
+				echo the_title();
+
+			} elseif ( is_404() ) {
+
+				echo '404';
+
+			}
+
+		} else {
+
+			bloginfo( 'name' );
 
 		}
 
-		return ! empty( $has_active_categories );
+		echo '</div>';
 
 	}
 
-}
+} // primer_breadcrumbs

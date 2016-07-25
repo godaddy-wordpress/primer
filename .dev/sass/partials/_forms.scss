@@ -83,7 +83,7 @@ input[type="color"],
 textarea {
 	color: $input-color;
 	background-color: $input-background;
-	border: none;
+	border: 1px solid rgba(117, 117, 117, 0.28);
 	transform: 200ms background linear;
 	border-radius: 3px;
 	resize: none;
@@ -116,6 +116,7 @@ textarea {
 
 input[type="file"] {
 	font-size: 1rem;
+	line-height: 1;
 }
 
 label{

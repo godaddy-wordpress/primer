@@ -12,7 +12,14 @@
 
 		<div class="entry-header-column">
 
-			<?php do_action( 'primer_before_post_title' ) ?>
+			<?php
+			/**
+			 * Fires before the post title element.
+			 *
+			 * @since 1.0.0
+			 */
+			do_action( 'primer_before_post_title' );
+			?>
 
 			<?php if ( is_singular() ) : ?>
 
@@ -20,11 +27,18 @@
 
 			<?php else : ?>
 
-				<h2 class="page-title"><a href="<?php the_permalink() ?>" rel="permalink"><?php the_title() ?></a></h2>
+				<h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="permalink"><?php the_title() ?></a></h2>
 
 			<?php endif; ?>
 
-			<?php do_action( 'primer_after_post_title' ) ?>
+			<?php
+			/**
+			 * Fires after the post title element.
+			 *
+			 * @since 1.0.0
+			 */
+			do_action( 'primer_after_post_title' );
+			?>
 
 		</div><!-- .entry-header-column -->
 
