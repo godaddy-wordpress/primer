@@ -12,8 +12,8 @@
   margin: 0; }
   .primer-layout ul li {
     float: right;
-    width: -webkit-calc(25% - 0.375em);
-    width: calc(25% - 0.375em);
+    width: -webkit-calc(25% - 0.5em);
+    width: calc(25% - 0.5em);
     padding: 0.3em 0.3em;
     margin: 0; }
     .primer-layout ul li.disabled {
@@ -43,9 +43,9 @@
       cursor: default; }
 
 @media only screen and (min-width: 851px) {
-  .primer-layout ul li:nth-child(3n+3) {
+  .primer-layout ul li:nth-child(4n) {
     padding-left: 0; }
-  .primer-layout ul li:nth-child(3n+1) {
+  .primer-layout ul li:nth-child(4n+1) {
     padding-right: 0; } }
 
 @media only screen and (max-width: 850px) {

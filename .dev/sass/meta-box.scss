@@ -19,7 +19,7 @@
 
 		li {
 			float: left;
-			width: calc(25% - 0.375em);
+			width: calc(25% - 0.5em);
 			padding: 0.3em 0.3em;
 			margin: 0;
 
@@ -75,12 +75,12 @@
 
 	.primer-layout ul li {
 
-		&:nth-child(3n+3) {
+		&:nth-child(4n) {
 			padding-right: 0;
 
 		}
 
-		&:nth-child(3n+1) {
+		&:nth-child(4n+1) {
 			padding-left: 0;
 		}
 
