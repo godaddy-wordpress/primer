@@ -86,6 +86,13 @@ require_once get_template_directory() . '/inc/hooks.php';
 require_once get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Load WooCommerce compatibility file.
+ *
+ * @since 1.0.0
+ */
+require_once get_template_directory() . '/inc/woocommerce.php';
+
+/**
  * Load Jetpack compatibility file.
  *
  * @since 1.0.0
