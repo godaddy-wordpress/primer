@@ -18,6 +18,7 @@
     "grunt-autoprefixer": "~3.0.4",
     "grunt-browser-sync": "~2.2.0",
     "grunt-cssjanus": "~0.3.2",
+    "grunt-contrib-cssmin": "~0.14.0",
     "grunt-contrib-jshint": "~1.0.0",
     "grunt-contrib-uglify": "~1.0.1",
     "grunt-contrib-watch": "~1.0.0",

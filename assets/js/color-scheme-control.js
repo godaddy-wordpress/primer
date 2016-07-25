@@ -71,8 +71,9 @@
 	// Convert a HEX color to RGB.
 	function hex2rgb( hex ) {
 
-		var hex = hex.replace( '#', '' ),
-		    r   = parseInt( hex.substring( 0, 2 ), 16 ),
+		hex = hex.replace( '#', '' );
+
+		var r   = parseInt( hex.substring( 0, 2 ), 16 ),
 		    g   = parseInt( hex.substring( 2, 4 ), 16 ),
 		    b   = parseInt( hex.substring( 4, 6 ), 16 );
 

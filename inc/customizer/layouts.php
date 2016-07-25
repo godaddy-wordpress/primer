@@ -163,7 +163,7 @@ class Primer_Customizer_Layouts {
 
 		wp_enqueue_script( 'primer-layouts-meta-box', get_template_directory_uri() . "/assets/js/meta-box{$suffix}.js", array( 'jquery' ), PRIMER_VERSION );
 
-		wp_enqueue_style( 'primer-layouts-meta-box', get_template_directory_uri() . '/assets/css/meta-box.css', array(), PRIMER_VERSION );
+		wp_enqueue_style( 'primer-layouts-meta-box', get_template_directory_uri() . "/assets/css/meta-box{$suffix}.css", array(), PRIMER_VERSION );
 
 	}
 

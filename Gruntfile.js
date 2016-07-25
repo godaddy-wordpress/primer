@@ -46,7 +46,7 @@ module.exports = function(grunt) {
 		},
 
 		jshint: {
-			all: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js']
+			all: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js', '!assets/js/jquery.backgroundSize.js']
 		},
 
 		po2mo: {
@@ -125,9 +125,27 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: {
+					'assets/css/meta-box.css': '.dev/sass/meta-box.scss',
 					'style.css': '.dev/sass/style.scss',
 					'editor-style.css': '.dev/sass/editor-style.scss'
 				}
+			}
+		},
+
+		cssmin: {
+			options: {
+				shorthandCompacting: false,
+				roundingPrecision: -1,
+				processImport: false
+			},
+			dist: {
+				files: [{
+					expand: true,
+					cwd: 'assets/css',
+					src: ['*.css', '!*.min.css'],
+					dest: 'assets/css',
+					ext: '.min.css'
+				}]
 			}
 		},
 
@@ -162,7 +180,7 @@ module.exports = function(grunt) {
 
 	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('default', ['sass','autoprefixer','cssjanus','cssmin','jshint','uglify']);
 	grunt.registerTask('lint', ['jshint']);
 	grunt.registerTask('update-pot', ['pot', 'replace:pot']);
 
