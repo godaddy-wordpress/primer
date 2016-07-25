@@ -63,6 +63,8 @@ function primer_woo_shop_layout( $layout ) {
 
 	if ( function_exists( 'wc_get_page_id' ) && function_exists( 'is_shop' ) && is_shop() ) {
 
+		remove_filter( 'theme_mod_layout', __FUNCTION__ );
+
 		$layout = primer_get_layout( wc_get_page_id( 'shop' ) );
 
 	}
