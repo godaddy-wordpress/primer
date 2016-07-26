@@ -162,9 +162,19 @@ class Primer_Customizer_Layouts {
 		$rtl    = is_rtl() ? '-rtl' : '';
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-		wp_enqueue_script( 'primer-layouts', get_template_directory_uri() . "/assets/js/admin/layouts{$suffix}.js", array( 'jquery' ), PRIMER_VERSION );
+		wp_enqueue_script(
+			'primer-layouts',
+			get_template_directory_uri() . "/assets/js/admin/layouts{$suffix}.js",
+			array( 'jquery' ),
+			PRIMER_VERSION
+		);
 
-		wp_enqueue_style( 'primer-layouts', get_template_directory_uri() . "/assets/css/admin/layouts{$rtl}{$suffix}.css", array(), PRIMER_VERSION );
+		wp_enqueue_style(
+			'primer-layouts',
+			get_template_directory_uri() . "/assets/css/admin/layouts{$rtl}{$suffix}.css",
+			array(),
+			PRIMER_VERSION
+		);
 
 	}
 
