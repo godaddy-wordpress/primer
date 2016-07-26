@@ -1,0 +1,22 @@
+.comments-area {
+	margin: 0 0 1.5em;
+	padding: 2.5em 3em;
+	background-color: #fff;
+}
+
+.comment-list {
+	padding: 0;
+	list-style: none;
+
+	ol {
+		list-style: none;
+	}
+}
+
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}

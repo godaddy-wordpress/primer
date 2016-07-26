@@ -1,0 +1,65 @@
+.widget {
+	margin: 0 0 1.5em;
+	padding: 2em;
+	background-color: $color__background-screen;
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	select,
+	textarea {
+		width: 100%;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		padding: 0.25em 0;
+
+		ul {
+			padding-left: 1.5em;
+		}
+
+	}
+
+}
+
+.widget_calendar #calendar_wrap #wp-calendar {
+
+	td#today {
+		font-weight: bold;
+	}
+
+	tfoot {
+
+		td#prev {
+			text-align: left;
+		}
+
+		td#next {
+			text-align: right;
+		}
+
+	}
+
+}
+
+.footer-widget .widget:last-child {
+	margin-bottom: 0;
+}

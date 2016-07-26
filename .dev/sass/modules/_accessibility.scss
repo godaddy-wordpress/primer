@@ -1,4 +1,4 @@
-/* Text meant only for screen readers */
+/* Text meant only for screen readers. */
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
@@ -6,16 +6,14 @@
 	width: 1px;
 	overflow: hidden;
 
-	&:hover,
-	&:active,
 	&:focus {
-		background-color: white;
+		background-color: $color__background-screen;
 		border-radius: 3px;
 		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 		clip: auto !important;
-		color: black;
+		color: $color__text-screen;
 		display: block;
-		font-size: rem-calc(14);
+		@include font-size(0.875);
 		font-weight: bold;
 		height: auto;
 		left: 5px;
@@ -24,6 +22,11 @@
 		text-decoration: none;
 		top: 5px;
 		width: auto;
-		z-index: 100000; /* Above WP toolbar */
+		z-index: 100000; /* Above WP toolbar. */
 	}
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
 }

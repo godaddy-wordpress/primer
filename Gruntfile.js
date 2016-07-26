@@ -162,6 +162,9 @@ module.exports = function(grunt) {
 					'assets/css/meta-box.css': '.dev/sass/meta-box.scss',
 					'style.css': '.dev/sass/style.scss',
 					'editor-style.css': '.dev/sass/editor-style.scss'
+				},
+				options: {
+					require: 'susy'
 				}
 			}
 		},

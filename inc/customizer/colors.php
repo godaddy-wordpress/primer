@@ -36,7 +36,7 @@ class Primer_Customizer_Colors {
 			array(
 				array(
 					'name'    => 'header_textcolor',
-					'default' => '#222222',
+					'default' => '#252f31',
 					'css'     => array(
 						'.site-title a, .site-title a:visited' => array(
 							'color' => '%1$s',
@@ -50,14 +50,24 @@ class Primer_Customizer_Colors {
 				),
 				array(
 					'name'    => 'background_color',
-					'default' => '#f9f9f9',
+					'default' => '#f5f5f5',
 				),
 				array(
 					'name'    => 'header_background_color',
 					'label'   => esc_html__( 'Header Background Color', 'primer' ),
-					'default' => '#f9f9f9',
+					'default' => '#ffffff',
 					'css'     => array(
 						'.site-header' => array(
+							'background-color' => '%1$s',
+						),
+					),
+				),
+				array(
+					'name'    => 'footer_background_color',
+					'label'   => esc_html__( 'Footer Background Color', 'primer' ),
+					'default' => '#eeeeee',
+					'css'     => array(
+						'.site-footer' => array(
 							'background-color' => '%1$s',
 						),
 					),
@@ -75,7 +85,7 @@ class Primer_Customizer_Colors {
 				array(
 					'name'    => 'menu_background_color',
 					'label'   => esc_html__( 'Menu Background Color', 'primer' ),
-					'default' => '#222222',
+					'default' => '#252f31',
 					'css'     => array(
 						'.main-navigation-container, .main-navigation, .main-navigation li a, .main-navigation li.menu-item-has-children ul' => array(
 							'background-color' => '%1$s',
@@ -109,7 +119,7 @@ class Primer_Customizer_Colors {
 				array(
 					'name'    => 'main_text_color',
 					'label'   => esc_html__( 'Main Text Color', 'primer' ),
-					'default' => '#1a1a1a',
+					'default' => '#252f31',
 					'css'     => array(
 						'.site-content, .site-content h1, .site-content h2, .site-content h3, .site-content h4, .site-content h5, .site-content h6, .site-content p, .site-content blockquote, legend' => array(
 							'color' => '%1$s',
@@ -166,6 +176,7 @@ class Primer_Customizer_Colors {
 						'header_textcolor'        => '#ffffff',
 						'background_color'        => '#333333',
 						'header_background_color' => '#333333',
+						'footer_background_color' => '#222222',
 						'tagline_text_color'      => '#999999',
 						'menu_background_color'   => '#444444',
 						'link_color'              => '#589ef2',
@@ -179,6 +190,7 @@ class Primer_Customizer_Colors {
 						'header_textcolor'        => '#5a6175',
 						'background_color'        => '#d5d6e0',
 						'header_background_color' => '#d5d6e0',
+						'footer_background_color' => '#5a6175',
 						'tagline_text_color'      => '#888c99',
 						'menu_background_color'   => '#5a6175',
 						'link_color'              => '#3e4c75',
@@ -192,6 +204,7 @@ class Primer_Customizer_Colors {
 						'header_textcolor'        => '#402b30',
 						'background_color'        => '#f9f9f9',
 						'header_background_color' => '#f9f9f9',
+						'footer_background_color' => '#640c1f',
 						'tagline_text_color'      => '#999999',
 						'menu_background_color'   => '#640c1f',
 						'link_color'              => '#640c1f',
