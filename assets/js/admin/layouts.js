@@ -18,7 +18,7 @@ window.wp = window.wp || {};
 
 		var oldApiSetting = api.Setting;
 
-		api.Setting = api.Setting.extend({
+		api.Setting = api.Setting.extend( {
 
 			preview: function() {
 
@@ -31,9 +31,9 @@ window.wp = window.wp || {};
 				}
 
 				var to        = arguments[0],
-						from      = arguments[1],
-						layouts   = primer_layouts_transport,
-						transport = this.transport;
+				    from      = arguments[1],
+				    layouts   = primer_layouts_transport,
+				    transport = this.transport;
 
 				/**
 				 * If we have a difference in transport strategy, refresh
@@ -50,7 +50,7 @@ window.wp = window.wp || {};
 
 			}
 
-		});
+		} );
 
 	}
 
