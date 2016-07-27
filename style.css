@@ -1215,15 +1215,33 @@ object {
   float: left;
   margin-left: 1.3888888889%;
   margin-right: 1.3888888889%; }
+  @media only screen and (max-width: 61.063em) {
+    .content-area {
+      width: 97.2222222222%;
+      float: left;
+      margin-left: 1.3888888889%;
+      margin-right: 1.3888888889%; } }
 
 #secondary {
   width: 30.5555555556%;
   float: right;
   margin-left: 1.3888888889%;
   margin-right: 1.3888888889%; }
+  @media only screen and (max-width: 61.063em) {
+    #secondary {
+      width: 97.2222222222%;
+      float: left;
+      margin-left: 1.3888888889%;
+      margin-right: 1.3888888889%; } }
 
 #tertiary {
   display: none; }
+  @media only screen and (max-width: 61.063em) {
+    #tertiary {
+      width: 97.2222222222%;
+      float: left;
+      margin-left: 1.3888888889%;
+      margin-right: 1.3888888889%; } }
 
 @media only screen and (min-width: 61.063em) {
   body.layout-two-column-default .content-area {
@@ -1294,15 +1312,6 @@ object {
     margin-left: 1.3888888889%;
     margin-right: 1.3888888889%;
     display: block; } }
-
-@media only screen and (max-width: 61.063em) {
-  .content-area,
-  #secondary,
-  #tertiary {
-    width: 97.2222222222%;
-    float: left;
-    margin-left: 1.3888888889%;
-    margin-right: 1.3888888889%; } }
 
 /*--------------------------------------------------------------
 # Header
@@ -1544,15 +1553,37 @@ object {
 --------------------------------------------------------------*/
 .sticky {
   display: block; }
+  @media only screen and (min-width: 40.063em) {
+    .sticky .entry-title {
+      position: relative; }
+      .sticky .entry-title a:before {
+        font-family: 'Genericons';
+        content: '\f308';
+        color: #252f31;
+        line-height: 1.4;
+        position: absolute;
+        top: 2px;
+        left: -40px;
+        opacity: 0.2; } }
 
 .hentry {
   margin: 0 0 1.5em;
   padding: 2.5em 3.375em;
   background-color: #fff; }
+  @media only screen and (max-width: 40.063em) {
+    .hentry {
+      padding: 1.5em; } }
+  .hentry .entry-title a,
+  .hentry .entry-title a:visited {
+    color: #252f31; }
+  .hentry .entry-title a:hover,
+  .hentry .entry-title a:visited:hover {
+    color: #1585cf; }
 
-@media only screen and (max-width: 40.063em) {
-  .hentry {
-    padding: 1.5em; } }
+.entry-meta {
+  padding-bottom: 1rem;
+  font-size: 0.9em;
+  color: #686868; }
 
 .byline,
 .updated:not(.published) {
@@ -1566,6 +1597,15 @@ object {
 .entry-content,
 .entry-summary {
   margin: 1.5em 0 0; }
+
+.entry-footer {
+  font-size: 0.85em;
+  color: #686868; }
+  .entry-footer .entry-footer-right {
+    float: right; }
+  .entry-footer .cat-links,
+  .entry-footer .tag-links {
+    display: block; }
 
 .page-links {
   clear: both;
@@ -1584,9 +1624,37 @@ object {
   list-style: none; }
   .comment-list ol {
     list-style: none; }
+    .comment-list ol.children {
+      margin-top: 2em; }
+  .comment-list li {
+    margin-bottom: 2em;
+    padding-left: 32px; }
+    .comment-list li article {
+      padding-left: 1em; }
+    .comment-list li .comment-metadata {
+      font-size: 0.85em; }
+      .comment-list li .comment-metadata .edit-link {
+        float: right; }
+    .comment-list li.bypostauthor {
+      display: block;
+      padding: 0.5em 0.5em 0.5em -webkit-calc(0.5em + 32px);
+      padding: 0.5em 0.5em 0.5em calc(0.5em + 32px);
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      border: 3px solid rgba(21, 133, 207, 0.2); }
+
+.comment-meta .avatar {
+  float: left;
+  margin-left: -webkit-calc(-1em - 32px);
+  margin-left: calc(-1em - 32px);
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+
+.comment-meta .says {
+  color: #686868; }
 
 .comment-content a {
   word-wrap: break-word; }
 
-.bypostauthor {
-  display: block; }
+.logged-in-as {
+  font-size: 0.9em; }

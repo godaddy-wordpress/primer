@@ -3,7 +3,7 @@
 }
 
 .site-header-wrapper {
-	@include container(1100px);
+	@include container($container-size);
 }
 
 .site-title-wrapper {

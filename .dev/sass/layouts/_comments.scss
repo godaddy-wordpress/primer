@@ -10,6 +10,47 @@
 
 	ol {
 		list-style: none;
+
+		&.children {
+			margin-top: 2em;
+		}
+	}
+
+	li {
+		margin-bottom: 2em;
+		padding-left: 32px;
+
+		article {
+			padding-left: 1em;
+		}
+
+		.comment-metadata {
+			font-size: 0.85em;
+
+			.edit-link {
+				float: right;
+			}
+		}
+
+		&.bypostauthor {
+			display: block;
+			padding: 0.5em 0.5em 0.5em calc(0.5em + 32px);
+			border-radius: 5px;
+			border: 3px solid rgba($color__link, 0.2);
+		}
+	}
+}
+
+.comment-meta {
+
+	.avatar {
+		float: left;
+		margin-left: calc(-1em - 32px);
+		border-radius: 3px;
+	}
+
+	.says {
+		color: $color__text-secondary;
 	}
 }
 
@@ -17,6 +58,6 @@
 	word-wrap: break-word;
 }
 
-.bypostauthor {
-	display: block;
+.logged-in-as {
+	font-size: 0.9em;
 }

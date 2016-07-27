@@ -4,7 +4,7 @@
 
 .site-footer-inner,
 .site-info {
-	@include container(1100px);
+	@include container($container-size);
 }
 
 .footer-widget-area {

@@ -1,18 +1,30 @@
 .site-content {
-	@include container(1100px);
+	@include container($container-size);
 	margin-top: 2em;
 }
 
 .content-area {
 	@include span(first 8);
+
+	@media #{$medium-down} {
+		@include span(12);
+	}
 }
 
 #secondary {
 	@include span(last 4);
+
+	@media #{$medium-down} {
+		@include span(12);
+	}
 }
 
 #tertiary {
 	display: none;
+
+	@media #{$medium-down} {
+		@include span(12);
+	}
 }
 
 @media #{$large-up} {
@@ -94,16 +106,6 @@
 
 		}
 
-	}
-
-}
-
-@media #{$medium-down} {
-
-	.content-area,
-	#secondary,
-	#tertiary {
-		@include span(12);
 	}
 
 }

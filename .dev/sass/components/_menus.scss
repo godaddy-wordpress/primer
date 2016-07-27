@@ -5,7 +5,7 @@
 }
 
 .main-navigation {
-	@include container(1100px);
+	@include container($container-size);
 
 	.menu-main-menu-container {
 		@include span(12);
