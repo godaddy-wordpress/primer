@@ -3,7 +3,7 @@
 class Primer_Customizer_Layouts_Control extends WP_Customize_Control {
 
 	/**
-	 * Enqueue some custom css for this control.
+	 * Enqueue some custom css for layout control.
 	 *
 	 * @since 1.0.0
 	 */
@@ -17,25 +17,26 @@ class Primer_Customizer_Layouts_Control extends WP_Customize_Control {
 	}
 
 	/**
-	 * Override default template with a custom one.
+	 * Display layout choices in the Customizer.
 	 *
+	 * @global Primer_Customizer_Layouts $primer_customizer_layouts
 	 * @since 1.0.0
 	 */
 	protected function render_content() {
 
 		global $primer_customizer_layouts;
 
-		if ( ! empty( $this->label ) ) :?>
+		if ( ! empty( $this->label ) ) {
 
-			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+			printf( '<span class="customize-control-title">%s</span>', esc_html( $this->label ) );
 
-		<?php endif;
+		}
 
-		if ( ! empty( $this->description ) ) : ?>
+		if ( ! empty( $this->description ) ) {
 
-			<span class="description customize-control-description"><?php echo $this->description ; ?></span>
+			printf( '<span class="description customize-control-description">%s</span>', esc_html( $this->description ) );
 
-		<?php endif;
+		}
 
 		$primer_customizer_layouts->print_layout_choices( $this->choices );
 
