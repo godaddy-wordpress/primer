@@ -53,9 +53,27 @@ class Primer_Customizer_Layouts {
 
 		}
 
-		add_action( 'after_setup_theme', array( $this, 'theme_support' ), 11 );
-		add_action( 'init',              array( $this, 'rtl_layouts' ), 11 );
-		add_action( 'init',              array( $this, 'post_type_support' ), 11 );
+		/**
+		 * Filter the default layout.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var string
+		 */
+		$default       = (string) apply_filters( 'primer_default_layout', $this->default );
+		$this->default = $this->layout_exists( $default ) ? $default : ( $this->layout_exists( $this->default ) ? $this->default : array_shift( $this->layouts ) );
+
+		/**
+		 * Filter if post/page overrides via meta box should be enabled.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var bool
+		 */
+		$this->meta_box = (bool) apply_filters( 'primer_layouts_meta_box_enabled', $this->meta_box );
+
+		add_action( 'init', array( $this, 'rtl_layouts' ), 11 );
+		add_action( 'init', array( $this, 'post_type_support' ), 11 );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 		add_action( 'load-post.php',         array( $this, 'load_post' ) );
@@ -65,22 +83,6 @@ class Primer_Customizer_Layouts {
 		add_action( 'customize_register', array( $this, 'customize_register' ) );
 
 		add_filter( 'body_class', array( $this, 'body_class' ) );
-
-	}
-
-	/**
-	 * Apply theme support args.
-	 *
-	 * @action after_setup_theme
-	 * @since  1.0.0
-	 */
-	public function theme_support() {
-
-		$args    = (array) get_theme_support( 'primer-layouts' );
-		$layouts = array_keys( $this->layouts );
-
-		$this->default  = ( ! empty( $args[0] ) && $this->layout_exists( $args[0] ) ) ? $args[0] : ( $this->layout_exists( $this->default ) ? $this->default : array_shift( $layouts ) );
-		$this->meta_box = ! empty( $args[1] ) ? (bool) $args[1] : $this->meta_box;
 
 	}
 
