@@ -61,7 +61,7 @@ class Primer_Customizer_Layouts {
 		 * @var string
 		 */
 		$default       = (string) apply_filters( 'primer_default_layout', $this->default );
-		$this->default = $this->layout_exists( $default ) ? $default : ( $this->layout_exists( $this->default ) ? $this->default : array_shift( $this->layouts ) );
+		$this->default = $this->layout_exists( $default ) ? $default : ( $this->layout_exists( $this->default ) ? $this->default : key( $this->layouts ) );
 
 		/**
 		 * Filter if post/page overrides via meta box should be enabled.
