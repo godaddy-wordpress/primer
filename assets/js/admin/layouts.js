@@ -30,9 +30,9 @@ window.wp = window.wp || {};
 
 				}
 
-				var to   = arguments[0],
-						from = arguments[1],
-						layouts = primer_layouts_transport,
+				var to        = arguments[0],
+						from      = arguments[1],
+						layouts   = primer_layouts_transport,
 						transport = this.transport;
 
 				/**
