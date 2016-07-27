@@ -1,4 +1,6 @@
-/* global jQuery, wp, primer_layouts_transport */
+/* global jQuery, primer_layouts_transport */
+window.wp = window.wp || {};
+
 ( function( $ ) {
 
 	var api = wp.customize;
