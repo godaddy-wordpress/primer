@@ -12,7 +12,43 @@ class Primer_Customizer_Layouts_Control extends WP_Customize_Control {
 		$rtl    = is_rtl() ? '-rtl' : '';
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-		wp_enqueue_style( 'primer-layouts', get_template_directory_uri() . "/assets/css/admin/layouts{$rtl}{$suffix}.css", array(), PRIMER_VERSION );
+		wp_enqueue_style(
+			'primer-layouts',
+			get_template_directory_uri() . "/assets/css/admin/layouts{$rtl}{$suffix}.css",
+			array(),
+			PRIMER_VERSION
+		);
+
+		wp_enqueue_script(
+			'primer-layouts',
+			get_template_directory_uri() . "/assets/js/admin/layouts{$suffix}.js",
+			array( 'customize-controls' ),
+			true
+		);
+
+		$layouts = array_fill_keys( array_keys( $this->choices ), 'postMessage' );
+
+		/**
+		 * Those layouts are loaded dynamically and need refresh
+		 */
+		$layouts['three-column-default']  = 'refresh';
+		$layouts['three-column-center']   = 'refresh';
+		$layouts['three-column-reversed'] = 'refresh';
+
+		/**
+		 * Filter layouts transport mechanism in the customizer. Either postMessage or refresh.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var array
+		 */
+		$layouts = (array) apply_filters( 'primer_layouts_transport', $layouts );
+
+		wp_localize_script(
+			'primer-layouts',
+			'primer_layouts_transport',
+			$layouts
+		);
 
 	}
 
