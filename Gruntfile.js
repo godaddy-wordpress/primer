@@ -1,3 +1,5 @@
+/* global module, require */
+
 module.exports = function(grunt) {
 
 	var pkg = grunt.file.readJSON( 'package.json' );
@@ -20,7 +22,7 @@ module.exports = function(grunt) {
 				cascade: false
 			},
 			dist: {
-				src: [ '*.css', 'assets/css/*.css' ]
+				src: [ '*.css', 'assets/css/**/*.css' ]
 			}
 		},
 
@@ -39,8 +41,11 @@ module.exports = function(grunt) {
 						dest: 'editor-style-rtl.css'
 					},
 					{
-						src: 'assets/css/meta-box.css',
-						dest: 'assets/css/meta-box-rtl.css'
+						expand: true,
+						cwd: 'assets/css/admin',
+						src: ['*.css','!*-rtl.css','!*.min.css','!*-rtl.min.css'],
+						dest: 'assets/css/admin',
+						ext: '-rtl.css'
 					}
 				]
 			}
@@ -58,6 +63,13 @@ module.exports = function(grunt) {
 					cwd: 'assets/css',
 					src: ['*.css', '!*.min.css'],
 					dest: 'assets/css',
+					ext: '.min.css'
+				},
+				{
+					expand: true,
+					cwd: 'assets/css/admin',
+					src: ['*.css', '!*.min.css'],
+					dest: 'assets/css/admin',
 					ext: '.min.css'
 				}]
 			}
@@ -80,7 +92,7 @@ module.exports = function(grunt) {
 		},
 
 		jshint: {
-			all: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js', '!assets/js/jquery.backgroundSize.js']
+			all: ['Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js', '!assets/js/jquery.backgroundSize.js']
 		},
 
 		po2mo: {
@@ -138,7 +150,7 @@ module.exports = function(grunt) {
 						to: pkg.title
 					},
 					{
-						from: "YEAR THE PACKAGE'S COPYRIGHT HOLDER",
+						from: 'YEAR THE PACKAGE\'S COPYRIGHT HOLDER',
 						to: new Date().getFullYear()
 					},
 					{
@@ -158,11 +170,17 @@ module.exports = function(grunt) {
 				sourceMap: false
 			},
 			dist: {
-				files: {
-					'assets/css/meta-box.css': '.dev/sass/meta-box.scss',
+				files: [{
 					'style.css': '.dev/sass/style.scss',
 					'editor-style.css': '.dev/sass/editor-style.scss'
-				}
+				},
+				{
+					expand: true,
+					cwd: '.dev/sass/admin',
+					src: ['*.scss'],
+					dest: 'assets/css/admin',
+					ext: '.css'
+				}]
 			}
 		},
 
@@ -170,11 +188,18 @@ module.exports = function(grunt) {
 			options: {
 				ASCIIOnly: true
 			},
-			core: {
+			dist: {
 				expand: true,
 				cwd: 'assets/js',
 				src: ['*.js', '!*.min.js'],
 				dest: 'assets/js',
+				ext: '.min.js'
+			},
+			admin: {
+				expand: true,
+				cwd: 'assets/js/admin',
+				src: ['*.js', '!*.min.js'],
+				dest: 'assets/js/admin',
 				ext: '.min.js'
 			}
 		},
@@ -185,7 +210,7 @@ module.exports = function(grunt) {
 				tasks: ['sass','autoprefixer','cssjanus']
 			},
 			scripts: {
-				files: ['Gruntfile.js', 'assets/js/*.js', '!assets/js/*.min.js'],
+				files: ['Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js'],
 				tasks: ['jshint', 'uglify'],
 				options: {
 					interrupt: true

@@ -1,4 +1,4 @@
-.primer-layout {
+.primer-layout-wrap {
 
 	p {
 		label {
@@ -40,6 +40,7 @@
 			label {
 				display: block;
 				position: relative;
+				margin-left: 0;
 
 				> input {
 					visibility: hidden;
@@ -69,18 +70,26 @@
 
 }
 
-#side-sortables .primer-layout ul {
-	flex-wrap: wrap;
+#side-sortables,
+#customize-control-layout {
 
-	li {
-		flex-basis: calc(25% - 0.6em);
+	.primer-layout-wrap ul {
+
+		flex-wrap: wrap;
+
+		li {
+
+			flex-basis: calc(25% - 0.6em);
+
+		}
+
 	}
 
 }
 
 @media only screen and (max-width: 850px) {
 
-	.primer-layout ul {
+	.primer-layout-wrap ul {
 		display: inline-block;
 
 		li {
@@ -96,9 +105,13 @@
 				display: none;
 			}
 
-			label > input {
-				visibility: visible;
-				position: relative;
+			label {
+				margin-left: 24px;
+
+				> input {
+					visibility: visible;
+					position: relative;
+				}
 			}
 
 		}
