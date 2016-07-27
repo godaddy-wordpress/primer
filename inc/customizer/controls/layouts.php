@@ -42,7 +42,7 @@ class Primer_Customizer_Layouts_Control extends WP_Customize_Control {
 		 *
 		 * @var array
 		 */
-		$layouts = apply_filters( 'primer_layouts_transport', $layouts );
+		$layouts = (array) apply_filters( 'primer_layouts_transport', $layouts );
 
 		wp_localize_script(
 			'primer-layouts',
