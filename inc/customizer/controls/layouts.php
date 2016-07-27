@@ -3,7 +3,9 @@
 class Primer_Customizer_Layouts_Control extends WP_Customize_Control {
 
 	/**
-	 * Enqueue some custom css for this control
+	 * Enqueue some custom css for this control.
+	 *
+	 * @since 1.0.0
 	 */
 	public function enqueue() {
 
@@ -15,7 +17,9 @@ class Primer_Customizer_Layouts_Control extends WP_Customize_Control {
 	}
 
 	/**
-	 * Override default template with a custom one
+	 * Override default template with a custom one.
+	 *
+	 * @since 1.0.0
 	 */
 	protected function render_content() {
 
