@@ -19,5 +19,6 @@ input[type="submit"] {
 	&:focus {
 		cursor: pointer;
 		background-color: $color__background-button-hover;
+		color: $color__text-button;
 	}
 }

@@ -35,7 +35,7 @@ $font__line-height-headings: 1.4;
 // Colors
 $color__background-body: $background-color;
 $color__background-screen: #fff;
-$color__background-hr: rgba(#999, 0.15);
+$color__background-hr: rgba($main-text-color, 0.1);
 $color__background-button: $link-color;
 $color__background-button-hover: rgba($link-color, 0.8);
 $color__background-pre: #eee;
