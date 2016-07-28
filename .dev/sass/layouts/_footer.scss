@@ -11,6 +11,8 @@ body.no-max-width .site-footer-inner {
 }
 
 .footer-widget-area {
+	display: inline-block;
+	width: 100%;
 	padding: 2em 0;
 
 	.footer-widget {
