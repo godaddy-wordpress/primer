@@ -46,6 +46,12 @@ dfn, cite, em, i {
 
 blockquote {
 	margin: 0 1.5em;
+	font-size: 125%;
+	font-style: italic;
+	line-height: $font__line-height-headings;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 4px solid $color__border;
 }
 
 address {

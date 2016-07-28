@@ -297,7 +297,13 @@ dfn, cite, em, i {
   font-style: italic; }
 
 blockquote {
-  margin: 0 1.5em; }
+  margin: 0 1.5em;
+  font-size: 125%;
+  font-style: italic;
+  line-height: 1.4;
+  margin: 1em 0;
+  padding-right: 1em;
+  border-right: 4px solid rgba(153, 153, 153, 0.15); }
 
 address {
   margin: 0 0 1.5em; }
