@@ -3,8 +3,12 @@
 	padding: 2.5em 3em;
 	background-color: #fff;
 
-	@media #{$small-only} {
+	@media #{$medium-only} {
 		padding: 1.5em;
+	}
+
+	@media #{$small-only} {
+		padding: 1em;
 	}
 }
 

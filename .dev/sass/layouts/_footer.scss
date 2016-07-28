@@ -1,18 +1,10 @@
 .site-footer {
+	clear: both;
 	background-color: $color__background-footer;
 }
 
-.site-footer-inner {
-	@include container($container-size);
-}
-
-body.no-max-width .site-footer-inner {
-	max-width: none;
-}
-
 .footer-widget-area {
-	display: inline-block;
-	width: 100%;
+	@include container($container-size);
 	padding: 2em 0;
 
 	.footer-widget {
@@ -37,6 +29,10 @@ body.no-max-width .site-footer-inner {
 			@include span(3);
 		}
 	}
+}
+
+body.no-max-width .footer-widget-area {
+	max-width: none;
 }
 
 .site-info-wrapper {

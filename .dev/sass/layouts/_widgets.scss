@@ -3,6 +3,14 @@
 	padding: 2em;
 	background-color: $color__background-screen;
 
+	@media #{$medium-only} {
+		padding: 1.5em;
+	}
+
+	@media #{$small-only} {
+		padding: 1em;
+	}
+
 	input[type="text"],
 	input[type="email"],
 	input[type="url"],
@@ -35,9 +43,7 @@
 		ul {
 			padding-left: 1.5em;
 		}
-
 	}
-
 }
 
 .widget_calendar #calendar_wrap #wp-calendar {
@@ -55,9 +61,7 @@
 		td#next {
 			text-align: right;
 		}
-
 	}
-
 }
 
 .footer-widget .widget:last-child {

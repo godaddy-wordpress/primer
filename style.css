@@ -1258,11 +1258,7 @@ object {
     clear: both; }
   @media only screen and (max-width: 61.063em) {
     .site-content {
-      width: 97.2222222222%;
-      float: left;
-      margin-left: 1.3888888889%;
-      margin-right: 1.3888888889%;
-      margin-top: 2.7777777778%; } }
+      margin-top: 1.3888888889%; } }
 
 body.no-max-width .site-content {
   max-width: none; }
@@ -1412,24 +1408,18 @@ body.no-max-width .site-header-wrapper {
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
+  clear: both;
   background-color: #eeeeee; }
 
-.site-footer-inner {
+.footer-widget-area {
   max-width: 1100px;
   margin-left: auto;
-  margin-right: auto; }
-  .site-footer-inner:after {
+  margin-right: auto;
+  padding: 2em 0; }
+  .footer-widget-area:after {
     content: " ";
     display: block;
     clear: both; }
-
-body.no-max-width .site-footer-inner {
-  max-width: none; }
-
-.footer-widget-area {
-  display: inline-block;
-  width: 100%;
-  padding: 2em 0; }
   .footer-widget-area .footer-widget {
     width: 97.2222222222%;
     float: left;
@@ -1454,6 +1444,9 @@ body.no-max-width .site-footer-inner {
       float: left;
       margin-left: 1.3888888889%;
       margin-right: 1.3888888889%; } }
+
+body.no-max-width .footer-widget-area {
+  max-width: none; }
 
 .site-info-wrapper {
   padding: 1.5em 0; }
@@ -1590,6 +1583,12 @@ body.no-max-width .site-info-wrapper .site-info {
   margin: 0 0 1.5em;
   padding: 2em;
   background-color: #fff; }
+  @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
+    .widget {
+      padding: 1.5em; } }
+  @media only screen and (max-width: 40.063em) {
+    .widget {
+      padding: 1em; } }
   .widget input[type="text"],
   .widget input[type="email"],
   .widget input[type="url"],
@@ -1670,9 +1669,12 @@ body.no-max-width .site-info-wrapper .site-info {
   margin: 0 0 1.5em;
   padding: 2.5em 3.375em;
   background-color: #fff; }
+  @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
+    .hentry {
+      padding: 1.5em 2.375em; } }
   @media only screen and (max-width: 40.063em) {
     .hentry {
-      padding: 1.5em; } }
+      padding: 1em; } }
   .hentry .entry-title a,
   .hentry .entry-title a:visited {
     color: #252f31; }
@@ -1724,9 +1726,12 @@ body.no-max-width .site-info-wrapper .site-info {
   margin: 0 0 1.5em;
   padding: 2.5em 3em;
   background-color: #fff; }
-  @media only screen and (max-width: 40.063em) {
+  @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
     .comments-area {
       padding: 1.5em; } }
+  @media only screen and (max-width: 40.063em) {
+    .comments-area {
+      padding: 1em; } }
 
 .comment-list {
   padding: 0;

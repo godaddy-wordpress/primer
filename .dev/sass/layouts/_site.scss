@@ -3,8 +3,7 @@
 	margin-top: 2em;
 
 	@media #{$medium-down} {
-		@include span(12);
-		margin-top: 7/9 + 2%;
+		margin-top: 7/18 + 1%;
 	}
 }
 
