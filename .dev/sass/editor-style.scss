@@ -1,0 +1,19 @@
+@import "common/variables";
+@import "common/mixins";
+@import "common/normalize";
+@import "components/typography";
+@import "components/elements";
+@import "components/lists";
+@import "components/tables";
+@import "components/forms";
+@import "components/buttons";
+@import "components/links";
+@import "components/media";
+@import "components/captions";
+@import "components/galleries";
+@import "modules/alignments";
+
+body {
+	margin: 20px;
+	background-color: #fff;
+}
