@@ -548,8 +548,6 @@ a {
 # Menus
 --------------------------------------------------------------*/
 .main-navigation-container {
-  display: inline-block;
-  width: 100%;
   background-color: #252f31; }
 
 .main-navigation {
@@ -566,7 +564,6 @@ a {
     margin-right: 1.3888888889%;
     margin-left: 1.3888888889%; }
   .main-navigation ul {
-    display: none;
     list-style: none;
     margin: 0;
     padding-right: 0; }
@@ -603,17 +600,40 @@ a {
   .main-navigation .current_page_ancestor > a,
   .main-navigation .current-menu-ancestor > a {
     background-color: rgba(0, 0, 0, 0.1); }
+  .main-navigation .sub-menu .menu-item-has-children > a::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    left: 10px;
+    top: 50%;
+    border-bottom: 7px solid transparent;
+    border-top: 7px solid transparent;
+    border-right: 7px solid #fff;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
+.menu-toggle {
+  display: none;
+  width: 4rem;
+  padding: 0.6rem;
+  cursor: pointer; }
+  .menu-toggle div {
+    background: #fff;
+    height: 0.25rem;
+    margin: 0.375rem; }
 
-@media screen and (min-width: 37.5em) {
+@media only screen and (max-width: 61.063em) {
   .menu-toggle {
+    display: block; }
+  .main-navigation {
     display: none; }
-  .main-navigation ul {
-    display: block; } }
+    .main-navigation li {
+      float: none; }
+    .main-navigation .menu-main-menu-container {
+      width: 100%;
+      margin: 0; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
