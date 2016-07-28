@@ -86,12 +86,34 @@
 
 	} );
 
+	api( 'full_width', function( value ) {
+
+		value.bind( function( to ) {
+
+			switch ( parseInt( to, 10 ) ) {
+
+				case 0 :
+
+					$( 'body' ).removeClass( 'no-max-width' );
+
+					break;
+
+				case 1 :
+
+					$( 'body' ).addClass( 'no-max-width' );
+
+					break;
+
+			}
+
+		} );
+
+	} );
+
 	// Header text color.
 	api( 'header_textcolor', function( value ) {
 
 		value.bind( function( to ) {
-
-			var $description = $( '.site-title, .site-description' );
 
 			if ( 'blank' === to ) {
 
