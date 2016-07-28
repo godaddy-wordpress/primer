@@ -8,3 +8,8 @@
 .infinity-end.neverending .site-footer {
 	display: block;
 }
+
+// Always hide the wpstats smiley
+#wpstats{
+	display: none;
+}
