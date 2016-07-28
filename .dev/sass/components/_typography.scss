@@ -13,6 +13,10 @@ textarea {
 	font-weight: normal;
 	@include font-size(1);
 	line-height: $font__line-height-body;
+
+	@media #{$small-only} {
+		@include font-size(0.9);
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {

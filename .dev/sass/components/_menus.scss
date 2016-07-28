@@ -82,6 +82,10 @@
 
 }
 
+body.no-max-width .main-navigation {
+	max-width: none;
+}
+
 .menu-toggle {
 	display: none;
 	width: 4rem;
@@ -106,6 +110,10 @@
 
 		li {
 			float: none;
+		}
+
+		a {
+			padding: 1em;
 		}
 
 		.menu-main-menu-container {

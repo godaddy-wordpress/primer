@@ -2,6 +2,10 @@
 	margin: 0 0 1.5em;
 	padding: 2.5em 3em;
 	background-color: #fff;
+
+	@media #{$small-only} {
+		padding: 1.5em;
+	}
 }
 
 .comment-list {
@@ -13,6 +17,10 @@
 
 		&.children {
 			margin-top: 2em;
+
+			@media #{$small-only} {
+				padding-left: 1em;
+			}
 		}
 	}
 
@@ -20,12 +28,20 @@
 		margin-bottom: 2em;
 		padding-left: 32px;
 
+		@media #{$small-only} {
+			padding-left: 0;
+		}
+
 		article {
 			padding-left: 1em;
+
+			@media #{$small-only} {
+				padding-left: 0;
+			}
 		}
 
 		.comment-metadata {
-			font-size: 0.85em;
+			font-size: 85%;
 
 			.edit-link {
 				float: right;
@@ -47,6 +63,11 @@
 		float: left;
 		margin-left: calc(-1em - 32px);
 		border-radius: 3px;
+
+		@media #{$small-only} {
+			display: none;
+			margin: 0;
+		}
 	}
 
 	.says {
@@ -59,5 +80,5 @@
 }
 
 .logged-in-as {
-	font-size: 0.9em;
+	font-size: 90%;
 }

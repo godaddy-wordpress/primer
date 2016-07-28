@@ -2,59 +2,90 @@
 	background-color: $color__background-footer;
 }
 
-.site-footer-inner,
-.site-info {
+.site-footer-inner {
 	@include container($container-size);
+}
+
+body.no-max-width .site-footer-inner {
+	max-width: none;
 }
 
 .footer-widget-area {
 	@include span(12);
 	padding: 2em 0;
-}
 
-@media #{$large-up} {
-
-	.footer-widget-area {
-
-		&.columns-2 {
-			@include span(6);
-		}
-
-		&.columns-3 {
-			@include span(4);
-		}
-
-		&.columns-4 {
-			@include span(3);
-		}
-
+	&.columns-2 {
+		@include span(6);
 	}
 
+	&.columns-3 {
+		@include span(4);
+	}
+
+	&.columns-4 {
+		@include span(3);
+	}
+
+	@media #{$medium-down} {
+		@include span(12);
+	}
 }
 
 .site-info-wrapper {
 	padding: 1.5em 0;
 
-	@media #{$large-up} {
-
-		.site-info-text,
-		.social-menu {
-			width: 50%;
-		}
-
-		.site-info-text {
-			float: left;
-		}
-
-		.social-menu {
-			float: right;
-		}
-
+	.site-info {
+		@include container($container-size);
 	}
 
+	.site-info-text {
+		font-size: 90%;
+		line-height: 38px;
+	}
+
+	.site-info-text,
+	.social-menu {
+		@include span(6);
+
+		@media #{$small-only} {
+			@include span(12);
+			text-align: center;
+		}
+	}
+}
+
+body.no-max-width .site-info-wrapper .site-info {
+	max-width: none;
 }
 
 .social-menu {
+	text-align: right;
+
+	@media #{$small-only} {
+		margin-top: 1em;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+
+		li {
+			display: inline-block;
+			position: relative;
+			padding: 0;
+			margin: 3px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
 
 	a {
 		@extend .genericon;
@@ -79,7 +110,6 @@
 		&:hover{
 			background-color: $color__link;
 		}
-
 	}
 
 	a[href*="wordpress.org"]:before,
@@ -89,7 +119,6 @@
 		&:hover{
 			color: #21759b;
 		}
-
 	}
 
 	a[href*="facebook.com"]:before {
@@ -98,7 +127,6 @@
 		&:hover{
 			color: #3b5998;
 		}
-
 	}
 
 	a[href*="twitter.com"]:before {
@@ -107,7 +135,6 @@
 		&:hover{
 			color: #33ccff;
 		}
-
 	}
 
 	a[href*="dribbble.com"]:before {
@@ -116,7 +143,6 @@
 		&:hover{
 			color: #ea4c89;
 		}
-
 	}
 
 	a[href*="plus.google.com"]:before {
@@ -125,7 +151,6 @@
 		&:hover{
 			color: #dd4b39;
 		}
-
 	}
 
 	a[href*="pinterest.com"]:before {
@@ -134,7 +159,6 @@
 		&:hover{
 			color: #c8232c;
 		}
-
 	}
 
 	a[href*="github.com"]:before {
@@ -143,7 +167,6 @@
 		&:hover{
 			color: #171515;
 		}
-
 	}
 
 	a[href*="tumblr.com"]:before {
@@ -152,7 +175,6 @@
 		&:hover{
 			color: #34526f;
 		}
-
 	}
 
 	a[href*="youtube.com"]:before {
@@ -161,7 +183,6 @@
 		&:hover{
 			color: #c4302b;
 		}
-
 	}
 
 	a[href*="flickr.com"]:before {
@@ -170,7 +191,6 @@
 		&:hover{
 			color: #ff0084;
 		}
-
 	}
 
 	a[href*="vimeo.com"]:before {
@@ -179,7 +199,6 @@
 		&:hover{
 			color: #1ab7ea;
 		}
-
 	}
 
 	a[href*="instagram.com"]:before {
@@ -188,7 +207,6 @@
 		&:hover{
 			color: #3f729b;
 		}
-
 	}
 
 	a[href*="codepen.io"]:before {
@@ -197,7 +215,6 @@
 		&:hover{
 			color: #000;
 		}
-
 	}
 
 	a[href*="linkedin.com"]:before {
@@ -206,25 +223,5 @@
 		&:hover{
 			color: #0e76a8;
 		}
-
 	}
-
-	ul {
-		list-style: none;
-		text-align: center;
-		margin: 0 1.25em 0 0;
-		margin: 0 1.25rem 0 0;
-		font-size: 0;
-		text-align: right;
-
-		li {
-			display: inline-block;
-			position: relative;
-			padding: 0;
-			margin: 3px;
-		}
-
-	}
-
 }
-

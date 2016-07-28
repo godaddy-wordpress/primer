@@ -1,6 +1,15 @@
 .site-content {
 	@include container($container-size);
 	margin-top: 2em;
+
+	@media #{$medium-down} {
+		@include span(12);
+		margin-top: 7/9 + 2%;
+	}
+}
+
+body.no-max-width .site-content {
+	max-width: none;
 }
 
 .content-area {

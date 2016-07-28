@@ -6,9 +6,17 @@
 	@include container($container-size);
 }
 
+body.no-max-width .site-header-wrapper {
+	max-width: none;
+}
+
 .site-title-wrapper {
 	@include span(12);
-	padding: 2.375em 0;
+	padding: 2.375rem 1rem;
+
+	@media #{$small-only} {
+		padding: 1.5rem 0.75rem;
+	}
 }
 
 .site-title {
