@@ -11,23 +11,29 @@ body.no-max-width .site-footer-inner {
 }
 
 .footer-widget-area {
-	@include span(12);
 	padding: 2em 0;
 
-	&.columns-2 {
-		@include span(6);
-	}
-
-	&.columns-3 {
-		@include span(4);
-	}
-
-	&.columns-4 {
-		@include span(3);
-	}
-
-	@media #{$medium-down} {
+	.footer-widget {
 		@include span(12);
+
+		@media #{$small-only} {
+			margin-bottom: 1em;
+		}
+	}
+
+	@media #{$medium-up} {
+
+		&.columns-2 .footer-widget {
+			@include span(6);
+		}
+
+		&.columns-3 .footer-widget {
+			@include span(4);
+		}
+
+		&.columns-4 .footer-widget {
+			@include span(3);
+		}
 	}
 }
 

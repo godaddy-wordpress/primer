@@ -1426,29 +1426,28 @@ body.no-max-width .site-footer-inner {
   max-width: none; }
 
 .footer-widget-area {
-  width: 97.2222222222%;
-  float: left;
-  margin-left: 1.3888888889%;
-  margin-right: 1.3888888889%;
   padding: 2em 0; }
-  .footer-widget-area.columns-2 {
-    width: 47.2222222222%;
+  .footer-widget-area .footer-widget {
+    width: 97.2222222222%;
     float: left;
     margin-left: 1.3888888889%;
     margin-right: 1.3888888889%; }
-  .footer-widget-area.columns-3 {
-    width: 30.5555555556%;
-    float: left;
-    margin-left: 1.3888888889%;
-    margin-right: 1.3888888889%; }
-  .footer-widget-area.columns-4 {
-    width: 22.2222222222%;
-    float: left;
-    margin-left: 1.3888888889%;
-    margin-right: 1.3888888889%; }
-  @media only screen and (max-width: 61.063em) {
-    .footer-widget-area {
-      width: 97.2222222222%;
+    @media only screen and (max-width: 40.063em) {
+      .footer-widget-area .footer-widget {
+        margin-bottom: 1em; } }
+  @media only screen and (min-width: 40.063em) {
+    .footer-widget-area.columns-2 .footer-widget {
+      width: 47.2222222222%;
+      float: left;
+      margin-left: 1.3888888889%;
+      margin-right: 1.3888888889%; }
+    .footer-widget-area.columns-3 .footer-widget {
+      width: 30.5555555556%;
+      float: left;
+      margin-left: 1.3888888889%;
+      margin-right: 1.3888888889%; }
+    .footer-widget-area.columns-4 .footer-widget {
+      width: 22.2222222222%;
       float: left;
       margin-left: 1.3888888889%;
       margin-right: 1.3888888889%; } }
@@ -1626,6 +1625,25 @@ body.no-max-width .site-info-wrapper .site-info {
 
 .footer-widget .widget:last-child {
   margin-bottom: 0; }
+
+#secondary .widget_search {
+  padding: 0; }
+
+.widget_search .search-field {
+  width: 100%;
+  background: #fff;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .widget_search .search-field:focus {
+    background: #fff; }
+  .widget_search .search-field::-webkit-search-cancel-button {
+    z-index: 1; }
+
+.widget_search .search-submit {
+  display: none; }
 
 /*--------------------------------------------------------------
 # Content

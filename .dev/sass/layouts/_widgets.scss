@@ -63,3 +63,29 @@
 .footer-widget .widget:last-child {
 	margin-bottom: 0;
 }
+
+.widget_search {
+
+	#secondary & {
+		padding: 0;
+	}
+
+	.search-field {
+		width: 100%;
+		background: #fff;
+		border-radius: 0;
+		box-sizing: border-box;
+
+		&:focus {
+			background: #fff;
+		}
+
+		&::-webkit-search-cancel-button {
+			z-index: 1;
+		}
+	}
+
+	.search-submit {
+		display: none;
+	}
+}
