@@ -11,6 +11,10 @@ body.no-max-width .site-content {
 	max-width: none;
 }
 
+body.layout-one-column-narrow .site-content {
+	@include container(66.66667%);
+}
+
 .content-area {
 	@include span(first 8);
 
@@ -38,6 +42,18 @@ body.no-max-width .site-content {
 @media #{$large-up} {
 
 	body {
+
+		&.layout-one-column-wide,
+		&.layout-one-column-narrow,
+		&.page-template-page-builder {
+
+			.content-area,
+			#secondary,
+			#tertiary {
+				@include span(12);
+			}
+
+		}
 
 		&.layout-two-column-default {
 
@@ -97,14 +113,14 @@ body.no-max-width .site-content {
 
 		}
 
-		&.layout-three-column-centered {
+		&.layout-three-column-center {
 
 			.content-area {
-				@include span(6 at 4);
+				@include span(6 at 4) @include push(3 of 12);
 			}
 
 			#secondary {
-				@include span(first 3);
+				@include span(first 3) @include pull(9 of 12);
 			}
 
 			#tertiary {

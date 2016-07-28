@@ -167,6 +167,7 @@ module.exports = function(grunt) {
 
 		sass: {
 			options: {
+				precision: 5,
 				sourceMap: false
 			},
 			dist: {

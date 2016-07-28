@@ -17,16 +17,46 @@
 
 	@media #{$medium-up} {
 
-		&.columns-2 .footer-widget {
-			@include span(6);
+		&.columns-2 {
+
+			&:nth-child(1) {
+				@include span(first 6);
+			}
+
+			&:nth-child(2) {
+				@include span(last 6);
+			}
 		}
 
 		&.columns-3 .footer-widget {
-			@include span(4);
+
+			&:nth-child(1) {
+				@include span(first 4);
+			}
+
+			&:nth-child(2) {
+				@include span(4);
+			}
+
+			&:nth-child(3) {
+				@include span(last 4);
+			}
 		}
 
 		&.columns-4 .footer-widget {
-			@include span(3);
+
+			&:nth-child(1) {
+				@include span(first 3);
+			}
+
+			&:nth-child(2),
+			&:nth-child(3) {
+				@include span(3);
+			}
+
+			&:nth-child(4) {
+				@include span(last 4);
+			}
 		}
 	}
 }
