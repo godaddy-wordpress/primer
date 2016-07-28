@@ -24,7 +24,7 @@ window.wp = window.wp || {};
 
 				if ( 'layout' !== this.id ) {
 
-					api.Setting.prototype.preview.apply( this, arguments );
+					oldApiSetting.prototype.preview.apply( this, arguments );
 
 					return;
 
