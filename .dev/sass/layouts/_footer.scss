@@ -104,15 +104,21 @@ body.no-max-width .site-info-wrapper .site-info {
 		background-color: $color__text-main;
 		border-radius: 3px;
 
-		&:before{
+		&:visited {
+			color: $color__background-body;
+		}
+
+		&:before {
 			-webkit-font-smoothing: subpixel-antialiased;
 			padding: 7px;
 			display: inline-block;
 			font-size: 18px;
 		}
 
-		&:hover{
+		&:hover,
+		&:visited:hover {
 			background-color: $color__link;
+			color: $color__background-body;
 		}
 	}
 
@@ -120,7 +126,7 @@ body.no-max-width .site-info-wrapper .site-info {
 	a[href*="wordpress.com"]:before {
 		content: '\f205';
 
-		&:hover{
+		&:hover {
 			color: #21759b;
 		}
 	}
@@ -128,7 +134,7 @@ body.no-max-width .site-info-wrapper .site-info {
 	a[href*="facebook.com"]:before {
 		content: '\f203';
 
-		&:hover{
+		&:hover {
 			color: #3b5998;
 		}
 	}
@@ -136,7 +142,7 @@ body.no-max-width .site-info-wrapper .site-info {
 	a[href*="twitter.com"]:before {
 		content: '\f202';
 
-		&:hover{
+		&:hover {
 			color: #33ccff;
 		}
 	}
@@ -144,7 +150,7 @@ body.no-max-width .site-info-wrapper .site-info {
 	a[href*="dribbble.com"]:before {
 		content: '\f201';
 
-		&:hover{
+		&:hover {
 			color: #ea4c89;
 		}
 	}
@@ -152,7 +158,7 @@ body.no-max-width .site-info-wrapper .site-info {
 	a[href*="plus.google.com"]:before {
 		content: '\f206';
 
-		&:hover{
+		&:hover {
 			color: #dd4b39;
 		}
 	}
@@ -160,7 +166,7 @@ body.no-max-width .site-info-wrapper .site-info {
 	a[href*="pinterest.com"]:before {
 		content: '\f210';
 
-		&:hover{
+		&:hover {
 			color: #c8232c;
 		}
 	}
@@ -168,7 +174,7 @@ body.no-max-width .site-info-wrapper .site-info {
 	a[href*="github.com"]:before {
 		content: '\f200';
 
-		&:hover{
+		&:hover {
 			color: #171515;
 		}
 	}
@@ -176,7 +182,7 @@ body.no-max-width .site-info-wrapper .site-info {
 	a[href*="tumblr.com"]:before {
 		content: '\f214';
 
-		&:hover{
+		&:hover {
 			color: #34526f;
 		}
 	}
@@ -184,7 +190,7 @@ body.no-max-width .site-info-wrapper .site-info {
 	a[href*="youtube.com"]:before {
 		content: '\f213';
 
-		&:hover{
+		&:hover {
 			color: #c4302b;
 		}
 	}
@@ -192,7 +198,7 @@ body.no-max-width .site-info-wrapper .site-info {
 	a[href*="flickr.com"]:before {
 		content: '\f211';
 
-		&:hover{
+		&:hover {
 			color: #ff0084;
 		}
 	}
@@ -200,7 +206,7 @@ body.no-max-width .site-info-wrapper .site-info {
 	a[href*="vimeo.com"]:before {
 		content: '\f212';
 
-		&:hover{
+		&:hover {
 			color: #1ab7ea;
 		}
 	}
@@ -208,7 +214,7 @@ body.no-max-width .site-info-wrapper .site-info {
 	a[href*="instagram.com"]:before {
 		content: '\f215';
 
-		&:hover{
+		&:hover {
 			color: #3f729b;
 		}
 	}
@@ -216,7 +222,7 @@ body.no-max-width .site-info-wrapper .site-info {
 	a[href*="codepen.io"]:before {
 		content: '\f216';
 
-		&:hover{
+		&:hover {
 			color: #000;
 		}
 	}
@@ -224,7 +230,7 @@ body.no-max-width .site-info-wrapper .site-info {
 	a[href*="linkedin.com"]:before {
 		content: '\f208';
 
-		&:hover{
+		&:hover {
 			color: #0e76a8;
 		}
 	}

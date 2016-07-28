@@ -55,8 +55,10 @@
 		padding: 1.5em 1em;
 		color: $color__text-menu;
 
-		&:hover {
+		&:hover,
+		&:visited:hover {
 			background-color: $color__background-menu-hover;
+			color: $color__text-menu;
 		}
 	}
 
@@ -93,7 +95,7 @@ body.no-max-width .main-navigation {
 	cursor: pointer;
 
 	div {
-		background: $color__text-menu;
+		background-color: $color__text-menu;
 		height: 0.25rem;
 		margin: 0.375rem;
 	}

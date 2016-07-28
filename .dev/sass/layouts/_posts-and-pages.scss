@@ -1,25 +1,3 @@
-.sticky {
-	display: block;
-
-	@media #{$medium-up} {
-
-		.entry-title {
-			position: relative;
-
-			a:before {
-				font-family: 'Genericons';
-				content: '\f308';
-				color: $color__text-main;
-				line-height: $font__line-height-headings;
-				position: absolute;
-				top: 2px;
-				left: -40px;
-				opacity: 0.2;
-			}
-		}
-	}
-}
-
 .hentry {
 	margin: 0 0 1.5em;
 	padding: 2.5em 3.375em;
@@ -32,18 +10,40 @@
 	@media #{$small-only} {
 		padding: 1em;
 	}
+}
 
-	.entry-title {
+.sticky {
+	display: block;
 
-		a,
-		a:visited {
-			color: $color__text-main;
+	@media #{$medium-up} {
+
+		.entry-title {
+			position: relative;
+
+			a:before {
+				font-family: 'Genericons';
+				content: '\f308';
+				line-height: $font__line-height-headings;
+				position: absolute;
+				top: 2px;
+				left: -40px;
+				opacity: 0.2;
+			}
 		}
+	}
+}
 
-		a:hover,
-		a:visited:hover {
-			color: $color__link;
-		}
+.entry-title {
+
+	a,
+	a:visited,
+	a:before {
+		color: $color__text-main;
+	}
+
+	a:hover,
+	a:visited:hover {
+		color: $color__link;
 	}
 }
 
