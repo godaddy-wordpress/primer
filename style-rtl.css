@@ -1315,9 +1315,7 @@ body.layout-one-column-narrow .site-content {
   body.layout-one-column-wide #secondary,
   body.layout-one-column-wide #tertiary, body.layout-one-column-narrow .content-area,
   body.layout-one-column-narrow #secondary,
-  body.layout-one-column-narrow #tertiary, body.page-template-page-builder .content-area,
-  body.page-template-page-builder #secondary,
-  body.page-template-page-builder #tertiary {
+  body.layout-one-column-narrow #tertiary {
     width: 97.22222%;
     float: right;
     margin-right: 1.38889%;
@@ -1392,6 +1390,14 @@ body.layout-one-column-narrow .site-content {
     margin-right: 1.38889%;
     margin-left: 1.38889%;
     display: block; } }
+
+body.page-template-page-builder .content-area,
+body.page-template-page-builder #secondary,
+body.page-template-page-builder #tertiary {
+  width: 97.22222%;
+  float: right;
+  margin-right: 1.38889%;
+  margin-left: 1.38889%; }
 
 /*--------------------------------------------------------------
 # Header

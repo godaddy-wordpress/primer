@@ -44,8 +44,7 @@ body.layout-one-column-narrow .site-content {
 	body {
 
 		&.layout-one-column-wide,
-		&.layout-one-column-narrow,
-		&.page-template-page-builder {
+		&.layout-one-column-narrow {
 
 			.content-area,
 			#secondary,
@@ -130,6 +129,16 @@ body.layout-one-column-narrow .site-content {
 
 		}
 
+	}
+
+}
+
+body.page-template-page-builder {
+
+	.content-area,
+	#secondary,
+	#tertiary {
+		@include span(12);
 	}
 
 }
