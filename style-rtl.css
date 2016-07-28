@@ -1426,6 +1426,8 @@ body.no-max-width .site-footer-inner {
   max-width: none; }
 
 .footer-widget-area {
+  display: inline-block;
+  width: 100%;
   padding: 2em 0; }
   .footer-widget-area .footer-widget {
     width: 97.2222222222%;
