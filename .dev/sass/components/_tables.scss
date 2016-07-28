@@ -11,18 +11,22 @@ table {
 		padding: 0.5em;
 		text-align: left;
 		border: 1px solid $color__border;
+		border-left: none;
+		border-right: none;
 	}
 
 	thead th {
 		border-bottom-width: 2px;
+		border-top: none;
 	}
 
 	tfoot th {
 		border-top-width: 2px;
+		border-bottom: none;
 	}
 
 	tr:hover td {
-		background-color: #f9f9f9;
+		background-color: rgba($color__border, 0.075);
 	}
 
 }

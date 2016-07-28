@@ -312,7 +312,7 @@ pre {
   max-width: 100%;
   overflow: auto;
   padding: 1em;
-  border: 1px solid rgba(117, 117, 117, 0.25);
+  border: 1px solid rgba(153, 153, 153, 0.15);
   -webkit-border-radius: 2px;
   border-radius: 2px; }
 
@@ -324,7 +324,7 @@ code, kbd, tt, var {
 code {
   padding: 0.125rem 0.25rem;
   background-color: #eee;
-  border: 1px solid rgba(117, 117, 117, 0.25);
+  border: 1px solid rgba(153, 153, 153, 0.15);
   -webkit-border-radius: 2px;
   border-radius: 2px; }
 
@@ -334,7 +334,7 @@ pre code {
   background-color: none; }
 
 abbr, acronym {
-  border-bottom: 1px dotted rgba(117, 117, 117, 0.25);
+  border-bottom: 1px dotted rgba(153, 153, 153, 0.15);
   cursor: help; }
 
 mark, ins {
@@ -369,7 +369,7 @@ blockquote, q {
     content: ""; }
 
 hr {
-  background-color: rgba(117, 117, 117, 0.25);
+  background-color: rgba(153, 153, 153, 0.15);
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -414,16 +414,20 @@ table {
 .hentry table td {
   padding: 0.5em;
   text-align: right;
-  border: 1px solid rgba(117, 117, 117, 0.25); }
+  border: 1px solid rgba(153, 153, 153, 0.15);
+  border-right: none;
+  border-left: none; }
 
 .hentry table thead th {
-  border-bottom-width: 2px; }
+  border-bottom-width: 2px;
+  border-top: none; }
 
 .hentry table tfoot th {
-  border-top-width: 2px; }
+  border-top-width: 2px;
+  border-bottom: none; }
 
 .hentry table tr:hover td {
-  background-color: #f9f9f9; }
+  background-color: rgba(153, 153, 153, 0.075); }
 
 .widget table caption {
   padding: 0 0.5em 0.5em;
@@ -452,8 +456,8 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  color: rgba(37, 47, 49, 0.8);
-  border: 1px solid rgba(117, 117, 117, 0.25);
+  color: rgba(37, 47, 49, 0.5);
+  border: 1px solid rgba(153, 153, 153, 0.15);
   -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 0.75rem;
@@ -485,14 +489,14 @@ input[type="file"] {
   font-size: 0.85rem; }
 
 select {
-  border: 1px solid rgba(117, 117, 117, 0.25); }
+  border: 1px solid rgba(153, 153, 153, 0.15); }
 
 textarea {
   width: 100%; }
 
 fieldset {
   padding: 0.5em 1.5em;
-  border-color: rgba(117, 117, 117, 0.25); }
+  border-color: rgba(153, 153, 153, 0.15); }
 
 legend {
   padding: 0 1em;
