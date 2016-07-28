@@ -1404,6 +1404,9 @@ body.no-max-width .site-header-wrapper {
     .site-title a:hover, .site-title a:visited:hover {
       color: rgba(37, 47, 49, 0.8); }
 
+.header-image img {
+  display: block; }
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/

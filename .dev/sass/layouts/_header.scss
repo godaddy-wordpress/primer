@@ -33,5 +33,8 @@ body.no-max-width .site-header-wrapper {
 			color: rgba($header-textcolor, 0.8);
 		}
 	}
+}
 
+.header-image img {
+	display: block;
 }
