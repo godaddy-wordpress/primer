@@ -53,9 +53,27 @@ class Primer_Customizer_Layouts {
 
 		}
 
-		add_action( 'after_setup_theme', array( $this, 'theme_support' ), 11 );
-		add_action( 'init',              array( $this, 'rtl_layouts' ), 11 );
-		add_action( 'init',              array( $this, 'post_type_support' ), 11 );
+		/**
+		 * Filter the default layout.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var string
+		 */
+		$default       = (string) apply_filters( 'primer_default_layout', $this->default );
+		$this->default = $this->layout_exists( $default ) ? $default : ( $this->layout_exists( $this->default ) ? $this->default : key( $this->layouts ) );
+
+		/**
+		 * Filter if post/page overrides via meta box should be enabled.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var bool
+		 */
+		$this->meta_box = (bool) apply_filters( 'primer_layouts_meta_box_enabled', $this->meta_box );
+
+		add_action( 'init', array( $this, 'rtl_layouts' ), 11 );
+		add_action( 'init', array( $this, 'post_type_support' ), 11 );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 		add_action( 'load-post.php',         array( $this, 'load_post' ) );
@@ -65,22 +83,6 @@ class Primer_Customizer_Layouts {
 		add_action( 'customize_register', array( $this, 'customize_register' ) );
 
 		add_filter( 'body_class', array( $this, 'body_class' ) );
-
-	}
-
-	/**
-	 * Apply theme support args.
-	 *
-	 * @action after_setup_theme
-	 * @since  1.0.0
-	 */
-	public function theme_support() {
-
-		$args    = (array) get_theme_support( 'primer-layouts' );
-		$layouts = array_keys( $this->layouts );
-
-		$this->default  = ( ! empty( $args[0] ) && $this->layout_exists( $args[0] ) ) ? $args[0] : ( $this->layout_exists( $this->default ) ? $this->default : array_shift( $layouts ) );
-		$this->meta_box = ! empty( $args[1] ) ? (bool) $args[1] : $this->meta_box;
 
 	}
 
@@ -162,9 +164,19 @@ class Primer_Customizer_Layouts {
 		$rtl    = is_rtl() ? '-rtl' : '';
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-		wp_enqueue_script( 'primer-layouts-meta-box', get_template_directory_uri() . "/assets/js/meta-box{$suffix}.js", array( 'jquery' ), PRIMER_VERSION );
+		wp_enqueue_script(
+			'primer-layouts',
+			get_template_directory_uri() . "/assets/js/admin/layouts{$suffix}.js",
+			array( 'jquery' ),
+			PRIMER_VERSION
+		);
 
-		wp_enqueue_style( 'primer-layouts-meta-box', get_template_directory_uri() . "/assets/css/meta-box{$rtl}{$suffix}.css", array(), PRIMER_VERSION );
+		wp_enqueue_style(
+			'primer-layouts',
+			get_template_directory_uri() . "/assets/css/admin/layouts{$rtl}{$suffix}.css",
+			array(),
+			PRIMER_VERSION
+		);
 
 	}
 
@@ -234,19 +246,19 @@ class Primer_Customizer_Layouts {
 	 */
 	public function render_meta_box( WP_Post $post, $box ) {
 
-		$has_custom = ! empty( $this->get_post_layout( $post->ID ) );
-		$global     = $this->get_global_layout();
+		$cur_layout = $this->get_post_layout( $post->ID );
+		$has_custom = ! empty( $cur_layout );
 
 		wp_nonce_field( basename( __FILE__ ), 'primer-layout-nonce' );
 
 		?>
+
 		<div class="primer-layout">
 
-			<p>
 			<?php
 
 			printf(
-				esc_html_x( 'The site-wide Default layout setting is located in the %s.', 'link to the Customizer', 'primer' ),
+				 '<p>' . esc_html_x( 'The site-wide Default layout setting is located in the %s.', 'link to the Customizer', 'primer' ) . '</p>',
 				sprintf(
 					'<a href="%s">%s</a>',
 					add_query_arg( 'autofocus[section]', 'layout', admin_url( 'customize.php' ) ),
@@ -255,44 +267,96 @@ class Primer_Customizer_Layouts {
 			);
 
 			?>
-			</p>
 
 			<p>
-				<label for="primer-layout-use-default"><input type="radio" name="primer-layout-override" id="primer-layout-use-default" value="0" <?php checked( ! $has_custom ) ?> autocomplete="off"><?php _e( 'Default', 'primer' ) ?></label>
-				<label for="primer-layout-use-custom"><input type="radio" name="primer-layout-override" id="primer-layout-use-custom" value="1" <?php checked( $has_custom ) ?> autocomplete="off"><?php _e( 'Custom', 'primer' ) ?></label>
+				<label for="primer-layout-use-default">
+					<input type="radio"
+					       name="primer-layout-override"
+					       id="primer-layout-use-default"
+					       value="0"
+					       autocomplete="off"
+						<?php checked( ! $has_custom ) ?>>
+					<?php _e( 'Default', 'primer' ) ?>
+				</label>
+				<label for="primer-layout-use-custom">
+					<input type="radio"
+					       name="primer-layout-override"
+					       id="primer-layout-use-custom"
+					       value="1"
+					       autocomplete="off"
+						<?php checked( $has_custom ) ?>>
+					<?php _e( 'Custom', 'primer' ) ?>
+				</label>
 				<span class="clear"></span>
 			</p>
 
-			<div class="primer-layout-wrap">
-
-				<ul>
-
-					<?php foreach ( $this->layouts as $layout => $label ) :
-
-						$class = ( $layout === $global ) ? 'active global' : '';
-
-						if ( ! $class ) {
-
-							$class = ( $has_custom ) ? 'active' : 'disabled';
-
-						}
-
-						?>
-						<li class="<?php echo esc_attr( $class ) ?>">
-							<label for="primer-layout-<?php echo esc_attr( $layout ) ?>">
-								<input type="radio" name="primer-layout" id="primer-layout-<?php echo esc_attr( $layout ) ?>" value="<?php echo esc_attr( $layout ) ?>" <?php checked( $this->get_current_layout( $post->ID ), $layout ) ?> <?php disabled( 'disabled' === $class ) ?>>
-								<img src="<?php echo esc_url( sprintf( '%s/assets/layouts/%s%s.svg', get_template_directory_uri(), $layout, is_rtl() ? '-rtl' : '' ) ) ?>" alt="<?php echo esc_attr( $label ) ?>" title="<?php echo esc_attr( $label ) ?>">
-								<span><?php echo esc_html( $label ) ?></span>
-							</label>
-						</li>
-
-					<?php endforeach; ?>
-
-				</ul>
-
-			</div>
+			<?php $this->print_layout_choices( $this->layouts, $post->ID, $cur_layout, $has_custom ); ?>
 
 		</div>
+
+		<?php
+
+	}
+
+	/**
+	 * Print all layouts choices to meta-box or customizer
+	 *
+	 * @param      $layouts
+	 * @param null $post_id
+	 * @param null $cur_layout
+	 * @param bool $has_custom
+	 */
+	public function print_layout_choices( $layouts, $post_id = null, $cur_layout = null, $has_custom = true ) {
+
+		global $wp_customize;
+
+		$global_layout = $this->get_global_layout();
+
+		if ( ! $cur_layout ) {
+
+			$cur_layout = $global_layout;
+
+		}
+
+		$name = isset( $wp_customize ) ? '_customize-radio' : 'primer';
+
+		?>
+
+		<div class="primer-layout-wrap">
+
+			<ul>
+
+				<?php
+
+				foreach ( $layouts as $layout => $label ) :
+
+					$class = ( $has_custom ) ? 'active' : 'disabled';
+					$class .= ( $layout === $global_layout ) ? ' global' : '';
+
+					?>
+
+					<li class="<?php echo esc_attr( $class ) ?>">
+						<label for="primer-layout-<?php echo esc_attr( $layout ) ?>">
+							<input type="radio"
+							       name="<?php echo $name; // xss ok ?>-layout"
+							       data-customize-setting-link="layout"
+							       id="primer-layout-<?php echo esc_attr( $layout ) ?>"
+							       value="<?php echo esc_attr( $layout ) ?>"
+								   <?php checked( $cur_layout, $layout ) ?>
+								   <?php disabled( 'disabled' === $class ) ?>>
+							<img src="<?php echo esc_url( sprintf( '%s/assets/layouts/%s%s.svg', get_template_directory_uri(), $layout, is_rtl() ? '-rtl' : '' ) ) ?>"
+							     alt="<?php echo esc_attr( $label ) ?>"
+							     title="<?php echo esc_attr( $label ) ?>">
+							<span><?php echo esc_html( $label ) ?></span>
+						</label>
+					</li>
+
+				<?php endforeach; ?>
+
+			</ul>
+
+		</div>
+
 		<?php
 
 	}
@@ -355,7 +419,7 @@ class Primer_Customizer_Layouts {
 			array(
 				'title'      => esc_html__( 'Layout', 'primer' ),
 				'priority'   => 30,
-				'capability' => 'edit_theme_options'
+				'capability' => 'edit_theme_options',
 			)
 		);
 
@@ -371,14 +435,17 @@ class Primer_Customizer_Layouts {
 		);
 
 		$wp_customize->add_control(
-			'layout',
-			array(
-				'label'       => esc_html__( 'Default Layout', 'primer' ),
-				'description' => esc_html__( 'All posts and pages on your site will use this layout by default.', 'primer' ),
-				'section'     => 'layout',
-				'settings'    => 'layout',
-				'type'        => 'radio',
-				'choices'     => $this->layouts,
+			new Primer_Customizer_Layouts_Control(
+				$wp_customize,
+				'layout',
+				array(
+					'label'       => esc_html__( 'Default Layout', 'primer' ),
+					'description' => esc_html__( 'All posts and pages on your site will use this layout by default.', 'primer' ),
+					'section'     => 'layout',
+					'settings'    => 'layout',
+					'type'        => 'radio',
+					'choices'     => $this->layouts,
+				)
 			)
 		);
 
@@ -387,11 +454,12 @@ class Primer_Customizer_Layouts {
 			array(
 				'default'           => 0,
 				'sanitize_callback' => 'absint',
+				'transport'         => 'postMessage',
 			)
 		);
 
 		$wp_customize->add_control(
-			'full-width',
+			'full_width',
 			array(
 				'label'       => esc_html__( 'Header & Footer Width', 'primer' ),
 				'description' => esc_html__( 'Set the header and footer width to be fixed or fluid when viewed on large screens.', 'primer' ),
