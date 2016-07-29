@@ -106,10 +106,12 @@ body.no-max-width .main-navigation {
 		&:nth-child(1) {
 			transform: rotate(45deg);
 		}
+
 		&:nth-child(2) {
 			width: 0%;
 			opacity: 0;
 		}
+
 		&:nth-child(3) {
 			transform: rotate(-45deg);
 		}
