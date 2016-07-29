@@ -52,7 +52,10 @@ class Primer_Customizer_Colors {
 					'name'    => 'background_color',
 					'default' => '#f4f5f9',
 					'css'     => array(
-						'body, .social-menu a, .social-menu a:visited, .social-menu a:hover, .social-menu a:visited:hover' => array(
+						'body' => array(
+							'background-color' => '%1$s',
+						),
+						'.social-menu a, .social-menu a:visited, .social-menu a:hover, .social-menu a:visited:hover' => array(
 							'color' => '%1$s',
 						),
 					),
