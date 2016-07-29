@@ -17,7 +17,7 @@
 
 	@media #{$medium-up} {
 
-		&.columns-2 {
+		&.columns-2 .footer-widget {
 
 			&:nth-child(1) {
 				@include span(first 6);

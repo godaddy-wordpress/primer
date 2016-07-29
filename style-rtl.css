@@ -1477,12 +1477,12 @@ body.custom-header-image .site-description {
       .footer-widget-area .footer-widget {
         margin-bottom: 1em; } }
   @media only screen and (min-width: 40.063em) {
-    .footer-widget-area.columns-2:nth-child(1) {
+    .footer-widget-area.columns-2 .footer-widget:nth-child(1) {
       width: 47.22222%;
       float: right;
       margin-right: 1.38889%;
       margin-left: 1.38889%; }
-    .footer-widget-area.columns-2:nth-child(2) {
+    .footer-widget-area.columns-2 .footer-widget:nth-child(2) {
       width: 47.22222%;
       float: left;
       margin-right: 1.38889%;
