@@ -28,7 +28,6 @@ body.no-max-width .site-header-wrapper {
 	letter-spacing: -0.03em;
 	font-weight: 700;
 	font-size: 2em;
-	text-shadow: 1px 1px 20px $color__text-main;
 
 	a {
 		color: $header-textcolor;
@@ -42,7 +41,15 @@ body.no-max-width .site-header-wrapper {
 
 .site-description {
 	color: $color__text-tagline;
-	text-shadow: 1px 1px 20px $color__text-main;
+}
+
+body.custom-header-image {
+
+	.site-title,
+	.site-description {
+		text-shadow: 1px 1px 20px $color__text-main;
+	}
+
 }
 
 .header-image img {

@@ -144,7 +144,7 @@ class Primer_Customizer_Colors {
 						'.social-menu a, .social-menu a:visited' => array(
 							'background-color' => '%1$s',
 						),
-						'.site-title, .site-description' => array(
+						'body.custom-header-image .site-title, body.custom-header-image .site-description' => array(
 							'text-shadow' => '1px 1px 20px %1$s',
 						),
 					),

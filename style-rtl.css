@@ -1436,15 +1436,17 @@ body.no-max-width .site-header-wrapper {
   margin-bottom: 0.25rem;
   letter-spacing: -0.03em;
   font-weight: 700;
-  font-size: 2em;
-  text-shadow: -1px -1px 20px #0b3954; }
+  font-size: 2em; }
   .site-title a {
     color: #0b3954; }
     .site-title a:hover, .site-title a:visited:hover {
       color: rgba(11, 57, 84, 0.8); }
 
 .site-description {
-  color: #7c7c7c;
+  color: #7c7c7c; }
+
+body.custom-header-image .site-title,
+body.custom-header-image .site-description {
   text-shadow: -1px -1px 20px #0b3954; }
 
 .header-image img {
