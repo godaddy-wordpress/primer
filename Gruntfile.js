@@ -228,7 +228,7 @@ module.exports = function(grunt) {
 
 	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask('default', ['sass','autoprefixer','cssjanus','cssmin','jshint','uglify']);
+	grunt.registerTask('default', ['sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify']);
 	grunt.registerTask('lint', ['jshint']);
 	grunt.registerTask('update-pot', ['pot', 'replace:pot']);
 
