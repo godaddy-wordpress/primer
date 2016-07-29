@@ -1,5 +1,8 @@
 .site-header {
 	background-color: $color__background-header;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 
 .site-header-wrapper {
@@ -12,10 +15,11 @@ body.no-max-width .site-header-wrapper {
 
 .site-title-wrapper {
 	@include span(12);
-	padding: 2.375rem 1rem;
+	padding: 7% 1rem;
 
 	@media #{$small-only} {
-		padding: 1.5rem 0.75rem;
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
 	}
 }
 

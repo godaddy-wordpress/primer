@@ -64,7 +64,7 @@
 		do_action( 'primer_before_header' );
 		?>
 
-		<header id="masthead" class="site-header" role="banner">
+		<header id="masthead" class="site-header" role="banner" style="background-image: url(<?php header_image() ?>);">
 
 			<div class="site-header-wrapper">
 

@@ -36,7 +36,7 @@ class Primer_Customizer_Colors {
 			array(
 				array(
 					'name'    => 'header_textcolor',
-					'default' => '#252f31',
+					'default' => '#0b3954',
 					'css'     => array(
 						'.site-title a, .site-title a:visited' => array(
 							'color' => '%1$s',
@@ -50,7 +50,7 @@ class Primer_Customizer_Colors {
 				),
 				array(
 					'name'    => 'background_color',
-					'default' => '#f5f5f5',
+					'default' => '#f4f5f9',
 					'css'     => array(
 						'body, .social-menu a, .social-menu a:visited, .social-menu a:hover, .social-menu a:visited:hover' => array(
 							'color' => '%1$s',
@@ -60,7 +60,7 @@ class Primer_Customizer_Colors {
 				array(
 					'name'    => 'header_background_color',
 					'label'   => esc_html__( 'Header Background Color', 'primer' ),
-					'default' => '#ffffff',
+					'default' => '#fbfbff',
 					'css'     => array(
 						'.site-header' => array(
 							'background-color' => '%1$s',
@@ -70,7 +70,7 @@ class Primer_Customizer_Colors {
 				array(
 					'name'    => 'menu_background_color',
 					'label'   => esc_html__( 'Menu Background Color', 'primer' ),
-					'default' => '#252f31',
+					'default' => '#0b3954',
 					'css'     => array(
 						'.main-navigation-container, .main-navigation ul ul' => array(
 							'background-color' => '%1$s',
@@ -89,7 +89,7 @@ class Primer_Customizer_Colors {
 				array(
 					'name'    => 'footer_background_color',
 					'label'   => esc_html__( 'Footer Background Color', 'primer' ),
-					'default' => '#eeeeee',
+					'default' => '#0b3954',
 					'css'     => array(
 						'.site-footer' => array(
 							'background-color' => '%1$s',
@@ -109,7 +109,7 @@ class Primer_Customizer_Colors {
 				array(
 					'name'    => 'link_color',
 					'label'   => esc_html__( 'Link Color', 'primer' ),
-					'default' => '#1585cf',
+					'default' => '#ff6663',
 					'css'     => array(
 						'a, a:visited, .hentry .entry-title a:hover, .hentry .entry-title a:visited:hover' => array(
 							'color' => '%1$s',
@@ -136,7 +136,7 @@ class Primer_Customizer_Colors {
 				array(
 					'name'    => 'main_text_color',
 					'label'   => esc_html__( 'Main Text Color', 'primer' ),
-					'default' => '#252f31',
+					'default' => '#0b3954',
 					'css'     => array(
 						'body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, .entry-title a, .entry-title a:visited, .entry-title a:before, input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus' => array(
 							'color' => '%1$s',
