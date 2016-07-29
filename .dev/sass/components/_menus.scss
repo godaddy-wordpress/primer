@@ -112,6 +112,7 @@ body.no-max-width .main-navigation {
 			opacity: 0;
 		}
 		&:nth-child(3) {
+			margin-top: 0.01rem;
 			transform: rotate(-45deg);
 		}
 	}

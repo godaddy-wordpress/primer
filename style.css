@@ -666,6 +666,7 @@ body.no-max-width .main-navigation {
     width: 0%;
     opacity: 0; }
   .menu-toggle.open div:nth-child(3) {
+    margin-top: 0.01rem;
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg); }
