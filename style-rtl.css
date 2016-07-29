@@ -1532,31 +1532,31 @@ body.no-max-width .footer-widget-area {
       display: block;
       clear: both; }
   .site-info-wrapper .site-info-text {
-    font-size: 90%;
-    line-height: 38px; }
-  .site-info-wrapper .site-info-text,
-  .site-info-wrapper .social-menu {
     width: 47.22222%;
     float: right;
     margin-right: 1.38889%;
+    margin-left: 1.38889%;
+    font-size: 90%;
+    line-height: 38px; }
+  .site-info-wrapper .social-menu {
+    width: 47.22222%;
+    float: left;
+    margin-right: 1.38889%;
     margin-left: 1.38889%; }
-    @media only screen and (max-width: 40.063em) {
-      .site-info-wrapper .site-info-text,
-      .site-info-wrapper .social-menu {
-        width: 97.22222%;
-        float: right;
-        margin-right: 1.38889%;
-        margin-left: 1.38889%;
-        text-align: center; } }
+  @media only screen and (max-width: 40.063em) {
+    .site-info-wrapper .site-info-text,
+    .site-info-wrapper .social-menu {
+      width: 97.22222%;
+      float: right;
+      margin-right: 1.38889%;
+      margin-left: 1.38889%;
+      text-align: center; } }
 
 body.no-max-width .site-info-wrapper .site-info {
   max-width: none; }
 
 .social-menu {
   text-align: left; }
-  @media only screen and (max-width: 40.063em) {
-    .social-menu {
-      margin-top: 1em; } }
   .social-menu ul {
     list-style: none;
     margin: 0;

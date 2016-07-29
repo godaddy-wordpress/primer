@@ -73,15 +73,19 @@ body.no-max-width .footer-widget-area {
 	}
 
 	.site-info-text {
+		@include span(first 6);
 		font-size: 90%;
 		line-height: 38px;
 	}
 
-	.site-info-text,
 	.social-menu {
-		@include span(6);
+		@include span(last 6);
+	}
 
-		@media #{$small-only} {
+	@media #{$small-only} {
+
+		.site-info-text,
+		.social-menu {
 			@include span(12);
 			text-align: center;
 		}
@@ -94,10 +98,6 @@ body.no-max-width .site-info-wrapper .site-info {
 
 .social-menu {
 	text-align: right;
-
-	@media #{$small-only} {
-		margin-top: 1em;
-	}
 
 	ul {
 		list-style: none;
