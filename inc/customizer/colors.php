@@ -53,7 +53,7 @@ class Primer_Customizer_Colors {
 					'default' => '#f4f5f9',
 					'css'     => array(
 						'body' => array(
-							'background-color' => '%1$s',
+							'background' => '%1$s',
 						),
 						'.social-menu a, .social-menu a:visited, .social-menu a:hover, .social-menu a:visited:hover' => array(
 							'color' => '%1$s',
@@ -114,10 +114,10 @@ class Primer_Customizer_Colors {
 					'label'   => esc_html__( 'Link Color', 'primer' ),
 					'default' => '#ff6663',
 					'css'     => array(
-						'a, a:visited, .hentry .entry-title a:hover, .hentry .entry-title a:visited:hover' => array(
+						'a, a:visited, .entry-title a:hover, .entry-title a:visited:hover' => array(
 							'color' => '%1$s',
 						),
-						'button, a.button, a.button:visited, input[type="button"], input[type="reset"], input[type="submit"], .social-menu a:hover, .social-menu a:visited:hover' => array(
+						'button, a.button, input[type="button"], input[type="reset"], input[type="submit"], .social-menu a:hover' => array(
 							'background-color' => '%1$s',
 						),
 					),
@@ -125,7 +125,7 @@ class Primer_Customizer_Colors {
 						'a:hover, a:visited:hover, a:focus, a:visited:focus, a:active, a:visited:active' => array(
 							'color' => 'rgba(%1$s, 0.8)',
 						),
-						'button:hover, button:active, button:focus, a.button:hover, a.button:active, a.button:focus, a.button:visited:hover, a.button:visited:active, a.button:visited:focus, input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
+						'button:hover, button:active, button:focus, a.button:hover, a.button:active, a.button:focus, input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
 							'background-color' => 'rgba(%1$s, 0.8)',
 						),
 						'button, button:hover, button:active, button:focus, a.button, a.button:hover, a.button:active, a.button:focus, a.button:visited, a.button:visited:hover, a.button:visited:active, a.button:visited:focus, input[type="button"], input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus, input[type="reset"], input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus, input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
@@ -141,10 +141,10 @@ class Primer_Customizer_Colors {
 					'label'   => esc_html__( 'Main Text Color', 'primer' ),
 					'default' => '#0b3954',
 					'css'     => array(
-						'body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, .entry-title a, .entry-title a:visited, .entry-title a:before, input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus' => array(
+						'body, input, select, textarea, h1, h2, h3, h4, h5, h6, .entry-title a, .entry-title a:visited, .entry-title a:before, input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus' => array(
 							'color' => '%1$s',
 						),
-						'.social-menu a, .social-menu a:visited' => array(
+						'.social-menu a' => array(
 							'background-color' => '%1$s',
 						),
 					),

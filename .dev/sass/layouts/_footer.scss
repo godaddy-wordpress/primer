@@ -147,9 +147,12 @@ body.no-max-width .site-info-wrapper .site-info {
 			font-size: 18px;
 		}
 
+		&:hover {
+			background-color: $color__link;
+		}
+
 		&:hover,
 		&:visited:hover {
-			background-color: $color__link;
 			color: $color__background-body;
 		}
 	}

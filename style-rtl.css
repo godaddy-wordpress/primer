@@ -1607,8 +1607,9 @@ body.no-max-width .site-info-wrapper .site-info {
       padding: 7px;
       display: inline-block;
       font-size: 18px; }
+    .social-menu a:hover {
+      background-color: #ff6663; }
     .social-menu a:hover, .social-menu a:visited:hover {
-      background-color: #ff6663;
       color: #f4f5f9; }
   .social-menu a[href*="wordpress.org"]:before,
   .social-menu a[href*="wordpress.com"]:before {
