@@ -1447,7 +1447,7 @@ body.no-max-width .site-header-wrapper {
 
 body.custom-header-image .site-title,
 body.custom-header-image .site-description {
-  text-shadow: 1px 1px 20px #0b3954; }
+  text-shadow: 1px 1px 20px #000; }
 
 .header-image img {
   display: block; }

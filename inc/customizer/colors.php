@@ -36,7 +36,7 @@ class Primer_Customizer_Colors {
 			array(
 				array(
 					'name'    => 'header_textcolor',
-					'default' => '#0b3954',
+					'default' => has_header_image() ? '#f4f5f9' : '#0b3954',
 					'css'     => array(
 						'.site-title a, .site-title a:visited' => array(
 							'color' => '%1$s',
@@ -99,7 +99,7 @@ class Primer_Customizer_Colors {
 				array(
 					'name'    => 'tagline_text_color',
 					'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
-					'default' => '#7c7c7c',
+					'default' => has_header_image() ? '#f4f5f9' : '#7c7c7c',
 					'css'     => array(
 						'.site-description' => array(
 							'color' => '%1$s',
@@ -143,9 +143,6 @@ class Primer_Customizer_Colors {
 						),
 						'.social-menu a, .social-menu a:visited' => array(
 							'background-color' => '%1$s',
-						),
-						'body.custom-header-image .site-title, body.custom-header-image .site-description' => array(
-							'text-shadow' => '1px 1px 20px %1$s',
 						),
 					),
 					'rgba_css' => array(
@@ -361,14 +358,7 @@ class Primer_Customizer_Colors {
 
 		$default = $this->get_default_color( $color['name'], 'default' );
 		$hex     = trim( get_theme_mod( $color['name'], $default ), '#' );
-
-		if ( $hex === $default ) {
-
-			return;
-
-		}
-
-		$css = sprintf( Primer_Customizer::parse_css_rules( $color['css'] ), '#' . $hex );
+		$css     = sprintf( Primer_Customizer::parse_css_rules( $color['css'] ), '#' . $hex );
 
 		if ( ! empty( $color['rgba_css'] ) ) {
 
