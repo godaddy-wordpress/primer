@@ -97,7 +97,23 @@ body.no-max-width .main-navigation {
 	div {
 		background-color: $color__text-menu;
 		height: 0.25rem;
-		margin: 0.375rem;
+		margin: 0.43rem;
+		transform: rotate(0deg);
+		transition: .15s ease-in-out;
+		transform-origin: left center;
+	}
+
+	&.open div {
+		&:nth-child(1) {
+			transform: rotate(45deg);
+		}
+		&:nth-child(2) {
+			width: 0%;
+			opacity: 0;
+		}
+		&:nth-child(3) {
+			transform: rotate(-45deg);
+		}
 	}
 }
 
