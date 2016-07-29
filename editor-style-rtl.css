@@ -199,7 +199,7 @@ button,
 input,
 select,
 textarea {
-  color: #0b3954;
+  color: #0b3951;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -221,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   line-height: 1.4;
   text-rendering: optimizeLegibility;
-  color: #0b3954; }
+  color: #0b3951; }
 
 h1 {
   font-size: 2.5em; }
@@ -254,7 +254,7 @@ blockquote {
   line-height: 1.4;
   margin: 1em 0;
   padding-right: 1em;
-  border-right: 4px solid rgba(11, 57, 84, 0.1);
+  border-right: 4px solid rgba(11, 57, 81, 0.1);
   color: #686868; }
 
 address {
@@ -270,7 +270,7 @@ pre {
   max-width: 100%;
   overflow: auto;
   padding: 1em;
-  border: 1px solid rgba(11, 57, 84, 0.1);
+  border: 1px solid rgba(11, 57, 81, 0.1);
   -webkit-border-radius: 2px;
   border-radius: 2px; }
 
@@ -282,7 +282,7 @@ code, kbd, tt, var {
 code {
   padding: 0.125rem 0.25rem;
   background-color: #eee;
-  border: 1px solid rgba(11, 57, 84, 0.1);
+  border: 1px solid rgba(11, 57, 81, 0.1);
   -webkit-border-radius: 2px;
   border-radius: 2px; }
 
@@ -292,7 +292,7 @@ pre code {
   background-color: none; }
 
 abbr, acronym {
-  border-bottom: 1px dotted rgba(11, 57, 84, 0.1);
+  border-bottom: 1px dotted rgba(11, 57, 81, 0.1);
   cursor: help; }
 
 mark, ins {
@@ -324,7 +324,7 @@ blockquote, q {
     content: ""; }
 
 hr {
-  background-color: rgba(11, 57, 84, 0.1);
+  background-color: rgba(11, 57, 81, 0.1);
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -363,7 +363,7 @@ table {
 .hentry table td {
   padding: 0.5em;
   text-align: right;
-  border: 1px solid rgba(11, 57, 84, 0.1);
+  border: 1px solid rgba(11, 57, 81, 0.1);
   border-right: none;
   border-left: none; }
 
@@ -376,7 +376,7 @@ table {
   border-bottom: none; }
 
 .hentry table tr:hover td {
-  background-color: rgba(11, 57, 84, 0.075); }
+  background-color: rgba(11, 57, 81, 0.075); }
 
 .widget table caption {
   padding: 0 0.5em 0.5em;
@@ -402,8 +402,8 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  color: rgba(11, 57, 84, 0.5);
-  border: 1px solid rgba(11, 57, 84, 0.1);
+  color: rgba(11, 57, 81, 0.5);
+  border: 1px solid rgba(11, 57, 81, 0.1);
   -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 0.75rem;
@@ -424,7 +424,7 @@ textarea {
   input[type="datetime-local"]:focus,
   input[type="color"]:focus,
   textarea:focus {
-    color: #0b3954; }
+    color: #0b3951; }
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -435,14 +435,14 @@ input[type="file"] {
   font-size: 0.85rem; }
 
 select {
-  border: 1px solid rgba(11, 57, 84, 0.1); }
+  border: 1px solid rgba(11, 57, 81, 0.1); }
 
 textarea {
   width: 100%; }
 
 fieldset {
   padding: 0.5em 1.5em;
-  border-color: rgba(11, 57, 84, 0.1); }
+  border-color: rgba(11, 57, 81, 0.1); }
 
 legend {
   padding: 0 1em;

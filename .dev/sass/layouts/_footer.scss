@@ -5,6 +5,7 @@
 
 .footer-widget-area {
 	@include container($container-size);
+
 	padding: 2em 0;
 
 	.footer-widget {
@@ -18,7 +19,6 @@
 	@media #{$medium-up} {
 
 		&.columns-2 .footer-widget {
-
 			&:nth-child(1) {
 				@include span(first 6);
 			}
@@ -29,7 +29,6 @@
 		}
 
 		&.columns-3 .footer-widget {
-
 			&:nth-child(1) {
 				@include span(first 4);
 			}
@@ -44,7 +43,6 @@
 		}
 
 		&.columns-4 .footer-widget {
-
 			&:nth-child(1) {
 				@include span(first 3);
 			}
@@ -74,6 +72,7 @@ body.no-max-width .footer-widget-area {
 
 	.site-info-text {
 		@include span(first 6);
+
 		font-size: 90%;
 		line-height: 38px;
 	}
@@ -87,6 +86,7 @@ body.no-max-width .footer-widget-area {
 		.site-info-text,
 		.social-menu {
 			@include span(12);
+
 			text-align: center;
 		}
 	}
@@ -123,7 +123,9 @@ body.no-max-width .site-info-wrapper .site-info {
 
 	a {
 		@extend .genericon;
+
 		@extend .genericon-link;
+
 		font-size: 0;
 		text-indent: -9999em;
 		border: 0;

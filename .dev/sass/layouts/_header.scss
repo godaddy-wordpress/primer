@@ -15,6 +15,7 @@ body.no-max-width .site-header-wrapper {
 
 .site-title-wrapper {
 	@include span(12);
+
 	padding: 7% 1rem;
 
 	@media #{$small-only} {
@@ -44,12 +45,10 @@ body.no-max-width .site-header-wrapper {
 }
 
 body.custom-header-image {
-
 	.site-title,
 	.site-description {
 		text-shadow: 1px 1px 20px #000;
 	}
-
 }
 
 .header-image img {

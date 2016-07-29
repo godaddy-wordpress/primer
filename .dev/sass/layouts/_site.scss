@@ -1,9 +1,10 @@
 .site-content {
 	@include container($container-size);
+
 	margin-top: 2em;
 
 	@media #{$medium-down} {
-		margin-top: 7/18 + 1%;
+		margin-top: 7 / 18 + 1%;
 	}
 }
 
@@ -42,20 +43,16 @@ body.layout-one-column-narrow .site-content {
 @media #{$large-up} {
 
 	body {
-
 		&.layout-one-column-wide,
 		&.layout-one-column-narrow {
-
 			.content-area,
 			#secondary,
 			#tertiary {
 				@include span(12);
 			}
-
 		}
 
 		&.layout-two-column-default {
-
 			.content-area {
 				@include span(first 8);
 			}
@@ -63,11 +60,9 @@ body.layout-one-column-narrow .site-content {
 			#secondary {
 				@include span(last 4);
 			}
-
 		}
 
 		&.layout-two-column-reversed {
-
 			.content-area {
 				@include span(last 8);
 			}
@@ -75,11 +70,9 @@ body.layout-one-column-narrow .site-content {
 			#secondary {
 				@include span(first 4);
 			}
-
 		}
 
 		&.layout-three-column-default {
-
 			.content-area {
 				@include span(first 6);
 			}
@@ -90,13 +83,12 @@ body.layout-one-column-narrow .site-content {
 
 			#tertiary {
 				@include span(last 3);
+
 				display: block;
 			}
-
 		}
 
 		&.layout-three-column-reversed {
-
 			.content-area {
 				@include span(last 6);
 			}
@@ -107,38 +99,37 @@ body.layout-one-column-narrow .site-content {
 
 			#tertiary {
 				@include span(3 at 4);
+
 				display: block;
 			}
-
 		}
 
 		&.layout-three-column-center {
-
 			.content-area {
-				@include span(6 at 4) @include push(3 of 12);
+				@include span(6 at 4);
+
+				@include push(3 of 12);
 			}
 
 			#secondary {
-				@include span(first 3) @include pull(9 of 12);
+				@include span(first 3);
+
+				@include pull(9 of 12);
 			}
 
 			#tertiary {
 				@include span(last 3);
+
 				display: block;
 			}
-
 		}
-
 	}
-
 }
 
 body.page-template-page-builder {
-
 	.content-area,
 	#secondary,
 	#tertiary {
 		@include span(12);
 	}
-
 }

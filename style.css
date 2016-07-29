@@ -1,24 +1,22 @@
-/*!
-Theme Name: Primer
-Theme URI: https://www.godaddy.com/
-Author: GoDaddy
-Author URI: https://www.godaddy.com/
-Description: Primer is a modern WordPress theme based on _s.
-Version: 1.0.0
-License: GPL-2.0
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: primer
-Tags: custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, fixed-layout, flexible-header, fluid-layout, left-sidebar, light, one-column, responsive-layout, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-Primer is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-*/
+@charset "UTF-8";
+/**
+ * Theme Name: Primer
+ * Theme URI: https://www.godaddy.com/
+ * Author: GoDaddy
+ * Author URI: https://www.godaddy.com/
+ * Description: Primer is a modern WordPress theme based on _s.
+ * Version: 1.0.0
+ * License: GPL-2.0
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: primer
+ * Domain Path: /languages
+ * Tags: custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, fixed-layout, flexible-header, fluid-layout, left-sidebar, light, one-column, responsive-layout, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
+ *
+ * This theme, like WordPress, is licensed under the GPL.
+ * Use it to make something cool, have fun, and share what you've learned with others.
+ *
+ * Copyright © 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
+ */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -248,7 +246,7 @@ button,
 input,
 select,
 textarea {
-  color: #0b3954;
+  color: #0b3951;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -270,7 +268,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   line-height: 1.4;
   text-rendering: optimizeLegibility;
-  color: #0b3954; }
+  color: #0b3951; }
 
 h1 {
   font-size: 2.5em; }
@@ -303,7 +301,7 @@ blockquote {
   line-height: 1.4;
   margin: 1em 0;
   padding-left: 1em;
-  border-left: 4px solid rgba(11, 57, 84, 0.1);
+  border-left: 4px solid rgba(11, 57, 81, 0.1);
   color: #686868; }
 
 address {
@@ -319,7 +317,7 @@ pre {
   max-width: 100%;
   overflow: auto;
   padding: 1em;
-  border: 1px solid rgba(11, 57, 84, 0.1);
+  border: 1px solid rgba(11, 57, 81, 0.1);
   -webkit-border-radius: 2px;
   border-radius: 2px; }
 
@@ -331,7 +329,7 @@ code, kbd, tt, var {
 code {
   padding: 0.125rem 0.25rem;
   background-color: #eee;
-  border: 1px solid rgba(11, 57, 84, 0.1);
+  border: 1px solid rgba(11, 57, 81, 0.1);
   -webkit-border-radius: 2px;
   border-radius: 2px; }
 
@@ -341,7 +339,7 @@ pre code {
   background-color: none; }
 
 abbr, acronym {
-  border-bottom: 1px dotted rgba(11, 57, 84, 0.1);
+  border-bottom: 1px dotted rgba(11, 57, 81, 0.1);
   cursor: help; }
 
 mark, ins {
@@ -376,7 +374,7 @@ blockquote, q {
     content: ""; }
 
 hr {
-  background-color: rgba(11, 57, 84, 0.1);
+  background-color: rgba(11, 57, 81, 0.1);
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -421,7 +419,7 @@ table {
 .hentry table td {
   padding: 0.5em;
   text-align: left;
-  border: 1px solid rgba(11, 57, 84, 0.1);
+  border: 1px solid rgba(11, 57, 81, 0.1);
   border-left: none;
   border-right: none; }
 
@@ -434,7 +432,7 @@ table {
   border-bottom: none; }
 
 .hentry table tr:hover td {
-  background-color: rgba(11, 57, 84, 0.075); }
+  background-color: rgba(11, 57, 81, 0.075); }
 
 .widget table caption {
   padding: 0 0.5em 0.5em;
@@ -463,8 +461,8 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  color: rgba(11, 57, 84, 0.5);
-  border: 1px solid rgba(11, 57, 84, 0.1);
+  color: rgba(11, 57, 81, 0.5);
+  border: 1px solid rgba(11, 57, 81, 0.1);
   -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 0.75rem;
@@ -485,7 +483,7 @@ textarea {
   input[type="datetime-local"]:focus,
   input[type="color"]:focus,
   textarea:focus {
-    color: #0b3954; }
+    color: #0b3951; }
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -496,14 +494,14 @@ input[type="file"] {
   font-size: 0.85rem; }
 
 select {
-  border: 1px solid rgba(11, 57, 84, 0.1); }
+  border: 1px solid rgba(11, 57, 81, 0.1); }
 
 textarea {
   width: 100%; }
 
 fieldset {
   padding: 0.5em 1.5em;
-  border-color: rgba(11, 57, 84, 0.1); }
+  border-color: rgba(11, 57, 81, 0.1); }
 
 legend {
   padding: 0 1em;
@@ -571,7 +569,7 @@ a {
 # Menus
 --------------------------------------------------------------*/
 .main-navigation-container {
-  background-color: #0b3954; }
+  background-color: #0b3953; }
 
 .main-navigation {
   max-width: 1100px;
@@ -596,7 +594,7 @@ a {
       position: absolute;
       left: -999em;
       z-index: 99999;
-      background-color: #0b3954; }
+      background-color: #0b3953; }
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
@@ -1476,7 +1474,7 @@ body.custom-header-image .site-description {
 --------------------------------------------------------------*/
 .site-footer {
   clear: both;
-  background-color: #0b3954; }
+  background-color: #0b3952; }
 
 .footer-widget-area {
   max-width: 1100px;
@@ -1599,7 +1597,7 @@ body.no-max-width .site-info-wrapper .site-info {
     -webkit-transition: 200ms opacity;
     transition: 200ms opacity;
     color: #f4f5f9;
-    background-color: #0b3954;
+    background-color: #0b3951;
     -webkit-border-radius: 3px;
     border-radius: 3px; }
     .social-menu a:visited {
@@ -1773,7 +1771,7 @@ body.no-max-width .site-info-wrapper .site-info {
 .entry-title a,
 .entry-title a:visited,
 .entry-title a:before {
-  color: #0b3954; }
+  color: #0b3951; }
 
 .entry-title a:hover,
 .entry-title a:visited:hover {

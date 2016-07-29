@@ -11,7 +11,9 @@ textarea {
 	color: $color__text-main;
 	font-family: $font__main;
 	font-weight: normal;
+
 	@include font-size(1);
+
 	line-height: $font__line-height-body;
 
 	@media #{$small-only} {
@@ -29,12 +31,29 @@ h1, h2, h3, h4, h5, h6 {
 	color: $color__text-heading;
 }
 
-h1 { font-size: 2.5em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.5em; }
-h4 { font-size: 1.25em; }
-h5 { font-size: 1.125em; }
-h6 { font-size: 1em; }
+h1 {
+	font-size: 2.5em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+h4 {
+	font-size: 1.25em;
+}
+
+h5 {
+	font-size: 1.125em;
+}
+
+h6 {
+	font-size: 1em;
+}
 
 p {
 	margin-bottom: 1.5em;
@@ -62,7 +81,9 @@ address {
 pre {
 	background: $color__background-pre;
 	font-family: $font__pre;
+
 	@include font-size(0.9375);
+
 	line-height: $font__line-height-pre;
 	margin-bottom: 1.6em;
 	max-width: 100%;
@@ -74,6 +95,7 @@ pre {
 
 code, kbd, tt, var {
 	font-family: $font__code;
+
 	@include font-size(0.9375);
 }
 

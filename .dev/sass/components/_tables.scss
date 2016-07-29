@@ -5,7 +5,6 @@ table {
 }
 
 .hentry table {
-
 	th,
 	td {
 		padding: 0.5em;
@@ -28,11 +27,9 @@ table {
 	tr:hover td {
 		background-color: rgba($color__border, 0.075);
 	}
-
 }
 
 .widget table {
-
 	caption {
 		padding: 0 0.5em 0.5em;
 		font-weight: bold;
@@ -42,5 +39,4 @@ table {
 	td {
 		text-align: center;
 	}
-
 }

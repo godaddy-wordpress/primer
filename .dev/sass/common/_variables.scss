@@ -1,26 +1,21 @@
 @import "../../../node_modules/susy/sass/susy";
 @import "customizer";
 
-$susy: (
-	columns: 12,
-	gutters: 1/2,
-	math: fluid,
-	gutter-position: split,
-);
+$susy: (columns: 12, gutters: 1 / 2, math: fluid, gutter-position: split);
 
 // Default container width
 $container-size: 1100px;
 
 // Breakpoints
 $medium-screen: 40.063em;
-$large-screen:  61.063em;
+$large-screen: 61.063em;
 
 // Media Queries
-$small-only:  "only screen and (max-width: #{$medium-screen})";
-$medium-up:   "only screen and (min-width: #{$medium-screen})";
+$small-only: "only screen and (max-width: #{$medium-screen})";
+$medium-up: "only screen and (min-width: #{$medium-screen})";
 $medium-down: "only screen and (max-width: #{$large-screen})";
 $medium-only: "only screen and (min-width: #{$medium-screen}) and (max-width: #{$large-screen})";
-$large-up:    "only screen and (min-width: #{$large-screen})";
+$large-up: "only screen and (min-width: #{$large-screen})";
 
 // Typography
 $font__main: $primary-font, "Helvetica Neue", sans-serif;
