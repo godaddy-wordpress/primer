@@ -19,6 +19,19 @@ function primer_add_site_title() {
 add_action( 'primer_header', 'primer_add_site_title', 5 );
 
 /**
+ * Display site header in the header.
+ *
+ * @action primer_header
+ * @since  1.0.0
+ */
+function primer_add_site_header() {
+
+	get_template_part( 'templates/parts/site-header' );
+
+}
+add_action( 'primer_header', 'primer_add_site_header', 10 );
+
+/**
  * Display primary navigation menu after the header.
  *
  * @action primer_after_header
