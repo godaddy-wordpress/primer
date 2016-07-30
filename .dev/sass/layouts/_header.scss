@@ -45,9 +45,12 @@ body.no-max-width .site-header-wrapper {
 }
 
 body.custom-header-image {
-	.site-title,
+	.site-title {
+		text-shadow: 1px 1px 30px rgba(0, 0, 0, 0.5);
+	}
+
 	.site-description {
-		text-shadow: 1px 1px 20px #000;
+		text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
 	}
 }
 

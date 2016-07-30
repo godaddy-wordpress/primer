@@ -1462,9 +1462,11 @@ body.no-max-width .site-header-wrapper {
 .site-description {
   color: #7c7c7c; }
 
-body.custom-header-image .site-title,
+body.custom-header-image .site-title {
+  text-shadow: 1px 1px 30px rgba(0, 0, 0, 0.5); }
+
 body.custom-header-image .site-description {
-  text-shadow: 1px 1px 20px #000; }
+  text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5); }
 
 .header-image img {
   display: block; }
