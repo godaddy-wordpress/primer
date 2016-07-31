@@ -45,6 +45,7 @@ class Primer_Customizer_Fonts {
 				'Montserrat',
 				'Open Sans',
 				'Oswald',
+				'Playfair Display',
 				'PT Sans',
 				'PT Serif',
 				'Raleway',
