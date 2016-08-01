@@ -1420,7 +1420,8 @@ body.page-template-page-builder #tertiary {
 # Header
 --------------------------------------------------------------*/
 .site-header {
-  position: relative; }
+  position: relative;
+  background-color: #0b3954; }
 
 .hero {
   position: absolute;
@@ -1428,7 +1429,6 @@ body.page-template-page-builder #tertiary {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fbfbff;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
@@ -1465,12 +1465,12 @@ body.no-max-width .site-header-wrapper {
   font-weight: 700;
   font-size: 2em; }
   .site-title a {
-    color: #0b3954; }
+    color: #f4f5f9; }
     .site-title a:hover, .site-title a:visited:hover {
-      color: rgba(11, 57, 84, 0.8); }
+      color: rgba(244, 245, 249, 0.8); }
 
 .site-description {
-  color: #7c7c7c; }
+  color: #f4f5f9; }
 
 body.custom-header-image .site-title {
   text-shadow: 1px 1px 30px rgba(0, 0, 0, 0.5); }

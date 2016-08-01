@@ -1,5 +1,6 @@
 .site-header {
 	position: relative;
+	background-color: $color__background-header;
 }
 
 .hero {
@@ -8,7 +9,6 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: $color__background-header;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;

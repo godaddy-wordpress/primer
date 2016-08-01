@@ -36,7 +36,7 @@ class Primer_Customizer_Colors {
 			array(
 				array(
 					'name'    => 'header_textcolor',
-					'default' => has_header_image() ? '#f4f5f9' : '#0b3954',
+					'default' => '#f4f5f9',
 					'css'     => array(
 						'.site-title a, .site-title a:visited' => array(
 							'color' => '%1$s',
@@ -63,7 +63,7 @@ class Primer_Customizer_Colors {
 				array(
 					'name'    => 'header_background_color',
 					'label'   => esc_html__( 'Header Background Color', 'primer' ),
-					'default' => '#fbfbff',
+					'default' => '#0b3954',
 					'css'     => array(
 						'.site-header' => array(
 							'background-color' => '%1$s',
@@ -102,7 +102,7 @@ class Primer_Customizer_Colors {
 				array(
 					'name'    => 'tagline_text_color',
 					'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
-					'default' => has_header_image() ? '#f4f5f9' : '#7c7c7c',
+					'default' => '#f4f5f9',
 					'css'     => array(
 						'.site-description' => array(
 							'color' => '%1$s',
