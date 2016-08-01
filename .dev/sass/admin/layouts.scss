@@ -14,7 +14,6 @@
 }
 
 .primer-layout-wrap {
-
 	ul {
 		display: flex;
 		margin: 0;
@@ -24,8 +23,8 @@
 			padding: 0;
 
 			&.disabled {
-				-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
-				filter: alpha(opacity=35);
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
+				filter: alpha(opacity = 35);
 				opacity: 0.35;
 			}
 
@@ -69,28 +68,20 @@
 			}
 		}
 	}
-
 }
 
 #side-sortables,
 #customize-control-layout {
-
 	.primer-layout-wrap ul {
-
 		flex-wrap: wrap;
 
 		li {
-
 			flex-basis: calc(25% - 0.6em);
-
 		}
-
 	}
-
 }
 
 @media only screen and (max-width: 850px) {
-
 	.primer-layout-wrap ul {
 		display: inline-block;
 
@@ -115,9 +106,6 @@
 					position: relative;
 				}
 			}
-
 		}
-
 	}
-
 }
