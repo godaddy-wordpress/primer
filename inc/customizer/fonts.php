@@ -34,6 +34,7 @@ class Primer_Customizer_Fonts {
 		 */
 		$this->fonts = (array) apply_filters( 'primer_fonts',
 			array(
+				'Architects Daughter',
 				'Asap',
 				'Cabin',
 				'Droid',
@@ -45,6 +46,7 @@ class Primer_Customizer_Fonts {
 				'Montserrat',
 				'Open Sans',
 				'Oswald',
+				'Playfair Display',
 				'PT Sans',
 				'PT Serif',
 				'Raleway',

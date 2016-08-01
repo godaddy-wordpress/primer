@@ -1,8 +1,8 @@
-.primer-layout-wrap p label {
+.primer-layout p label {
   float: left;
   margin-right: 12px; }
 
-.primer-layout-wrap p span.clear {
+.primer-layout p span.clear {
   content: '';
   clear: both;
   display: block; }
