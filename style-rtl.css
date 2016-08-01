@@ -1420,6 +1420,14 @@ body.page-template-page-builder #tertiary {
 # Header
 --------------------------------------------------------------*/
 .site-header {
+  position: relative; }
+
+.hero {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
   background-color: #fbfbff;
   -webkit-background-size: cover;
   background-size: cover;
@@ -1443,6 +1451,8 @@ body.no-max-width .site-header-wrapper {
   float: right;
   margin-right: 1.38889%;
   margin-left: 1.38889%;
+  position: relative;
+  z-index: 1;
   padding: 7% 1rem; }
   @media only screen and (max-width: 40.063em) {
     .site-title-wrapper {

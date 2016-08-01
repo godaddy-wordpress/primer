@@ -1,4 +1,13 @@
 .site-header {
+	position: relative;
+}
+
+.hero {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	background-color: $color__background-header;
 	background-size: cover;
 	background-position: center center;
@@ -16,6 +25,8 @@ body.no-max-width .site-header-wrapper {
 .site-title-wrapper {
 	@include span(12);
 
+	position: relative;
+	z-index: 1;
 	padding: 7% 1rem;
 
 	@media #{$small-only} {

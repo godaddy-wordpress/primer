@@ -6,12 +6,8 @@
  */
 ?>
 
-<?php if ( get_header_image() ) : ?>
+<?php if ( has_header_image() ) : ?>
 
-	<div class="header-image">
-
-		<img src="<?php header_image() ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ) ?>">
-
-	</div><!-- .header-image -->
+	<div class="hero" style="background-image: url('<?php echo header_image() ?>');"></div>
 
 <?php endif; ?>
