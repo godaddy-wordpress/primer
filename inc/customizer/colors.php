@@ -399,13 +399,20 @@ class Primer_Customizer_Colors {
 			)
 		);
 
+		$choices = array_combine(
+			array_keys( $this->color_schemes ),
+			wp_list_pluck( $this->color_schemes, 'label' )
+		);
+
+		$choices[ 'custom' ] = __( 'Custom', 'primer' );
+
 		$wp_customize->add_control(
 			'color_scheme',
 			array(
 				'label'    => esc_html__( 'Base Color Scheme', 'primer' ),
 				'section'  => 'colors',
 				'type'     => 'select',
-				'choices'  => array_combine( array_keys( $this->color_schemes ), wp_list_pluck( $this->color_schemes, 'label' ) ),
+				'choices'  => $choices,
 				'priority' => 1,
 			)
 		);
@@ -422,7 +429,7 @@ class Primer_Customizer_Colors {
 
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-		wp_enqueue_script( 'primer-color-scheme-control', get_template_directory_uri() . "/assets/js/color-scheme-control{$suffix}.js", array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), PRIMER_VERSION, true );
+		wp_enqueue_script( 'primer-color-scheme-control', get_template_directory_uri() . "/assets/js/admin/color-scheme-control{$suffix}.js", array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), PRIMER_VERSION, true );
 
 		wp_localize_script( 'primer-color-scheme-control', 'colorSchemes', $this->color_schemes );
 

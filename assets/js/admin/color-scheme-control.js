@@ -1,4 +1,4 @@
-/* global colorSchemes, Color */
+/* global colorSchemes */
 /**
  * Add a listener to the Color Scheme control to update other color controls to new values/defaults.
  * Also trigger an update of the Color Scheme CSS when a color is changed.
@@ -30,6 +30,12 @@
 			// Update all swatches when the color scheme changes.
 			this.setting.bind( 'change', function( scheme ) {
 
+				if ( 'custom' === scheme ) {
+
+					return;
+
+				}
+
 				_.each( colorSchemes[ scheme ].colors, function( color, setting ) {
 
 					api( setting ).set( color );
@@ -49,8 +55,14 @@
 	// Generate the CSS for the current color scheme.
 	function updateCSS() {
 
-		var scheme     = api( 'color_scheme' )(),
-		    colors     = _.object( colorSettings, colorSchemes[ scheme ].colors ),
+		var color_scheme = api( 'color_scheme' ),
+		    scheme       = color_scheme();
+
+		scheme = ( 'custom' === scheme ) ? 'default' : scheme;
+
+		api( 'color_scheme' ).set( 'custom' );
+
+		var colors     = _.object( colorSettings, colorSchemes[ scheme ].colors ),
 		    rgbaColors = {};
 
 		// Merge in color scheme overrides.
