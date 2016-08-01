@@ -1,0 +1,261 @@
+$widget-bg: #fff !default;
+
+.widget {
+	margin: 0 0 1.5em;
+	padding: 2rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&,p,ul,ol{
+		font-family: $widget-font-family;
+		font-size: $widget-font-size;
+	}
+}
+
+/* Make sure form fields fit in widgets */
+.widget {
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	textarea,
+	select,
+	 {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+/* Search widget */
+.widget_search {
+	padding-right: 1.25em;
+	padding-right: 1.25rem;
+
+	#secondary &{
+		padding: 0;
+	}
+
+	@media screen and (max-width: 600px) {
+		padding-right: 0;
+	}
+
+	.search-field {
+		width: 100%;
+		background: #fff;
+		border-radius: 2px;
+		box-sizing: border-box;
+
+		&:focus {
+			background: #fff;
+		}
+
+		&::-webkit-search-cancel-button {
+			z-index: 1;
+		}
+	}
+
+	.search-submit {
+		display: none;
+	}
+}
+
+.widget-title {
+	font-family: $sans-font-family;
+	position: relative;
+	box-sizing: content-box;
+	font-weight: bold;
+}
+
+.widget {
+	background-color: $widget-bg;
+	padding: 2em;
+	padding: 2rem;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		a {
+			display: block;
+			padding: .5em 0;
+			padding: .5rem 0;
+			border-bottom: 1px solid $body-bg;
+		}
+	}
+
+	> ul:last-child > li:last-child > a,
+	> div > ul:last-child > li:last-child > a {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+/* Author Widget */
+.widget_author {
+
+	.widget-title {
+		margin-bottom: 1.25em;
+		margin-bottom: 1.25rem;
+	}
+
+	.avatar {
+		width: 80px;
+		border-radius: 4px;
+		float: left;
+		margin-right: 1em;
+		margin-right: 1rem;
+		margin-bottom: .5em;
+		margin-bottom: .5rem;
+		overflow: hidden;
+	}
+
+	.author-name {
+		font-size: rem-calc(18);
+		font-weight: bold;
+		margin-bottom: .5em;
+		margin-bottom: .5rem;
+	}
+
+	p {
+		font-size: rem-calc(16);
+		line-height: 1.5;
+	}
+}
+
+/* Recent Comments Widget */
+
+.widget_recent_comments {
+	li {
+		padding: .5em 0;
+		padding: .5rem 0;
+		border-bottom: 1px solid $body-bg;
+
+		&:last-child {
+			border-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		a {
+			border: 0;
+			display: inline;
+		}
+	}
+}
+
+/* Calendar Widget */
+
+.widget_calendar {
+	margin-bottom: 1.25em;
+	margin-bottom: 1.25rem;
+
+	.widget-title {
+		margin-bottom: 1.25em;
+		margin-bottom: 1.25rem;
+	}
+
+	#calendar_wrap {
+
+		#wp-calendar {
+			width: 100%;
+			color: $body-font-color;
+			border-collapse: collapse;
+			font-size: .9em;
+			border-radius: 0 0 2px 2px;
+			overflow: hidden;
+			margin-bottom: 0;
+
+			td,th{
+				width: 14.285714286%;
+				background: #fff;
+				border: 0;
+			}
+
+			&,td,th,caption{
+				text-align: center;
+			}
+
+			caption {
+				color: contrast-color($primary-color,#222,white,30%);
+				padding: .75em .25em;
+				font-weight: bold;
+				background-color: $body-bg;
+				border-radius: 2px 2px 0 0;
+			}
+
+			thead th {
+				padding: .25em 0;
+				background-color: lighten($body-bg, 30%);
+
+				&:last-child { border: none; }
+			}
+
+			tbody tr {
+
+				&:last-child { border: none; }
+
+				td {
+					height: 2em;
+					padding: 0;
+					margin: 0;
+
+					&#today {
+						position: relative;
+					}
+
+					a {
+						color: contrast-color($body-bg, #222, white, 30%);
+						background: lighten(desaturate( darken( $body-bg, 10% ), 5% ), 10%);
+						border-radius: 2px;
+						margin: 0 3px;
+						display: block;
+						font-weight: bold;
+						border-bottom: none;
+						transition: 200ms color linear;
+					}
+				}
+			}
+
+			tfoot {
+				background: desaturate( darken( $body-bg, 10% ), 5% );
+
+				td {
+					padding: .5em 1em;
+					font-weight: bold;
+
+					a{
+						color: $body-font-color;
+						transition: 200ms color linear;
+
+						&:hover{
+							color: $primary-color;
+						}
+					}
+
+					&#prev{
+						text-align: left;
+					}
+
+					&#next{
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+}

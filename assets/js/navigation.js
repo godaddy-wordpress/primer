@@ -16,7 +16,6 @@ window.onload = function() {
 
 	menu_toggle.onclick = function() {
 
-		menu_toggle.classList.toggle('open');
 		nav_menu.style.display = ( ! nav_menu.offsetHeight ) ? 'block' : 'none';
 
 	};
