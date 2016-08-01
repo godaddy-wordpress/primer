@@ -1,0 +1,41 @@
+img[class*="wp-image-"] {
+	display: block;
+	margin-bottom: 1em;
+	margin-bottom: 1rem;
+}
+
+.wp-caption {
+	margin-bottom: 1em;
+	margin-bottom: 1rem;
+	max-width: 100%;
+	box-sizing: border-box;
+
+
+	img[class*="wp-image-"] {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.wp-caption-text {
+		margin: 0.8075em 0 0 0;
+	}
+}
+
+.alignleft {
+	margin-right: 1.5em;
+	margin-right: 1.5rem;
+}
+
+.alignright {
+	margin-left: 1.5em;
+	margin-left: 1.5rem;
+}
+
+.alignnone {
+	float: none;
+}
+
+.wp-caption-text {
+	text-align: center;
+	max-width: 100%;
+}

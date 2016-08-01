@@ -1,19 +1,12 @@
-@import "common/variables";
-@import "common/mixins";
-@import "common/normalize";
-@import "components/typography";
-@import "components/elements";
-@import "components/lists";
-@import "components/tables";
-@import "components/forms";
-@import "components/buttons";
-@import "components/links";
-@import "components/media";
-@import "components/captions";
-@import "components/galleries";
-@import "modules/alignments";
+@import "mixins/functions";
+@import "variables/variables";
+@import "mixins/global";
+@import "mixins/color-contrast";
+@import "partials/typography";
+@import "partials/forms";
+@import "partials/alignments";
+@import "partials/content";
 
 body {
 	margin: 20px;
-	background-color: #fff;
 }

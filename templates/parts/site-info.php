@@ -12,13 +12,13 @@
 
 		<div class="site-info-inner">
 
-			<?php get_template_part( 'templates/parts/social-navigation' ) ?>
-
 			<div class="site-info-text">
 
 				<?php printf( esc_html_x( '%1$s theme by %2$s', '1. theme name link, 2. theme author link', 'primer' ), '<a href="https://wordpress.org/themes/primer/" rel="designer">Primer</a>', '<a href="https://www.godaddy.com/" rel="designer">GoDaddy</a>' ) ?>
 
 			</div><!-- .site-info-text -->
+
+			<?php get_template_part( 'templates/parts/social-navigation' ); ?>
 
 		</div><!-- .site-info-inner -->
 

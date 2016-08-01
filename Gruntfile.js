@@ -167,26 +167,20 @@ module.exports = function(grunt) {
 
 		sass: {
 			options: {
-				precision: 5,
 				sourceMap: false
 			},
 			dist: {
-				options: {
-					require: 'susy'
+				files: [{
+					'style.css': '.dev/sass/style.scss',
+					'editor-style.css': '.dev/sass/editor-style.scss'
 				},
-				files: [
-					{
-						'style.css': '.dev/sass/style.scss',
-						'editor-style.css': '.dev/sass/editor-style.scss'
-					},
-					{
-						expand: true,
-						cwd: '.dev/sass/admin',
-						src: ['*.scss'],
-						dest: 'assets/css/admin',
-						ext: '.css'
-					}
-				]
+				{
+					expand: true,
+					cwd: '.dev/sass/admin',
+					src: ['*.scss'],
+					dest: 'assets/css/admin',
+					ext: '.css'
+				}]
 			}
 		},
 
@@ -228,7 +222,7 @@ module.exports = function(grunt) {
 
 	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask('default', ['sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify']);
+	grunt.registerTask('default', ['sass','autoprefixer','cssjanus','cssmin','jshint','uglify']);
 	grunt.registerTask('lint', ['jshint']);
 	grunt.registerTask('update-pot', ['pot', 'replace:pot']);
 
