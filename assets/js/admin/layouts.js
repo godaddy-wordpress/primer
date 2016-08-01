@@ -70,7 +70,9 @@ window.wp = window.wp || {};
 
 			}
 
-			$( '.primer-layout ul li:not(.global)' )
+			$( '.primer-layout ul li' )
+				.addClass('disabled')
+				.find(':not(.global)')
 				.removeClass( 'active' )
 				.addClass( 'disabled' )
 				.find( 'input' )

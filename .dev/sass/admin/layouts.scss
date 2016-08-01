@@ -1,5 +1,4 @@
-.primer-layout-wrap {
-
+.primer-layout {
 	p {
 		label {
 			float: left;
@@ -12,6 +11,9 @@
 			display: block;
 		}
 	}
+}
+
+.primer-layout-wrap {
 
 	ul {
 		display: flex;

@@ -331,7 +331,7 @@ class Primer_Customizer_Layouts {
 				foreach ( $layouts as $layout => $label ) :
 
 					$class = ( $has_custom ) ? 'active' : 'disabled';
-					$class .= ( $layout === $global_layout ) ? ' global' : '';
+					$class .= ( $layout === $global_layout ) ? ' active global' : '';
 
 					?>
 
