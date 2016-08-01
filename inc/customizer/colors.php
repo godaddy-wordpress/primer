@@ -404,7 +404,7 @@ class Primer_Customizer_Colors {
 			wp_list_pluck( $this->color_schemes, 'label' )
 		);
 
-		$choices[ 'custom' ] = __( 'Custom', 'primer' );
+		$choices['custom'] = __( 'Custom', 'primer' );
 
 		$wp_customize->add_control(
 			'color_scheme',
