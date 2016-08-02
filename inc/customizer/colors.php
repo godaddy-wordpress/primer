@@ -36,7 +36,7 @@ class Primer_Customizer_Colors {
 			array(
 				array(
 					'name'    => 'header_textcolor',
-					'default' => '#222222',
+					'default' => '#f4f5f9',
 					'css'     => array(
 						'.site-title a, .site-title a:visited' => array(
 							'color' => '%1$s',
@@ -44,18 +44,26 @@ class Primer_Customizer_Colors {
 					),
 					'rgba_css' => array(
 						'.site-title a:hover, .site-title a:visited:hover' => array(
-							'color' => 'rgba(%1$s, 0.75)',
+							'color' => 'rgba(%1$s, 0.8)',
 						),
 					),
 				),
 				array(
 					'name'    => 'background_color',
-					'default' => '#f9f9f9',
+					'default' => '#f4f5f9',
+					'css'     => array(
+						'body' => array(
+							'background' => '%1$s',
+						),
+						'.social-menu a, .social-menu a:visited, .social-menu a:hover, .social-menu a:visited:hover' => array(
+							'color' => '%1$s',
+						),
+					),
 				),
 				array(
 					'name'    => 'header_background_color',
 					'label'   => esc_html__( 'Header Background Color', 'primer' ),
-					'default' => '#f9f9f9',
+					'default' => '#0b3954',
 					'css'     => array(
 						'.site-header' => array(
 							'background-color' => '%1$s',
@@ -63,9 +71,38 @@ class Primer_Customizer_Colors {
 					),
 				),
 				array(
+					'name'    => 'menu_background_color',
+					'label'   => esc_html__( 'Menu Background Color', 'primer' ),
+					'default' => '#0b3954',
+					'css'     => array(
+						'.main-navigation-container, .main-navigation ul ul' => array(
+							'background-color' => '%1$s',
+						),
+						'.main-navigation li a, .main-navigation li a:hover, .main-navigation li a:visited:hover' => array(
+							'color' => '#ffffff',
+						),
+						'.sub-menu .menu-item-has-children > a::after' => array(
+							'border-color' => '#ffffff',
+						),
+						'.menu-toggle div' => array(
+							'background-color' => '#ffffff',
+						),
+					),
+				),
+				array(
+					'name'    => 'footer_background_color',
+					'label'   => esc_html__( 'Footer Background Color', 'primer' ),
+					'default' => '#0b3954',
+					'css'     => array(
+						'.site-footer' => array(
+							'background-color' => '%1$s',
+						),
+					),
+				),
+				array(
 					'name'    => 'tagline_text_color',
 					'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
-					'default' => '#7c7c7c',
+					'default' => '#f4f5f9',
 					'css'     => array(
 						'.site-description' => array(
 							'color' => '%1$s',
@@ -73,46 +110,57 @@ class Primer_Customizer_Colors {
 					),
 				),
 				array(
-					'name'    => 'menu_background_color',
-					'label'   => esc_html__( 'Menu Background Color', 'primer' ),
-					'default' => '#222222',
-					'css'     => array(
-						'.main-navigation-container, .main-navigation, .main-navigation li a, .main-navigation li.menu-item-has-children ul' => array(
-							'background-color' => '%1$s',
-						),
-						'.main-navigation li a, .main-navigation li a:hover' => array(
-							'color' => '#ffffff',
-						),
-					),
-				),
-				array(
 					'name'    => 'link_color',
 					'label'   => esc_html__( 'Link Color', 'primer' ),
-					'default' => '#1585cf',
+					'default' => '#ff6663',
 					'css'     => array(
-						'a, a:visited, .entry-footer a, .sticky .entry-title a:before' => array(
+						'a, a:visited, .entry-title a:hover, .entry-title a:visited:hover' => array(
 							'color' => '%1$s',
 						),
-						'button, a.button, a.button:visited, input[type="button"], input[type="reset"], input[type="submit"], .site-info-wrapper .site-info .social-menu a' => array(
+						'button, a.button, input[type="button"], input[type="reset"], input[type="submit"], .social-menu a:hover' => array(
 							'background-color' => '%1$s',
 						),
 					),
 					'rgba_css' => array(
-						'a:hover, a:visited:hover, .entry-footer a:hover' => array(
-							'color' => 'rgba(%1$s, 0.75)',
+						'a:hover, a:visited:hover, a:focus, a:visited:focus, a:active, a:visited:active' => array(
+							'color' => 'rgba(%1$s, 0.8)',
 						),
-						'button:hover, a.button:hover, a.button:visited:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .site-info-wrapper:hover .site-info:hover .social-menu a:hover' => array(
-							'background-color' => 'rgba(%1$s, 0.75)',
+						'button:hover, button:active, button:focus, a.button:hover, a.button:active, a.button:focus, input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
+							'background-color' => 'rgba(%1$s, 0.8)',
+						),
+						'button, button:hover, button:active, button:focus, a.button, a.button:hover, a.button:active, a.button:focus, a.button:visited, a.button:visited:hover, a.button:visited:active, a.button:visited:focus, input[type="button"], input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus, input[type="reset"], input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus, input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
+							'color' => '#ffffff',
+						),
+						'.comment-list li.bypostauthor' => array(
+							'border-color' => 'rgba(%1$s, 0.2)',
 						),
 					),
 				),
 				array(
 					'name'    => 'main_text_color',
 					'label'   => esc_html__( 'Main Text Color', 'primer' ),
-					'default' => '#1a1a1a',
+					'default' => '#0b3954',
 					'css'     => array(
-						'.site-content, .site-content h1, .site-content h2, .site-content h3, .site-content h4, .site-content h5, .site-content h6, .site-content p, .site-content blockquote, legend' => array(
+						'body, input, select, textarea, h1, h2, h3, h4, h5, h6, .entry-title a, .entry-title a:visited, .entry-title a:before, input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus' => array(
 							'color' => '%1$s',
+						),
+						'.social-menu a' => array(
+							'background-color' => '%1$s',
+						),
+					),
+					'rgba_css' => array(
+						'hr' => array(
+							'background-color' => 'rgba(%1$s, 0.1)',
+						),
+						'input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea' => array(
+							'color'        => 'rgba(%1$s, 0.5)',
+							'border-color' => 'rgba(%1$s, 0.1)',
+						),
+						'select, fieldset, blockquote, pre, code, abbr, acronym, .hentry table th, .hentry table td' => array(
+							'border-color' => 'rgba(%1$s, 0.1)',
+						),
+						'.hentry table tr:hover td' => array(
+							'background-color' => 'rgba(%1$s, 0.075)',
 						),
 					),
 				),
@@ -121,7 +169,7 @@ class Primer_Customizer_Colors {
 					'label'   => esc_html__( 'Secondary Text Color', 'primer' ),
 					'default' => '#686868',
 					'css'     => array(
-						'blockquote, .entry-meta, .entry-footer, .comment-list li .comment-meta .says, .comment-list li .comment-metadata, .comment-reply-link, #respond .logged-in-as, .fl-callout-text' => array(
+						'blockquote, .entry-meta, .entry-footer, .comment-meta .says, .logged-in-as, .fl-callout-text' => array(
 							'color' => '%1$s',
 						),
 					),
@@ -166,8 +214,9 @@ class Primer_Customizer_Colors {
 						'header_textcolor'        => '#ffffff',
 						'background_color'        => '#333333',
 						'header_background_color' => '#333333',
-						'tagline_text_color'      => '#999999',
 						'menu_background_color'   => '#444444',
+						'footer_background_color' => '#222222',
+						'tagline_text_color'      => '#999999',
 						'link_color'              => '#589ef2',
 						'main_text_color'         => '#e5e5e5',
 						'secondary_text_color'    => '#c1c1c1',
@@ -179,8 +228,9 @@ class Primer_Customizer_Colors {
 						'header_textcolor'        => '#5a6175',
 						'background_color'        => '#d5d6e0',
 						'header_background_color' => '#d5d6e0',
-						'tagline_text_color'      => '#888c99',
 						'menu_background_color'   => '#5a6175',
+						'footer_background_color' => '#5a6175',
+						'tagline_text_color'      => '#888c99',
 						'link_color'              => '#3e4c75',
 						'main_text_color'         => '#4f5875',
 						'secondary_text_color'    => '#888c99',
@@ -192,8 +242,9 @@ class Primer_Customizer_Colors {
 						'header_textcolor'        => '#402b30',
 						'background_color'        => '#f9f9f9',
 						'header_background_color' => '#f9f9f9',
-						'tagline_text_color'      => '#999999',
 						'menu_background_color'   => '#640c1f',
+						'footer_background_color' => '#640c1f',
+						'tagline_text_color'      => '#999999',
 						'link_color'              => '#640c1f',
 						'main_text_color'         => '#402b30',
 						'secondary_text_color'    => '#222222',
@@ -310,14 +361,7 @@ class Primer_Customizer_Colors {
 
 		$default = $this->get_default_color( $color['name'], 'default' );
 		$hex     = trim( get_theme_mod( $color['name'], $default ), '#' );
-
-		if ( $hex === $default ) {
-
-			return;
-
-		}
-
-		$css = sprintf( Primer_Customizer::parse_css_rules( $color['css'] ), '#' . $hex );
+		$css     = sprintf( Primer_Customizer::parse_css_rules( $color['css'] ), '#' . $hex );
 
 		if ( ! empty( $color['rgba_css'] ) ) {
 

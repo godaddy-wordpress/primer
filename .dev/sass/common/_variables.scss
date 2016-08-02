@@ -1,0 +1,55 @@
+@import "../../../node_modules/susy/sass/susy";
+@import "customizer";
+
+$susy: (columns: 12, gutters: 1 / 2, math: fluid, gutter-position: split);
+
+// Default container width
+$container-size: 1100px;
+
+// Breakpoints
+$medium-screen: 40.063em;
+$large-screen: 61.063em;
+
+// Media Queries
+$small-only: "only screen and (max-width: #{$medium-screen})";
+$medium-up: "only screen and (min-width: #{$medium-screen})";
+$medium-down: "only screen and (max-width: #{$large-screen})";
+$medium-only: "only screen and (min-width: #{$medium-screen}) and (max-width: #{$large-screen})";
+$large-up: "only screen and (min-width: #{$large-screen})";
+
+// Typography
+$font__main: $primary-font, "Helvetica Neue", sans-serif;
+$font__secondary: $secondary-font, "Helvetica Neue", sans-serif;
+$font__heading: $heading-font, "Helvetica Neue", sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.8;
+$font__line-height-pre: 1.6;
+$font__line-height-headings: 1.4;
+
+// Colors
+$color__background-body: $background-color;
+$color__background-screen: #fff;
+$color__background-hr: rgba($main-text-color, 0.1);
+$color__background-button: $link-color;
+$color__background-button-hover: rgba($link-color, 0.8);
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+$color__background-header: $header-background-color;
+$color__background-menu: $menu-background-color;
+$color__background-menu-hover: rgba(0, 0, 0, 0.1);
+$color__background-footer: $footer-background-color;
+$color__text-screen: #21759b;
+$color__text-input: rgba($main-text-color, 0.5);
+$color__text-input-focus: $main-text-color;
+$color__text-main: $main-text-color;
+$color__text-secondary: $secondary-text-color;
+$color__text-heading: $main-text-color;
+$color__text-tagline: $tagline-text-color;
+$color__text-menu: #fff;
+$color__text-button: #fff;
+$color__link: $link-color;
+$color__link-hover: rgba($link-color, 0.8);
+$color__link-visited: $link-color;
+$color__border: $color__background-hr;
+$color__border-abbr: $color__background-hr;

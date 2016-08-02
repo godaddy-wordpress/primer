@@ -1,0 +1,135 @@
+.site-content {
+	@include container($container-size);
+
+	margin-top: 2em;
+
+	@media #{$medium-down} {
+		margin-top: 7 / 18 + 1%;
+	}
+}
+
+body.no-max-width .site-content,
+body.page-template-page-builder .site-content {
+	max-width: none;
+}
+
+body.layout-one-column-narrow .site-content {
+	@include container(66.66667%);
+}
+
+.content-area {
+	@include span(first 8);
+
+	@media #{$medium-down} {
+		@include span(12);
+	}
+}
+
+#secondary {
+	@include span(last 4);
+
+	@media #{$medium-down} {
+		@include span(12);
+	}
+}
+
+#tertiary {
+	display: none;
+
+	@media #{$medium-down} {
+		@include span(12);
+	}
+}
+
+@media #{$large-up} {
+
+	body {
+		&.layout-one-column-wide,
+		&.layout-one-column-narrow {
+			.content-area,
+			#secondary,
+			#tertiary {
+				@include span(12);
+			}
+		}
+
+		&.layout-two-column-default {
+			.content-area {
+				@include span(first 8);
+			}
+
+			#secondary {
+				@include span(last 4);
+			}
+		}
+
+		&.layout-two-column-reversed {
+			.content-area {
+				@include span(last 8);
+			}
+
+			#secondary {
+				@include span(first 4);
+			}
+		}
+
+		&.layout-three-column-default {
+			.content-area {
+				@include span(first 6);
+			}
+
+			#secondary {
+				@include span(3 at 7);
+			}
+
+			#tertiary {
+				@include span(last 3);
+
+				display: block;
+			}
+		}
+
+		&.layout-three-column-reversed {
+			.content-area {
+				@include span(last 6);
+			}
+
+			#secondary {
+				@include span(first 3);
+			}
+
+			#tertiary {
+				@include span(3 at 4);
+
+				display: block;
+			}
+		}
+
+		&.layout-three-column-center {
+			.content-area {
+				@include span(6 at 4);
+
+				@include push(3 of 12);
+			}
+
+			#secondary {
+				@include span(first 3);
+
+				@include pull(9 of 12);
+			}
+
+			#tertiary {
+				@include span(last 3);
+
+				display: block;
+			}
+		}
+	}
+}
+
+body.page-template-page-builder {
+	.content-area {
+		width: 100%;
+		margin: 0;
+	}
+}

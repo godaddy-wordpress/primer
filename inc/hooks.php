@@ -177,6 +177,12 @@ function primer_body_class( array $classes ) {
 
 	}
 
+	if ( has_header_image() ) {
+
+		$classes[] = 'custom-header-image';
+
+	}
+
 	return $classes;
 
 }

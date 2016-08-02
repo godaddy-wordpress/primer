@@ -1,0 +1,42 @@
+table {
+	border-collapse: collapse;
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+.hentry table {
+	th,
+	td {
+		padding: 0.5em;
+		text-align: left;
+		border: 1px solid $color__border;
+		border-left: none;
+		border-right: none;
+	}
+
+	thead th {
+		border-bottom-width: 2px;
+		border-top: none;
+	}
+
+	tfoot th {
+		border-top-width: 2px;
+		border-bottom: none;
+	}
+
+	tr:hover td {
+		background-color: rgba($color__border, 0.075);
+	}
+}
+
+.widget table {
+	caption {
+		padding: 0 0.5em 0.5em;
+		font-weight: bold;
+	}
+
+	th,
+	td {
+		text-align: center;
+	}
+}
