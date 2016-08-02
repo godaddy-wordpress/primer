@@ -31,6 +31,7 @@ window.onresize = function() {
 	if ( menu_toggle.offsetHeight ) {
 
 		nav_menu.style.display = 'none';
+		menu_toggle.className  = 'menu-toggle';
 
 		return;
 
