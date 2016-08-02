@@ -76,16 +76,15 @@ class Primer_Customizer_Layouts {
 		add_action( 'init', array( $this, 'post_type_support' ), 11 );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
+		add_action( 'customize_register',    array( $this, 'customize_register' ) );
 
 		if ( $this->meta_box ) {
 
-			add_action( 'load-post.php',         array( $this, 'load_post' ) );
-			add_action( 'load-post-new.php',     array( $this, 'load_post' ) );
-			add_action( 'save_post',             array( $this, 'save_post' ) );
+			add_action( 'load-post.php',     array( $this, 'load_post' ) );
+			add_action( 'load-post-new.php', array( $this, 'load_post' ) );
+			add_action( 'save_post',         array( $this, 'save_post' ) );
 
 		}
-
-		add_action( 'customize_register', array( $this, 'customize_register' ) );
 
 		add_filter( 'body_class', array( $this, 'body_class' ) );
 
@@ -220,7 +219,7 @@ class Primer_Customizer_Layouts {
 			||
 			! current_user_can( 'delete_post_meta', $post->ID )
 			||
-		    'templates/page-builder.php' === get_page_template_slug()
+			'templates/page-builder.php' === get_page_template_slug()
 		) {
 
 			return;
