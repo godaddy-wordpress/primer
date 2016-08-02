@@ -30,7 +30,7 @@
 			// Update all swatches when the color scheme changes.
 			this.setting.bind( 'change', function( scheme ) {
 
-				if ( 'custom' === scheme ) {
+				if ( '_custom' === scheme ) {
 
 					return;
 
@@ -58,9 +58,9 @@
 		var color_scheme = api( 'color_scheme' ),
 		    scheme       = color_scheme();
 
-		scheme = ( 'custom' === scheme ) ? 'default' : scheme;
+		scheme = ( '_custom' === scheme ) ? 'default' : scheme;
 
-		api( 'color_scheme' ).set( 'custom' );
+		api( 'color_scheme' ).set( '_custom' );
 
 		var colors     = _.object( colorSettings, colorSchemes[ scheme ].colors ),
 		    rgbaColors = {};
