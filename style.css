@@ -1282,7 +1282,8 @@ object {
     .site-content {
       margin-top: 1.38889%; } }
 
-body.no-max-width .site-content {
+body.no-max-width .site-content,
+body.page-template-page-builder .site-content {
   max-width: none; }
 
 body.layout-one-column-narrow .site-content {
@@ -1408,13 +1409,9 @@ body.layout-one-column-narrow .site-content {
     margin-right: 1.38889%;
     display: block; } }
 
-body.page-template-page-builder .content-area,
-body.page-template-page-builder #secondary,
-body.page-template-page-builder #tertiary {
-  width: 97.22222%;
-  float: left;
-  margin-left: 1.38889%;
-  margin-right: 1.38889%; }
+body.page-template-page-builder .content-area {
+  width: 100%;
+  margin: 0; }
 
 /*--------------------------------------------------------------
 # Header

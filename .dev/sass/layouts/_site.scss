@@ -8,7 +8,8 @@
 	}
 }
 
-body.no-max-width .site-content {
+body.no-max-width .site-content,
+body.page-template-page-builder .site-content {
 	max-width: none;
 }
 
@@ -127,9 +128,8 @@ body.layout-one-column-narrow .site-content {
 }
 
 body.page-template-page-builder {
-	.content-area,
-	#secondary,
-	#tertiary {
-		@include span(12);
+	.content-area {
+		width: 100%;
+		margin: 0;
 	}
 }
