@@ -1933,3 +1933,11 @@ body.no-max-width .site-info-wrapper .site-info {
 .logged-in-as {
   font-size: 90%;
   color: #686868; }
+
+.comment .comment-respond {
+  margin: 2em -12px 0 20px; }
+
+.comment-reply-title small {
+  float: left;
+  margin-top: 0.6em;
+  font-size: 60%; }

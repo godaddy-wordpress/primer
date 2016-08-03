@@ -95,3 +95,13 @@
 	font-size: 90%;
 	color: $color__text-secondary;
 }
+
+.comment .comment-respond {
+	margin: 2em 20px 0 -12px;
+}
+
+.comment-reply-title small {
+	float: right;
+	margin-top: 0.6em;
+	font-size: 60%;
+}
