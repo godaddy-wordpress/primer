@@ -24,12 +24,12 @@ add_action( 'primer_header', 'primer_add_site_title', 5 );
  * @action primer_header
  * @since  1.0.0
  */
-function primer_add_site_header() {
+function primer_add_hero() {
 
-	get_template_part( 'templates/parts/site-header' );
+	get_template_part( 'templates/parts/hero' );
 
 }
-add_action( 'primer_header', 'primer_add_site_header', 10 );
+add_action( 'primer_header', 'primer_add_hero', 10 );
 
 /**
  * Display primary navigation menu after the header.
