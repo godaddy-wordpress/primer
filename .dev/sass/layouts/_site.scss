@@ -43,92 +43,93 @@ body.layout-one-column-narrow .site-content {
 
 @media #{$large-up} {
 
-	body {
-		&.layout-one-column-wide,
-		&.layout-one-column-narrow {
-			.content-area,
-			#secondary,
-			#tertiary {
-				@include span(12);
-			}
+	.layout-one-column-wide,
+	.layout-one-column-narrow {
+		.content-area,
+		#secondary,
+		#tertiary {
+			@include span(12);
+		}
+	}
+
+	.layout-two-column-default {
+		.content-area {
+			@include span(first 8);
 		}
 
-		&.layout-two-column-default {
-			.content-area {
-				@include span(first 8);
-			}
+		#secondary {
+			@include span(last 4);
+		}
+	}
 
-			#secondary {
-				@include span(last 4);
-			}
+	.layout-two-column-reversed {
+		.content-area {
+			@include span(last 8);
 		}
 
-		&.layout-two-column-reversed {
-			.content-area {
-				@include span(last 8);
-			}
+		#secondary {
+			@include span(first 4);
+		}
+	}
 
-			#secondary {
-				@include span(first 4);
-			}
+	.layout-three-column-default {
+		.content-area {
+			@include span(first 6);
 		}
 
-		&.layout-three-column-default {
-			.content-area {
-				@include span(first 6);
-			}
-
-			#secondary {
-				@include span(3 at 7);
-			}
-
-			#tertiary {
-				@include span(last 3);
-
-				display: block;
-			}
+		#secondary {
+			@include span(3 at 7);
 		}
 
-		&.layout-three-column-reversed {
-			.content-area {
-				@include span(last 6);
-			}
+		#tertiary {
+			@include span(last 3);
 
-			#secondary {
-				@include span(first 3);
-			}
+			display: block;
+		}
+	}
 
-			#tertiary {
-				@include span(3 at 4);
-
-				display: block;
-			}
+	.layout-three-column-reversed {
+		.content-area {
+			@include span(last 6);
 		}
 
-		&.layout-three-column-center {
-			.content-area {
-				@include span(6 at 4);
+		#secondary {
+			@include span(first 3);
+		}
 
-				@include push(3 of 12);
-			}
+		#tertiary {
+			@include span(3 at 4);
 
-			#secondary {
-				@include span(first 3);
+			display: block;
+		}
+	}
 
-				@include pull(9 of 12);
-			}
+	.layout-three-column-center {
+		.content-area {
+			@include span(6 at 4);
 
-			#tertiary {
-				@include span(last 3);
+			@include push(3 of 12);
+		}
 
-				display: block;
-			}
+		#secondary {
+			@include span(first 3);
+
+			@include pull(9 of 12);
+		}
+
+		#tertiary {
+			@include span(last 3);
+
+			display: block;
 		}
 	}
 }
 
-body.page-template-page-builder {
+body.page-template-page-builder,
+body.page-template-page-builder-no-header {
+	.site-content,
 	.content-area {
+		max-width: 100%;
 		width: 100%;
 		margin: 0;
 	}
