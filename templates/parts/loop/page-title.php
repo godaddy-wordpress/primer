@@ -6,34 +6,38 @@
  */
 ?>
 
-<header class="page-header">
+<div class="page-title-container">
 
-	<?php
-	/**
-	 * Fires before the page title element.
-	 *
-	 * @since 1.0.0
-	 */
-	do_action( 'primer_before_page_title' );
-	?>
+	<header class="page-header">
 
-	<?php if ( is_singular() ) : ?>
+		<?php
+		/**
+		 * Fires before the page title element.
+		 *
+		 * @since 1.0.0
+		 */
+		do_action( 'primer_before_page_title' );
+		?>
 
-		<h1 class="page-title"><?php the_title() ?></h1>
+		<?php if ( is_singular() ) : ?>
 
-	<?php else : ?>
+			<h1 class="page-title"><?php the_title() ?></h1>
 
-		<h2 class="page-title"><a href="<?php the_permalink() ?>" rel="permalink"><?php the_title() ?></a></h2>
+		<?php else : ?>
 
-	<?php endif; ?>
+			<h2 class="page-title"><a href="<?php the_permalink() ?>" rel="permalink"><?php the_title() ?></a></h2>
 
-	<?php
-	/**
-	 * Fires after the page title element.
-	 *
-	 * @since 1.0.0
-	 */
-	do_action( 'primer_after_page_title' );
-	?>
+		<?php endif; ?>
 
-</header><!-- .entry-header -->
+		<?php
+		/**
+		 * Fires after the page title element.
+		 *
+		 * @since 1.0.0
+		 */
+		do_action( 'primer_after_page_title' );
+		?>
+
+	</header><!-- .entry-header -->
+
+</div><!-- .page-title-container -->

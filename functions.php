@@ -439,3 +439,39 @@ add_action( 'create_category', 'primer_has_active_categories_reset' );
 add_action( 'edit_category',   'primer_has_active_categories_reset' );
 add_action( 'delete_category', 'primer_has_active_categories_reset' );
 add_action( 'save_post',       'primer_has_active_categories_reset' );
+
+/**
+ * Add title to Page Builder template.
+ *
+ * @since 1.0.0
+ */
+function primer_add_page_builder_template_title(){
+	if( is_page_template( 'templates/page-builder.php' ) ){
+		get_template_part( 'templates/parts/header', 'page-title' );
+	}
+}
+add_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
+
+/**
+ * Add title to blog index template.
+ *
+ * @since 1.0.0
+ */
+function primer_add_blog_title(){
+	if( is_home() || is_single() ){
+		get_template_part( 'templates/parts/blog', 'title' );
+	}
+}
+add_action( 'primer_after_header', 'primer_add_blog_title', 100 );
+
+/**
+ * Add archive title to archive template.
+ *
+ * @since 1.0.0
+ */
+function primer_add_archive_title(){
+	if( is_archive() ){
+		get_template_part( 'templates/parts/archive', 'title' );
+	}
+}
+add_action( 'primer_after_header', 'primer_add_archive_title', 100 );

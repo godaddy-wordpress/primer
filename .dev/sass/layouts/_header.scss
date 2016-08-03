@@ -12,6 +12,7 @@
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
+	z-index: 0;
 }
 
 .site-header-wrapper {
@@ -27,7 +28,7 @@ body.no-max-width .site-header-wrapper {
 
 	position: relative;
 	z-index: 1;
-	padding: 7% 1rem;
+	padding: 5% 1rem;
 
 	@media #{$small-only} {
 		padding-left: 0.75rem;
@@ -67,4 +68,29 @@ body.custom-header-image {
 
 .header-image img {
 	display: block;
+}
+
+#page > .page-title-container{
+	background-color: white;
+
+	.page-header,
+	.archive-header{
+		@include container($container-size);
+		position: relative;
+		z-index: 9999;
+		clear: both;
+
+		h1{
+			@include span(12);
+			padding: 3% 1rem;
+			margin-top: 0;
+			margin-bottom: 0;
+			font-weight: 200;
+
+			@media #{$small-only} {
+				padding-left: 0.75rem;
+				padding-right: 0.75rem;
+			}
+		}
+	}
 }
