@@ -1837,6 +1837,11 @@ body.no-max-width .site-info-wrapper .site-info {
   @media only screen and (max-width: 40.063em) {
     .comments-area {
       padding: 1em; } }
+  .comments-area label {
+    display: block; }
+  .comments-area input:not(.submit),
+  .comments-area textarea {
+    width: 100%; }
 
 .comment-list {
   padding: 0;

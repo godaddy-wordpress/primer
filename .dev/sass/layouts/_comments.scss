@@ -10,6 +10,15 @@
 	@media #{$small-only} {
 		padding: 1em;
 	}
+
+	label {
+		display: block;
+	}
+
+	input:not(.submit),
+	textarea {
+		width: 100%;
+	}
 }
 
 .comment-list {
