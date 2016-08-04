@@ -28,7 +28,7 @@ window.onresize = function() {
 	var nav_menu    = document.getElementById( 'site-navigation' ),
 	    menu_toggle = document.getElementById( 'menu-toggle' );
 
-	if ( menu_toggle.offsetHeight ) {
+	if ( typeof nav_menu !== 'undefined' && typeof menu_toggle !== 'undefined' && menu_toggle.offsetHeight ) {
 
 		nav_menu.style.display = 'none';
 		menu_toggle.className  = 'menu-toggle';
