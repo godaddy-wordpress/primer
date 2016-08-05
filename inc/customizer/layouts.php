@@ -464,7 +464,7 @@ class Primer_Customizer_Layouts {
 			'full_width',
 			array(
 				'label'       => esc_html__( 'Page Width', 'primer' ),
-				'description' => esc_html__( 'Set the header and footer width to be fixed or fluid when viewed on large screens.', 'primer' ),
+				'description' => esc_html__( 'Set the page width to be fixed or fluid when viewed on large screens.', 'primer' ),
 				'section'     => 'layout',
 				'settings'    => 'full_width',
 				'type'        => 'radio',
