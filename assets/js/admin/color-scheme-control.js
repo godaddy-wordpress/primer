@@ -9,8 +9,8 @@
 	var cssTemplate      = wp.template( 'primer-color-scheme-css' ),
 	    rgbaTemplate     = wp.template( 'primer-color-scheme-css-rgba' ),
 	    colorSettings    = [],
-			oldScheme        = null,
-			schemeIsChanging = false;
+	    oldScheme        = null,
+	    schemeIsChanging = false;
 
 	// Grab array keys from the default scheme.
 	_.each( colorSchemes.default.colors, function( color, setting ) {
@@ -81,10 +81,10 @@
 				oldScheme = scheme;
 
 				$( '#customize-control-color_scheme select' )
-						.append( $( '<option></option>' )
-								.val( '_custom' )
-								.html( colorSchemes._custom.label )
-						);
+					.append( $( '<option></option>' )
+						.val( '_custom' )
+						.html( colorSchemes._custom.label )
+					);
 
 				api( 'color_scheme' ).set( '_custom' );
 
