@@ -1720,15 +1720,15 @@ body.no-max-width .site-info-wrapper .site-info {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5em;
-  padding: 2em;
+  margin: 0 0 1.5rem;
+  padding: 2rem;
   background-color: #fff; }
   @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
     .widget {
-      padding: 1.5em; } }
+      padding: 1.5rem; } }
   @media only screen and (max-width: 40.063em) {
     .widget {
-      padding: 1em; } }
+      padding: 1rem; } }
   .widget input[type="text"],
   .widget input[type="email"],
   .widget input[type="url"],
@@ -1752,9 +1752,9 @@ body.no-max-width .site-info-wrapper .site-info {
     margin: 0;
     padding: 0; }
   .widget li {
-    padding: 0.25em 0; }
+    padding: 0.25rem 0; }
     .widget li ul {
-      padding-right: 1.5em; }
+      padding-right: 1.5rem; }
 
 .widget_calendar #calendar_wrap #wp-calendar td#today {
   font-weight: bold; }
@@ -1768,24 +1768,26 @@ body.no-max-width .site-info-wrapper .site-info {
 .footer-widget .widget:last-child {
   margin-bottom: 0; }
 
-#secondary .widget_search {
+.widget_search {
   padding: 0; }
-
-.widget_search .search-field {
-  width: 100%;
-  background: #fff;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-  .widget_search .search-field:focus {
-    background: #fff; }
-  .widget_search .search-field::-webkit-search-cancel-button {
-    z-index: 1; }
-
-.widget_search .search-submit {
-  display: none; }
+  .widget_search .widget-title {
+    padding: 2rem 2rem 0; }
+    .widget_search .widget-title + .search-form {
+      padding: 0 2rem 2rem; }
+  .widget_search .search-field {
+    width: 100%;
+    background: #fff;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .widget_search .search-field:focus {
+      background: #fff; }
+    .widget_search .search-field::-webkit-search-cancel-button {
+      z-index: 1; }
+  .widget_search .search-submit {
+    display: none; }
 
 /*--------------------------------------------------------------
 # Content

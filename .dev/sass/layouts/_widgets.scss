@@ -1,14 +1,14 @@
 .widget {
-	margin: 0 0 1.5em;
-	padding: 2em;
+	margin: 0 0 1.5rem;
+	padding: 2rem;
 	background-color: $color__background-screen;
 
 	@media #{$medium-only} {
-		padding: 1.5em;
+		padding: 1.5rem;
 	}
 
 	@media #{$small-only} {
-		padding: 1em;
+		padding: 1rem;
 	}
 
 	input[type="text"],
@@ -38,10 +38,10 @@
 	}
 
 	li {
-		padding: 0.25em 0;
+		padding: 0.25rem 0;
 
 		ul {
-			padding-left: 1.5em;
+			padding-left: 1.5rem;
 		}
 	}
 }
@@ -67,8 +67,14 @@
 }
 
 .widget_search {
-	#secondary & {
-		padding: 0;
+	padding: 0;
+
+	.widget-title {
+		padding: 2rem 2rem 0;
+
+		+ .search-form {
+			padding: 0 2rem 2rem;
+		}
 	}
 
 	.search-field {
