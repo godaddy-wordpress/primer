@@ -475,10 +475,8 @@ class Primer_Customizer_Colors {
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
 		wp_enqueue_script( 'primer-color-scheme-control', get_template_directory_uri() . "/assets/js/admin/color-scheme-control{$suffix}.js", array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), PRIMER_VERSION, true );
-
-		$color_schemes = $this->color_schemes;
-
-		wp_localize_script( 'primer-color-scheme-control', 'colorSchemes', $color_schemes );
+		
+		wp_localize_script( 'primer-color-scheme-control', 'colorSchemes', $this->color_schemes );
 
 	}
 
