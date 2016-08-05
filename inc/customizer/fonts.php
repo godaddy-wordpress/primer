@@ -64,6 +64,8 @@ class Primer_Customizer_Fonts {
 
 		}
 
+		sort( $this->fonts );
+
 		/**
 		 * Filter the array of available font types.
 		 *
@@ -158,12 +160,9 @@ class Primer_Customizer_Fonts {
 				)
 			);
 
-			$fonts = array_unique(
-				array_merge(
-					array( $this->get_default_font( $font_type['name'] ) ),
-					$this->fonts
-				)
-			);
+			$fonts             = array_combine( $this->fonts, $this->fonts );
+			$default           = $this->get_default_font( $font_type['name'] );
+			$fonts[ $default ] = sprintf( _x( '%s (Default)', 'font name', 'primer' ), $default );
 
 			$wp_customize->add_control(
 				$font_type['name'],
@@ -171,7 +170,7 @@ class Primer_Customizer_Fonts {
 					'label'   => $font_type['label'],
 					'section' => 'typography',
 					'type'    => 'select',
-					'choices' => array_combine( $fonts, $fonts ),
+					'choices' => $fonts,
 				)
 			);
 
