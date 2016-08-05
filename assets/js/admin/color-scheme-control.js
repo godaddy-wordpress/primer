@@ -1,14 +1,16 @@
-/* global colorSchemes, Color */
+/* global colorSchemes */
 /**
  * Add a listener to the Color Scheme control to update other color controls to new values/defaults.
  * Also trigger an update of the Color Scheme CSS when a color is changed.
  */
 
-( function( api ) {
+( function( api, $ ) {
 
-	var cssTemplate   = wp.template( 'primer-color-scheme-css' ),
-	    rgbaTemplate  = wp.template( 'primer-color-scheme-css-rgba' ),
-	    colorSettings = [];
+	var cssTemplate      = wp.template( 'primer-color-scheme-css' ),
+	    rgbaTemplate     = wp.template( 'primer-color-scheme-css-rgba' ),
+	    colorSettings    = [],
+	    oldScheme        = null,
+	    schemeIsChanging = false;
 
 	// Grab array keys from the default scheme.
 	_.each( colorSchemes.default.colors, function( color, setting ) {
@@ -27,8 +29,26 @@
 
 			}
 
+			var scheme = api( this.id )();
+
+			if ( '_custom' !== scheme ) {
+
+				$( '#customize-control-color_scheme select option[value="_custom"]' ).remove();
+
+			}
+
 			// Update all swatches when the color scheme changes.
 			this.setting.bind( 'change', function( scheme ) {
+
+				if ( '_custom' === scheme ) {
+
+					return;
+
+				}
+
+				$( '#customize-control-color_scheme select option[value="_custom"]' ).remove();
+
+				schemeIsChanging = true;
 
 				_.each( colorSchemes[ scheme ].colors, function( color, setting ) {
 
@@ -40,6 +60,8 @@
 
 				} );
 
+				schemeIsChanging = false;
+
 			} );
 
 		}
@@ -49,12 +71,34 @@
 	// Generate the CSS for the current color scheme.
 	function updateCSS() {
 
-		var scheme     = api( 'color_scheme' )(),
-		    colors     = _.object( colorSettings, colorSchemes[ scheme ].colors ),
+		var color_scheme = api( 'color_scheme' ),
+		    scheme       = color_scheme();
+
+		if ( ! schemeIsChanging ) {
+
+			if ( '_custom' !== scheme ) {
+
+				oldScheme = scheme;
+
+				$( '#customize-control-color_scheme select' )
+					.append( $( '<option></option>' )
+						.val( '_custom' )
+						.html( colorSchemes._custom.label )
+					);
+
+				api( 'color_scheme' ).set( '_custom' );
+
+			}
+
+			scheme = _.isNull( oldScheme ) ? 'default' : oldScheme;
+
+		}
+
+		var colors     = _.clone( colorSchemes[ scheme ].colors ),
 		    rgbaColors = {};
 
 		// Merge in color scheme overrides.
-		_.each( colorSettings, function( setting ) {
+		_.each( colors, function( color, setting ) {
 
 			var hex = api( setting )();
 
@@ -62,6 +106,12 @@
 			rgbaColors[ setting ] = hex2rgb( hex );
 
 		} );
+
+		if ( _.isEqual( colors, colorSchemes[ scheme ].colors ) ) {
+
+			api( 'color_scheme' ).set( scheme );
+
+		}
 
 		api.previewer.send( 'primer-update-color-scheme-css', cssTemplate( colors ) );
 		api.previewer.send( 'primer-update-color-scheme-css-rgba', rgbaTemplate( rgbaColors ) );
@@ -92,4 +142,4 @@
 
 	} );
 
-} )( wp.customize );
+} )( wp.customize, jQuery );
