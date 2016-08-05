@@ -463,7 +463,7 @@ class Primer_Customizer_Layouts {
 		$wp_customize->add_control(
 			'full_width',
 			array(
-				'label'       => esc_html__( 'Header & Footer Width', 'primer' ),
+				'label'       => esc_html__( 'Page Width', 'primer' ),
 				'description' => esc_html__( 'Set the header and footer width to be fixed or fluid when viewed on large screens.', 'primer' ),
 				'section'     => 'layout',
 				'settings'    => 'full_width',
