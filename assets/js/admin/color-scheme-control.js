@@ -9,7 +9,7 @@
 	var cssTemplate      = wp.template( 'primer-color-scheme-css' ),
 	    rgbaTemplate     = wp.template( 'primer-color-scheme-css-rgba' ),
 	    colorSettings    = [],
-			schemeisChanging = false;
+			schemeIsChanging = false;
 
 	// Grab array keys from the default scheme.
 	_.each( colorSchemes.default.colors, function( color, setting ) {
@@ -39,7 +39,7 @@
 
 				$( '#customize-control-color_scheme select option[value="_custom"]' ).remove();
 
-				schemeisChanging = true;
+				schemeIsChanging = true;
 
 				_.each( colorSchemes[ scheme ].colors, function( color, setting ) {
 
@@ -51,7 +51,7 @@
 
 				} );
 
-				schemeisChanging = false;
+				schemeIsChanging = false;
 
 			} );
 
@@ -65,7 +65,7 @@
 		var color_scheme = api( 'color_scheme' ),
 		    scheme       = color_scheme();
 
-		if ( ! schemeisChanging ) {
+		if ( ! schemeIsChanging ) {
 
 			scheme = 'default';
 
