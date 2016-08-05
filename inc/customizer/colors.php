@@ -250,6 +250,9 @@ class Primer_Customizer_Colors {
 						'secondary_text_color'    => '#222222',
 					),
 				),
+				'_custom' => array(
+					'label' => sprintf( '- %s -' , __( 'Custom', 'primer' ) ),
+				)
 			)
 		);
 
@@ -474,10 +477,6 @@ class Primer_Customizer_Colors {
 		wp_enqueue_script( 'primer-color-scheme-control', get_template_directory_uri() . "/assets/js/admin/color-scheme-control{$suffix}.js", array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), PRIMER_VERSION, true );
 
 		$color_schemes = $this->color_schemes;
-
-		$color_schemes['custom'] = [
-			'label' => sprintf( '- %s -' ,__( 'Custom', 'primer' ) ),
-		];
 
 		wp_localize_script( 'primer-color-scheme-control', 'colorSchemes', $color_schemes );
 

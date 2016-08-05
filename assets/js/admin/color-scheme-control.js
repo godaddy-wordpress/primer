@@ -29,6 +29,14 @@
 
 			}
 
+			var scheme = api( this.id )();
+
+			if ( '_custom' !== scheme ) {
+
+				$( '#customize-control-color_scheme select option[value="_custom"]' ).remove();
+
+			}
+
 			// Update all swatches when the color scheme changes.
 			this.setting.bind( 'change', function( scheme ) {
 
@@ -73,16 +81,16 @@
 				oldScheme = scheme;
 
 				$( '#customize-control-color_scheme select' )
-					.append( $( '<option></option>' )
-							.val( '_custom' )
-							.html( colorSchemes.custom.label )
-					);
+						.append( $( '<option></option>' )
+								.val( '_custom' )
+								.html( colorSchemes._custom.label )
+						);
 
 				api( 'color_scheme' ).set( '_custom' );
 
 			}
 
-			scheme = oldScheme;
+			scheme = _.isNull( oldScheme ) ? 'default' : oldScheme;
 
 		}
 
