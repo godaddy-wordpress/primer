@@ -4,11 +4,12 @@
  * Also trigger an update of the Color Scheme CSS when a color is changed.
  */
 
-( function( api ) {
+( function( api, $ ) {
 
-	var cssTemplate   = wp.template( 'primer-color-scheme-css' ),
-	    rgbaTemplate  = wp.template( 'primer-color-scheme-css-rgba' ),
-	    colorSettings = [];
+	var cssTemplate      = wp.template( 'primer-color-scheme-css' ),
+	    rgbaTemplate     = wp.template( 'primer-color-scheme-css-rgba' ),
+	    colorSettings    = [],
+			schemeisChanging = false;
 
 	// Grab array keys from the default scheme.
 	_.each( colorSchemes.default.colors, function( color, setting ) {
@@ -36,6 +37,10 @@
 
 				}
 
+				$( '#customize-control-color_scheme select option[value="_custom"]' ).remove();
+
+				schemeisChanging = true;
+
 				_.each( colorSchemes[ scheme ].colors, function( color, setting ) {
 
 					api( setting ).set( color );
@@ -45,6 +50,8 @@
 						.wpColorPicker( 'defaultColor', color );
 
 				} );
+
+				schemeisChanging = false;
 
 			} );
 
@@ -58,9 +65,15 @@
 		var color_scheme = api( 'color_scheme' ),
 		    scheme       = color_scheme();
 
-		scheme = ( '_custom' === scheme ) ? 'default' : scheme;
+		if ( ! schemeisChanging ) {
 
-		api( 'color_scheme' ).set( '_custom' );
+			scheme = 'default';
+
+			$( '#customize-control-color_scheme select' ).append( $( '<option></option>' ).val('_custom' ).html( colorSchemes.custom.label ) );
+
+			api( 'color_scheme' ).set( '_custom' );
+
+		}
 
 		var colors     = _.object( colorSettings, colorSchemes[ scheme ].colors ),
 		    rgbaColors = {};
@@ -104,4 +117,4 @@
 
 	} );
 
-} )( wp.customize );
+} )( wp.customize, jQuery );
