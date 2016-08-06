@@ -76,31 +76,34 @@ class Primer_Customizer_Fonts {
 		$this->font_types = (array) apply_filters( 'primer_font_types',
 			array(
 				array(
-					'name'    => 'primary_font',
-					'label'   => esc_html__( 'Primary Font', 'primer' ),
-					'default' => 'Open Sans',
-					'css'     => array(
+					'name'        => 'header_font',
+					'label'       => esc_html__( 'Header Font', 'primer' ),
+					'description' => esc_html__( 'Site title, post titles, widget titles, main menu links, form labels, table headers and buttons.', 'primer' ),
+					'default'     => 'Open Sans',
+					'css'         => array(
+						'h1, h2, h3, h4, h5, h6, label, legend, table th, .site-title, .entry-title, .widget-title, .main-navigation li a, button, a.button, input[type="button"], input[type="reset"], input[type="submit"]' => array(
+							'font-family' => '"%s", sans-serif',
+						),
+					),
+				),
+				array(
+					'name'        => 'primary_font',
+					'label'       => esc_html__( 'Primary Font', 'primer' ),
+					'description' => esc_html__( 'Paragraphs, lists, quotes and tables.', 'primer' ),
+					'default'     => 'Open Sans',
+					'css'         => array(
 						'body, p' => array(
 							'font-family' => '"%s", sans-serif',
 						),
 					),
 				),
 				array(
-					'name'    => 'secondary_font',
-					'label'   => esc_html__( 'Secondary Font', 'primer' ),
-					'default' => 'Open Sans',
-					'css'     => array(
+					'name'        => 'secondary_font',
+					'label'       => esc_html__( 'Secondary Font', 'primer' ),
+					'description' => esc_html__( 'Post bylines, comment counts, comment reply links, post footers and quote footers.', 'primer' ),
+					'default'     => 'Open Sans',
+					'css'         => array(
 						'blockquote, .entry-meta, .entry-footer, .comment-list li .comment-meta .says, .comment-list li .comment-metadata, .comment-reply-link, #respond .logged-in-as, .fl-callout-text' => array(
-							'font-family' => '"%s", sans-serif',
-						),
-					),
-				),
-				array(
-					'name'    => 'header_font',
-					'label'   => esc_html__( 'Header Font', 'primer' ),
-					'default' => 'Open Sans',
-					'css'     => array(
-						'h1, h2, h3, h4, h5, h6, label, legend, table th, .site-title, .entry-title, .widget-title, .main-navigation li a, button, a.button, input[type="button"], input[type="reset"], input[type="submit"]' => array(
 							'font-family' => '"%s", sans-serif',
 						),
 					),
@@ -114,21 +117,21 @@ class Primer_Customizer_Fonts {
 
 		}
 
-		add_action( 'customize_register', array( $this, 'typography' ), 11 );
+		add_action( 'customize_register', array( $this, 'fonts' ), 11 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_google_fonts' ), 11 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_inline_css' ), 12 );
 
 	}
 
 	/**
-	 * Register typography section and settings.
+	 * Register fonts section and settings.
 	 *
 	 * @action customize_registers
 	 * @since 1.0.0
 	 *
 	 * @param WP_Customize_Manager $wp_customize
 	 */
-	public function typography( WP_Customize_Manager $wp_customize ) {
+	public function fonts( WP_Customize_Manager $wp_customize ) {
 
 		if ( ! $this->fonts || ! $this->font_types ) {
 
@@ -137,7 +140,7 @@ class Primer_Customizer_Fonts {
 		}
 
 		$wp_customize->add_section(
-			'typography',
+			'fonts',
 			array(
 				'title'    => esc_html__( 'Fonts', 'primer' ),
 				'priority' => 40,
@@ -162,15 +165,17 @@ class Primer_Customizer_Fonts {
 
 			$fonts             = array_combine( $this->fonts, $this->fonts );
 			$default           = $this->get_default_font( $font_type['name'] );
-			$fonts[ $default ] = sprintf( _x( '%s (Default)', 'font name', 'primer' ), $default );
+			$fonts[ $default ] = sprintf( esc_html_x( '%s (Default)', 'font name', 'primer' ), $default );
 
 			$wp_customize->add_control(
 				$font_type['name'],
 				array(
-					'label'   => $font_type['label'],
-					'section' => 'typography',
-					'type'    => 'select',
-					'choices' => $fonts,
+					'label'       => $font_type['label'],
+					'description' => ! empty( $font_type['description'] ) ? $font_type['description'] : null,
+					'section'     => ! empty( $font_type['section'] ) ? $font_type['section'] : 'fonts',
+					'priority'    => ! empty( $font_type['priority'] ) ? absint( $font_type['priority'] ) : null,
+					'type'        => ! empty( $font_type['type'] ) ? $font_type['type'] : 'select',
+					'choices'     => $fonts,
 				)
 			);
 
