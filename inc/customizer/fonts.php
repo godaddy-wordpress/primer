@@ -88,7 +88,7 @@ class Primer_Customizer_Fonts {
 				),
 				array(
 					'name'        => 'primary_font',
-					'label'       => esc_html__( 'Primary Font', 'primer' ),
+					'label'       => esc_html__( 'Main Font', 'primer' ),
 					'description' => esc_html__( 'Paragraphs, lists, quotes and tables.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(

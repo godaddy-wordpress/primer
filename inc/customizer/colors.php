@@ -35,6 +35,18 @@ class Primer_Customizer_Colors {
 		$this->colors = (array) apply_filters( 'primer_colors',
 			array(
 				array(
+					'name'     => 'tagline_text_color',
+					'label'    => esc_html__( 'Tagline Color', 'primer' ),
+					'default'  => '#f4f5f9',
+					'section'  => 'title_tagline',
+					'priority' => 11,
+					'css'      => array(
+						'.site-description' => array(
+							'color' => '%1$s',
+						),
+					),
+				),
+				array(
 					'name'    => 'header_textcolor',
 					'default' => '#f4f5f9',
 					'css'     => array(
@@ -45,6 +57,37 @@ class Primer_Customizer_Colors {
 					'rgba_css' => array(
 						'.site-title a:hover, .site-title a:visited:hover' => array(
 							'color' => 'rgba(%1$s, 0.8)',
+						),
+					),
+				),
+				array(
+					'name'    => 'header_background_color',
+					'label'   => esc_html__( 'Header Background Color', 'primer' ),
+					'default' => '#0b3954',
+					'section' => 'background_image',
+					'css'     => array(
+						'.site-header' => array(
+							'background-color' => '%1$s',
+						),
+					),
+				),
+				array(
+					'name'     => 'menu_background_color',
+					'label'    => esc_html__( 'Menu Background Color', 'primer' ),
+					'default'  => '#0b3954',
+					'section'  => 'background_image',
+					'css'      => array(
+						'.main-navigation-container, .main-navigation ul ul' => array(
+							'background-color' => '%1$s',
+						),
+						'.main-navigation li a, .main-navigation li a:hover, .main-navigation li a:visited:hover' => array(
+							'color' => '#ffffff',
+						),
+						'.sub-menu .menu-item-has-children > a::after' => array(
+							'border-color' => '#ffffff',
+						),
+						'.menu-toggle div' => array(
+							'background-color' => '#ffffff',
 						),
 					),
 				),
@@ -61,38 +104,10 @@ class Primer_Customizer_Colors {
 					),
 				),
 				array(
-					'name'    => 'header_background_color',
-					'label'   => esc_html__( 'Header Background Color', 'primer' ),
-					'default' => '#0b3954',
-					'css'     => array(
-						'.site-header' => array(
-							'background-color' => '%1$s',
-						),
-					),
-				),
-				array(
-					'name'    => 'menu_background_color',
-					'label'   => esc_html__( 'Menu Background Color', 'primer' ),
-					'default' => '#0b3954',
-					'css'     => array(
-						'.main-navigation-container, .main-navigation ul ul' => array(
-							'background-color' => '%1$s',
-						),
-						'.main-navigation li a, .main-navigation li a:hover, .main-navigation li a:visited:hover' => array(
-							'color' => '#ffffff',
-						),
-						'.sub-menu .menu-item-has-children > a::after' => array(
-							'border-color' => '#ffffff',
-						),
-						'.menu-toggle div' => array(
-							'background-color' => '#ffffff',
-						),
-					),
-				),
-				array(
 					'name'    => 'footer_background_color',
 					'label'   => esc_html__( 'Footer Background Color', 'primer' ),
 					'default' => '#0b3954',
+					'section' => 'background_image',
 					'css'     => array(
 						'.site-footer' => array(
 							'background-color' => '%1$s',
@@ -100,19 +115,11 @@ class Primer_Customizer_Colors {
 					),
 				),
 				array(
-					'name'    => 'tagline_text_color',
-					'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
-					'default' => '#f4f5f9',
-					'css'     => array(
-						'.site-description' => array(
-							'color' => '%1$s',
-						),
-					),
-				),
-				array(
 					'name'    => 'link_color',
 					'label'   => esc_html__( 'Link Color', 'primer' ),
 					'default' => '#ff6663',
+					'section' => 'fonts',
+					'priority' => 20,
 					'css'     => array(
 						'a, a:visited, .entry-title a:hover, .entry-title a:visited:hover' => array(
 							'color' => '%1$s',
@@ -140,6 +147,8 @@ class Primer_Customizer_Colors {
 					'name'    => 'main_text_color',
 					'label'   => esc_html__( 'Main Text Color', 'primer' ),
 					'default' => '#0b3954',
+					'section' => 'fonts',
+					'priority' => 20,
 					'css'     => array(
 						'body, input, select, textarea, h1, h2, h3, h4, h5, h6, .entry-title a, .entry-title a:visited, .entry-title a:before, input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus' => array(
 							'color' => '%1$s',
@@ -165,10 +174,12 @@ class Primer_Customizer_Colors {
 					),
 				),
 				array(
-					'name'    => 'secondary_text_color',
-					'label'   => esc_html__( 'Secondary Text Color', 'primer' ),
-					'default' => '#686868',
-					'css'     => array(
+					'name'     => 'secondary_text_color',
+					'label'    => esc_html__( 'Secondary Text Color', 'primer' ),
+					'default'  => '#686868',
+					'section'  => 'fonts',
+					'priority' => 20,
+					'css'      => array(
 						'blockquote, .entry-meta, .entry-footer, .comment-meta .says, .logged-in-as, .fl-callout-text' => array(
 							'color' => '%1$s',
 						),
@@ -258,7 +269,7 @@ class Primer_Customizer_Colors {
 
 		$this->color_schemes = $default_scheme + $custom_schemes;
 
-		add_action( 'customize_register', array( $this, 'colors' ), 11 );
+		add_action( 'customize_register', array( $this, 'colors' ), 9 );
 		add_action( 'customize_register', array( $this, 'color_scheme' ), 11 );
 
 		add_action( 'customize_controls_enqueue_scripts',      array( $this, 'color_scheme_control_js' ) );
@@ -322,8 +333,10 @@ class Primer_Customizer_Colors {
 				$wp_customize,
 				$name,
 				array(
-					'label'   => $color['label'],
-					'section' => 'colors',
+					'label'       => $color['label'],
+					'description' => ! empty( $color['description'] ) ? $color['description'] : null,
+					'section'     => ! empty( $color['section'] ) ? $color['section'] : 'colors',
+					'priority'    => ! empty( $color['priority'] ) ? absint( $color['priority'] ) : null,
 				)
 			)
 		);

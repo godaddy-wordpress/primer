@@ -30,9 +30,9 @@ class Primer_Customizer {
 	}
 
 	/**
-	 * Include controls class required by our sections
+	 * Include controls class required by our sections.
 	 *
-	 * This is hooked her since WP_Customize_Control is not present before
+	 * This is hooked her since WP_Customize_Control is not present before.
 	 */
 	public function require_controls() {
 
@@ -97,6 +97,21 @@ class Primer_Customizer {
 		$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+		// Color section overrides
+		$wp_customize->get_section( 'colors' )->title = esc_html__( 'Color Scheme', 'primer' );
+
+		// Background section overrides
+		$wp_customize->get_section( 'background_image' )->title = esc_html__( 'Background', 'primer' );
+
+		// Header text color control overrides
+		$wp_customize->get_control( 'header_textcolor' )->section = 'title_tagline';
+		$wp_customize->get_control( 'header_textcolor' )->label   = esc_html__( 'Site Title Color', 'primer' );
+
+		// Background color control overrides
+		$wp_customize->get_control( 'background_color' )->section = 'background_image';
+		$wp_customize->get_control( 'background_color' )->label   = esc_html__( 'Page Background Color', 'primer' );
+
 
 		if ( ! isset( $wp_customize->selective_refresh ) ) {
 
