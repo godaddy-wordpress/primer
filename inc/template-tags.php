@@ -119,7 +119,7 @@ if ( ! function_exists( 'primer_posted_on' ) ) {
 
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 
-			$time .= sprintf(
+			$time = sprintf(
 				'<time class="updated" datetime="%s">%s</time>',
 				esc_attr( get_the_modified_date( 'c' ) ),
 				esc_html( get_the_modified_date() )
