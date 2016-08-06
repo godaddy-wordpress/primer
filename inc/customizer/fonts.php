@@ -139,7 +139,7 @@ class Primer_Customizer_Fonts {
 		$wp_customize->add_section(
 			'typography',
 			array(
-				'title'    => esc_html__( 'Typography', 'primer' ),
+				'title'    => esc_html__( 'Fonts', 'primer' ),
 				'priority' => 40,
 			)
 		);
