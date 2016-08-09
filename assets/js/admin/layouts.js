@@ -63,8 +63,7 @@ window.wp = window.wp || {};
 				$( '.primer-layout ul li' )
 					.removeClass( 'disabled' )
 					.addClass( 'active' )
-					.find( 'input' )
-					.prop( 'disabled', false );
+					.find( 'input' );
 
 				return;
 
@@ -75,11 +74,16 @@ window.wp = window.wp || {};
 				.find(':not(.global)')
 				.removeClass( 'active' )
 				.addClass( 'disabled' )
-				.find( 'input' )
-				.prop( 'disabled', true );
+				.find( 'input' );
 
 			$( '.primer-layout ul li.global input' )
 				.prop( 'checked', true );
+
+		} );
+
+		$( 'input[name="primer-layout"]' ).change( function() {
+
+			$( 'input[name="primer-layout-override"][value="1"]' ).click();
 
 		} );
 
