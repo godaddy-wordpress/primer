@@ -21,11 +21,11 @@
 
 		<?php if ( is_singular() ) : ?>
 
-			<h1 class="page-title"><?php the_title() ?></h1>
+			<h1 class="page-title"><?php the_title(); ?></h1>
 
 		<?php else : ?>
 
-			<h2 class="page-title"><a href="<?php the_permalink() ?>" rel="permalink"><?php the_title() ?></a></h2>
+			<h2 class="page-title"><a href="<?php the_permalink(); ?>" rel="permalink"><?php the_title(); ?></a></h2>
 
 		<?php endif; ?>
 

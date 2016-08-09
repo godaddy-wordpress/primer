@@ -10,7 +10,7 @@
 
 	<span class="posted-meta">
 
-		<?php printf( esc_html_x( '%1$s by %2$s', '1. post date, 2. author name', 'primer' ), primer_posted_on(), get_the_author_link() ) ?>
+		<?php printf( esc_html_x( '%1$s by %2$s', '1. post date, 2. author name', 'primer' ), primer_posted_on(), get_the_author_link() ); ?>
 
 	</span>
 
@@ -20,9 +20,9 @@
 
 			 &mdash;
 
-			<a href="<?php echo get_comments_link() ?>">
+			<a href="<?php echo get_comments_link(); ?>">
 
-				<span class="comments-link"><?php comments_popup_link( esc_html__( 'Leave a comment', 'primer' ), esc_html__( '1 Comment', 'primer' ), esc_html_x( '% Comments', 'number of comments', 'primer' ) ) ?></span>
+				<span class="comments-link"><?php comments_popup_link( esc_html__( 'Leave a comment', 'primer' ), esc_html__( '1 Comment', 'primer' ), esc_html_x( '% Comments', 'number of comments', 'primer' ) ); ?></span>
 
 			</a>
 

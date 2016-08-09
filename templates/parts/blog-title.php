@@ -19,7 +19,7 @@
 		do_action( 'primer_before_blog_title' );
 		?>
 
-			<h1 class="page-title"><?php esc_html_e( 'Blog', 'primer' ) ?></h1>
+			<h1 class="page-title"><?php esc_html_e( 'Blog', 'primer' ); ?></h1>
 
 		<?php
 		/**

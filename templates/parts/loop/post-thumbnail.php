@@ -10,7 +10,7 @@
 
 	<div class="featured-image">
 
-		<?php the_post_thumbnail( 'primer-featured' ) ?>
+		<?php the_post_thumbnail( 'primer-featured' ); ?>
 
 	</div><!-- .featured-image -->
 

@@ -7,7 +7,7 @@
  * @package Primer
  */
 
-get_header() ?>
+get_header(); ?>
 
 <div id="primary" class="content-area">
 
@@ -15,17 +15,17 @@ get_header() ?>
 
 	<?php if ( have_posts() ) : ?>
 
-		<?php while ( have_posts() ) : the_post() ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php the_content() ?>
+			<?php the_content(); ?>
 
 		<?php endwhile; ?>
 
-		<?php primer_paging_nav() ?>
+		<?php primer_paging_nav(); ?>
 
 	<?php else : ?>
 
-		<?php get_template_part( 'content', 'none' ) ?>
+		<?php get_template_part( 'content', 'none' ); ?>
 
 	<?php endif; ?>
 
@@ -33,4 +33,4 @@ get_header() ?>
 
 </div><!-- #primary -->
 
-<?php get_footer() ?>
+<?php get_footer(); ?>
