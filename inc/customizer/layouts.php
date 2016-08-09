@@ -332,8 +332,8 @@ class Primer_Customizer_Layouts {
 
 				foreach ( $layouts as $layout => $label ) :
 
-					$class = ( $has_custom ) ? 'active' : 'disabled';
-					$class .= ( $layout === $global_layout ) ? ' active global' : '';
+					$class  = ( $layout === $global_layout ) ? 'global active' : '';
+					$class .= ( $has_custom ) ? ' active' : ( empty( $class ) ) ? ' disabled' : '';
 
 					?>
 
@@ -344,8 +344,7 @@ class Primer_Customizer_Layouts {
 							       data-customize-setting-link="layout"
 							       id="primer-layout-<?php echo esc_attr( $layout ) ?>"
 							       value="<?php echo esc_attr( $layout ) ?>"
-								   <?php checked( $cur_layout, $layout ) ?>
-								   <?php disabled( 'disabled' === $class ) ?>>
+							       <?php checked( $cur_layout, $layout ) ?>>
 							<img src="<?php echo esc_url( sprintf( '%s/assets/layouts/%s%s.svg', get_template_directory_uri(), $layout, is_rtl() ? '-rtl' : '' ) ) ?>"
 							     alt="<?php echo esc_attr( $label ) ?>"
 							     title="<?php echo esc_attr( $label ) ?>">

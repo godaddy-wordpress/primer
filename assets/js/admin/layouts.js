@@ -63,23 +63,26 @@ window.wp = window.wp || {};
 				$( '.primer-layout ul li' )
 					.removeClass( 'disabled' )
 					.addClass( 'active' )
-					.find( 'input' )
-					.prop( 'disabled', false );
+					.find( 'input' );
 
 				return;
 
 			}
 
-			$( '.primer-layout ul li' )
-				.addClass('disabled')
-				.find(':not(.global)')
-				.removeClass( 'active' )
+			$( '.primer-layout ul li:not(.global)' )
 				.addClass( 'disabled' )
-				.find( 'input' )
-				.prop( 'disabled', true );
+				.removeClass( 'active' );
 
-			$( '.primer-layout ul li.global input' )
+			$( '.primer-layout ul li.global' )
+				.addClass( 'active' )
+				.find( 'input' )
 				.prop( 'checked', true );
+
+		} );
+
+		$( 'input[name="primer-layout"]' ).change( function() {
+
+			$( 'input[name="primer-layout-override"][value="1"]' ).click();
 
 		} );
 

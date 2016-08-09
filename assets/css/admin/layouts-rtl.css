@@ -41,8 +41,6 @@
       cursor: pointer; }
     .primer-layout-wrap ul li.active label > input:checked + img {
       border-color: #1e8cbe; }
-    .primer-layout-wrap ul li.disabled label > input + img {
-      cursor: default; }
 
 #side-sortables .primer-layout-wrap ul,
 #customize-control-layout .primer-layout-wrap ul {
