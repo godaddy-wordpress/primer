@@ -125,12 +125,59 @@ if ( ! function_exists( 'primer_setup' ) ) {
 		load_theme_textdomain( 'primer', get_template_directory() . '/languages' );
 
 		/**
-		 * Add an image size for Featured Images.
+		 * Filter registered image sizes.
 		 *
-		 * @link  https://codex.wordpress.org/Function_Reference/add_image_size
 		 * @since 1.0.0
+		 *
+		 * @var array
 		 */
-		add_image_size( 'primer-featured', 1600, 900, 1 );
+		$images_sizes = (array) apply_filters( 'primer_image_sizes',
+			array(
+				'primer-featured' => array(
+					'width'  => 992,
+					'height' => 558,
+					'crop'   => array( 'center', 'center' ),
+				),
+				'primer-featured-2x' => array(
+					'width'  => 1984,
+					'height' => 1116,
+					'crop'   => array( 'center', 'center' ),
+				),
+				'primer-hero' => array(
+					'width'  => 1280,
+					'height' => 190,
+					'crop'   => array( 'center', 'center' ),
+				),
+				'primer-hero-2x' => array(
+					'width'  => 2560,
+					'height' => 380,
+					'crop'   => array( 'center', 'center' ),
+				),
+			)
+		);
+
+		foreach ( $images_sizes as $name => $args ) {
+
+			if (
+				! empty( $name )
+				&&
+				! empty( $args['width'] )
+				&&
+				! empty( $args['height'] )
+				&&
+				! empty( $args['crop'] )
+			) {
+
+				add_image_size(
+					sanitize_key( $name ),
+					absint( $args['width'] ),
+					absint( $args['height'] ),
+					$args['crop']
+				);
+
+			}
+
+		}
 
 		/**
 		 * Enable support for Automatic Feed Links.
@@ -275,45 +322,40 @@ function primer_register_sidebars() {
 	 */
 	$sidebars = (array) apply_filters( 'primer_sidebars',
 		array(
-			array(
+			'sidebar-1' => array(
 				'name'          => esc_html__( 'Sidebar', 'primer' ),
-				'id'            => 'sidebar-1',
 				'description'   => esc_html__( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
-			array(
+			'sidebar-2' => array(
 				'name'          => esc_html__( 'Secondary Sidebar', 'primer' ),
-				'id'            => 'sidebar-2',
 				'description'   => esc_html__( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
-			array(
+			'footer-1' => array(
 				'name'          => esc_html__( 'Footer 1', 'primer' ),
-				'id'            => 'footer-1',
 				'description'   => esc_html__( 'This sidebar is the first column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
-			array(
+			'footer-2' => array(
 				'name'          => esc_html__( 'Footer 2', 'primer' ),
-				'id'            => 'footer-2',
 				'description'   => esc_html__( 'This sidebar is the second column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
-			array(
+			'footer-3' => array(
 				'name'          => esc_html__( 'Footer 3', 'primer' ),
-				'id'            => 'footer-3',
 				'description'   => esc_html__( 'This sidebar is the third column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
@@ -323,14 +365,14 @@ function primer_register_sidebars() {
 		)
 	);
 
-	foreach ( $sidebars as $args ) {
+	foreach ( $sidebars as $id => $args ) {
 
-		register_sidebar( $args );
+		register_sidebar( array_merge( array( 'id' => $id ), $args ) );
 
 	}
 
 }
-add_action( 'widgets_init', 'primer_register_sidebars', 10 );
+add_action( 'widgets_init', 'primer_register_sidebars' );
 
 if ( ! function_exists( 'primer_scripts' ) ) {
 

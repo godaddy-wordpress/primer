@@ -34,8 +34,7 @@ class Primer_Customizer_Colors {
 		 */
 		$this->colors = (array) apply_filters( 'primer_colors',
 			array(
-				array(
-					'name'    => 'header_textcolor',
+				'header_textcolor' => array(
 					'default' => '#f4f5f9',
 					'css'     => array(
 						'.site-title a, .site-title a:visited' => array(
@@ -48,8 +47,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				array(
-					'name'    => 'background_color',
+				'background_color' => array(
 					'default' => '#f4f5f9',
 					'css'     => array(
 						'body' => array(
@@ -60,8 +58,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				array(
-					'name'    => 'header_background_color',
+				'header_background_color' => array(
 					'label'   => esc_html__( 'Header Background Color', 'primer' ),
 					'default' => '#0b3954',
 					'css'     => array(
@@ -70,8 +67,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				array(
-					'name'    => 'menu_background_color',
+				'menu_background_color' => array(
 					'label'   => esc_html__( 'Menu Background Color', 'primer' ),
 					'default' => '#0b3954',
 					'css'     => array(
@@ -89,8 +85,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				array(
-					'name'    => 'footer_background_color',
+				'footer_background_color' => array(
 					'label'   => esc_html__( 'Footer Background Color', 'primer' ),
 					'default' => '#0b3954',
 					'css'     => array(
@@ -99,8 +94,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				array(
-					'name'    => 'tagline_text_color',
+				'tagline_text_color' => array(
 					'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
 					'default' => '#f4f5f9',
 					'css'     => array(
@@ -109,8 +103,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				array(
-					'name'    => 'link_color',
+				'link_color' => array(
 					'label'   => esc_html__( 'Link Color', 'primer' ),
 					'default' => '#ff6663',
 					'css'     => array(
@@ -136,8 +129,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				array(
-					'name'    => 'main_text_color',
+				'main_text_color' => array(
 					'label'   => esc_html__( 'Main Text Color', 'primer' ),
 					'default' => '#0b3954',
 					'css'     => array(
@@ -164,8 +156,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				array(
-					'name'    => 'secondary_text_color',
+				'secondary_text_color' => array(
 					'label'   => esc_html__( 'Secondary Text Color', 'primer' ),
 					'default' => '#686868',
 					'css'     => array(
@@ -195,7 +186,10 @@ class Primer_Customizer_Colors {
 		$default_scheme = array(
 			'default' => array(
 				'label'  => esc_html__( 'Default', 'primer' ),
-				'colors' => wp_list_pluck( $this->colors, 'default', 'name' ),
+				'colors' => array_combine(
+					array_keys( $this->colors ),
+					wp_list_pluck( $this->colors, 'default' )
+				),
 			),
 		);
 
@@ -281,9 +275,9 @@ class Primer_Customizer_Colors {
 	 */
 	public function colors( WP_Customize_Manager $wp_customize ) {
 
-		foreach ( $this->colors as $color ) {
+		foreach ( $this->colors as $name => $args ) {
 
-			$this->register_color_setting( $wp_customize, $color );
+			$this->register_color_setting( $wp_customize, $name, $args );
 
 		}
 
@@ -296,22 +290,23 @@ class Primer_Customizer_Colors {
 	 * @see   $this->colors()
 	 *
 	 * @param WP_Customize_Manager $wp_customize
-	 * @param array                $color
+	 * @param string               $name
+	 * @param array                $args
 	 */
-	public function register_color_setting( WP_Customize_Manager $wp_customize, array $color ) {
+	public function register_color_setting( WP_Customize_Manager $wp_customize, $name, array $args ) {
 
-		if ( empty( $color['name'] ) || empty( $color['default'] ) || empty( $color['label'] ) ) {
+		if ( empty( $name ) || empty( $args['default'] ) || empty( $args['label'] ) ) {
 
 			return;
 
 		}
 
-		$name = sanitize_key( $color['name'] );
+		$name = sanitize_key( $name );
 
 		$wp_customize->add_setting(
 			$name,
 			array(
-				'default'           => sanitize_hex_color( $color['default'] ),
+				'default'           => sanitize_hex_color( $args['default'] ),
 				'sanitize_callback' => 'sanitize_hex_color',
 				'transport'         => 'postMessage',
 			)
@@ -322,7 +317,7 @@ class Primer_Customizer_Colors {
 				$wp_customize,
 				$name,
 				array(
-					'label'   => $color['label'],
+					'label'   => $args['label'],
 					'section' => 'colors',
 				)
 			)
@@ -338,9 +333,9 @@ class Primer_Customizer_Colors {
 	 */
 	public function enqueue_colors_inline_css() {
 
-		foreach ( $this->colors as $color ) {
+		foreach ( $this->colors as $name => $args ) {
 
-			$this->add_color_inline_css( $color );
+			$this->add_color_inline_css( $name, $args );
 
 		}
 
@@ -352,23 +347,24 @@ class Primer_Customizer_Colors {
 	 * @see   $this->enqueue_colors_inline_css()
 	 * @since 1.0.0
 	 *
-	 * @param array $color
+	 * @param string $name
+	 * @param array  $args
 	 */
-	public function add_color_inline_css( array $color ) {
+	public function add_color_inline_css( $name, array $args ) {
 
-		if ( empty( $color['name'] ) || empty( $color['css'] ) ) {
+		if ( empty( $name ) || empty( $args['css'] ) ) {
 
 			return;
 
 		}
 
-		$default = $this->get_default_color( $color['name'], 'default' );
-		$hex     = trim( get_theme_mod( $color['name'], $default ), '#' );
-		$css     = sprintf( Primer_Customizer::parse_css_rules( $color['css'] ), '#' . $hex );
+		$default = $this->get_default_color( $name, 'default' );
+		$hex     = trim( get_theme_mod( $name, $default ), '#' );
+		$css     = sprintf( Primer_Customizer::parse_css_rules( $args['css'] ), '#' . $hex );
 
-		if ( ! empty( $color['rgba_css'] ) ) {
+		if ( ! empty( $args['rgba_css'] ) ) {
 
-			$css .= sprintf( Primer_Customizer::parse_css_rules( $color['rgba_css'] ), implode( ', ', primer_hex2rgb( $hex ) ) );
+			$css .= sprintf( Primer_Customizer::parse_css_rules( $args['rgba_css'] ), implode( ', ', primer_hex2rgb( $hex ) ) );
 
 		}
 
@@ -491,17 +487,17 @@ class Primer_Customizer_Colors {
 		<script type="text/html" id="tmpl-primer-color-scheme-css">
 			<?php
 
-			foreach ( $this->colors as $color ) {
+			foreach ( $this->colors as $name => $args ) {
 
-				if ( empty( $color['name'] ) || empty( $color['css'] ) || ! is_array( $color['css'] ) ) {
+				if ( empty( $name ) || empty( $args['css'] ) || ! is_array( $args['css'] ) ) {
 
 					continue;
 
 				}
 
 				printf(
-					Primer_Customizer::parse_css_rules( $color['css'] ),
-					sprintf( '{{ data.%s }}', $color['name'] )
+					Primer_Customizer::parse_css_rules( $args['css'] ),
+					sprintf( '{{ data.%s }}', $name )
 				);
 
 			}
@@ -602,11 +598,11 @@ class Primer_Customizer_Colors {
 
 		$colors = array();
 
-		foreach ( $this->colors as $color ) {
+		foreach ( $this->colors as $name => $args ) {
 
-			if ( ! empty( $color['name'] ) && ! empty( $color['rgba_css'] ) && is_array( $color['rgba_css'] ) ) {
+			if ( ! empty( $name ) && ! empty( $args['rgba_css'] ) && is_array( $args['rgba_css'] ) ) {
 
-				$colors[ $color['name'] ] = $color['rgba_css'];
+				$colors[ $name ] = $args['rgba_css'];
 
 			}
 

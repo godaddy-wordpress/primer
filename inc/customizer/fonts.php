@@ -75,8 +75,7 @@ class Primer_Customizer_Fonts {
 		 */
 		$this->font_types = (array) apply_filters( 'primer_font_types',
 			array(
-				array(
-					'name'        => 'header_font',
+				'header_font' => array(
 					'label'       => esc_html__( 'Header Font', 'primer' ),
 					'description' => esc_html__( 'Site title, post titles, widget titles, main menu links, form labels, table headers and buttons.', 'primer' ),
 					'default'     => 'Open Sans',
@@ -86,8 +85,7 @@ class Primer_Customizer_Fonts {
 						),
 					),
 				),
-				array(
-					'name'        => 'primary_font',
+				'primary_font' => array(
 					'label'       => esc_html__( 'Primary Font', 'primer' ),
 					'description' => esc_html__( 'Paragraphs, lists, quotes and tables.', 'primer' ),
 					'default'     => 'Open Sans',
@@ -97,8 +95,7 @@ class Primer_Customizer_Fonts {
 						),
 					),
 				),
-				array(
-					'name'        => 'secondary_font',
+				'secondary_font' => array(
 					'label'       => esc_html__( 'Secondary Font', 'primer' ),
 					'description' => esc_html__( 'Post bylines, comment counts, comment reply links, post footers and quote footers.', 'primer' ),
 					'default'     => 'Open Sans',
@@ -147,34 +144,34 @@ class Primer_Customizer_Fonts {
 			)
 		);
 
-		foreach ( $this->font_types as $font_type ) {
+		foreach ( $this->font_types as $name => $args ) {
 
-			if ( empty( $font_type['name'] ) || empty( $font_type['default'] ) || empty( $font_type['label'] ) ) {
+			if ( empty( $name ) || empty( $args['default'] ) || empty( $args['label'] ) ) {
 
 				continue;
 
 			}
 
 			$wp_customize->add_setting(
-				$font_type['name'],
+				sanitize_key( $name ),
 				array(
-					'default'           => $font_type['default'],
+					'default'           => $args['default'],
 					'sanitize_callback' => array( $this, 'sanitize_font' ),
 				)
 			);
 
 			$fonts             = array_combine( $this->fonts, $this->fonts );
-			$default           = $this->get_default_font( $font_type['name'] );
+			$default           = $this->get_default_font( $name );
 			$fonts[ $default ] = sprintf( esc_html_x( '%s (Default)', 'font name', 'primer' ), $default );
 
 			$wp_customize->add_control(
-				$font_type['name'],
+				$name,
 				array(
-					'label'       => $font_type['label'],
-					'description' => ! empty( $font_type['description'] ) ? $font_type['description'] : null,
-					'section'     => ! empty( $font_type['section'] ) ? $font_type['section'] : 'fonts',
-					'priority'    => ! empty( $font_type['priority'] ) ? absint( $font_type['priority'] ) : null,
-					'type'        => ! empty( $font_type['type'] ) ? $font_type['type'] : 'select',
+					'label'       => $args['label'],
+					'description' => ! empty( $args['description'] ) ? $args['description'] : null,
+					'section'     => ! empty( $args['section'] ) ? $args['section'] : 'fonts',
+					'priority'    => ! empty( $args['priority'] ) ? absint( $args['priority'] ) : null,
+					'type'        => ! empty( $args['type'] ) ? $args['type'] : 'select',
 					'choices'     => $fonts,
 				)
 			);
@@ -209,8 +206,12 @@ class Primer_Customizer_Fonts {
 	 */
 	public function get_default_font( $font_type ) {
 
-		$defaults = wp_list_pluck( $this->font_types, 'default', 'name' );
-		$default  = isset( $defaults[ $font_type ] ) ? $defaults[ $font_type ] : $this->fonts[0];
+		$defaults = array_combine(
+			array_keys( $this->font_types ),
+			wp_list_pluck( $this->font_types, 'default' )
+		);
+
+		$default = isset( $defaults[ $font_type ] ) ? $defaults[ $font_type ] : $this->fonts[0];
 
 		return $this->sanitize_font( $default );
 
@@ -272,16 +273,16 @@ class Primer_Customizer_Fonts {
 
 		$font_families = array();
 
-		foreach ( $this->font_types as $font_type ) {
+		foreach ( $this->font_types as $name => $args ) {
 
-			if ( empty( $font_type['name'] ) ) {
+			if ( empty( $name ) ) {
 
 				continue;
 
 			}
 
-			$font    = $this->get_font( $font_type['name'] );
-			$weights = $this->get_font_weights( $font, $font_type['name'] );
+			$font    = $this->get_font( $name );
+			$weights = $this->get_font_weights( $font, $name );
 
 			$font_families[ $font ] = isset( $font_families[ $font ] ) ? array_merge( $font_families[ $font ], $weights ) : $weights;
 
@@ -322,18 +323,20 @@ class Primer_Customizer_Fonts {
 	 */
 	public function enqueue_inline_css() {
 
-		foreach ( $this->font_types as $font_type ) {
+		foreach ( $this->font_types as $name => $args ) {
 
-			if ( ! empty( $font_type['name'] ) && ! empty( $font_type['css'] ) ) {
+			if ( empty( $name ) || empty( $args['css'] ) ) {
 
-				$css = sprintf(
-					Primer_Customizer::parse_css_rules( $font_type['css'] ),
-					$this->get_font( $font_type['name'] )
-				);
-
-				wp_add_inline_style( 'primer-google-fonts', $css );
+				continue;
 
 			}
+
+			$css = sprintf(
+				Primer_Customizer::parse_css_rules( $args['css'] ),
+				$this->get_font( $name )
+			);
+
+			wp_add_inline_style( 'primer-google-fonts', $css );
 
 		}
 
