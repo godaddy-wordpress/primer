@@ -69,14 +69,13 @@ window.wp = window.wp || {};
 
 			}
 
-			$( '.primer-layout ul li' )
-				.addClass('disabled')
-				.find(':not(.global)')
-				.removeClass( 'active' )
+			$( '.primer-layout ul li:not(.global)' )
 				.addClass( 'disabled' )
-				.find( 'input' );
+				.removeClass( 'active' );
 
-			$( '.primer-layout ul li.global input' )
+			$( '.primer-layout ul li.global' )
+				.addClass( 'active' )
+				.find( 'input' )
 				.prop( 'checked', true );
 
 		} );
