@@ -273,7 +273,7 @@ function primer_register_sidebars() {
 	 *
 	 * @var array
 	 */
-	$sidebars = (array) apply_filters( 'primer_register_sidebars',
+	$sidebars = (array) apply_filters( 'primer_sidebars',
 		array(
 			array(
 				'name'          => esc_html__( 'Sidebar', 'primer' ),
@@ -330,7 +330,7 @@ function primer_register_sidebars() {
 	}
 
 }
-add_action( 'widgets_init', 'primer_register_sidebars' );
+add_action( 'widgets_init', 'primer_register_sidebars', 10 );
 
 if ( ! function_exists( 'primer_scripts' ) ) {
 
