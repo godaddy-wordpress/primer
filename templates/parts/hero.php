@@ -6,8 +6,8 @@
  */
 ?>
 
-<?php if ( has_header_image() ) : ?>
+<?php if ( primer_has_header_image() ) : ?>
 
-	<div class="hero" style="background-image: url('<?php header_image(); ?>');"></div>
+	<div class="hero" style="background-image: url('<?php echo esc_url( primer_get_header_image() ); ?>');"></div>
 
 <?php endif; ?>

@@ -29,7 +29,7 @@ function primer_add_hero() {
 	get_template_part( 'templates/parts/hero' );
 
 }
-add_action( 'primer_header', 'primer_add_hero', 10 );
+add_action( 'primer_header', 'primer_add_hero' );
 
 /**
  * Display primary navigation menu after the header.
