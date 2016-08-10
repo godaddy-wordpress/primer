@@ -191,6 +191,9 @@ class Primer_Customizer_Colors {
 					wp_list_pluck( $this->colors, 'default' )
 				),
 			),
+			'_custom' => array(
+				'label' => sprintf( '- %s -' , __( 'Custom', 'primer' ) ),
+			)
 		);
 
 		/**
@@ -244,9 +247,6 @@ class Primer_Customizer_Colors {
 						'secondary_text_color'    => '#222222',
 					),
 				),
-				'_custom' => array(
-					'label' => sprintf( '- %s -' , __( 'Custom', 'primer' ) ),
-				)
 			)
 		);
 
