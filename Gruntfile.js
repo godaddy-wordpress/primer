@@ -131,11 +131,7 @@ module.exports = function(grunt) {
 				msgmerge: true
 			},
 			files:{
-				src: [
-					'*.php',
-					'inc/**/*.php',
-					'templates/**/*.php'
-				],
+				src: [ '**/*.php' ],
 				expand: true
 			}
 		},
