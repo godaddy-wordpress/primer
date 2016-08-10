@@ -510,7 +510,8 @@ class Primer_Customizer_Colors {
 
 		if ( ! $rgba_colors ) {
 
-			return;
+			// Required for themes without rgba css rules
+			echo '<script type="text/html" id="tmpl-primer-color-scheme-css-rgba"></script>';
 
 		}
 
