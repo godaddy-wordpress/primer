@@ -83,12 +83,17 @@ if ( ! function_exists( 'primer_get_header_image' ) ) {
 		if ( has_header_image() ) {
 
 			$header = get_custom_header();
-			$image  = wp_get_attachment_image_src( $header->attachment_id, $size );
 
-			if ( isset( $image[0] ) ) {
+			if ( ! empty( $header->attachment_id ) ) {
 
-				return $image[0];
+				$image = wp_get_attachment_image_src( $header->attachment_id, $size );
 
+				if ( isset( $image[0] ) ) {
+
+					return $image[0];
+
+				}
+				
 			}
 
 			return get_header_image();
