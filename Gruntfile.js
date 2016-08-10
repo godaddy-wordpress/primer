@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						cwd: 'assets/css/admin',
-						src: ['*.css','!*-rtl.css','!*.min.css','!*-rtl.min.css'],
+						src: [ '*.css','!*-rtl.css','!*.min.css','!*-rtl.min.css' ],
 						dest: 'assets/css/admin',
 						ext: '-rtl.css'
 					}
@@ -61,14 +61,14 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd: 'assets/css',
-					src: ['*.css', '!*.min.css'],
+					src: [ '*.css', '!*.min.css' ],
 					dest: 'assets/css',
 					ext: '.min.css'
 				},
 				{
 					expand: true,
 					cwd: 'assets/css/admin',
-					src: ['*.css', '!*.min.css'],
+					src: [ '*.css', '!*.min.css' ],
 					dest: 'assets/css/admin',
 					ext: '.min.css'
 				}]
@@ -92,7 +92,7 @@ module.exports = function(grunt) {
 		},
 
 		jshint: {
-			all: ['Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js', '!assets/js/jquery.backgroundSize.js']
+			all: [ 'Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js', '!assets/js/jquery.backgroundSize.js' ]
 		},
 
 		po2mo: {
@@ -209,11 +209,11 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: '.dev/sass/**/*.scss',
-				tasks: ['sass','autoprefixer','cssjanus']
+				tasks: [ 'sass','autoprefixer','cssjanus' ]
 			},
 			scripts: {
-				files: ['Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js'],
-				tasks: ['jshint', 'uglify'],
+				files: [ 'Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js' ],
+				tasks: [ 'jshint', 'uglify' ],
 				options: {
 					interrupt: true
 				}
@@ -224,8 +224,8 @@ module.exports = function(grunt) {
 
 	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask('default', ['sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify']);
-	grunt.registerTask('lint', ['jshint']);
-	grunt.registerTask('update-pot', ['pot', 'replace:pot']);
+	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify' ] );
+	grunt.registerTask( 'lint', [ 'jshint' ] );
+	grunt.registerTask( 'update-pot', [ 'pot', 'replace:pot' ] );
 
 };
