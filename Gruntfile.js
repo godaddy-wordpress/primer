@@ -1,6 +1,6 @@
 /* global module, require */
 
-module.exports = function(grunt) {
+module.exports = function( grunt ) {
 
 	var pkg = grunt.file.readJSON( 'package.json' );
 
@@ -103,11 +103,15 @@ module.exports = function(grunt) {
 		},
 
 		pot: {
+			files:{
+				expand: true,
+				src: [ '**/*.php', '!node_modules/**' ]
+			},
 			options:{
-				omit_header: false,
 				text_domain: pkg.name,
-				encoding: 'UTF-8',
+				msgmerge: true,
 				dest: 'languages/',
+				encoding: 'UTF-8',
 				keywords: [
 					'__',
 					'_e',
@@ -127,12 +131,7 @@ module.exports = function(grunt) {
 					'esc_html__',
 					'esc_html_e',
 					'esc_html_x:1,2c'
-				],
-				msgmerge: true
-			},
-			files:{
-				src: [ '**/*.php' ],
-				expand: true
+				]
 			}
 		},
 
@@ -146,7 +145,7 @@ module.exports = function(grunt) {
 						to: pkg.title
 					},
 					{
-						from: 'YEAR THE PACKAGE\'S COPYRIGHT HOLDER',
+						from: "YEAR THE PACKAGE'S COPYRIGHT HOLDER",
 						to: new Date().getFullYear()
 					},
 					{
@@ -222,7 +221,7 @@ module.exports = function(grunt) {
 
 	});
 
-	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
+	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
 	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify' ] );
 	grunt.registerTask( 'lint', [ 'jshint' ] );

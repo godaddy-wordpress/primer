@@ -77,20 +77,34 @@ class Primer_Customizer_Fonts {
 			array(
 				'header_font' => array(
 					'label'       => esc_html__( 'Header Font', 'primer' ),
-					'description' => esc_html__( 'Site title, post titles, widget titles, main menu links, form labels, table headers and buttons.', 'primer' ),
+					'description' => esc_html__( 'Site title, post titles, widget titles, form labels, table headers and buttons.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
-						'h1, h2, h3, h4, h5, h6, label, legend, table th, .site-title, .entry-title, .widget-title, .main-navigation li a, button, a.button, input[type="button"], input[type="reset"], input[type="submit"]' => array(
+						'h1, h2, h3, h4, h5, h6,
+						label,
+						legend,
+						table th,
+						dl dt,
+						.site-title,
+						.entry-title,
+						.widget-title,
+						button, a.button, a.fl-button, input[type="button"], input[type="reset"], input[type="submit"]' => array(
 							'font-family' => '"%s", sans-serif',
 						),
 					),
 				),
 				'primary_font' => array(
 					'label'       => esc_html__( 'Primary Font', 'primer' ),
-					'description' => esc_html__( 'Paragraphs, lists, quotes and tables.', 'primer' ),
+					'description' => esc_html__( 'Paragraphs, lists, menu links, quotes and tables.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
-						'body, p' => array(
+						'body,
+						p,
+						ol li,
+						ul li,
+						dl dd,
+						.main-navigation ul li a,
+						.fl-callout-text' => array(
 							'font-family' => '"%s", sans-serif',
 						),
 					),
@@ -100,7 +114,13 @@ class Primer_Customizer_Fonts {
 					'description' => esc_html__( 'Post bylines, comment counts, comment reply links, post footers and quote footers.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
-						'blockquote, .entry-meta, .entry-footer, .comment-list li .comment-meta .says, .comment-list li .comment-metadata, .comment-reply-link, #respond .logged-in-as, .fl-callout-text' => array(
+						'blockquote,
+						.entry-meta,
+						.entry-footer,
+						.comment-list li .comment-meta .says,
+						.comment-list li .comment-metadata,
+						.comment-reply-link,
+						#respond .logged-in-as' => array(
 							'font-family' => '"%s", sans-serif',
 						),
 					),
@@ -152,8 +172,10 @@ class Primer_Customizer_Fonts {
 
 			}
 
+			$name = sanitize_key( $name );
+
 			$wp_customize->add_setting(
-				sanitize_key( $name ),
+				$name,
 				array(
 					'default'           => $args['default'],
 					'sanitize_callback' => array( $this, 'sanitize_font' ),

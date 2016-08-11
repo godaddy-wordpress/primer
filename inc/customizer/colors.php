@@ -631,16 +631,54 @@ class Primer_Customizer_Colors {
 		 */
 		$args = (array) apply_filters( 'primer_custom_header_args',
 			array(
-				'default-image'      => '',
 				'default-text-color' => $this->get_default_color( 'header_textcolor', 'default' ),
-				'width'              => 1600,
-				'height'             => 400,
+				'width'              => 2400,
+				'height'             => 600,
 				'flex-height'        => true,
 				'wp-head-callback'   => array( $this, 'header_css' ),
 			)
 		);
 
 		add_theme_support( 'custom-header', $args );
+
+		/**
+		 * Filter the default hero images.
+		 *
+		 * @var array
+		 */
+		$defaults = (array) apply_filters( 'primer_default_hero_images',
+			array(
+				'default' => array(
+					'url'           => 'assets/images/hero.jpg',
+					'thumbnail_url' => 'assets/images/hero-thumbnail.jpg',
+					'description'   => esc_html__( 'City', 'primer' ),
+				),
+			)
+		);
+
+		foreach ( $defaults as $name => &$args ) {
+
+			$path = trailingslashit( get_stylesheet_directory() );
+			$url  = trailingslashit( get_stylesheet_directory_uri() );
+
+			if ( ! file_exists( $path . $args['url'] ) ) {
+
+				unset( $defaults[ $name ] );
+
+				continue;
+
+			}
+
+			$args['url']           = $url . $args['url'];
+			$args['thumbnail_url'] = file_exists( $path . $args['thumbnail_url'] ) ? $url . $args['thumbnail_url'] : $args['url'];
+
+		}
+
+		if ( $defaults ) {
+
+			register_default_headers( $defaults );
+
+		}
 
 	}
 

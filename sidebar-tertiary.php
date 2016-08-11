@@ -14,7 +14,7 @@ $layouts = array(
 	'three-column-reversed',
 );
 
-if ( ! is_active_sidebar( 'sidebar-2' ) || ! in_array( primer_get_layout(), $layouts ) ) {
+if ( ! primer_layout_has_sidebar() || ! is_active_sidebar( 'sidebar-2' ) || ! in_array( primer_get_layout(), $layouts ) ) {
 
 	return;
 

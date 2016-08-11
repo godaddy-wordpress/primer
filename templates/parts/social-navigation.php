@@ -1,9 +1,9 @@
 <?php
 /**
-* Displays the social navigation.
-*
-* @package Primer
-*/
+ * Displays the social navigation.
+ *
+ * @package Primer
+ */
 ?>
 
 <?php if ( has_nav_menu( 'social' ) ) : ?>

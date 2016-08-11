@@ -21,7 +21,18 @@
 
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'primer' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+			<p><?php
+
+			printf(
+				esc_html_x( 'Ready to publish your first post? %s.', 'link to write a new post', 'primer' ),
+				sprintf(
+					'<a href="%s">%s</a>',
+					esc_url( admin_url( 'post-new.php' ) ),
+					esc_html__( 'Get started here', 'primer' )
+				)
+			);
+
+			?></p>
 
 		<?php elseif ( is_search() ) : ?>
 
@@ -31,7 +42,7 @@
 
 		<?php else : ?>
 
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'primer' ); ?></p>
+			<p><?php esc_html_e( "It seems we can't find what you're looking for. Perhaps searching can help.", 'primer' ); ?></p>
 
 			<?php get_search_form(); ?>
 

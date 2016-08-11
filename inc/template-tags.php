@@ -5,100 +5,14 @@
  * @package Primer
  */
 
-if ( ! function_exists( 'primer_has_header_image' ) ) {
+/**
+ * Display a page title.
+ */
+function primer_the_page_title() {
 
-	/**
-	 * Check if there is a header or featured image.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return bool
-	 */
-	function primer_has_header_image() {
+	if ( $title = primer_get_the_page_title() ) {
 
-		/**
-		 * Filter to use a post's featured image as the header image.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @var bool
-		 */
-		$use_featured_image = (bool) apply_filters( 'primer_header_use_featured_image', true );
-
-		return ( has_header_image() || ( $use_featured_image && has_post_thumbnail( get_queried_object() ) ) );
-
-	}
-
-}
-
-if ( ! function_exists( 'primer_get_header_image' ) ) {
-
-	/**
-	 * Returns the featured image, custom header or false in this priority order.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return string|null
-	 */
-	function primer_get_header_image() {
-
-		$size = ( 1 === get_theme_mod( 'full_width' ) ) ? 'primer-hero-2x' : 'primer-hero';
-
-		/**
-		 * Filter the header image size.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @var string
-		 */
-		$size = (string) apply_filters( 'primer_header_image_size', $size );
-
-		/**
-		 * Filter to use a post's featured image as the header image.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @var bool
-		 */
-		$use_featured_image = (bool) apply_filters( 'primer_header_use_featured_image', true );
-
-		/**
-		 * Featured Image
-		 */
-		if ( $use_featured_image && ( $post = get_queried_object() ) && has_post_thumbnail( $post ) ) {
-
-			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post ), $size );
-
-			if ( isset( $image[0] ) ) {
-
-				return $image[0];
-
-			}
-
-		}
-
-		/**
-		 * Header Image
-		 */
-		if ( has_header_image() ) {
-
-			$header = get_custom_header();
-
-			if ( ! empty( $header->attachment_id ) ) {
-
-				$image = wp_get_attachment_image_src( $header->attachment_id, $size );
-
-				if ( isset( $image[0] ) ) {
-
-					return $image[0];
-
-				}
-
-			}
-
-			return get_header_image();
-
-		}
+		echo $title;
 
 	}
 

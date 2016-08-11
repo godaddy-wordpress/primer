@@ -10,4 +10,6 @@
 
 	<?php the_excerpt(); ?>
 
+	<p><a class="button" href="<?php the_permalink(); ?>"><?php printf( esc_html_x( 'Continue Reading %s', 'right arrow (LTR) / left arrow (RTL)', 'primer' ), is_rtl() ? '&larr;' : '&rarr;' ); ?></a></p>
+
 </div><!-- .entry-summary -->

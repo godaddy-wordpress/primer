@@ -452,25 +452,25 @@ class Primer_Customizer_Layouts {
 		);
 
 		$wp_customize->add_setting(
-			'full_width',
+			'page_width',
 			array(
-				'default'           => 0,
-				'sanitize_callback' => 'absint',
+				'default'           => 'fixed',
+				'sanitize_callback' => 'sanitize_key',
 				'transport'         => 'postMessage',
 			)
 		);
 
 		$wp_customize->add_control(
-			'full_width',
+			'page_width',
 			array(
 				'label'       => esc_html__( 'Page Width', 'primer' ),
 				'description' => esc_html__( 'Set the page width to be fixed or fluid when viewed on large screens.', 'primer' ),
 				'section'     => 'layout',
-				'settings'    => 'full_width',
+				'settings'    => 'page_width',
 				'type'        => 'radio',
 				'choices'     => array(
-					0 => esc_html__( 'Fixed', 'primer' ),
-					1 => esc_html__( 'Fluid', 'primer' ),
+					'fixed' => esc_html__( 'Fixed', 'primer' ),
+					'fluid' => esc_html__( 'Fluid', 'primer' ),
 				),
 			)
 		);
@@ -490,7 +490,7 @@ class Primer_Customizer_Layouts {
 	public function body_class( array $classes ) {
 
 		$classes[] = sanitize_html_class( sprintf( 'layout-%s', $this->get_current_layout() ) );
-		$classes[] = (bool) get_theme_mod( 'full_width' ) ? 'no-max-width' : null;
+		$classes[] = primer_is_fluid_width() ? 'no-max-width' : null;
 
 		return array_filter( $classes );
 

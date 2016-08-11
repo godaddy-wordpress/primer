@@ -8,17 +8,13 @@
 
 <div class="entry-meta">
 
-	<span class="posted-meta">
+	<span class="posted-date"><?php the_date(); ?></span>
 
-		<?php printf( esc_html_x( '%1$s by %2$s', '1. post date, 2. author name', 'primer' ), primer_posted_on(), get_the_author_link() ); ?>
-
-	</span>
+	<span class="posted-author"><?php the_author_posts_link(); ?></span>
 
 	<span class="comments-number">
 
 		<?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
-
-			 &mdash;
 
 			<a href="<?php echo get_comments_link(); ?>">
 

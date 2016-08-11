@@ -11,11 +11,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<?php if ( ! is_single() || ! primer_use_featured_hero_image() ) : ?>
+
+		<?php get_template_part( 'templates/parts/loop/post', 'thumbnail' ); ?>
+
+	<?php endif; ?>
+
 	<?php get_template_part( 'templates/parts/loop/post', 'title' ); ?>
 
 	<?php get_template_part( 'templates/parts/loop/post', 'meta' ); ?>
-
-	<?php get_template_part( 'templates/parts/loop/post', 'thumbnail' ); ?>
 
 	<?php if ( is_single() ) : ?>
 

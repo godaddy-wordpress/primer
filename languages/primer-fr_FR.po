@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-14 01:22-0500\n"
+"POT-Creation-Date: 2016-08-11 13:13-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,48 +25,53 @@ msgstr ""
 #. * @since 1.0.0
 #.
 #: 404.php:22
-msgid "Oops! That page can&rsquo;t be found."
+#, fuzzy
+msgid "Oops! That page can't be found."
 msgstr "Erreur ! Cette page est introuvable."
 
 #: 404.php:28
+#, fuzzy
 msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
 "On dirait qu'il n'y a rien à cet emplacement. Vous pourriez essayer un des "
 "liens ci-dessous ou lancer une recherche ?"
 
 #: comments.php:35
-#, php-format
+#, fuzzy, php-format
 msgctxt "1. number of comments, 2. post title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$d thoughts on &ldquo;%2$s&rdquo;"
+msgid "One thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
 msgstr[0] "Un commentaire sur &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$d commentaires sur &ldquo;%2$s&rdquo;"
 
-#: comments.php:51 comments.php:76
+#: comments.php:54 comments.php:79
 msgid "Comment navigation"
 msgstr "Navigation des commentaires"
 
-#: comments.php:53 comments.php:78
+#: comments.php:56
+#, fuzzy, php-format
+msgctxt "left arrow (LTR) / right arrow (RTL)"
+msgid "%s Older Comments"
+msgstr "&larr; Commentaires anciens"
+
+#: comments.php:58
+#, fuzzy, php-format
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Newer Comments %s"
+msgstr "Nouveaux commentaires &rarr;"
+
+#: comments.php:81
 msgid "&larr; Older Comments"
 msgstr "&larr; Commentaires anciens"
 
-#: comments.php:55 comments.php:80
+#: comments.php:83
 msgid "Newer Comments &rarr;"
 msgstr "Nouveaux commentaires &rarr;"
 
-#: comments.php:90
+#: comments.php:93
 msgid "Comments are closed."
 msgstr "Les commentaires sont clos."
-
-#: content-featured.php:31
-msgid "Featured"
-msgstr "En vedette"
-
-#: content-featured.php:41
-msgid "Read More"
-msgstr "Lire la suite"
 
 #. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
 #. *
@@ -77,14 +82,18 @@ msgstr "Lire la suite"
 msgid "Nothing Found"
 msgstr "Aucun résultat"
 
-#: content-none.php:24
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+#: content-none.php:27
+#, fuzzy, php-format
+msgctxt "link to write a new post"
+msgid "Ready to publish your first post? %s."
 msgstr ""
 "Prêt pour votre première publication ? <a href=\"%1$s\">Commencez ici</a>."
 
-#: content-none.php:28
+#: content-none.php:31
+msgid "Get started here"
+msgstr ""
+
+#: content-none.php:39
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -92,55 +101,27 @@ msgstr ""
 "Vos termes de recherche n'ont rien renvoyé. Réessayez avec d'autres mots-"
 "clés."
 
-#: content-none.php:33
+#: content-none.php:45
+#, fuzzy
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+"It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr ""
 "Nous n'arrivons pas à trouver ce que vous recherchez. Une recherche pourrait "
 "vous aider."
 
-#: functions.php:175
+#: functions.php:212
 msgid "Primary Menu"
 msgstr "Menu principal"
 
-#: functions.php:176
+#: functions.php:213
 msgid "Social Menu"
 msgstr "Menu social"
 
-#: functions.php:189
-msgid "1 Column Wide"
-msgstr "1 colonne large"
-
-#: functions.php:190
-msgid "1 Column Narrow"
-msgstr "1 colonne étroite"
-
-#: functions.php:191 functions.php:192
-msgid "2 Columns: Sidebar / Content"
-msgstr "2 colonnes : Barre latérale / Contenu"
-
-#: functions.php:191 functions.php:192
-msgid "2 Columns: Content / Sidebar"
-msgstr "2 colonnes : Contenu / Barre latérale"
-
-#: functions.php:193 functions.php:195
-msgid "3 Columns: Sidebar / Sidebar / Content"
-msgstr "3 colonnes : Barre latérale / Barre latérale / Contenu"
-
-#: functions.php:193 functions.php:195
-msgid "3 Columns: Content / Sidebar / Sidebar"
-msgstr "3 colonnes : Contenu / Barre latérale / Barre latérale"
-
-#: functions.php:194
-msgid "3 Columns: Sidebar / Content / Sidebar"
-msgstr "3 colonnes : Barre latérale / Contenu / Barre latérale"
-
-#: functions.php:285
+#: functions.php:316
 msgid "Sidebar"
 msgstr "Barre latérale"
 
-#: functions.php:287
+#: functions.php:317
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
@@ -148,11 +129,11 @@ msgstr ""
 "La barre latérale principale apparaît à côté du contenu de chaque page, "
 "publication, archive et modèle de recherche."
 
-#: functions.php:294
+#: functions.php:324
 msgid "Secondary Sidebar"
 msgstr "Barre latérale secondaire"
 
-#: functions.php:296
+#: functions.php:325
 msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
@@ -160,56 +141,45 @@ msgstr ""
 "La barre latérale secondaire n'apparaît que si vous avez sélectionné une "
 "présentation en 3 colonnes."
 
-#: functions.php:303
+#: functions.php:332
 #, fuzzy
 msgid "Footer 1"
 msgstr "Pied de page gauche"
 
-#: functions.php:305
+#: functions.php:333
 #, fuzzy
 msgid "This sidebar is the first column of the footer widget area."
 msgstr ""
 "La barre latérale du pied de page gauche se trouve dans la première colonne "
 "de la zone de pied de page."
 
-#: functions.php:312
+#: functions.php:340
 #, fuzzy
 msgid "Footer 2"
 msgstr "Pied de page gauche"
 
-#: functions.php:314
+#: functions.php:341
 #, fuzzy
 msgid "This sidebar is the second column of the footer widget area."
 msgstr ""
 "La barre latérale du pied de page central se trouve dans la deuxième colonne "
 "de la zone de pied de page."
 
-#: functions.php:321
+#: functions.php:348
 #, fuzzy
 msgid "Footer 3"
 msgstr "Pied de page gauche"
 
-#: functions.php:323
+#: functions.php:349
 #, fuzzy
 msgid "This sidebar is the third column of the footer widget area."
 msgstr ""
 "La barre latérale du pied de page droit se trouve dans la troisième colonne "
 "de la zone de pied de page."
 
-#: header.php:56
+#: header.php:51
 msgid "Skip to content"
 msgstr "Passer au contenu"
-
-#. //developer.wordpress.org/themes/basics/template-hierarchy/#search-result
-#. *
-#. * @package Primer
-#. * @since 1.0.0
-#.
-#: search.php:21
-#, php-format
-msgctxt "search term"
-msgid "Search Results for: %s"
-msgstr "Résultats de recherche pour : %s"
 
 #: inc/back-compat.php:58
 #, php-format
@@ -218,101 +188,224 @@ msgid ""
 "Please upgrade and try again."
 msgstr ""
 
-#: inc/customizer.php:114
-msgid "Base Color Scheme"
+#: inc/customizer.php:173
+msgid "Use featured image"
 msgstr ""
 
-#: inc/customizer.php:137
+#: inc/customizer.php:174
+msgid ""
+"Allow the featured image for the current post to override the header image."
+msgstr ""
+
+#: inc/customizer/colors.php:62
+msgid "Header Background Color"
+msgstr ""
+
+#: inc/customizer/colors.php:71
 msgid "Menu Background Color"
 msgstr ""
 
-#: inc/customizer.php:158
+#: inc/customizer/colors.php:89
+msgid "Footer Background Color"
+msgstr ""
+
+#: inc/customizer/colors.php:98
 msgid "Tagline Text Color"
 msgstr ""
 
-#: inc/customizer.php:179
+#: inc/customizer/colors.php:107
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer.php:200
+#: inc/customizer/colors.php:133
 msgid "Main Text Color"
 msgstr ""
 
-#: inc/customizer.php:221
+#: inc/customizer/colors.php:160
 #, fuzzy
 msgid "Secondary Text Color"
 msgstr "Barre latérale secondaire"
 
-#: inc/customizer.php:231
-msgid "Typography"
-msgstr ""
-
-#: inc/customizer.php:248
-#, fuzzy
-msgid "Primary Font"
-msgstr "Menu principal"
-
-#: inc/customizer.php:269
-#, fuzzy
-msgid "Secondary Font"
-msgstr "Barre latérale secondaire"
-
-#: inc/customizer.php:342
+#: inc/customizer/colors.php:188 inc/customizer/layouts.php:281
 #, fuzzy
 msgid "Default"
 msgstr "Par défaut"
 
-#: inc/customizer.php:354
+#: inc/customizer/colors.php:206
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer.php:366
+#: inc/customizer/colors.php:220
 msgid "Muted"
 msgstr ""
 
-#: inc/customizer.php:378
+#: inc/customizer/colors.php:234
 msgid "Red"
 msgstr ""
 
-#: inc/hooks.php:218
+#: inc/customizer/colors.php:248 inc/customizer/layouts.php:290
+msgid "Custom"
+msgstr ""
+
+#: inc/customizer/colors.php:453
+msgid "Base Color Scheme"
+msgstr ""
+
+#: inc/customizer/colors.php:654
+msgid "City"
+msgstr ""
+
+#: inc/customizer/fonts.php:79
+#, fuzzy
+msgid "Header Font"
+msgstr "Barre latérale secondaire"
+
+#: inc/customizer/fonts.php:80
+msgid ""
+"Site title, post titles, widget titles, form labels, table headers and "
+"buttons."
+msgstr ""
+
+#: inc/customizer/fonts.php:97
+#, fuzzy
+msgid "Primary Font"
+msgstr "Menu principal"
+
+#: inc/customizer/fonts.php:98
+msgid "Paragraphs, lists, menu links, quotes and tables."
+msgstr ""
+
+#: inc/customizer/fonts.php:113
+#, fuzzy
+msgid "Secondary Font"
+msgstr "Barre latérale secondaire"
+
+#: inc/customizer/fonts.php:114
+msgid ""
+"Post bylines, comment counts, comment reply links, post footers and quote "
+"footers."
+msgstr ""
+
+#: inc/customizer/fonts.php:162
+msgid "Fonts"
+msgstr ""
+
+#: inc/customizer/fonts.php:187
+#, fuzzy, php-format
+msgctxt "font name"
+msgid "%s (Default)"
+msgstr "Par défaut"
+
+#: inc/customizer/layouts.php:40
+#, fuzzy
+msgid "One Column: Wide"
+msgstr "1 colonne large"
+
+#: inc/customizer/layouts.php:41
+#, fuzzy
+msgid "One Column: Narrow"
+msgstr "1 colonne étroite"
+
+#: inc/customizer/layouts.php:42 inc/customizer/layouts.php:117
+#, fuzzy
+msgid "Two Columns: Content | Sidebar"
+msgstr "2 colonnes : Contenu / Barre latérale"
+
+#: inc/customizer/layouts.php:43 inc/customizer/layouts.php:116
+#, fuzzy
+msgid "Two Columns: Sidebar | Content"
+msgstr "2 colonnes : Barre latérale / Contenu"
+
+#: inc/customizer/layouts.php:44 inc/customizer/layouts.php:119
+#, fuzzy
+msgid "Three Columns: Content | Sidebar | Sidebar"
+msgstr "3 colonnes : Contenu / Barre latérale / Barre latérale"
+
+#: inc/customizer/layouts.php:45
+#, fuzzy
+msgid "Three Columns: Sidebar | Content | Sidebar"
+msgstr "3 colonnes : Barre latérale / Contenu / Barre latérale"
+
+#: inc/customizer/layouts.php:46 inc/customizer/layouts.php:118
+#, fuzzy
+msgid "Three Columns: Sidebar | Sidebar | Content"
+msgstr "3 colonnes : Barre latérale / Barre latérale / Contenu"
+
+#: inc/customizer/layouts.php:231 inc/customizer/layouts.php:422
+msgid "Layout"
+msgstr "Mise en page"
+
+#: inc/customizer/layouts.php:263
+#, php-format
+msgctxt "link to the Customizer"
+msgid "The site-wide Default layout setting is located in the %s."
+msgstr ""
+
+#: inc/customizer/layouts.php:267
+msgid "Customizer"
+msgstr ""
+
+#: inc/customizer/layouts.php:444
+#, fuzzy
+msgid "Default Layout"
+msgstr "Par défaut"
+
+#: inc/customizer/layouts.php:445
+msgid "All posts and pages on your site will use this layout by default."
+msgstr ""
+
+#: inc/customizer/layouts.php:466
+#, fuzzy
+msgid "Page Width"
+msgstr "Page %d"
+
+#: inc/customizer/layouts.php:467
+msgid "Set the page width to be fixed or fluid when viewed on large screens."
+msgstr ""
+
+#: inc/customizer/layouts.php:472
+msgid "Fixed"
+msgstr ""
+
+#: inc/customizer/layouts.php:473
+msgid "Fluid"
+msgstr ""
+
+#: inc/helpers.php:38
+#, php-format
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr "Résultats de recherche pour : %s"
+
+#: inc/helpers.php:49
+msgid "404 Page Not Found"
+msgstr ""
+
+#: inc/hooks.php:256
 #, php-format
 msgctxt "page number"
 msgid "Page %d"
 msgstr "Page %d"
 
-#: inc/template-tags.php:29
+#: inc/template-tags.php:42
 msgid "Posts navigation"
 msgstr "Navigation des publications"
 
-#: inc/template-tags.php:35
+#: inc/template-tags.php:48
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Commentaires anciens"
 
-#: inc/template-tags.php:41
+#: inc/template-tags.php:54
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Nouveaux commentaires <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:78
+#: inc/template-tags.php:91
 msgid "Post navigation"
 msgstr "Navigation des publications"
 
-#: inc/template-tags.php:193
+#: inc/template-tags.php:206
 msgid "Blog"
 msgstr "Blog"
-
-#: inc/theme-layouts.php:364
-msgctxt "theme layout"
-msgid "Default"
-msgstr "Par défaut"
-
-#: inc/theme-layouts.php:459 inc/theme-layouts.php:566
-#: inc/theme-layouts.php:651
-msgid "Layout"
-msgstr "Mise en page"
-
-#: inc/theme-layouts.php:684
-msgid "Global Layout"
-msgstr "Présentation globale"
 
 #: templates/parts/loop/page-content.php:17
 #: templates/parts/loop/post-content.php:17
@@ -328,6 +421,12 @@ msgstr "Modifier"
 #: templates/parts/loop/post-content.php:13
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "En savoir plus <span class=\"meta-nav\">&rarr;</span>"
+
+#: templates/parts/loop/post-excerpt.php:13
+#, php-format
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Continue Reading %s"
+msgstr ""
 
 #: templates/parts/loop/post-footer.php:19
 #: templates/parts/loop/post-footer.php:31
@@ -351,33 +450,44 @@ msgctxt "tag list"
 msgid "Filed under: %s"
 msgstr "Archivé sous : %s"
 
-#: templates/parts/loop/post-meta.php:13
-#, php-format
-msgctxt "1. post date, 2. author name"
-msgid "%1$s by %2$s"
-msgstr "%1$s par %2$s"
-
-#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-meta.php:21
 #: templates/parts/loop/post-search-footer.php:41
 msgid "Leave a comment"
 msgstr "Laisser un commentaire"
 
-#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-meta.php:21
 #: templates/parts/loop/post-search-footer.php:41
 msgid "1 Comment"
 msgstr "1 commentaire"
 
-#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-meta.php:21
 #: templates/parts/loop/post-search-footer.php:41
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% commentaires"
 
-#: templates/parts/site-info.php:17
-#, php-format
+#: templates/parts/site-info.php:22
+#, fuzzy, php-format
 msgctxt "1. theme name link, 2. theme author link"
-msgid "Built with %1$s by %2$s."
-msgstr "Développé avec %1$s par %2$s."
+msgid "%1$s theme by %2$s"
+msgstr "%1$s par %2$s"
+
+#~ msgid "Featured"
+#~ msgstr "En vedette"
+
+#~ msgid "Read More"
+#~ msgstr "Lire la suite"
+
+#~ msgctxt "theme layout"
+#~ msgid "Default"
+#~ msgstr "Par défaut"
+
+#~ msgid "Global Layout"
+#~ msgstr "Présentation globale"
+
+#~ msgctxt "1. theme name link, 2. theme author link"
+#~ msgid "Built with %1$s by %2$s."
+#~ msgstr "Développé avec %1$s par %2$s."
 
 #~ msgid "Most Used Categories"
 #~ msgstr "Catégories les plus utilisées"

@@ -16,13 +16,7 @@ get_header(); ?>
 
 	<?php if ( have_posts() ) : ?>
 
-		<header class="page-header">
-
-			<h1 class="page-title"><?php printf( esc_html_x( 'Search Results for: %s', 'search term', 'primer' ), sprintf( '<span>%s</span>', get_search_query() ) ); ?></h1>
-
-		</header><!-- .page-header -->
-
-		<?php while ( have_posts() ) : the_post(); ?>
+		<?php while ( have_posts() ) : the_post() ?>
 
 			<?php get_template_part( 'content', 'search' ); ?>
 
