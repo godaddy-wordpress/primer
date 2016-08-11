@@ -277,8 +277,8 @@ class Primer_Customizer_Layouts {
 					       id="primer-layout-use-default"
 					       value="0"
 					       autocomplete="off"
-						<?php checked( ! $has_custom ) ?>>
-					<?php _e( 'Default', 'primer' ) ?>
+						<?php checked( ! $has_custom ); ?>>
+					<?php _e( 'Default', 'primer' ); ?>
 				</label>
 				<label for="primer-layout-use-custom">
 					<input type="radio"
@@ -286,8 +286,8 @@ class Primer_Customizer_Layouts {
 					       id="primer-layout-use-custom"
 					       value="1"
 					       autocomplete="off"
-						<?php checked( $has_custom ) ?>>
-					<?php _e( 'Custom', 'primer' ) ?>
+						<?php checked( $has_custom ); ?>>
+					<?php _e( 'Custom', 'primer' ); ?>
 				</label>
 				<span class="clear"></span>
 			</p>
@@ -337,19 +337,19 @@ class Primer_Customizer_Layouts {
 
 					?>
 
-					<li class="<?php echo esc_attr( $class ) ?>">
-						<label for="primer-layout-<?php echo esc_attr( $layout ) ?>">
+					<li class="<?php echo esc_attr( $class ); ?>">
+						<label for="primer-layout-<?php echo esc_attr( $layout ); ?>">
 							<input type="radio"
 							       name="<?php echo $name; // xss ok ?>-layout"
 							       data-customize-setting-link="layout"
-							       id="primer-layout-<?php echo esc_attr( $layout ) ?>"
-							       value="<?php echo esc_attr( $layout ) ?>"
-								   <?php checked( $cur_layout, $layout ) ?>
-								   <?php disabled( 'disabled' === $class ) ?>>
-							<img src="<?php echo esc_url( sprintf( '%s/assets/layouts/%s%s.svg', get_template_directory_uri(), $layout, is_rtl() ? '-rtl' : '' ) ) ?>"
-							     alt="<?php echo esc_attr( $label ) ?>"
-							     title="<?php echo esc_attr( $label ) ?>">
-							<span><?php echo esc_html( $label ) ?></span>
+							       id="primer-layout-<?php echo esc_attr( $layout ); ?>"
+							       value="<?php echo esc_attr( $layout ); ?>"
+								   <?php checked( $cur_layout, $layout ); ?>
+								   <?php disabled( 'disabled' === $class ); ?>>
+							<img src="<?php echo esc_url( sprintf( '%s/assets/layouts/%s%s.svg', get_template_directory_uri(), $layout, is_rtl() ? '-rtl' : '' ) ); ?>"
+							     alt="<?php echo esc_attr( $label ); ?>"
+							     title="<?php echo esc_attr( $label ); ?>">
+							<span><?php echo esc_html( $label ); ?></span>
 						</label>
 					</li>
 

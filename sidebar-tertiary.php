@@ -24,6 +24,6 @@ if ( ! is_active_sidebar( 'sidebar-2' ) || ! in_array( primer_get_layout(), $lay
 
 <div id="tertiary" class="widget-area" role="complementary">
 
-	<?php dynamic_sidebar( 'sidebar-2' ) ?>
+	<?php dynamic_sidebar( 'sidebar-2' ); ?>
 
 </div><!-- #tertiary -->
