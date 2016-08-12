@@ -171,7 +171,7 @@ class Primer_Customizer {
 			'use_featured_hero_image',
 			array(
 				'label'       => esc_html__( 'Use featured image', 'primer' ),
-				'description' => esc_html__( "Allow the featured image for the current post to override the header image.", 'primer' ),
+				'description' => esc_html__( "Allow the featured image on the current post to override the header image.", 'primer' ),
 				'section'     => 'header_image',
 				'priority'    => 5,
 				'type'        => 'checkbox',

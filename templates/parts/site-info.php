@@ -16,6 +16,15 @@
 
 			<div class="site-info-text"><?php
 
+				printf(
+					esc_html_x( 'Copyright %1$s %2$d %3$s', '1. copyright symbol, 2. year, 3. site title', 'primer' ),
+					'&copy;',
+					date( 'Y' ),
+					get_bloginfo( 'blogname' )
+				);
+
+				echo ' &mdash; ';
+
 				$theme_name = get_option( 'current_theme' );
 
 				printf(

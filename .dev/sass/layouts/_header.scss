@@ -70,27 +70,25 @@ body.custom-header-image {
 	display: block;
 }
 
-#page > .page-title-container{
-	background-color: white;
+.page-title-container {
+	background-color: $color__background-screen;
 
-	.page-header,
-	.archive-header{
+	.page-header {
 		@include container($container-size);
+
 		position: relative;
 		z-index: 9999;
 		clear: both;
 
-		h1{
+		h1 {
 			@include span(12);
 			padding: 3% 1rem;
-			margin-top: 0;
 			margin-bottom: 0;
-			font-weight: 200;
-
-			@media #{$small-only} {
-				padding-left: 0.75rem;
-				padding-right: 0.75rem;
-			}
+			font-weight: 300;
 		}
 	}
+}
+
+body.no-max-width .page-title-container .page-header {
+	max-width: none;
 }

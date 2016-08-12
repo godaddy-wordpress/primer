@@ -1484,36 +1484,30 @@ body.custom-header-image .site-description {
 .header-image img {
   display: block; }
 
-#page > .page-title-container {
-  background-color: white; }
-  #page > .page-title-container .page-header,
-  #page > .page-title-container .archive-header {
+.page-title-container {
+  background-color: #fff; }
+  .page-title-container .page-header {
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     z-index: 9999;
     clear: both; }
-    #page > .page-title-container .page-header:after,
-    #page > .page-title-container .archive-header:after {
+    .page-title-container .page-header:after {
       content: " ";
       display: block;
       clear: both; }
-    #page > .page-title-container .page-header h1,
-    #page > .page-title-container .archive-header h1 {
+    .page-title-container .page-header h1 {
       width: 97.22222%;
       float: left;
       margin-left: 1.38889%;
       margin-right: 1.38889%;
       padding: 3% 1rem;
-      margin-top: 0;
       margin-bottom: 0;
-      font-weight: 200; }
-      @media only screen and (max-width: 40.063em) {
-        #page > .page-title-container .page-header h1,
-        #page > .page-title-container .archive-header h1 {
-          padding-left: 0.75rem;
-          padding-right: 0.75rem; } }
+      font-weight: 300; }
+
+body.no-max-width .page-title-container .page-header {
+  max-width: none; }
 
 /*--------------------------------------------------------------
 # Footer
@@ -1827,7 +1821,6 @@ body.no-max-width .site-info-wrapper .site-info {
   color: #ff6663; }
 
 .entry-meta {
-  padding-bottom: 1rem;
   font-size: 90%;
   color: #686868; }
 

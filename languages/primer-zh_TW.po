@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-11 13:13-0500\n"
+"POT-Creation-Date: 2016-08-12 01:00-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -177,7 +177,7 @@ msgstr ""
 
 #: inc/customizer.php:174
 msgid ""
-"Allow the featured image for the current post to override the header image."
+"Allow the featured image on the current post to override the header image."
 msgstr ""
 
 #: inc/customizer/colors.php:62
@@ -214,20 +214,20 @@ msgstr "次要側邊欄"
 msgid "Default"
 msgstr "預設"
 
-#: inc/customizer/colors.php:206
+#: inc/customizer/colors.php:195 inc/customizer/layouts.php:290
+msgid "Custom"
+msgstr ""
+
+#: inc/customizer/colors.php:209
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer/colors.php:220
+#: inc/customizer/colors.php:223
 msgid "Muted"
 msgstr ""
 
-#: inc/customizer/colors.php:234
+#: inc/customizer/colors.php:237
 msgid "Red"
-msgstr ""
-
-#: inc/customizer/colors.php:248 inc/customizer/layouts.php:290
-msgid "Custom"
 msgstr ""
 
 #: inc/customizer/colors.php:453
@@ -449,7 +449,13 @@ msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% 則評論"
 
-#: templates/parts/site-info.php:22
+#: templates/parts/site-info.php:20
+#, php-format
+msgctxt "1. copyright symbol, 2. year, 3. site title"
+msgid "Copyright %1$s %2$d %3$s"
+msgstr ""
+
+#: templates/parts/site-info.php:31
 #, fuzzy, php-format
 msgctxt "1. theme name link, 2. theme author link"
 msgid "%1$s theme by %2$s"

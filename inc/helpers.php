@@ -8,11 +8,11 @@
 /**
  * Return a page title based on the current page.
  *
- * @return string|false
+ * @return string
  */
 function primer_get_the_page_title() {
 
-	$title = false;
+	$title = '';
 
 	switch ( true ) {
 
@@ -74,7 +74,14 @@ function primer_get_the_page_title() {
 
 	}
 
-	return apply_filters( 'primer_the_page_title', $title );
+	/**
+	 * Filter the page title.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var string
+	 */
+	return (string) apply_filters( 'primer_the_page_title', $title );
 
 }
 
