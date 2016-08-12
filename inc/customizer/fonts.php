@@ -250,7 +250,7 @@ class Primer_Customizer_Fonts {
 	 */
 	public function sanitize_font( $font ) {
 
-		return in_array( $font, $this->fonts ) ? $font : array_shift( $this->fonts );
+		return in_array( $font, $this->fonts ) ? $font : $this->fonts[0];
 
 	}
 

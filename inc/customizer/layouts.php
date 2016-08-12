@@ -24,6 +24,13 @@ class Primer_Customizer_Layouts {
 	protected $meta_box = true;
 
 	/**
+	 * Array of page widths.
+	 *
+	 * @var bool
+	 */
+	protected $page_widths = array();
+
+	/**
 	 * Class constructor.
 	 */
 	public function __construct() {
@@ -71,6 +78,20 @@ class Primer_Customizer_Layouts {
 		 * @var bool
 		 */
 		$this->meta_box = (bool) apply_filters( 'primer_layouts_meta_box_enabled', $this->meta_box );
+
+		/**
+		 * Filter the registered page widths.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var array
+		 */
+		$this->page_widths = (array) apply_filters( 'primer_page_widths',
+			array(
+				'fixed' => esc_html__( 'Fixed', 'primer' ),
+				'fluid' => esc_html__( 'Fluid', 'primer' ),
+			)
+		);
 
 		add_action( 'init', array( $this, 'rtl_layouts' ), 11 );
 		add_action( 'init', array( $this, 'post_type_support' ), 11 );
@@ -451,10 +472,18 @@ class Primer_Customizer_Layouts {
 			)
 		);
 
+		if ( ! $this->page_widths ) {
+
+			return;
+
+		}
+
+		reset( $this->page_widths );
+
 		$wp_customize->add_setting(
 			'page_width',
 			array(
-				'default'           => 'fixed',
+				'default'           => key( $this->page_widths ),
 				'sanitize_callback' => 'sanitize_key',
 				'transport'         => 'postMessage',
 			)
@@ -464,14 +493,11 @@ class Primer_Customizer_Layouts {
 			'page_width',
 			array(
 				'label'       => esc_html__( 'Page Width', 'primer' ),
-				'description' => esc_html__( 'Set the page width to be fixed or fluid when viewed on large screens.', 'primer' ),
+				'description' => esc_html__( 'Display your site differently on larger screens.', 'primer' ),
 				'section'     => 'layout',
 				'settings'    => 'page_width',
 				'type'        => 'radio',
-				'choices'     => array(
-					'fixed' => esc_html__( 'Fixed', 'primer' ),
-					'fluid' => esc_html__( 'Fluid', 'primer' ),
-				),
+				'choices'     => $this->page_widths,
 			)
 		);
 
