@@ -23,7 +23,15 @@ window.onload = function() {
 
 };
 
+var width = window.innerWidth;
+
 window.onresize = function() {
+
+	if ( width === window.innerWidth ) {
+
+		return;
+
+	}
 
 	var nav_menu    = document.getElementById( 'site-navigation' ),
 	    menu_toggle = document.getElementById( 'menu-toggle' );
