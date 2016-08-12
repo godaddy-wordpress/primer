@@ -73,7 +73,7 @@ class Primer_Customizer_Colors {
 					'label'   => esc_html__( 'Menu Background Color', 'primer' ),
 					'default' => '#0b3954',
 					'css'     => array(
-						'.main-navigation-container, .main-navigation ul ul' => array(
+						'.main-navigation-container, .main-navigation ul ul, .main-navigation .sub-menu' => array(
 							'background-color' => '%1$s',
 						),
 						'.main-navigation li a, .main-navigation li a:hover, .main-navigation li a:visited:hover' => array(

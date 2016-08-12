@@ -620,6 +620,7 @@ a {
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a,
+  .main-navigation .current_page_parent > a,
   .main-navigation .current-menu-ancestor > a {
     background-color: rgba(0, 0, 0, 0.1); }
   .main-navigation .sub-menu .menu-item-has-children > a::after {
