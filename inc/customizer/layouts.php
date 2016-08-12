@@ -219,7 +219,7 @@ class Primer_Customizer_Layouts {
 			||
 			! current_user_can( 'delete_post_meta', $post->ID )
 			||
-			'templates/page-builder.php' === get_page_template_slug()
+			in_array( get_page_template_slug(), array( 'templates/page-builder.php', 'templates/page-builder-no-header.php' ) )
 		) {
 
 			return;
