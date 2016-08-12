@@ -433,3 +433,60 @@ function primer_hex2rgb( $color ) {
 	return array( 'red' => $r, 'green' => $g, 'blue' => $b );
 
 }
+
+/**
+ * Recursively replace elements from passed arrays into the first array (safe for PHP 5.2).
+ *
+ * @author Frankie Jarrett <fjarrett@gmail.com>
+ * @link   http://php.net/manual/en/function.array-replace-recursive.php
+ * @since  1.0.0
+ *
+ * @param  array $array1
+ * @param  array $array2
+ * @param  array $...
+ *
+ * @return array
+ */
+function primer_array_replace_recursive( array $array1, array $array2 ) {
+
+	if ( function_exists( 'array_replace_recursive' ) ) {
+
+		return call_user_func_array( 'array_replace_recursive', func_get_args() );
+
+	}
+
+	$result = array();
+
+	for ( $i = 0, $total = func_num_args(); $i < $total; $i++ ) {
+
+		$_array = func_get_arg( $i );
+
+		foreach ( $_array as $key => &$value ) {
+
+			if ( is_array( $value ) && isset( $result[ $key ] ) && is_array( $result[ $key ] ) ) {
+
+				$result[ $key ] = call_user_func( __FUNCTION__, $result[ $key ], $value );
+
+				continue;
+
+			}
+
+			$is_assoc = ( array_keys( $_array ) !== range( 0, count( $_array ) - 1 ) );
+
+			if ( ! $is_assoc && ! in_array( $value, $merged, true ) ) {
+
+				$result[] = $value;
+
+				continue;
+
+			}
+
+			$result[ $key ] = $value;
+
+		}
+
+	}
+
+	return (array) $result;
+
+}
