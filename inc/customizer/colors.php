@@ -308,9 +308,10 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_setting(
 			$name,
 			array(
-				'default'           => sanitize_hex_color( $args['default'] ),
-				'sanitize_callback' => 'sanitize_hex_color',
-				'transport'         => 'postMessage',
+				'default'              => sanitize_hex_color_no_hash( $args['default'] ),
+				'sanitize_callback'    => 'sanitize_hex_color_no_hash',
+				'sanitize_js_callback' => 'maybe_hash_hex_color',
+				'transport'            => 'postMessage',
 			)
 		);
 
@@ -398,9 +399,9 @@ class Primer_Customizer_Colors {
 		}
 
 		$scheme = empty( $scheme ) ? $this->get_current_color_scheme_array() : $this->color_schemes[ $this->sanitize_color_scheme( $scheme ) ];
-		$hex    = isset( $scheme['colors'][ $color ] ) ? $scheme['colors'][ $color ] : null;
+		$hex    = isset( $scheme['colors'][ $color ] ) ? trim( $scheme['colors'][ $color ], '#' ) : null;
 
-		return ( $hash ) ? sanitize_hex_color( '#' . trim( $hex, '#' ) ) : sanitize_hex_color_no_hash( trim( $hex, '#' ) );
+		return ( $hash ) ? sanitize_hex_color( '#' . $hex ) : sanitize_hex_color_no_hash( $hex );
 
 	}
 
