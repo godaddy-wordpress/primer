@@ -166,7 +166,7 @@ class Primer_Customizer_Fonts {
 
 		foreach ( $this->font_types as $name => $args ) {
 
-			if ( empty( $name ) || empty( $args['default'] ) || empty( $args['label'] ) ) {
+			if ( empty( $name ) || empty( $args['default'] ) ) {
 
 				continue;
 
@@ -189,7 +189,7 @@ class Primer_Customizer_Fonts {
 			$wp_customize->add_control(
 				$name,
 				array(
-					'label'       => $args['label'],
+					'label'       => ! empty( $args['label'] ) ? $args['label'] : $name,
 					'description' => ! empty( $args['description'] ) ? $args['description'] : null,
 					'section'     => ! empty( $args['section'] ) ? $args['section'] : 'fonts',
 					'priority'    => ! empty( $args['priority'] ) ? absint( $args['priority'] ) : null,

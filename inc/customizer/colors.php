@@ -295,7 +295,7 @@ class Primer_Customizer_Colors {
 	 */
 	public function register_color_setting( WP_Customize_Manager $wp_customize, $name, array $args ) {
 
-		if ( empty( $name ) || empty( $args['default'] ) || empty( $args['label'] ) ) {
+		if ( empty( $name ) || empty( $args['default'] ) ) {
 
 			return;
 
@@ -317,7 +317,7 @@ class Primer_Customizer_Colors {
 				$wp_customize,
 				$name,
 				array(
-					'label'   => $args['label'],
+					'label'   => ! empty( $args['label'] ) ? $args['label'] : $name,
 					'section' => 'colors',
 				)
 			)
