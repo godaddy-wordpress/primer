@@ -90,6 +90,19 @@ function primer_add_site_info() {
 add_action( 'primer_after_footer', 'primer_add_site_info', 20 );
 
 /**
+ * Display credit in the footer.
+ *
+ * @action primer_site_info
+ * @since  1.0.0
+ */
+function primer_add_credit() {
+
+	get_template_part( 'templates/parts/credit' );
+
+}
+add_action( 'primer_site_info', 'primer_add_credit' );
+
+/**
  * Set the post excerpt length to 20 words.
  *
  * To override this in a child theme, remove the filter and add
