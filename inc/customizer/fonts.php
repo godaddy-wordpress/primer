@@ -89,7 +89,7 @@ class Primer_Customizer_Fonts {
 						.entry-title,
 						.widget-title,
 						button, a.button, a.fl-button, input[type="button"], input[type="reset"], input[type="submit"]' => array(
-							'font-family' => '"%s", sans-serif',
+							'font-family' => '"%1$s", sans-serif',
 						),
 					),
 				),
@@ -105,7 +105,7 @@ class Primer_Customizer_Fonts {
 						dl dd,
 						.main-navigation ul li a,
 						.fl-callout-text' => array(
-							'font-family' => '"%s", sans-serif',
+							'font-family' => '"%1$s", sans-serif',
 						),
 					),
 				),
@@ -121,7 +121,7 @@ class Primer_Customizer_Fonts {
 						.comment-list li .comment-metadata,
 						.comment-reply-link,
 						#respond .logged-in-as' => array(
-							'font-family' => '"%s", sans-serif',
+							'font-family' => '"%1$s", sans-serif',
 						),
 					),
 				),
