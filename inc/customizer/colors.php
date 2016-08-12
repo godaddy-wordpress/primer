@@ -35,7 +35,7 @@ class Primer_Customizer_Colors {
 		$this->colors = (array) apply_filters( 'primer_colors',
 			array(
 				'header_textcolor' => array(
-					'label'   => esc_html__( 'Header Text Color', 'primer' ),
+					'label'   => esc_html__( 'Site Title Color', 'primer' ),
 					'default' => '#f4f5f9',
 					'css'     => array(
 						'.site-title a, .site-title a:visited' => array(
