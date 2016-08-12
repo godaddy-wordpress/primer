@@ -6,18 +6,11 @@
  */
 ?>
 
-<?php if ( primer_has_hero_image() ) : ?>
+<?php if ( primer_has_hero_image() && is_front_page() && is_active_sidebar( 'hero' ) ) : ?>
 
-	<div class="hero" style="background-image: url('<?php echo esc_url( primer_get_hero_image() ); ?>');">
+	<div class="hero">
 
-		<?php
-		/**
-		 * Fires inside the `.hero` element.
-		 *
-		 * @since 1.0.0
-		 */
-		do_action( 'primer_hero' );
-		?>
+		<?php dynamic_sidebar( 'hero' ); ?>
 
 	</div>
 

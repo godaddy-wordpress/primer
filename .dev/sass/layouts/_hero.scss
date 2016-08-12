@@ -1,0 +1,44 @@
+.hero {
+	color: white;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	clear: both;
+
+	@media #{$medium-up} {
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+
+	.widget {
+		margin-bottom: 1em;
+		font-size: 1.2em;
+		font-weight: 300;
+		background: none;
+
+		&::last-child {
+			margin-bottom: 0;
+		}
+
+		h1,h2,h3,h4,h5,h6,p,ul,ol,li{
+			color: white;
+		}
+
+		ul, ol {
+			padding-left: 0;
+
+			li {
+				list-style: none;
+			}
+		}
+
+		input, select, textarea {
+			color: $color__text-input;
+		}
+	}
+
+	label, input, select, textarea {
+		display: inline;
+		width: auto;
+	}
+
+}
