@@ -6,22 +6,18 @@
  */
 ?>
 
-<?php if ( has_nav_menu( 'footer' ) ) : ?>
+<nav class="footer-menu" role="navigation">
 
-	<nav class="footer-menu">
+	<?php
 
-		<?php
+	wp_nav_menu(
+		array(
+			'theme_location' => 'footer',
+			'depth'          => 1,
+			'fallback_cb'    => false,
+		)
+	);
 
-		wp_nav_menu(
-			array(
-				'theme_location' => 'footer',
-				'depth'          => 1,
-				'fallback_cb'    => false,
-			)
-		);
+	?>
 
-		?>
-
-	</nav><!-- .footer-menu -->
-
-<?php endif; ?>
+</nav><!-- .footer-menu -->

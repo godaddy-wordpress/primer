@@ -135,7 +135,7 @@ function primer_add_site_info() {
 add_action( 'primer_after_footer', 'primer_add_site_info' );
 
 /**
- * Display social navigation menu after the footer.
+ * Display social navigation menu in the footer.
  *
  * @action primer_site_info
  * @since  1.0.0

@@ -6,9 +6,10 @@
  */
 ?>
 
-<div class="social-menu">
+<nav class="social-menu">
 
 	<?php
+
 	wp_nav_menu(
 		array(
 			'theme_location' => 'social',
@@ -16,6 +17,7 @@
 			'fallback_cb'    => false,
 		)
 	);
+
 	?>
 
-</div><!-- .social-menu -->
+</nav><!-- .social-menu -->
