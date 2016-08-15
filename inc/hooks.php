@@ -119,7 +119,7 @@ function primer_add_footer_widgets() {
 	get_template_part( 'templates/parts/footer-widgets' );
 
 }
-add_action( 'primer_footer', 'primer_add_footer_widgets', 5 );
+add_action( 'primer_footer', 'primer_add_footer_widgets' );
 
 /**
  * Display site info after the footer.
@@ -132,7 +132,24 @@ function primer_add_site_info() {
 	get_template_part( 'templates/parts/site-info' );
 
 }
-add_action( 'primer_after_footer', 'primer_add_site_info', 20 );
+add_action( 'primer_after_footer', 'primer_add_site_info' );
+
+/**
+ * Display social navigation menu after the footer.
+ *
+ * @action primer_site_info
+ * @since  1.0.0
+ */
+function primer_add_social_navigation() {
+
+	if ( has_nav_menu( 'social' ) ) {
+
+		get_template_part( 'templates/parts/social-navigation' );
+
+	}
+
+}
+add_action( 'primer_site_info', 'primer_add_social_navigation' );
 
 /**
  * Display credit in the footer.

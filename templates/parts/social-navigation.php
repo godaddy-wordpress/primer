@@ -6,22 +6,16 @@
  */
 ?>
 
-<?php if ( has_nav_menu( 'social' ) ) : ?>
+<div class="social-menu">
 
-	<div class="social-menu">
+	<?php
+	wp_nav_menu(
+		array(
+			'theme_location' => 'social',
+			'depth'          => 1,
+			'fallback_cb'    => false,
+		)
+	);
+	?>
 
-		<?php
-
-		wp_nav_menu(
-			array(
-				'theme_location' => 'social',
-				'depth'          => 1,
-				'fallback_cb'    => false,
-			)
-		);
-
-		?>
-
-	</div><!-- .social-menu -->
-
-<?php endif; ?>
+</div><!-- .social-menu -->
