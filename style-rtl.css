@@ -1424,7 +1424,11 @@ body.page-template-page-builder-no-header .content-area {
 --------------------------------------------------------------*/
 .site-header {
   position: relative;
-  background-color: #0b3954; }
+  background-color: #0b3954;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat; }
 
 .site-header-wrapper {
   max-width: 1100px;
@@ -1445,7 +1449,7 @@ body.no-max-width .site-header-wrapper {
   margin-left: 1.38889%;
   position: relative;
   z-index: 1;
-  padding: 7% 1rem; }
+  padding: 6% 1rem; }
   @media only screen and (max-width: 40.063em) {
     .site-title-wrapper {
       padding-right: 0.75rem;
@@ -1502,23 +1506,29 @@ body.no-max-width .page-title-container .page-header {
 # Hero
 --------------------------------------------------------------*/
 .hero {
-  color: white;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  clear: both; }
-  @media only screen and (min-width: 40.063em) {
-    .hero {
-      padding-top: 25px;
-      padding-bottom: 25px; } }
+  width: 97.22222%;
+  float: right;
+  margin-right: 1.38889%;
+  margin-left: 1.38889%;
+  clear: both;
+  padding: 0 1rem;
+  color: #fff; }
+  .hero .hero-inner {
+    max-width: none; }
+    @media only screen and (min-width: 61.063em) {
+      .hero .hero-inner {
+        max-width: 75%; } }
   .hero .widget {
+    padding: 0;
     margin-bottom: 1em;
     font-size: 1.2em;
     font-weight: 300;
     background: none; }
-    .hero .widget::last-child {
-      margin-bottom: 0; }
+    .hero .widget:last-child {
+      margin-bottom: 0;
+      padding-bottom: 6%; }
     .hero .widget h1, .hero .widget h2, .hero .widget h3, .hero .widget h4, .hero .widget h5, .hero .widget h6, .hero .widget p, .hero .widget ul, .hero .widget ol, .hero .widget li {
-      color: white; }
+      color: #fff; }
     .hero .widget ul, .hero .widget ol {
       padding-right: 0; }
       .hero .widget ul li, .hero .widget ol li {
@@ -1615,6 +1625,20 @@ body.no-max-width .footer-widget-area {
     margin-left: 1.38889%;
     font-size: 90%;
     line-height: 38px; }
+  .site-info-wrapper .footer-menu {
+    width: 97.22222%;
+    float: right;
+    margin-right: 1.38889%;
+    margin-left: 1.38889%;
+    margin-bottom: 1em;
+    text-align: center; }
+    .site-info-wrapper .footer-menu ul {
+      padding: 0;
+      margin: 0;
+      list-style: none; }
+    .site-info-wrapper .footer-menu li {
+      display: inline-block;
+      margin: 0.5em 1em; }
   .site-info-wrapper .social-menu {
     width: 47.22222%;
     float: left;

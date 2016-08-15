@@ -77,6 +77,24 @@ body.no-max-width .footer-widget-area {
 		line-height: 38px;
 	}
 
+	.footer-menu {
+		@include span(12);
+
+		margin-bottom: 1em;
+		text-align: center;
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+
+		li {
+			display: inline-block;
+			margin: 0.5em 1em;
+		}
+	}
+
 	.social-menu {
 		@include span(last 6);
 	}

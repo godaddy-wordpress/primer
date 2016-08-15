@@ -1,6 +1,9 @@
 .site-header {
 	position: relative;
 	background-color: $color__background-header;
+	background-size: cover;
+	background-position: bottom center;
+	background-repeat: no-repeat;
 }
 
 .site-header-wrapper {
@@ -16,7 +19,7 @@ body.no-max-width .site-header-wrapper {
 
 	position: relative;
 	z-index: 1;
-	padding: 7% 1rem;
+	padding: 6% 1rem;
 
 	@media #{$small-only} {
 		padding-left: 0.75rem;
@@ -70,6 +73,7 @@ body.custom-header-image {
 
 		h1 {
 			@include span(12);
+
 			padding: 3% 1rem;
 			margin-bottom: 0;
 			font-weight: 300;

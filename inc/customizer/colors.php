@@ -636,7 +636,7 @@ class Primer_Customizer_Colors {
 			array(
 				'default-text-color' => $this->get_default_color( 'header_textcolor', 'default' ),
 				'width'              => 2400,
-				'height'             => 600,
+				'height'             => 1300,
 				'flex-height'        => true,
 				'wp-head-callback'   => array( $this, 'header_css' ),
 			)

@@ -6,16 +6,8 @@
  * theme as custom template tags. Others are attached to action and filter
  * hooks in WordPress to change core functionality.
  *
- * When using a child theme you can override certain functions (those wrapped
- * in a `function_exists()` call) by defining them first in your child theme's
- * functions.php file. The child theme's functions.php file is included before
- * the parent theme's file, so the child theme functions would be used.
- *
  * @link https://codex.wordpress.org/Theme_Development
  * @link https://codex.wordpress.org/Child_Themes
- *
- * Functions that are not pluggable (not wrapped in `function_exists()`) are
- * instead attached to a filter or action hook.
  *
  * For more information on hooks, actions, and filters,
  * {@link https://codex.wordpress.org/Plugin_API}
@@ -99,157 +91,154 @@ require_once get_template_directory() . '/inc/woocommerce.php';
  */
 require_once get_template_directory() . '/inc/jetpack.php';
 
-if ( ! function_exists( 'primer_setup' ) ) {
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * Note that this function is hooked into the 'after_setup_theme' hook, which
+ * runs before the init hook. The init hook is too late for some features, such
+ * as indicating support for post thumbnails.
+ *
+ * @since 1.0.0
+ */
+function primer_setup() {
 
 	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
+	 * Load theme translations.
 	 *
-	 * Note that this function is hooked into the 'after_setup_theme' hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
+	 * Translations can be filed in the /languages/ directory. If you're
+	 * building a theme based on Primer, use a find and replace to change
+	 * 'primer' to the name of your theme in all the template files.
 	 *
+	 * @link  https://codex.wordpress.org/Function_Reference/load_theme_textdomain
 	 * @since 1.0.0
 	 */
-	function primer_setup() {
+	load_theme_textdomain( 'primer', get_template_directory() . '/languages' );
 
-		/**
-		 * Load theme translations.
-		 *
-		 * Translations can be filed in the /languages/ directory. If you're
-		 * building a theme based on Primer, use a find and replace to change
-		 * 'primer' to the name of your theme in all the template files.
-		 *
-		 * @link  https://codex.wordpress.org/Function_Reference/load_theme_textdomain
-		 * @since 1.0.0
-		 */
-		load_theme_textdomain( 'primer', get_template_directory() . '/languages' );
+	/**
+	 * Filter registered image sizes.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var array
+	 */
+	$images_sizes = (array) apply_filters( 'primer_image_sizes',
+		array(
+			'primer-featured' => array(
+				'width'  => 1600,
+				'height' => 9999,
+				'crop'   => false,
+			),
+			'primer-hero' => array(
+				'width'  => 2400,
+				'height' => 1300,
+				'crop'   => array( 'center', 'center' ),
+			),
+		)
+	);
 
+	foreach ( $images_sizes as $name => $args ) {
+
+		if (
+			! empty( $name )
+			&&
+			! empty( $args['width'] )
+			&&
+			! empty( $args['height'] )
+			&&
+			! empty( $args['crop'] )
+		) {
+
+			add_image_size(
+				sanitize_key( $name ),
+				absint( $args['width'] ),
+				absint( $args['height'] ),
+				$args['crop']
+			);
+
+		}
+
+	}
+
+	/**
+	 * Enable support for Automatic Feed Links.
+	 *
+	 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Feed_Links
+	 * @since 1.0.0
+	 */
+	add_theme_support( 'automatic-feed-links' );
+
+	/**
+	 * Enable support for plugins and themes to manage the document title tag.
+	 *
+	 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
+	 * @since 1.0.0
+	 */
+	add_theme_support( 'title-tag' );
+
+	/**
+	 * Enable support for Post Thumbnails on posts and pages.
+	 *
+	 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 * @since 1.0.0
+	 */
+	add_theme_support( 'post-thumbnails' );
+
+	/**
+	 * Register custom Custom Navigation Menus.
+	 *
+	 * @link  https://codex.wordpress.org/Function_Reference/register_nav_menus
+	 * @since 1.0.0
+	 */
+	register_nav_menus(
 		/**
-		 * Filter registered image sizes.
+		 * Filter registered nav menus.
 		 *
 		 * @since 1.0.0
 		 *
 		 * @var array
 		 */
-		$images_sizes = (array) apply_filters( 'primer_image_sizes',
+		(array) apply_filters( 'primer_nav_menus',
 			array(
-				'primer-featured' => array(
-					'width'  => 1600,
-					'height' => 9999,
-					'crop'   => false,
-				),
-				'primer-hero' => array(
-					'width'  => 2400,
-					'height' => 600,
-					'crop'   => array( 'center', 'center' ),
-				),
+				'primary' => esc_html__( 'Primary Menu', 'primer' ),
+				'social'  => esc_html__( 'Social Menu', 'primer' ),
+				'footer'  => esc_html__( 'Footer Menu', 'primer' ),
 			)
-		);
+		)
+	);
 
-		foreach ( $images_sizes as $name => $args ) {
+	/**
+	 * Enable support for HTML5 markup.
+	 *
+	 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
+	 * @since 1.0.0
+	 */
+	add_theme_support(
+		'html5',
+		array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		)
+	);
 
-			if (
-				! empty( $name )
-				&&
-				! empty( $args['width'] )
-				&&
-				! empty( $args['height'] )
-				&&
-				! empty( $args['crop'] )
-			) {
-
-				add_image_size(
-					sanitize_key( $name ),
-					absint( $args['width'] ),
-					absint( $args['height'] ),
-					$args['crop']
-				);
-
-			}
-
-		}
-
-		/**
-		 * Enable support for Automatic Feed Links.
-		 *
-		 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Feed_Links
-		 * @since 1.0.0
-		 */
-		add_theme_support( 'automatic-feed-links' );
-
-		/**
-		 * Enable support for plugins and themes to manage the document title tag.
-		 *
-		 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
-		 * @since 1.0.0
-		 */
-		add_theme_support( 'title-tag' );
-
-		/**
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-		 * @since 1.0.0
-		 */
-		add_theme_support( 'post-thumbnails' );
-
-		/**
-		 * Register custom Custom Navigation Menus.
-		 *
-		 * @link  https://codex.wordpress.org/Function_Reference/register_nav_menus
-		 * @since 1.0.0
-		 */
-		register_nav_menus(
-			/**
-			 * Filter registered nav menus.
-			 *
-			 * @since 1.0.0
-			 *
-			 * @var array
-			 */
-			(array) apply_filters( 'primer_nav_menus',
-				array(
-					'primary' => esc_html__( 'Primary Menu', 'primer' ),
-					'social'  => esc_html__( 'Social Menu', 'primer' ),
-				)
-			)
-		);
-
-		/**
-		 * Enable support for HTML5 markup.
-		 *
-		 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
-		 * @since 1.0.0
-		 */
-		add_theme_support(
-			'html5',
-			array(
-				'search-form',
-				'comment-form',
-				'comment-list',
-				'gallery',
-				'caption',
-			)
-		);
-
-		/**
-		 * Enable support for Post Formats.
-		 *
-		 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Formats
-		 * @since 1.0.0
-		 */
-		add_theme_support(
-			'post-formats',
-			array(
-				'aside',
-				'image',
-				'video',
-				'quote',
-				'link',
-			)
-		);
-
-	}
+	/**
+	 * Enable support for Post Formats.
+	 *
+	 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Formats
+	 * @since 1.0.0
+	 */
+	add_theme_support(
+		'post-formats',
+		array(
+			'aside',
+			'image',
+			'video',
+			'quote',
+			'link',
+		)
+	);
 
 }
 add_action( 'after_setup_theme', 'primer_setup' );
@@ -372,63 +361,77 @@ function primer_register_sidebars() {
 }
 add_action( 'widgets_init', 'primer_register_sidebars' );
 
-if ( ! function_exists( 'primer_scripts' ) ) {
+/**
+ * Enqueue theme scripts and styles.
+ *
+ * @link  https://codex.wordpress.org/Function_Reference/wp_enqueue_style
+ * @link  https://codex.wordpress.org/Function_Reference/wp_enqueue_script
+ * @since 1.0.0
+ */
+function primer_scripts() {
 
-	/**
-	 * Enqueue theme scripts and styles.
-	 *
-	 * @link  https://codex.wordpress.org/Function_Reference/wp_enqueue_style
-	 * @link  https://codex.wordpress.org/Function_Reference/wp_enqueue_script
-	 * @since 1.0.0
-	 */
-	function primer_scripts() {
+	$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-		$suffix = SCRIPT_DEBUG ? '' : '.min';
+	wp_enqueue_style( 'primer', get_stylesheet_uri(), false, PRIMER_VERSION );
 
-		wp_enqueue_style( 'primer', get_stylesheet_uri(), false, PRIMER_VERSION );
+	wp_style_add_data( 'primer', 'rtl', 'replace' );
 
-		wp_style_add_data( 'primer', 'rtl', 'replace' );
+	wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", array(), PRIMER_VERSION, true );
+	wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), PRIMER_VERSION, true );
 
-		wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", array(), PRIMER_VERSION, true );
-		wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), PRIMER_VERSION, true );
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 
-		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-
-			wp_enqueue_script( 'comment-reply' );
-
-		}
-
-		/**
-		 * Enqueue lt IE 9 Conditional
-		 */
-		wp_enqueue_style( 'primer-lt-ie9-style', get_template_directory_uri() . '/assets/css/ie.css', array(), PRIMER_VERSION );
-		wp_style_add_data( 'primer-lt-ie9-style', 'conditional', 'lt IE 9' );
-
-		wp_enqueue_script( 'primer-respond', get_template_directory_uri() . '/assets/js/respond.min.js', array(), PRIMER_VERSION );
-		wp_script_add_data( 'primer-respond', 'conditional', 'lt IE 9' );
-
-		wp_enqueue_script( 'primer-nwmatcher', get_template_directory_uri() . '/assets/js/nwmatcher.min.js', array(), PRIMER_VERSION );
-		wp_script_add_data( 'primer-nwmatcher', 'conditional', 'lt IE 9' );
-
-		wp_enqueue_script( 'primer-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), PRIMER_VERSION );
-		wp_script_add_data( 'primer-jquery', 'conditional', 'lt IE 9' );
-
-		wp_enqueue_script( 'primer-html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), PRIMER_VERSION );
-		wp_script_add_data( 'primer-html5shiv', 'conditional', 'lt IE 9' );
-
-		wp_enqueue_script( 'primer-selectivizr', get_template_directory_uri() . '/assets/js/selectivizr.min.js', array(), PRIMER_VERSION );
-		wp_script_add_data( 'primer-selectivizr', 'conditional', 'lt IE 9' );
-
-		wp_enqueue_script( 'primer-rem', get_template_directory_uri() . '/assets/js/rem.min.js', array(), PRIMER_VERSION );
-		wp_script_add_data( 'primer-rem', 'conditional', 'lt IE 9' );
-
-		wp_enqueue_script( 'primer-jquery-backgroundSize', get_template_directory_uri() . '/assets/js/jquery.backgroundSize.min.js', array( 'primer-jquery' ), PRIMER_VERSION );
-		wp_script_add_data( 'primer-jquery-backgroundSize', 'conditional', 'lt IE 9' );
-
-		wp_enqueue_script( 'primer-lt-ie9-script', get_template_directory_uri() . "/assets/js/lt-ie9$suffix.js", array( 'primer-jquery' ), PRIMER_VERSION );
-		wp_script_add_data( 'primer-lt-ie9-script', 'conditional', 'lt IE 9' );
+		wp_enqueue_script( 'comment-reply' );
 
 	}
+
+	/**
+	 * Filter the hero image element selector.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var string
+	 */
+	$selector = (string) apply_filters( 'primer_hero_image_selector', '.site-header' );
+
+	wp_add_inline_style(
+		'primer',
+		sprintf(
+			'%s { background-image: url(%s); }',
+			wp_strip_all_tags( $selector ),
+			esc_url( primer_get_hero_image() )
+		)
+	);
+
+	/**
+	 * Enqueue lt IE 9 Conditional
+	 */
+	wp_enqueue_style( 'primer-lt-ie9-style', get_template_directory_uri() . '/assets/css/ie.css', array(), PRIMER_VERSION );
+	wp_style_add_data( 'primer-lt-ie9-style', 'conditional', 'lt IE 9' );
+
+	wp_enqueue_script( 'primer-respond', get_template_directory_uri() . '/assets/js/respond.min.js', array(), PRIMER_VERSION );
+	wp_script_add_data( 'primer-respond', 'conditional', 'lt IE 9' );
+
+	wp_enqueue_script( 'primer-nwmatcher', get_template_directory_uri() . '/assets/js/nwmatcher.min.js', array(), PRIMER_VERSION );
+	wp_script_add_data( 'primer-nwmatcher', 'conditional', 'lt IE 9' );
+
+	wp_enqueue_script( 'primer-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), PRIMER_VERSION );
+	wp_script_add_data( 'primer-jquery', 'conditional', 'lt IE 9' );
+
+	wp_enqueue_script( 'primer-html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), PRIMER_VERSION );
+	wp_script_add_data( 'primer-html5shiv', 'conditional', 'lt IE 9' );
+
+	wp_enqueue_script( 'primer-selectivizr', get_template_directory_uri() . '/assets/js/selectivizr.min.js', array(), PRIMER_VERSION );
+	wp_script_add_data( 'primer-selectivizr', 'conditional', 'lt IE 9' );
+
+	wp_enqueue_script( 'primer-rem', get_template_directory_uri() . '/assets/js/rem.min.js', array(), PRIMER_VERSION );
+	wp_script_add_data( 'primer-rem', 'conditional', 'lt IE 9' );
+
+	wp_enqueue_script( 'primer-jquery-backgroundSize', get_template_directory_uri() . '/assets/js/jquery.backgroundSize.min.js', array( 'primer-jquery' ), PRIMER_VERSION );
+	wp_script_add_data( 'primer-jquery-backgroundSize', 'conditional', 'lt IE 9' );
+
+	wp_enqueue_script( 'primer-lt-ie9-script', get_template_directory_uri() . "/assets/js/lt-ie9$suffix.js", array( 'primer-jquery' ), PRIMER_VERSION );
+	wp_script_add_data( 'primer-lt-ie9-script', 'conditional', 'lt IE 9' );
 
 }
 add_action( 'wp_enqueue_scripts', 'primer_scripts' );

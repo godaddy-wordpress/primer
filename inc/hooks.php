@@ -26,7 +26,7 @@ add_action( 'primer_header', 'primer_add_site_title' );
  */
 function primer_add_hero() {
 
-	if ( primer_has_hero_image() && ! is_404() && ! is_page_template( 'templates/page-builder-no-header.php' ) ) {
+	if ( ! is_404() && ! is_page_template( 'templates/page-builder-no-header.php' ) ) {
 
 		get_template_part( 'templates/parts/hero' );
 
@@ -135,6 +135,23 @@ function primer_add_site_info() {
 add_action( 'primer_after_footer', 'primer_add_site_info' );
 
 /**
+ * Display footer navigation menu in the footer.
+ *
+ * @action primer_site_info
+ * @since  1.0.0
+ */
+function primer_add_footer_navigation() {
+
+	if ( has_nav_menu( 'footer' ) ) {
+
+		get_template_part( 'templates/parts/footer-navigation' );
+
+	}
+
+}
+add_action( 'primer_site_info', 'primer_add_footer_navigation', 5 );
+
+/**
  * Display social navigation menu in the footer.
  *
  * @action primer_site_info
@@ -149,7 +166,7 @@ function primer_add_social_navigation() {
 	}
 
 }
-add_action( 'primer_site_info', 'primer_add_social_navigation', 5 );
+add_action( 'primer_site_info', 'primer_add_social_navigation', 7 );
 
 /**
  * Display credit in the footer.

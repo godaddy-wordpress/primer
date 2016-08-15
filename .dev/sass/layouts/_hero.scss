@@ -1,26 +1,32 @@
 .hero {
-	color: white;
-	padding-top: 50px;
-	padding-bottom: 50px;
-	clear: both;
+	@include span(12);
 
-	@media #{$medium-up} {
-		padding-top: 25px;
-		padding-bottom: 25px;
+	clear: both;
+	padding: 0 1rem;
+	color: #fff;
+
+	.hero-inner {
+		max-width: none;
+
+		@media #{$large-up} {
+			max-width: 75%;
+		}
 	}
 
 	.widget {
+		padding: 0;
 		margin-bottom: 1em;
 		font-size: 1.2em;
 		font-weight: 300;
 		background: none;
 
-		&::last-child {
+		&:last-child {
 			margin-bottom: 0;
+			padding-bottom: 6%;
 		}
 
 		h1, h2, h3, h4, h5, h6, p, ul, ol, li {
-			color: white;
+			color: #fff;
 		}
 
 		ul, ol {

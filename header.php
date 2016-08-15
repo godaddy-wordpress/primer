@@ -8,15 +8,6 @@
  * @since 1.0.0
  */
 
-/**
- * Filter the header element style attribute.
- *
- * @since 1.0.0
- *
- * @var string
- */
-$header_style = (string) apply_filters( 'primer_header_style_attr', '' );
-
 ?><!DOCTYPE html>
 
 <html <?php language_attributes(); ?>>
@@ -59,7 +50,7 @@ $header_style = (string) apply_filters( 'primer_header_style_attr', '' );
 		do_action( 'primer_before_header' );
 		?>
 
-		<header id="masthead" class="site-header" role="banner"<?php if ( $header_style ) : ?> style="<?php echo $header_style; // xss ok ?>"<?php endif; ?>>
+		<header id="masthead" class="site-header" role="banner">
 
 			<div class="site-header-wrapper">
 
