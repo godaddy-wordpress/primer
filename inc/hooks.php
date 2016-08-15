@@ -149,7 +149,7 @@ function primer_add_social_navigation() {
 	}
 
 }
-add_action( 'primer_site_info', 'primer_add_social_navigation' );
+add_action( 'primer_site_info', 'primer_add_social_navigation', 5 );
 
 /**
  * Display credit in the footer.
