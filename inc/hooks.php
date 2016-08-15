@@ -49,7 +49,7 @@ add_action( 'primer_header', 'primer_add_hero' );
  * @action primer_hero
  * @since  1.0.0
  */
-function primer_add_hero_sidebar() {
+function primer_add_hero_content() {
 
 	if (
 		! primer_has_hero_image()
