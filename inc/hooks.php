@@ -26,19 +26,11 @@ add_action( 'primer_header', 'primer_add_site_title' );
  */
 function primer_add_hero() {
 
-	if (
-		is_404()
-		||
-		is_page_template( 'templates/page-builder-no-header.php' )
-		||
-		! primer_has_hero_image()
-	) {
+	if ( primer_has_hero_image() && ! is_404() && ! is_page_template( 'templates/page-builder-no-header.php' ) ) {
 
-		return;
+		get_template_part( 'templates/parts/hero' );
 
 	}
-
-	get_template_part( 'templates/parts/hero' );
 
 }
 add_action( 'primer_header', 'primer_add_hero' );
@@ -51,19 +43,11 @@ add_action( 'primer_header', 'primer_add_hero' );
  */
 function primer_add_hero_content() {
 
-	if (
-		! primer_has_hero_image()
-		||
-		! is_front_page()
-		||
-		! is_active_sidebar( 'hero' )
-	) {
+	if ( primer_has_hero_image() && is_front_page() && is_active_sidebar( 'hero' ) ) {
 
-		return;
+		dynamic_sidebar( 'hero' );
 
 	}
-
-	dynamic_sidebar( 'hero' );
 
 }
 add_action( 'primer_hero', 'primer_add_hero_content' );
