@@ -8,13 +8,12 @@
 
 <div class="main-navigation-container">
 
-	<div class="menu-toggle" id="menu-toggle">
-
-		<div></div>
-		<div></div>
-		<div></div>
-
-	</div><!-- #menu-toggle -->
+	<?php
+	/**
+	 * Fires inside the `<div class="main-navigation-container">` element.
+	 */
+	do_action( 'primer_before_site_navigation' );
+	?>
 
 	<nav id="site-navigation" class="main-navigation" role="navigation">
 

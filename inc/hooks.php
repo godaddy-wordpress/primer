@@ -53,6 +53,19 @@ function primer_add_hero_content() {
 add_action( 'primer_hero', 'primer_add_hero_content' );
 
 /**
+ * Display mobile menu html.
+ *
+ * @action primer_before_site_navigation
+ * @since  1.0.0
+ */
+function primer_add_mobile_menu() {
+
+	get_template_part( 'templates/parts/mobile-menu' );
+
+}
+add_action( 'primer_before_site_navigation', 'primer_add_mobile_menu' );
+
+/**
  * Display primary navigation menu after the header.
  *
  * @action primer_after_header
