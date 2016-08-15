@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-12 01:00-0500\n"
+"POT-Creation-Date: 2016-08-15 18:06-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,19 +108,24 @@ msgid ""
 "It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "귀하가 찾으려는 것을 찾을 수 없습니다. 검색이 도움될 수도 있습니다."
 
-#: functions.php:212
+#: functions.php:202
 msgid "Primary Menu"
 msgstr "주 메뉴"
 
-#: functions.php:213
+#: functions.php:203
 msgid "Social Menu"
 msgstr "소셜 메뉴"
 
-#: functions.php:316
+#: functions.php:204
+#, fuzzy
+msgid "Footer Menu"
+msgstr "바닥글 가운데"
+
+#: functions.php:305
 msgid "Sidebar"
 msgstr "사이드바"
 
-#: functions.php:317
+#: functions.php:306
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
@@ -128,47 +133,55 @@ msgstr ""
 "주 사이드바는 모든 페이지의 내용 게시물, 아카이브 및 검색 템플릿에서 표시됩니"
 "다."
 
-#: functions.php:324
+#: functions.php:313
 msgid "Secondary Sidebar"
 msgstr "보조 사이드바"
 
-#: functions.php:325
+#: functions.php:314
 msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr "보조 사이드바는 3열 레이아웃을 선택할 때 표시됩니다."
 
-#: functions.php:332
+#: functions.php:321
 #, fuzzy
 msgid "Footer 1"
 msgstr "바닥글 왼쪽"
 
-#: functions.php:333
+#: functions.php:322
 #, fuzzy
 msgid "This sidebar is the first column of the footer widget area."
 msgstr "바닥글 왼쪽 사이드바는 바닥글 위젯 영역의 첫 번째 열에 표시됩니다."
 
-#: functions.php:340
+#: functions.php:329
 #, fuzzy
 msgid "Footer 2"
 msgstr "바닥글 왼쪽"
 
-#: functions.php:341
+#: functions.php:330
 #, fuzzy
 msgid "This sidebar is the second column of the footer widget area."
 msgstr "바닥글 가운데 사이드바는 바닥글 위젯 영역의 두 번째 열에 표시됩니다."
 
-#: functions.php:348
+#: functions.php:337
 #, fuzzy
 msgid "Footer 3"
 msgstr "바닥글 왼쪽"
 
-#: functions.php:349
+#: functions.php:338
 #, fuzzy
 msgid "This sidebar is the third column of the footer widget area."
 msgstr "바닥글 오른쪽 사이드바는 바닥글 위젯 영역의 세 번째 열에 표시됩니다."
 
-#: header.php:51
+#: functions.php:345
+msgid "Hero"
+msgstr ""
+
+#: functions.php:346
+msgid "Hero widgets appear over the header image on the front page."
+msgstr ""
+
+#: header.php:42
 msgid "Skip to content"
 msgstr "컨텐츠로 건너뛰기"
 
@@ -188,178 +201,187 @@ msgid ""
 "Allow the featured image on the current post to override the header image."
 msgstr ""
 
-#: inc/customizer/colors.php:62
+#: inc/customizer/colors.php:38
+#, fuzzy
+msgid "Site Title Color"
+msgstr "보조 사이드바"
+
+#: inc/customizer/colors.php:52
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer/colors.php:64
 msgid "Header Background Color"
 msgstr ""
 
-#: inc/customizer/colors.php:71
+#: inc/customizer/colors.php:73
 msgid "Menu Background Color"
 msgstr ""
 
-#: inc/customizer/colors.php:89
+#: inc/customizer/colors.php:91
 msgid "Footer Background Color"
 msgstr ""
 
-#: inc/customizer/colors.php:98
+#: inc/customizer/colors.php:100
 msgid "Tagline Text Color"
 msgstr ""
 
-#: inc/customizer/colors.php:107
+#: inc/customizer/colors.php:109
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer/colors.php:133
+#: inc/customizer/colors.php:135
 msgid "Main Text Color"
 msgstr ""
 
-#: inc/customizer/colors.php:160
+#: inc/customizer/colors.php:162
 #, fuzzy
 msgid "Secondary Text Color"
 msgstr "보조 사이드바"
 
-#: inc/customizer/colors.php:188 inc/customizer/layouts.php:281
+#: inc/customizer/colors.php:190 inc/customizer/layouts.php:302
 #, fuzzy
 msgid "Default"
 msgstr "기본"
 
-#: inc/customizer/colors.php:195 inc/customizer/layouts.php:290
+#: inc/customizer/colors.php:197 inc/customizer/layouts.php:311
 msgid "Custom"
 msgstr ""
 
-#: inc/customizer/colors.php:209
+#: inc/customizer/colors.php:211
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer/colors.php:223
+#: inc/customizer/colors.php:225
 msgid "Muted"
 msgstr ""
 
-#: inc/customizer/colors.php:237
+#: inc/customizer/colors.php:239
 msgid "Red"
 msgstr ""
 
-#: inc/customizer/colors.php:453
+#: inc/customizer/colors.php:456
 msgid "Base Color Scheme"
 msgstr ""
 
-#: inc/customizer/colors.php:654
+#: inc/customizer/colors.php:657
 msgid "City"
 msgstr ""
 
-#: inc/customizer/fonts.php:79
+#: inc/customizer/fonts.php:81
 #, fuzzy
 msgid "Header Font"
 msgstr "보조 사이드바"
 
-#: inc/customizer/fonts.php:80
+#: inc/customizer/fonts.php:82
 msgid ""
 "Site title, post titles, widget titles, form labels, table headers and "
 "buttons."
 msgstr ""
 
-#: inc/customizer/fonts.php:97
+#: inc/customizer/fonts.php:99
 #, fuzzy
 msgid "Primary Font"
 msgstr "주 메뉴"
 
-#: inc/customizer/fonts.php:98
+#: inc/customizer/fonts.php:100
 msgid "Paragraphs, lists, menu links, quotes and tables."
 msgstr ""
 
-#: inc/customizer/fonts.php:113
+#: inc/customizer/fonts.php:115
 #, fuzzy
 msgid "Secondary Font"
 msgstr "보조 사이드바"
 
-#: inc/customizer/fonts.php:114
+#: inc/customizer/fonts.php:116
 msgid ""
 "Post bylines, comment counts, comment reply links, post footers and quote "
 "footers."
 msgstr ""
 
-#: inc/customizer/fonts.php:162
+#: inc/customizer/fonts.php:164
 msgid "Fonts"
 msgstr ""
 
-#: inc/customizer/fonts.php:187
+#: inc/customizer/fonts.php:189
 #, fuzzy, php-format
 msgctxt "font name"
 msgid "%s (Default)"
 msgstr "기본"
 
-#: inc/customizer/layouts.php:40
+#: inc/customizer/layouts.php:47
 #, fuzzy
 msgid "One Column: Wide"
 msgstr "1 열 넓게"
 
-#: inc/customizer/layouts.php:41
+#: inc/customizer/layouts.php:48
 #, fuzzy
 msgid "One Column: Narrow"
 msgstr "1 열 좁게"
 
-#: inc/customizer/layouts.php:42 inc/customizer/layouts.php:117
+#: inc/customizer/layouts.php:49 inc/customizer/layouts.php:138
 #, fuzzy
 msgid "Two Columns: Content | Sidebar"
 msgstr "2 열: 컨텐츠 / 사이드바"
 
-#: inc/customizer/layouts.php:43 inc/customizer/layouts.php:116
+#: inc/customizer/layouts.php:50 inc/customizer/layouts.php:137
 #, fuzzy
 msgid "Two Columns: Sidebar | Content"
 msgstr "2 열: 사이드바 / 컨텐츠"
 
-#: inc/customizer/layouts.php:44 inc/customizer/layouts.php:119
+#: inc/customizer/layouts.php:51 inc/customizer/layouts.php:140
 #, fuzzy
 msgid "Three Columns: Content | Sidebar | Sidebar"
 msgstr "3 열: 컨텐츠 / 사이드바 / 사이드바"
 
-#: inc/customizer/layouts.php:45
+#: inc/customizer/layouts.php:52
 #, fuzzy
 msgid "Three Columns: Sidebar | Content | Sidebar"
 msgstr "3 열: 사이드바 / 컨텐츠 / 사이드바"
 
-#: inc/customizer/layouts.php:46 inc/customizer/layouts.php:118
+#: inc/customizer/layouts.php:53 inc/customizer/layouts.php:139
 #, fuzzy
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "3 열: 사이드바 / 사이드바 / 컨텐츠"
 
-#: inc/customizer/layouts.php:231 inc/customizer/layouts.php:422
+#: inc/customizer/layouts.php:91
+msgid "Fixed"
+msgstr ""
+
+#: inc/customizer/layouts.php:92
+msgid "Fluid"
+msgstr ""
+
+#: inc/customizer/layouts.php:252 inc/customizer/layouts.php:443
 msgid "Layout"
 msgstr "레이아웃"
 
-#: inc/customizer/layouts.php:263
+#: inc/customizer/layouts.php:284
 #, php-format
 msgctxt "link to the Customizer"
 msgid "The site-wide Default layout setting is located in the %s."
 msgstr ""
 
-#: inc/customizer/layouts.php:267
+#: inc/customizer/layouts.php:288
 msgid "Customizer"
 msgstr ""
 
-#: inc/customizer/layouts.php:444
+#: inc/customizer/layouts.php:465
 #, fuzzy
 msgid "Default Layout"
 msgstr "기본"
 
-#: inc/customizer/layouts.php:445
+#: inc/customizer/layouts.php:466
 msgid "All posts and pages on your site will use this layout by default."
 msgstr ""
 
-#: inc/customizer/layouts.php:466
+#: inc/customizer/layouts.php:495
 #, fuzzy
 msgid "Page Width"
 msgstr "페이지 %d"
 
-#: inc/customizer/layouts.php:467
-msgid "Set the page width to be fixed or fluid when viewed on large screens."
-msgstr ""
-
-#: inc/customizer/layouts.php:472
-msgid "Fixed"
-msgstr ""
-
-#: inc/customizer/layouts.php:473
-msgid "Fluid"
+#: inc/customizer/layouts.php:496
+msgid "Display your site differently on larger screens."
 msgstr ""
 
 #: inc/helpers.php:38
@@ -372,31 +394,43 @@ msgstr "검색 결과: %s"
 msgid "404 Page Not Found"
 msgstr ""
 
-#: inc/hooks.php:256
+#: inc/hooks.php:348
 #, php-format
 msgctxt "page number"
 msgid "Page %d"
 msgstr "페이지 %d"
 
-#: inc/template-tags.php:42
+#: inc/template-tags.php:40
 msgid "Posts navigation"
 msgstr "게시물 탐색"
 
-#: inc/template-tags.php:48
+#: inc/template-tags.php:46
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> 이전 게시물"
 
-#: inc/template-tags.php:54
+#: inc/template-tags.php:52
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "새 게시물 <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:91
+#: inc/template-tags.php:85
 msgid "Post navigation"
 msgstr "게시물 탐색"
 
-#: inc/template-tags.php:206
+#: inc/template-tags.php:188
 msgid "Blog"
 msgstr "블로그"
+
+#: templates/parts/credit.php:13
+#, php-format
+msgctxt "1. copyright symbol, 2. year, 3. site title"
+msgid "Copyright %1$s %2$d %3$s"
+msgstr ""
+
+#: templates/parts/credit.php:24
+#, fuzzy, php-format
+msgctxt "1. theme name link, 2. theme author link"
+msgid "%1$s theme by %2$s"
+msgstr "날짜: %1$s 작성자: %2$s"
 
 #: templates/parts/loop/page-content.php:17
 #: templates/parts/loop/post-content.php:17
@@ -457,18 +491,6 @@ msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% 의견"
 
-#: templates/parts/site-info.php:20
-#, php-format
-msgctxt "1. copyright symbol, 2. year, 3. site title"
-msgid "Copyright %1$s %2$d %3$s"
-msgstr ""
-
-#: templates/parts/site-info.php:31
-#, fuzzy, php-format
-msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s theme by %2$s"
-msgstr "날짜: %1$s 작성자: %2$s"
-
 #~ msgid "Featured"
 #~ msgstr "추천"
 
@@ -491,9 +513,6 @@ msgstr "날짜: %1$s 작성자: %2$s"
 
 #~ msgid "Try looking in the monthly archives. %1$s"
 #~ msgstr "월별 보관 파일에서 찾아 보세요. %1$s"
-
-#~ msgid "Footer Center"
-#~ msgstr "바닥글 가운데"
 
 #~ msgid "Footer Right"
 #~ msgstr "바닥글 오른쪽"

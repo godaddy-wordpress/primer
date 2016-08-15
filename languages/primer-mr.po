@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-12 01:00-0500\n"
+"POT-Creation-Date: 2016-08-15 18:06-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -106,19 +106,24 @@ msgid ""
 "It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "आपण शोधत असलेले आम्ही शोधू शकत नाही असे दिसते. कदाचित शोधणे मदत करू शकते."
 
-#: functions.php:212
+#: functions.php:202
 msgid "Primary Menu"
 msgstr "प्राथमिक मेनू"
 
-#: functions.php:213
+#: functions.php:203
 msgid "Social Menu"
 msgstr "सामाजिक मेनू"
 
-#: functions.php:316
+#: functions.php:204
+#, fuzzy
+msgid "Footer Menu"
+msgstr "तळटीप केंद्र"
+
+#: functions.php:305
 msgid "Sidebar"
 msgstr "साइडबार"
 
-#: functions.php:317
+#: functions.php:306
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
@@ -126,47 +131,55 @@ msgstr ""
 "प्रत्येक पृष्‍ठ, पोस्ट, संग्रहण आणि शोध टेम्पलेटच्या सामग्रीच्या बाजूस प्राथमिक साइडबार "
 "दिसतो. "
 
-#: functions.php:324
+#: functions.php:313
 msgid "Secondary Sidebar"
 msgstr "दुय्यम साइडबार"
 
-#: functions.php:325
+#: functions.php:314
 msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr "आपण एक तृतीय-स्तंभ लेआउट निवडता केवळ तेव्हाच दुय्यम साइडबार दिसेल. "
 
-#: functions.php:332
+#: functions.php:321
 #, fuzzy
 msgid "Footer 1"
 msgstr "तळटीपेच्या डावीकडील"
 
-#: functions.php:333
+#: functions.php:322
 #, fuzzy
 msgid "This sidebar is the first column of the footer widget area."
 msgstr "तळटीप विजेट क्षेत्राच्या प्रथम स्तंभामध्ये तळटीपेच्या डावीकडील साइडबार दिसतो."
 
-#: functions.php:340
+#: functions.php:329
 #, fuzzy
 msgid "Footer 2"
 msgstr "तळटीपेच्या डावीकडील"
 
-#: functions.php:341
+#: functions.php:330
 #, fuzzy
 msgid "This sidebar is the second column of the footer widget area."
 msgstr "तळटीप विजेट क्षेत्राच्या दुय्यम स्तंभामध्ये तळटीपेच्या केंद्रातील साइडबार दिसतो."
 
-#: functions.php:348
+#: functions.php:337
 #, fuzzy
 msgid "Footer 3"
 msgstr "तळटीपेच्या डावीकडील"
 
-#: functions.php:349
+#: functions.php:338
 #, fuzzy
 msgid "This sidebar is the third column of the footer widget area."
 msgstr "तळटीप विजेट क्षेत्राच्या तृतीय स्तंभामध्ये तळटीपेच्या उजवीकडील साइडबार दिसतो."
 
-#: header.php:51
+#: functions.php:345
+msgid "Hero"
+msgstr ""
+
+#: functions.php:346
+msgid "Hero widgets appear over the header image on the front page."
+msgstr ""
+
+#: header.php:42
 msgid "Skip to content"
 msgstr "सामग्रीवर जा"
 
@@ -186,178 +199,187 @@ msgid ""
 "Allow the featured image on the current post to override the header image."
 msgstr ""
 
-#: inc/customizer/colors.php:62
+#: inc/customizer/colors.php:38
+#, fuzzy
+msgid "Site Title Color"
+msgstr "दुय्यम साइडबार"
+
+#: inc/customizer/colors.php:52
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer/colors.php:64
 msgid "Header Background Color"
 msgstr ""
 
-#: inc/customizer/colors.php:71
+#: inc/customizer/colors.php:73
 msgid "Menu Background Color"
 msgstr ""
 
-#: inc/customizer/colors.php:89
+#: inc/customizer/colors.php:91
 msgid "Footer Background Color"
 msgstr ""
 
-#: inc/customizer/colors.php:98
+#: inc/customizer/colors.php:100
 msgid "Tagline Text Color"
 msgstr ""
 
-#: inc/customizer/colors.php:107
+#: inc/customizer/colors.php:109
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer/colors.php:133
+#: inc/customizer/colors.php:135
 msgid "Main Text Color"
 msgstr ""
 
-#: inc/customizer/colors.php:160
+#: inc/customizer/colors.php:162
 #, fuzzy
 msgid "Secondary Text Color"
 msgstr "दुय्यम साइडबार"
 
-#: inc/customizer/colors.php:188 inc/customizer/layouts.php:281
+#: inc/customizer/colors.php:190 inc/customizer/layouts.php:302
 #, fuzzy
 msgid "Default"
 msgstr "डिफॉल्ट"
 
-#: inc/customizer/colors.php:195 inc/customizer/layouts.php:290
+#: inc/customizer/colors.php:197 inc/customizer/layouts.php:311
 msgid "Custom"
 msgstr ""
 
-#: inc/customizer/colors.php:209
+#: inc/customizer/colors.php:211
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer/colors.php:223
+#: inc/customizer/colors.php:225
 msgid "Muted"
 msgstr ""
 
-#: inc/customizer/colors.php:237
+#: inc/customizer/colors.php:239
 msgid "Red"
 msgstr ""
 
-#: inc/customizer/colors.php:453
+#: inc/customizer/colors.php:456
 msgid "Base Color Scheme"
 msgstr ""
 
-#: inc/customizer/colors.php:654
+#: inc/customizer/colors.php:657
 msgid "City"
 msgstr ""
 
-#: inc/customizer/fonts.php:79
+#: inc/customizer/fonts.php:81
 #, fuzzy
 msgid "Header Font"
 msgstr "दुय्यम साइडबार"
 
-#: inc/customizer/fonts.php:80
+#: inc/customizer/fonts.php:82
 msgid ""
 "Site title, post titles, widget titles, form labels, table headers and "
 "buttons."
 msgstr ""
 
-#: inc/customizer/fonts.php:97
+#: inc/customizer/fonts.php:99
 #, fuzzy
 msgid "Primary Font"
 msgstr "प्राथमिक मेनू"
 
-#: inc/customizer/fonts.php:98
+#: inc/customizer/fonts.php:100
 msgid "Paragraphs, lists, menu links, quotes and tables."
 msgstr ""
 
-#: inc/customizer/fonts.php:113
+#: inc/customizer/fonts.php:115
 #, fuzzy
 msgid "Secondary Font"
 msgstr "दुय्यम साइडबार"
 
-#: inc/customizer/fonts.php:114
+#: inc/customizer/fonts.php:116
 msgid ""
 "Post bylines, comment counts, comment reply links, post footers and quote "
 "footers."
 msgstr ""
 
-#: inc/customizer/fonts.php:162
+#: inc/customizer/fonts.php:164
 msgid "Fonts"
 msgstr ""
 
-#: inc/customizer/fonts.php:187
+#: inc/customizer/fonts.php:189
 #, fuzzy, php-format
 msgctxt "font name"
 msgid "%s (Default)"
 msgstr "डिफॉल्ट"
 
-#: inc/customizer/layouts.php:40
+#: inc/customizer/layouts.php:47
 #, fuzzy
 msgid "One Column: Wide"
 msgstr "1 स्तंभ रूंद"
 
-#: inc/customizer/layouts.php:41
+#: inc/customizer/layouts.php:48
 #, fuzzy
 msgid "One Column: Narrow"
 msgstr "1 स्तंभ अरूंद"
 
-#: inc/customizer/layouts.php:42 inc/customizer/layouts.php:117
+#: inc/customizer/layouts.php:49 inc/customizer/layouts.php:138
 #, fuzzy
 msgid "Two Columns: Content | Sidebar"
 msgstr "2 स्तंभ: सामग्री / साइडबार"
 
-#: inc/customizer/layouts.php:43 inc/customizer/layouts.php:116
+#: inc/customizer/layouts.php:50 inc/customizer/layouts.php:137
 #, fuzzy
 msgid "Two Columns: Sidebar | Content"
 msgstr "2 स्तंभ: साइडबार / साइडबार"
 
-#: inc/customizer/layouts.php:44 inc/customizer/layouts.php:119
+#: inc/customizer/layouts.php:51 inc/customizer/layouts.php:140
 #, fuzzy
 msgid "Three Columns: Content | Sidebar | Sidebar"
 msgstr "3 स्तंभ: सामग्री / साइडबार / साइडबार"
 
-#: inc/customizer/layouts.php:45
+#: inc/customizer/layouts.php:52
 #, fuzzy
 msgid "Three Columns: Sidebar | Content | Sidebar"
 msgstr "3 स्तंभ: साइडबार / सामग्री/ साइडबार"
 
-#: inc/customizer/layouts.php:46 inc/customizer/layouts.php:118
+#: inc/customizer/layouts.php:53 inc/customizer/layouts.php:139
 #, fuzzy
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "3 स्तंभ: साइडबार / साइडबार / सामग्री"
 
-#: inc/customizer/layouts.php:231 inc/customizer/layouts.php:422
+#: inc/customizer/layouts.php:91
+msgid "Fixed"
+msgstr ""
+
+#: inc/customizer/layouts.php:92
+msgid "Fluid"
+msgstr ""
+
+#: inc/customizer/layouts.php:252 inc/customizer/layouts.php:443
 msgid "Layout"
 msgstr "लेआउट"
 
-#: inc/customizer/layouts.php:263
+#: inc/customizer/layouts.php:284
 #, php-format
 msgctxt "link to the Customizer"
 msgid "The site-wide Default layout setting is located in the %s."
 msgstr ""
 
-#: inc/customizer/layouts.php:267
+#: inc/customizer/layouts.php:288
 msgid "Customizer"
 msgstr ""
 
-#: inc/customizer/layouts.php:444
+#: inc/customizer/layouts.php:465
 #, fuzzy
 msgid "Default Layout"
 msgstr "डिफॉल्ट"
 
-#: inc/customizer/layouts.php:445
+#: inc/customizer/layouts.php:466
 msgid "All posts and pages on your site will use this layout by default."
 msgstr ""
 
-#: inc/customizer/layouts.php:466
+#: inc/customizer/layouts.php:495
 #, fuzzy
 msgid "Page Width"
 msgstr "पृष्ठ %d"
 
-#: inc/customizer/layouts.php:467
-msgid "Set the page width to be fixed or fluid when viewed on large screens."
-msgstr ""
-
-#: inc/customizer/layouts.php:472
-msgid "Fixed"
-msgstr ""
-
-#: inc/customizer/layouts.php:473
-msgid "Fluid"
+#: inc/customizer/layouts.php:496
+msgid "Display your site differently on larger screens."
 msgstr ""
 
 #: inc/helpers.php:38
@@ -370,31 +392,43 @@ msgstr "साठी शोध परिणाम: %s"
 msgid "404 Page Not Found"
 msgstr ""
 
-#: inc/hooks.php:256
+#: inc/hooks.php:348
 #, php-format
 msgctxt "page number"
 msgid "Page %d"
 msgstr "पृष्ठ %d"
 
-#: inc/template-tags.php:42
+#: inc/template-tags.php:40
 msgid "Posts navigation"
 msgstr "पोस्ट नेव्हिगेशन"
 
-#: inc/template-tags.php:48
+#: inc/template-tags.php:46
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> जुने पोस्ट"
 
-#: inc/template-tags.php:54
+#: inc/template-tags.php:52
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "नवीन पोस्ट <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:91
+#: inc/template-tags.php:85
 msgid "Post navigation"
 msgstr "पोस्ट नेव्हिगेशन"
 
-#: inc/template-tags.php:206
+#: inc/template-tags.php:188
 msgid "Blog"
 msgstr "ब्लॉग"
+
+#: templates/parts/credit.php:13
+#, php-format
+msgctxt "1. copyright symbol, 2. year, 3. site title"
+msgid "Copyright %1$s %2$d %3$s"
+msgstr ""
+
+#: templates/parts/credit.php:24
+#, fuzzy, php-format
+msgctxt "1. theme name link, 2. theme author link"
+msgid "%1$s theme by %2$s"
+msgstr "%2$s नुसार %1$s "
 
 #: templates/parts/loop/page-content.php:17
 #: templates/parts/loop/post-content.php:17
@@ -455,18 +489,6 @@ msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% टिप्पण्या"
 
-#: templates/parts/site-info.php:20
-#, php-format
-msgctxt "1. copyright symbol, 2. year, 3. site title"
-msgid "Copyright %1$s %2$d %3$s"
-msgstr ""
-
-#: templates/parts/site-info.php:31
-#, fuzzy, php-format
-msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s theme by %2$s"
-msgstr "%2$s नुसार %1$s "
-
 #~ msgid "Featured"
 #~ msgstr "वैशिष्ट्यीकृत"
 
@@ -489,9 +511,6 @@ msgstr "%2$s नुसार %1$s "
 
 #~ msgid "Try looking in the monthly archives. %1$s"
 #~ msgstr "मासिक संग्रहणांमध्ये शोधून पहा. %1$s"
-
-#~ msgid "Footer Center"
-#~ msgstr "तळटीप केंद्र"
 
 #~ msgid "Footer Right"
 #~ msgstr "तळटीपेच्या उजवीकडील"
