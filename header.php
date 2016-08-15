@@ -74,6 +74,15 @@ $header_style = (string) apply_filters( 'primer_header_style_attr', '' );
 
 			</div><!-- .site-header-wrapper -->
 
+			<?php
+			/**
+			 * Fires inside the `<div class="site-header-wrapper">` element.
+			 *
+			 * @since 1.0.0
+			 */
+			do_action( 'primer_after_site_header_wrapper' );
+			?>
+
 		</header><!-- #masthead -->
 
 		<?php
