@@ -12,7 +12,7 @@ printf(
 	get_bloginfo( 'blogname' )
 );
 
-if ( apply_filters( 'primer_credit_godaddy', '__return_true' ) ) {
+if ( (bool) apply_filters( 'primer_credit_godaddy', true ) ) {
 
 	echo ' &mdash; ';
 
