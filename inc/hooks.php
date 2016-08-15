@@ -43,7 +43,7 @@ add_action( 'primer_header', 'primer_add_hero' );
  */
 function primer_add_hero_content() {
 
-	if ( primer_has_hero_image() && is_front_page() && is_active_sidebar( 'hero' ) ) {
+	if ( is_front_page() && is_active_sidebar( 'hero' ) ) {
 
 		dynamic_sidebar( 'hero' );
 
