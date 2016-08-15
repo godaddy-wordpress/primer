@@ -10,6 +10,15 @@
 
 	<div class="site-info">
 
+		<?php
+		/**
+		 * Fires inside the `<div class="site-info">` element.
+		 *
+		 * @since 1.0.0
+		 */
+		do_action( 'primer_before_site_info' );
+		?>
+
 		<div class="site-info-inner">
 
 			<?php get_template_part( 'templates/parts/social-navigation' ); ?>
