@@ -1513,6 +1513,8 @@ body.no-max-width .page-title-container .page-header {
   clear: both;
   padding: 0 1rem;
   color: #fff; }
+  body.custom-header-image .hero {
+    text-shadow: -1px -1px 20px rgba(0, 0, 0, 0.5); }
   .hero .hero-inner {
     max-width: none; }
     @media only screen and (min-width: 61.063em) {
