@@ -19,7 +19,14 @@
 
 	<?php get_template_part( 'templates/parts/loop/post', 'title' ); ?>
 
-	<?php get_template_part( 'templates/parts/loop/post', 'meta' ); ?>
+	<?php
+	/**
+	 * Fires after templates/parts/loop/post template
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'primer_after_post_title_template' );
+	?>
 
 	<?php if ( is_single() ) : ?>
 

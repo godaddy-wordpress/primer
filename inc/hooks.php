@@ -96,6 +96,19 @@ function primer_add_page_title() {
 add_action( 'primer_after_header', 'primer_add_page_title' );
 
 /**
+ * Display post meta template.
+ *
+ * @action primer_after_loop_post_template
+ * @since 1.0.0
+ */
+function primer_add_post_meta() {
+
+	get_template_part( 'templates/parts/loop/post', 'meta' );
+
+}
+add_action( 'primer_after_loop_post_template', 'primer_add_post_meta' );
+
+/**
  * Display widget areas in the footer.
  *
  * @action primer_footer
