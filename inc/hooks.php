@@ -19,14 +19,20 @@ function primer_add_site_title() {
 add_action( 'primer_header', 'primer_add_site_title' );
 
 /**
- * Display site header in the header.
+ * Display hero element in the header.
  *
  * @action primer_header
  * @since  1.0.0
  */
 function primer_add_hero() {
 
-	if ( is_404() || is_page_template( 'templates/page-builder-no-header.php' ) ) {
+	if (
+		is_404()
+		||
+		is_page_template( 'templates/page-builder-no-header.php' )
+		||
+		! primer_has_hero_image()
+	) {
 
 		return;
 
@@ -36,6 +42,31 @@ function primer_add_hero() {
 
 }
 add_action( 'primer_header', 'primer_add_hero' );
+
+/**
+ * Display content in the hero element.
+ *
+ * @action primer_hero
+ * @since  1.0.0
+ */
+function primer_add_hero_sidebar() {
+
+	if (
+		! primer_has_hero_image()
+		||
+		! is_front_page()
+		||
+		! is_active_sidebar( 'hero' )
+	) {
+
+		return;
+
+	}
+
+	dynamic_sidebar( 'hero' );
+
+}
+add_action( 'primer_hero', 'primer_add_hero_content' );
 
 /**
  * Display primary navigation menu after the header.
@@ -58,7 +89,11 @@ add_action( 'primer_after_header', 'primer_add_primary_navigation' );
  */
 function primer_add_page_title() {
 
-	get_template_part( 'templates/parts/page', 'title' );
+	if ( primer_get_the_page_title() ) {
+
+		get_template_part( 'templates/parts/page-title' );
+
+	}
 
 }
 add_action( 'primer_after_header', 'primer_add_page_title' );
