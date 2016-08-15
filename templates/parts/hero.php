@@ -4,14 +4,26 @@
  *
  * @package Primer
  */
+
+/**
+ * Filter the hero element style attribute.
+ *
+ * @since 1.0.0
+ *
+ * @var string
+ */
+$hero_style = (string) apply_filters( 'primer_hero_style_attr', '' );
 ?>
 
-<?php if ( primer_has_hero_image() && is_front_page() && is_active_sidebar( 'hero' ) ) : ?>
+<div class="hero"<?php if ( $hero_style ) : ?> style="<?php echo $hero_style; // xss ok ?>"<?php endif; ?>>
 
-	<div class="hero">
+	<?php
+	/**
+	 * Fires inside the `.hero` element.
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'primer_hero' );
+	?>
 
-		<?php dynamic_sidebar( 'hero' ); ?>
-
-	</div>
-
-<?php endif; ?>
+</div>
