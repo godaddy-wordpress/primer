@@ -64,6 +64,8 @@ class Primer_Customizer_Fonts {
 
 		}
 
+		$this->fonts = array_unique( $this->fonts );
+
 		sort( $this->fonts );
 
 		/**
