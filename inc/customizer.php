@@ -102,6 +102,9 @@ class Primer_Customizer {
 		// Color section overrides
 		$wp_customize->get_section( 'colors' )->title = esc_html__( 'Color Scheme', 'primer' );
 
+		// Hero section overrides
+		$wp_customize->get_section( 'header_image' )->title = esc_html__( 'Hero Image', 'primer' );
+
 		// Background section overrides
 		$wp_customize->get_section( 'background_image' )->title = esc_html__( 'Background', 'primer' );
 
@@ -110,9 +113,8 @@ class Primer_Customizer {
 		$wp_customize->get_control( 'header_textcolor' )->label   = esc_html__( 'Site Title Color', 'primer' );
 
 		// Background color control overrides
-		$wp_customize->get_control( 'background_color' )->section = 'background_image';
-		$wp_customize->get_control( 'background_color' )->label   = esc_html__( 'Page Background Color', 'primer' );
-
+		$wp_customize->get_control( 'background_color' )->section  = 'background_image';
+		$wp_customize->get_control( 'background_color' )->priority = 1;
 
 		if ( ! isset( $wp_customize->selective_refresh ) ) {
 
