@@ -1,6 +1,6 @@
 <?php
 /**
- * Displays the social navigation.
+ * Displays the footer navigation.
  *
  * @package Primer
  */
