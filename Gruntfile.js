@@ -1,6 +1,6 @@
 /* global module, require */
 
-module.exports = function(grunt) {
+module.exports = function( grunt ) {
 
 	var pkg = grunt.file.readJSON( 'package.json' );
 
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						cwd: 'assets/css/admin',
-						src: ['*.css','!*-rtl.css','!*.min.css','!*-rtl.min.css'],
+						src: [ '*.css','!*-rtl.css','!*.min.css','!*-rtl.min.css' ],
 						dest: 'assets/css/admin',
 						ext: '-rtl.css'
 					}
@@ -61,14 +61,14 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd: 'assets/css',
-					src: ['*.css', '!*.min.css'],
+					src: [ '*.css', '!*.min.css' ],
 					dest: 'assets/css',
 					ext: '.min.css'
 				},
 				{
 					expand: true,
 					cwd: 'assets/css/admin',
-					src: ['*.css', '!*.min.css'],
+					src: [ '*.css', '!*.min.css' ],
 					dest: 'assets/css/admin',
 					ext: '.min.css'
 				}]
@@ -92,7 +92,7 @@ module.exports = function(grunt) {
 		},
 
 		jshint: {
-			all: ['Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js', '!assets/js/jquery.backgroundSize.js']
+			all: [ 'Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js', '!assets/js/jquery.backgroundSize.js' ]
 		},
 
 		po2mo: {
@@ -103,11 +103,15 @@ module.exports = function(grunt) {
 		},
 
 		pot: {
+			files:{
+				expand: true,
+				src: [ '**/*.php', '!node_modules/**' ]
+			},
 			options:{
-				omit_header: false,
 				text_domain: pkg.name,
-				encoding: 'UTF-8',
+				msgmerge: true,
 				dest: 'languages/',
+				encoding: 'UTF-8',
 				keywords: [
 					'__',
 					'_e',
@@ -127,16 +131,7 @@ module.exports = function(grunt) {
 					'esc_html__',
 					'esc_html_e',
 					'esc_html_x:1,2c'
-				],
-				msgmerge: true
-			},
-			files:{
-				src: [
-					'*.php',
-					'inc/**/*.php',
-					'templates/**/*.php'
-				],
-				expand: true
+				]
 			}
 		},
 
@@ -150,7 +145,7 @@ module.exports = function(grunt) {
 						to: pkg.title
 					},
 					{
-						from: 'YEAR THE PACKAGE\'S COPYRIGHT HOLDER',
+						from: "YEAR THE PACKAGE'S COPYRIGHT HOLDER",
 						to: new Date().getFullYear()
 					},
 					{
@@ -213,11 +208,11 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: '.dev/sass/**/*.scss',
-				tasks: ['sass','autoprefixer','cssjanus']
+				tasks: [ 'sass','autoprefixer','cssjanus' ]
 			},
 			scripts: {
-				files: ['Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js'],
-				tasks: ['jshint', 'uglify'],
+				files: [ 'Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js' ],
+				tasks: [ 'jshint', 'uglify' ],
 				options: {
 					interrupt: true
 				}
@@ -226,10 +221,10 @@ module.exports = function(grunt) {
 
 	});
 
-	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
+	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask('default', ['sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify']);
-	grunt.registerTask('lint', ['jshint']);
-	grunt.registerTask('update-pot', ['pot', 'replace:pot']);
+	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify' ] );
+	grunt.registerTask( 'lint', [ 'jshint' ] );
+	grunt.registerTask( 'update-pot', [ 'pot', 'replace:pot' ] );
 
 };

@@ -6,39 +6,19 @@
  */
 ?>
 
-<?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>
+<?php if ( $sidebars = primer_get_active_footer_sidebars() ) : ?>
 
-	<div class="footer-widget-area columns-<?php echo primer_active_footer_areas_count() ?>">
+	<div class="footer-widget-area columns-<?php echo count( $sidebars ); ?>">
 
-	<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
-
-		<div class="footer-widget">
-
-			<?php dynamic_sidebar( 'footer-1' ) ?>
-
-		</div>
-
-	<?php endif; ?>
-
-	<?php if ( is_active_sidebar( 'footer-2' ) ) : ?>
+	<?php foreach ( $sidebars as $sidebar ) : ?>
 
 		<div class="footer-widget">
 
-			<?php dynamic_sidebar( 'footer-2' ) ?>
+			<?php dynamic_sidebar( $sidebar ); ?>
 
 		</div>
 
-	<?php endif; ?>
-
-	<?php if ( is_active_sidebar( 'footer-3' ) ) : ?>
-
-		<div class="footer-widget">
-
-			<?php dynamic_sidebar( 'footer-3' ) ?>
-
-		</div>
-
-	<?php endif; ?>
+	<?php endforeach; ?>
 
 	</div>
 

@@ -34,22 +34,12 @@ class Primer_Customizer_Colors {
 		 */
 		$this->colors = (array) apply_filters( 'primer_colors',
 			array(
-				array(
-					'name'     => 'tagline_text_color',
-					'label'    => esc_html__( 'Tagline Color', 'primer' ),
+				'header_textcolor' => array(
+					'label'    => esc_html__( 'Site Title Color', 'primer' ),
 					'default'  => '#f4f5f9',
 					'section'  => 'title_tagline',
 					'priority' => 11,
 					'css'      => array(
-						'.site-description' => array(
-							'color' => '%1$s',
-						),
-					),
-				),
-				array(
-					'name'    => 'header_textcolor',
-					'default' => '#f4f5f9',
-					'css'     => array(
 						'.site-title a, .site-title a:visited' => array(
 							'color' => '%1$s',
 						),
@@ -60,8 +50,19 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				array(
-					'name'    => 'header_background_color',
+				'background_color' => array(
+					'label'   => esc_html__( 'Background Color', 'primer' ),
+					'default' => '#f4f5f9',
+					'css'     => array(
+						'body' => array(
+							'background' => '%1$s',
+						),
+						'.social-menu a, .social-menu a:visited, .social-menu a:hover, .social-menu a:visited:hover' => array(
+							'color' => '%1$s',
+						),
+					),
+				),
+				'header_background_color' => array(
 					'label'   => esc_html__( 'Header Background Color', 'primer' ),
 					'default' => '#0b3954',
 					'section' => 'background_image',
@@ -71,13 +72,12 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				array(
-					'name'     => 'menu_background_color',
-					'label'    => esc_html__( 'Menu Background Color', 'primer' ),
-					'default'  => '#0b3954',
-					'section'  => 'background_image',
-					'css'      => array(
-						'.main-navigation-container, .main-navigation ul ul' => array(
+				'menu_background_color' => array(
+					'label'   => esc_html__( 'Menu Background Color', 'primer' ),
+					'default' => '#0b3954',
+					'section' => 'background_image',
+					'css'     => array(
+						'.main-navigation-container, .main-navigation ul ul, .main-navigation .sub-menu' => array(
 							'background-color' => '%1$s',
 						),
 						'.main-navigation li a, .main-navigation li a:hover, .main-navigation li a:visited:hover' => array(
@@ -91,9 +91,10 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				array(
-					'name'    => 'background_color',
-					'default' => '#f4f5f9',
+				'footer_background_color' => array(
+					'label'   => esc_html__( 'Footer Background Color', 'primer' ),
+					'default' => '#0b3954',
+					'section' => 'background_image',
 					'css'     => array(
 						'body' => array(
 							'background' => '%1$s',
@@ -103,19 +104,17 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				array(
-					'name'    => 'footer_background_color',
-					'label'   => esc_html__( 'Footer Background Color', 'primer' ),
-					'default' => '#0b3954',
-					'section' => 'background_image',
+				'tagline_text_color' => array(
+					'label'   => esc_html__( 'Tagline Text Color', 'primer' ),
+					'default' => '#f4f5f9',
+					'section' => 'title_tagline',
 					'css'     => array(
 						'.site-footer' => array(
 							'background-color' => '%1$s',
 						),
 					),
 				),
-				array(
-					'name'    => 'link_color',
+				'link_color' => array(
 					'label'   => esc_html__( 'Link Color', 'primer' ),
 					'default' => '#ff6663',
 					'section' => 'fonts',
@@ -143,8 +142,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				array(
-					'name'    => 'main_text_color',
+				'main_text_color' => array(
 					'label'   => esc_html__( 'Main Text Color', 'primer' ),
 					'default' => '#0b3954',
 					'section' => 'fonts',
@@ -173,8 +171,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				array(
-					'name'     => 'secondary_text_color',
+				'secondary_text_color' => array(
 					'label'    => esc_html__( 'Secondary Text Color', 'primer' ),
 					'default'  => '#686868',
 					'section'  => 'fonts',
@@ -206,8 +203,14 @@ class Primer_Customizer_Colors {
 		$default_scheme = array(
 			'default' => array(
 				'label'  => esc_html__( 'Default', 'primer' ),
-				'colors' => wp_list_pluck( $this->colors, 'default', 'name' ),
+				'colors' => array_combine(
+					array_keys( $this->colors ),
+					wp_list_pluck( $this->colors, 'default' )
+				),
 			),
+			'_custom' => array(
+				'label' => sprintf( '- %s -' , __( 'Custom', 'primer' ) ),
+			)
 		);
 
 		/**
@@ -261,9 +264,6 @@ class Primer_Customizer_Colors {
 						'secondary_text_color'    => '#222222',
 					),
 				),
-				'_custom' => array(
-					'label' => sprintf( '- %s -' , __( 'Custom', 'primer' ) ),
-				)
 			)
 		);
 
@@ -292,9 +292,9 @@ class Primer_Customizer_Colors {
 	 */
 	public function colors( WP_Customize_Manager $wp_customize ) {
 
-		foreach ( $this->colors as $color ) {
+		foreach ( $this->colors as $name => $args ) {
 
-			$this->register_color_setting( $wp_customize, $color );
+			$this->register_color_setting( $wp_customize, $name, $args );
 
 		}
 
@@ -307,24 +307,26 @@ class Primer_Customizer_Colors {
 	 * @see   $this->colors()
 	 *
 	 * @param WP_Customize_Manager $wp_customize
-	 * @param array                $color
+	 * @param string               $name
+	 * @param array                $args
 	 */
-	public function register_color_setting( WP_Customize_Manager $wp_customize, array $color ) {
+	public function register_color_setting( WP_Customize_Manager $wp_customize, $name, array $args ) {
 
-		if ( empty( $color['name'] ) || empty( $color['default'] ) || empty( $color['label'] ) ) {
+		if ( empty( $name ) || empty( $args['default'] ) ) {
 
 			return;
 
 		}
 
-		$name = sanitize_key( $color['name'] );
+		$name = sanitize_key( $name );
 
 		$wp_customize->add_setting(
 			$name,
 			array(
-				'default'           => sanitize_hex_color( $color['default'] ),
-				'sanitize_callback' => 'sanitize_hex_color',
-				'transport'         => 'postMessage',
+				'default'              => sanitize_hex_color_no_hash( $args['default'] ),
+				'sanitize_callback'    => 'sanitize_hex_color_no_hash',
+				'sanitize_js_callback' => 'maybe_hash_hex_color',
+				'transport'            => 'postMessage',
 			)
 		);
 
@@ -333,10 +335,10 @@ class Primer_Customizer_Colors {
 				$wp_customize,
 				$name,
 				array(
-					'label'       => $color['label'],
-					'description' => ! empty( $color['description'] ) ? $color['description'] : null,
-					'section'     => ! empty( $color['section'] ) ? $color['section'] : 'colors',
-					'priority'    => ! empty( $color['priority'] ) ? absint( $color['priority'] ) : null,
+					'label'       => ! empty( $args['label'] ) ? $args['label'] : $name,
+					'description' => ! empty( $args['description'] ) ? $args['description'] : null,
+					'section'     => ! empty( $args['section'] ) ? $args['section'] : 'colors',
+					'priority'    => ! empty( $args['priority'] ) ? absint( $args['priority'] ) : null,
 				)
 			)
 		);
@@ -351,9 +353,9 @@ class Primer_Customizer_Colors {
 	 */
 	public function enqueue_colors_inline_css() {
 
-		foreach ( $this->colors as $color ) {
+		foreach ( $this->colors as $name => $args ) {
 
-			$this->add_color_inline_css( $color );
+			$this->add_color_inline_css( $name, $args );
 
 		}
 
@@ -365,23 +367,24 @@ class Primer_Customizer_Colors {
 	 * @see   $this->enqueue_colors_inline_css()
 	 * @since 1.0.0
 	 *
-	 * @param array $color
+	 * @param string $name
+	 * @param array  $args
 	 */
-	public function add_color_inline_css( array $color ) {
+	public function add_color_inline_css( $name, array $args ) {
 
-		if ( empty( $color['name'] ) || empty( $color['css'] ) ) {
+		if ( empty( $name ) || empty( $args['css'] ) ) {
 
 			return;
 
 		}
 
-		$default = $this->get_default_color( $color['name'], 'default' );
-		$hex     = trim( get_theme_mod( $color['name'], $default ), '#' );
-		$css     = sprintf( Primer_Customizer::parse_css_rules( $color['css'] ), '#' . $hex );
+		$default = $this->get_default_color( $name, 'default' );
+		$hex     = trim( get_theme_mod( $name, $default ), '#' );
+		$css     = sprintf( Primer_Customizer::parse_css_rules( $args['css'] ), '#' . $hex );
 
-		if ( ! empty( $color['rgba_css'] ) ) {
+		if ( ! empty( $args['rgba_css'] ) ) {
 
-			$css .= sprintf( Primer_Customizer::parse_css_rules( $color['rgba_css'] ), implode( ', ', primer_hex2rgb( $hex ) ) );
+			$css .= sprintf( Primer_Customizer::parse_css_rules( $args['rgba_css'] ), implode( ', ', primer_hex2rgb( $hex ) ) );
 
 		}
 
@@ -413,9 +416,9 @@ class Primer_Customizer_Colors {
 		}
 
 		$scheme = empty( $scheme ) ? $this->get_current_color_scheme_array() : $this->color_schemes[ $this->sanitize_color_scheme( $scheme ) ];
-		$hex    = isset( $scheme['colors'][ $color ] ) ? $scheme['colors'][ $color ] : null;
+		$hex    = isset( $scheme['colors'][ $color ] ) ? trim( $scheme['colors'][ $color ], '#' ) : null;
 
-		return ( $hash ) ? sanitize_hex_color( '#' . trim( $hex, '#' ) ) : sanitize_hex_color_no_hash( trim( $hex, '#' ) );
+		return ( $hash ) ? sanitize_hex_color( '#' . $hex ) : sanitize_hex_color_no_hash( $hex );
 
 	}
 
@@ -504,17 +507,17 @@ class Primer_Customizer_Colors {
 		<script type="text/html" id="tmpl-primer-color-scheme-css">
 			<?php
 
-			foreach ( $this->colors as $color ) {
+			foreach ( $this->colors as $name => $args ) {
 
-				if ( empty( $color['name'] ) || empty( $color['css'] ) || ! is_array( $color['css'] ) ) {
+				if ( empty( $name ) || empty( $args['css'] ) || ! is_array( $args['css'] ) ) {
 
 					continue;
 
 				}
 
 				printf(
-					Primer_Customizer::parse_css_rules( $color['css'] ),
-					sprintf( '{{ data.%s }}', $color['name'] )
+					Primer_Customizer::parse_css_rules( $args['css'] ),
+					sprintf( '{{ data.%s }}', $name )
 				);
 
 			}
@@ -527,7 +530,8 @@ class Primer_Customizer_Colors {
 
 		if ( ! $rgba_colors ) {
 
-			return;
+			// Required for themes without rgba css rules
+			echo '<script type="text/html" id="tmpl-primer-color-scheme-css-rgba"></script>';
 
 		}
 
@@ -615,11 +619,11 @@ class Primer_Customizer_Colors {
 
 		$colors = array();
 
-		foreach ( $this->colors as $color ) {
+		foreach ( $this->colors as $name => $args ) {
 
-			if ( ! empty( $color['name'] ) && ! empty( $color['rgba_css'] ) && is_array( $color['rgba_css'] ) ) {
+			if ( ! empty( $name ) && ! empty( $args['rgba_css'] ) && is_array( $args['rgba_css'] ) ) {
 
-				$colors[ $color['name'] ] = $color['rgba_css'];
+				$colors[ $name ] = $args['rgba_css'];
 
 			}
 
@@ -647,16 +651,54 @@ class Primer_Customizer_Colors {
 		 */
 		$args = (array) apply_filters( 'primer_custom_header_args',
 			array(
-				'default-image'      => '',
 				'default-text-color' => $this->get_default_color( 'header_textcolor', 'default' ),
-				'width'              => 1600,
-				'height'             => 400,
+				'width'              => 2400,
+				'height'             => 1300,
 				'flex-height'        => true,
 				'wp-head-callback'   => array( $this, 'header_css' ),
 			)
 		);
 
 		add_theme_support( 'custom-header', $args );
+
+		/**
+		 * Filter the default hero images.
+		 *
+		 * @var array
+		 */
+		$defaults = (array) apply_filters( 'primer_default_hero_images',
+			array(
+				'default' => array(
+					'url'           => 'assets/images/hero.jpg',
+					'thumbnail_url' => 'assets/images/hero-thumbnail.jpg',
+					'description'   => esc_html__( 'City', 'primer' ),
+				),
+			)
+		);
+
+		foreach ( $defaults as $name => &$args ) {
+
+			$path = trailingslashit( get_stylesheet_directory() );
+			$url  = trailingslashit( get_stylesheet_directory_uri() );
+
+			if ( ! file_exists( $path . $args['url'] ) ) {
+
+				unset( $defaults[ $name ] );
+
+				continue;
+
+			}
+
+			$args['url']           = $url . $args['url'];
+			$args['thumbnail_url'] = file_exists( $path . $args['thumbnail_url'] ) ? $url . $args['thumbnail_url'] : $args['url'];
+
+		}
+
+		if ( $defaults ) {
+
+			register_default_headers( $defaults );
+
+		}
 
 	}
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-14 01:22-0500\n"
+"POT-Creation-Date: 2016-08-15 18:06-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,46 +25,51 @@ msgstr ""
 #. * @since 1.0.0
 #.
 #: 404.php:22
-msgid "Oops! That page can&rsquo;t be found."
+#, fuzzy
+msgid "Oops! That page can't be found."
 msgstr "糟糕！ 无法找到该页面。"
 
 #: 404.php:28
+#, fuzzy
 msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr "似乎在这个地址没有找到任何东西。 尝试以下链接之一，或进行搜索？"
 
 #: comments.php:35
-#, php-format
+#, fuzzy, php-format
 msgctxt "1. number of comments, 2. post title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$d thoughts on &ldquo;%2$s&rdquo;"
+msgid "One thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
 msgstr[0] "关于 &ldquo;%2$s&rdquo; 的一个意见"
 msgstr[1] "关于 &ldquo;%2$s&rdquo; 的 %1$d 个意见"
 
-#: comments.php:51 comments.php:76
+#: comments.php:54 comments.php:79
 msgid "Comment navigation"
 msgstr "评论导航"
 
-#: comments.php:53 comments.php:78
+#: comments.php:56
+#, fuzzy, php-format
+msgctxt "left arrow (LTR) / right arrow (RTL)"
+msgid "%s Older Comments"
+msgstr "&larr; 较老的评论"
+
+#: comments.php:58
+#, fuzzy, php-format
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Newer Comments %s"
+msgstr "较新的评论 &rarr;"
+
+#: comments.php:81
 msgid "&larr; Older Comments"
 msgstr "&larr; 较老的评论"
 
-#: comments.php:55 comments.php:80
+#: comments.php:83
 msgid "Newer Comments &rarr;"
 msgstr "较新的评论 &rarr;"
 
-#: comments.php:90
+#: comments.php:93
 msgid "Comments are closed."
 msgstr "评论关闭。"
-
-#: content-featured.php:31
-msgid "Featured"
-msgstr "特色"
-
-#: content-featured.php:41
-msgid "Read More"
-msgstr "阅读更多"
 
 #. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
 #. *
@@ -75,124 +80,102 @@ msgstr "阅读更多"
 msgid "Nothing Found"
 msgstr "未找到任何信息"
 
-#: content-none.php:24
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+#: content-none.php:27
+#, fuzzy, php-format
+msgctxt "link to write a new post"
+msgid "Ready to publish your first post? %s."
 msgstr "准备好发布您的第一个帖子了？ <a href=\"%1$s\">在此开始</a>。"
 
-#: content-none.php:28
+#: content-none.php:31
+msgid "Get started here"
+msgstr ""
+
+#: content-none.php:39
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr "抱歉，没有符合搜索条件的内容。 请试试其他关键词。"
 
-#: content-none.php:33
+#: content-none.php:45
+#, fuzzy
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+"It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "我们似乎无法找到您想要的东西。 请尝试进行搜索。"
 
-#: functions.php:175
+#: functions.php:202
 msgid "Primary Menu"
 msgstr "主菜单"
 
-#: functions.php:176
+#: functions.php:203
 msgid "Social Menu"
 msgstr "社交菜单"
 
-#: functions.php:189
-msgid "1 Column Wide"
-msgstr "1 宽列"
+#: functions.php:204
+#, fuzzy
+msgid "Footer Menu"
+msgstr "中页脚"
 
-#: functions.php:190
-msgid "1 Column Narrow"
-msgstr "1 窄列"
-
-#: functions.php:191 functions.php:192
-msgid "2 Columns: Sidebar / Content"
-msgstr "2 列： 侧边栏 / 内容"
-
-#: functions.php:191 functions.php:192
-msgid "2 Columns: Content / Sidebar"
-msgstr "2 列： 内容 / 侧边栏"
-
-#: functions.php:193 functions.php:195
-msgid "3 Columns: Sidebar / Sidebar / Content"
-msgstr "3 列： 侧边栏 / 侧边栏 / 内容"
-
-#: functions.php:193 functions.php:195
-msgid "3 Columns: Content / Sidebar / Sidebar"
-msgstr "3 列： 内容 / 侧边栏 / 侧边栏"
-
-#: functions.php:194
-msgid "3 Columns: Sidebar / Content / Sidebar"
-msgstr "3 列： 侧边栏 / 内容 / 侧边栏"
-
-#: functions.php:285
+#: functions.php:305
 msgid "Sidebar"
 msgstr "侧边栏"
 
-#: functions.php:287
+#: functions.php:306
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr "主侧边栏出现在每个页面、帖子、存档和搜索模板的内容旁边。"
 
-#: functions.php:294
+#: functions.php:313
 msgid "Secondary Sidebar"
 msgstr "辅侧边栏"
 
-#: functions.php:296
+#: functions.php:314
 msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr "辅侧边栏仅将在您选择三列布局时出现。"
 
-#: functions.php:303
+#: functions.php:321
 #, fuzzy
 msgid "Footer 1"
 msgstr "左页脚"
 
-#: functions.php:305
+#: functions.php:322
 #, fuzzy
 msgid "This sidebar is the first column of the footer widget area."
 msgstr "左页脚侧边栏出现在页脚小工具区域的第一列。"
 
-#: functions.php:312
+#: functions.php:329
 #, fuzzy
 msgid "Footer 2"
 msgstr "左页脚"
 
-#: functions.php:314
+#: functions.php:330
 #, fuzzy
 msgid "This sidebar is the second column of the footer widget area."
 msgstr "中页脚侧边栏出现在页脚小工具区域的第二列。"
 
-#: functions.php:321
+#: functions.php:337
 #, fuzzy
 msgid "Footer 3"
 msgstr "左页脚"
 
-#: functions.php:323
+#: functions.php:338
 #, fuzzy
 msgid "This sidebar is the third column of the footer widget area."
 msgstr "右页脚侧边栏出现在页脚小工具区域的第三列。"
 
-#: header.php:56
+#: functions.php:345
+msgid "Hero"
+msgstr ""
+
+#: functions.php:346
+msgid "Hero widgets appear over the header image on the front page."
+msgstr ""
+
+#: header.php:42
 msgid "Skip to content"
 msgstr "跳至内容"
-
-#. //developer.wordpress.org/themes/basics/template-hierarchy/#search-result
-#. *
-#. * @package Primer
-#. * @since 1.0.0
-#.
-#: search.php:21
-#, php-format
-msgctxt "search term"
-msgid "Search Results for: %s"
-msgstr "搜索结果：%s"
 
 #: inc/back-compat.php:58
 #, php-format
@@ -201,101 +184,245 @@ msgid ""
 "Please upgrade and try again."
 msgstr ""
 
-#: inc/customizer.php:114
-msgid "Base Color Scheme"
+#: inc/customizer.php:173
+msgid "Use featured image"
 msgstr ""
 
-#: inc/customizer.php:137
+#: inc/customizer.php:174
+msgid ""
+"Allow the featured image on the current post to override the header image."
+msgstr ""
+
+#: inc/customizer/colors.php:38
+#, fuzzy
+msgid "Site Title Color"
+msgstr "辅侧边栏"
+
+#: inc/customizer/colors.php:52
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer/colors.php:64
+msgid "Header Background Color"
+msgstr ""
+
+#: inc/customizer/colors.php:73
 msgid "Menu Background Color"
 msgstr ""
 
-#: inc/customizer.php:158
+#: inc/customizer/colors.php:91
+msgid "Footer Background Color"
+msgstr ""
+
+#: inc/customizer/colors.php:100
 msgid "Tagline Text Color"
 msgstr ""
 
-#: inc/customizer.php:179
+#: inc/customizer/colors.php:109
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer.php:200
+#: inc/customizer/colors.php:135
 msgid "Main Text Color"
 msgstr ""
 
-#: inc/customizer.php:221
+#: inc/customizer/colors.php:162
 #, fuzzy
 msgid "Secondary Text Color"
 msgstr "辅侧边栏"
 
-#: inc/customizer.php:231
-msgid "Typography"
-msgstr ""
-
-#: inc/customizer.php:248
-#, fuzzy
-msgid "Primary Font"
-msgstr "主菜单"
-
-#: inc/customizer.php:269
-#, fuzzy
-msgid "Secondary Font"
-msgstr "辅侧边栏"
-
-#: inc/customizer.php:342
+#: inc/customizer/colors.php:190 inc/customizer/layouts.php:302
 #, fuzzy
 msgid "Default"
 msgstr "默认"
 
-#: inc/customizer.php:354
+#: inc/customizer/colors.php:197 inc/customizer/layouts.php:311
+msgid "Custom"
+msgstr ""
+
+#: inc/customizer/colors.php:211
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer.php:366
+#: inc/customizer/colors.php:225
 msgid "Muted"
 msgstr ""
 
-#: inc/customizer.php:378
+#: inc/customizer/colors.php:239
 msgid "Red"
 msgstr ""
 
-#: inc/hooks.php:218
+#: inc/customizer/colors.php:456
+msgid "Base Color Scheme"
+msgstr ""
+
+#: inc/customizer/colors.php:657
+msgid "City"
+msgstr ""
+
+#: inc/customizer/fonts.php:81
+#, fuzzy
+msgid "Header Font"
+msgstr "辅侧边栏"
+
+#: inc/customizer/fonts.php:82
+msgid ""
+"Site title, post titles, widget titles, form labels, table headers and "
+"buttons."
+msgstr ""
+
+#: inc/customizer/fonts.php:99
+#, fuzzy
+msgid "Primary Font"
+msgstr "主菜单"
+
+#: inc/customizer/fonts.php:100
+msgid "Paragraphs, lists, menu links, quotes and tables."
+msgstr ""
+
+#: inc/customizer/fonts.php:115
+#, fuzzy
+msgid "Secondary Font"
+msgstr "辅侧边栏"
+
+#: inc/customizer/fonts.php:116
+msgid ""
+"Post bylines, comment counts, comment reply links, post footers and quote "
+"footers."
+msgstr ""
+
+#: inc/customizer/fonts.php:164
+msgid "Fonts"
+msgstr ""
+
+#: inc/customizer/fonts.php:189
+#, fuzzy, php-format
+msgctxt "font name"
+msgid "%s (Default)"
+msgstr "默认"
+
+#: inc/customizer/layouts.php:47
+#, fuzzy
+msgid "One Column: Wide"
+msgstr "1 宽列"
+
+#: inc/customizer/layouts.php:48
+#, fuzzy
+msgid "One Column: Narrow"
+msgstr "1 窄列"
+
+#: inc/customizer/layouts.php:49 inc/customizer/layouts.php:138
+#, fuzzy
+msgid "Two Columns: Content | Sidebar"
+msgstr "2 列： 内容 / 侧边栏"
+
+#: inc/customizer/layouts.php:50 inc/customizer/layouts.php:137
+#, fuzzy
+msgid "Two Columns: Sidebar | Content"
+msgstr "2 列： 侧边栏 / 内容"
+
+#: inc/customizer/layouts.php:51 inc/customizer/layouts.php:140
+#, fuzzy
+msgid "Three Columns: Content | Sidebar | Sidebar"
+msgstr "3 列： 内容 / 侧边栏 / 侧边栏"
+
+#: inc/customizer/layouts.php:52
+#, fuzzy
+msgid "Three Columns: Sidebar | Content | Sidebar"
+msgstr "3 列： 侧边栏 / 内容 / 侧边栏"
+
+#: inc/customizer/layouts.php:53 inc/customizer/layouts.php:139
+#, fuzzy
+msgid "Three Columns: Sidebar | Sidebar | Content"
+msgstr "3 列： 侧边栏 / 侧边栏 / 内容"
+
+#: inc/customizer/layouts.php:91
+msgid "Fixed"
+msgstr ""
+
+#: inc/customizer/layouts.php:92
+msgid "Fluid"
+msgstr ""
+
+#: inc/customizer/layouts.php:252 inc/customizer/layouts.php:443
+msgid "Layout"
+msgstr "布局"
+
+#: inc/customizer/layouts.php:284
+#, php-format
+msgctxt "link to the Customizer"
+msgid "The site-wide Default layout setting is located in the %s."
+msgstr ""
+
+#: inc/customizer/layouts.php:288
+msgid "Customizer"
+msgstr ""
+
+#: inc/customizer/layouts.php:465
+#, fuzzy
+msgid "Default Layout"
+msgstr "默认"
+
+#: inc/customizer/layouts.php:466
+msgid "All posts and pages on your site will use this layout by default."
+msgstr ""
+
+#: inc/customizer/layouts.php:495
+#, fuzzy
+msgid "Page Width"
+msgstr "第 %d 页"
+
+#: inc/customizer/layouts.php:496
+msgid "Display your site differently on larger screens."
+msgstr ""
+
+#: inc/helpers.php:38
+#, php-format
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr "搜索结果：%s"
+
+#: inc/helpers.php:49
+msgid "404 Page Not Found"
+msgstr ""
+
+#: inc/hooks.php:348
 #, php-format
 msgctxt "page number"
 msgid "Page %d"
 msgstr "第 %d 页"
 
-#: inc/template-tags.php:29
+#: inc/template-tags.php:40
 msgid "Posts navigation"
 msgstr "帖子导航"
 
-#: inc/template-tags.php:35
+#: inc/template-tags.php:46
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> 较老的帖子"
 
-#: inc/template-tags.php:41
+#: inc/template-tags.php:52
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "较新的帖子 <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:78
+#: inc/template-tags.php:85
 msgid "Post navigation"
 msgstr "帖子导航"
 
-#: inc/template-tags.php:193
+#: inc/template-tags.php:188
 msgid "Blog"
 msgstr "博客"
 
-#: inc/theme-layouts.php:364
-msgctxt "theme layout"
-msgid "Default"
-msgstr "默认"
+#: templates/parts/credit.php:13
+#, php-format
+msgctxt "1. copyright symbol, 2. year, 3. site title"
+msgid "Copyright %1$s %2$d %3$s"
+msgstr ""
 
-#: inc/theme-layouts.php:459 inc/theme-layouts.php:566
-#: inc/theme-layouts.php:651
-msgid "Layout"
-msgstr "布局"
-
-#: inc/theme-layouts.php:684
-msgid "Global Layout"
-msgstr "全局布局"
+#: templates/parts/credit.php:24
+#, fuzzy, php-format
+msgctxt "1. theme name link, 2. theme author link"
+msgid "%1$s theme by %2$s"
+msgstr "%1$s：%2$s"
 
 #: templates/parts/loop/page-content.php:17
 #: templates/parts/loop/post-content.php:17
@@ -311,6 +438,12 @@ msgstr "编辑"
 #: templates/parts/loop/post-content.php:13
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "阅读更多 <span class=\"meta-nav\">&rarr;</span>"
+
+#: templates/parts/loop/post-excerpt.php:13
+#, php-format
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Continue Reading %s"
+msgstr ""
 
 #: templates/parts/loop/post-footer.php:19
 #: templates/parts/loop/post-footer.php:31
@@ -334,42 +467,44 @@ msgctxt "tag list"
 msgid "Filed under: %s"
 msgstr "归档位置： %s"
 
-#: templates/parts/loop/post-meta.php:13
-#, php-format
-msgctxt "1. post date, 2. author name"
-msgid "%1$s by %2$s"
-msgstr "%1$s：%2$s"
-
-#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-meta.php:21
 #: templates/parts/loop/post-search-footer.php:41
 msgid "Leave a comment"
 msgstr "写评论"
 
-#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-meta.php:21
 #: templates/parts/loop/post-search-footer.php:41
 msgid "1 Comment"
 msgstr "1 条评论"
 
-#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-meta.php:21
 #: templates/parts/loop/post-search-footer.php:41
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% 评论"
 
-#: templates/parts/site-info.php:17
-#, php-format
-msgctxt "1. theme name link, 2. theme author link"
-msgid "Built with %1$s by %2$s."
-msgstr "%1$s：%2$s 建造。"
+#~ msgid "Featured"
+#~ msgstr "特色"
+
+#~ msgid "Read More"
+#~ msgstr "阅读更多"
+
+#~ msgctxt "theme layout"
+#~ msgid "Default"
+#~ msgstr "默认"
+
+#~ msgid "Global Layout"
+#~ msgstr "全局布局"
+
+#~ msgctxt "1. theme name link, 2. theme author link"
+#~ msgid "Built with %1$s by %2$s."
+#~ msgstr "%1$s：%2$s 建造。"
 
 #~ msgid "Most Used Categories"
 #~ msgstr "最常用的类别"
 
 #~ msgid "Try looking in the monthly archives. %1$s"
 #~ msgstr "试试在每月档案中查找。 %1$s"
-
-#~ msgid "Footer Center"
-#~ msgstr "中页脚"
 
 #~ msgid "Footer Right"
 #~ msgstr "右页脚"

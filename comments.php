@@ -28,56 +28,59 @@ if ( post_password_required() ) {
 
 	<?php if ( have_comments() ) : ?>
 
-		<h2 class="comments-title">
-			<?php
+		<h2 class="comments-title"><?php
+
 			printf(
 				_nx(
-					'One thought on &ldquo;%2$s&rdquo;',
-					'%1$d thoughts on &ldquo;%2$s&rdquo;',
+					'One thought on %2$s',
+					'%1$d thoughts on %2$s',
 					get_comments_number(),
 					'1. number of comments, 2. post title',
 					'primer'
 				),
 				number_format_i18n( get_comments_number() ),
-				'<span>' . esc_html( get_the_title() ) . '</span>'
+				sprintf(
+					'<span>&ldquo;%s&rdquo;</span>',
+					get_the_title()
+				)
 			);
-			?>
-		</h2>
+
+		?></h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 
 			<nav id="comment-nav-above" class="comment-navigation" role="navigation">
 
-				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'primer' ) ?></h1>
+				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'primer' ); ?></h1>
 
-				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'primer' ) ) ?></div>
+				<div class="nav-previous"><?php previous_comments_link( sprintf( esc_html_x( '%s Older Comments', 'left arrow (LTR) / right arrow (RTL)', 'primer' ), is_rtl() ? '&rarr;' : '&larr;' ) ); ?></div>
 
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'primer' ) ) ?></div>
+				<div class="nav-next"><?php next_comments_link( sprintf( esc_html_x( 'Newer Comments %s', 'right arrow (LTR) / left arrow (RTL)', 'primer' ), is_rtl() ? '&larr;' : '&rarr;' ) ); ?></div>
 
 			</nav><!-- #comment-nav-above -->
 
 		<?php endif; ?>
 
-		<ol class="comment-list">
-			<?php
+		<ol class="comment-list"><?php
+
 			wp_list_comments(
 				array(
 					'style'      => 'ol',
 					'short_ping' => true,
 				)
 			);
-			?>
-		</ol><!-- .comment-list -->
+
+		?></ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 
 			<nav id="comment-nav-below" class="comment-navigation" role="navigation">
 
-				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'primer' ) ?></h1>
+				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'primer' ); ?></h1>
 
-				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'primer' ) ) ?></div>
+				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'primer' ) ); ?></div>
 
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'primer' ) ) ?></div>
+				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'primer' ) ); ?></div>
 
 			</nav><!-- #comment-nav-below -->
 
@@ -87,10 +90,10 @@ if ( post_password_required() ) {
 
 	<?php if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'primer' ) ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'primer' ); ?></p>
 
 	<?php endif; ?>
 
-	<?php comment_form() ?>
+	<?php comment_form(); ?>
 
 </div><!-- #comments -->

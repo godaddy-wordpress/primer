@@ -1,18 +1,18 @@
 <?php
 /**
- * Displays the social navigation.
+ * Displays the footer navigation.
  *
  * @package Primer
  */
 ?>
 
-<nav class="social-menu">
+<nav class="footer-menu" role="navigation">
 
 	<?php
 
 	wp_nav_menu(
 		array(
-			'theme_location' => 'social',
+			'theme_location' => 'footer',
 			'depth'          => 1,
 			'fallback_cb'    => false,
 		)
@@ -20,4 +20,4 @@
 
 	?>
 
-</nav><!-- .social-menu -->
+</nav><!-- .footer-menu -->

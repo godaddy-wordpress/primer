@@ -24,6 +24,13 @@ class Primer_Customizer_Layouts {
 	protected $meta_box = true;
 
 	/**
+	 * Array of page widths.
+	 *
+	 * @var bool
+	 */
+	protected $page_widths = array();
+
+	/**
 	 * Class constructor.
 	 */
 	public function __construct() {
@@ -71,6 +78,20 @@ class Primer_Customizer_Layouts {
 		 * @var bool
 		 */
 		$this->meta_box = (bool) apply_filters( 'primer_layouts_meta_box_enabled', $this->meta_box );
+
+		/**
+		 * Filter the registered page widths.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var array
+		 */
+		$this->page_widths = (array) apply_filters( 'primer_page_widths',
+			array(
+				'fixed' => esc_html__( 'Fixed', 'primer' ),
+				'fluid' => esc_html__( 'Fluid', 'primer' ),
+			)
+		);
 
 		add_action( 'init', array( $this, 'rtl_layouts' ), 11 );
 		add_action( 'init', array( $this, 'post_type_support' ), 11 );
@@ -219,7 +240,7 @@ class Primer_Customizer_Layouts {
 			||
 			! current_user_can( 'delete_post_meta', $post->ID )
 			||
-			'templates/page-builder.php' === get_page_template_slug()
+			in_array( get_page_template_slug(), array( 'templates/page-builder.php', 'templates/page-builder-no-header.php' ) )
 		) {
 
 			return;
@@ -277,8 +298,8 @@ class Primer_Customizer_Layouts {
 					       id="primer-layout-use-default"
 					       value="0"
 					       autocomplete="off"
-						<?php checked( ! $has_custom ) ?>>
-					<?php _e( 'Default', 'primer' ) ?>
+						<?php checked( ! $has_custom ); ?>>
+					<?php _e( 'Default', 'primer' ); ?>
 				</label>
 				<label for="primer-layout-use-custom">
 					<input type="radio"
@@ -286,8 +307,8 @@ class Primer_Customizer_Layouts {
 					       id="primer-layout-use-custom"
 					       value="1"
 					       autocomplete="off"
-						<?php checked( $has_custom ) ?>>
-					<?php _e( 'Custom', 'primer' ) ?>
+						<?php checked( $has_custom ); ?>>
+					<?php _e( 'Custom', 'primer' ); ?>
 				</label>
 				<span class="clear"></span>
 			</p>
@@ -337,19 +358,19 @@ class Primer_Customizer_Layouts {
 
 					?>
 
-					<li class="<?php echo esc_attr( $class ) ?>">
-						<label for="primer-layout-<?php echo esc_attr( $layout ) ?>">
+					<li class="<?php echo esc_attr( $class ); ?>">
+						<label for="primer-layout-<?php echo esc_attr( $layout ); ?>">
 							<input type="radio"
 							       name="<?php echo $name; // xss ok ?>-layout"
 							       data-customize-setting-link="layout"
-							       id="primer-layout-<?php echo esc_attr( $layout ) ?>"
-							       value="<?php echo esc_attr( $layout ) ?>"
-								   <?php checked( $cur_layout, $layout ) ?>
-								   <?php disabled( 'disabled' === $class ) ?>>
-							<img src="<?php echo esc_url( sprintf( '%s/assets/layouts/%s%s.svg', get_template_directory_uri(), $layout, is_rtl() ? '-rtl' : '' ) ) ?>"
-							     alt="<?php echo esc_attr( $label ) ?>"
-							     title="<?php echo esc_attr( $label ) ?>">
-							<span><?php echo esc_html( $label ) ?></span>
+							       id="primer-layout-<?php echo esc_attr( $layout ); ?>"
+							       value="<?php echo esc_attr( $layout ); ?>"
+								   <?php checked( $cur_layout, $layout ); ?>
+								   <?php disabled( 'disabled' === $class ); ?>>
+							<img src="<?php echo esc_url( sprintf( '%s/assets/layouts/%s%s.svg', get_template_directory_uri(), $layout, is_rtl() ? '-rtl' : '' ) ); ?>"
+							     alt="<?php echo esc_attr( $label ); ?>"
+							     title="<?php echo esc_attr( $label ); ?>">
+							<span><?php echo esc_html( $label ); ?></span>
 						</label>
 					</li>
 
@@ -451,27 +472,32 @@ class Primer_Customizer_Layouts {
 			)
 		);
 
+		if ( ! $this->page_widths ) {
+
+			return;
+
+		}
+
+		reset( $this->page_widths );
+
 		$wp_customize->add_setting(
-			'full_width',
+			'page_width',
 			array(
-				'default'           => 0,
-				'sanitize_callback' => 'absint',
+				'default'           => key( $this->page_widths ),
+				'sanitize_callback' => 'sanitize_key',
 				'transport'         => 'postMessage',
 			)
 		);
 
 		$wp_customize->add_control(
-			'full_width',
+			'page_width',
 			array(
 				'label'       => esc_html__( 'Page Width', 'primer' ),
-				'description' => esc_html__( 'Set the page width to be fixed or fluid when viewed on large screens.', 'primer' ),
+				'description' => esc_html__( 'Display your site differently on larger screens.', 'primer' ),
 				'section'     => 'layout',
-				'settings'    => 'full_width',
+				'settings'    => 'page_width',
 				'type'        => 'radio',
-				'choices'     => array(
-					0 => esc_html__( 'Fixed', 'primer' ),
-					1 => esc_html__( 'Fluid', 'primer' ),
-				),
+				'choices'     => $this->page_widths,
 			)
 		);
 
@@ -490,7 +516,7 @@ class Primer_Customizer_Layouts {
 	public function body_class( array $classes ) {
 
 		$classes[] = sanitize_html_class( sprintf( 'layout-%s', $this->get_current_layout() ) );
-		$classes[] = (bool) get_theme_mod( 'full_width' ) ? 'no-max-width' : null;
+		$classes[] = primer_is_fluid_width() ? 'no-max-width' : null;
 
 		return array_filter( $classes );
 

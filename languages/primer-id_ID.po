@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-14 01:22-0500\n"
+"POT-Creation-Date: 2016-08-15 18:06-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,48 +25,53 @@ msgstr ""
 #. * @since 1.0.0
 #.
 #: 404.php:22
-msgid "Oops! That page can&rsquo;t be found."
+#, fuzzy
+msgid "Oops! That page can't be found."
 msgstr "Ups! Halaman tersebut tidak ditemukan."
 
 #: 404.php:28
+#, fuzzy
 msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
 "Sepertinya tidak ada apa-apa di lokasi ini. Mungkin coba salah satu tautan "
 "di bawah ini atau coba pencarian?"
 
 #: comments.php:35
-#, php-format
+#, fuzzy, php-format
 msgctxt "1. number of comments, 2. post title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$d thoughts on &ldquo;%2$s&rdquo;"
+msgid "One thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
 msgstr[0] "Satu komentar tentang &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$d komentar tentang &ldquo;%2$s&rdquo;"
 
-#: comments.php:51 comments.php:76
+#: comments.php:54 comments.php:79
 msgid "Comment navigation"
 msgstr "Navigasi komentar"
 
-#: comments.php:53 comments.php:78
+#: comments.php:56
+#, fuzzy, php-format
+msgctxt "left arrow (LTR) / right arrow (RTL)"
+msgid "%s Older Comments"
+msgstr "&larr; Komentar Lama"
+
+#: comments.php:58
+#, fuzzy, php-format
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Newer Comments %s"
+msgstr "Komentar Baru &rarr;"
+
+#: comments.php:81
 msgid "&larr; Older Comments"
 msgstr "&larr; Komentar Lama"
 
-#: comments.php:55 comments.php:80
+#: comments.php:83
 msgid "Newer Comments &rarr;"
 msgstr "Komentar Baru &rarr;"
 
-#: comments.php:90
+#: comments.php:93
 msgid "Comments are closed."
 msgstr "Komentar ditutup."
-
-#: content-featured.php:31
-msgid "Featured"
-msgstr "Unggulan"
-
-#: content-featured.php:41
-msgid "Read More"
-msgstr "Baca Lebih Lanjut"
 
 #. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
 #. *
@@ -77,14 +82,18 @@ msgstr "Baca Lebih Lanjut"
 msgid "Nothing Found"
 msgstr "Tidak Ditemukan Apa-apa"
 
-#: content-none.php:24
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+#: content-none.php:27
+#, fuzzy, php-format
+msgctxt "link to write a new post"
+msgid "Ready to publish your first post? %s."
 msgstr ""
 "Siap menerbitkan postingan pertama Anda? <a href=\"%1$s\">Mulai di sini</a>."
 
-#: content-none.php:28
+#: content-none.php:31
+msgid "Get started here"
+msgstr ""
+
+#: content-none.php:39
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -92,55 +101,32 @@ msgstr ""
 "Maaf, tidak ada yang sesuai dengan istilah pencarian Anda. Coba lagi dengan "
 "beberapa kata kunci lain."
 
-#: content-none.php:33
+#: content-none.php:45
+#, fuzzy
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+"It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr ""
 "Sepertinya kami tidak bisa menemukan apa yang Anda cari. Mungkin fitur "
 "pencarian bisa membantu."
 
-#: functions.php:175
+#: functions.php:202
 msgid "Primary Menu"
 msgstr "Menu Utama"
 
-#: functions.php:176
+#: functions.php:203
 msgid "Social Menu"
 msgstr "Menu Sosial"
 
-#: functions.php:189
-msgid "1 Column Wide"
-msgstr "1 Kolom Lebar"
+#: functions.php:204
+#, fuzzy
+msgid "Footer Menu"
+msgstr "Bagian Tengah Footer"
 
-#: functions.php:190
-msgid "1 Column Narrow"
-msgstr "1 Kolom Sempit"
-
-#: functions.php:191 functions.php:192
-msgid "2 Columns: Sidebar / Content"
-msgstr "2 Kolom: Bilah Samping/Konten"
-
-#: functions.php:191 functions.php:192
-msgid "2 Columns: Content / Sidebar"
-msgstr "2 Kolom: Konten/Bilah Samping"
-
-#: functions.php:193 functions.php:195
-msgid "3 Columns: Sidebar / Sidebar / Content"
-msgstr "3 Kolom: Bilah Samping/Bilah Samping/Konten"
-
-#: functions.php:193 functions.php:195
-msgid "3 Columns: Content / Sidebar / Sidebar"
-msgstr "3 Kolom: Konten/Bilah Samping/Bilah Samping"
-
-#: functions.php:194
-msgid "3 Columns: Sidebar / Content / Sidebar"
-msgstr "3 Kolom: Bilah Samping/Konten/Bilah Samping"
-
-#: functions.php:285
+#: functions.php:305
 msgid "Sidebar"
 msgstr "Bilah Samping"
 
-#: functions.php:287
+#: functions.php:306
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
@@ -148,11 +134,11 @@ msgstr ""
 "Bilah samping primer muncul di samping konten setiap halaman, postingan, "
 "arsip, dan templat pencarian."
 
-#: functions.php:294
+#: functions.php:313
 msgid "Secondary Sidebar"
 msgstr "Bilah Samping Sekunder"
 
-#: functions.php:296
+#: functions.php:314
 msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
@@ -160,51 +146,48 @@ msgstr ""
 "Bilah samping sekunder hanya akan muncul jika Anda memilih tata letak tiga "
 "kolom."
 
-#: functions.php:303
+#: functions.php:321
 #, fuzzy
 msgid "Footer 1"
 msgstr "Kiri Footer"
 
-#: functions.php:305
+#: functions.php:322
 #, fuzzy
 msgid "This sidebar is the first column of the footer widget area."
 msgstr "Bilah samping kiri footer muncul di kolom pertama area widget footer."
 
-#: functions.php:312
+#: functions.php:329
 #, fuzzy
 msgid "Footer 2"
 msgstr "Kiri Footer"
 
-#: functions.php:314
+#: functions.php:330
 #, fuzzy
 msgid "This sidebar is the second column of the footer widget area."
 msgstr ""
 "Bilah samping di tengah footer muncul di kolom kedua area widget footer."
 
-#: functions.php:321
+#: functions.php:337
 #, fuzzy
 msgid "Footer 3"
 msgstr "Kiri Footer"
 
-#: functions.php:323
+#: functions.php:338
 #, fuzzy
 msgid "This sidebar is the third column of the footer widget area."
 msgstr "Bilah samping kanan footer muncul di kolom ketiga area widget footer."
 
-#: header.php:56
+#: functions.php:345
+msgid "Hero"
+msgstr ""
+
+#: functions.php:346
+msgid "Hero widgets appear over the header image on the front page."
+msgstr ""
+
+#: header.php:42
 msgid "Skip to content"
 msgstr "Langsung ke konten"
-
-#. //developer.wordpress.org/themes/basics/template-hierarchy/#search-result
-#. *
-#. * @package Primer
-#. * @since 1.0.0
-#.
-#: search.php:21
-#, php-format
-msgctxt "search term"
-msgid "Search Results for: %s"
-msgstr "Hasil Pencarian untuk: %s"
 
 #: inc/back-compat.php:58
 #, php-format
@@ -213,101 +196,245 @@ msgid ""
 "Please upgrade and try again."
 msgstr ""
 
-#: inc/customizer.php:114
-msgid "Base Color Scheme"
+#: inc/customizer.php:173
+msgid "Use featured image"
 msgstr ""
 
-#: inc/customizer.php:137
+#: inc/customizer.php:174
+msgid ""
+"Allow the featured image on the current post to override the header image."
+msgstr ""
+
+#: inc/customizer/colors.php:38
+#, fuzzy
+msgid "Site Title Color"
+msgstr "Bilah Samping Sekunder"
+
+#: inc/customizer/colors.php:52
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer/colors.php:64
+msgid "Header Background Color"
+msgstr ""
+
+#: inc/customizer/colors.php:73
 msgid "Menu Background Color"
 msgstr ""
 
-#: inc/customizer.php:158
+#: inc/customizer/colors.php:91
+msgid "Footer Background Color"
+msgstr ""
+
+#: inc/customizer/colors.php:100
 msgid "Tagline Text Color"
 msgstr ""
 
-#: inc/customizer.php:179
+#: inc/customizer/colors.php:109
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer.php:200
+#: inc/customizer/colors.php:135
 msgid "Main Text Color"
 msgstr ""
 
-#: inc/customizer.php:221
+#: inc/customizer/colors.php:162
 #, fuzzy
 msgid "Secondary Text Color"
 msgstr "Bilah Samping Sekunder"
 
-#: inc/customizer.php:231
-msgid "Typography"
-msgstr ""
-
-#: inc/customizer.php:248
-#, fuzzy
-msgid "Primary Font"
-msgstr "Menu Utama"
-
-#: inc/customizer.php:269
-#, fuzzy
-msgid "Secondary Font"
-msgstr "Bilah Samping Sekunder"
-
-#: inc/customizer.php:342
+#: inc/customizer/colors.php:190 inc/customizer/layouts.php:302
 #, fuzzy
 msgid "Default"
 msgstr "Default"
 
-#: inc/customizer.php:354
+#: inc/customizer/colors.php:197 inc/customizer/layouts.php:311
+msgid "Custom"
+msgstr ""
+
+#: inc/customizer/colors.php:211
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer.php:366
+#: inc/customizer/colors.php:225
 msgid "Muted"
 msgstr ""
 
-#: inc/customizer.php:378
+#: inc/customizer/colors.php:239
 msgid "Red"
 msgstr ""
 
-#: inc/hooks.php:218
+#: inc/customizer/colors.php:456
+msgid "Base Color Scheme"
+msgstr ""
+
+#: inc/customizer/colors.php:657
+msgid "City"
+msgstr ""
+
+#: inc/customizer/fonts.php:81
+#, fuzzy
+msgid "Header Font"
+msgstr "Bilah Samping Sekunder"
+
+#: inc/customizer/fonts.php:82
+msgid ""
+"Site title, post titles, widget titles, form labels, table headers and "
+"buttons."
+msgstr ""
+
+#: inc/customizer/fonts.php:99
+#, fuzzy
+msgid "Primary Font"
+msgstr "Menu Utama"
+
+#: inc/customizer/fonts.php:100
+msgid "Paragraphs, lists, menu links, quotes and tables."
+msgstr ""
+
+#: inc/customizer/fonts.php:115
+#, fuzzy
+msgid "Secondary Font"
+msgstr "Bilah Samping Sekunder"
+
+#: inc/customizer/fonts.php:116
+msgid ""
+"Post bylines, comment counts, comment reply links, post footers and quote "
+"footers."
+msgstr ""
+
+#: inc/customizer/fonts.php:164
+msgid "Fonts"
+msgstr ""
+
+#: inc/customizer/fonts.php:189
+#, fuzzy, php-format
+msgctxt "font name"
+msgid "%s (Default)"
+msgstr "Default"
+
+#: inc/customizer/layouts.php:47
+#, fuzzy
+msgid "One Column: Wide"
+msgstr "1 Kolom Lebar"
+
+#: inc/customizer/layouts.php:48
+#, fuzzy
+msgid "One Column: Narrow"
+msgstr "1 Kolom Sempit"
+
+#: inc/customizer/layouts.php:49 inc/customizer/layouts.php:138
+#, fuzzy
+msgid "Two Columns: Content | Sidebar"
+msgstr "2 Kolom: Konten/Bilah Samping"
+
+#: inc/customizer/layouts.php:50 inc/customizer/layouts.php:137
+#, fuzzy
+msgid "Two Columns: Sidebar | Content"
+msgstr "2 Kolom: Bilah Samping/Konten"
+
+#: inc/customizer/layouts.php:51 inc/customizer/layouts.php:140
+#, fuzzy
+msgid "Three Columns: Content | Sidebar | Sidebar"
+msgstr "3 Kolom: Konten/Bilah Samping/Bilah Samping"
+
+#: inc/customizer/layouts.php:52
+#, fuzzy
+msgid "Three Columns: Sidebar | Content | Sidebar"
+msgstr "3 Kolom: Bilah Samping/Konten/Bilah Samping"
+
+#: inc/customizer/layouts.php:53 inc/customizer/layouts.php:139
+#, fuzzy
+msgid "Three Columns: Sidebar | Sidebar | Content"
+msgstr "3 Kolom: Bilah Samping/Bilah Samping/Konten"
+
+#: inc/customizer/layouts.php:91
+msgid "Fixed"
+msgstr ""
+
+#: inc/customizer/layouts.php:92
+msgid "Fluid"
+msgstr ""
+
+#: inc/customizer/layouts.php:252 inc/customizer/layouts.php:443
+msgid "Layout"
+msgstr "Tata letak"
+
+#: inc/customizer/layouts.php:284
+#, php-format
+msgctxt "link to the Customizer"
+msgid "The site-wide Default layout setting is located in the %s."
+msgstr ""
+
+#: inc/customizer/layouts.php:288
+msgid "Customizer"
+msgstr ""
+
+#: inc/customizer/layouts.php:465
+#, fuzzy
+msgid "Default Layout"
+msgstr "Default"
+
+#: inc/customizer/layouts.php:466
+msgid "All posts and pages on your site will use this layout by default."
+msgstr ""
+
+#: inc/customizer/layouts.php:495
+#, fuzzy
+msgid "Page Width"
+msgstr "Halaman %d"
+
+#: inc/customizer/layouts.php:496
+msgid "Display your site differently on larger screens."
+msgstr ""
+
+#: inc/helpers.php:38
+#, php-format
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr "Hasil Pencarian untuk: %s"
+
+#: inc/helpers.php:49
+msgid "404 Page Not Found"
+msgstr ""
+
+#: inc/hooks.php:348
 #, php-format
 msgctxt "page number"
 msgid "Page %d"
 msgstr "Halaman %d"
 
-#: inc/template-tags.php:29
+#: inc/template-tags.php:40
 msgid "Posts navigation"
 msgstr "Navigasi postingan"
 
-#: inc/template-tags.php:35
+#: inc/template-tags.php:46
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Postingan lama"
 
-#: inc/template-tags.php:41
+#: inc/template-tags.php:52
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Postingan baru <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:78
+#: inc/template-tags.php:85
 msgid "Post navigation"
 msgstr "Navigasi postingan"
 
-#: inc/template-tags.php:193
+#: inc/template-tags.php:188
 msgid "Blog"
 msgstr "Blog"
 
-#: inc/theme-layouts.php:364
-msgctxt "theme layout"
-msgid "Default"
-msgstr "Default"
+#: templates/parts/credit.php:13
+#, php-format
+msgctxt "1. copyright symbol, 2. year, 3. site title"
+msgid "Copyright %1$s %2$d %3$s"
+msgstr ""
 
-#: inc/theme-layouts.php:459 inc/theme-layouts.php:566
-#: inc/theme-layouts.php:651
-msgid "Layout"
-msgstr "Tata letak"
-
-#: inc/theme-layouts.php:684
-msgid "Global Layout"
-msgstr "Tata Letak Global"
+#: templates/parts/credit.php:24
+#, fuzzy, php-format
+msgctxt "1. theme name link, 2. theme author link"
+msgid "%1$s theme by %2$s"
+msgstr "%1$s oleh %2$s"
 
 #: templates/parts/loop/page-content.php:17
 #: templates/parts/loop/post-content.php:17
@@ -323,6 +450,12 @@ msgstr "Edit"
 #: templates/parts/loop/post-content.php:13
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Baca Selengkapnya <span class=\"meta-nav\">&rarr;</span>"
+
+#: templates/parts/loop/post-excerpt.php:13
+#, php-format
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Continue Reading %s"
+msgstr ""
 
 #: templates/parts/loop/post-footer.php:19
 #: templates/parts/loop/post-footer.php:31
@@ -346,42 +479,44 @@ msgctxt "tag list"
 msgid "Filed under: %s"
 msgstr "Diarsipkan dalam: %s"
 
-#: templates/parts/loop/post-meta.php:13
-#, php-format
-msgctxt "1. post date, 2. author name"
-msgid "%1$s by %2$s"
-msgstr "%1$s oleh %2$s"
-
-#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-meta.php:21
 #: templates/parts/loop/post-search-footer.php:41
 msgid "Leave a comment"
 msgstr "Tinggalkan komentar"
 
-#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-meta.php:21
 #: templates/parts/loop/post-search-footer.php:41
 msgid "1 Comment"
 msgstr "1 Komentar"
 
-#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-meta.php:21
 #: templates/parts/loop/post-search-footer.php:41
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% Komentar"
 
-#: templates/parts/site-info.php:17
-#, php-format
-msgctxt "1. theme name link, 2. theme author link"
-msgid "Built with %1$s by %2$s."
-msgstr "Dibuat dengan %1$s oleh %2$s."
+#~ msgid "Featured"
+#~ msgstr "Unggulan"
+
+#~ msgid "Read More"
+#~ msgstr "Baca Lebih Lanjut"
+
+#~ msgctxt "theme layout"
+#~ msgid "Default"
+#~ msgstr "Default"
+
+#~ msgid "Global Layout"
+#~ msgstr "Tata Letak Global"
+
+#~ msgctxt "1. theme name link, 2. theme author link"
+#~ msgid "Built with %1$s by %2$s."
+#~ msgstr "Dibuat dengan %1$s oleh %2$s."
 
 #~ msgid "Most Used Categories"
 #~ msgstr "Kategori yang Paling Sering Digunakan"
 
 #~ msgid "Try looking in the monthly archives. %1$s"
 #~ msgstr "Coba cari dalam arsip bulanan. %1$s"
-
-#~ msgid "Footer Center"
-#~ msgstr "Bagian Tengah Footer"
 
 #~ msgid "Footer Right"
 #~ msgstr "Kanan Footer"

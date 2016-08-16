@@ -8,7 +8,7 @@
  * @since 1.0.0
  */
 
-get_header() ?>
+get_header(); ?>
 
 <section id="primary" class="content-area">
 
@@ -16,23 +16,17 @@ get_header() ?>
 
 	<?php if ( have_posts() ) : ?>
 
-		<header class="page-header">
-
-			<h1 class="page-title"><?php printf( esc_html_x( 'Search Results for: %s', 'search term', 'primer' ), sprintf( '<span>%s</span>', get_search_query() ) ) ?></h1>
-
-		</header><!-- .page-header -->
-
 		<?php while ( have_posts() ) : the_post() ?>
 
-			<?php get_template_part( 'content', 'search' ) ?>
+			<?php get_template_part( 'content', 'search' ); ?>
 
 		<?php endwhile; ?>
 
-		<?php primer_paging_nav() ?>
+		<?php primer_paging_nav(); ?>
 
 	<?php else : ?>
 
-		<?php get_template_part( 'content', 'none' ) ?>
+		<?php get_template_part( 'content', 'none' ); ?>
 
 	<?php endif; ?>
 
@@ -40,8 +34,8 @@ get_header() ?>
 
 </section><!-- #primary -->
 
-<?php get_sidebar() ?>
+<?php get_sidebar(); ?>
 
-<?php get_sidebar( 'tertiary' ) ?>
+<?php get_sidebar( 'tertiary' ); ?>
 
-<?php get_footer() ?>
+<?php get_footer(); ?>

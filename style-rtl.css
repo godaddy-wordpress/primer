@@ -1,16 +1,16 @@
 @charset "UTF-8";
 /**
  * Theme Name: Primer
- * Theme URI: https://www.godaddy.com/
+ * Theme URI: https://wordpress.org/themes/primer/
  * Author: GoDaddy
  * Author URI: https://www.godaddy.com/
- * Description: Primer is a modern WordPress theme based on _s.
+ * Description: Primer is a powerful theme that brings clarity to your content in a fresh design.
  * Version: 1.0.0
  * License: GPL-2.0
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: primer
  * Domain Path: /languages
- * Tags: custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, fixed-layout, flexible-header, fluid-layout, left-sidebar, light, one-column, responsive-layout, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
+ * Tags: custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
  *
  * This theme, like WordPress, is licensed under the GPL.
  * Use it to make something cool, have fun, and share what you've learned with others.
@@ -620,6 +620,7 @@ a {
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a,
+  .main-navigation .current_page_parent > a,
   .main-navigation .current-menu-ancestor > a {
     background-color: rgba(0, 0, 0, 0.1); }
   .main-navigation .sub-menu .menu-item-has-children > a::after {
@@ -1423,19 +1424,11 @@ body.page-template-page-builder-no-header .content-area {
 --------------------------------------------------------------*/
 .site-header {
   position: relative;
-  background-color: #0b3954; }
-
-.hero {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+  background-color: #0b3954;
   -webkit-background-size: cover;
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  z-index: 0; }
+  background-position: bottom center;
+  background-repeat: no-repeat; }
 
 .site-header-wrapper {
   max-width: 1100px;
@@ -1456,7 +1449,7 @@ body.no-max-width .site-header-wrapper {
   margin-left: 1.38889%;
   position: relative;
   z-index: 1;
-  padding: 5% 1rem; }
+  padding: 6% 1rem; }
   @media only screen and (max-width: 40.063em) {
     .site-title-wrapper {
       padding-right: 0.75rem;
@@ -1484,36 +1477,69 @@ body.custom-header-image .site-description {
 .header-image img {
   display: block; }
 
-#page > .page-title-container {
-  background-color: white; }
-  #page > .page-title-container .page-header,
-  #page > .page-title-container .archive-header {
+.page-title-container {
+  background-color: #fff; }
+  .page-title-container .page-header {
     max-width: 1100px;
     margin-right: auto;
     margin-left: auto;
     position: relative;
     z-index: 9999;
     clear: both; }
-    #page > .page-title-container .page-header:after,
-    #page > .page-title-container .archive-header:after {
+    .page-title-container .page-header:after {
       content: " ";
       display: block;
       clear: both; }
-    #page > .page-title-container .page-header h1,
-    #page > .page-title-container .archive-header h1 {
+    .page-title-container .page-header h1 {
       width: 97.22222%;
       float: right;
       margin-right: 1.38889%;
       margin-left: 1.38889%;
       padding: 3% 1rem;
-      margin-top: 0;
       margin-bottom: 0;
-      font-weight: 200; }
-      @media only screen and (max-width: 40.063em) {
-        #page > .page-title-container .page-header h1,
-        #page > .page-title-container .archive-header h1 {
-          padding-right: 0.75rem;
-          padding-left: 0.75rem; } }
+      font-weight: 300; }
+
+body.no-max-width .page-title-container .page-header {
+  max-width: none; }
+
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+.hero {
+  width: 97.22222%;
+  float: right;
+  margin-right: 1.38889%;
+  margin-left: 1.38889%;
+  clear: both;
+  padding: 0 1rem;
+  color: #fff; }
+  body.custom-header-image .hero {
+    text-shadow: -1px -1px 20px rgba(0, 0, 0, 0.5); }
+  .hero .hero-inner {
+    max-width: none; }
+    @media only screen and (min-width: 61.063em) {
+      .hero .hero-inner {
+        max-width: 75%; } }
+  .hero .widget {
+    padding: 0;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    font-weight: 300;
+    background: none; }
+    .hero .widget:last-child {
+      margin-bottom: 0;
+      padding-bottom: 6%; }
+    .hero .widget h1, .hero .widget h2, .hero .widget h3, .hero .widget h4, .hero .widget h5, .hero .widget h6, .hero .widget p, .hero .widget ul, .hero .widget ol, .hero .widget li {
+      color: #fff; }
+    .hero .widget ul, .hero .widget ol {
+      padding-right: 0; }
+      .hero .widget ul li, .hero .widget ol li {
+        list-style: none; }
+    .hero .widget input, .hero .widget select, .hero .widget textarea {
+      color: rgba(11, 57, 84, 0.5); }
+  .hero label, .hero input, .hero select, .hero textarea {
+    display: inline;
+    width: auto; }
 
 /*--------------------------------------------------------------
 # Footer
@@ -1601,6 +1627,20 @@ body.no-max-width .footer-widget-area {
     margin-left: 1.38889%;
     font-size: 90%;
     line-height: 38px; }
+  .site-info-wrapper .footer-menu {
+    width: 97.22222%;
+    float: right;
+    margin-right: 1.38889%;
+    margin-left: 1.38889%;
+    margin-bottom: 1em;
+    text-align: center; }
+    .site-info-wrapper .footer-menu ul {
+      padding: 0;
+      margin: 0;
+      list-style: none; }
+    .site-info-wrapper .footer-menu li {
+      display: inline-block;
+      margin: 0.5em 1em; }
   .site-info-wrapper .social-menu {
     width: 47.22222%;
     float: left;
@@ -1827,7 +1867,6 @@ body.no-max-width .site-info-wrapper .site-info {
   color: #ff6663; }
 
 .entry-meta {
-  padding-bottom: 1rem;
   font-size: 90%;
   color: #686868; }
 

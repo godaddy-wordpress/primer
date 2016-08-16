@@ -9,24 +9,35 @@
  */
 ?>
 
-<article id="post-<?php the_ID() ?>" <?php post_class() ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php get_template_part( 'templates/parts/loop/post', 'title' ) ?>
+	<?php if ( ! is_single() || ! primer_use_featured_hero_image() ) : ?>
 
-	<?php get_template_part( 'templates/parts/loop/post', 'meta' ) ?>
-
-	<?php get_template_part( 'templates/parts/loop/post', 'thumbnail' ) ?>
-
-	<?php if ( is_single() ) : ?>
-
-		<?php get_template_part( 'templates/parts/loop/post', 'content' ) ?>
-
-	<?php else : ?>
-
-		<?php get_template_part( 'templates/parts/loop/post', 'excerpt' ) ?>
+		<?php get_template_part( 'templates/parts/loop/post', 'thumbnail' ); ?>
 
 	<?php endif; ?>
 
-	<?php get_template_part( 'templates/parts/loop/post', 'footer' ) ?>
+	<?php get_template_part( 'templates/parts/loop/post', 'title' ); ?>
+
+	<?php
+	/**
+	 * Fires after templates/parts/loop/post template
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'primer_after_post_title_template' );
+	?>
+
+	<?php if ( is_single() ) : ?>
+
+		<?php get_template_part( 'templates/parts/loop/post', 'content' ); ?>
+
+	<?php else : ?>
+
+		<?php get_template_part( 'templates/parts/loop/post', 'excerpt' ); ?>
+
+	<?php endif; ?>
+
+	<?php get_template_part( 'templates/parts/loop/post', 'footer' ); ?>
 
 </article><!-- #post-## -->

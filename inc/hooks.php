@@ -16,20 +16,67 @@ function primer_add_site_title() {
 	get_template_part( 'templates/parts/site-title' );
 
 }
-add_action( 'primer_header', 'primer_add_site_title', 5 );
+add_action( 'primer_header', 'primer_add_site_title' );
 
 /**
- * Display site header in the header.
+ * Display hero element in the header.
  *
  * @action primer_header
  * @since  1.0.0
  */
 function primer_add_hero() {
 
-	get_template_part( 'templates/parts/hero' );
+	if ( ! is_404() && ! is_page_template( 'templates/page-builder-no-header.php' ) ) {
+
+		get_template_part( 'templates/parts/hero' );
+
+	}
 
 }
-add_action( 'primer_header', 'primer_add_hero', 10 );
+add_action( 'primer_header', 'primer_add_hero' );
+
+/**
+ * Display content in the hero element.
+ *
+ * @action primer_hero
+ * @since  1.0.0
+ */
+function primer_add_hero_content() {
+
+	if ( is_front_page() && is_active_sidebar( 'hero' ) ) {
+
+		dynamic_sidebar( 'hero' );
+
+	}
+
+}
+add_action( 'primer_hero', 'primer_add_hero_content' );
+
+/**
+ * Display mobile menu html.
+ *
+ * @action primer_before_site_navigation
+ * @since  1.0.0
+ */
+function primer_add_mobile_menu() {
+
+	get_template_part( 'templates/parts/mobile-menu' );
+
+}
+add_action( 'primer_before_site_navigation', 'primer_add_mobile_menu' );
+
+/**
+ * Add primary menu.
+ *
+ * @action primer_site_navigation
+ * @since 1.0.0
+ */
+function primer_add_primary_menu() {
+
+	wp_nav_menu( array( 'theme_location' => 'primary' ) );
+
+}
+add_action( 'primer_site_navigation', 'primer_add_primary_menu' );
 
 /**
  * Display primary navigation menu after the header.
@@ -42,7 +89,37 @@ function primer_add_primary_navigation() {
 	get_template_part( 'templates/parts/primary-navigation' );
 
 }
-add_action( 'primer_after_header', 'primer_add_primary_navigation', 20 );
+add_action( 'primer_after_header', 'primer_add_primary_navigation' );
+
+/**
+ * Display page titles after the header.
+ *
+ * @action primer_after_header
+ * @since  1.0.0
+ */
+function primer_add_page_title() {
+
+	if ( primer_get_the_page_title() ) {
+
+		get_template_part( 'templates/parts/page-title' );
+
+	}
+
+}
+add_action( 'primer_after_header', 'primer_add_page_title' );
+
+/**
+ * Display post meta template.
+ *
+ * @action primer_after_loop_post_template
+ * @since 1.0.0
+ */
+function primer_add_post_meta() {
+
+	get_template_part( 'templates/parts/loop/post', 'meta' );
+
+}
+add_action( 'primer_after_loop_post_template', 'primer_add_post_meta' );
 
 /**
  * Display widget areas in the footer.
@@ -55,7 +132,7 @@ function primer_add_footer_widgets() {
 	get_template_part( 'templates/parts/footer-widgets' );
 
 }
-add_action( 'primer_footer', 'primer_add_footer_widgets', 5 );
+add_action( 'primer_footer', 'primer_add_footer_widgets' );
 
 /**
  * Display site info after the footer.
@@ -68,7 +145,54 @@ function primer_add_site_info() {
 	get_template_part( 'templates/parts/site-info' );
 
 }
-add_action( 'primer_after_footer', 'primer_add_site_info', 20 );
+add_action( 'primer_after_footer', 'primer_add_site_info' );
+
+/**
+ * Display footer navigation menu in the footer.
+ *
+ * @action primer_site_info
+ * @since  1.0.0
+ */
+function primer_add_footer_navigation() {
+
+	if ( has_nav_menu( 'footer' ) ) {
+
+		get_template_part( 'templates/parts/footer-navigation' );
+
+	}
+
+}
+add_action( 'primer_site_info', 'primer_add_footer_navigation', 5 );
+
+/**
+ * Display social navigation menu in the footer.
+ *
+ * @action primer_site_info
+ * @since  1.0.0
+ */
+function primer_add_social_navigation() {
+
+	if ( has_nav_menu( 'social' ) ) {
+
+		get_template_part( 'templates/parts/social-navigation' );
+
+	}
+
+}
+add_action( 'primer_site_info', 'primer_add_social_navigation', 7 );
+
+/**
+ * Display credit in the footer.
+ *
+ * @action primer_site_info
+ * @since  1.0.0
+ */
+function primer_add_credit() {
+
+	get_template_part( 'templates/parts/credit' );
+
+}
+add_action( 'primer_site_info', 'primer_add_credit' );
 
 /**
  * Set the post excerpt length to 20 words.

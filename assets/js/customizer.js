@@ -86,19 +86,19 @@
 
 	} );
 
-	api( 'full_width', function( value ) {
+	api( 'page_width', function( value ) {
 
 		value.bind( function( to ) {
 
-			switch ( parseInt( to, 10 ) ) {
+			switch ( to ) {
 
-				case 0 :
+				case 'fixed' :
 
 					$( 'body' ).removeClass( 'no-max-width' );
 
 					break;
 
-				case 1 :
+				case 'fluid' :
 
 					$( 'body' ).addClass( 'no-max-width' );
 
