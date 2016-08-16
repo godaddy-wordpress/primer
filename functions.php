@@ -277,12 +277,7 @@ add_action( 'after_setup_theme', 'primer_content_width', 0 );
  * @link  https://developer.wordpress.org/reference/functions/add_editor_style/
  * @since 1.0.0
  */
-function primer_editor_style() {
-
-	add_editor_style();
-
-}
-add_action( 'admin_init', 'primer_editor_style' );
+add_action( 'admin_init', 'add_editor_style', 10, 0 );
 
 /**
  * Register sidebar areas.

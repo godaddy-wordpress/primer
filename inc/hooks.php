@@ -66,6 +66,19 @@ function primer_add_mobile_menu() {
 add_action( 'primer_before_site_navigation', 'primer_add_mobile_menu' );
 
 /**
+ * Add primary menu.
+ *
+ * @action primer_site_navigation
+ * @since 1.0.0
+ */
+function primer_add_primary_menu() {
+
+	wp_nav_menu( array( 'theme_location' => 'primary' ) );
+
+}
+add_action( 'primer_site_navigation', 'primer_add_primary_menu' );
+
+/**
  * Display primary navigation menu after the header.
  *
  * @action primer_after_header
