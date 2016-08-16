@@ -447,11 +447,11 @@ add_action( 'wp_enqueue_scripts', 'primer_scripts' );
  */
 function primer_setup_author() {
 
-	global $wp_query;
+	global $wp_query, $authordata;
 
 	if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
 
-		$GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
+		$authordata = get_userdata( $wp_query->post->post_author );
 
 	}
 
