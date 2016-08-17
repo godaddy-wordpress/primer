@@ -380,23 +380,18 @@ function primer_scripts() {
 
 	}
 
-	/**
-	 * Filter the hero image element selector.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @var string
-	 */
-	$selector = (string) apply_filters( 'primer_hero_image_selector', '.site-header' );
+	if ( primer_has_hero_image() ) {
 
-	wp_add_inline_style(
-		'primer',
-		sprintf(
-			'%s { background-image: url(%s); }',
-			wp_strip_all_tags( $selector ),
-			esc_url( primer_get_hero_image() )
-		)
-	);
+		wp_add_inline_style(
+			'primer',
+			sprintf(
+				'%s { background-image: url(%s); }',
+				primer_get_hero_image_selector(),
+				esc_url( primer_get_hero_image() )
+			)
+		);
+
+	}
 
 	/**
 	 * Enqueue lt IE 9 Conditional

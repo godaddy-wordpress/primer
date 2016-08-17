@@ -182,6 +182,28 @@ function primer_layout_has_sidebar( $layout = null ) {
 }
 
 /**
+ * Return the hero image element selector.
+ *
+ * @since 1.0.0
+ *
+ * @return string
+ */
+function primer_get_hero_image_selector() {
+
+	/**
+	 * Filter the hero image element selector.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var string
+	 */
+	$selector = (string) apply_filters( 'primer_hero_image_selector', '.site-header' );
+
+	return wp_strip_all_tags( $selector );
+
+}
+
+/**
  * Check if a post's featured image should be the header image.
  *
  * @since 1.0.0
