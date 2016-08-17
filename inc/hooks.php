@@ -401,13 +401,13 @@ function primer_hero_edit_link( $params ) {
 		$current_url = ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 		$edit_url = add_query_arg(
-			[
+			array(
 				'autofocus' => [
 					'section' => 'sidebar-widgets-' . $sidebar['widget_id'],
 					'control' => 'widget_' . preg_replace( '/-(\d)/', '[$1]', $sidebar['widget_id'] ),
 				],
 				'url' => urlencode( $current_url ),
-			],
+			),
 			wp_customize_url()
 		);
 
