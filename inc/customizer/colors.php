@@ -25,6 +25,8 @@ class Primer_Customizer_Colors {
 	 */
 	public function __construct() {
 
+		$hero_image_color_overlay = absint( get_theme_mod( 'hero_image_color_overlay', 50 ) ) * 0.01;
+
 		/**
 		 * Filter the registered color settings.
 		 *
@@ -66,6 +68,13 @@ class Primer_Customizer_Colors {
 					'css'     => array(
 						'.site-header' => array(
 							'background-color' => '%1$s',
+						),
+					),
+					'rgba_css' => array(
+						'.site-header' => array(
+							'-moz-box-shadow'    => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %.2f)', $hero_image_color_overlay ),
+							'-webkit-box-shadow' => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %.2f)', $hero_image_color_overlay ),
+							'box-shadow'         => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %.2f)', $hero_image_color_overlay ),
 						),
 					),
 				),
@@ -367,7 +376,10 @@ class Primer_Customizer_Colors {
 
 		if ( ! empty( $args['rgba_css'] ) ) {
 
-			$css .= sprintf( Primer_Customizer::parse_css_rules( $args['rgba_css'] ), implode( ', ', primer_hex2rgb( $hex ) ) );
+			$css .= sprintf(
+				Primer_Customizer::parse_css_rules( $args['rgba_css'] ),
+				implode( ', ', primer_hex2rgb( $hex ) )
+			);
 
 		}
 
