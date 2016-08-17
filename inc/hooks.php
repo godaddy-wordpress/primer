@@ -380,7 +380,7 @@ add_filter( 'wp_title', 'primer_wp_title', 10, 2 );
 function primer_hero_edit_link( $params ) {
 
 	if (
-		is_customize_preview()
+	    is_customize_preview()
 	    || ! isset( $params[0]['id'] )
 	    || 'hero' !== $params[0]['id']
 	) {
@@ -392,7 +392,7 @@ function primer_hero_edit_link( $params ) {
 	$sidebar = &$params[0];
 
 	if (
-		current_user_can( 'edit_theme_options' )
+	    current_user_can( 'edit_theme_options' )
 	    && current_user_can( 'customize' )
 	    && isset( $sidebar['widget_id'] )
 	) {
