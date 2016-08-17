@@ -411,8 +411,8 @@ function primer_hero_edit_link( $params ) {
 			wp_customize_url()
 		);
 
-		$sidebar['after_widget'] .= sprintf(
-			'<a class="widget-edit-link" data-widget-id="%s" href="%s">%s</a>',
+		$sidebar['after_widget'] = sprintf(
+			'<a class="widget-edit-link" data-widget-id="%s" href="%s">%s</a>' . $sidebar['after_widget'],
 			esc_attr( $sidebar['widget_id'] ),
 			esc_url( $edit_url ),
 			__( 'Edit' )
