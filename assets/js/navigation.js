@@ -42,10 +42,7 @@ jQuery(document).ready(function($) {
 			});
 
 	    } else {
-	    	$submenu.removeClass('bump').css({
-				'left'  : submenu_orig_pos,
-				'right' : 'auto',
-			});
+	    	$submenu.removeClass('bump').removeAttr('style');
 	    }
 	});
 
