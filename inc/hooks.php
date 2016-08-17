@@ -369,3 +369,58 @@ function primer_wp_title( $title, $sep ) {
 
 }
 add_filter( 'wp_title', 'primer_wp_title', 10, 2 );
+
+/**
+ * Output an edit link for hero sidebar widgets
+ *
+ * @param array $params
+ *
+ * @return array
+ */
+function primer_hero_edit_link( $params ) {
+
+	if (
+		is_customize_preview()
+	    || ! isset( $params[0]['id'] )
+	    || 'hero' !== $params[0]['id']
+	) {
+
+		return $params;
+
+	}
+
+	$sidebar = &$params[0];
+
+	if (
+		current_user_can( 'edit_theme_options' )
+	    && current_user_can( 'customize' )
+	    && isset( $sidebar['widget_id'] )
+	) {
+
+		// see admin-bar.php -> wp_admin_bar_customize_menu()
+		$current_url = ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+		$edit_url = add_query_arg(
+			[
+				'autofocus' => [
+					'section' => 'sidebar-widgets-' . $sidebar['widget_id'],
+					'control' => 'widget_' . preg_replace( '/-(\d)/', '[$1]', $sidebar['widget_id'] ),
+				],
+				'url' => urlencode( $current_url ),
+			],
+			wp_customize_url()
+		);
+
+		$sidebar['after_widget'] .= sprintf(
+			'<a class="widget-edit-link" data-widget-id="%s" href="%s">%s</a>',
+			esc_attr( $sidebar['widget_id'] ),
+			esc_url( $edit_url ),
+			__( 'Edit' )
+		);
+
+	}
+
+	return $params;
+
+}
+add_filter( 'dynamic_sidebar_params', 'primer_hero_edit_link' );
