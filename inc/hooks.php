@@ -402,10 +402,10 @@ function primer_hero_edit_link( $params ) {
 
 		$edit_url = add_query_arg(
 			array(
-				'autofocus' => [
+				'autofocus' => array(
 					'section' => 'sidebar-widgets-' . $sidebar['widget_id'],
 					'control' => 'widget_' . preg_replace( '/-(\d)/', '[$1]', $sidebar['widget_id'] ),
-				],
+				),
 				'url' => urlencode( $current_url ),
 			),
 			wp_customize_url()
