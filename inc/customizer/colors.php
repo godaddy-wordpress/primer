@@ -413,9 +413,9 @@ class Primer_Customizer_Colors {
 						// Backgrounds
 						'background_color'               => '#f4f5f9',
 						'content_background_color'       => '#ffffff',
-						'hero_background_color'          => '#796B5A',
+						'hero_background_color'          => '#796b5a',
 						'menu_background_color'          => '#b1a18b',
-						'footer_widget_background_color' => '#796B5A',
+						'footer_widget_background_color' => '#796b5a',
 						'footer_background_color'        => '#f4f5f9',
 					),
 				),
