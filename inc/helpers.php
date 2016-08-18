@@ -182,6 +182,34 @@ function primer_layout_has_sidebar( $layout = null ) {
 }
 
 /**
+ * Check if the site has a custom logo.
+ *
+ * @since 1.0.0
+ *
+ * @return bool
+ */
+function primer_has_custom_logo() {
+
+ 	/**
+	 * For backwards compatibility prior to WordPress 4.5.
+	 *
+	 * @link  https://developer.wordpress.org/reference/functions/has_custom_logo/
+	 * @since 1.0.0
+	 */
+	$enabled = function_exists( 'has_custom_logo' ) ? has_custom_logo() : (bool) get_theme_mod( 'custom_logo' );
+
+	/**
+	 * Filter if the site has a custom logo.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var bool
+	 */
+	return (bool) apply_filters( 'primer_has_custom_logo', $enabled );
+
+}
+
+/**
  * Return the hero image element selector.
  *
  * @since 1.0.0

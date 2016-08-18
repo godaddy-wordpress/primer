@@ -6,13 +6,105 @@
  */
 
 /**
+ * Display a custom logo.
+ *
+ * @since 1.0.0
+ */
+function primer_the_custom_logo() {
+
+	/**
+	 * For backwards compatibility prior to WordPress 4.5.
+	 *
+	 * @link  https://developer.wordpress.org/reference/functions/the_custom_logo/
+	 * @since 1.0.0
+	 */
+	if ( function_exists( 'the_custom_logo' ) ) {
+
+		the_custom_logo();
+
+		return;
+
+	}
+
+	$custom_logo_id = get_theme_mod( 'custom_logo' );
+
+	if ( ! $custom_logo_id && ! is_customize_preview() ) {
+
+		return;
+
+	}
+
+	$args = array(
+		'class'    => 'custom-logo',
+		'itemprop' => 'logo',
+	);
+
+	printf(
+		'<a href="%1$s" class="custom-logo-link" %2$s>%3$s</a>',
+		esc_url( home_url( '/' ) ),
+		! is_customize_preview() ? 'rel="home" itemprop="url"' : 'style="display:none;"',
+		! is_customize_preview() ? wp_get_attachment_image( $custom_logo_id, 'full', false, $args ) : '<img class="custom-logo"/>'
+	);
+
+}
+
+/**
+ * Display the site title.
+ *
+ * @since 1.0.0
+ */
+function primer_the_site_title() {
+
+	$html = sprintf(
+		'<h1 class="site-title"><a href="%s" rel="home">%s</a></h1>',
+		esc_url( home_url( '/' ) ),
+		get_bloginfo( 'name' )
+	);
+
+	/**
+	 * Filter the site title HTML.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var string
+	 */
+	echo (string) apply_filters( 'primer_the_site_title', $html );
+
+}
+
+/**
+ * Display the site description.
+ *
+ * @since 1.0.0
+ */
+function primer_the_site_description() {
+
+	$html = sprintf(
+		'<div class="site-description">%s</a></div>',
+		get_bloginfo( 'description' )
+	);
+
+	/**
+	 * Filter the site description HTML.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var string
+	 */
+	echo (string) apply_filters( 'primer_the_site_description', $html );
+
+}
+
+/**
  * Display a page title.
+ *
+ * @since 1.0.0
  */
 function primer_the_page_title() {
 
 	if ( $title = primer_get_the_page_title() ) {
 
-		echo $title;
+		echo $title; // xss ok
 
 	}
 
@@ -157,11 +249,9 @@ function primer_post_format() {
  *
  * Adapted from Christoph Weil's Really Simple Breadcrumb plugin.
  *
- * @link https://wordpress.org/plugins/really-simple-breadcrumb/
- *
- * @since 1.0.0
- *
  * @global WP_Post $post
+ * @link   https://wordpress.org/plugins/really-simple-breadcrumb/
+ * @since  1.0.0
  */
 function primer_breadcrumbs() {
 
