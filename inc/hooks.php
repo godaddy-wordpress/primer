@@ -73,10 +73,32 @@ add_action( 'primer_before_site_navigation', 'primer_add_mobile_menu' );
  */
 function primer_add_primary_menu() {
 
-	wp_nav_menu( array( 'theme_location' => 'primary' ) );
+	wp_nav_menu(
+		array(
+			'theme_location' => 'primary',
+			'walker' => new Primer_Primary_Menu_Sublevel_Walker,
+		)
+	);
 
 }
 add_action( 'primer_site_navigation', 'primer_add_primary_menu' );
+
+/**
+ * Custom class that enables us to add some markup before the menu
+ *
+ * Class Primer_Primary_Sublevel_Walker
+ */
+class Primer_Primary_Menu_Sublevel_Walker extends Walker_Nav_Menu {
+
+	function start_lvl( &$output, $depth = 0, $args = array() ) {
+
+		$indent = str_repeat( "\t", $depth );
+
+		$output .= "\n$indent<a class='expand' href='#'></a>\n$indent<ul class='sub-menu'>\n";
+
+	}
+
+}
 
 /**
  * Display primary navigation menu after the header.

@@ -55,6 +55,10 @@
 		padding: 1.5em 1em;
 		color: $color__text-menu;
 
+    &.expand {
+      display: none;
+    }
+
 		&:hover,
 		&:visited:hover {
 			background-color: $color__background-menu-hover;
@@ -138,6 +142,14 @@ body.no-max-width .main-navigation {
 
 		a {
 			padding: 1em;
+
+      &.expand {
+        display: block;
+
+        &::after {
+          content: "+";
+        }
+      }
 		}
 
 		.menu-main-menu-container {

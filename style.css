@@ -614,6 +614,8 @@ a {
     text-decoration: none;
     padding: 1.5em 1em;
     color: #fff; }
+    .main-navigation a.expand {
+      display: none; }
     .main-navigation a:hover, .main-navigation a:visited:hover {
       background-color: rgba(0, 0, 0, 0.1);
       color: #fff; }
@@ -680,6 +682,10 @@ body.no-max-width .main-navigation {
       float: none; }
     .main-navigation a {
       padding: 1em; }
+      .main-navigation a.expand {
+        display: block; }
+        .main-navigation a.expand::after {
+          content: "+"; }
     .main-navigation .menu-main-menu-container {
       width: 100%;
       margin: 0; } }
