@@ -14,14 +14,16 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: $color__text-input;
-	border: 1px solid $color__border;
+	color: rgba($color__main-text, 0.5);
+	border: 1px solid rgba($color__main-text, 0.1);
 	border-radius: 3px;
 	padding: 0.75rem;
 	resize: none;
+	background-color: rgba(255, 255, 255, 0.5);
 
 	&:focus {
-		color: $color__text-input-focus;
+		color: $color__main-text;
+		background-color: rgba(255, 255, 255, 0.75);
 	}
 }
 
@@ -35,7 +37,7 @@ input[type="file"] {
 }
 
 select {
-	border: 1px solid $color__border;
+	border: 1px solid rgba($color__main-text, 0.1);
 }
 
 textarea {
@@ -44,7 +46,7 @@ textarea {
 
 fieldset {
 	padding: 0.5em 1.5em;
-	border-color: $color__border;
+	border-color: rgba($color__main-text, 0.1);
 }
 
 legend {

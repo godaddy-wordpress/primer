@@ -69,7 +69,8 @@ class Primer_Customizer_Colors {
 					'default' => '#f4f5f9',
 					'section' => 'header_image',
 					'css'     => array(
-						'.hero .widget h1,
+						'.hero,
+						.hero .widget h1,
 						.hero .widget h2,
 						.hero .widget h3,
 						.hero .widget h4,
@@ -85,11 +86,10 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'menu_text_color' => array(
-					'label'    => esc_html__( 'Menu Text Color', 'primer' ),
-					'default'  => '#ffffff',
-					'section'  => 'fonts',
-					'priority' => 20,
-					'css'      => array(
+					'label'   => esc_html__( 'Primary Menu Text Color', 'primer' ),
+					'default' => '#f4f5f9',
+					'section' => 'menu_locations',
+					'css'     => array(
 						'.main-navigation ul li a, .main-navigation ul li a:hover, .main-navigation ul li a:visited:hover' => array(
 							'color' => '%1$s',
 						),
@@ -159,7 +159,7 @@ class Primer_Customizer_Colors {
 						.fl-rich-text' => array(
 							'color' => '%1$s',
 						),
-						'.social-menu a' => array(
+						'.social-menu a, .social-menu a:visited' => array(
 							'background-color' => '%1$s',
 						),
 					),
@@ -196,7 +196,7 @@ class Primer_Customizer_Colors {
 				),
 				'footer_widgets_text_color' => array(
 					'label'    => esc_html__( 'Footer Widgets Text Color', 'primer' ),
-					'default'  => '#686868',
+					'default'  => '#0b3954',
 					'section'  => 'fonts',
 					'priority' => 20,
 					'css'      => array(
@@ -207,7 +207,7 @@ class Primer_Customizer_Colors {
 				),
 				'footer_text_color' => array(
 					'label'    => esc_html__( 'Footer Text Color', 'primer' ),
-					'default'  => '#686868',
+					'default'  => '#0b3954',
 					'section'  => 'fonts',
 					'priority' => 20,
 					'css'      => array(
@@ -229,6 +229,9 @@ class Primer_Customizer_Colors {
 						.entry-title a:hover, .entry-title a:visited:hover' => array(
 							'color' => '%1$s',
 						),
+						'.social-menu a:hover, .social-menu a:visited:hover' => array(
+							'background-color' => '%1$s',
+						),
 					),
 					'rgba_css' => array(
 						'a:hover, a:visited:hover, a:focus, a:visited:focus, a:active, a:visited:active' => array(
@@ -247,36 +250,40 @@ class Primer_Customizer_Colors {
 					'css'      => array(
 						'button,
 						a.button, a.button:visited,
-						a.fl-button, a.fl-button:visited,
+						.content-area .fl-builder-content a.fl-button, .content-area .fl-builder-content a.fl-button:visited,
 						input[type="button"],
 						input[type="reset"],
 						input[type="submit"]' => array(
+							'background'       => 'none',
 							'background-color' => '%1$s',
+							'border-color'     => '%1$s',
 						),
 					),
 					'rgba_css' => array(
 						'button:hover, button:active, button:focus,
 						a.button:hover, a.button:active, a.button:focus, a.button:visited:hover, a.button:visited:active, a.button:visited:focus,
-						a.fl-button:hover, a.fl-button:active, a.fl-button:focus, a.fl-button:visited:hover, a.fl-button:visited:active, a.fl-button:visited:focus,
+						.content-area .fl-builder-content a.fl-button:hover, .content-area .fl-builder-content a.fl-button:active, .content-area .fl-builder-content a.fl-button:focus, .content-area .fl-builder-content a.fl-button:visited:hover, .content-area .fl-builder-content a.fl-button:visited:active, .content-area .fl-builder-content a.fl-button:visited:focus,
 						input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
 						input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
 						input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
+							'background'       => 'none',
 							'background-color' => 'rgba(%1$s, 0.8)',
+							'border-color'     => 'rgba(%1$s, 0.8)',
 						),
 					),
 				),
 				'button_text_color' => array(
 					'label'    => esc_html__( 'Button Text Color', 'primer' ),
-					'default'  => '#ffffff',
+					'default'  => '#f4f5f9',
 					'section'  => 'fonts',
 					'priority' => 20,
 					'css'      => array(
-						'button,
-						a.button,
-						a.fl-button,
-						input[type="button"],
-						input[type="reset"],
-						input[type="submit"]' => array(
+						'button, button:hover, button:active, button:focus,
+						a.button, a.button:hover, a.button:active, a.button:focus, a.button:visited, a.button:visited:hover, a.button:visited:active, a.button:visited:focus,
+						a.fl-button, a.fl-button:hover, a.fl-button:active, a.fl-button:focus, a.fl-button:visited, a.fl-button:visited:hover, a.fl-button:visited:active, a.fl-button:visited:focus,
+						input[type="button"], input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
+						input[type="reset"], input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
+						input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
 							'color' => '%1$s',
 						),
 					),
@@ -301,25 +308,25 @@ class Primer_Customizer_Colors {
 					'default' => '#ffffff',
 					'section' => 'background_image',
 					'css'     => array(
-						'.hentry, .widget' => array(
+						'.hentry, .widget, #page > .page-title-container' => array(
 							'background-color' => '%1$s',
 						),
 					),
 				),
-				'hero_background_color' => array(
-					'label'   => esc_html__( 'Hero Background Color', 'primer' ),
+				'header_background_color' => array(
+					'label'   => esc_html__( 'Header Background Color', 'primer' ),
 					'default' => '#0b3954',
-					'section' => 'background_image',
+					'section' => 'header_image',
 					'css'     => array(
-						'.site-header' => array(
+						primer_get_hero_image_selector() => array(
 							'background-color' => '%1$s',
 						),
 					),
 				),
 				'menu_background_color' => array(
-					'label'   => esc_html__( 'Menu Background Color', 'primer' ),
+					'label'   => esc_html__( 'Primary Menu Background Color', 'primer' ),
 					'default' => '#0b3954',
-					'section' => 'background_image',
+					'section' => 'menu_locations',
 					'css'     => array(
 						'.main-navigation-container, .main-navigation ul ul, .main-navigation .sub-menu' => array(
 							'background-color' => '%1$s',
@@ -329,7 +336,7 @@ class Primer_Customizer_Colors {
 				'footer_widgets_background_color' => array(
 					'label'   => esc_html__( 'Footer Widgets Background Color', 'primer' ),
 					'default' => '#0b3954',
-					'section' => 'background_image',
+					'section' => 'primer_footer',
 					'css'     => array(
 						'.site-footer' => array(
 							'background' => '%1$s',
@@ -339,7 +346,7 @@ class Primer_Customizer_Colors {
 				'footer_background_color' => array(
 					'label'   => esc_html__( 'Footer Background Color', 'primer' ),
 					'default' => '#f4f5f9',
-					'section' => 'background_image',
+					'section' => 'primer_footer',
 					'css'     => array(
 						'.site-info-wrapper' => array(
 							'background' => '%1$s',
@@ -389,43 +396,79 @@ class Primer_Customizer_Colors {
 				'dark' => array(
 					'label'  => esc_html__( 'Dark', 'primer' ),
 					'colors' => array(
-						'header_textcolor'        => '#ffffff',
-						'background_color'        => '#333333',
-						'header_background_color' => '#333333',
-						'menu_background_color'   => '#444444',
-						'footer_background_color' => '#222222',
-						'tagline_text_color'      => '#999999',
-						'link_color'              => '#589ef2',
-						'main_text_color'         => '#e5e5e5',
-						'secondary_text_color'    => '#c1c1c1',
+						// Text
+						'header_textcolor'          => '#e5e5e5',
+						'tagline_text_color'        => '#999999',
+						'hero_text_color'           => '#e5e5e5',
+						'menu_text_color'           => '#e5e5e5',
+						'heading_text_color'        => '#e5e5e5',
+						'main_text_color'           => '#e5e5e5',
+						'secondary_text_color'      => '#c1c1c1',
+						'footer_widgets_text_color' => '#e5e5e5',
+						'footer_text_color'         => '#e5e5e5',
+						// Links & Buttons
+						'link_color'        => '#589ef2',
+						'button_color'      => '#589ef2',
+						'button_text_color' => '#e5e5e5',
+						// Backgrounds
+						'background_color'                => '#222222',
+						'content_background_color'        => '#444444',
+						'header_background_color'         => '#222222',
+						'menu_background_color'           => '#333333',
+						'footer_widgets_background_color' => '#333333',
+						'footer_background_color'         => '#222222',
 					),
 				),
 				'muted' => array(
 					'label'  => esc_html__( 'Muted', 'primer' ),
 					'colors' => array(
-						'header_textcolor'        => '#5a6175',
-						'background_color'        => '#d5d6e0',
-						'header_background_color' => '#d5d6e0',
-						'menu_background_color'   => '#5a6175',
-						'footer_background_color' => '#5a6175',
-						'tagline_text_color'      => '#888c99',
-						'link_color'              => '#3e4c75',
-						'main_text_color'         => '#4f5875',
-						'secondary_text_color'    => '#888c99',
+						// Text
+						'header_textcolor'          => '#ffffff',
+						'tagline_text_color'        => '#ffffff',
+						'hero_text_color'           => '#ffffff',
+						'menu_text_color'           => '#ffffff',
+						'heading_text_color'        => '#4f5875',
+						'main_text_color'           => '#4f5875',
+						'secondary_text_color'      => '#888c99',
+						'footer_widgets_text_color' => '#4f5875',
+						'footer_text_color'         => '#4f5875',
+						// Links & Buttons
+						'link_color'        => '#3e4c75',
+						'button_color'      => '#3e4c75',
+						'button_text_color' => '#ffffff',
+						// Backgrounds
+						'background_color'                => '#d5d6e0',
+						'content_background_color'        => '#ffffff',
+						'header_background_color'         => '#5a6175',
+						'menu_background_color'           => '#5a6175',
+						'footer_widgets_background_color' => '#5a6175',
+						'footer_background_color'         => '#d5d6e0',
 					),
 				),
 				'red' => array(
 					'label'  => esc_html__( 'Red', 'primer' ),
 					'colors' => array(
-						'header_textcolor'        => '#402b30',
-						'background_color'        => '#f9f9f9',
-						'header_background_color' => '#f9f9f9',
-						'menu_background_color'   => '#640c1f',
-						'footer_background_color' => '#640c1f',
-						'tagline_text_color'      => '#999999',
-						'link_color'              => '#640c1f',
-						'main_text_color'         => '#402b30',
-						'secondary_text_color'    => '#222222',
+						// Text
+						'header_textcolor'          => '#f4f5f9',
+						'tagline_text_color'        => '#f4f5f9',
+						'hero_text_color'           => '#f4f5f9',
+						'menu_text_color'           => '#f4f5f9',
+						'heading_text_color'        => '#640c1f',
+						'main_text_color'           => '#640c1f',
+						'secondary_text_color'      => '#686868',
+						'footer_widgets_text_color' => '#640c1f',
+						'footer_text_color'         => '#640c1f',
+						// Links & Buttons
+						'link_color'        => '#640c1f',
+						'button_color'      => '#640c1f',
+						'button_text_color' => '#f4f5f9',
+						// Backgrounds
+						'background_color'                => '#f4f5f9',
+						'content_background_color'        => '#ffffff',
+						'header_background_color'         => '#402b30',
+						'menu_background_color'           => '#640c1f',
+						'footer_widgets_background_color' => '#402b30',
+						'footer_background_color'         => '#f4f5f9',
 					),
 				),
 			)
@@ -826,11 +869,11 @@ class Primer_Customizer_Colors {
 		add_theme_support( 'custom-header', $args );
 
 		/**
-		 * Filter the default hero images.
+		 * Filter the default header images.
 		 *
 		 * @var array
 		 */
-		$defaults = (array) apply_filters( 'primer_default_hero_images',
+		$defaults = (array) apply_filters( 'primer_default_header_images',
 			array(
 				'default' => array(
 					'url'           => 'assets/images/hero.jpg',

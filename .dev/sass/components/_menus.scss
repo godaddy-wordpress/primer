@@ -1,5 +1,5 @@
 .main-navigation-container {
-	background-color: $color__background-menu;
+	background-color: $color__menu-bg;
 }
 
 .main-navigation {
@@ -19,7 +19,7 @@
 			position: absolute;
 			left: -999em;
 			z-index: 99999;
-			background-color: $color__background-menu;
+			background-color: $color__menu-bg;
 
 			ul {
 				left: -999em;
@@ -53,12 +53,12 @@
 		display: block;
 		text-decoration: none;
 		padding: 1.5em 1em;
-		color: $color__text-menu;
+		color: $color__menu-text;
 
 		&:hover,
 		&:visited:hover {
-			background-color: $color__background-menu-hover;
-			color: $color__text-menu;
+			background-color: rgba(0, 0, 0, 0.1);
+			color: $color__menu-text;
 		}
 	}
 
@@ -67,7 +67,7 @@
 	.current_page_ancestor > a,
 	.current_page_parent > a,
 	.current-menu-ancestor > a {
-		background-color: $color__background-menu-hover;
+		background-color: rgba(0, 0, 0, 0.1);
 	}
 
 	.sub-menu .menu-item-has-children > a::after {
@@ -79,7 +79,7 @@
 		top: 50%;
 		border-bottom: 7px solid transparent;
 		border-top: 7px solid transparent;
-		border-left: 7px solid $color__text-menu;
+		border-left: 7px solid $color__menu-text;
 		transform: translateY(-50%);
 	}
 }
@@ -95,7 +95,7 @@ body.no-max-width .main-navigation {
 	cursor: pointer;
 
 	div {
-		background-color: $color__text-menu;
+		background-color: $color__menu-text;
 		height: 0.25rem;
 		margin: 0.43rem;
 		transform: rotate(0deg);

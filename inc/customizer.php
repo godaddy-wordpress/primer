@@ -25,7 +25,7 @@ class Primer_Customizer {
 		add_action( 'after_setup_theme',      array( $this, 'logo' ) );
 		add_action( 'customize_register',     array( $this, 'require_controls' ), 1 );
 		add_action( 'customize_register',     array( $this, 'selective_refresh' ), 11 );
-		add_action( 'customize_register',     array( $this, 'use_featured_hero_image' ) );
+		add_action( 'customize_register',     array( $this, 'use_featured_header_image' ) );
 		add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
 
 	}
@@ -86,7 +86,7 @@ class Primer_Customizer {
 	/**
 	 * Adds postMessage support for site title and description for the Customizer.
 	 *
-	 * @action customize_save
+	 * @action customize_register
 	 * @since  1.0.0
 	 * @uses   $this->blogname()
 	 * @uses   $this->blogdescription()
@@ -99,20 +99,25 @@ class Primer_Customizer {
 		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-		// Color section overrides
+		// Color Scheme
 		$wp_customize->get_section( 'colors' )->title = esc_html__( 'Color Scheme', 'primer' );
 
-		// Hero section overrides
-		$wp_customize->get_section( 'header_image' )->title = esc_html__( 'Hero Image', 'primer' );
-
-		// Background section overrides
-		$wp_customize->get_section( 'background_image' )->title = esc_html__( 'Background', 'primer' );
-
-		// Header text color control overrides
+		// Header
+		$wp_customize->get_section( 'header_image' )->title       = esc_html__( 'Header', 'primer' );
 		$wp_customize->get_control( 'header_textcolor' )->section = 'title_tagline';
 		$wp_customize->get_control( 'header_textcolor' )->label   = esc_html__( 'Site Title Color', 'primer' );
 
-		// Background color control overrides
+		// Footer
+		$wp_customize->add_section(
+			'primer_footer',
+			array(
+				'title'    => esc_html__( 'Footer', 'primer' ),
+				'priority' => 30,
+			)
+		);
+
+		// Background
+		$wp_customize->get_section( 'background_image' )->title    = esc_html__( 'Background', 'primer' );
 		$wp_customize->get_control( 'background_color' )->section  = 'background_image';
 		$wp_customize->get_control( 'background_color' )->priority = 1;
 
@@ -174,10 +179,10 @@ class Primer_Customizer {
 	 *
 	 * @param WP_Customize_Manager $wp_customize
 	 */
-	public function use_featured_hero_image( WP_Customize_Manager $wp_customize ) {
+	public function use_featured_header_image( WP_Customize_Manager $wp_customize ) {
 
 		$wp_customize->add_setting(
-			'use_featured_hero_image',
+			'use_featured_header_image',
 			array(
 				'default'           => 1,
 				'sanitize_callback' => 'absint',
@@ -185,7 +190,7 @@ class Primer_Customizer {
 		);
 
 		$wp_customize->add_control(
-			'use_featured_hero_image',
+			'use_featured_header_image',
 			array(
 				'label'       => esc_html__( 'Use featured image', 'primer' ),
 				'description' => esc_html__( "Allow the featured image on the current post to override the header image.", 'primer' ),

@@ -7,7 +7,7 @@
 
 	clear: both;
 	padding: 0 1rem;
-	color: #fff;
+	color: $color__hero-text;
 
 	.hero-inner {
 		max-width: none;
@@ -30,7 +30,7 @@
 		}
 
 		h1, h2, h3, h4, h5, h6, p, ul, ol, li {
-			color: #fff;
+			color: $color__hero-text;
 		}
 
 		ul, ol {
@@ -39,10 +39,6 @@
 			li {
 				list-style: none;
 			}
-		}
-
-		input, select, textarea {
-			color: $color__text-input;
 		}
 	}
 

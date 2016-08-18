@@ -247,7 +247,7 @@ input,
 select,
 textarea {
   color: #0b3954;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: normal;
   font-size: 16px;
   font-size: 1rem;
@@ -308,7 +308,7 @@ address {
   margin: 0 0 1.5em; }
 
 pre {
-  background: #eee;
+  background-color: rgba(225, 225, 225, 0.5);
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 0.9375rem;
@@ -328,7 +328,7 @@ code, kbd, tt, var {
 
 code {
   padding: 0.125rem 0.25rem;
-  background-color: #eee;
+  background-color: rgba(225, 225, 225, 0.5);
   border: 1px solid rgba(11, 57, 84, 0.1);
   -webkit-border-radius: 2px;
   border-radius: 2px; }
@@ -343,7 +343,7 @@ abbr, acronym {
   cursor: help; }
 
 mark, ins {
-  background: #fff9c0;
+  background-color: rgba(255, 249, 192, 0.5);
   text-decoration: none; }
 
 big {
@@ -374,7 +374,7 @@ blockquote, q {
     content: ""; }
 
 hr {
-  background-color: rgba(11, 57, 84, 0.1);
+  background-color: rgba(255, 255, 255, 0.5);
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -432,7 +432,7 @@ table {
   border-bottom: none; }
 
 .hentry table tr:hover td {
-  background-color: rgba(11, 57, 84, 0.075); }
+  background-color: rgba(11, 57, 84, 0.05); }
 
 .widget table caption {
   padding: 0 0.5em 0.5em;
@@ -466,7 +466,8 @@ textarea {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 0.75rem;
-  resize: none; }
+  resize: none;
+  background-color: rgba(255, 255, 255, 0.5); }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
@@ -483,7 +484,8 @@ textarea {
   input[type="datetime-local"]:focus,
   input[type="color"]:focus,
   textarea:focus {
-    color: #0b3954; }
+    color: #0b3954;
+    background-color: rgba(255, 255, 255, 0.75); }
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -525,7 +527,7 @@ input[type="submit"] {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   background-color: #ff6663;
-  color: #fff;
+  color: #f4f5f9;
   line-height: 1;
   margin-bottom: 0.5em;
   padding: 0.75em 1em;
@@ -548,7 +550,7 @@ input[type="submit"] {
   input[type="submit"]:focus {
     cursor: pointer;
     background-color: rgba(255, 102, 99, 0.8);
-    color: #fff; }
+    color: #f4f5f9; }
 
 /*--------------------------------------------------------------
 # Links
@@ -613,10 +615,10 @@ a {
     display: block;
     text-decoration: none;
     padding: 1.5em 1em;
-    color: #fff; }
+    color: #f4f5f9; }
     .main-navigation a:hover, .main-navigation a:visited:hover {
       background-color: rgba(0, 0, 0, 0.1);
-      color: #fff; }
+      color: #f4f5f9; }
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a,
@@ -632,7 +634,7 @@ a {
     top: 50%;
     border-bottom: 7px solid transparent;
     border-top: 7px solid transparent;
-    border-right: 7px solid #fff;
+    border-right: 7px solid #f4f5f9;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
@@ -646,7 +648,7 @@ body.no-max-width .main-navigation {
   padding: 0.6rem;
   cursor: pointer; }
   .menu-toggle div {
-    background-color: #fff;
+    background-color: #f4f5f9;
     height: 0.25rem;
     margin: 0.43rem;
     -webkit-transform: rotate(0deg);
@@ -1478,7 +1480,7 @@ body.custom-header-image .site-description {
   display: block; }
 
 .page-title-container {
-  background-color: #fff; }
+  background-color: #ffffff; }
   .page-title-container .page-header {
     max-width: 1100px;
     margin-right: auto;
@@ -1512,7 +1514,7 @@ body.no-max-width .page-title-container .page-header {
   margin-left: 1.38889%;
   clear: both;
   padding: 0 1rem;
-  color: #fff; }
+  color: #f4f5f9; }
   body.custom-header-image .hero {
     text-shadow: -1px -1px 20px rgba(0, 0, 0, 0.5); }
   .hero .hero-inner {
@@ -1530,13 +1532,11 @@ body.no-max-width .page-title-container .page-header {
       margin-bottom: 0;
       padding-bottom: 6%; }
     .hero .widget h1, .hero .widget h2, .hero .widget h3, .hero .widget h4, .hero .widget h5, .hero .widget h6, .hero .widget p, .hero .widget ul, .hero .widget ol, .hero .widget li {
-      color: #fff; }
+      color: #f4f5f9; }
     .hero .widget ul, .hero .widget ol {
       padding-right: 0; }
       .hero .widget ul li, .hero .widget ol li {
         list-style: none; }
-    .hero .widget input, .hero .widget select, .hero .widget textarea {
-      color: rgba(11, 57, 84, 0.5); }
   .hero label, .hero input, .hero select, .hero textarea {
     display: inline;
     width: auto; }
@@ -1611,7 +1611,8 @@ body.no-max-width .footer-widget-area {
   max-width: none; }
 
 .site-info-wrapper {
-  padding: 1.5em 0; }
+  padding: 1.5em 0;
+  background-color: #f4f5f9; }
   .site-info-wrapper .site-info {
     max-width: 1100px;
     margin-right: auto;
@@ -1762,7 +1763,7 @@ body.no-max-width .site-info-wrapper .site-info {
 .widget {
   margin: 0 0 1.5rem;
   padding: 2rem;
-  background-color: #fff; }
+  background-color: #ffffff; }
   @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
     .widget {
       padding: 1.5rem; } }
@@ -1816,14 +1817,11 @@ body.no-max-width .site-info-wrapper .site-info {
       padding: 0 2rem 2rem; }
   .widget_search .search-field {
     width: 100%;
-    background: #fff;
     -webkit-border-radius: 0;
     border-radius: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    .widget_search .search-field:focus {
-      background: #fff; }
     .widget_search .search-field::-webkit-search-cancel-button {
       z-index: 1; }
   .widget_search .search-submit {
@@ -1835,7 +1833,7 @@ body.no-max-width .site-info-wrapper .site-info {
 .hentry {
   margin: 0 0 1.5em;
   padding: 2.5em 3.375em;
-  background-color: #fff; }
+  background-color: #ffffff; }
   @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
     .hentry {
       padding: 1.5em 2.375em; } }
