@@ -13,6 +13,29 @@
 
 		$menu_toggle.add( $nav_menu ).toggleClass( 'open' );
 
+		reset_submenu_toggles();
+
+	}
+
+	function expand() {
+
+		var $this      = $( this ),
+		    $menu_item = $this.parent('.menu-item-has-children');
+
+		if ( ! $menu_item ) {
+
+			return;
+
+		}
+
+		$menu_item.toggleClass( 'open' );
+
+	}
+
+	function reset_submenu_toggles() {
+
+		$nav_menu.find( '.menu-item-has-children').removeClass( 'open' );
+
 	}
 
 	function position() {
@@ -59,6 +82,8 @@
 		$menu_toggle.on( 'click', toggle );
 
 		$nav_menu.find( '.menu-item-has-children' ).on( 'hover', position );
+
+		$nav_menu.find( '.expand' ).on( 'click', expand );
 
 	});
 
