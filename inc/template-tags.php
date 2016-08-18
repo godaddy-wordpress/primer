@@ -42,8 +42,8 @@ function primer_the_custom_logo() {
 	printf(
 		'<a href="%1$s" class="custom-logo-link" %2$s>%3$s</a>',
 		esc_url( home_url( '/' ) ),
-		! is_customize_preview() ? 'rel="home" itemprop="url"' : 'style="display:none;"',
-		! is_customize_preview() ? wp_get_attachment_image( $custom_logo_id, 'full', false, $args ) : '<img class="custom-logo"/>'
+		$custom_logo_id ? 'rel="home" itemprop="url"' : 'style="display:none;"',
+		$custom_logo_id ? wp_get_attachment_image( $custom_logo_id, 'full', false, $args ) : '<img class="custom-logo"/>'
 	);
 
 }
