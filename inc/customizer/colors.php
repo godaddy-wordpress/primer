@@ -393,8 +393,34 @@ class Primer_Customizer_Colors {
 		 */
 		$custom_schemes = (array) apply_filters( 'primer_color_schemes',
 			array(
+				'bronze' => array(
+					'label'  => esc_html_x( 'Bronze', 'color scheme name', 'primer' ),
+					'colors' => array(
+						// Text
+						'header_textcolor'         => '#f4f5f9',
+						'tagline_text_color'       => '#f4f5f9',
+						'hero_text_color'          => '#f4f5f9',
+						'menu_text_color'          => '#f4f5f9',
+						'heading_text_color'       => '#353535',
+						'main_text_color'          => '#252525',
+						'secondary_text_color'     => '#686868',
+						'footer_widget_text_color' => '#252525',
+						'footer_text_color'        => '#686868',
+						// Links & Buttons
+						'link_color'        => '#b1a18b',
+						'button_color'      => '#b1a18b',
+						'button_text_color' => '#f4f5f9',
+						// Backgrounds
+						'background_color'               => '#f4f5f9',
+						'content_background_color'       => '#ffffff',
+						'hero_background_color'          => '#796B5A',
+						'menu_background_color'          => '#b1a18b',
+						'footer_widget_background_color' => '#796B5A',
+						'footer_background_color'        => '#f4f5f9',
+					),
+				),
 				'dark' => array(
-					'label'  => esc_html__( 'Dark', 'primer' ),
+					'label'  => esc_html_x( 'Dark', 'color scheme name', 'primer' ),
 					'colors' => array(
 						// Text
 						'header_textcolor'         => '#e5e5e5',
@@ -419,8 +445,34 @@ class Primer_Customizer_Colors {
 						'footer_background_color'        => '#222222',
 					),
 				),
+				'green' => array(
+					'label'  => esc_html_x( 'Green', 'color scheme name', 'primer' ),
+					'colors' => array(
+						// Text
+						'header_textcolor'         => '#f4f5f9',
+						'tagline_text_color'       => '#f4f5f9',
+						'hero_text_color'          => '#f4f5f9',
+						'menu_text_color'          => '#f4f5f9',
+						'heading_text_color'       => '#353535',
+						'main_text_color'          => '#252525',
+						'secondary_text_color'     => '#686868',
+						'footer_widget_text_color' => '#252525',
+						'footer_text_color'        => '#686868',
+						// Links & Buttons
+						'link_color'        => '#62bf7c',
+						'button_color'      => '#62bf7c',
+						'button_text_color' => '#f4f5f9',
+						// Backgrounds
+						'background_color'               => '#f4f5f9',
+						'content_background_color'       => '#ffffff',
+						'hero_background_color'          => '#3f8850',
+						'menu_background_color'          => '#62bf7c',
+						'footer_widget_background_color' => '#3f8850',
+						'footer_background_color'        => '#f4f5f9',
+					),
+				),
 				'muted' => array(
-					'label'  => esc_html__( 'Muted', 'primer' ),
+					'label'  => esc_html_x( 'Muted', 'color scheme name', 'primer' ),
 					'colors' => array(
 						// Text
 						'header_textcolor'         => '#ffffff',
@@ -445,8 +497,34 @@ class Primer_Customizer_Colors {
 						'footer_background_color'        => '#d5d6e0',
 					),
 				),
+				'oranage' => array(
+					'label'  => esc_html_x( 'Orange', 'color scheme name', 'primer' ),
+					'colors' => array(
+						// Text
+						'header_textcolor'         => '#f4f5f9',
+						'tagline_text_color'       => '#f4f5f9',
+						'hero_text_color'          => '#f4f5f9',
+						'menu_text_color'          => '#f4f5f9',
+						'heading_text_color'       => '#353535',
+						'main_text_color'          => '#252525',
+						'secondary_text_color'     => '#686868',
+						'footer_widget_text_color' => '#252525',
+						'footer_text_color'        => '#686868',
+						// Links & Buttons
+						'link_color'        => '#fc9e4f',
+						'button_color'      => '#fc9e4f',
+						'button_text_color' => '#f4f5f9',
+						// Backgrounds
+						'background_color'               => '#f4f5f9',
+						'content_background_color'       => '#ffffff',
+						'hero_background_color'          => '#da7c37',
+						'menu_background_color'          => '#fc9e4f',
+						'footer_widget_background_color' => '#da7c37',
+						'footer_background_color'        => '#f4f5f9',
+					),
+				),
 				'red' => array(
-					'label'  => esc_html__( 'Red', 'primer' ),
+					'label'  => esc_html_x( 'Red', 'color scheme name', 'primer' ),
 					'colors' => array(
 						// Text
 						'header_textcolor'         => '#f4f5f9',
@@ -465,9 +543,35 @@ class Primer_Customizer_Colors {
 						// Backgrounds
 						'background_color'               => '#f4f5f9',
 						'content_background_color'       => '#ffffff',
-						'hero_background_color'          => '#85252D',
+						'hero_background_color'          => '#85252d',
 						'menu_background_color'          => '#cc494f',
-						'footer_widget_background_color' => '#85252D',
+						'footer_widget_background_color' => '#85252d',
+						'footer_background_color'        => '#f4f5f9',
+					),
+				),
+				'yellow' => array(
+					'label'  => esc_html_x( 'Yellow', 'color scheme name', 'primer' ),
+					'colors' => array(
+						// Text
+						'header_textcolor'         => '#f4f5f9',
+						'tagline_text_color'       => '#f4f5f9',
+						'hero_text_color'          => '#f4f5f9',
+						'menu_text_color'          => '#f4f5f9',
+						'heading_text_color'       => '#353535',
+						'main_text_color'          => '#252525',
+						'secondary_text_color'     => '#686868',
+						'footer_widget_text_color' => '#252525',
+						'footer_text_color'        => '#686868',
+						// Links & Buttons
+						'link_color'        => '#e9c46a',
+						'button_color'      => '#e9c46a',
+						'button_text_color' => '#f4f5f9',
+						// Backgrounds
+						'background_color'               => '#f4f5f9',
+						'content_background_color'       => '#ffffff',
+						'hero_background_color'          => '#c5a24d',
+						'menu_background_color'          => '#e9c46a',
+						'footer_widget_background_color' => '#c5a24d',
 						'footer_background_color'        => '#f4f5f9',
 					),
 				),
