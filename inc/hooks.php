@@ -94,7 +94,7 @@ class Primer_Primary_Menu_Sublevel_Walker extends Walker_Nav_Menu {
 
 		$indent = str_repeat( "\t", $depth );
 
-		$output .= "\n$indent<a class='expand' href='#'></a>\n$indent<ul class='sub-menu'>\n";
+		$output .= "\n$indent<a class=\"expand\" href=\"#\"></a>\n$indent<ul class=\"sub-menu\">\n";
 
 	}
 
