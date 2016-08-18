@@ -23,7 +23,9 @@
 
 		if ( isOffScreen( $submenu ) || $submenu.parents( '.bump' ).length ) {
 
-			$submenu.addClass( 'bump' ).css({
+			$submenu.siblings( 'a' ).andSelf().addClass( 'bump' );
+
+			$submenu.css({
 				'left'  : 'auto',
 				'right' : ( $this.parents( 'ul' ).length > 1 ) ? $submenu.width() : 0
 			});
