@@ -52,7 +52,15 @@
 
 				_.each( colorSchemes[ scheme ].colors, function( color, setting ) {
 
-					api( setting ).set( color );
+					var api_setting = api( setting );
+
+					if ( typeof api_setting === 'undefined' ) {
+
+						return;
+
+					}
+
+					api_setting.set( color );
 
 					api.control( setting ).container.find( '.color-picker-hex' )
 						.data( 'data-default-color', color )
@@ -100,7 +108,15 @@
 		// Merge in color scheme overrides.
 		_.each( colors, function( color, setting ) {
 
-			var hex = api( setting )();
+			var hex = api( setting );
+
+			if ( typeof hex === 'undefined' ) {
+
+				return;
+
+			}
+
+			hex = hex();
 
 			colors[ setting ]     = hex;
 			rgbaColors[ setting ] = hex2rgb( hex );

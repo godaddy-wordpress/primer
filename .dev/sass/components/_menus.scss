@@ -55,6 +55,10 @@
 		padding: 1.5em 1em;
 		color: $color__menu-text;
 
+    &.expand {
+      display: none;
+    }
+
 		&:hover,
 		&:visited:hover {
 			background-color: rgba(0, 0, 0, 0.1);
@@ -128,12 +132,24 @@ body.no-max-width .main-navigation {
 	.main-navigation {
 		display: none;
 
+		&.open {
+			display: block;
+		}
+
 		li {
 			float: none;
 		}
 
 		a {
 			padding: 1em;
+
+      &.expand {
+        display: block;
+
+        &::after {
+          content: "+";
+        }
+      }
 		}
 
 		.menu-main-menu-container {
