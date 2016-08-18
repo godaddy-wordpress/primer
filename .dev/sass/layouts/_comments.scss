@@ -1,7 +1,7 @@
 .comments-area {
 	margin: 0 0 1.5em;
 	padding: 2.5em 3em;
-	background-color: #fff;
+	background-color: $color__content-bg;
 
 	@media #{$medium-only} {
 		padding: 1.5em;

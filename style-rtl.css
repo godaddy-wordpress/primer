@@ -1635,7 +1635,8 @@ body.no-max-width .footer-widget-area {
     margin-right: 1.38889%;
     margin-left: 1.38889%;
     font-size: 90%;
-    line-height: 38px; }
+    line-height: 38px;
+    color: #0b3954; }
   .site-info-wrapper .footer-menu {
     width: 97.22222%;
     float: right;
@@ -1914,7 +1915,7 @@ body.no-max-width .site-info-wrapper .site-info {
 .comments-area {
   margin: 0 0 1.5em;
   padding: 2.5em 3em;
-  background-color: #fff; }
+  background-color: #ffffff; }
   @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
     .comments-area {
       padding: 1.5em; } }

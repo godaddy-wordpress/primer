@@ -1,6 +1,6 @@
 .site-footer {
 	clear: both;
-	background-color: $color__footer-widgets-bg;
+	background-color: $color__footer-widget-bg;
 }
 
 .footer-widget-area {
@@ -76,6 +76,7 @@ body.no-max-width .footer-widget-area {
 
 		font-size: 90%;
 		line-height: 38px;
+		color: $color__footer-text;
 	}
 
 	.footer-menu {
