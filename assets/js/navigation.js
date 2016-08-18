@@ -9,7 +9,7 @@
 	$( document ).ready( function() {
 
 		var $nav_menu    = $( '#site-navigation' ),
-				$menu_toggle = $( '#menu-toggle' );
+		    $menu_toggle = $( '#menu-toggle' );
 
 		if ( ! $nav_menu || ! $menu_toggle ) {
 
