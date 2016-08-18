@@ -674,6 +674,8 @@ body.no-max-width .main-navigation {
     display: block; }
   .main-navigation {
     display: none; }
+    .main-navigation.open {
+      display: block; }
     .main-navigation li {
       float: none; }
     .main-navigation a {
