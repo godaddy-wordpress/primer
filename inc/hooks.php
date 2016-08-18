@@ -76,7 +76,7 @@ function primer_add_primary_menu() {
 	wp_nav_menu(
 		array(
 			'theme_location' => 'primary',
-			'walker' => new Primer_Primary_Menu_Sublevel_Walker,
+			'walker'         => new Primer_Primary_Menu_Sublevel_Walker,
 		)
 	);
 
