@@ -366,7 +366,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #f4f5f9; }
+  background: #f5f5f5; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -1732,7 +1732,7 @@ body.no-max-width .footer-widget-area {
 
 .site-info-wrapper {
   padding: 1.5em 0;
-  background-color: #f4f5f9; }
+  background-color: #f5f5f5; }
   .site-info-wrapper .site-info {
     max-width: 1100px;
     margin-right: auto;
@@ -1804,12 +1804,12 @@ body.no-max-width .site-info-wrapper .site-info {
     height: 32px;
     -webkit-transition: 200ms opacity;
     transition: 200ms opacity;
-    color: #f4f5f9;
+    color: #f5f5f5;
     background-color: #252525;
     -webkit-border-radius: 3px;
     border-radius: 3px; }
     .social-menu a:visited {
-      color: #f4f5f9; }
+      color: #f5f5f5; }
     .social-menu a:before {
       -webkit-font-smoothing: subpixel-antialiased;
       padding: 7px;
@@ -1818,7 +1818,7 @@ body.no-max-width .site-info-wrapper .site-info {
     .social-menu a:hover {
       background-color: #ff6663; }
     .social-menu a:hover, .social-menu a:visited:hover {
-      color: #f4f5f9; }
+      color: #f5f5f5; }
   .social-menu a[href*="wordpress.org"]:before,
   .social-menu a[href*="wordpress.com"]:before {
     content: '\f205'; }
