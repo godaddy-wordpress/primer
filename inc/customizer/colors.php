@@ -404,7 +404,7 @@ class Primer_Customizer_Colors {
 		$color_schemes = (array) apply_filters( 'primer_color_schemes',
 			array(
 				'blush' => array(
-					'label'  => esc_html_x( 'Blush Red', 'color scheme name', 'primer' ),
+					'label'  => esc_html_x( 'Blush', 'color scheme name', 'primer' ),
 					'colors' => array(
 						// Text
 						'header_textcolor'         => '#f5f5f5',
@@ -456,7 +456,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'canary' => array(
-					'label'  => esc_html_x( 'Canary Yellow', 'color scheme name', 'primer' ),
+					'label'  => esc_html_x( 'Canary', 'color scheme name', 'primer' ),
 					'colors' => array(
 						// Text
 						'header_textcolor'         => '#f5f5f5',
@@ -508,7 +508,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'iguana' => array(
-					'label'  => esc_html_x( 'Iguana Green', 'color scheme name', 'primer' ),
+					'label'  => esc_html_x( 'Iguana', 'color scheme name', 'primer' ),
 					'colors' => array(
 						// Text
 						'header_textcolor'         => '#f5f5f5',
@@ -586,7 +586,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'rose' => array(
-					'label'  => esc_html_x( 'Rose Pink', 'color scheme name', 'primer' ),
+					'label'  => esc_html_x( 'Rose', 'color scheme name', 'primer' ),
 					'colors' => array(
 						// Text
 						'header_textcolor'         => '#f5f5f5',
