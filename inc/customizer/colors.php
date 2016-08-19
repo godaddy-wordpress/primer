@@ -367,7 +367,7 @@ class Primer_Customizer_Colors {
 		$custom_scheme = array(
 			'_custom' => array(
 				'label' => sprintf( '- %s -' , esc_html__( 'Custom', 'primer' ) ),
-			)
+			),
 		);
 
 		/**
@@ -1143,11 +1143,11 @@ class Primer_Customizer_Colors {
 		add_theme_support( 'custom-header', $args );
 
 		/**
-		 * Filter the default header images.
+		 * Filter the default hero images.
 		 *
 		 * @var array
 		 */
-		$defaults = (array) apply_filters( 'primer_default_header_images',
+		$defaults = (array) apply_filters( 'primer_default_hero_images',
 			array(
 				'default' => array(
 					'url'           => 'assets/images/hero.jpg',
