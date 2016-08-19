@@ -54,7 +54,7 @@
 
 					var api_setting = api( setting );
 
-					if ( typeof api_setting === 'undefined' ) {
+					if ( 'undefined' === typeof api_setting ) {
 
 						return;
 
@@ -110,7 +110,7 @@
 
 			var hex = api( setting );
 
-			if ( typeof hex === 'undefined' ) {
+			if ( 'undefined' === typeof hex ) {
 
 				return;
 
