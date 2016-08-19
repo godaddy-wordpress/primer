@@ -77,9 +77,27 @@ class Primer_Customizer_Fonts {
 		 */
 		$this->font_types = (array) apply_filters( 'primer_font_types',
 			array(
+				'site_title_font' => array(
+					'label'   => esc_html__( 'Site Title', 'primer' ),
+					'default' => 'Open Sans',
+					'css'     => array(
+						'.site-title' => array(
+							'font-family' => '"%1$s", sans-serif',
+						),
+					),
+				),
+				'menu_font' => array(
+					'label'   => esc_html__( 'Navigation Menu', 'primer' ),
+					'default' => 'Open Sans',
+					'css'     => array(
+						'.main-navigation ul li a' => array(
+							'font-family' => '"%1$s", sans-serif',
+						),
+					),
+				),
 				'heading_font' => array(
-					'label'       => esc_html__( 'Heading Font', 'primer' ),
-					'description' => esc_html__( 'Site title, post titles, widget titles, form labels, table headers and buttons.', 'primer' ),
+					'label'       => esc_html__( 'Headings', 'primer' ),
+					'description' => esc_html__( 'Post titles, widget titles, form labels, table headers and buttons.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
 						'h1, h2, h3, h4, h5, h6,
@@ -87,7 +105,6 @@ class Primer_Customizer_Fonts {
 						legend,
 						table th,
 						dl dt,
-						.site-title,
 						.entry-title,
 						.widget-title,
 						button, a.button, a.fl-button, input[type="button"], input[type="reset"], input[type="submit"]' => array(
@@ -96,7 +113,7 @@ class Primer_Customizer_Fonts {
 					),
 				),
 				'primary_font' => array(
-					'label'       => esc_html__( 'Main Font', 'primer' ),
+					'label'       => esc_html__( 'Primary', 'primer' ),
 					'description' => esc_html__( 'Paragraphs, lists, menu links, quotes and tables.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
@@ -105,14 +122,13 @@ class Primer_Customizer_Fonts {
 						ol li,
 						ul li,
 						dl dd,
-						.main-navigation ul li a,
 						.fl-callout-text' => array(
 							'font-family' => '"%1$s", sans-serif',
 						),
 					),
 				),
 				'secondary_font' => array(
-					'label'       => esc_html__( 'Secondary Font', 'primer' ),
+					'label'       => esc_html__( 'Secondary', 'primer' ),
 					'description' => esc_html__( 'Post bylines, comment counts, comment reply links, post footers and quote footers.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
