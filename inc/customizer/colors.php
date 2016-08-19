@@ -88,7 +88,7 @@ class Primer_Customizer_Colors {
 					'default' => '#ffffff',
 					'section' => 'colors-menu',
 					'css'     => array(
-						'.main-navigation ul li a, .main-navigation ul li a:hover, .main-navigation ul li a:visited:hover' => array(
+						'.main-navigation ul li a, .main-navigation ul li a:visited, .main-navigation ul li a:hover, .main-navigation ul li a:visited:hover' => array(
 							'color' => '%1$s',
 						),
 						'.main-navigation .sub-menu .menu-item-has-children > a::after' => array(
