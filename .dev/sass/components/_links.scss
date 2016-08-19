@@ -12,12 +12,9 @@ a {
 		color: $color__link-hover;
 	}
 
-	&:focus {
-		outline: thin dotted;
-	}
-
 	&:hover,
-	&:active {
+	&:active,
+  &:focus {
 		outline: 0;
 	}
 }

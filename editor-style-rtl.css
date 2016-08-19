@@ -495,9 +495,7 @@ a {
     color: #ff6663; }
   a:hover, a:focus, a:active {
     color: rgba(255, 102, 99, 0.8); }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
+  a:hover, a:active, a:focus {
     outline: 0; }
 
 .page-content .wp-smiley,
