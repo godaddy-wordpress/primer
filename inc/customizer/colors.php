@@ -38,11 +38,10 @@ class Primer_Customizer_Colors {
 				 * Text colors
 				 */
 				'header_textcolor' => array(
-					'label'    => esc_html__( 'Site Title Color', 'primer' ),
-					'default'  => '#ffffff',
-					'section'  => 'title_tagline',
-					'priority' => 11,
-					'css'      => array(
+					'label'   => esc_html__( 'Site Title Text', 'primer' ),
+					'default' => '#ffffff',
+					'section' => 'colors-header',
+					'css'     => array(
 						'.site-title a, .site-title a:visited' => array(
 							'color' => '%1$s',
 						),
@@ -54,20 +53,19 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'tagline_text_color' => array(
-					'label'    => esc_html__( 'Tagline Color', 'primer' ),
-					'default'  => '#ffffff',
-					'section'  => 'title_tagline',
-					'priority' => 11,
-					'css'      => array(
+					'label'   => esc_html__( 'Tagline Text', 'primer' ),
+					'default' => '#ffffff',
+					'section' => 'colors-header',
+					'css'     => array(
 						'.site-description' => array(
 							'color' => '%1$s',
 						),
 					),
 				),
 				'hero_text_color' => array(
-					'label'   => esc_html__( 'Hero Text Color', 'primer' ),
+					'label'   => esc_html__( 'Hero Text', 'primer' ),
 					'default' => '#ffffff',
-					'section' => 'header_image',
+					'section' => 'colors-header',
 					'css'     => array(
 						'.hero,
 						.hero .widget h1,
@@ -86,9 +84,9 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'menu_text_color' => array(
-					'label'   => esc_html__( 'Primary Menu Text Color', 'primer' ),
+					'label'   => esc_html__( 'Text', 'primer' ),
 					'default' => '#ffffff',
-					'section' => 'menu_locations',
+					'section' => 'colors-menu',
 					'css'     => array(
 						'.main-navigation ul li a, .main-navigation ul li a:hover, .main-navigation ul li a:visited:hover' => array(
 							'color' => '%1$s',
@@ -108,11 +106,10 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'heading_text_color' => array(
-					'label'    => esc_html__( 'Heading Text Color', 'primer' ),
-					'default'  => '#353535',
-					'section'  => 'fonts',
-					'priority' => 20,
-					'css'      => array(
+					'label'   => esc_html__( 'Heading Text', 'primer' ),
+					'default' => '#353535',
+					'section' => 'colors-content',
+					'css'     => array(
 						'h1, h2, h3, h4, h5, h6,
 						label,
 						legend,
@@ -130,10 +127,9 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'main_text_color' => array(
-					'label'    => esc_html__( 'Main Text Color', 'primer' ),
+					'label'    => esc_html__( 'Main Text', 'primer' ),
 					'default'  => '#252525',
-					'section'  => 'fonts',
-					'priority' => 20,
+					'section'  => 'colors-content',
 					'css'      => array(
 						'body,
 						input,
@@ -180,10 +176,9 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'secondary_text_color' => array(
-					'label'    => esc_html__( 'Secondary Text Color', 'primer' ),
+					'label'    => esc_html__( 'Secondary Text', 'primer' ),
 					'default'  => '#686868',
-					'section'  => 'fonts',
-					'priority' => 20,
+					'section'  => 'colors-content',
 					'css'      => array(
 						'blockquote,
 						.entry-meta,
@@ -195,10 +190,9 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_widget_text_color' => array(
-					'label'    => esc_html__( 'Footer Widget Text Color', 'primer' ),
+					'label'    => esc_html__( 'Widget Text', 'primer' ),
 					'default'  => '#252525',
-					'section'  => 'fonts',
-					'priority' => 20,
+					'section'  => 'colors-footer',
 					'css'      => array(
 						'.site-footer .widget' => array(
 							'color' => '%1$s',
@@ -206,12 +200,12 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_text_color' => array(
-					'label'    => esc_html__( 'Footer Text Color', 'primer' ),
+					'label'    => esc_html__( 'Copyright Text', 'primer' ),
 					'default'  => '#757575',
-					'section'  => 'fonts',
+					'section'  => 'colors-footer',
 					'priority' => 20,
 					'css'      => array(
-						'.site-info-text' => array(
+						'.site-info-wrapper .site-info-text' => array(
 							'color' => '%1$s',
 						),
 					),
@@ -220,11 +214,10 @@ class Primer_Customizer_Colors {
 				 * Link / Button colors
 				 */
 				'link_color' => array(
-					'label'    => esc_html__( 'Link Color', 'primer' ),
-					'default'  => '#ff6663',
-					'section'  => 'fonts',
-					'priority' => 20,
-					'css'      => array(
+					'label'   => esc_html__( 'Link Text', 'primer' ),
+					'default' => '#ff6663',
+					'section' => 'colors-content',
+					'css'     => array(
 						'a, a:visited,
 						.entry-title a:hover, .entry-title a:visited:hover' => array(
 							'color' => '%1$s',
@@ -242,19 +235,32 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
+				'button_text_color' => array(
+					'label'   => esc_html__( 'Text', 'primer' ),
+					'default' => '#ffffff',
+					'section' => 'colors-buttons',
+					'css'     => array(
+						'button, button:hover, button:active, button:focus,
+						a.button, a.button:hover, a.button:active, a.button:focus, a.button:visited, a.button:visited:hover, a.button:visited:active, a.button:visited:focus,
+						a.fl-button, a.fl-button:hover, a.fl-button:active, a.fl-button:focus, a.fl-button:visited, a.fl-button:visited:hover, a.fl-button:visited:active, a.fl-button:visited:focus,
+						input[type="button"], input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
+						input[type="reset"], input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
+						input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
+							'color' => '%1$s',
+						),
+					),
+				),
 				'button_color' => array(
-					'label'    => esc_html__( 'Button Color', 'primer' ),
-					'default'  => '#ff6663',
-					'section'  => 'fonts',
-					'priority' => 20,
-					'css'      => array(
+					'label'   => esc_html__( 'Background', 'primer' ),
+					'default' => '#ff6663',
+					'section' => 'colors-buttons',
+					'css'     => array(
 						'button,
 						a.button, a.button:visited,
 						.content-area .fl-builder-content a.fl-button, .content-area .fl-builder-content a.fl-button:visited,
 						input[type="button"],
 						input[type="reset"],
 						input[type="submit"]' => array(
-							'background'       => 'none',
 							'background-color' => '%1$s',
 							'border-color'     => '%1$s',
 						),
@@ -266,25 +272,8 @@ class Primer_Customizer_Colors {
 						input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
 						input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
 						input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
-							'background'       => 'none',
 							'background-color' => 'rgba(%1$s, 0.8)',
 							'border-color'     => 'rgba(%1$s, 0.8)',
-						),
-					),
-				),
-				'button_text_color' => array(
-					'label'    => esc_html__( 'Button Text Color', 'primer' ),
-					'default'  => '#ffffff',
-					'section'  => 'fonts',
-					'priority' => 20,
-					'css'      => array(
-						'button, button:hover, button:active, button:focus,
-						a.button, a.button:hover, a.button:active, a.button:focus, a.button:visited, a.button:visited:hover, a.button:visited:active, a.button:visited:focus,
-						a.fl-button, a.fl-button:hover, a.fl-button:active, a.fl-button:focus, a.fl-button:visited, a.fl-button:visited:hover, a.fl-button:visited:active, a.fl-button:visited:focus,
-						input[type="button"], input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
-						input[type="reset"], input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
-						input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
-							'color' => '%1$s',
 						),
 					),
 				),
@@ -292,8 +281,9 @@ class Primer_Customizer_Colors {
 				 * Background colors
 				 */
 				'background_color' => array(
-					'label'   => esc_html__( 'Background Color', 'primer' ),
+					'label'   => esc_html__( 'Page Background', 'primer' ),
 					'default' => '#f4f5f9',
+					'section' => 'colors-content',
 					'css'     => array(
 						'body' => array(
 							'background' => '%1$s',
@@ -304,9 +294,9 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'content_background_color' => array(
-					'label'   => esc_html__( 'Content Background Color', 'primer' ),
+					'label'   => esc_html__( 'Content Background', 'primer' ),
 					'default' => '#ffffff',
-					'section' => 'background_image',
+					'section' => 'colors-content',
 					'css'     => array(
 						'.hentry, .widget, #page > .page-title-container' => array(
 							'background-color' => '%1$s',
@@ -314,9 +304,9 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'hero_background_color' => array(
-					'label'   => esc_html__( 'Hero Background Color', 'primer' ),
+					'label'   => esc_html__( 'Hero Background', 'primer' ),
 					'default' => '#0b3954',
-					'section' => 'header_image',
+					'section' => 'colors-header',
 					'css'     => array(
 						primer_get_hero_image_selector() => array(
 							'background-color' => '%1$s',
@@ -324,9 +314,9 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'menu_background_color' => array(
-					'label'   => esc_html__( 'Primary Menu Background Color', 'primer' ),
+					'label'   => esc_html__( 'Background', 'primer' ),
 					'default' => '#0b3954',
-					'section' => 'menu_locations',
+					'section' => 'colors-menu',
 					'css'     => array(
 						'.main-navigation-container, .main-navigation ul ul, .main-navigation .sub-menu' => array(
 							'background-color' => '%1$s',
@@ -334,9 +324,9 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_widget_background_color' => array(
-					'label'   => esc_html__( 'Footer Widget Background Color', 'primer' ),
+					'label'   => esc_html__( 'Widgets Background', 'primer' ),
 					'default' => '#0b3954',
-					'section' => 'primer_footer',
+					'section' => 'colors-footer',
 					'css'     => array(
 						'.site-footer' => array(
 							'background' => '%1$s',
@@ -344,10 +334,11 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_background_color' => array(
-					'label'   => esc_html__( 'Footer Background Color', 'primer' ),
-					'default' => '#f4f5f9',
-					'section' => 'primer_footer',
-					'css'     => array(
+					'label'    => esc_html__( 'Copyright Background', 'primer' ),
+					'default'  => '#f4f5f9',
+					'section'  => 'colors-footer',
+					'priority' => 20,
+					'css'      => array(
 						'.site-info-wrapper' => array(
 							'background' => '%1$s',
 						),
@@ -363,11 +354,30 @@ class Primer_Customizer_Colors {
 		}
 
 		/**
+		 * Custom color scheme stub.
+		 *
+		 * The `_custom` color scheme key is used only when the user
+		 * diverges from a predefined scheme. This stub is required
+		 * and not filterable.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var array
+		 */
+		$custom_scheme = array(
+			'_custom' => array(
+				'label' => sprintf( '- %s -' , esc_html__( 'Custom', 'primer' ) ),
+			)
+		);
+
+		/**
 		 * Default color scheme.
 		 *
 		 * The `default` color scheme is required and not filterable.
 		 * If you want to customize values in this scheme, do so via
 		 * a `primer_colors` filter in your Child Theme.
+		 *
+		 * @since 1.0.0
 		 *
 		 * @var array
 		 */
@@ -378,9 +388,6 @@ class Primer_Customizer_Colors {
 					array_keys( $this->colors ),
 					wp_list_pluck( $this->colors, 'default' )
 				),
-			),
-			'_custom' => array(
-				'label' => sprintf( '- %s -' , __( 'Custom', 'primer' ) ),
 			)
 		);
 
@@ -391,7 +398,7 @@ class Primer_Customizer_Colors {
 		 *
 		 * @var array
 		 */
-		$custom_schemes = (array) apply_filters( 'primer_color_schemes',
+		$color_schemes = (array) apply_filters( 'primer_color_schemes',
 			array(
 				'blush' => array(
 					'label'  => esc_html_x( 'Blush Red', 'color scheme name', 'primer' ),
@@ -656,12 +663,17 @@ class Primer_Customizer_Colors {
 			)
 		);
 
-		ksort( $custom_schemes );
+		$color_schemes = array_filter(
+			$color_schemes,
+			array( $this, 'is_valid_color_scheme_array' )
+		);
 
-		$this->color_schemes = $default_scheme + $custom_schemes;
+		ksort( $color_schemes );
 
-		add_action( 'customize_register', array( $this, 'colors' ), 9 );
-		add_action( 'customize_register', array( $this, 'color_scheme' ), 11 );
+		$this->color_schemes = $custom_scheme + $default_scheme + $color_schemes;
+
+		add_action( 'customize_register', array( $this, 'colors' ) );
+		add_action( 'customize_register', array( $this, 'color_scheme' ) );
 
 		add_action( 'customize_controls_enqueue_scripts',      array( $this, 'color_scheme_control_js' ) );
 		add_action( 'customize_controls_print_footer_scripts', array( $this, 'color_scheme_preview_css' ) );
@@ -674,7 +686,7 @@ class Primer_Customizer_Colors {
 	}
 
 	/**
-	 * Register custom colors settings.
+	 * Register color panel, sections, controls, and settings.
 	 *
 	 * @action customize_register
 	 * @since  1.0.0
@@ -682,6 +694,63 @@ class Primer_Customizer_Colors {
 	 * @param WP_Customize_Manager $wp_customize
 	 */
 	public function colors( WP_Customize_Manager $wp_customize ) {
+
+		$wp_customize->add_panel(
+			'colors',
+			array(
+				'title'       => esc_html__( 'Colors', 'primer' ),
+				'description' => 'Get what you need.',
+				'priority'    => 40,
+			)
+		);
+
+		$wp_customize->add_section(
+			'colors-scheme',
+			array(
+				'title' => esc_html__( 'Color Schemes', 'primer' ),
+				'panel' => 'colors',
+			)
+		);
+
+		$wp_customize->add_section(
+			'colors-header',
+			array(
+				'title' => esc_html__( 'Header', 'primer' ),
+				'panel' => 'colors',
+			)
+		);
+
+		$wp_customize->add_section(
+			'colors-menu',
+			array(
+				'title' => esc_html__( 'Menu', 'primer' ),
+				'panel' => 'colors',
+			)
+		);
+
+		$wp_customize->add_section(
+			'colors-buttons',
+			array(
+				'title' => esc_html__( 'Buttons', 'primer' ),
+				'panel' => 'colors',
+			)
+		);
+
+		$wp_customize->add_section(
+			'colors-content',
+			array(
+				'title' => esc_html__( 'Content', 'primer' ),
+				'panel' => 'colors',
+			)
+		);
+
+		$wp_customize->add_section(
+			'colors-footer',
+			array(
+				'title' => esc_html__( 'Footer', 'primer' ),
+				'panel' => 'colors',
+			)
+		);
 
 		foreach ( $this->colors as $name => $args ) {
 
@@ -728,7 +797,7 @@ class Primer_Customizer_Colors {
 				array(
 					'label'       => ! empty( $args['label'] ) ? $args['label'] : $name,
 					'description' => ! empty( $args['description'] ) ? $args['description'] : null,
-					'section'     => ! empty( $args['section'] ) ? $args['section'] : 'colors',
+					'section'     => ! empty( $args['section'] ) ? $args['section'] : 'colors-content',
 					'priority'    => ! empty( $args['priority'] ) ? absint( $args['priority'] ) : null,
 				)
 			)
@@ -862,7 +931,7 @@ class Primer_Customizer_Colors {
 			'color_scheme',
 			array(
 				'label'    => esc_html__( 'Base Color Scheme', 'primer' ),
-				'section'  => 'colors',
+				'section'  => 'colors-scheme',
 				'type'     => 'select',
 				'choices'  => $choices,
 				'priority' => 1,
@@ -961,7 +1030,28 @@ class Primer_Customizer_Colors {
 	}
 
 	/**
-	 * Sanitize a color scheme by ensuring it exists.
+	 * Check if a color scheme array is valid.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  array $scheme
+	 *
+	 * @return bool
+	 */
+	public function is_valid_color_scheme_array( array $scheme ) {
+
+		return (
+			! empty( $scheme['label'] )
+			&&
+			! empty( $scheme['colors'] )
+			&&
+			is_array( $scheme['colors'] )
+		);
+
+	}
+
+	/**
+	 * Sanitize a color scheme by ensuring it exists and is valid.
 	 *
 	 * @since 1.0.0
 	 *
@@ -971,7 +1061,7 @@ class Primer_Customizer_Colors {
 	 */
 	public function sanitize_color_scheme( $scheme ) {
 
-		return $this->color_scheme_exists( $scheme ) ? $scheme : 'default';
+		return ( $this->color_scheme_exists( $scheme ) && $this->is_valid_color_scheme_array( $this->color_schemes[ $scheme ] ) ) ? $scheme : 'default';
 
 	}
 

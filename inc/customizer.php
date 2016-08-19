@@ -99,28 +99,6 @@ class Primer_Customizer {
 		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-		// Color Scheme
-		$wp_customize->get_section( 'colors' )->title = esc_html__( 'Color Scheme', 'primer' );
-
-		// Header
-		$wp_customize->get_section( 'header_image' )->title       = esc_html__( 'Header', 'primer' );
-		$wp_customize->get_control( 'header_textcolor' )->section = 'title_tagline';
-		$wp_customize->get_control( 'header_textcolor' )->label   = esc_html__( 'Site Title Color', 'primer' );
-
-		// Footer
-		$wp_customize->add_section(
-			'primer_footer',
-			array(
-				'title'    => esc_html__( 'Footer', 'primer' ),
-				'priority' => 30,
-			)
-		);
-
-		// Background
-		$wp_customize->get_section( 'background_image' )->title    = esc_html__( 'Background', 'primer' );
-		$wp_customize->get_control( 'background_color' )->section  = 'background_image';
-		$wp_customize->get_control( 'background_color' )->priority = 1;
-
 		if ( ! isset( $wp_customize->selective_refresh ) ) {
 
 			return;
