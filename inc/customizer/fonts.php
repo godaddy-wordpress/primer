@@ -77,8 +77,8 @@ class Primer_Customizer_Fonts {
 		 */
 		$this->font_types = (array) apply_filters( 'primer_font_types',
 			array(
-				'header_font' => array(
-					'label'       => esc_html__( 'Header Font', 'primer' ),
+				'heading_font' => array(
+					'label'       => esc_html__( 'Heading Font', 'primer' ),
 					'description' => esc_html__( 'Site title, post titles, widget titles, form labels, table headers and buttons.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
@@ -96,7 +96,7 @@ class Primer_Customizer_Fonts {
 					),
 				),
 				'primary_font' => array(
-					'label'       => esc_html__( 'Primary Font', 'primer' ),
+					'label'       => esc_html__( 'Main Font', 'primer' ),
 					'description' => esc_html__( 'Paragraphs, lists, menu links, quotes and tables.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(

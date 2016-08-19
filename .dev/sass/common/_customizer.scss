@@ -1,15 +1,28 @@
 // Fonts
-$primary-font:   "Open Sans";
-$secondary-font: "Open Sans";
-$heading-font:   "Open Sans";
+$font__heading:   "Open Sans", sans-serif;
+$font__main:      "Open Sans", sans-serif;
+$font__secondary: "Open Sans", sans-serif;
 
-// Colors
-$header-textcolor:        #f4f5f9;
-$background-color:        #f4f5f9;
-$header-background-color: #0b3954;
-$menu-background-color:   #0b3954;
-$footer-background-color: #0b3954;
-$tagline-text-color:      #f4f5f9;
-$link-color:              #ff6663;
-$main-text-color:         #0b3954;
-$secondary-text-color:    #686868;
+// Text
+$color__site-title-text:    #ffffff; // header_textcolor
+$color__tagline-text:       #ffffff;
+$color__hero-text:          #ffffff;
+$color__menu-text:          #ffffff;
+$color__heading-text:       #353535;
+$color__main-text:          #252525;
+$color__secondary-text:     #686868;
+$color__footer-widget-text: #252525;
+$color__footer-text:        #757575;
+
+// Links & Buttons
+$color__link:        #ff6663;
+$color__button_bg:   #ff6663;
+$color__button-text: #ffffff;
+
+// Backgrounds
+$color__bg:               #f4f5f9;
+$color__content-bg:       #ffffff;
+$color__hero-bg:          #0b3954;
+$color__menu-bg:          #0b3954;
+$color__footer-widget-bg: #0b3954;
+$color__footer-bg:        #f4f5f9;

@@ -1,6 +1,6 @@
 .site-footer {
 	clear: both;
-	background-color: $color__background-footer;
+	background-color: $color__footer-widget-bg;
 }
 
 .footer-widget-area {
@@ -65,6 +65,7 @@ body.no-max-width .footer-widget-area {
 
 .site-info-wrapper {
 	padding: 1.5em 0;
+	background-color: $color__footer-bg;
 
 	.site-info {
 		@include container($container-size);
@@ -75,6 +76,7 @@ body.no-max-width .footer-widget-area {
 
 		font-size: 90%;
 		line-height: 38px;
+		color: $color__footer-text;
 	}
 
 	.footer-menu {
@@ -150,12 +152,12 @@ body.no-max-width .site-info-wrapper .site-info {
 		width: 32px;
 		height: 32px;
 		transition: 200ms opacity;
-		color: $color__background-body;
-		background-color: $color__text-main;
+		color: $color__bg;
+		background-color: $color__main-text;
 		border-radius: 3px;
 
 		&:visited {
-			color: $color__background-body;
+			color: $color__bg;
 		}
 
 		&:before {
@@ -171,7 +173,7 @@ body.no-max-width .site-info-wrapper .site-info {
 
 		&:hover,
 		&:visited:hover {
-			color: $color__background-body;
+			color: $color__bg;
 		}
 	}
 

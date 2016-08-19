@@ -1,7 +1,7 @@
 .widget {
 	margin: 0 0 1.5rem;
 	padding: 2rem;
-	background-color: $color__background-screen;
+	background-color: $color__content-bg;
 
 	@media #{$medium-only} {
 		padding: 1.5rem;
@@ -79,13 +79,8 @@
 
 	.search-field {
 		width: 100%;
-		background: #fff;
 		border-radius: 0;
 		box-sizing: border-box;
-
-		&:focus {
-			background: #fff;
-		}
 
 		&::-webkit-search-cancel-button {
 			z-index: 1;

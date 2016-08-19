@@ -3,13 +3,13 @@ a {
 	text-decoration: none;
 
 	&:visited {
-		color: $color__link-visited;
+		color: $color__link;
 	}
 
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color: rgba($color__link, 0.8);
 	}
 
 	&:hover,

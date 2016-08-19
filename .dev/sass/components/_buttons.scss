@@ -7,8 +7,8 @@ input[type="submit"] {
 	display: inline-block;
 	border: none;
 	border-radius: 3px;
-	background-color: $color__background-button;
-	color: $color__text-button;
+	background-color: $color__button-bg;
+	color: $color__button-text;
 	line-height: 1;
 	margin-bottom: 0.5em;
 	padding: 0.75em 1em;
@@ -18,7 +18,7 @@ input[type="submit"] {
 	&:active,
 	&:focus {
 		cursor: pointer;
-		background-color: $color__background-button-hover;
-		color: $color__text-button;
+		background-color: rgba($color__button-bg, 0.8);
+		color: $color__button-text;
 	}
 }
