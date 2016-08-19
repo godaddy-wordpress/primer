@@ -26,7 +26,7 @@ class Primer_Customizer_Layouts_Control extends WP_Customize_Control {
 			true
 		);
 
-		$layouts = [];
+		$layouts = array();
 
 		/**
 		 * Identify which layouts are in the same category
