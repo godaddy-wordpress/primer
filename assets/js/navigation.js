@@ -27,8 +27,7 @@
 
 		e.preventDefault();
 
-		var $this      = $( this ),
-		    $menu_item = $this.parent( '.menu-item-has-children' );
+		var $menu_item = $( this ).parent( '.menu-item-has-children' );
 
 		if ( ! $menu_item ) {
 
