@@ -26,14 +26,18 @@ class Primer_Customizer_Layouts_Control extends WP_Customize_Control {
 			true
 		);
 
-		$layouts = array_fill_keys( array_keys( $this->choices ), 'postMessage' );
+		$layouts = [];
 
 		/**
-		 * Those layouts are loaded dynamically and need refresh
+		 * Identify which layouts are in the same category
 		 */
-		$layouts['three-column-default']  = 'refresh';
-		$layouts['three-column-center']   = 'refresh';
-		$layouts['three-column-reversed'] = 'refresh';
+		foreach ( $this->choices as $key => $label ) {
+
+			list( $number ) = explode( '-', $key );
+
+			$layouts[ $key ] = $number;
+
+		}
 
 		/**
 		 * Filter layouts transport mechanism in the customizer. Either postMessage or refresh.
