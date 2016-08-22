@@ -184,6 +184,14 @@ function primer_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	/**
+	 * Enable support for customizer selective refresh
+	 *
+	 * https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
+	 * @since 1.0.0
+	 */
+	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	/**
 	 * Register custom Custom Navigation Menus.
 	 *
 	 * @link  https://codex.wordpress.org/Function_Reference/register_nav_menus
