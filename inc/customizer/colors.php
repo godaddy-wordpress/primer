@@ -157,9 +157,6 @@ class Primer_Customizer_Colors {
 						.fl-rich-text' => array(
 							'color' => '%1$s',
 						),
-						'.social-menu a, .social-menu a:visited' => array(
-							'background-color' => '%1$s',
-						),
 					),
 					'rgba_css' => array(
 						'hr' => array(
@@ -199,6 +196,9 @@ class Primer_Customizer_Colors {
 					'css'      => array(
 						'.site-footer .widget' => array(
 							'color' => '%1$s',
+						),
+						'.site-info-wrapper .social-menu a, .site-info-wrapper .social-menu a:visited' => array(
+							'background-color' => '%1$s',
 						),
 					),
 				),
@@ -291,9 +291,6 @@ class Primer_Customizer_Colors {
 						'body' => array(
 							'background' => '%1$s',
 						),
-						'.social-menu a, .social-menu a:visited, .social-menu a:hover, .social-menu a:visited:hover' => array(
-							'color' => '%1$s',
-						),
 					),
 				),
 				'content_background_color' => array(
@@ -344,6 +341,12 @@ class Primer_Customizer_Colors {
 					'css'      => array(
 						'.site-info-wrapper' => array(
 							'background' => '%1$s',
+						),
+						'.site-info-wrapper .social-menu a,
+						.site-info-wrapper .social-menu a:visited,
+						.site-info-wrapper .social-menu a:hover,
+						.site-info-wrapper .social-menu a:visited:hover' => array(
+							'color' => '%1$s',
 						),
 					),
 				),
