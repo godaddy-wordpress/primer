@@ -179,7 +179,7 @@ class Primer_Customizer_Colors {
 				),
 				'secondary_text_color' => array(
 					'label'       => esc_html__( 'Secondary Text', 'primer' ),
-					'description' => esc_html__( 'Post bylines, comment counts, comment reply links, post footers and quote footers.', 'primer' ),
+					'description' => esc_html__( 'Post bylines, comment counts, post footers and quote footers.', 'primer' ),
 					'default'     => '#686868',
 					'section'     => 'colors-content',
 					'css'         => array(
