@@ -245,7 +245,7 @@ class Primer_Customizer_Colors {
 					'css'     => array(
 						'button, button:hover, button:active, button:focus,
 						a.button, a.button:hover, a.button:active, a.button:focus, a.button:visited, a.button:visited:hover, a.button:visited:active, a.button:visited:focus,
-						a.fl-button, a.fl-button:hover, a.fl-button:active, a.fl-button:focus, a.fl-button:visited, a.fl-button:visited:hover, a.fl-button:visited:active, a.fl-button:visited:focus,
+						a.fl-button, .fl-builder-content a.fl-button, .fl-builder-content a.fl-button:visited, .fl-builder-content a.fl-button *, .fl-builder-content a.fl-button:visited *, a.fl-button:hover, a.fl-button:active, a.fl-button:focus, a.fl-button:visited, a.fl-button:visited:hover, a.fl-button:visited:active, a.fl-button:visited:focus,
 						input[type="button"], input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
 						input[type="reset"], input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
 						input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
