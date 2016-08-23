@@ -353,7 +353,7 @@ class Primer_Customizer_Colors {
 					'default' => '#0b3954',
 					'section' => 'colors-menu',
 					'css'     => array(
-						'.main-navigation-container, .main-navigation ul ul, .main-navigation .sub-menu' => array(
+						'.main-navigation-container, .main-navigation.open, .main-navigation ul ul, .main-navigation .sub-menu' => array(
 							'background-color' => '%1$s',
 						),
 					),
