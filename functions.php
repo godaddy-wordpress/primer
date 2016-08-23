@@ -34,7 +34,7 @@ define( 'PRIMER_VERSION', '1.0.0' );
  */
 if ( ! defined( 'PRIMER_MIN_WP_VERSION' ) ) {
 
-	define( 'PRIMER_MIN_WP_VERSION', '4.1' );
+	define( 'PRIMER_MIN_WP_VERSION', '4.4' );
 
 }
 

@@ -2,9 +2,9 @@
 /**
  * Primer back compat functionality.
  *
- * Prevents Primer from running on WordPress versions prior to 4.1, since
- * this theme is not meant to be backward compatible beyond that and relies
- * on many newer functions and markup changes introduced in 4.1.
+ * Prevents Primer from running on older WordPress versions since
+ * this theme is not meant to be backward compatible beyond two
+ * major versions and relies on many newer functions and markup.
  *
  * @package Primer
  * @since   1.0.0
@@ -38,15 +38,6 @@ add_action( 'after_switch_theme', 'primer_switch_theme' );
 function primer_get_wp_upgrade_message() {
 
 	/**
-	 * Filter the required WordPress version.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @var string
-	 */
-	$required_wp_version = (string) apply_filters( 'primer_required_wp_version', '4.1' );
-
-	/**
 	 * Filter the required WordPress version upgrade message.
 	 *
 	 * @since 1.0.0
@@ -56,7 +47,7 @@ function primer_get_wp_upgrade_message() {
 	return (string) apply_filters( 'primer_required_wp_version_message',
 		sprintf(
 			__( 'Primer requires at least WordPress version %s. You are running version %s. Please upgrade and try again.', 'primer' ),
-			$required_wp_version,
+			PRIMER_MIN_WP_VERSION,
 			get_bloginfo( 'version' )
 		)
 	);
@@ -66,8 +57,8 @@ function primer_get_wp_upgrade_message() {
 /**
  * Adds a message for unsuccessful theme switch.
  *
- * Prints an update nag after an unsuccessful attempt to switch to
- * Primer on WordPress versions prior to 4.1.
+ * Prints an update nag after an unsuccessful attempt to
+ * activate Primer on older WordPress versions.
  *
  * @since 1.0.0
  */
@@ -78,7 +69,7 @@ function primer_upgrade_notice() {
 }
 
 /**
- * Prevents the Customizer from being loaded on WordPress versions prior to 4.1.
+ * Prevents the Customizer from being loaded on older WordPress versions.
  *
  * @action load-customize.php
  * @since  1.0.0
@@ -91,7 +82,7 @@ function primer_customize() {
 add_action( 'load-customize.php', 'primer_customize' );
 
 /**
- * Prevents the Theme Preview from being loaded on WordPress versions prior to 4.1.
+ * Prevents the Theme Preview from being loaded on older WordPress versions.
  *
  * @action template_redirect
  * @since  1.0.0
