@@ -478,19 +478,19 @@ class Primer_Customizer_Colors {
 				'label'  => esc_html_x( 'Dark', 'color scheme name', 'primer' ),
 				'colors' => array(
 					// Text
-					'header_textcolor'                 => '#e5e5e5',
+					'header_textcolor'                 => '#ffffff',
 					'tagline_text_color'               => '#999999',
-					'hero_text_color'                  => '#e5e5e5',
-					'menu_text_color'                  => '#e5e5e5',
-					'heading_text_color'               => '#e5e5e5',
-					'primary_text_color'               => '#e5e5e5',
+					'hero_text_color'                  => '#ffffff',
+					'menu_text_color'                  => '#ffffff',
+					'heading_text_color'               => '#ffffff',
+					'primary_text_color'               => '#ffffff',
 					'secondary_text_color'             => '#c1c1c1',
-					'footer_widget_heading_text_color' => '#e5e5e5',
-					'footer_widget_text_color'         => '#e5e5e5',
+					'footer_widget_heading_text_color' => '#ffffff',
+					'footer_widget_text_color'         => '#ffffff',
 					// Links & Buttons
 					'link_color'        => '#589ef2',
 					'button_color'      => '#589ef2',
-					'button_text_color' => '#e5e5e5',
+					'button_text_color' => '#ffffff',
 					// Backgrounds
 					'background_color'                       => '#222222',
 					'content_background_color'               => '#444444',
