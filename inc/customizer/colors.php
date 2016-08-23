@@ -483,7 +483,7 @@ class Primer_Customizer_Colors {
 					'hero_text_color'                  => '#ffffff',
 					'menu_text_color'                  => '#ffffff',
 					'heading_text_color'               => '#ffffff',
-					'primary_text_color'               => '#ffffff',
+					'primary_text_color'               => '#e5e5e5',
 					'secondary_text_color'             => '#c1c1c1',
 					'footer_widget_heading_text_color' => '#ffffff',
 					'footer_widget_text_color'         => '#ffffff',
