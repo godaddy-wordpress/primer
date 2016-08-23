@@ -474,6 +474,16 @@ class Primer_Customizer_Colors {
 					'footer_widget_background_color' => '#cfae5d',
 				),
 			),
+			'cool' => array(
+				'label'  => esc_html_x( 'Cool', 'color scheme name', 'primer' ),
+				'colors' => array(
+					'link_color'                     => '#78c3fb',
+					'button_color'                   => '#78c3fb',
+					'hero_background_color'          => '#6caee0',
+					'menu_background_color'          => '#78c3fb',
+					'footer_widget_background_color' => '#6caee0',
+				),
+			),
 			'dark' => array(
 				'label'  => esc_html_x( 'Dark', 'color scheme name', 'primer' ),
 				'colors' => array(
