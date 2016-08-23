@@ -1748,21 +1748,7 @@ body.no-max-width .footer-widget-area {
     margin-left: 1.38889%;
     font-size: 90%;
     line-height: 38px;
-    color: #757575; }
-  .site-info-wrapper .footer-menu {
-    width: 97.22222%;
-    float: right;
-    margin-right: 1.38889%;
-    margin-left: 1.38889%;
-    margin-bottom: 1em;
-    text-align: center; }
-    .site-info-wrapper .footer-menu ul {
-      padding: 0;
-      margin: 0;
-      list-style: none; }
-    .site-info-wrapper .footer-menu li {
-      display: inline-block;
-      margin: 0.5em 1em; }
+    color: #686868; }
   .site-info-wrapper .social-menu {
     width: 47.22222%;
     float: left;
@@ -1776,6 +1762,25 @@ body.no-max-width .footer-widget-area {
       margin-right: 1.38889%;
       margin-left: 1.38889%;
       text-align: center; } }
+
+.footer-menu {
+  width: 97.22222%;
+  float: right;
+  margin-right: 1.38889%;
+  margin-left: 1.38889%;
+  margin-bottom: 1em;
+  text-align: center; }
+  .footer-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+  .footer-menu li {
+    display: inline-block;
+    margin: 0.5em 1em; }
+    .footer-menu li a, .footer-menu li a:visited {
+      color: #686868; }
+      .footer-menu li a:hover, .footer-menu li a:visited:hover {
+        color: rgba(104, 104, 104, 0.8); }
 
 body.no-max-width .site-info-wrapper .site-info {
   max-width: none; }
@@ -1927,8 +1932,14 @@ body.no-max-width .site-info-wrapper .site-info {
 .widget_calendar #calendar_wrap #wp-calendar tfoot td#next {
   text-align: left; }
 
-.footer-widget .widget:last-child {
-  margin-bottom: 0; }
+.site-footer .widget {
+  color: #252525;
+  background-color: #ffffff; }
+  .site-footer .widget:last-child {
+    margin-bottom: 0; }
+
+.site-footer .widget-title, .site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6 {
+  color: #353535; }
 
 .widget_search {
   padding: 0; }

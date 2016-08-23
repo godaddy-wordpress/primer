@@ -79,24 +79,6 @@ body.no-max-width .footer-widget-area {
 		color: $color__footer-text;
 	}
 
-	.footer-menu {
-		@include span(12);
-
-		margin-bottom: 1em;
-		text-align: center;
-
-		ul {
-			padding: 0;
-			margin: 0;
-			list-style: none;
-		}
-
-		li {
-			display: inline-block;
-			margin: 0.5em 1em;
-		}
-	}
-
 	.social-menu {
 		@include span(last 6);
 	}
@@ -108,6 +90,32 @@ body.no-max-width .footer-widget-area {
 			@include span(12);
 
 			text-align: center;
+		}
+	}
+}
+
+.footer-menu {
+	@include span(12);
+
+	margin-bottom: 1em;
+	text-align: center;
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	li {
+		display: inline-block;
+		margin: 0.5em 1em;
+
+		a, a:visited {
+			color: $color__footer-menu-text;
+
+			&:hover {
+				color: rgba($color__footer-menu-text, 0.8);
+			}
 		}
 	}
 }
