@@ -77,7 +77,7 @@ function primer_add_primary_menu() {
 
 		wp_page_menu(
 			array(
-				'depth'     => 0,
+				'depth'     => 1, // Top-level only
 				'show_home' => true,
 			)
 		);
