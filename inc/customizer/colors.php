@@ -25,8 +25,6 @@ class Primer_Customizer_Colors {
 	 */
 	public function __construct() {
 
-		$hero_image_color_overlay = absint( get_theme_mod( 'hero_image_color_overlay', 80 ) ) * 0.01;
-
 		/**
 		 * Filter the registered color settings.
 		 *
@@ -359,9 +357,9 @@ class Primer_Customizer_Colors {
 					),
 					'rgba_css' => array(
 						primer_get_hero_image_selector() => array(
-							'-webkit-box-shadow' => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %.2f)', $hero_image_color_overlay ),
-							'-moz-box-shadow'    => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %.2f)', $hero_image_color_overlay ),
-							'box-shadow'         => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %.2f)', $hero_image_color_overlay ),
+							'-webkit-box-shadow' => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %s)', $this->get_color_overlay_transparency_value() ),
+							'-moz-box-shadow'    => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %s)', $this->get_color_overlay_transparency_value() ),
+							'box-shadow'         => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %s)', $this->get_color_overlay_transparency_value() ),
 						),
 					),
 				),
@@ -1224,7 +1222,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_setting(
 			'hero_image_color_overlay',
 			array(
-				'default'           => 80,
+				'default'           => $this->get_color_overlay_transparency_default_value(),
 				'sanitize_callback' => 'absint',
 			)
 		);
@@ -1245,6 +1243,41 @@ class Primer_Customizer_Colors {
 				),
 			)
 		);
+
+	}
+
+	/**
+	 * Return the default hero image color overlay transparency value.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return int
+	 */
+	public function get_color_overlay_transparency_default_value() {
+
+		/**
+		 * Filter the default hero image color overlay transparency value.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var int
+		 */
+		return (int) apply_filters( 'hero_image_color_overlay_default', 80 );
+
+	}
+
+	/**
+	 * Return the hero image color overlay transparency value.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return string
+	 */
+	public function get_color_overlay_transparency_value() {
+
+		$default = $this->get_color_overlay_transparency_default_value();
+
+		return sprintf( '%.2f', absint( get_theme_mod( 'hero_image_color_overlay', $default ) ) * 0.01 );
 
 	}
 
