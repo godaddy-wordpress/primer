@@ -3,21 +3,18 @@ a {
 	text-decoration: none;
 
 	&:visited {
-		color: $color__link-visited;
+		color: $color__link;
 	}
 
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
-	}
-
-	&:focus {
-		outline: thin dotted;
+		color: rgba($color__link, 0.8);
 	}
 
 	&:hover,
-	&:active {
+	&:active,
+	&:focus {
 		outline: 0;
 	}
 }

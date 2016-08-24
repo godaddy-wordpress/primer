@@ -8,7 +8,7 @@ button,
 input,
 select,
 textarea {
-	color: $color__text-main;
+	color: $color__primary-text;
 	font-family: $font__main;
 	font-weight: normal;
 
@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 	line-height: $font__line-height-headings;
 	text-rendering: optimizeLegibility;
-	color: $color__text-heading;
+	color: $color__heading-text;
 }
 
 h1 {
@@ -70,8 +70,8 @@ blockquote {
 	line-height: $font__line-height-headings;
 	margin: 1em 0;
 	padding-left: 1em;
-	border-left: 4px solid $color__border;
-	color: $color__text-secondary;
+	border-left: 4px solid rgba($color__primary-text, 0.1);
+	color: $color__secondary-text;
 }
 
 address {
@@ -79,7 +79,7 @@ address {
 }
 
 pre {
-	background: $color__background-pre;
+	background-color: rgba(225, 225, 225, 0.5);
 	font-family: $font__pre;
 
 	@include font-size(0.9375);
@@ -89,7 +89,7 @@ pre {
 	max-width: 100%;
 	overflow: auto;
 	padding: 1em;
-	border: 1px solid $color__border;
+	border: 1px solid rgba($color__primary-text, 0.1);
 	border-radius: 2px;
 }
 
@@ -101,8 +101,8 @@ code, kbd, tt, var {
 
 code {
 	padding: 0.125rem 0.25rem;
-	background-color: $color__background-pre;
-	border: 1px solid $color__border;
+	background-color: rgba(225, 225, 225, 0.5);
+	border: 1px solid rgba($color__primary-text, 0.1);
 	border-radius: 2px;
 }
 
@@ -113,12 +113,12 @@ pre code {
 }
 
 abbr, acronym {
-	border-bottom: 1px dotted $color__border-abbr;
+	border-bottom: 1px dotted rgba($color__primary-text, 0.1);
 	cursor: help;
 }
 
 mark, ins {
-	background: $color__background-ins;
+	background-color: rgba(#fff9c0, 0.5);
 	text-decoration: none;
 }
 

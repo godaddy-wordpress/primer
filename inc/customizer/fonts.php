@@ -77,9 +77,30 @@ class Primer_Customizer_Fonts {
 		 */
 		$this->font_types = (array) apply_filters( 'primer_font_types',
 			array(
-				'header_font' => array(
-					'label'       => esc_html__( 'Header Font', 'primer' ),
-					'description' => esc_html__( 'Site title, post titles, widget titles, form labels, table headers and buttons.', 'primer' ),
+				'site_title_font' => array(
+					'label'       => esc_html__( 'Site Title', 'primer' ),
+					'description' => esc_html__( 'Site title text in the header.', 'primer' ),
+					'default'     => 'Open Sans',
+					'css'         => array(
+						'.site-title' => array(
+							'font-family' => '"%1$s", sans-serif',
+						),
+					),
+				),
+				'navigation_font' => array(
+					'label'       => esc_html__( 'Navigation', 'primer' ),
+					'description' => esc_html__( 'Primary menu links and button links.', 'primer' ),
+					'default'     => 'Open Sans',
+					'css'         => array(
+						'.main-navigation ul li a, .main-navigation ul li a:visited,
+						button, a.button, a.fl-button, input[type="button"], input[type="reset"], input[type="submit"]' => array(
+							'font-family' => '"%1$s", sans-serif',
+						),
+					),
+				),
+				'heading_font' => array(
+					'label'       => esc_html__( 'Headings', 'primer' ),
+					'description' => esc_html__( 'Post titles, widget titles, form labels, and table headers.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
 						'h1, h2, h3, h4, h5, h6,
@@ -87,17 +108,15 @@ class Primer_Customizer_Fonts {
 						legend,
 						table th,
 						dl dt,
-						.site-title,
 						.entry-title,
-						.widget-title,
-						button, a.button, a.fl-button, input[type="button"], input[type="reset"], input[type="submit"]' => array(
+						.widget-title' => array(
 							'font-family' => '"%1$s", sans-serif',
 						),
 					),
 				),
 				'primary_font' => array(
-					'label'       => esc_html__( 'Primary Font', 'primer' ),
-					'description' => esc_html__( 'Paragraphs, lists, menu links, quotes and tables.', 'primer' ),
+					'label'       => esc_html__( 'Primary', 'primer' ),
+					'description' => esc_html__( 'Paragraphs, lists, links, quotes, and tables.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
 						'body,
@@ -105,15 +124,14 @@ class Primer_Customizer_Fonts {
 						ol li,
 						ul li,
 						dl dd,
-						.main-navigation ul li a,
 						.fl-callout-text' => array(
 							'font-family' => '"%1$s", sans-serif',
 						),
 					),
 				),
 				'secondary_font' => array(
-					'label'       => esc_html__( 'Secondary Font', 'primer' ),
-					'description' => esc_html__( 'Post bylines, comment counts, comment reply links, post footers and quote footers.', 'primer' ),
+					'label'       => esc_html__( 'Secondary', 'primer' ),
+					'description' => esc_html__( 'Bylines, comment counts, reply links, post footers, and quote footers.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
 						'blockquote,

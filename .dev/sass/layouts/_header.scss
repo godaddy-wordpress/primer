@@ -1,6 +1,6 @@
 .site-header {
 	position: relative;
-	background-color: $color__background-header;
+	background-color: $color__hero-bg;
 	background-size: cover;
 	background-position: bottom center;
 	background-repeat: no-repeat;
@@ -34,17 +34,17 @@ body.no-max-width .site-header-wrapper {
 	font-size: 2em;
 
 	a {
-		color: $header-textcolor;
+		color: $color__site-title-text;
 
 		&:hover,
 		&:visited:hover {
-			color: rgba($header-textcolor, 0.8);
+			color: rgba($color__site-title-text, 0.8);
 		}
 	}
 }
 
 .site-description {
-	color: $color__text-tagline;
+	color: $color__tagline-text;
 }
 
 body.custom-header-image {
@@ -62,7 +62,7 @@ body.custom-header-image {
 }
 
 .page-title-container {
-	background-color: $color__background-screen;
+	background-color: $color__content-bg;
 
 	.page-header {
 		@include container($container-size);

@@ -1,6 +1,6 @@
 .site-footer {
 	clear: both;
-	background-color: $color__background-footer;
+	background-color: $color__footer-widget-bg;
 }
 
 .footer-widget-area {
@@ -65,6 +65,7 @@ body.no-max-width .footer-widget-area {
 
 .site-info-wrapper {
 	padding: 1.5em 0;
+	background-color: $color__footer-bg;
 
 	.site-info {
 		@include container($container-size);
@@ -75,24 +76,7 @@ body.no-max-width .footer-widget-area {
 
 		font-size: 90%;
 		line-height: 38px;
-	}
-
-	.footer-menu {
-		@include span(12);
-
-		margin-bottom: 1em;
-		text-align: center;
-
-		ul {
-			padding: 0;
-			margin: 0;
-			list-style: none;
-		}
-
-		li {
-			display: inline-block;
-			margin: 0.5em 1em;
-		}
+		color: $color__footer-text;
 	}
 
 	.social-menu {
@@ -106,6 +90,32 @@ body.no-max-width .footer-widget-area {
 			@include span(12);
 
 			text-align: center;
+		}
+	}
+}
+
+.footer-menu {
+	@include span(12);
+
+	margin-bottom: 1em;
+	text-align: center;
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	li {
+		display: inline-block;
+		margin: 0.5em 1em;
+
+		a, a:visited {
+			color: $color__footer-menu-text;
+
+			&:hover {
+				color: rgba($color__footer-menu-text, 0.8);
+			}
 		}
 	}
 }
@@ -150,12 +160,12 @@ body.no-max-width .site-info-wrapper .site-info {
 		width: 32px;
 		height: 32px;
 		transition: 200ms opacity;
-		color: $color__background-body;
-		background-color: $color__text-main;
+		color: $color__bg;
+		background-color: $color__primary-text;
 		border-radius: 3px;
 
 		&:visited {
-			color: $color__background-body;
+			color: $color__bg;
 		}
 
 		&:before {
@@ -171,7 +181,7 @@ body.no-max-width .site-info-wrapper .site-info {
 
 		&:hover,
 		&:visited:hover {
-			color: $color__background-body;
+			color: $color__bg;
 		}
 	}
 

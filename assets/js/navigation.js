@@ -3,52 +3,89 @@
  *
  * Handles toggling the navigation menu for small screens.
  */
-window.onload = function() {
 
-	var nav_menu    = document.getElementById( 'site-navigation' ),
-	    menu_toggle = document.getElementById( 'menu-toggle' );
+( function( $ ) {
 
-	if ( ! nav_menu || ! menu_toggle ) {
+	var $nav_menu    = false,
+	    $menu_toggle = false;
 
-		return;
+	function toggle() {
 
-	}
+		$menu_toggle.add( $nav_menu ).toggleClass( 'open' );
 
-	menu_toggle.onclick = function() {
-
-		menu_toggle.classList.toggle('open');
-		nav_menu.style.display = ( ! nav_menu.offsetHeight ) ? 'block' : 'none';
-
-	};
-
-};
-
-var width = window.innerWidth;
-
-window.onresize = function() {
-
-	if ( width === window.innerWidth ) {
-
-		return;
+		reset_submenu_toggles();
 
 	}
 
-	var nav_menu    = document.getElementById( 'site-navigation' ),
-	    menu_toggle = document.getElementById( 'menu-toggle' );
+	function reset_submenu_toggles() {
 
-	if ( typeof nav_menu !== 'undefined' && typeof menu_toggle !== 'undefined' && menu_toggle.offsetHeight ) {
-
-		nav_menu.style.display = 'none';
-		menu_toggle.className  = 'menu-toggle';
-
-		return;
+		$nav_menu.find( '.menu-item-has-children' ).removeClass( 'open' );
 
 	}
 
-	if ( 'none' === nav_menu.style.display ) {
+	function expand( e ) {
 
-		nav_menu.style.display = 'block';
+		e.preventDefault();
+
+		var $menu_item = $( this ).parent( '.menu-item-has-children' );
+
+		if ( ! $menu_item ) {
+
+			return;
+
+		}
+
+		$menu_item.toggleClass( 'open' );
 
 	}
 
-};
+	function position() {
+
+		var $this    = $( this ),
+		    $submenu = $this.children( '.sub-menu' ).first();
+
+
+		if ( isOffScreen( $submenu ) || $submenu.parents( '.bump' ).length ) {
+
+			$submenu.siblings( 'a' ).andSelf().addClass( 'bump' );
+
+			$submenu.css({
+				'left'  : 'auto',
+				'right' : ( $this.parents( 'ul' ).length > 1 ) ? $submenu.width() : 0
+			});
+
+		}
+
+		$this.off( 'hover', position );
+
+	}
+
+	function isOffScreen( $submenu ) {
+
+		var submenu_position   = $submenu.offset().left,
+		    submenu_width      = $submenu.width();
+
+		return ( submenu_position + submenu_width ) > $( window ).width();
+
+	}
+
+	$( document ).ready( function() {
+
+		$nav_menu    = $( '#site-navigation' );
+		$menu_toggle = $( '#menu-toggle' );
+
+		if ( ! $nav_menu || ! $menu_toggle ) {
+
+			return;
+
+		}
+
+		$menu_toggle.on( 'click', toggle );
+
+		$nav_menu.find( '.menu-item-has-children' ).on( 'hover', position );
+
+		$nav_menu.find( '.expand' ).on( 'click', expand );
+
+	});
+
+})( jQuery );

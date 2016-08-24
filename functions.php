@@ -34,7 +34,7 @@ define( 'PRIMER_VERSION', '1.0.0' );
  */
 if ( ! defined( 'PRIMER_MIN_WP_VERSION' ) ) {
 
-	define( 'PRIMER_MIN_WP_VERSION', '4.1' );
+	define( 'PRIMER_MIN_WP_VERSION', '4.4' );
 
 }
 
@@ -182,6 +182,14 @@ function primer_setup() {
 	 * @since 1.0.0
 	 */
 	add_theme_support( 'post-thumbnails' );
+
+	/**
+	 * Enable support for customizer selective refresh
+	 *
+	 * https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
+	 * @since 1.0.0
+	 */
+	add_theme_support( 'customize-selective-refresh-widgets' );
 
 	/**
 	 * Register custom Custom Navigation Menus.
@@ -371,7 +379,8 @@ function primer_scripts() {
 
 	wp_style_add_data( 'primer', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", array(), PRIMER_VERSION, true );
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", array( 'jquery' ), PRIMER_VERSION, true );
 	wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), PRIMER_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -380,23 +389,18 @@ function primer_scripts() {
 
 	}
 
-	/**
-	 * Filter the hero image element selector.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @var string
-	 */
-	$selector = (string) apply_filters( 'primer_hero_image_selector', '.site-header' );
+	if ( primer_has_hero_image() ) {
 
-	wp_add_inline_style(
-		'primer',
-		sprintf(
-			'%s { background-image: url(%s); }',
-			wp_strip_all_tags( $selector ),
-			esc_url( primer_get_hero_image() )
-		)
-	);
+		wp_add_inline_style(
+			'primer',
+			sprintf(
+				'%s { background-image: url(%s); }',
+				primer_get_hero_image_selector(),
+				esc_url( primer_get_hero_image() )
+			)
+		);
+
+	}
 
 	/**
 	 * Enqueue lt IE 9 Conditional

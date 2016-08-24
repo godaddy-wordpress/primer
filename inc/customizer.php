@@ -32,9 +32,9 @@ class Primer_Customizer {
 	}
 
 	/**
-	 * Include controls class required by our sections
+	 * Include controls class required by our sections.
 	 *
-	 * This is hooked her since WP_Customize_Control is not present before
+	 * This is hooked her since WP_Customize_Control is not present before.
 	 */
 	public function require_controls() {
 
@@ -87,7 +87,7 @@ class Primer_Customizer {
 	/**
 	 * Adds postMessage support for site title and description for the Customizer.
 	 *
-	 * @action customize_save
+	 * @action customize_register
 	 * @since  1.0.0
 	 * @uses   $this->blogname()
 	 * @uses   $this->blogdescription()
@@ -151,7 +151,7 @@ class Primer_Customizer {
 	}
 
 	/**
-	 * Add control to use featured images as the header image.
+	 * Add control to use featured images as the hero image.
 	 *
 	 * @action customize_register
 	 * @since  1.0.0
@@ -172,7 +172,7 @@ class Primer_Customizer {
 			'use_featured_hero_image',
 			array(
 				'label'       => esc_html__( 'Use featured image', 'primer' ),
-				'description' => esc_html__( "Allow the featured image on the current post to override the header image.", 'primer' ),
+				'description' => esc_html__( 'Allow the featured image on the current post to override the hero image.', 'primer' ),
 				'section'     => 'header_image',
 				'priority'    => 5,
 				'type'        => 'checkbox',

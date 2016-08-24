@@ -1,7 +1,7 @@
 .hentry {
 	margin: 0 0 1.5em;
 	padding: 2.5em 3.375em;
-	background-color: $color__background-screen;
+	background-color: $color__content-bg;
 
 	@media #{$medium-only} {
 		padding: 1.5em 2.375em;
@@ -37,7 +37,7 @@
 	a,
 	a:visited,
 	a:before {
-		color: $color__text-main;
+		color: $color__primary-text;
 	}
 
 	a:hover,
@@ -48,7 +48,7 @@
 
 .entry-meta {
 	font-size: 90%;
-	color: $color__text-secondary;
+	color: $color__secondary-text;
 }
 
 @media #{$small-only} {
@@ -80,7 +80,7 @@
 
 .entry-footer {
 	font-size: 85%;
-	color: $color__text-secondary;
+	color: $color__secondary-text;
 
 	.entry-footer-right {
 		float: right;
