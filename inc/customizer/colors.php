@@ -65,10 +65,11 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'hero_text_color' => array(
-					'label'   => esc_html__( 'Hero Text', 'primer' ),
-					'default' => '#ffffff',
-					'section' => 'colors-header',
-					'css'     => array(
+					'label'    => esc_html__( 'Hero Text', 'primer' ),
+					'default'  => '#ffffff',
+					'section'  => 'colors-header',
+					'priority' => 20,
+					'css'      => array(
 						'.hero,
 						.hero .widget h1,
 						.hero .widget h2,
@@ -194,10 +195,11 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_widget_heading_text_color' => array(
-					'label'   => esc_html__( 'Widget Heading Text', 'primer' ),
-					'default' => '#353535',
-					'section' => 'colors-footer',
-					'css'     => array(
+					'label'           => esc_html__( 'Widget Heading Text', 'primer' ),
+					'default'         => '#353535',
+					'section'         => 'colors-footer',
+					'active_callback' => 'primer_has_active_footer_sidebars',
+					'css'             => array(
 						'.site-footer .widget-title,
 						.site-footer h1,
 						.site-footer h2,
@@ -210,10 +212,11 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_widget_text_color' => array(
-					'label'   => esc_html__( 'Widget Text', 'primer' ),
-					'default' => '#252525',
-					'section' => 'colors-footer',
-					'css'     => array(
+					'label'           => esc_html__( 'Widget Text', 'primer' ),
+					'default'         => '#252525',
+					'section'         => 'colors-footer',
+					'active_callback' => 'primer_has_active_footer_sidebars',
+					'css'             => array(
 						'.site-footer .widget' => array(
 							'color' => '%1$s',
 						),
@@ -224,11 +227,12 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_menu_text_color' => array(
-					'label'    => esc_html__( 'Menu Text', 'primer' ),
-					'default'  => '#686868',
-					'priority' => 20,
-					'section'  => 'colors-footer',
-					'css'      => array(
+					'label'           => esc_html__( 'Menu Text', 'primer' ),
+					'default'         => '#686868',
+					'section'         => 'colors-footer',
+					'priority'        => 20,
+					'active_callback' => 'primer_has_footer_menu',
+					'css'             => array(
 						'.footer-menu ul li a,
 						.footer-menu ul li a:visited' => array(
 							'color' => '%1$s',
@@ -343,10 +347,11 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'hero_background_color' => array(
-					'label'   => esc_html__( 'Hero Background', 'primer' ),
-					'default' => '#0b3954',
-					'section' => 'colors-header',
-					'css'     => array(
+					'label'    => esc_html__( 'Hero Background', 'primer' ),
+					'default'  => '#0b3954',
+					'section'  => 'colors-header',
+					'priority' => 20,
+					'css'      => array(
 						primer_get_hero_image_selector() => array(
 							'background-color' => '%1$s',
 						),
@@ -370,20 +375,22 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_widget_background_color' => array(
-					'label'   => esc_html__( 'Widgets Background', 'primer' ),
-					'default' => '#0b3954',
-					'section' => 'colors-footer',
-					'css'     => array(
+					'label'           => esc_html__( 'Widgets Background', 'primer' ),
+					'default'         => '#0b3954',
+					'section'         => 'colors-footer',
+					'active_callback' => 'primer_has_active_footer_sidebars',
+					'css'             => array(
 						'.site-footer' => array(
 							'background-color' => '%1$s',
 						),
 					),
 				),
 				'footer_widget_content_background_color' => array(
-					'label'   => esc_html__( 'Widget Content Background', 'primer' ),
-					'default' => '#ffffff',
-					'section' => 'colors-footer',
-					'css'     => array(
+					'label'           => esc_html__( 'Widget Content Background', 'primer' ),
+					'default'         => '#ffffff',
+					'section'         => 'colors-footer',
+					'active_callback' => 'primer_has_active_footer_sidebars',
+					'css'             => array(
 						'.site-footer .widget' => array(
 							'background-color' => '%1$s',
 						),
@@ -753,10 +760,11 @@ class Primer_Customizer_Colors {
 				$wp_customize,
 				$name,
 				array(
-					'label'       => ! empty( $args['label'] ) ? $args['label'] : $name,
-					'description' => ! empty( $args['description'] ) ? $args['description'] : null,
-					'section'     => ! empty( $args['section'] ) ? $args['section'] : 'colors-content',
-					'priority'    => ! empty( $args['priority'] ) ? absint( $args['priority'] ) : null,
+					'label'           => ! empty( $args['label'] ) ? $args['label'] : $name,
+					'description'     => ! empty( $args['description'] ) ? $args['description'] : null,
+					'section'         => ! empty( $args['section'] ) ? $args['section'] : 'colors-content',
+					'priority'        => ! empty( $args['priority'] ) ? absint( $args['priority'] ) : null,
+					'active_callback' => ! empty( $args['active_callback'] ) ? $args['active_callback'] : null,
 				)
 			)
 		);
@@ -1203,7 +1211,7 @@ class Primer_Customizer_Colors {
 	}
 
 	/**
-	 * Add control for the hero image color overlay transparency.
+	 * Add setting and control for the hero image color overlay transparency.
 	 *
 	 * @action customize_register
 	 * @since  1.0.0
@@ -1223,12 +1231,13 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_control(
 			'hero_image_color_overlay',
 			array(
-				'label'       => esc_html__( 'Hero Background Overlay', 'primer' ),
-				'description' => esc_html__( 'Control the color overlay transparency when using a custom Header Image.', 'primer' ),
-				'section'     => 'colors-header',
-				'priority'    => 30,
-				'type'        => 'range',
-				'input_attrs' => array(
+				'label'           => esc_html__( 'Hero Background Overlay', 'primer' ),
+				'description'     => esc_html__( 'Control the color overlay transparency when using a custom Header Image.', 'primer' ),
+				'section'         => 'colors-header',
+				'priority'        => 20,
+				'active_callback' => 'primer_has_hero_image',
+				'type'            => 'range',
+				'input_attrs'     => array(
 					'min'  => 0,
 					'max'  => 100,
 					'step' => 1,

@@ -404,6 +404,45 @@ function primer_get_active_footer_sidebars() {
 }
 
 /**
+ * Check if there are active footer widget areas.
+ *
+ * @since 1.0.0
+ *
+ * @return bool
+ */
+function primer_has_active_footer_sidebars() {
+
+	return (bool) primer_get_active_footer_sidebars();
+
+}
+
+/**
+ * Check if the social menu is assigned.
+ *
+ * @since 1.0.0
+ *
+ * @return bool
+ */
+function primer_has_social_menu() {
+
+	return has_nav_menu( 'social' );
+
+}
+
+/**
+ * Check if the footer menu is assigned.
+ *
+ * @since 1.0.0
+ *
+ * @return bool
+ */
+function primer_has_footer_menu() {
+
+	return has_nav_menu( 'footer' );
+
+}
+
+/**
  * Check if the site has active categories.
  *
  * We will store the result in a transient so this function
