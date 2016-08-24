@@ -1,25 +1,25 @@
+/* global jQuery, colorsSettings */
 /**
  * Theme Customizer enhancements for a better user experience.
  *
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
 
-( function( $ ) {
+( function( $, api ) {
 
-	var $style     = $( '#primer-color-scheme-css' ),
-	    $rgbaStyle = $( '#primer-color-scheme-css-rgba' ),
-	    $body      = $( 'body' ),
-	    api        = wp.customize;
+	var $style     = $( '#primer-colors-css' ),
+	    $rgbaStyle = $( '#primer-colors-css-rgba' ),
+	    $body      = $( 'body' );
 
 	if ( ! $style.length ) {
 
-		$style = $( 'head' ).append( '<style type="text/css" id="primer-color-scheme-css" />' ).find( '#primer-color-scheme-css' );
+		$style = $( 'head' ).append( '<style type="text/css" id="primer-colors-css" />' ).find( '#primer-colors-css' );
 
 	}
 
 	if ( ! $rgbaStyle.length ) {
 
-		$rgbaStyle = $( 'head' ).append( '<style type="text/css" id="primer-color-scheme-css-rgba" />' ).find( '#primer-color-scheme-css-rgba' );
+		$rgbaStyle = $( 'head' ).append( '<style type="text/css" id="primer-colors-css-rgba" />' ).find( '#primer-colors-css-rgba' );
 
 	}
 
@@ -59,13 +59,13 @@
 	// Color scheme.
 	api.bind( 'preview-ready', function() {
 
-		api.preview.bind( 'primer-update-color-scheme-css', function( css ) {
+		api.preview.bind( 'primer-update-colors-css', function( css ) {
 
 			$style.html( css );
 
 		} );
 
-		api.preview.bind( 'primer-update-color-scheme-css-rgba', function( rgbaCSS ) {
+		api.preview.bind( 'primer-update-colors-css-rgba', function( rgbaCSS ) {
 
 			$rgbaStyle.html( rgbaCSS );
 
@@ -137,4 +137,27 @@
 
 	} );
 
-} )( jQuery );
+	//
+	api( 'hero_image_color_overlay', function( value ) {
+
+		value.bind( function( to ) {
+
+			var $hero_background = $( colorsSettings.hero_background_selector ),
+			    currentColor     = $hero_background.css( 'box-shadow' ),
+			    alpha            = to * 0.01;
+
+			if ( -1 === currentColor.indexOf( 'a' ) ) {
+
+				$hero_background.css( 'box-shadow', currentColor.replace(')', ',' + alpha + ')' ).replace('rgb', 'rgba') );
+
+				return;
+
+			}
+
+			$hero_background.css( 'box-shadow', currentColor.replace( /^(.*,).*(\).*)$/, '$1' + alpha + '$2' ) );
+
+		} );
+
+	} );
+
+} )( jQuery, wp.customize );

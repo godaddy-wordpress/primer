@@ -639,8 +639,8 @@ class Primer_Customizer_Colors {
 		add_action( 'customize_register', array( $this, 'color_scheme' ) );
 		add_action( 'customize_register', array( $this, 'color_overlay_transparency' ) );
 
-		add_action( 'customize_controls_enqueue_scripts',      array( $this, 'color_scheme_control_js' ) );
-		add_action( 'customize_controls_print_footer_scripts', array( $this, 'color_scheme_preview_css' ) );
+		add_action( 'customize_controls_enqueue_scripts',      array( $this, 'colors_control_js' ) );
+		add_action( 'customize_controls_print_footer_scripts', array( $this, 'colors_preview_css' ) );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_colors_inline_css' ), 11 );
 
@@ -937,13 +937,13 @@ class Primer_Customizer_Colors {
 	 * @action customize_controls_enqueue_scripts
 	 * @since  1.0.0
 	 */
-	public function color_scheme_control_js() {
+	public function colors_control_js() {
 
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-		wp_enqueue_script( 'primer-color-scheme-control', get_template_directory_uri() . "/assets/js/admin/color-scheme-control{$suffix}.js", array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), PRIMER_VERSION, true );
+		wp_enqueue_script( 'primer-colors-control', get_template_directory_uri() . "/assets/js/admin/colors-control{$suffix}.js", array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), PRIMER_VERSION, true );
 
-		wp_localize_script( 'primer-color-scheme-control', 'colorSchemes', $this->color_schemes );
+		wp_localize_script( 'primer-colors-control', 'colorSchemes', $this->color_schemes );
 
 	}
 
@@ -952,10 +952,10 @@ class Primer_Customizer_Colors {
 	 *
 	 * @action customize_controls_print_footer_scripts
 	 */
-	public function color_scheme_preview_css() {
+	public function colors_preview_css() {
 
 		?>
-		<script type="text/html" id="tmpl-primer-color-scheme-css">
+		<script type="text/html" id="tmpl-primer-colors-css">
 			<?php
 
 			foreach ( $this->colors as $name => $args ) {
@@ -982,12 +982,12 @@ class Primer_Customizer_Colors {
 		if ( ! $rgba_colors ) {
 
 			// Required for themes without rgba css rules
-			echo '<script type="text/html" id="tmpl-primer-color-scheme-css-rgba"></script>';
+			echo '<script type="text/html" id="tmpl-primer-colors-css-rgba"></script>';
 
 		}
 
 		?>
-		<script type="text/html" id="tmpl-primer-color-scheme-css-rgba">
+		<script type="text/html" id="tmpl-primer-colors-css-rgba">
 			<?php
 
 			foreach ( $rgba_colors as $name => $css ) {
@@ -1224,6 +1224,7 @@ class Primer_Customizer_Colors {
 			array(
 				'default'           => $this->get_color_overlay_transparency_default_value(),
 				'sanitize_callback' => 'absint',
+                'transport'         => 'postMessage',
 			)
 		);
 
