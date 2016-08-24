@@ -202,10 +202,10 @@ class Primer_Customizer {
 		$wp_customize->add_control(
 			'hero_image_color_overlay',
 			array(
-				'label'       => esc_html__( 'Color Overlay', 'primer' ),
-				'description' => esc_html__( 'Transparency percentage', 'primer' ),
-				'section'     => 'header_image',
-				'priority'    => 6,
+				'label'       => esc_html__( 'Hero Background Overlay', 'primer' ),
+				'description' => esc_html__( 'Controls the color overlay transparency when using a custom Header Image.', 'primer' ),
+				'section'     => 'colors-header',
+				'priority'    => 30,
 				'type'        => 'range',
 				'input_attrs' => array(
 					'min'  => 0,

@@ -85,13 +85,6 @@ class Primer_Customizer_Colors {
 							'color' => '%1$s',
 						),
 					),
-					'rgba_css' => array(
-						'.site-header' => array(
-							'-moz-box-shadow'    => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %.2f)', $hero_image_color_overlay ),
-							'-webkit-box-shadow' => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %.2f)', $hero_image_color_overlay ),
-							'box-shadow'         => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %.2f)', $hero_image_color_overlay ),
-						),
-					),
 				),
 				'menu_text_color' => array(
 					'label'   => esc_html__( 'Text', 'primer' ),
@@ -356,6 +349,13 @@ class Primer_Customizer_Colors {
 					'css'     => array(
 						primer_get_hero_image_selector() => array(
 							'background-color' => '%1$s',
+						),
+					),
+					'rgba_css' => array(
+						primer_get_hero_image_selector() => array(
+							'-webkit-box-shadow' => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %.2f)', $hero_image_color_overlay ),
+							'-moz-box-shadow'    => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %.2f)', $hero_image_color_overlay ),
+							'box-shadow'         => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %.2f)', $hero_image_color_overlay ),
 						),
 					),
 				),
