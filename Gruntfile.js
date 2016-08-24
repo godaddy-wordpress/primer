@@ -145,7 +145,7 @@ module.exports = function( grunt ) {
 						to: pkg.title
 					},
 					{
-						from: "YEAR THE PACKAGE'S COPYRIGHT HOLDER",
+						from: 'YEAR THE PACKAGE\'S COPYRIGHT HOLDER',
 						to: new Date().getFullYear()
 					},
 					{

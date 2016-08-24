@@ -1760,8 +1760,7 @@ body.no-max-width .footer-widget-area {
   float: right;
   margin-right: 1.38889%;
   margin-left: 1.38889%;
-  margin-bottom: 1em;
-  text-align: center; }
+  margin-bottom: 1em; }
   .footer-menu ul {
     padding: 0;
     margin: 0;
@@ -1769,6 +1768,10 @@ body.no-max-width .footer-widget-area {
   .footer-menu li {
     display: inline-block;
     margin: 0.5em 1em; }
+    .footer-menu li:first-child {
+      margin-right: 0; }
+    .footer-menu li:last-child {
+      margin-left: 0; }
     .footer-menu li a, .footer-menu li a:visited {
       color: #686868; }
       .footer-menu li a:hover, .footer-menu li a:visited:hover {
