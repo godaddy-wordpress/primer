@@ -98,7 +98,6 @@ body.no-max-width .footer-widget-area {
 	@include span(12);
 
 	margin-bottom: 1em;
-	text-align: center;
 
 	ul {
 		padding: 0;
@@ -109,6 +108,14 @@ body.no-max-width .footer-widget-area {
 	li {
 		display: inline-block;
 		margin: 0.5em 1em;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
 
 		a, a:visited {
 			color: $color__footer-menu-text;
