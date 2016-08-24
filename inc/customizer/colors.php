@@ -40,10 +40,11 @@ class Primer_Customizer_Colors {
 				 * Text colors
 				 */
 				'header_textcolor' => array(
-					'label'   => esc_html__( 'Site Title Text', 'primer' ),
-					'default' => '#ffffff',
-					'section' => 'colors-header',
-					'css'     => array(
+					'label'           => esc_html__( 'Site Title Text', 'primer' ),
+					'default'         => '#ffffff',
+					'section'         => 'colors-header',
+					'active_callback' => 'display_header_text',
+					'css'             => array(
 						'.site-title a, .site-title a:visited' => array(
 							'color' => '%1$s',
 						),
@@ -55,10 +56,11 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'tagline_text_color' => array(
-					'label'   => esc_html__( 'Tagline Text', 'primer' ),
-					'default' => '#ffffff',
-					'section' => 'colors-header',
-					'css'     => array(
+					'label'           => esc_html__( 'Tagline Text', 'primer' ),
+					'default'         => '#ffffff',
+					'section'         => 'colors-header',
+					'active_callback' => 'display_header_text',
+					'css'             => array(
 						'.site-description' => array(
 							'color' => '%1$s',
 						),
@@ -749,7 +751,7 @@ class Primer_Customizer_Colors {
 			$name,
 			array(
 				'default'              => sanitize_hex_color_no_hash( $args['default'] ),
-				'sanitize_callback'    => 'sanitize_hex_color_no_hash',
+				'sanitize_callback'    => ( 'header_textcolor' === $name ) ? array( $wp_customize, '_sanitize_header_textcolor' ) : 'sanitize_hex_color_no_hash',
 				'sanitize_js_callback' => 'maybe_hash_hex_color',
 				'transport'            => 'postMessage',
 			)
