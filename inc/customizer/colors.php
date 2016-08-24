@@ -631,6 +631,7 @@ class Primer_Customizer_Colors {
 
 		add_action( 'customize_register', array( $this, 'colors' ) );
 		add_action( 'customize_register', array( $this, 'color_scheme' ) );
+		add_action( 'customize_register', array( $this, 'color_overlay_transparency' ) );
 
 		add_action( 'customize_controls_enqueue_scripts',      array( $this, 'color_scheme_control_js' ) );
 		add_action( 'customize_controls_print_footer_scripts', array( $this, 'color_scheme_preview_css' ) );
@@ -858,6 +859,29 @@ class Primer_Customizer_Colors {
 	}
 
 	/**
+	 * Return an array of CSS for colors supporting RGBA.
+	 *
+	 * @return array
+	 */
+	public function get_rgba_css() {
+
+		$colors = array();
+
+		foreach ( $this->colors as $name => $args ) {
+
+			if ( ! empty( $name ) && ! empty( $args['rgba_css'] ) && is_array( $args['rgba_css'] ) ) {
+
+				$colors[ $name ] = $args['rgba_css'];
+
+			}
+
+		}
+
+		return $colors;
+
+	}
+
+	/**
 	 * Register a color scheme setting.
 	 *
 	 * @action customize_register
@@ -1052,29 +1076,6 @@ class Primer_Customizer_Colors {
 	}
 
 	/**
-	 * Return an array of CSS for colors supporting RGBA.
-	 *
-	 * @return array
-	 */
-	public function get_rgba_css() {
-
-		$colors = array();
-
-		foreach ( $this->colors as $name => $args ) {
-
-			if ( ! empty( $name ) && ! empty( $args['rgba_css'] ) && is_array( $args['rgba_css'] ) ) {
-
-				$colors[ $name ] = $args['rgba_css'];
-
-			}
-
-		}
-
-		return $colors;
-
-	}
-
-	/**
 	 * Add custom header support.
 	 *
 	 * @action after_setup_theme
@@ -1198,6 +1199,42 @@ class Primer_Customizer_Colors {
 		);
 
 		add_theme_support( 'custom-background', $args );
+
+	}
+
+	/**
+	 * Add control for the hero image color overlay transparency.
+	 *
+	 * @action customize_register
+	 * @since  1.0.0
+	 *
+	 * @param WP_Customize_Manager $wp_customize
+	 */
+	public function color_overlay_transparency( WP_Customize_Manager $wp_customize ) {
+
+		$wp_customize->add_setting(
+			'hero_image_color_overlay',
+			array(
+				'default'           => 80,
+				'sanitize_callback' => 'absint',
+			)
+		);
+
+		$wp_customize->add_control(
+			'hero_image_color_overlay',
+			array(
+				'label'       => esc_html__( 'Hero Background Overlay', 'primer' ),
+				'description' => esc_html__( 'Control the color overlay transparency when using a custom Header Image.', 'primer' ),
+				'section'     => 'colors-header',
+				'priority'    => 30,
+				'type'        => 'range',
+				'input_attrs' => array(
+					'min'  => 0,
+					'max'  => 100,
+					'step' => 1,
+				),
+			)
+		);
 
 	}
 
