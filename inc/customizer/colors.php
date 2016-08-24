@@ -25,7 +25,7 @@ class Primer_Customizer_Colors {
 	 */
 	public function __construct() {
 
-		$hero_image_color_overlay = absint( get_theme_mod( 'hero_image_color_overlay', 50 ) ) * 0.01;
+		$hero_image_color_overlay = absint( get_theme_mod( 'hero_image_color_overlay', 80 ) ) * 0.01;
 
 		/**
 		 * Filter the registered color settings.

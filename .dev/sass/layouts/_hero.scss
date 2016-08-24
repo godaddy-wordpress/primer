@@ -1,10 +1,6 @@
 .hero {
 	@include span(12);
 
-	body.custom-header-image & {
-		text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
-	}
-
 	clear: both;
 	padding: 0 1rem;
 	color: $color__hero-text;

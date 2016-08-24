@@ -1590,12 +1590,6 @@ body.no-max-width .site-header-wrapper {
 .site-description {
   color: #ffffff; }
 
-body.custom-header-image .site-title {
-  text-shadow: 1px 1px 30px rgba(0, 0, 0, 0.5); }
-
-body.custom-header-image .site-description {
-  text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5); }
-
 .header-image img {
   display: block; }
 
@@ -1635,8 +1629,6 @@ body.no-max-width .page-title-container .page-header {
   clear: both;
   padding: 0 1rem;
   color: #ffffff; }
-  body.custom-header-image .hero {
-    text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5); }
   .hero .hero-inner {
     max-width: none; }
     @media only screen and (min-width: 61.063em) {
