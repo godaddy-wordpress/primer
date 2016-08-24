@@ -417,20 +417,7 @@ function primer_has_active_footer_sidebars() {
 }
 
 /**
- * Check if the social menu is assigned.
- *
- * @since 1.0.0
- *
- * @return bool
- */
-function primer_has_social_menu() {
-
-	return has_nav_menu( 'social' );
-
-}
-
-/**
- * Check if the footer menu is assigned.
+ * Check if a footer or social menu is assigned.
  *
  * @since 1.0.0
  *
@@ -438,7 +425,7 @@ function primer_has_social_menu() {
  */
 function primer_has_footer_menu() {
 
-	return has_nav_menu( 'footer' );
+	return ( has_nav_menu( 'footer' ) || has_nav_menu( 'social' ) );
 
 }
 
