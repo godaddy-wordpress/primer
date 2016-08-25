@@ -1099,7 +1099,6 @@ class Primer_Customizer_Colors {
 				'default' => array(
 					'url'           => 'assets/images/hero.jpg',
 					'thumbnail_url' => 'assets/images/hero-thumbnail.jpg',
-					'description'   => esc_html__( 'City', 'primer' ),
 				),
 			)
 		);
