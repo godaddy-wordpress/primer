@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-15 18:06-0500\n"
+"POT-Creation-Date: 2016-08-25 12:03-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -110,24 +110,24 @@ msgstr ""
 "Det virker ikke som om vi kan finne det du leter etter. Kanskje det kan "
 "hjelpe å søke."
 
-#: functions.php:202
+#: functions.php:210
 msgid "Primary Menu"
 msgstr "Hovedmeny"
 
-#: functions.php:203
+#: functions.php:211
 msgid "Social Menu"
 msgstr "Sosial meny"
 
-#: functions.php:204
+#: functions.php:212
 #, fuzzy
 msgid "Footer Menu"
 msgstr "Bunntekst midstilt"
 
-#: functions.php:305
+#: functions.php:308
 msgid "Sidebar"
 msgstr "Sidestolpe"
 
-#: functions.php:306
+#: functions.php:309
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
@@ -135,11 +135,11 @@ msgstr ""
 "Den primære sidestolpen vises sammen med innholdet på hver side, post, arkiv "
 "eller søkemal."
 
-#: functions.php:313
+#: functions.php:316
 msgid "Secondary Sidebar"
 msgstr "Sekundær sidestolpe"
 
-#: functions.php:314
+#: functions.php:317
 msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
@@ -147,47 +147,47 @@ msgstr ""
 "Den sekundære sidestolpen vil kun vises når du har valgt en utforming med "
 "tre kolonner."
 
-#: functions.php:321
+#: functions.php:324
 #, fuzzy
 msgid "Footer 1"
 msgstr "Bunntekst venstre"
 
-#: functions.php:322
+#: functions.php:325
 #, fuzzy
 msgid "This sidebar is the first column of the footer widget area."
 msgstr ""
 "Sidestolpen med bunntekst til venstre vises i den første kolonnen av "
 "kontrollprogramområdet for bunnteksten."
 
-#: functions.php:329
+#: functions.php:332
 #, fuzzy
 msgid "Footer 2"
 msgstr "Bunntekst venstre"
 
-#: functions.php:330
+#: functions.php:333
 #, fuzzy
 msgid "This sidebar is the second column of the footer widget area."
 msgstr ""
 "Sidestolpen med bunntekst til venstre vises i den andre kolonnen av "
 "kontrollprogramområdet for bunnteksten."
 
-#: functions.php:337
+#: functions.php:340
 #, fuzzy
 msgid "Footer 3"
 msgstr "Bunntekst venstre"
 
-#: functions.php:338
+#: functions.php:341
 #, fuzzy
 msgid "This sidebar is the third column of the footer widget area."
 msgstr ""
 "Sidestolpen med bunntekst til venstre vises i den tredje kolonnen av "
 "kontrollprogramområdet for bunnteksten."
 
-#: functions.php:345
+#: functions.php:348
 msgid "Hero"
 msgstr ""
 
-#: functions.php:346
+#: functions.php:349
 msgid "Hero widgets appear over the header image on the front page."
 msgstr ""
 
@@ -195,7 +195,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr "Hopp til innhold"
 
-#: inc/back-compat.php:58
+#: inc/back-compat.php:49
 #, php-format
 msgid ""
 "Primer requires at least WordPress version %s. You are running version %s. "
@@ -208,112 +208,247 @@ msgstr ""
 
 #: inc/customizer.php:174
 msgid ""
-"Allow the featured image on the current post to override the header image."
+"Allow the featured image on the current post to override the hero image."
 msgstr ""
 
-#: inc/customizer/colors.php:38
+#: inc/customizer/colors.php:41
 #, fuzzy
-msgid "Site Title Color"
+msgid "Site Title Text"
 msgstr "Sekundær sidestolpe"
 
-#: inc/customizer/colors.php:52
-msgid "Background Color"
+#: inc/customizer/colors.php:56
+msgid "Tagline Text"
 msgstr ""
 
-#: inc/customizer/colors.php:64
-msgid "Header Background Color"
+#: inc/customizer/colors.php:66
+msgid "Hero Text"
 msgstr ""
 
-#: inc/customizer/colors.php:73
-msgid "Menu Background Color"
+#: inc/customizer/colors.php:88 inc/customizer/colors.php:278
+msgid "Text"
 msgstr ""
 
-#: inc/customizer/colors.php:91
-msgid "Footer Background Color"
+#: inc/customizer/colors.php:110
+msgid "Heading Text"
 msgstr ""
 
-#: inc/customizer/colors.php:100
-msgid "Tagline Text Color"
+#: inc/customizer/colors.php:111
+msgid "Post titles, widget titles, form labels, table headers and buttons."
 msgstr ""
 
-#: inc/customizer/colors.php:109
-msgid "Link Color"
-msgstr ""
-
-#: inc/customizer/colors.php:135
-msgid "Main Text Color"
-msgstr ""
-
-#: inc/customizer/colors.php:162
+#: inc/customizer/colors.php:132
 #, fuzzy
-msgid "Secondary Text Color"
+msgid "Primary Text"
+msgstr "Hovedmeny"
+
+#: inc/customizer/colors.php:133
+msgid "Paragraphs, lists, menu links, quotes and tables."
+msgstr ""
+
+#: inc/customizer/colors.php:180
+#, fuzzy
+msgid "Secondary Text"
 msgstr "Sekundær sidestolpe"
 
-#: inc/customizer/colors.php:190 inc/customizer/layouts.php:302
+#: inc/customizer/colors.php:181
+msgid "Post bylines, comment counts, post footers and quote footers."
+msgstr ""
+
+#: inc/customizer/colors.php:195
+msgid "Widget Heading Text"
+msgstr ""
+
+#: inc/customizer/colors.php:211
+msgid "Widget Text"
+msgstr ""
+
+#: inc/customizer/colors.php:221
+msgid "Menu Text"
+msgstr ""
+
+#: inc/customizer/colors.php:242
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/customizer/colors.php:256
+msgid "Link Text"
+msgstr ""
+
+#: inc/customizer/colors.php:293 inc/customizer/colors.php:353
+msgid "Background"
+msgstr ""
+
+#: inc/customizer/colors.php:323
+msgid "Page Background"
+msgstr ""
+
+#: inc/customizer/colors.php:333
+msgid "Content Background"
+msgstr ""
+
+#: inc/customizer/colors.php:343
+msgid "Hero Background"
+msgstr ""
+
+#: inc/customizer/colors.php:363
+msgid "Widgets Background"
+msgstr ""
+
+#: inc/customizer/colors.php:373
+msgid "Widget Content Background"
+msgstr ""
+
+#: inc/customizer/colors.php:383
+msgid "Footer Background"
+msgstr ""
+
+#: inc/customizer/colors.php:421 inc/customizer/layouts.php:311
+msgid "Custom"
+msgstr ""
+
+#: inc/customizer/colors.php:438 inc/customizer/layouts.php:302
 #, fuzzy
 msgid "Default"
 msgstr "Standard"
 
-#: inc/customizer/colors.php:197 inc/customizer/layouts.php:311
-msgid "Custom"
+#: inc/customizer/colors.php:448
+msgctxt "color scheme name"
+msgid "Blush"
 msgstr ""
 
-#: inc/customizer/colors.php:211
+#: inc/customizer/colors.php:458
+msgctxt "color scheme name"
+msgid "Bronze"
+msgstr ""
+
+#: inc/customizer/colors.php:468
+msgctxt "color scheme name"
+msgid "Canary"
+msgstr ""
+
+#: inc/customizer/colors.php:478
+msgctxt "color scheme name"
+msgid "Cool"
+msgstr ""
+
+#: inc/customizer/colors.php:488
+msgctxt "color scheme name"
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer/colors.php:225
+#: inc/customizer/colors.php:515
+msgctxt "color scheme name"
+msgid "Iguana"
+msgstr ""
+
+#: inc/customizer/colors.php:525
+msgctxt "color scheme name"
 msgid "Muted"
 msgstr ""
 
-#: inc/customizer/colors.php:239
-msgid "Red"
+#: inc/customizer/colors.php:550
+msgctxt "color scheme name"
+msgid "Plum"
 msgstr ""
 
-#: inc/customizer/colors.php:456
-msgid "Base Color Scheme"
+#: inc/customizer/colors.php:560
+msgctxt "color scheme name"
+msgid "Rose"
+msgstr ""
+
+#: inc/customizer/colors.php:570
+msgctxt "color scheme name"
+msgid "Tangerine"
+msgstr ""
+
+#: inc/customizer/colors.php:580
+msgctxt "color scheme name"
+msgid "Turquoise"
+msgstr ""
+
+#: inc/customizer/colors.php:648
+msgid "Colors"
 msgstr ""
 
 #: inc/customizer/colors.php:657
-msgid "City"
+msgid "Color Schemes"
+msgstr ""
+
+#: inc/customizer/colors.php:665
+#, fuzzy
+msgid "Header"
+msgstr "Sekundær sidestolpe"
+
+#: inc/customizer/colors.php:673
+msgid "Menu"
+msgstr ""
+
+#: inc/customizer/colors.php:681
+msgid "Buttons"
+msgstr ""
+
+#: inc/customizer/colors.php:689
+msgid "Content"
+msgstr ""
+
+#: inc/customizer/colors.php:697
+#, fuzzy
+msgid "Footer"
+msgstr "Bunntekst venstre"
+
+#: inc/customizer/colors.php:880
+msgid "Base Color Scheme"
 msgstr ""
 
 #: inc/customizer/fonts.php:81
 #, fuzzy
-msgid "Header Font"
+msgid "Site Title"
 msgstr "Sekundær sidestolpe"
 
 #: inc/customizer/fonts.php:82
-msgid ""
-"Site title, post titles, widget titles, form labels, table headers and "
-"buttons."
+msgid "Site title text in the header."
 msgstr ""
 
-#: inc/customizer/fonts.php:99
+#: inc/customizer/fonts.php:91
 #, fuzzy
-msgid "Primary Font"
+msgid "Navigation"
+msgstr "Post-navigering"
+
+#: inc/customizer/fonts.php:92
+msgid "Primary menu links and button links."
+msgstr ""
+
+#: inc/customizer/fonts.php:102
+msgid "Headings"
+msgstr ""
+
+#: inc/customizer/fonts.php:103
+msgid "Post titles, widget titles, form labels, and table headers."
+msgstr ""
+
+#: inc/customizer/fonts.php:118
+#, fuzzy
+msgid "Primary"
 msgstr "Hovedmeny"
 
-#: inc/customizer/fonts.php:100
-msgid "Paragraphs, lists, menu links, quotes and tables."
+#: inc/customizer/fonts.php:119
+msgid "Paragraphs, lists, links, quotes, and tables."
 msgstr ""
 
-#: inc/customizer/fonts.php:115
+#: inc/customizer/fonts.php:133
 #, fuzzy
-msgid "Secondary Font"
+msgid "Secondary"
 msgstr "Sekundær sidestolpe"
 
-#: inc/customizer/fonts.php:116
-msgid ""
-"Post bylines, comment counts, comment reply links, post footers and quote "
-"footers."
+#: inc/customizer/fonts.php:134
+msgid "Bylines, comment counts, reply links, post footers, and quote footers."
 msgstr ""
 
-#: inc/customizer/fonts.php:164
+#: inc/customizer/fonts.php:182
 msgid "Fonts"
 msgstr ""
 
-#: inc/customizer/fonts.php:189
+#: inc/customizer/fonts.php:207
 #, fuzzy, php-format
 msgctxt "font name"
 msgid "%s (Default)"
@@ -404,29 +539,29 @@ msgstr "Søkeresultater for: %s"
 msgid "404 Page Not Found"
 msgstr ""
 
-#: inc/hooks.php:348
+#: inc/hooks.php:383
 #, php-format
 msgctxt "page number"
 msgid "Page %d"
 msgstr "Side %d"
 
-#: inc/template-tags.php:40
+#: inc/template-tags.php:132
 msgid "Posts navigation"
 msgstr "Post-navigering"
 
-#: inc/template-tags.php:46
+#: inc/template-tags.php:138
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Eldre poster"
 
-#: inc/template-tags.php:52
+#: inc/template-tags.php:144
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Nyere poster <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:85
+#: inc/template-tags.php:177
 msgid "Post navigation"
 msgstr "Post-navigering"
 
-#: inc/template-tags.php:188
+#: inc/template-tags.php:278
 msgid "Blog"
 msgstr "Blogg"
 
@@ -500,6 +635,10 @@ msgstr "1 kommentar"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% kommentarer"
+
+#, fuzzy
+#~ msgid "Primary Font"
+#~ msgstr "Hovedmeny"
 
 #~ msgid "Featured"
 #~ msgstr "Profilert"
