@@ -1,25 +1,25 @@
+/* global jQuery, colorsSettings */
 /**
  * Theme Customizer enhancements for a better user experience.
  *
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
 
-( function( $ ) {
+( function( $, api ) {
 
-	var $style     = $( '#primer-color-scheme-css' ),
-	    $rgbaStyle = $( '#primer-color-scheme-css-rgba' ),
-	    $body      = $( 'body' ),
-	    api        = wp.customize;
+	var $style     = $( '#primer-colors-css' ),
+	    $rgbaStyle = $( '#primer-colors-css-rgba' ),
+	    $body      = $( 'body' );
 
 	if ( ! $style.length ) {
 
-		$style = $( 'head' ).append( '<style type="text/css" id="primer-color-scheme-css" />' ).find( '#primer-color-scheme-css' );
+		$style = $( 'head' ).append( '<style type="text/css" id="primer-colors-css" />' ).find( '#primer-colors-css' );
 
 	}
 
 	if ( ! $rgbaStyle.length ) {
 
-		$rgbaStyle = $( 'head' ).append( '<style type="text/css" id="primer-color-scheme-css-rgba" />' ).find( '#primer-color-scheme-css-rgba' );
+		$rgbaStyle = $( 'head' ).append( '<style type="text/css" id="primer-colors-css-rgba" />' ).find( '#primer-colors-css-rgba' );
 
 	}
 
@@ -59,13 +59,13 @@
 	// Color scheme.
 	api.bind( 'preview-ready', function() {
 
-		api.preview.bind( 'primer-update-color-scheme-css', function( css ) {
+		api.preview.bind( 'primer-update-colors-css', function( css ) {
 
 			$style.html( css );
 
 		} );
 
-		api.preview.bind( 'primer-update-color-scheme-css-rgba', function( rgbaCSS ) {
+		api.preview.bind( 'primer-update-colors-css-rgba', function( rgbaCSS ) {
 
 			$rgbaStyle.html( rgbaCSS );
 
@@ -137,4 +137,58 @@
 
 	} );
 
-} )( jQuery );
+	api( 'hero_background_color', function( value ) {
+
+		value.bind( function( to ) {
+
+			var $selector = $( colorsSettings.hero_background_selector ),
+			    color     = 'rgb(' + hex2rgb( to ) + ')',
+			    alpha     = api( 'hero_image_color_overlay' )();
+
+			updateRgbaColor( color, alpha, $selector );
+
+		} );
+
+	} );
+
+	api( 'hero_image_color_overlay', function( value ) {
+
+		value.bind( function( alpha ) {
+
+			var $selector = $( colorsSettings.hero_background_selector ),
+			    color     = 'rgb(' + hex2rgb( api( 'hero_background_color' )() ) + ')';
+
+			updateRgbaColor( color, alpha, $selector );
+
+		} );
+
+	} );
+
+	function updateRgbaColor( color, alpha, $selector ) {
+
+		alpha = alpha * 0.01;
+
+		if ( -1 === color.indexOf( 'a' ) ) {
+
+			color = color.replace( ')', ',)' ).replace( 'rgb', 'rgba' );
+
+		}
+
+		$selector.css( 'color', color.replace( /^(.*,).*(\).*)$/, '$1' + alpha + '$2' ) );
+
+	}
+
+	// Convert a HEX color to RGB.
+	function hex2rgb( hex ) {
+
+		hex = hex.replace( '#', '' );
+
+		var r   = parseInt( hex.substring( 0, 2 ), 16 ),
+		    g   = parseInt( hex.substring( 2, 4 ), 16 ),
+		    b   = parseInt( hex.substring( 4, 6 ), 16 );
+
+		return r + ', ' + g + ', ' + b;
+
+	}
+
+} )( jQuery, wp.customize );

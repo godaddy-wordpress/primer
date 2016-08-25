@@ -47,16 +47,6 @@ body.no-max-width .site-header-wrapper {
 	color: $color__tagline-text;
 }
 
-body.custom-header-image {
-	.site-title {
-		text-shadow: 1px 1px 30px rgba(0, 0, 0, 0.5);
-	}
-
-	.site-description {
-		text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
-	}
-}
-
 .header-image img {
 	display: block;
 }

@@ -73,32 +73,28 @@ add_action( 'primer_before_site_navigation', 'primer_add_mobile_menu' );
  */
 function primer_add_primary_menu() {
 
+	if ( ! has_nav_menu( 'primary' ) ) {
+
+		wp_page_menu(
+			array(
+				'depth'     => 1, // Top-level only
+				'show_home' => true,
+			)
+		);
+
+		return;
+
+	}
+
 	wp_nav_menu(
 		array(
 			'theme_location' => 'primary',
-			'walker'         => new Primer_Primary_Menu_Sublevel_Walker,
+			'walker'         => new Primer_Walker_Nav_Menu,
 		)
 	);
 
 }
 add_action( 'primer_site_navigation', 'primer_add_primary_menu' );
-
-/**
- * Custom class that enables us to add some markup before the menu
- *
- * Class Primer_Primary_Sublevel_Walker
- */
-class Primer_Primary_Menu_Sublevel_Walker extends Walker_Nav_Menu {
-
-	function start_lvl( &$output, $depth = 0, $args = array() ) {
-
-		$indent = str_repeat( "\t", $depth );
-
-		$output .= "\n$indent<a class=\"expand\" href=\"#\"></a>\n$indent<ul class=\"sub-menu\">\n";
-
-	}
-
-}
 
 /**
  * Display primary navigation menu after the header.
@@ -285,25 +281,6 @@ function primer_conditional_jquery_tag( $tag, $handle ) {
 
 }
 add_filter( 'script_loader_tag', 'primer_conditional_jquery_tag', 10, 2 );
-
-/**
- * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
- *
- * @filter wp_page_menu_args
- * @since  1.0.0
- *
- * @param  array $args
- *
- * @return array
- */
-function primer_page_menu_args( array $args ) {
-
-	$args['show_home'] = true;
-
-	return $args;
-
-}
-add_filter( 'wp_page_menu_args', 'primer_page_menu_args' );
 
 /**
  * Adds custom classes to the array of body classes.

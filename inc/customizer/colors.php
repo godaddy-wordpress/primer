@@ -38,10 +38,11 @@ class Primer_Customizer_Colors {
 				 * Text colors
 				 */
 				'header_textcolor' => array(
-					'label'   => esc_html__( 'Site Title Text', 'primer' ),
-					'default' => '#ffffff',
-					'section' => 'colors-header',
-					'css'     => array(
+					'label'           => esc_html__( 'Site Title Text', 'primer' ),
+					'default'         => '#ffffff',
+					'section'         => 'colors-header',
+					'active_callback' => 'display_header_text',
+					'css'             => array(
 						'.site-title a, .site-title a:visited' => array(
 							'color' => '%1$s',
 						),
@@ -53,20 +54,22 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'tagline_text_color' => array(
-					'label'   => esc_html__( 'Tagline Text', 'primer' ),
-					'default' => '#ffffff',
-					'section' => 'colors-header',
-					'css'     => array(
+					'label'           => esc_html__( 'Tagline Text', 'primer' ),
+					'default'         => '#ffffff',
+					'section'         => 'colors-header',
+					'active_callback' => 'display_header_text',
+					'css'             => array(
 						'.site-description' => array(
 							'color' => '%1$s',
 						),
 					),
 				),
 				'hero_text_color' => array(
-					'label'   => esc_html__( 'Hero Text', 'primer' ),
-					'default' => '#ffffff',
-					'section' => 'colors-header',
-					'css'     => array(
+					'label'    => esc_html__( 'Hero Text', 'primer' ),
+					'default'  => '#ffffff',
+					'section'  => 'colors-header',
+					'priority' => 20,
+					'css'      => array(
 						'.hero,
 						.hero .widget h1,
 						.hero .widget h2,
@@ -192,10 +195,11 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_widget_heading_text_color' => array(
-					'label'   => esc_html__( 'Widget Heading Text', 'primer' ),
-					'default' => '#353535',
-					'section' => 'colors-footer',
-					'css'     => array(
+					'label'           => esc_html__( 'Widget Heading Text', 'primer' ),
+					'default'         => '#353535',
+					'section'         => 'colors-footer',
+					'active_callback' => 'primer_has_active_footer_sidebars',
+					'css'             => array(
 						'.site-footer .widget-title,
 						.site-footer h1,
 						.site-footer h2,
@@ -208,21 +212,23 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_widget_text_color' => array(
-					'label'   => esc_html__( 'Widget Text', 'primer' ),
-					'default' => '#252525',
-					'section' => 'colors-footer',
-					'css'     => array(
+					'label'           => esc_html__( 'Widget Text', 'primer' ),
+					'default'         => '#252525',
+					'section'         => 'colors-footer',
+					'active_callback' => 'primer_has_active_footer_sidebars',
+					'css'             => array(
 						'.site-footer .widget' => array(
 							'color' => '%1$s',
 						),
 					),
 				),
 				'footer_menu_text_color' => array(
-					'label'    => esc_html__( 'Menu Text', 'primer' ),
-					'default'  => '#686868',
-					'priority' => 20,
-					'section'  => 'colors-footer',
-					'css'      => array(
+					'label'           => esc_html__( 'Menu Text', 'primer' ),
+					'default'         => '#686868',
+					'section'         => 'colors-footer',
+					'priority'        => 20,
+					'active_callback' => 'primer_has_footer_menu',
+					'css'             => array(
 						'.footer-menu ul li a,
 						.footer-menu ul li a:visited' => array(
 							'color' => '%1$s',
@@ -340,12 +346,21 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'hero_background_color' => array(
-					'label'   => esc_html__( 'Hero Background', 'primer' ),
-					'default' => '#0b3954',
-					'section' => 'colors-header',
-					'css'     => array(
+					'label'    => esc_html__( 'Hero Background', 'primer' ),
+					'default'  => '#0b3954',
+					'section'  => 'colors-header',
+					'priority' => 20,
+					'css'      => array(
 						primer_get_hero_image_selector() => array(
 							'background-color' => '%1$s',
+						),
+					),
+					'rgba_css' => array(
+						primer_get_hero_image_selector() => array(
+							'-webkit-box-shadow' => 'inset 0 0 0 9999em',
+							'-moz-box-shadow'    => 'inset 0 0 0 9999em',
+							'box-shadow'         => 'inset 0 0 0 9999em',
+							'color'              => sprintf( 'rgba(%%1$s, %s)', $this->get_color_overlay_transparency_value() ),
 						),
 					),
 				),
@@ -360,20 +375,22 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_widget_background_color' => array(
-					'label'   => esc_html__( 'Widgets Background', 'primer' ),
-					'default' => '#0b3954',
-					'section' => 'colors-footer',
-					'css'     => array(
+					'label'           => esc_html__( 'Widgets Background', 'primer' ),
+					'default'         => '#0b3954',
+					'section'         => 'colors-footer',
+					'active_callback' => 'primer_has_active_footer_sidebars',
+					'css'             => array(
 						'.site-footer' => array(
 							'background-color' => '%1$s',
 						),
 					),
 				),
 				'footer_widget_content_background_color' => array(
-					'label'   => esc_html__( 'Widget Content Background', 'primer' ),
-					'default' => '#ffffff',
-					'section' => 'colors-footer',
-					'css'     => array(
+					'label'           => esc_html__( 'Widget Content Background', 'primer' ),
+					'default'         => '#ffffff',
+					'section'         => 'colors-footer',
+					'active_callback' => 'primer_has_active_footer_sidebars',
+					'css'             => array(
 						'.site-footer .widget' => array(
 							'background-color' => '%1$s',
 						),
@@ -621,9 +638,10 @@ class Primer_Customizer_Colors {
 
 		add_action( 'customize_register', array( $this, 'colors' ) );
 		add_action( 'customize_register', array( $this, 'color_scheme' ) );
+		add_action( 'customize_register', array( $this, 'color_overlay_transparency' ) );
 
-		add_action( 'customize_controls_enqueue_scripts',      array( $this, 'color_scheme_control_js' ) );
-		add_action( 'customize_controls_print_footer_scripts', array( $this, 'color_scheme_preview_css' ) );
+		add_action( 'customize_controls_enqueue_scripts',      array( $this, 'colors_control_js' ) );
+		add_action( 'customize_controls_print_footer_scripts', array( $this, 'colors_preview_css' ) );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_colors_inline_css' ), 11 );
 
@@ -731,7 +749,7 @@ class Primer_Customizer_Colors {
 			$name,
 			array(
 				'default'              => sanitize_hex_color_no_hash( $args['default'] ),
-				'sanitize_callback'    => 'sanitize_hex_color_no_hash',
+				'sanitize_callback'    => ( 'header_textcolor' === $name ) ? array( $wp_customize, '_sanitize_header_textcolor' ) : 'sanitize_hex_color_no_hash',
 				'sanitize_js_callback' => 'maybe_hash_hex_color',
 				'transport'            => 'postMessage',
 			)
@@ -742,10 +760,11 @@ class Primer_Customizer_Colors {
 				$wp_customize,
 				$name,
 				array(
-					'label'       => ! empty( $args['label'] ) ? $args['label'] : $name,
-					'description' => ! empty( $args['description'] ) ? $args['description'] : null,
-					'section'     => ! empty( $args['section'] ) ? $args['section'] : 'colors-content',
-					'priority'    => ! empty( $args['priority'] ) ? absint( $args['priority'] ) : null,
+					'label'           => ! empty( $args['label'] ) ? $args['label'] : $name,
+					'description'     => ! empty( $args['description'] ) ? $args['description'] : null,
+					'section'         => ! empty( $args['section'] ) ? $args['section'] : 'colors-content',
+					'priority'        => ! empty( $args['priority'] ) ? absint( $args['priority'] ) : null,
+					'active_callback' => ! empty( $args['active_callback'] ) ? $args['active_callback'] : null,
 				)
 			)
 		);
@@ -791,7 +810,10 @@ class Primer_Customizer_Colors {
 
 		if ( ! empty( $args['rgba_css'] ) ) {
 
-			$css .= sprintf( Primer_Customizer::parse_css_rules( $args['rgba_css'] ), implode( ', ', primer_hex2rgb( $hex ) ) );
+			$css .= sprintf(
+				Primer_Customizer::parse_css_rules( $args['rgba_css'] ),
+				implode( ', ', primer_hex2rgb( $hex ) )
+			);
 
 		}
 
@@ -845,6 +867,29 @@ class Primer_Customizer_Colors {
 	}
 
 	/**
+	 * Return an array of CSS for colors supporting RGBA.
+	 *
+	 * @return array
+	 */
+	public function get_rgba_css() {
+
+		$colors = array();
+
+		foreach ( $this->colors as $name => $args ) {
+
+			if ( ! empty( $name ) && ! empty( $args['rgba_css'] ) && is_array( $args['rgba_css'] ) ) {
+
+				$colors[ $name ] = $args['rgba_css'];
+
+			}
+
+		}
+
+		return $colors;
+
+	}
+
+	/**
 	 * Register a color scheme setting.
 	 *
 	 * @action customize_register
@@ -893,13 +938,13 @@ class Primer_Customizer_Colors {
 	 * @action customize_controls_enqueue_scripts
 	 * @since  1.0.0
 	 */
-	public function color_scheme_control_js() {
+	public function colors_control_js() {
 
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-		wp_enqueue_script( 'primer-color-scheme-control', get_template_directory_uri() . "/assets/js/admin/color-scheme-control{$suffix}.js", array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), PRIMER_VERSION, true );
+		wp_enqueue_script( 'primer-colors-control', get_template_directory_uri() . "/assets/js/admin/colors-control{$suffix}.js", array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), PRIMER_VERSION, true );
 
-		wp_localize_script( 'primer-color-scheme-control', 'colorSchemes', $this->color_schemes );
+		wp_localize_script( 'primer-colors-control', 'colorSchemes', $this->color_schemes );
 
 	}
 
@@ -908,10 +953,10 @@ class Primer_Customizer_Colors {
 	 *
 	 * @action customize_controls_print_footer_scripts
 	 */
-	public function color_scheme_preview_css() {
+	public function colors_preview_css() {
 
 		?>
-		<script type="text/html" id="tmpl-primer-color-scheme-css">
+		<script type="text/html" id="tmpl-primer-colors-css">
 			<?php
 
 			foreach ( $this->colors as $name => $args ) {
@@ -938,12 +983,12 @@ class Primer_Customizer_Colors {
 		if ( ! $rgba_colors ) {
 
 			// Required for themes without rgba css rules
-			echo '<script type="text/html" id="tmpl-primer-color-scheme-css-rgba"></script>';
+			echo '<script type="text/html" id="tmpl-primer-colors-css-rgba"></script>';
 
 		}
 
 		?>
-		<script type="text/html" id="tmpl-primer-color-scheme-css-rgba">
+		<script type="text/html" id="tmpl-primer-colors-css-rgba">
 			<?php
 
 			foreach ( $rgba_colors as $name => $css ) {
@@ -1035,29 +1080,6 @@ class Primer_Customizer_Colors {
 	public function get_current_color_scheme_array() {
 
 		return $this->color_schemes[ $this->get_current_color_scheme() ];
-
-	}
-
-	/**
-	 * Return an array of CSS for colors supporting RGBA.
-	 *
-	 * @return array
-	 */
-	public function get_rgba_css() {
-
-		$colors = array();
-
-		foreach ( $this->colors as $name => $args ) {
-
-			if ( ! empty( $name ) && ! empty( $args['rgba_css'] ) && is_array( $args['rgba_css'] ) ) {
-
-				$colors[ $name ] = $args['rgba_css'];
-
-			}
-
-		}
-
-		return $colors;
 
 	}
 
@@ -1184,6 +1206,79 @@ class Primer_Customizer_Colors {
 		);
 
 		add_theme_support( 'custom-background', $args );
+
+	}
+
+	/**
+	 * Add setting and control for the hero image color overlay transparency.
+	 *
+	 * @action customize_register
+	 * @since  1.0.0
+	 *
+	 * @param WP_Customize_Manager $wp_customize
+	 */
+	public function color_overlay_transparency( WP_Customize_Manager $wp_customize ) {
+
+		$wp_customize->add_setting(
+			'hero_image_color_overlay',
+			array(
+				'default'           => $this->get_color_overlay_transparency_default_value(),
+				'sanitize_callback' => 'absint',
+				'transport'         => 'postMessage',
+			)
+		);
+
+		$wp_customize->add_control(
+			'hero_image_color_overlay',
+			array(
+				'label'           => esc_html__( 'Hero Background Overlay', 'primer' ),
+				'description'     => esc_html__( 'Control the color overlay transparency when using a custom Header Image.', 'primer' ),
+				'section'         => 'colors-header',
+				'priority'        => 20,
+				'active_callback' => 'primer_has_hero_image',
+				'type'            => 'range',
+				'input_attrs'     => array(
+					'min'  => 0,
+					'max'  => 100,
+					'step' => 1,
+				),
+			)
+		);
+
+	}
+
+	/**
+	 * Return the default hero image color overlay transparency value.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return int
+	 */
+	public function get_color_overlay_transparency_default_value() {
+
+		/**
+		 * Filter the default hero image color overlay transparency value.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var int
+		 */
+		return (int) apply_filters( 'hero_image_color_overlay_default', 50 );
+
+	}
+
+	/**
+	 * Return the hero image color overlay transparency value.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return string
+	 */
+	public function get_color_overlay_transparency_value() {
+
+		$default = $this->get_color_overlay_transparency_default_value();
+
+		return sprintf( '%.2f', absint( get_theme_mod( 'hero_image_color_overlay', $default ) ) * 0.01 );
 
 	}
 

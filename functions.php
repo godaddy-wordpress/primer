@@ -64,6 +64,13 @@ require_once get_template_directory() . '/inc/helpers.php';
 require_once get_template_directory() . '/inc/template-tags.php';
 
 /**
+ * Load custom primary nav menu walker.
+ *
+ * @since 1.0.0
+ */
+require_once get_template_directory() . '/inc/walker-nav-menu.php';
+
+/**
  * Load template parts and override some WordPress defaults.
  *
  * @since 1.0.0
