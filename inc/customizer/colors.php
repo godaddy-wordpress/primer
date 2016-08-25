@@ -360,7 +360,7 @@ class Primer_Customizer_Colors {
 							'-webkit-box-shadow' => 'inset 0 0 0 9999em',
 							'-moz-box-shadow'    => 'inset 0 0 0 9999em',
 							'box-shadow'         => 'inset 0 0 0 9999em',
-                            'color'              => sprintf( 'rgba(%%1$s, %s)', $this->get_color_overlay_transparency_value() ),
+							'color'              => sprintf( 'rgba(%%1$s, %s)', $this->get_color_overlay_transparency_value() ),
 						),
 					),
 				),
@@ -1224,7 +1224,7 @@ class Primer_Customizer_Colors {
 			array(
 				'default'           => $this->get_color_overlay_transparency_default_value(),
 				'sanitize_callback' => 'absint',
-                'transport'         => 'postMessage',
+				'transport'         => 'postMessage',
 			)
 		);
 
