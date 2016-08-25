@@ -88,8 +88,8 @@ class Primer_Customizer_Layouts {
 		 */
 		$this->page_widths = (array) apply_filters( 'primer_page_widths',
 			array(
-				'fixed' => esc_html__( 'Fixed', 'primer' ),
-				'fluid' => esc_html__( 'Fluid', 'primer' ),
+				'fixed' => esc_html_x( 'Fixed', 'fixed-width page layout', 'primer' ),
+				'fluid' => esc_html_x( 'Fluid', 'fluid-width page layout', 'primer' ),
 			)
 		);
 
@@ -285,7 +285,7 @@ class Primer_Customizer_Layouts {
 				sprintf(
 					'<a href="%s">%s</a>',
 					add_query_arg( 'autofocus[section]', 'layout', admin_url( 'customize.php' ) ),
-					esc_html__( 'Customizer' )
+					esc_html_x( 'Customizer', 'title of a component found in WordPress', 'primer' )
 				)
 			);
 

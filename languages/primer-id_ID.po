@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-25 12:03-0500\n"
+"POT-Creation-Date: 2016-08-25 12:53-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,24 +109,24 @@ msgstr ""
 "Sepertinya kami tidak bisa menemukan apa yang Anda cari. Mungkin fitur "
 "pencarian bisa membantu."
 
-#: functions.php:210
+#: functions.php:217
 msgid "Primary Menu"
 msgstr "Menu Utama"
 
-#: functions.php:211
+#: functions.php:218
 msgid "Social Menu"
 msgstr "Menu Sosial"
 
-#: functions.php:212
+#: functions.php:219
 #, fuzzy
 msgid "Footer Menu"
 msgstr "Bagian Tengah Footer"
 
-#: functions.php:308
+#: functions.php:315
 msgid "Sidebar"
 msgstr "Bilah Samping"
 
-#: functions.php:309
+#: functions.php:316
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
@@ -134,11 +134,11 @@ msgstr ""
 "Bilah samping primer muncul di samping konten setiap halaman, postingan, "
 "arsip, dan templat pencarian."
 
-#: functions.php:316
+#: functions.php:323
 msgid "Secondary Sidebar"
 msgstr "Bilah Samping Sekunder"
 
-#: functions.php:317
+#: functions.php:324
 msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
@@ -146,42 +146,42 @@ msgstr ""
 "Bilah samping sekunder hanya akan muncul jika Anda memilih tata letak tiga "
 "kolom."
 
-#: functions.php:324
+#: functions.php:331
 #, fuzzy
 msgid "Footer 1"
 msgstr "Kiri Footer"
 
-#: functions.php:325
+#: functions.php:332
 #, fuzzy
 msgid "This sidebar is the first column of the footer widget area."
 msgstr "Bilah samping kiri footer muncul di kolom pertama area widget footer."
 
-#: functions.php:332
+#: functions.php:339
 #, fuzzy
 msgid "Footer 2"
 msgstr "Kiri Footer"
 
-#: functions.php:333
+#: functions.php:340
 #, fuzzy
 msgid "This sidebar is the second column of the footer widget area."
 msgstr ""
 "Bilah samping di tengah footer muncul di kolom kedua area widget footer."
 
-#: functions.php:340
+#: functions.php:347
 #, fuzzy
 msgid "Footer 3"
 msgstr "Kiri Footer"
 
-#: functions.php:341
+#: functions.php:348
 #, fuzzy
 msgid "This sidebar is the third column of the footer widget area."
 msgstr "Bilah samping kanan footer muncul di kolom ketiga area widget footer."
 
-#: functions.php:348
+#: functions.php:355
 msgid "Hero"
 msgstr ""
 
-#: functions.php:349
+#: functions.php:356
 msgid "Hero widgets appear over the header image on the front page."
 msgstr ""
 
@@ -210,188 +210,197 @@ msgstr ""
 msgid "Site Title Text"
 msgstr "Bilah Samping Sekunder"
 
-#: inc/customizer/colors.php:56
+#: inc/customizer/colors.php:57
 msgid "Tagline Text"
 msgstr ""
 
-#: inc/customizer/colors.php:66
+#: inc/customizer/colors.php:68
 msgid "Hero Text"
 msgstr ""
 
-#: inc/customizer/colors.php:88 inc/customizer/colors.php:278
+#: inc/customizer/colors.php:91 inc/customizer/colors.php:284
 msgid "Text"
 msgstr ""
 
-#: inc/customizer/colors.php:110
+#: inc/customizer/colors.php:113
 msgid "Heading Text"
 msgstr ""
 
-#: inc/customizer/colors.php:111
+#: inc/customizer/colors.php:114
 msgid "Post titles, widget titles, form labels, table headers and buttons."
 msgstr ""
 
-#: inc/customizer/colors.php:132
+#: inc/customizer/colors.php:135
 #, fuzzy
 msgid "Primary Text"
 msgstr "Menu Utama"
 
-#: inc/customizer/colors.php:133
+#: inc/customizer/colors.php:136
 msgid "Paragraphs, lists, menu links, quotes and tables."
 msgstr ""
 
-#: inc/customizer/colors.php:180
+#: inc/customizer/colors.php:183
 #, fuzzy
 msgid "Secondary Text"
 msgstr "Bilah Samping Sekunder"
 
-#: inc/customizer/colors.php:181
+#: inc/customizer/colors.php:184
 msgid "Post bylines, comment counts, post footers and quote footers."
 msgstr ""
 
-#: inc/customizer/colors.php:195
+#: inc/customizer/colors.php:198
 msgid "Widget Heading Text"
 msgstr ""
 
-#: inc/customizer/colors.php:211
+#: inc/customizer/colors.php:215
 msgid "Widget Text"
 msgstr ""
 
-#: inc/customizer/colors.php:221
+#: inc/customizer/colors.php:226
 msgid "Menu Text"
 msgstr ""
 
-#: inc/customizer/colors.php:242
+#: inc/customizer/colors.php:248
 msgid "Copyright Text"
 msgstr ""
 
-#: inc/customizer/colors.php:256
+#: inc/customizer/colors.php:262
 msgid "Link Text"
 msgstr ""
 
-#: inc/customizer/colors.php:293 inc/customizer/colors.php:353
+#: inc/customizer/colors.php:299 inc/customizer/colors.php:368
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/colors.php:323
+#: inc/customizer/colors.php:329
 msgid "Page Background"
 msgstr ""
 
-#: inc/customizer/colors.php:333
+#: inc/customizer/colors.php:339
 msgid "Content Background"
 msgstr ""
 
-#: inc/customizer/colors.php:343
+#: inc/customizer/colors.php:349
 msgid "Hero Background"
 msgstr ""
 
-#: inc/customizer/colors.php:363
+#: inc/customizer/colors.php:378
 msgid "Widgets Background"
 msgstr ""
 
-#: inc/customizer/colors.php:373
+#: inc/customizer/colors.php:389
 msgid "Widget Content Background"
 msgstr ""
 
-#: inc/customizer/colors.php:383
+#: inc/customizer/colors.php:400
 msgid "Footer Background"
 msgstr ""
 
-#: inc/customizer/colors.php:421 inc/customizer/layouts.php:311
+#: inc/customizer/colors.php:438 inc/customizer/layouts.php:311
 msgid "Custom"
 msgstr ""
 
-#: inc/customizer/colors.php:438 inc/customizer/layouts.php:302
+#: inc/customizer/colors.php:455 inc/customizer/layouts.php:302
 #, fuzzy
 msgid "Default"
 msgstr "Default"
 
-#: inc/customizer/colors.php:448
+#: inc/customizer/colors.php:465
 msgctxt "color scheme name"
 msgid "Blush"
 msgstr ""
 
-#: inc/customizer/colors.php:458
+#: inc/customizer/colors.php:475
 msgctxt "color scheme name"
 msgid "Bronze"
 msgstr ""
 
-#: inc/customizer/colors.php:468
+#: inc/customizer/colors.php:485
 msgctxt "color scheme name"
 msgid "Canary"
 msgstr ""
 
-#: inc/customizer/colors.php:478
+#: inc/customizer/colors.php:495
 msgctxt "color scheme name"
 msgid "Cool"
 msgstr ""
 
-#: inc/customizer/colors.php:488
+#: inc/customizer/colors.php:505
 msgctxt "color scheme name"
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer/colors.php:515
+#: inc/customizer/colors.php:532
 msgctxt "color scheme name"
 msgid "Iguana"
 msgstr ""
 
-#: inc/customizer/colors.php:525
+#: inc/customizer/colors.php:542
 msgctxt "color scheme name"
 msgid "Muted"
 msgstr ""
 
-#: inc/customizer/colors.php:550
+#: inc/customizer/colors.php:567
 msgctxt "color scheme name"
 msgid "Plum"
 msgstr ""
 
-#: inc/customizer/colors.php:560
+#: inc/customizer/colors.php:577
 msgctxt "color scheme name"
 msgid "Rose"
 msgstr ""
 
-#: inc/customizer/colors.php:570
+#: inc/customizer/colors.php:587
 msgctxt "color scheme name"
 msgid "Tangerine"
 msgstr ""
 
-#: inc/customizer/colors.php:580
+#: inc/customizer/colors.php:597
 msgctxt "color scheme name"
 msgid "Turquoise"
 msgstr ""
 
-#: inc/customizer/colors.php:648
+#: inc/customizer/colors.php:666
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer/colors.php:657
+#: inc/customizer/colors.php:675
 msgid "Color Schemes"
 msgstr ""
 
-#: inc/customizer/colors.php:665
+#: inc/customizer/colors.php:683
 #, fuzzy
 msgid "Header"
 msgstr "Bilah Samping Sekunder"
 
-#: inc/customizer/colors.php:673
+#: inc/customizer/colors.php:691
 msgid "Menu"
 msgstr ""
 
-#: inc/customizer/colors.php:681
+#: inc/customizer/colors.php:699
 msgid "Buttons"
 msgstr ""
 
-#: inc/customizer/colors.php:689
+#: inc/customizer/colors.php:707
 msgid "Content"
 msgstr ""
 
-#: inc/customizer/colors.php:697
+#: inc/customizer/colors.php:715
 #, fuzzy
 msgid "Footer"
 msgstr "Kiri Footer"
 
-#: inc/customizer/colors.php:880
+#: inc/customizer/colors.php:925
 msgid "Base Color Scheme"
+msgstr ""
+
+#: inc/customizer/colors.php:1234
+msgid "Hero Background Overlay"
+msgstr ""
+
+#: inc/customizer/colors.php:1235
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
 msgstr ""
 
 #: inc/customizer/fonts.php:81
@@ -484,10 +493,12 @@ msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "3 Kolom: Bilah Samping/Bilah Samping/Konten"
 
 #: inc/customizer/layouts.php:91
+msgctxt "fixed-width page layout"
 msgid "Fixed"
 msgstr ""
 
 #: inc/customizer/layouts.php:92
+msgctxt "fluid-width page layout"
 msgid "Fluid"
 msgstr ""
 
@@ -502,6 +513,7 @@ msgid "The site-wide Default layout setting is located in the %s."
 msgstr ""
 
 #: inc/customizer/layouts.php:288
+msgctxt "title of a component found in WordPress"
 msgid "Customizer"
 msgstr ""
 
@@ -533,7 +545,7 @@ msgstr "Hasil Pencarian untuk: %s"
 msgid "404 Page Not Found"
 msgstr ""
 
-#: inc/hooks.php:383
+#: inc/hooks.php:360
 #, php-format
 msgctxt "page number"
 msgid "Page %d"
