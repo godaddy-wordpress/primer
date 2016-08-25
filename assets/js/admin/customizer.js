@@ -137,27 +137,58 @@
 
 	} );
 
-	//
-	api( 'hero_image_color_overlay', function( value ) {
+	api( 'hero_background_color', function( value ) {
 
 		value.bind( function( to ) {
 
-			var $hero_background = $( colorsSettings.hero_background_selector ),
-			    currentColor     = $hero_background.css( 'box-shadow' ),
-			    alpha            = to * 0.01;
+			var $selector = $( colorsSettings.hero_background_selector ),
+			    color     = 'rgb(' + hex2rgb( to ) + ')',
+			    alpha     = api( 'hero_image_color_overlay' )();
 
-			if ( -1 === currentColor.indexOf( 'a' ) ) {
-
-				$hero_background.css( 'box-shadow', currentColor.replace(')', ',' + alpha + ')' ).replace('rgb', 'rgba') );
-
-				return;
-
-			}
-
-			$hero_background.css( 'box-shadow', currentColor.replace( /^(.*,).*(\).*)$/, '$1' + alpha + '$2' ) );
+			updateRgbaColor( color, alpha, $selector );
 
 		} );
 
 	} );
+
+	api( 'hero_image_color_overlay', function( value ) {
+
+		value.bind( function( alpha ) {
+
+			var $selector = $( colorsSettings.hero_background_selector ),
+			    color     = 'rgb(' + hex2rgb( api( 'hero_background_color' )() ) + ')';
+
+			updateRgbaColor( color, alpha, $selector );
+
+		} );
+
+	} );
+
+	function updateRgbaColor( color, alpha, $selector ) {
+
+		alpha = alpha * 0.01;
+
+		if ( -1 === color.indexOf( 'a' ) ) {
+
+			color = color.replace( ')', ',)' ).replace( 'rgb', 'rgba' );
+
+		}
+
+		$selector.css( 'color', color.replace( /^(.*,).*(\).*)$/, '$1' + alpha + '$2' ) );
+
+	}
+
+	// Convert a HEX color to RGB.
+	function hex2rgb( hex ) {
+
+		hex = hex.replace( '#', '' );
+
+		var r   = parseInt( hex.substring( 0, 2 ), 16 ),
+		    g   = parseInt( hex.substring( 2, 4 ), 16 ),
+		    b   = parseInt( hex.substring( 4, 6 ), 16 );
+
+		return r + ', ' + g + ', ' + b;
+
+	}
 
 } )( jQuery, wp.customize );

@@ -357,9 +357,10 @@ class Primer_Customizer_Colors {
 					),
 					'rgba_css' => array(
 						primer_get_hero_image_selector() => array(
-							'-webkit-box-shadow' => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %s)', $this->get_color_overlay_transparency_value() ),
-							'-moz-box-shadow'    => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %s)', $this->get_color_overlay_transparency_value() ),
-							'box-shadow'         => sprintf( 'inset 0 0 0 9999em rgba(%%1$s, %s)', $this->get_color_overlay_transparency_value() ),
+							'-webkit-box-shadow' => 'inset 0 0 0 9999em',
+							'-moz-box-shadow'    => 'inset 0 0 0 9999em',
+							'box-shadow'         => 'inset 0 0 0 9999em',
+                            'color'              => sprintf( 'rgba(%%1$s, %s)', $this->get_color_overlay_transparency_value() ),
 						),
 					),
 				),
