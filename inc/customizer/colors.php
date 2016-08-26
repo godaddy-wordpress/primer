@@ -1245,7 +1245,7 @@ class Primer_Customizer_Colors {
 		 *
 		 * @var int
 		 */
-		return (int) apply_filters( 'hero_image_color_overlay_default', 50 );
+		return (int) apply_filters( 'primer_hero_image_color_overlay_default', 50 );
 
 	}
 
