@@ -26,7 +26,7 @@ add_action( 'primer_header', 'primer_add_site_title' );
  */
 function primer_add_hero() {
 
-	if ( ! is_404() && ! is_page_template( 'templates/page-builder-no-header.php' ) ) {
+	if ( ! is_404() ) {
 
 		get_template_part( 'templates/parts/hero' );
 
