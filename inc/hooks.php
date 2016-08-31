@@ -6,6 +6,29 @@
  */
 
 /**
+ * Display some elements conditionally (Primer only).
+ *
+ * @action template_redirect
+ * @since  1.0.0
+ */
+function primer_elements() {
+
+	if ( is_child_theme() ) {
+
+		return;
+
+	}
+
+	if ( is_front_page() ) {
+
+		remove_action( 'primer_after_header', 'primer_add_page_title' );
+
+	}
+
+}
+add_action( 'template_redirect', 'primer_elements' );
+
+/**
  * Display site title in the header.
  *
  * @action primer_header
