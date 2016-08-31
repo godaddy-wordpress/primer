@@ -18,6 +18,8 @@ function primer_get_the_page_title() {
 
 		case is_front_page() :
 
+			$title = get_the_title( get_option( 'page_on_front' ) );
+
 			break;
 
 		case is_home() :
