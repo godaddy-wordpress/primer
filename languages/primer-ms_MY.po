@@ -1,6 +1,6 @@
-# Primer Theme for WordPress
+# Primer
 # Copyright (C) 2016
-# This file is distributed under the same license as the Primer package.
+# This file is distributed under the same license as the primer package.
 # GoDaddy Operating Company, LLC.
 #
 #, fuzzy
@@ -25,41 +25,38 @@ msgstr ""
 #. * @since 1.0.0
 #.
 #: 404.php:22
-#, fuzzy
 msgid "Oops! That page can't be found."
 msgstr "Oops! Halaman ini tidak dapat ditemui."
 
 #: 404.php:28
-#, fuzzy
 msgid ""
 "It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
-"Nampaknya tiada apa yang boleh ditemui di lokasi ini. Mungkin boleh cuba "
-"salah satu pautan di bawah atau lakukan carian?"
+"Nampaknya tiada apa yang boleh ditemui di lokasi ini. Sila cuba cari di bawah:"
 
 #: comments.php:35
-#, fuzzy, php-format
+#, php-format
 msgctxt "1. number of comments, 2. post title"
 msgid "One thought on %2$s"
 msgid_plural "%1$d thoughts on %2$s"
-msgstr[0] "Satu pendapat dalam &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$d pendapat tentang &ldquo;%2$s&rdquo;"
+msgstr[0] "Pendapat seseorang tentang %2$s"
+msgstr[1] "%1$d berpendapat tentang %2$s"
 
 #: comments.php:54 comments.php:79
 msgid "Comment navigation"
 msgstr "Navigasi ulasan"
 
 #: comments.php:56
-#, fuzzy, php-format
+#, php-format
 msgctxt "left arrow (LTR) / right arrow (RTL)"
 msgid "%s Older Comments"
-msgstr "&larr; Ulasan Lama"
+msgstr "%sUlasan Lama"
 
 #: comments.php:58
-#, fuzzy, php-format
+#, php-format
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Newer Comments %s"
-msgstr "Ulasan Baru &rarr;"
+msgstr "Ulasan Baru %s"
 
 #: comments.php:81
 msgid "&larr; Older Comments"
@@ -83,15 +80,14 @@ msgid "Nothing Found"
 msgstr "Tiada yang Ditemui"
 
 #: content-none.php:27
-#, fuzzy, php-format
+#, php-format
 msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
-msgstr ""
-"Sedia untuk siar pos anda yang pertama? <a href=\"%1$s\">Mulakan di sini</a>."
+msgstr "Sedia untuk siar pos anda yang pertama? %s."
 
 #: content-none.php:31
 msgid "Get started here"
-msgstr ""
+msgstr "Mulakan di sini"
 
 #: content-none.php:39
 msgid ""
@@ -102,12 +98,10 @@ msgstr ""
 "kata kunci yang lain."
 
 #: content-none.php:45
-#, fuzzy
 msgid ""
 "It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr ""
-"Nampaknya kami tidak dapat temui apa yang anda cari. Mungkin carian boleh "
-"membantu."
+"Nampaknya kami tidak dapat temui apa yang anda cari. Mungkin carian boleh membantu."
 
 #: functions.php:217
 msgid "Primary Menu"
@@ -118,9 +112,8 @@ msgid "Social Menu"
 msgstr "Menu Sosial"
 
 #: functions.php:219
-#, fuzzy
 msgid "Footer Menu"
-msgstr "Pengaki Tengah"
+msgstr "Menu Pengaki"
 
 #: functions.php:315
 msgid "Sidebar"
@@ -143,49 +136,39 @@ msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr ""
-"Palang sisi kedua hanya akan muncul apabila anda memilih susun atur tiga "
-"lajur."
+"Palang sisi kedua hanya akan muncul apabila anda memilih susun atur tiga lajur."
 
 #: functions.php:331
-#, fuzzy
 msgid "Footer 1"
-msgstr "Pengaki Kiri"
+msgstr "Pengaki 1"
 
 #: functions.php:332
-#, fuzzy
 msgid "This sidebar is the first column of the footer widget area."
-msgstr ""
-"Palang sisi pengaki kiri muncul dalam lajur pertama kawasan widget pengaki."
+msgstr "Palang sisi ini adalah lajur pertama kawasan widget pengaki."
 
 #: functions.php:339
-#, fuzzy
 msgid "Footer 2"
-msgstr "Pengaki Kiri"
+msgstr "Pengaki 2"
 
 #: functions.php:340
-#, fuzzy
 msgid "This sidebar is the second column of the footer widget area."
-msgstr ""
-"Palang sisi pengaki pusat muncul dalam lajur kedua kawasan widget pengaki."
+msgstr "Palang sisi ini adalah lajur kedua kawasan widget pengaki."
 
 #: functions.php:347
-#, fuzzy
 msgid "Footer 3"
-msgstr "Pengaki Kiri"
+msgstr "Pengaki 3"
 
 #: functions.php:348
-#, fuzzy
 msgid "This sidebar is the third column of the footer widget area."
-msgstr ""
-"Palang sisi pengaki kanan muncul dalam lajur ketiga kawasan widget pengaki."
+msgstr "Palang sisi ini adalah lajur ketiga kawasan widget pengaki."
 
 #: functions.php:355
 msgid "Hero"
-msgstr ""
+msgstr "Hero"
 
 #: functions.php:356
 msgid "Hero widgets appear over the header image on the front page."
-msgstr ""
+msgstr "Widget hero muncul pada imej pengepala di halaman depan."
 
 #: header.php:42
 msgid "Skip to content"
@@ -197,312 +180,298 @@ msgid ""
 "Primer requires at least WordPress version %s. You are running version %s. "
 "Please upgrade and try again."
 msgstr ""
+"Primer memerlukan sekurang-kurangnya WordPress versi %s. Anda menggunakan "
+"versi %s. Sila naik taraf dan cuba semula."
 
 #: inc/customizer.php:173
 msgid "Use featured image"
-msgstr ""
+msgstr "Guna imej dipaparkan"
 
 #: inc/customizer.php:174
 msgid ""
 "Allow the featured image on the current post to override the hero image."
-msgstr ""
+msgstr "Izinkan imej dipaparkan pada pos semasa mengatasi imej hero."
 
 #: inc/customizer/colors.php:41
-#, fuzzy
 msgid "Site Title Text"
-msgstr "Palang Sisi Kedua"
+msgstr "Teks Tajuk Laman"
 
 #: inc/customizer/colors.php:57
 msgid "Tagline Text"
-msgstr ""
+msgstr "Teks Cogan Kata"
 
 #: inc/customizer/colors.php:68
 msgid "Hero Text"
-msgstr ""
+msgstr "Teks Hero"
 
 #: inc/customizer/colors.php:91 inc/customizer/colors.php:284
 msgid "Text"
-msgstr ""
+msgstr "Teks"
 
 #: inc/customizer/colors.php:113
 msgid "Heading Text"
-msgstr ""
+msgstr "Teks Pengepala"
 
 #: inc/customizer/colors.php:114
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
+msgstr "Tajuk pos, tajuk widget, label borang, pengepala jadual dan butang."
 
 #: inc/customizer/colors.php:135
-#, fuzzy
 msgid "Primary Text"
-msgstr "Menu Utama"
+msgstr "Teks Utama"
 
 #: inc/customizer/colors.php:136
 msgid "Paragraphs, lists, menu links, quotes and tables."
-msgstr ""
+msgstr "Perenggan, senarai, pautan menu, petikan dan jadual."
 
 #: inc/customizer/colors.php:183
-#, fuzzy
 msgid "Secondary Text"
-msgstr "Palang Sisi Kedua"
+msgstr "Teks Sekunder"
 
 #: inc/customizer/colors.php:184
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
+msgstr "Panji pengarang pos, bilangan ulasan, pengaki pos dan pengaki petikan."
 
 #: inc/customizer/colors.php:198
 msgid "Widget Heading Text"
-msgstr ""
+msgstr "Teks Pengepala Widget"
 
 #: inc/customizer/colors.php:215
 msgid "Widget Text"
-msgstr ""
+msgstr "Teks Widget"
 
 #: inc/customizer/colors.php:226
 msgid "Menu Text"
-msgstr ""
+msgstr "Teks Menu"
 
 #: inc/customizer/colors.php:248
 msgid "Copyright Text"
-msgstr ""
+msgstr "Teks Hak Cipta"
 
 #: inc/customizer/colors.php:262
 msgid "Link Text"
-msgstr ""
+msgstr "Teks Pautan"
 
 #: inc/customizer/colors.php:299 inc/customizer/colors.php:368
 msgid "Background"
-msgstr ""
+msgstr "Latar Belakang"
 
 #: inc/customizer/colors.php:329
 msgid "Page Background"
-msgstr ""
+msgstr "Latar Belakang Halaman"
 
 #: inc/customizer/colors.php:339
 msgid "Content Background"
-msgstr ""
+msgstr "Latar Belakang Kandungan"
 
 #: inc/customizer/colors.php:349
 msgid "Hero Background"
-msgstr ""
+msgstr "Latar Belakang Hero"
 
 #: inc/customizer/colors.php:378
 msgid "Widgets Background"
-msgstr ""
+msgstr "Latar Belakang Widget"
 
 #: inc/customizer/colors.php:389
 msgid "Widget Content Background"
-msgstr ""
+msgstr "Latar Belakang Kandungan Widget"
 
 #: inc/customizer/colors.php:400
 msgid "Footer Background"
-msgstr ""
+msgstr "Latar Belakang Pengaki"
 
 #: inc/customizer/colors.php:438 inc/customizer/layouts.php:311
 msgid "Custom"
-msgstr ""
+msgstr "Suai Langgan"
 
 #: inc/customizer/colors.php:455 inc/customizer/layouts.php:302
-#, fuzzy
 msgid "Default"
 msgstr "Lalai"
 
 #: inc/customizer/colors.php:465
 msgctxt "color scheme name"
 msgid "Blush"
-msgstr ""
+msgstr "Kemerah-merahan"
 
 #: inc/customizer/colors.php:475
 msgctxt "color scheme name"
 msgid "Bronze"
-msgstr ""
+msgstr "Kuning Gangsa"
 
 #: inc/customizer/colors.php:485
 msgctxt "color scheme name"
 msgid "Canary"
-msgstr ""
+msgstr "Burung Kenari"
 
 #: inc/customizer/colors.php:495
 msgctxt "color scheme name"
 msgid "Cool"
-msgstr ""
+msgstr "Sejuk"
 
 #: inc/customizer/colors.php:505
 msgctxt "color scheme name"
 msgid "Dark"
-msgstr ""
+msgstr "Gelap"
 
 #: inc/customizer/colors.php:532
 msgctxt "color scheme name"
 msgid "Iguana"
-msgstr ""
+msgstr "Iguana"
 
 #: inc/customizer/colors.php:542
 msgctxt "color scheme name"
 msgid "Muted"
-msgstr ""
+msgstr "Perlahan"
 
 #: inc/customizer/colors.php:567
 msgctxt "color scheme name"
 msgid "Plum"
-msgstr ""
+msgstr "Plum"
 
 #: inc/customizer/colors.php:577
 msgctxt "color scheme name"
 msgid "Rose"
-msgstr ""
+msgstr "Ros"
 
 #: inc/customizer/colors.php:587
 msgctxt "color scheme name"
 msgid "Tangerine"
-msgstr ""
+msgstr "Tangerin"
 
 #: inc/customizer/colors.php:597
 msgctxt "color scheme name"
 msgid "Turquoise"
-msgstr ""
+msgstr "Turquoise"
 
 #: inc/customizer/colors.php:666
 msgid "Colors"
-msgstr ""
+msgstr "Warna"
 
 #: inc/customizer/colors.php:675
 msgid "Color Schemes"
-msgstr ""
+msgstr "Skim Warna"
 
 #: inc/customizer/colors.php:683
-#, fuzzy
 msgid "Header"
-msgstr "Palang Sisi Kedua"
+msgstr "Pengepala"
 
 #: inc/customizer/colors.php:691
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: inc/customizer/colors.php:699
 msgid "Buttons"
-msgstr ""
+msgstr "Butang"
 
 #: inc/customizer/colors.php:707
 msgid "Content"
-msgstr ""
+msgstr "Kandungan"
 
 #: inc/customizer/colors.php:715
-#, fuzzy
 msgid "Footer"
-msgstr "Pengaki Kiri"
+msgstr "Pengaki"
 
 #: inc/customizer/colors.php:925
 msgid "Base Color Scheme"
-msgstr ""
+msgstr "Skema Warna Asas"
 
 #: inc/customizer/colors.php:1234
 msgid "Hero Background Overlay"
-msgstr ""
+msgstr "Lapisan Latar Belakang Hero"
 
 #: inc/customizer/colors.php:1235
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr ""
+"Kawal warna kelutsinaran lapisan semasa menggunakan Imej Pengepala tersuai."
 
 #: inc/customizer/fonts.php:81
-#, fuzzy
 msgid "Site Title"
-msgstr "Palang Sisi Kedua"
+msgstr "Tajuk Laman"
 
 #: inc/customizer/fonts.php:82
 msgid "Site title text in the header."
-msgstr ""
+msgstr "Teks tajuk laman pada pengepala."
 
 #: inc/customizer/fonts.php:91
-#, fuzzy
 msgid "Navigation"
-msgstr "Pos navigasi"
+msgstr "Navigasi"
 
 #: inc/customizer/fonts.php:92
 msgid "Primary menu links and button links."
-msgstr ""
+msgstr "Pautan menu utama dan pautan butang."
 
 #: inc/customizer/fonts.php:102
 msgid "Headings"
-msgstr ""
+msgstr "Pengepala"
 
 #: inc/customizer/fonts.php:103
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr ""
+msgstr "Tajuk pos, tajuk widget, label borang dan pengepala jadual."
 
 #: inc/customizer/fonts.php:118
-#, fuzzy
 msgid "Primary"
-msgstr "Menu Utama"
+msgstr "Utama"
 
 #: inc/customizer/fonts.php:119
 msgid "Paragraphs, lists, links, quotes, and tables."
-msgstr ""
+msgstr "Perenggan, senarai, pautan, petikan dan jadual."
 
 #: inc/customizer/fonts.php:133
-#, fuzzy
 msgid "Secondary"
-msgstr "Palang Sisi Kedua"
+msgstr "Kedua"
 
 #: inc/customizer/fonts.php:134
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
+msgstr "Panji pengarang, bilangan ulasan, pautan balasan, pengaki pos dan pengaki petikan."
 
 #: inc/customizer/fonts.php:182
 msgid "Fonts"
-msgstr ""
+msgstr "Fon"
 
 #: inc/customizer/fonts.php:207
-#, fuzzy, php-format
+#, php-format
 msgctxt "font name"
 msgid "%s (Default)"
-msgstr "Lalai"
+msgstr "%s (Lalai)"
 
 #: inc/customizer/layouts.php:47
-#, fuzzy
 msgid "One Column: Wide"
-msgstr "1 Lajur Lebar"
+msgstr "Satu Lajur: Lebar"
 
 #: inc/customizer/layouts.php:48
-#, fuzzy
 msgid "One Column: Narrow"
-msgstr "1 Lajur Sempit"
+msgstr "Satu Lajur: Sempit"
 
 #: inc/customizer/layouts.php:49 inc/customizer/layouts.php:138
-#, fuzzy
 msgid "Two Columns: Content | Sidebar"
-msgstr "2 Lajur: Kandungan / Palang Sisi"
+msgstr "Dua Lajur: Kandungan | Palang Sisi"
 
 #: inc/customizer/layouts.php:50 inc/customizer/layouts.php:137
-#, fuzzy
 msgid "Two Columns: Sidebar | Content"
-msgstr "2 Lajur: Palang sisi / Kandungan"
+msgstr "Dua Lajur: Palang Sisi | Kandungan"
 
 #: inc/customizer/layouts.php:51 inc/customizer/layouts.php:140
-#, fuzzy
 msgid "Three Columns: Content | Sidebar | Sidebar"
-msgstr "3 Lajur: Kandungan / Palang Sisi / Palang Sisi"
+msgstr "Tiga Lajur: Kandungan | Palang Sisi | Palang Sisi"
 
 #: inc/customizer/layouts.php:52
-#, fuzzy
 msgid "Three Columns: Sidebar | Content | Sidebar"
-msgstr "3 Lajur: Palang Sisi / Kandungan / Palang Sisi"
+msgstr "Tiga Lajur: Palang Sisi | Kandungan | Palang Sisi"
 
 #: inc/customizer/layouts.php:53 inc/customizer/layouts.php:139
-#, fuzzy
 msgid "Three Columns: Sidebar | Sidebar | Content"
-msgstr "3 Lajur: Palang Sisi / Palang Sisi / Kandungan"
+msgstr "Tiga Lajur: Palang Sisi | Palang Sisi | Kandungan"
 
 #: inc/customizer/layouts.php:91
 msgctxt "fixed-width page layout"
 msgid "Fixed"
-msgstr ""
+msgstr "Tetap"
 
 #: inc/customizer/layouts.php:92
 msgctxt "fluid-width page layout"
 msgid "Fluid"
-msgstr ""
+msgstr "Berubah-ubah"
 
 #: inc/customizer/layouts.php:252 inc/customizer/layouts.php:443
 msgid "Layout"
@@ -512,30 +481,28 @@ msgstr "Reka Letak"
 #, php-format
 msgctxt "link to the Customizer"
 msgid "The site-wide Default layout setting is located in the %s."
-msgstr ""
+msgstr "Tetapan reka letak Lalai seluruh laman terletak pada %s."
 
 #: inc/customizer/layouts.php:288
 msgctxt "title of a component found in WordPress"
 msgid "Customizer"
-msgstr ""
+msgstr "Penyesuai"
 
 #: inc/customizer/layouts.php:465
-#, fuzzy
 msgid "Default Layout"
-msgstr "Lalai"
+msgstr "Reka Letak Lalai"
 
 #: inc/customizer/layouts.php:466
 msgid "All posts and pages on your site will use this layout by default."
-msgstr ""
+msgstr "Semua pos dan halaman pada laman anda akan guna reka letak ini secara lalai."
 
 #: inc/customizer/layouts.php:495
-#, fuzzy
 msgid "Page Width"
-msgstr "Halaman %d"
+msgstr "Lebar Halaman"
 
 #: inc/customizer/layouts.php:496
 msgid "Display your site differently on larger screens."
-msgstr ""
+msgstr "Papar laman anda secara berbeza pada skrin lebih besar."
 
 #: inc/helpers.php:38
 #, php-format
@@ -545,7 +512,7 @@ msgstr "Keputusan Carian untuk: %s"
 
 #: inc/helpers.php:49
 msgid "404 Page Not Found"
-msgstr ""
+msgstr "404 Halaman Tidak Ditemui"
 
 #: inc/hooks.php:360
 #, php-format
@@ -577,13 +544,13 @@ msgstr "Blog"
 #, php-format
 msgctxt "1. copyright symbol, 2. year, 3. site title"
 msgid "Copyright %1$s %2$d %3$s"
-msgstr ""
+msgstr "Hak cipta %1$s%2$d %3$s"
 
 #: templates/parts/credit.php:24
-#, fuzzy, php-format
+#, php-format
 msgctxt "1. theme name link, 2. theme author link"
 msgid "%1$s theme by %2$s"
-msgstr "%1$s oleh %2$s"
+msgstr "%1$s tema oleh %2$s"
 
 #: templates/parts/loop/page-content.php:17
 #: templates/parts/loop/post-content.php:17
@@ -604,7 +571,7 @@ msgstr "Baca Lagi <span class=\"meta-nav\">&rarr;</span>"
 #, php-format
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Continue Reading %s"
-msgstr ""
+msgstr "Teruskan Membaca %s"
 
 #: templates/parts/loop/post-footer.php:19
 #: templates/parts/loop/post-footer.php:31
@@ -643,41 +610,3 @@ msgstr "1 Ulasan"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% Ulasan"
-
-#, fuzzy
-#~ msgid "Primary Font"
-#~ msgstr "Menu Utama"
-
-#~ msgid "Featured"
-#~ msgstr "Tetapan"
-
-#~ msgid "Read More"
-#~ msgstr "Baca Selanjutnya"
-
-#~ msgctxt "theme layout"
-#~ msgid "Default"
-#~ msgstr "Lalai"
-
-#~ msgid "Global Layout"
-#~ msgstr "Susun Atur Global"
-
-#~ msgctxt "1. theme name link, 2. theme author link"
-#~ msgid "Built with %1$s by %2$s."
-#~ msgstr "Dibina dengan %1$s oleh %2$s."
-
-#~ msgid "Most Used Categories"
-#~ msgstr "Kategori Paling Banyak Digunakan"
-
-#~ msgid "Try looking in the monthly archives. %1$s"
-#~ msgstr "Cuba lihat dalam arkib bulanan. %1$s"
-
-#~ msgid "Footer Right"
-#~ msgstr "Pengaki Kanan"
-
-#~ msgctxt "Lato font: on or off"
-#~ msgid "on"
-#~ msgstr "pasang"
-
-#~ msgctxt "Merriweather font: on or off"
-#~ msgid "on"
-#~ msgstr "pasang"
