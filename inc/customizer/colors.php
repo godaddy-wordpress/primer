@@ -288,21 +288,6 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				'button_text_color' => array(
-					'label'   => esc_html__( 'Text', 'primer' ),
-					'default' => '#ffffff',
-					'section' => 'colors-buttons',
-					'css'     => array(
-						'button, button:hover, button:active, button:focus,
-						a.button, a.button:hover, a.button:active, a.button:focus, a.button:visited, a.button:visited:hover, a.button:visited:active, a.button:visited:focus,
-						a.fl-button, .content-area .fl-builder-content a.fl-button, .content-area .fl-builder-content a.fl-button:visited, .content-area .fl-builder-content a.fl-button *, .content-area .fl-builder-content a.fl-button:visited *, a.fl-button:hover, a.fl-button:active, a.fl-button:focus, a.fl-button:visited, a.fl-button:visited:hover, a.fl-button:visited:active, a.fl-button:visited:focus,
-						input[type="button"], input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
-						input[type="reset"], input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
-						input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
-							'color' => '%1$s',
-						),
-					),
-				),
 				'button_color' => array(
 					'label'   => esc_html__( 'Background', 'primer' ),
 					'default' => '#ff6663',
@@ -327,6 +312,21 @@ class Primer_Customizer_Colors {
 						input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
 							'background-color' => 'rgba(%1$s, 0.8)',
 							'border-color'     => 'rgba(%1$s, 0.8)',
+						),
+					),
+				),
+				'button_text_color' => array(
+					'label'   => esc_html__( 'Text', 'primer' ),
+					'default' => '#ffffff',
+					'section' => 'colors-buttons',
+					'css'     => array(
+						'button, button:hover, button:active, button:focus,
+						a.button, a.button:hover, a.button:active, a.button:focus, a.button:visited, a.button:visited:hover, a.button:visited:active, a.button:visited:focus,
+						a.fl-button, .content-area .fl-builder-content a.fl-button, .content-area .fl-builder-content a.fl-button:visited, .content-area .fl-builder-content a.fl-button *, .content-area .fl-builder-content a.fl-button:visited *, a.fl-button:hover, a.fl-button:active, a.fl-button:focus, a.fl-button:visited, a.fl-button:visited:hover, a.fl-button:visited:active, a.fl-button:visited:focus,
+						input[type="button"], input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
+						input[type="reset"], input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
+						input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
+							'color' => '%1$s',
 						),
 					),
 				),
