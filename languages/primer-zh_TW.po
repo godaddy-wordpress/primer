@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-25 12:53-0500\n"
+"POT-Creation-Date: 2016-09-06 16:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -195,182 +195,182 @@ msgstr "標語文字"
 msgid "Hero Text"
 msgstr "Hero 文字"
 
-#: inc/customizer/colors.php:91 inc/customizer/colors.php:284
+#: inc/customizer/colors.php:99 inc/customizer/colors.php:319
 msgid "Text"
 msgstr "文字"
 
-#: inc/customizer/colors.php:113
+#: inc/customizer/colors.php:121
 msgid "Heading Text"
 msgstr "標題文字"
 
-#: inc/customizer/colors.php:114
+#: inc/customizer/colors.php:122
 msgid "Post titles, widget titles, form labels, table headers and buttons."
 msgstr "貼文標題、小工具標題、表格標籤、表格標題和按鈕。"
 
-#: inc/customizer/colors.php:135
+#: inc/customizer/colors.php:143
 msgid "Primary Text"
 msgstr "主要文字"
 
-#: inc/customizer/colors.php:136
+#: inc/customizer/colors.php:144
 msgid "Paragraphs, lists, menu links, quotes and tables."
 msgstr "段落、清單、功能表連結、引文和表格。"
 
-#: inc/customizer/colors.php:183
+#: inc/customizer/colors.php:191
 msgid "Secondary Text"
 msgstr "次要文字"
 
-#: inc/customizer/colors.php:184
+#: inc/customizer/colors.php:192
 msgid "Post bylines, comment counts, post footers and quote footers."
 msgstr "貼文署名、評論次數、貼文結尾及引文結尾。"
 
-#: inc/customizer/colors.php:198
+#: inc/customizer/colors.php:206
 msgid "Widget Heading Text"
 msgstr "小工具標題文字"
 
-#: inc/customizer/colors.php:215
+#: inc/customizer/colors.php:223
 msgid "Widget Text"
 msgstr "小工具文字"
 
-#: inc/customizer/colors.php:226
+#: inc/customizer/colors.php:234
 msgid "Menu Text"
 msgstr "功能表文字"
 
-#: inc/customizer/colors.php:248
+#: inc/customizer/colors.php:256
 msgid "Copyright Text"
 msgstr "著作權文字"
 
-#: inc/customizer/colors.php:262
+#: inc/customizer/colors.php:270
 msgid "Link Text"
 msgstr "連結文字"
 
-#: inc/customizer/colors.php:299 inc/customizer/colors.php:368
+#: inc/customizer/colors.php:292 inc/customizer/colors.php:376
 msgid "Background"
 msgstr "背景"
 
-#: inc/customizer/colors.php:329
+#: inc/customizer/colors.php:337
 msgid "Page Background"
 msgstr "網頁背景"
 
-#: inc/customizer/colors.php:339
+#: inc/customizer/colors.php:347
 msgid "Content Background"
 msgstr "內容背景"
 
-#: inc/customizer/colors.php:349
+#: inc/customizer/colors.php:357
 msgid "Hero Background"
 msgstr "Hero 背景"
 
-#: inc/customizer/colors.php:378
+#: inc/customizer/colors.php:386
 msgid "Widgets Background"
 msgstr "小工具背景"
 
-#: inc/customizer/colors.php:389
+#: inc/customizer/colors.php:397
 msgid "Widget Content Background"
 msgstr "小工具內容背景"
 
-#: inc/customizer/colors.php:400
+#: inc/customizer/colors.php:408
 msgid "Footer Background"
 msgstr "結尾背景"
 
-#: inc/customizer/colors.php:438 inc/customizer/layouts.php:311
+#: inc/customizer/colors.php:446 inc/customizer/layouts.php:310
 msgid "Custom"
 msgstr "自訂"
 
-#: inc/customizer/colors.php:455 inc/customizer/layouts.php:302
+#: inc/customizer/colors.php:463 inc/customizer/layouts.php:301
 msgid "Default"
 msgstr "預設"
 
-#: inc/customizer/colors.php:465
+#: inc/customizer/colors.php:473
 msgctxt "color scheme name"
 msgid "Blush"
 msgstr "筆刷"
 
-#: inc/customizer/colors.php:475
+#: inc/customizer/colors.php:477
 msgctxt "color scheme name"
 msgid "Bronze"
 msgstr "銅牌"
 
-#: inc/customizer/colors.php:485
+#: inc/customizer/colors.php:481
 msgctxt "color scheme name"
 msgid "Canary"
 msgstr "金絲雀"
 
-#: inc/customizer/colors.php:495
+#: inc/customizer/colors.php:485
 msgctxt "color scheme name"
 msgid "Cool"
 msgstr "很棒的"
 
-#: inc/customizer/colors.php:505
+#: inc/customizer/colors.php:489
 msgctxt "color scheme name"
 msgid "Dark"
 msgstr "暗"
 
-#: inc/customizer/colors.php:532
+#: inc/customizer/colors.php:493
 msgctxt "color scheme name"
 msgid "Iguana"
 msgstr "鬣蜥蜴"
 
-#: inc/customizer/colors.php:542
+#: inc/customizer/colors.php:497
 msgctxt "color scheme name"
 msgid "Muted"
 msgstr "靜音"
 
-#: inc/customizer/colors.php:567
+#: inc/customizer/colors.php:501
 msgctxt "color scheme name"
 msgid "Plum"
 msgstr "梅紅"
 
-#: inc/customizer/colors.php:577
+#: inc/customizer/colors.php:505
 msgctxt "color scheme name"
 msgid "Rose"
 msgstr "玫瑰"
 
-#: inc/customizer/colors.php:587
+#: inc/customizer/colors.php:509
 msgctxt "color scheme name"
 msgid "Tangerine"
 msgstr "橘子"
 
-#: inc/customizer/colors.php:597
+#: inc/customizer/colors.php:513
 msgctxt "color scheme name"
 msgid "Turquoise"
 msgstr "綠寶"
 
-#: inc/customizer/colors.php:666
+#: inc/customizer/colors.php:703
 msgid "Colors"
 msgstr "顏色"
 
-#: inc/customizer/colors.php:675
+#: inc/customizer/colors.php:712
 msgid "Color Schemes"
 msgstr "色彩配置"
 
-#: inc/customizer/colors.php:683
+#: inc/customizer/colors.php:720
 msgid "Header"
 msgstr "標題"
 
-#: inc/customizer/colors.php:691
+#: inc/customizer/colors.php:728
 msgid "Menu"
 msgstr "功能表"
 
-#: inc/customizer/colors.php:699
+#: inc/customizer/colors.php:736
 msgid "Buttons"
 msgstr "按鈕"
 
-#: inc/customizer/colors.php:707
+#: inc/customizer/colors.php:744
 msgid "Content"
 msgstr "內容"
 
-#: inc/customizer/colors.php:715
+#: inc/customizer/colors.php:752
 msgid "Footer"
 msgstr "頁尾"
 
-#: inc/customizer/colors.php:925
+#: inc/customizer/colors.php:962
 msgid "Base Color Scheme"
 msgstr "基本色彩配置"
 
-#: inc/customizer/colors.php:1234
+#: inc/customizer/colors.php:1271
 msgid "Hero Background Overlay"
 msgstr "Hero 背景重疊"
 
-#: inc/customizer/colors.php:1235
+#: inc/customizer/colors.php:1272
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr "使用自訂標頭圖片時控制色彩重疊透明度。"
@@ -433,15 +433,15 @@ msgstr "單欄：寬"
 msgid "One Column: Narrow"
 msgstr "單欄：窄"
 
-#: inc/customizer/layouts.php:49 inc/customizer/layouts.php:138
+#: inc/customizer/layouts.php:49 inc/customizer/layouts.php:139
 msgid "Two Columns: Content | Sidebar"
 msgstr "2 欄：內容 | 側邊欄"
 
-#: inc/customizer/layouts.php:50 inc/customizer/layouts.php:137
+#: inc/customizer/layouts.php:50 inc/customizer/layouts.php:138
 msgid "Two Columns: Sidebar | Content"
 msgstr "2 欄：側邊欄 | 內容"
 
-#: inc/customizer/layouts.php:51 inc/customizer/layouts.php:140
+#: inc/customizer/layouts.php:51 inc/customizer/layouts.php:141
 msgid "Three Columns: Content | Sidebar | Sidebar"
 msgstr "3 欄：內容 | 側邊欄 | 側邊欄"
 
@@ -449,7 +449,7 @@ msgstr "3 欄：內容 | 側邊欄 | 側邊欄"
 msgid "Three Columns: Sidebar | Content | Sidebar"
 msgstr "3 欄：側邊欄 | 內容 | 側邊欄"
 
-#: inc/customizer/layouts.php:53 inc/customizer/layouts.php:139
+#: inc/customizer/layouts.php:53 inc/customizer/layouts.php:140
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "3 欄：側邊欄 | 側邊欄 | 內容"
 
@@ -463,48 +463,48 @@ msgctxt "fluid-width page layout"
 msgid "Fluid"
 msgstr "流暢"
 
-#: inc/customizer/layouts.php:252 inc/customizer/layouts.php:443
+#: inc/customizer/layouts.php:251 inc/customizer/layouts.php:442
 msgid "Layout"
 msgstr "版面"
 
-#: inc/customizer/layouts.php:284
+#: inc/customizer/layouts.php:283
 #, php-format
 msgctxt "link to the Customizer"
 msgid "The site-wide Default layout setting is located in the %s."
 msgstr "網站寬度預設版面配置設定位於 %s。"
 
-#: inc/customizer/layouts.php:288
+#: inc/customizer/layouts.php:287
 msgctxt "title of a component found in WordPress"
 msgid "Customizer"
 msgstr "自訂工具"
 
-#: inc/customizer/layouts.php:465
+#: inc/customizer/layouts.php:464
 msgid "Default Layout"
 msgstr "預設版面配置"
 
-#: inc/customizer/layouts.php:466
+#: inc/customizer/layouts.php:465
 msgid "All posts and pages on your site will use this layout by default."
 msgstr "網站上的所有貼文和頁面預設都會使用此版面配置。"
 
-#: inc/customizer/layouts.php:495
+#: inc/customizer/layouts.php:494
 msgid "Page Width"
 msgstr "網頁寬度"
 
-#: inc/customizer/layouts.php:496
+#: inc/customizer/layouts.php:495
 msgid "Display your site differently on larger screens."
 msgstr "在較大的螢幕上以不同方式顯示網站。"
 
-#: inc/helpers.php:38
+#: inc/helpers.php:40
 #, php-format
 msgctxt "search term"
 msgid "Search Results for: %s"
 msgstr "搜尋以下項目的結果： %s"
 
-#: inc/helpers.php:49
+#: inc/helpers.php:51
 msgid "404 Page Not Found"
 msgstr "404 找不到頁面"
 
-#: inc/hooks.php:360
+#: inc/hooks.php:383
 #, php-format
 msgctxt "page number"
 msgid "Page %d"

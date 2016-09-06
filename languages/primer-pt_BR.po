@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-25 12:53-0500\n"
+"POT-Creation-Date: 2016-09-06 16:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -135,7 +135,8 @@ msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr ""
-"A barra lateral secundária aparece apenas quando você seleciona o layout de 3 colunas."
+"A barra lateral secundária aparece apenas quando você seleciona o layout de "
+"3 colunas."
 
 #: functions.php:331
 msgid "Footer 1"
@@ -167,7 +168,9 @@ msgstr "Hero"
 
 #: functions.php:356
 msgid "Hero widgets appear over the header image on the front page."
-msgstr "Widgets principais são exibidos sobre a imagem do cabeçalho, na frente da página."
+msgstr ""
+"Widgets principais são exibidos sobre a imagem do cabeçalho, na frente da "
+"página."
 
 #: header.php:42
 msgid "Skip to content"
@@ -190,7 +193,8 @@ msgstr "Use imagens em destaque"
 msgid ""
 "Allow the featured image on the current post to override the hero image."
 msgstr ""
-"Permita que a imagem em destaque da publicação atual sobreponha a imagem principal."
+"Permita que a imagem em destaque da publicação atual sobreponha a imagem "
+"principal."
 
 #: inc/customizer/colors.php:41
 msgid "Site Title Text"
@@ -204,182 +208,186 @@ msgstr "Texto da tagline"
 msgid "Hero Text"
 msgstr "Texto principal"
 
-#: inc/customizer/colors.php:91 inc/customizer/colors.php:284
+#: inc/customizer/colors.php:99 inc/customizer/colors.php:319
 msgid "Text"
 msgstr "Texto"
 
-#: inc/customizer/colors.php:113
+#: inc/customizer/colors.php:121
 msgid "Heading Text"
 msgstr "Texto do título"
 
-#: inc/customizer/colors.php:114
+#: inc/customizer/colors.php:122
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "Títulos da publicação, títulos de widgets, legendas de formulários, cabeçalhos de tabelas e botões."
+msgstr ""
+"Títulos da publicação, títulos de widgets, legendas de formulários, "
+"cabeçalhos de tabelas e botões."
 
-#: inc/customizer/colors.php:135
+#: inc/customizer/colors.php:143
 msgid "Primary Text"
 msgstr "Texto principal"
 
-#: inc/customizer/colors.php:136
+#: inc/customizer/colors.php:144
 msgid "Paragraphs, lists, menu links, quotes and tables."
 msgstr "Parágrafos, listas, links de menus, cotações e tabelas."
 
-#: inc/customizer/colors.php:183
+#: inc/customizer/colors.php:191
 msgid "Secondary Text"
 msgstr "Texto secundário"
 
-#: inc/customizer/colors.php:184
+#: inc/customizer/colors.php:192
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr "Assinaturas da publicação, número de comentários, rodapés da publicação e rodapés da cotação."
+msgstr ""
+"Assinaturas da publicação, número de comentários, rodapés da publicação e "
+"rodapés da cotação."
 
-#: inc/customizer/colors.php:198
+#: inc/customizer/colors.php:206
 msgid "Widget Heading Text"
 msgstr "Texto do título do widget"
 
-#: inc/customizer/colors.php:215
+#: inc/customizer/colors.php:223
 msgid "Widget Text"
 msgstr "Texto do widget"
 
-#: inc/customizer/colors.php:226
+#: inc/customizer/colors.php:234
 msgid "Menu Text"
 msgstr "Texto do menu"
 
-#: inc/customizer/colors.php:248
+#: inc/customizer/colors.php:256
 msgid "Copyright Text"
 msgstr "Texto de copyright"
 
-#: inc/customizer/colors.php:262
+#: inc/customizer/colors.php:270
 msgid "Link Text"
 msgstr "Texto do link"
 
-#: inc/customizer/colors.php:299 inc/customizer/colors.php:368
+#: inc/customizer/colors.php:292 inc/customizer/colors.php:376
 msgid "Background"
 msgstr "Fundo"
 
-#: inc/customizer/colors.php:329
+#: inc/customizer/colors.php:337
 msgid "Page Background"
 msgstr "Plano de fundo da página"
 
-#: inc/customizer/colors.php:339
+#: inc/customizer/colors.php:347
 msgid "Content Background"
 msgstr "Plano de fundo do conteúdo"
 
-#: inc/customizer/colors.php:349
+#: inc/customizer/colors.php:357
 msgid "Hero Background"
 msgstr "Plano de fundo principal"
 
-#: inc/customizer/colors.php:378
+#: inc/customizer/colors.php:386
 msgid "Widgets Background"
 msgstr "Plano de fundo dos widgets"
 
-#: inc/customizer/colors.php:389
+#: inc/customizer/colors.php:397
 msgid "Widget Content Background"
 msgstr "Plano de fundo do conteúdo do widget"
 
-#: inc/customizer/colors.php:400
+#: inc/customizer/colors.php:408
 msgid "Footer Background"
 msgstr "Plano de fundo do rodapé"
 
-#: inc/customizer/colors.php:438 inc/customizer/layouts.php:311
+#: inc/customizer/colors.php:446 inc/customizer/layouts.php:310
 msgid "Custom"
 msgstr "Customizado"
 
-#: inc/customizer/colors.php:455 inc/customizer/layouts.php:302
+#: inc/customizer/colors.php:463 inc/customizer/layouts.php:301
 msgid "Default"
 msgstr "Padrão"
 
-#: inc/customizer/colors.php:465
+#: inc/customizer/colors.php:473
 msgctxt "color scheme name"
 msgid "Blush"
 msgstr "Vermelho"
 
-#: inc/customizer/colors.php:475
+#: inc/customizer/colors.php:477
 msgctxt "color scheme name"
 msgid "Bronze"
 msgstr "Bronze"
 
-#: inc/customizer/colors.php:485
+#: inc/customizer/colors.php:481
 msgctxt "color scheme name"
 msgid "Canary"
 msgstr "Amarelo-vivo"
 
-#: inc/customizer/colors.php:495
+#: inc/customizer/colors.php:485
 msgctxt "color scheme name"
 msgid "Cool"
 msgstr "Fresco"
 
-#: inc/customizer/colors.php:505
+#: inc/customizer/colors.php:489
 msgctxt "color scheme name"
 msgid "Dark"
 msgstr "Escuro"
 
-#: inc/customizer/colors.php:532
+#: inc/customizer/colors.php:493
 msgctxt "color scheme name"
 msgid "Iguana"
 msgstr "Iguana"
 
-#: inc/customizer/colors.php:542
+#: inc/customizer/colors.php:497
 msgctxt "color scheme name"
 msgid "Muted"
 msgstr "Suave"
 
-#: inc/customizer/colors.php:567
+#: inc/customizer/colors.php:501
 msgctxt "color scheme name"
 msgid "Plum"
 msgstr "Plum"
 
-#: inc/customizer/colors.php:577
+#: inc/customizer/colors.php:505
 msgctxt "color scheme name"
 msgid "Rose"
 msgstr "Rosa"
 
-#: inc/customizer/colors.php:587
+#: inc/customizer/colors.php:509
 msgctxt "color scheme name"
 msgid "Tangerine"
 msgstr "Laranja"
 
-#: inc/customizer/colors.php:597
+#: inc/customizer/colors.php:513
 msgctxt "color scheme name"
 msgid "Turquoise"
 msgstr "Turquoise"
 
-#: inc/customizer/colors.php:666
+#: inc/customizer/colors.php:703
 msgid "Colors"
 msgstr "Cores"
 
-#: inc/customizer/colors.php:675
+#: inc/customizer/colors.php:712
 msgid "Color Schemes"
 msgstr "Esquemas de cores"
 
-#: inc/customizer/colors.php:683
+#: inc/customizer/colors.php:720
 msgid "Header"
 msgstr "Cabeçalho"
 
-#: inc/customizer/colors.php:691
+#: inc/customizer/colors.php:728
 msgid "Menu"
 msgstr "Menu"
 
-#: inc/customizer/colors.php:699
+#: inc/customizer/colors.php:736
 msgid "Buttons"
 msgstr "Botões"
 
-#: inc/customizer/colors.php:707
+#: inc/customizer/colors.php:744
 msgid "Content"
 msgstr "Conteúdo"
 
-#: inc/customizer/colors.php:715
+#: inc/customizer/colors.php:752
 msgid "Footer"
 msgstr "Rodapé"
 
-#: inc/customizer/colors.php:925
+#: inc/customizer/colors.php:962
 msgid "Base Color Scheme"
 msgstr "Paleta de cores básicas"
 
-#: inc/customizer/colors.php:1234
+#: inc/customizer/colors.php:1271
 msgid "Hero Background Overlay"
 msgstr "Sobreposição do plano de fundo principal"
 
-#: inc/customizer/colors.php:1235
+#: inc/customizer/colors.php:1272
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr ""
@@ -408,7 +416,9 @@ msgstr "Títulos"
 
 #: inc/customizer/fonts.php:103
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr "Títulos da publicação, títulos de widgets, legendas de formulários e cabeçalhos de tabelas."
+msgstr ""
+"Títulos da publicação, títulos de widgets, legendas de formulários e "
+"cabeçalhos de tabelas."
 
 #: inc/customizer/fonts.php:118
 msgid "Primary"
@@ -424,7 +434,9 @@ msgstr "Secundário"
 
 #: inc/customizer/fonts.php:134
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr "Assinaturas, número de comentários, links de resposta, rodapés da publicação e rodapés da cotação."
+msgstr ""
+"Assinaturas, número de comentários, links de resposta, rodapés da publicação "
+"e rodapés da cotação."
 
 #: inc/customizer/fonts.php:182
 msgid "Fonts"
@@ -444,15 +456,15 @@ msgstr "Uma coluna: Larga"
 msgid "One Column: Narrow"
 msgstr "Uma coluna: Estreita"
 
-#: inc/customizer/layouts.php:49 inc/customizer/layouts.php:138
+#: inc/customizer/layouts.php:49 inc/customizer/layouts.php:139
 msgid "Two Columns: Content | Sidebar"
 msgstr "Duas colunas: Conteúdo | Barra lateral"
 
-#: inc/customizer/layouts.php:50 inc/customizer/layouts.php:137
+#: inc/customizer/layouts.php:50 inc/customizer/layouts.php:138
 msgid "Two Columns: Sidebar | Content"
 msgstr "Duas colunas: Barra Lateral | Conteúdo"
 
-#: inc/customizer/layouts.php:51 inc/customizer/layouts.php:140
+#: inc/customizer/layouts.php:51 inc/customizer/layouts.php:141
 msgid "Three Columns: Content | Sidebar | Sidebar"
 msgstr "Três colunas: Conteúdo | Barra lateral | Barra lateral"
 
@@ -460,7 +472,7 @@ msgstr "Três colunas: Conteúdo | Barra lateral | Barra lateral"
 msgid "Three Columns: Sidebar | Content | Sidebar"
 msgstr "Três colunas: Barra Lateral | Conteúdo | Barra Lateral"
 
-#: inc/customizer/layouts.php:53 inc/customizer/layouts.php:139
+#: inc/customizer/layouts.php:53 inc/customizer/layouts.php:140
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "Três colunas: Barra Lateral | Barra Lateral | Conteúdo"
 
@@ -474,48 +486,50 @@ msgctxt "fluid-width page layout"
 msgid "Fluid"
 msgstr "Fluida"
 
-#: inc/customizer/layouts.php:252 inc/customizer/layouts.php:443
+#: inc/customizer/layouts.php:251 inc/customizer/layouts.php:442
 msgid "Layout"
 msgstr "Layout"
 
-#: inc/customizer/layouts.php:284
+#: inc/customizer/layouts.php:283
 #, php-format
 msgctxt "link to the Customizer"
 msgid "The site-wide Default layout setting is located in the %s."
-msgstr "A configuração de layout padrão do tamanho do site está localizado em %s."
+msgstr ""
+"A configuração de layout padrão do tamanho do site está localizado em %s."
 
-#: inc/customizer/layouts.php:288
+#: inc/customizer/layouts.php:287
 msgctxt "title of a component found in WordPress"
 msgid "Customizer"
 msgstr "Personalizador"
 
-#: inc/customizer/layouts.php:465
+#: inc/customizer/layouts.php:464
 msgid "Default Layout"
 msgstr "Layout padrão"
 
-#: inc/customizer/layouts.php:466
+#: inc/customizer/layouts.php:465
 msgid "All posts and pages on your site will use this layout by default."
-msgstr "Todas as publicações e páginas do seu site usarão esse layout por padrão."
+msgstr ""
+"Todas as publicações e páginas do seu site usarão esse layout por padrão."
 
-#: inc/customizer/layouts.php:495
+#: inc/customizer/layouts.php:494
 msgid "Page Width"
 msgstr "Largura da página"
 
-#: inc/customizer/layouts.php:496
+#: inc/customizer/layouts.php:495
 msgid "Display your site differently on larger screens."
 msgstr "Exiba seu site de maneira diferente em telas maiores."
 
-#: inc/helpers.php:38
+#: inc/helpers.php:40
 #, php-format
 msgctxt "search term"
 msgid "Search Results for: %s"
 msgstr "Pesquisar resultados por:  %s"
 
-#: inc/helpers.php:49
+#: inc/helpers.php:51
 msgid "404 Page Not Found"
 msgstr "404 Página não encontrada"
 
-#: inc/hooks.php:360
+#: inc/hooks.php:383
 #, php-format
 msgctxt "page number"
 msgid "Page %d"

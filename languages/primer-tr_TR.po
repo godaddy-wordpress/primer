@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-25 12:53-0500\n"
+"POT-Creation-Date: 2016-09-06 16:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -167,7 +167,8 @@ msgstr "Ana Site"
 
 #: functions.php:356
 msgid "Hero widgets appear over the header image on the front page."
-msgstr "Ana site pencere öğeleri, ön sayfadaki üstbaşlık görselinin üzerinde görünür."
+msgstr ""
+"Ana site pencere öğeleri, ön sayfadaki üstbaşlık görselinin üzerinde görünür."
 
 #: header.php:42
 msgid "Skip to content"
@@ -205,187 +206,190 @@ msgstr "Etiket Satırı Metni"
 msgid "Hero Text"
 msgstr "Ana Site Metni"
 
-#: inc/customizer/colors.php:91 inc/customizer/colors.php:284
+#: inc/customizer/colors.php:99 inc/customizer/colors.php:319
 msgid "Text"
 msgstr "Metin"
 
-#: inc/customizer/colors.php:113
+#: inc/customizer/colors.php:121
 msgid "Heading Text"
 msgstr "Üstbilgi Metni"
 
-#: inc/customizer/colors.php:114
+#: inc/customizer/colors.php:122
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "Gönderi başlıkları, pencere öğesi başlıkları, form etiketleri ve düğmeler."
+msgstr ""
+"Gönderi başlıkları, pencere öğesi başlıkları, form etiketleri ve düğmeler."
 
-#: inc/customizer/colors.php:135
+#: inc/customizer/colors.php:143
 msgid "Primary Text"
 msgstr "Birincil Metin"
 
-#: inc/customizer/colors.php:136
+#: inc/customizer/colors.php:144
 msgid "Paragraphs, lists, menu links, quotes and tables."
 msgstr "Paragraflar, listeler, menü bağlantıları, alıntılar ve tablolar."
 
-#: inc/customizer/colors.php:183
+#: inc/customizer/colors.php:191
 msgid "Secondary Text"
 msgstr "İkincil Metin"
 
-#: inc/customizer/colors.php:184
+#: inc/customizer/colors.php:192
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr "Gönderi yazarlarının isimleri, yorum sayıları, gönderi ve alıntı altbilgileri."
+msgstr ""
+"Gönderi yazarlarının isimleri, yorum sayıları, gönderi ve alıntı "
+"altbilgileri."
 
-#: inc/customizer/colors.php:198
+#: inc/customizer/colors.php:206
 msgid "Widget Heading Text"
 msgstr "Pencere Öğesi Üstbilgi Metni"
 
-#: inc/customizer/colors.php:215
+#: inc/customizer/colors.php:223
 msgid "Widget Text"
 msgstr "Pencere Öğesi Metni"
 
-#: inc/customizer/colors.php:226
+#: inc/customizer/colors.php:234
 msgid "Menu Text"
 msgstr "Menü Metni"
 
-#: inc/customizer/colors.php:248
+#: inc/customizer/colors.php:256
 msgid "Copyright Text"
 msgstr "Telif Hakkı Metni"
 
-#: inc/customizer/colors.php:262
+#: inc/customizer/colors.php:270
 msgid "Link Text"
 msgstr "Bağlantı Metni"
 
-#: inc/customizer/colors.php:299 inc/customizer/colors.php:368
+#: inc/customizer/colors.php:292 inc/customizer/colors.php:376
 msgid "Background"
 msgstr "Arkaplan"
 
-#: inc/customizer/colors.php:329
+#: inc/customizer/colors.php:337
 msgid "Page Background"
 msgstr "Sayfa Arka Planı"
 
-#: inc/customizer/colors.php:339
+#: inc/customizer/colors.php:347
 msgid "Content Background"
 msgstr "İçerik Arka Planı"
 
-#: inc/customizer/colors.php:349
+#: inc/customizer/colors.php:357
 msgid "Hero Background"
 msgstr "Ana Site Arka Planı"
 
-#: inc/customizer/colors.php:378
+#: inc/customizer/colors.php:386
 msgid "Widgets Background"
 msgstr "Pencere Öğeleri Arka Planı"
 
-#: inc/customizer/colors.php:389
+#: inc/customizer/colors.php:397
 msgid "Widget Content Background"
 msgstr "Pencere Öğeleri İçerik Arka Planı"
 
-#: inc/customizer/colors.php:400
+#: inc/customizer/colors.php:408
 msgid "Footer Background"
 msgstr "Altbilgi Arka Planı"
 
-#: inc/customizer/colors.php:438 inc/customizer/layouts.php:311
+#: inc/customizer/colors.php:446 inc/customizer/layouts.php:310
 msgid "Custom"
 msgstr "Özel"
 
-#: inc/customizer/colors.php:455 inc/customizer/layouts.php:302
+#: inc/customizer/colors.php:463 inc/customizer/layouts.php:301
 msgid "Default"
 msgstr "Varsayılan"
 
-#: inc/customizer/colors.php:465
+#: inc/customizer/colors.php:473
 msgctxt "color scheme name"
 msgid "Blush"
 msgstr "Kızarık"
 
-#: inc/customizer/colors.php:475
+#: inc/customizer/colors.php:477
 msgctxt "color scheme name"
 msgid "Bronze"
 msgstr "Bronz"
 
-#: inc/customizer/colors.php:485
+#: inc/customizer/colors.php:481
 msgctxt "color scheme name"
 msgid "Canary"
 msgstr "Kanarya"
 
-#: inc/customizer/colors.php:495
+#: inc/customizer/colors.php:485
 msgctxt "color scheme name"
 msgid "Cool"
 msgstr "Serin"
 
-#: inc/customizer/colors.php:505
+#: inc/customizer/colors.php:489
 msgctxt "color scheme name"
 msgid "Dark"
 msgstr "Koyu renkli"
 
-#: inc/customizer/colors.php:532
+#: inc/customizer/colors.php:493
 msgctxt "color scheme name"
 msgid "Iguana"
 msgstr "İguana"
 
-#: inc/customizer/colors.php:542
+#: inc/customizer/colors.php:497
 msgctxt "color scheme name"
 msgid "Muted"
 msgstr "Sessiz"
 
-#: inc/customizer/colors.php:567
+#: inc/customizer/colors.php:501
 msgctxt "color scheme name"
 msgid "Plum"
 msgstr "Erik Rengi"
 
-#: inc/customizer/colors.php:577
+#: inc/customizer/colors.php:505
 msgctxt "color scheme name"
 msgid "Rose"
 msgstr "Gül"
 
-#: inc/customizer/colors.php:587
+#: inc/customizer/colors.php:509
 msgctxt "color scheme name"
 msgid "Tangerine"
 msgstr "Mandalina"
 
-#: inc/customizer/colors.php:597
+#: inc/customizer/colors.php:513
 msgctxt "color scheme name"
 msgid "Turquoise"
 msgstr "Turkuaz "
 
-#: inc/customizer/colors.php:666
+#: inc/customizer/colors.php:703
 msgid "Colors"
 msgstr "Renkler"
 
-#: inc/customizer/colors.php:675
+#: inc/customizer/colors.php:712
 msgid "Color Schemes"
 msgstr "Renk Şemaları"
 
-#: inc/customizer/colors.php:683
+#: inc/customizer/colors.php:720
 msgid "Header"
 msgstr "Başlık"
 
-#: inc/customizer/colors.php:691
+#: inc/customizer/colors.php:728
 msgid "Menu"
 msgstr "Menü"
 
-#: inc/customizer/colors.php:699
+#: inc/customizer/colors.php:736
 msgid "Buttons"
 msgstr "Düğmeler"
 
-#: inc/customizer/colors.php:707
+#: inc/customizer/colors.php:744
 msgid "Content"
 msgstr "İçerik"
 
-#: inc/customizer/colors.php:715
+#: inc/customizer/colors.php:752
 msgid "Footer"
 msgstr "Altbilgi"
 
-#: inc/customizer/colors.php:925
+#: inc/customizer/colors.php:962
 msgid "Base Color Scheme"
 msgstr "Taban Renk Şeması"
 
-#: inc/customizer/colors.php:1234
+#: inc/customizer/colors.php:1271
 msgid "Hero Background Overlay"
 msgstr "Ana Site Arka Plan Katmanı"
 
-#: inc/customizer/colors.php:1235
+#: inc/customizer/colors.php:1272
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr ""
-"Özelleştirilmiş bir Üstbilgi Görseli kullanırken renk katmanının saydamlığını "
-"kontrol edin."
+"Özelleştirilmiş bir Üstbilgi Görseli kullanırken renk katmanının "
+"saydamlığını kontrol edin."
 
 #: inc/customizer/fonts.php:81
 msgid "Site Title"
@@ -409,7 +413,9 @@ msgstr "Üstbilgiler"
 
 #: inc/customizer/fonts.php:103
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr "Gönderi başlıkları, pencere öğesi başlıkları, form etiketleri ve tablo üstbilgileri."
+msgstr ""
+"Gönderi başlıkları, pencere öğesi başlıkları, form etiketleri ve tablo "
+"üstbilgileri."
 
 #: inc/customizer/fonts.php:118
 msgid "Primary"
@@ -445,15 +451,15 @@ msgstr "Bir Sütun: Geniş"
 msgid "One Column: Narrow"
 msgstr "Bir Sütun: Dar"
 
-#: inc/customizer/layouts.php:49 inc/customizer/layouts.php:138
+#: inc/customizer/layouts.php:49 inc/customizer/layouts.php:139
 msgid "Two Columns: Content | Sidebar"
 msgstr "İki Sütun: İçerik | Kenar Çubuğu"
 
-#: inc/customizer/layouts.php:50 inc/customizer/layouts.php:137
+#: inc/customizer/layouts.php:50 inc/customizer/layouts.php:138
 msgid "Two Columns: Sidebar | Content"
 msgstr "İki Sütun: Kenar Çubuğu | İçerik"
 
-#: inc/customizer/layouts.php:51 inc/customizer/layouts.php:140
+#: inc/customizer/layouts.php:51 inc/customizer/layouts.php:141
 msgid "Three Columns: Content | Sidebar | Sidebar"
 msgstr "Üç Sütun: İçerik / Kenar Çubuğu / Kenar Çubuğu"
 
@@ -461,7 +467,7 @@ msgstr "Üç Sütun: İçerik / Kenar Çubuğu / Kenar Çubuğu"
 msgid "Three Columns: Sidebar | Content | Sidebar"
 msgstr "Üç Sütun: Kenar Çubuğu / İçerik / Kenar Çubuğu"
 
-#: inc/customizer/layouts.php:53 inc/customizer/layouts.php:139
+#: inc/customizer/layouts.php:53 inc/customizer/layouts.php:140
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "Üç Sütun: Kenar Çubuğu / Kenar Çubuğu / İçerik"
 
@@ -475,48 +481,50 @@ msgctxt "fluid-width page layout"
 msgid "Fluid"
 msgstr "Akışkan"
 
-#: inc/customizer/layouts.php:252 inc/customizer/layouts.php:443
+#: inc/customizer/layouts.php:251 inc/customizer/layouts.php:442
 msgid "Layout"
 msgstr "Düzen"
 
-#: inc/customizer/layouts.php:284
+#: inc/customizer/layouts.php:283
 #, php-format
 msgctxt "link to the Customizer"
 msgid "The site-wide Default layout setting is located in the %s."
 msgstr "Site genelindeki Varsayılan sayfa düzeni ayarı, %s konumundadır."
 
-#: inc/customizer/layouts.php:288
+#: inc/customizer/layouts.php:287
 msgctxt "title of a component found in WordPress"
 msgid "Customizer"
 msgstr "Kişiselleştirici"
 
-#: inc/customizer/layouts.php:465
+#: inc/customizer/layouts.php:464
 msgid "Default Layout"
 msgstr "Varsayılan Sayfa Düzeni"
 
-#: inc/customizer/layouts.php:466
+#: inc/customizer/layouts.php:465
 msgid "All posts and pages on your site will use this layout by default."
-msgstr "Sitenizdeki tüm gönderiler ve sayfalar, varsayılan olarak bu sayfa düzenini kullanır."
+msgstr ""
+"Sitenizdeki tüm gönderiler ve sayfalar, varsayılan olarak bu sayfa düzenini "
+"kullanır."
 
-#: inc/customizer/layouts.php:495
+#: inc/customizer/layouts.php:494
 msgid "Page Width"
 msgstr "Sayfa Genişliği"
 
-#: inc/customizer/layouts.php:496
+#: inc/customizer/layouts.php:495
 msgid "Display your site differently on larger screens."
 msgstr "Sitenizi daha geniş ekranlarda daha farklı gösterin."
 
-#: inc/helpers.php:38
+#: inc/helpers.php:40
 #, php-format
 msgctxt "search term"
 msgid "Search Results for: %s"
 msgstr "Şunun için Arama Sonuçları: %s"
 
-#: inc/helpers.php:49
+#: inc/helpers.php:51
 msgid "404 Page Not Found"
 msgstr "404 Sayfa Bulunamadı"
 
-#: inc/hooks.php:360
+#: inc/hooks.php:383
 #, php-format
 msgctxt "page number"
 msgid "Page %d"

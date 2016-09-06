@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-25 12:53-0500\n"
+"POT-Creation-Date: 2016-09-06 16:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -136,7 +136,8 @@ msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr ""
-"La barra laterale secondaria appare solo se selezioni un layout a tre colonne."
+"La barra laterale secondaria appare solo se selezioni un layout a tre "
+"colonne."
 
 #: functions.php:331
 msgid "Footer 1"
@@ -144,7 +145,9 @@ msgstr "Piè di pagina 1"
 
 #: functions.php:332
 msgid "This sidebar is the first column of the footer widget area."
-msgstr "Questa barra laterale appare nella prima colonna dell'area widget del piè di pagina."
+msgstr ""
+"Questa barra laterale appare nella prima colonna dell'area widget del piè di "
+"pagina."
 
 #: functions.php:339
 msgid "Footer 2"
@@ -152,7 +155,9 @@ msgstr "Piè di pagina 2"
 
 #: functions.php:340
 msgid "This sidebar is the second column of the footer widget area."
-msgstr "Questa barra laterale appare nella seconda colonna dell'area widget del piè di pagina."
+msgstr ""
+"Questa barra laterale appare nella seconda colonna dell'area widget del piè "
+"di pagina."
 
 #: functions.php:347
 msgid "Footer 3"
@@ -160,7 +165,9 @@ msgstr "Piè di pagina 3"
 
 #: functions.php:348
 msgid "This sidebar is the third column of the footer widget area."
-msgstr "Questa barra laterale appare nella terza colonna dell'area widget del piè di pagina."
+msgstr ""
+"Questa barra laterale appare nella terza colonna dell'area widget del piè di "
+"pagina."
 
 #: functions.php:355
 msgid "Hero"
@@ -168,7 +175,8 @@ msgstr "Hero"
 
 #: functions.php:356
 msgid "Hero widgets appear over the header image on the front page."
-msgstr "I widget Hero appaiono sopra l’immagine di intestazione nella prima pagina."
+msgstr ""
+"I widget Hero appaiono sopra l’immagine di intestazione nella prima pagina."
 
 #: header.php:42
 msgid "Skip to content"
@@ -180,8 +188,8 @@ msgid ""
 "Primer requires at least WordPress version %s. You are running version %s. "
 "Please upgrade and try again."
 msgstr ""
-"Primer richiede almeno la versione %s di WordPress. La versione in esecuzione "
-"è la %s. Aggiorna e riprova."
+"Primer richiede almeno la versione %s di WordPress. La versione in "
+"esecuzione è la %s. Aggiorna e riprova."
 
 #: inc/customizer.php:173
 msgid "Use featured image"
@@ -206,182 +214,186 @@ msgstr "Testo tagline"
 msgid "Hero Text"
 msgstr "Testo Hero"
 
-#: inc/customizer/colors.php:91 inc/customizer/colors.php:284
+#: inc/customizer/colors.php:99 inc/customizer/colors.php:319
 msgid "Text"
 msgstr "Testo"
 
-#: inc/customizer/colors.php:113
+#: inc/customizer/colors.php:121
 msgid "Heading Text"
 msgstr "Testo intestazione"
 
-#: inc/customizer/colors.php:114
+#: inc/customizer/colors.php:122
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "Titoli di post e di widget, etichette di form, intestazioni di tabelle e pulsanti."
+msgstr ""
+"Titoli di post e di widget, etichette di form, intestazioni di tabelle e "
+"pulsanti."
 
-#: inc/customizer/colors.php:135
+#: inc/customizer/colors.php:143
 msgid "Primary Text"
 msgstr "Testo principale"
 
-#: inc/customizer/colors.php:136
+#: inc/customizer/colors.php:144
 msgid "Paragraphs, lists, menu links, quotes and tables."
 msgstr "Paragrafi, elenchi, link a menu, citazioni e tabelle."
 
-#: inc/customizer/colors.php:183
+#: inc/customizer/colors.php:191
 msgid "Secondary Text"
 msgstr "Testo secondario"
 
-#: inc/customizer/colors.php:184
+#: inc/customizer/colors.php:192
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr "Autori dei post, conteggio dei commenti, piè di pagina dei post e delle citazioni."
+msgstr ""
+"Autori dei post, conteggio dei commenti, piè di pagina dei post e delle "
+"citazioni."
 
-#: inc/customizer/colors.php:198
+#: inc/customizer/colors.php:206
 msgid "Widget Heading Text"
 msgstr "Testo intestazione widget"
 
-#: inc/customizer/colors.php:215
+#: inc/customizer/colors.php:223
 msgid "Widget Text"
 msgstr "Testo widget"
 
-#: inc/customizer/colors.php:226
+#: inc/customizer/colors.php:234
 msgid "Menu Text"
 msgstr "Testo menu"
 
-#: inc/customizer/colors.php:248
+#: inc/customizer/colors.php:256
 msgid "Copyright Text"
 msgstr "Testo copyright"
 
-#: inc/customizer/colors.php:262
+#: inc/customizer/colors.php:270
 msgid "Link Text"
 msgstr "Testo link"
 
-#: inc/customizer/colors.php:299 inc/customizer/colors.php:368
+#: inc/customizer/colors.php:292 inc/customizer/colors.php:376
 msgid "Background"
 msgstr "Sfondo"
 
-#: inc/customizer/colors.php:329
+#: inc/customizer/colors.php:337
 msgid "Page Background"
 msgstr "Sfondo della pagina"
 
-#: inc/customizer/colors.php:339
+#: inc/customizer/colors.php:347
 msgid "Content Background"
 msgstr "Sfondo contenuti"
 
-#: inc/customizer/colors.php:349
+#: inc/customizer/colors.php:357
 msgid "Hero Background"
 msgstr "Sfondo Hero"
 
-#: inc/customizer/colors.php:378
+#: inc/customizer/colors.php:386
 msgid "Widgets Background"
 msgstr "Sfondo widget"
 
-#: inc/customizer/colors.php:389
+#: inc/customizer/colors.php:397
 msgid "Widget Content Background"
 msgstr "Sfondo contenuti widget"
 
-#: inc/customizer/colors.php:400
+#: inc/customizer/colors.php:408
 msgid "Footer Background"
 msgstr "Sfondo piè di pagina"
 
-#: inc/customizer/colors.php:438 inc/customizer/layouts.php:311
+#: inc/customizer/colors.php:446 inc/customizer/layouts.php:310
 msgid "Custom"
 msgstr "Personalizzato"
 
-#: inc/customizer/colors.php:455 inc/customizer/layouts.php:302
+#: inc/customizer/colors.php:463 inc/customizer/layouts.php:301
 msgid "Default"
 msgstr "Default"
 
-#: inc/customizer/colors.php:465
+#: inc/customizer/colors.php:473
 msgctxt "color scheme name"
 msgid "Blush"
 msgstr "Incarnato"
 
-#: inc/customizer/colors.php:475
+#: inc/customizer/colors.php:477
 msgctxt "color scheme name"
 msgid "Bronze"
 msgstr "Bronzo"
 
-#: inc/customizer/colors.php:485
+#: inc/customizer/colors.php:481
 msgctxt "color scheme name"
 msgid "Canary"
 msgstr "Canarino"
 
-#: inc/customizer/colors.php:495
+#: inc/customizer/colors.php:485
 msgctxt "color scheme name"
 msgid "Cool"
 msgstr "Cool"
 
-#: inc/customizer/colors.php:505
+#: inc/customizer/colors.php:489
 msgctxt "color scheme name"
 msgid "Dark"
 msgstr "Scuro"
 
-#: inc/customizer/colors.php:532
+#: inc/customizer/colors.php:493
 msgctxt "color scheme name"
 msgid "Iguana"
 msgstr "Iguana"
 
-#: inc/customizer/colors.php:542
+#: inc/customizer/colors.php:497
 msgctxt "color scheme name"
 msgid "Muted"
 msgstr "Tenue"
 
-#: inc/customizer/colors.php:567
+#: inc/customizer/colors.php:501
 msgctxt "color scheme name"
 msgid "Plum"
 msgstr "Susina"
 
-#: inc/customizer/colors.php:577
+#: inc/customizer/colors.php:505
 msgctxt "color scheme name"
 msgid "Rose"
 msgstr "Rosa"
 
-#: inc/customizer/colors.php:587
+#: inc/customizer/colors.php:509
 msgctxt "color scheme name"
 msgid "Tangerine"
 msgstr "Mandarino"
 
-#: inc/customizer/colors.php:597
+#: inc/customizer/colors.php:513
 msgctxt "color scheme name"
 msgid "Turquoise"
 msgstr "Turchese"
 
-#: inc/customizer/colors.php:666
+#: inc/customizer/colors.php:703
 msgid "Colors"
 msgstr "Colori"
 
-#: inc/customizer/colors.php:675
+#: inc/customizer/colors.php:712
 msgid "Color Schemes"
 msgstr "Schemi di colori"
 
-#: inc/customizer/colors.php:683
+#: inc/customizer/colors.php:720
 msgid "Header"
 msgstr "Intestazione"
 
-#: inc/customizer/colors.php:691
+#: inc/customizer/colors.php:728
 msgid "Menu"
 msgstr "Menu"
 
-#: inc/customizer/colors.php:699
+#: inc/customizer/colors.php:736
 msgid "Buttons"
 msgstr "Pulsanti"
 
-#: inc/customizer/colors.php:707
+#: inc/customizer/colors.php:744
 msgid "Content"
 msgstr "Contenuto"
 
-#: inc/customizer/colors.php:715
+#: inc/customizer/colors.php:752
 msgid "Footer"
 msgstr "Piè di pagina"
 
-#: inc/customizer/colors.php:925
+#: inc/customizer/colors.php:962
 msgid "Base Color Scheme"
 msgstr "Schema di colori di base"
 
-#: inc/customizer/colors.php:1234
+#: inc/customizer/colors.php:1271
 msgid "Hero Background Overlay"
 msgstr "Sovrapposizione sfondo Hero"
 
-#: inc/customizer/colors.php:1235
+#: inc/customizer/colors.php:1272
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr ""
@@ -410,7 +422,8 @@ msgstr "Intestazioni"
 
 #: inc/customizer/fonts.php:103
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr "Titoli di post e di widget, etichette di form e intestazioni di tabelle."
+msgstr ""
+"Titoli di post e di widget, etichette di form e intestazioni di tabelle."
 
 #: inc/customizer/fonts.php:118
 msgid "Primary"
@@ -426,7 +439,9 @@ msgstr "Secondario"
 
 #: inc/customizer/fonts.php:134
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr "Autori dei testi, conteggio dei commenti, link di risposta, piè di pagina dei post e delle citazioni."
+msgstr ""
+"Autori dei testi, conteggio dei commenti, link di risposta, piè di pagina "
+"dei post e delle citazioni."
 
 #: inc/customizer/fonts.php:182
 msgid "Fonts"
@@ -446,15 +461,15 @@ msgstr "Una colonna: Larga"
 msgid "One Column: Narrow"
 msgstr "Una colonna: Stretta"
 
-#: inc/customizer/layouts.php:49 inc/customizer/layouts.php:138
+#: inc/customizer/layouts.php:49 inc/customizer/layouts.php:139
 msgid "Two Columns: Content | Sidebar"
 msgstr "Due colonne: Contenuto | Barra laterale"
 
-#: inc/customizer/layouts.php:50 inc/customizer/layouts.php:137
+#: inc/customizer/layouts.php:50 inc/customizer/layouts.php:138
 msgid "Two Columns: Sidebar | Content"
 msgstr "Due colonne: Barra laterale | Contenuto"
 
-#: inc/customizer/layouts.php:51 inc/customizer/layouts.php:140
+#: inc/customizer/layouts.php:51 inc/customizer/layouts.php:141
 msgid "Three Columns: Content | Sidebar | Sidebar"
 msgstr "Tre colonne: Contenuto | Barra laterale | Barra laterale"
 
@@ -462,7 +477,7 @@ msgstr "Tre colonne: Contenuto | Barra laterale | Barra laterale"
 msgid "Three Columns: Sidebar | Content | Sidebar"
 msgstr "Tre colonne: Barra laterale | Contenuto | Barra laterale"
 
-#: inc/customizer/layouts.php:53 inc/customizer/layouts.php:139
+#: inc/customizer/layouts.php:53 inc/customizer/layouts.php:140
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "Tre colonne: Barra laterale | Barra laterale | Contenuto"
 
@@ -476,48 +491,50 @@ msgctxt "fluid-width page layout"
 msgid "Fluid"
 msgstr "Fluido"
 
-#: inc/customizer/layouts.php:252 inc/customizer/layouts.php:443
+#: inc/customizer/layouts.php:251 inc/customizer/layouts.php:442
 msgid "Layout"
 msgstr "Layout"
 
-#: inc/customizer/layouts.php:284
+#: inc/customizer/layouts.php:283
 #, php-format
 msgctxt "link to the Customizer"
 msgid "The site-wide Default layout setting is located in the %s."
 msgstr "L’impostazione di layout predefinita per l’intero sito si trova in %s."
 
-#: inc/customizer/layouts.php:288
+#: inc/customizer/layouts.php:287
 msgctxt "title of a component found in WordPress"
 msgid "Customizer"
 msgstr "Strumento di personalizzazione"
 
-#: inc/customizer/layouts.php:465
+#: inc/customizer/layouts.php:464
 msgid "Default Layout"
 msgstr "Layout predefinito"
 
-#: inc/customizer/layouts.php:466
+#: inc/customizer/layouts.php:465
 msgid "All posts and pages on your site will use this layout by default."
-msgstr "Tutti i post e tutte le pagine del sito assumeranno automaticamente questo layout."
+msgstr ""
+"Tutti i post e tutte le pagine del sito assumeranno automaticamente questo "
+"layout."
 
-#: inc/customizer/layouts.php:495
+#: inc/customizer/layouts.php:494
 msgid "Page Width"
 msgstr "Larghezza pagina"
 
-#: inc/customizer/layouts.php:496
+#: inc/customizer/layouts.php:495
 msgid "Display your site differently on larger screens."
 msgstr "Visualizza il sito in modo diverso su schermi più grandi."
 
-#: inc/helpers.php:38
+#: inc/helpers.php:40
 #, php-format
 msgctxt "search term"
 msgid "Search Results for: %s"
 msgstr "Risultati di ricerca per: %s"
 
-#: inc/helpers.php:49
+#: inc/helpers.php:51
 msgid "404 Page Not Found"
 msgstr "404 Pagina non trovata"
 
-#: inc/hooks.php:360
+#: inc/hooks.php:383
 #, php-format
 msgctxt "page number"
 msgid "Page %d"

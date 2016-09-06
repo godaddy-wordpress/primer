@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-25 12:53-0500\n"
+"POT-Creation-Date: 2016-09-06 16:33-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -134,7 +134,8 @@ msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr ""
-"Допоміжна бічна панель відображається, лише якщо ви вибрали схему з трьома стовпцями."
+"Допоміжна бічна панель відображається, лише якщо ви вибрали схему з трьома "
+"стовпцями."
 
 #: functions.php:331
 msgid "Footer 1"
@@ -142,7 +143,8 @@ msgstr "Нижній колонтитул 1"
 
 #: functions.php:332
 msgid "This sidebar is the first column of the footer widget area."
-msgstr "Ця бокова панель — перший стовпець області віджета нижнього колонтитула."
+msgstr ""
+"Ця бокова панель — перший стовпець області віджета нижнього колонтитула."
 
 #: functions.php:339
 msgid "Footer 2"
@@ -150,7 +152,8 @@ msgstr "Нижній колонтитул 2"
 
 #: functions.php:340
 msgid "This sidebar is the second column of the footer widget area."
-msgstr "Ця бокова панель — другий стовпець області віджета нижнього колонтитула."
+msgstr ""
+"Ця бокова панель — другий стовпець області віджета нижнього колонтитула."
 
 #: functions.php:347
 msgid "Footer 3"
@@ -158,7 +161,8 @@ msgstr "Нижній колонтитул 3"
 
 #: functions.php:348
 msgid "This sidebar is the third column of the footer widget area."
-msgstr "Ця бокова панель — третій стовпець області віджета нижнього колонтитула."
+msgstr ""
+"Ця бокова панель — третій стовпець області віджета нижнього колонтитула."
 
 #: functions.php:355
 msgid "Hero"
@@ -166,7 +170,9 @@ msgstr "Hero"
 
 #: functions.php:356
 msgid "Hero widgets appear over the header image on the front page."
-msgstr "Віджети Hero відображаються поверх зображення верхнього колонтитула на першій сторінці."
+msgstr ""
+"Віджети Hero відображаються поверх зображення верхнього колонтитула на "
+"першій сторінці."
 
 #: header.php:42
 msgid "Skip to content"
@@ -178,8 +184,8 @@ msgid ""
 "Primer requires at least WordPress version %s. You are running version %s. "
 "Please upgrade and try again."
 msgstr ""
-"Для підручника потрібна версія WordPress мінімум %s. У вас версія %s. Оновіть "
-"та повторіть спробу."
+"Для підручника потрібна версія WordPress мінімум %s. У вас версія %s. "
+"Оновіть та повторіть спробу."
 
 #: inc/customizer.php:173
 msgid "Use featured image"
@@ -204,186 +210,188 @@ msgstr "Текст гасла"
 msgid "Hero Text"
 msgstr "Текст Hero"
 
-#: inc/customizer/colors.php:91 inc/customizer/colors.php:284
+#: inc/customizer/colors.php:99 inc/customizer/colors.php:319
 msgid "Text"
 msgstr "Текст"
 
-#: inc/customizer/colors.php:113
+#: inc/customizer/colors.php:121
 msgid "Heading Text"
 msgstr "Текст заголовка"
 
-#: inc/customizer/colors.php:114
+#: inc/customizer/colors.php:122
 msgid "Post titles, widget titles, form labels, table headers and buttons."
 msgstr "Заголовки дописів, віджетів, форм, таблиць і назви кнопок."
 
-#: inc/customizer/colors.php:135
+#: inc/customizer/colors.php:143
 msgid "Primary Text"
 msgstr "Основний текст"
 
-#: inc/customizer/colors.php:136
+#: inc/customizer/colors.php:144
 msgid "Paragraphs, lists, menu links, quotes and tables."
 msgstr "Абзаци, списки, посилання меню, цитати й таблиці."
 
-#: inc/customizer/colors.php:183
+#: inc/customizer/colors.php:191
 msgid "Secondary Text"
 msgstr "Допоміжний текст"
 
-#: inc/customizer/colors.php:184
+#: inc/customizer/colors.php:192
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr "Автори дописів, кількість коментарів, нижні колонтитули дописів і цитат."
+msgstr ""
+"Автори дописів, кількість коментарів, нижні колонтитули дописів і цитат."
 
-#: inc/customizer/colors.php:198
+#: inc/customizer/colors.php:206
 msgid "Widget Heading Text"
 msgstr "Текст заголовка віджета"
 
-#: inc/customizer/colors.php:215
+#: inc/customizer/colors.php:223
 msgid "Widget Text"
 msgstr "Текст віджета"
 
-#: inc/customizer/colors.php:226
+#: inc/customizer/colors.php:234
 msgid "Menu Text"
 msgstr "Текст меню"
 
-#: inc/customizer/colors.php:248
+#: inc/customizer/colors.php:256
 msgid "Copyright Text"
 msgstr "Текст повідомлення про авторське право"
 
-#: inc/customizer/colors.php:262
+#: inc/customizer/colors.php:270
 msgid "Link Text"
 msgstr "Текст посилання"
 
-#: inc/customizer/colors.php:299 inc/customizer/colors.php:368
+#: inc/customizer/colors.php:292 inc/customizer/colors.php:376
 msgid "Background"
 msgstr "Тло"
 
-#: inc/customizer/colors.php:329
+#: inc/customizer/colors.php:337
 msgid "Page Background"
 msgstr "Тло сторінки"
 
-#: inc/customizer/colors.php:339
+#: inc/customizer/colors.php:347
 msgid "Content Background"
 msgstr "Фон вмісту"
 
-#: inc/customizer/colors.php:349
+#: inc/customizer/colors.php:357
 msgid "Hero Background"
 msgstr "Фон Hero"
 
-#: inc/customizer/colors.php:378
+#: inc/customizer/colors.php:386
 msgid "Widgets Background"
 msgstr "Фон віджетів"
 
-#: inc/customizer/colors.php:389
+#: inc/customizer/colors.php:397
 msgid "Widget Content Background"
 msgstr "Фон вмісту віджетів"
 
-#: inc/customizer/colors.php:400
+#: inc/customizer/colors.php:408
 msgid "Footer Background"
 msgstr "Фон нижнього колонтитула"
 
-#: inc/customizer/colors.php:438 inc/customizer/layouts.php:311
+#: inc/customizer/colors.php:446 inc/customizer/layouts.php:310
 msgid "Custom"
 msgstr "Користувацький"
 
-#: inc/customizer/colors.php:455 inc/customizer/layouts.php:302
+#: inc/customizer/colors.php:463 inc/customizer/layouts.php:301
 msgid "Default"
 msgstr "За умовчанням"
 
-#: inc/customizer/colors.php:465
+#: inc/customizer/colors.php:473
 msgctxt "color scheme name"
 msgid "Blush"
 msgstr "Рум'янець"
 
-#: inc/customizer/colors.php:475
+#: inc/customizer/colors.php:477
 msgctxt "color scheme name"
 msgid "Bronze"
 msgstr "Бронза"
 
-#: inc/customizer/colors.php:485
+#: inc/customizer/colors.php:481
 msgctxt "color scheme name"
 msgid "Canary"
 msgstr "Канарка"
 
-#: inc/customizer/colors.php:495
+#: inc/customizer/colors.php:485
 msgctxt "color scheme name"
 msgid "Cool"
 msgstr "Круто"
 
-#: inc/customizer/colors.php:505
+#: inc/customizer/colors.php:489
 msgctxt "color scheme name"
 msgid "Dark"
 msgstr "Темна"
 
-#: inc/customizer/colors.php:532
+#: inc/customizer/colors.php:493
 msgctxt "color scheme name"
 msgid "Iguana"
 msgstr "Ігуана"
 
-#: inc/customizer/colors.php:542
+#: inc/customizer/colors.php:497
 msgctxt "color scheme name"
 msgid "Muted"
 msgstr "Тьмяна"
 
-#: inc/customizer/colors.php:567
+#: inc/customizer/colors.php:501
 msgctxt "color scheme name"
 msgid "Plum"
 msgstr "Слива"
 
-#: inc/customizer/colors.php:577
+#: inc/customizer/colors.php:505
 msgctxt "color scheme name"
 msgid "Rose"
 msgstr "Троянда"
 
-#: inc/customizer/colors.php:587
+#: inc/customizer/colors.php:509
 msgctxt "color scheme name"
 msgid "Tangerine"
 msgstr "Мандарин"
 
-#: inc/customizer/colors.php:597
+#: inc/customizer/colors.php:513
 msgctxt "color scheme name"
 msgid "Turquoise"
 msgstr "Бірюзовий"
 
-#: inc/customizer/colors.php:666
+#: inc/customizer/colors.php:703
 msgid "Colors"
 msgstr "Кольори"
 
-#: inc/customizer/colors.php:675
+#: inc/customizer/colors.php:712
 msgid "Color Schemes"
 msgstr "Колірні схеми"
 
-#: inc/customizer/colors.php:683
+#: inc/customizer/colors.php:720
 msgid "Header"
 msgstr "Верхній колонтитул"
 
-#: inc/customizer/colors.php:691
+#: inc/customizer/colors.php:728
 msgid "Menu"
 msgstr "Меню"
 
-#: inc/customizer/colors.php:699
+#: inc/customizer/colors.php:736
 msgid "Buttons"
 msgstr "Кнопки"
 
-#: inc/customizer/colors.php:707
+#: inc/customizer/colors.php:744
 msgid "Content"
 msgstr "Вміст"
 
-#: inc/customizer/colors.php:715
+#: inc/customizer/colors.php:752
 msgid "Footer"
 msgstr "Нижній колонтитул"
 
-#: inc/customizer/colors.php:925
+#: inc/customizer/colors.php:962
 msgid "Base Color Scheme"
 msgstr "Базова колірна схема"
 
-#: inc/customizer/colors.php:1234
+#: inc/customizer/colors.php:1271
 msgid "Hero Background Overlay"
 msgstr "Перекриття фону Hero"
 
-#: inc/customizer/colors.php:1235
+#: inc/customizer/colors.php:1272
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr ""
-"Керуйте прозорістю кольору перекриття, коли використовуєте власне зображення заголовка."
+"Керуйте прозорістю кольору перекриття, коли використовуєте власне зображення "
+"заголовка."
 
 #: inc/customizer/fonts.php:81
 msgid "Site Title"
@@ -443,15 +451,15 @@ msgstr "Один стовпець: Широкий"
 msgid "One Column: Narrow"
 msgstr "Один стовпець: Вузький"
 
-#: inc/customizer/layouts.php:49 inc/customizer/layouts.php:138
+#: inc/customizer/layouts.php:49 inc/customizer/layouts.php:139
 msgid "Two Columns: Content | Sidebar"
 msgstr "Два стовпці: Вміст | Бічна панель"
 
-#: inc/customizer/layouts.php:50 inc/customizer/layouts.php:137
+#: inc/customizer/layouts.php:50 inc/customizer/layouts.php:138
 msgid "Two Columns: Sidebar | Content"
 msgstr "Два стовпці: Бічна панель | Вміст"
 
-#: inc/customizer/layouts.php:51 inc/customizer/layouts.php:140
+#: inc/customizer/layouts.php:51 inc/customizer/layouts.php:141
 msgid "Three Columns: Content | Sidebar | Sidebar"
 msgstr "Три стовпці: Вміст | Бічна панель | Бічна панель"
 
@@ -459,7 +467,7 @@ msgstr "Три стовпці: Вміст | Бічна панель | Бічна
 msgid "Three Columns: Sidebar | Content | Sidebar"
 msgstr "Три стовпці: Бічна панель | Вміст | Бічна панель"
 
-#: inc/customizer/layouts.php:53 inc/customizer/layouts.php:139
+#: inc/customizer/layouts.php:53 inc/customizer/layouts.php:140
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "Три стовпці: Бічна панель | Бічна панель | Вміст"
 
@@ -473,48 +481,50 @@ msgctxt "fluid-width page layout"
 msgid "Fluid"
 msgstr "Пропорційний"
 
-#: inc/customizer/layouts.php:252 inc/customizer/layouts.php:443
+#: inc/customizer/layouts.php:251 inc/customizer/layouts.php:442
 msgid "Layout"
 msgstr "Макет"
 
-#: inc/customizer/layouts.php:284
+#: inc/customizer/layouts.php:283
 #, php-format
 msgctxt "link to the Customizer"
 msgid "The site-wide Default layout setting is located in the %s."
 msgstr "Параметр макета за замовчуванням для всього сайту розташовано в %s."
 
-#: inc/customizer/layouts.php:288
+#: inc/customizer/layouts.php:287
 msgctxt "title of a component found in WordPress"
 msgid "Customizer"
 msgstr "Customizer"
 
-#: inc/customizer/layouts.php:465
+#: inc/customizer/layouts.php:464
 msgid "Default Layout"
 msgstr "Макет за замовчуванням"
 
-#: inc/customizer/layouts.php:466
+#: inc/customizer/layouts.php:465
 msgid "All posts and pages on your site will use this layout by default."
-msgstr "Усі дописи й сторінки вашого сайту будуть використовувати цей макет за замовчуванням."
+msgstr ""
+"Усі дописи й сторінки вашого сайту будуть використовувати цей макет за "
+"замовчуванням."
 
-#: inc/customizer/layouts.php:495
+#: inc/customizer/layouts.php:494
 msgid "Page Width"
 msgstr "Ширина сторінки"
 
-#: inc/customizer/layouts.php:496
+#: inc/customizer/layouts.php:495
 msgid "Display your site differently on larger screens."
 msgstr "Відображайте свій сайт іншим чином на більших екранах."
 
-#: inc/helpers.php:38
+#: inc/helpers.php:40
 #, php-format
 msgctxt "search term"
 msgid "Search Results for: %s"
 msgstr "Результати пошуку для: %s"
 
-#: inc/helpers.php:49
+#: inc/helpers.php:51
 msgid "404 Page Not Found"
 msgstr "404 — сторінку не знайдено"
 
-#: inc/hooks.php:360
+#: inc/hooks.php:383
 #, php-format
 msgctxt "page number"
 msgid "Page %d"
