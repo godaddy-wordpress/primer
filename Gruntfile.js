@@ -26,6 +26,29 @@ module.exports = function( grunt ) {
 			}
 		},
 
+		clean: {
+			mo: {
+				src: [ 'languages/' + pkg.name + '-*.mo' ]
+			}
+		},
+
+		copy: {
+			mo: {
+				files: [
+					{
+						expand: true,
+						dot: true,
+						cwd: 'languages/',
+						dest: 'languages/',
+						src: [ pkg.name + '-*.mo' ],
+						rename: function( dest, src ) {
+							return dest + src.replace( pkg.name + '-', '' );
+						}
+					}
+				]
+			}
+		},
+
 		cssjanus: {
 			theme: {
 				options: {
@@ -103,11 +126,11 @@ module.exports = function( grunt ) {
 		},
 
 		pot: {
-			files:{
+			files: {
 				expand: true,
 				src: [ '**/*.php', '!node_modules/**' ]
 			},
-			options:{
+			options: {
 				text_domain: pkg.name,
 				msgmerge: true,
 				dest: 'languages/',
@@ -223,5 +246,6 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify' ] );
 	grunt.registerTask( 'lint', [ 'jshint' ] );
 	grunt.registerTask( 'update-pot', [ 'pot', 'replace:pot' ] );
+	grunt.registerTask( 'update-mo', [ 'po2mo', 'copy:mo', 'clean:mo' ] );
 
 };
