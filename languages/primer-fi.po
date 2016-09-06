@@ -1,6 +1,6 @@
-# Primer Theme for WordPress
+# Primer
 # Copyright (C) 2016
-# This file is distributed under the same license as the Primer package.
+# This file is distributed under the same license as the primer package.
 # GoDaddy Operating Company, LLC.
 #
 #, fuzzy
@@ -25,41 +25,38 @@ msgstr ""
 #. * @since 1.0.0
 #.
 #: 404.php:22
-#, fuzzy
 msgid "Oops! That page can't be found."
-msgstr "Hups! Tätä sivua ei löydy."
+msgstr "Hups! Sivua ei löydy."
 
 #: 404.php:28
-#, fuzzy
 msgid ""
 "It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
-"Näyttää siltä, että mitään ei löytynyt tästä sijainnista. Kokeile ehkä yhtä "
-"alla olevista linkeistä tai hakua."
+"Näyttää siltä, että mitään ei löytynyt tästä sijainnista. Yritä etsiä alla:"
 
 #: comments.php:35
-#, fuzzy, php-format
+#, php-format
 msgctxt "1. number of comments, 2. post title"
 msgid "One thought on %2$s"
 msgid_plural "%1$d thoughts on %2$s"
-msgstr[0] "Yksi kommentti blogijulkaisulle &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$d kommenttia blogijulkaisulle &ldquo;%2$s&rdquo;"
+msgstr[0] "Yksi ajatus aiheesta %2$s"
+msgstr[1] "%1$d ajatusta aiheesta %2$s"
 
 #: comments.php:54 comments.php:79
 msgid "Comment navigation"
 msgstr "Kommenttien navigointi"
 
 #: comments.php:56
-#, fuzzy, php-format
+#, php-format
 msgctxt "left arrow (LTR) / right arrow (RTL)"
 msgid "%s Older Comments"
-msgstr "&larr; Vanhemmat kommentit"
+msgstr "%s Vanhemmat kommentit"
 
 #: comments.php:58
-#, fuzzy, php-format
+#, php-format
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Newer Comments %s"
-msgstr "Uudemmat kommentit &rarr;"
+msgstr "Uudemmat kommentit %s"
 
 #: comments.php:81
 msgid "&larr; Older Comments"
@@ -83,31 +80,27 @@ msgid "Nothing Found"
 msgstr "Ei tuloksia"
 
 #: content-none.php:27
-#, fuzzy, php-format
+#, php-format
 msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
-msgstr ""
-"Oletko valmis julkaisemaan ensimmäisen julkaisusi? <a href=\"%1$s\">Aloita "
-"tästä</a>."
+msgstr "Oletko valmis julkaisemaan ensimmäisen julkaisusi? %s."
 
 #: content-none.php:31
 msgid "Get started here"
-msgstr ""
+msgstr "Aloita tästä"
 
 #: content-none.php:39
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Pahoittelemme – mikään ei vastannut hakutermejäsi. Yritä uudelleen eri "
-"avainsanoilla."
+"Pahoittelemme – mikään ei vastannut hakutermejäsi. Yritä uudelleen eri avainsanoilla."
 
 #: content-none.php:45
-#, fuzzy
 msgid ""
 "It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr ""
-"Näyttää siltä, ettemme löydä, mitä olet etsimässä. Ehkä haku voisi auttaa."
+"Näyttää siltä, ettemme löydä sitä, mitä olet etsimässä. Ehkä haku voisi auttaa."
 
 #: functions.php:217
 msgid "Primary Menu"
@@ -118,9 +111,8 @@ msgid "Social Menu"
 msgstr "Sosiaalinen valikko"
 
 #: functions.php:219
-#, fuzzy
 msgid "Footer Menu"
-msgstr "Alatunniste, keski"
+msgstr "Alapalkkivalikko"
 
 #: functions.php:315
 msgid "Sidebar"
@@ -143,52 +135,39 @@ msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr ""
-"Toissijainen sivupalkki näkyy vain, jos olet valinnut kolmesarakkeisen "
-"asettelun."
+"Toissijainen sivupalkki näkyy vain, jos olet valinnut kolmesarakkeisen asettelun."
 
 #: functions.php:331
-#, fuzzy
 msgid "Footer 1"
-msgstr "Alatunniste, vasen"
+msgstr "Alapalkki 1"
 
 #: functions.php:332
-#, fuzzy
 msgid "This sidebar is the first column of the footer widget area."
-msgstr ""
-"Alatunnisteen vasen sivupalkki näkyy alatunnisteen widget-alueen "
-"ensimmäisessä sarakkeessa."
+msgstr "Tämä sivupalkki on alapalkin vimpainalueen ensimmäinen sarake."
 
 #: functions.php:339
-#, fuzzy
 msgid "Footer 2"
-msgstr "Alatunniste, vasen"
+msgstr "Alapalkki 2"
 
 #: functions.php:340
-#, fuzzy
 msgid "This sidebar is the second column of the footer widget area."
-msgstr ""
-"Alatunnisteen keskisivupalkki näkyy alatunnisteen widget-alueen toisessa "
-"sarakkeessa."
+msgstr "Tämä sivupalkki on alapalkin vimpainalueen toinen sarake."
 
 #: functions.php:347
-#, fuzzy
 msgid "Footer 3"
-msgstr "Alatunniste, vasen"
+msgstr "Alapalkki 3"
 
 #: functions.php:348
-#, fuzzy
 msgid "This sidebar is the third column of the footer widget area."
-msgstr ""
-"Alatunnisteen oikea sivupalkki näkyy alatunnisteen widget-alueen kolmannessa "
-"sarakkeessa."
+msgstr "Tämä sivupalkki on alapalkin vimpainalueen kolmas sarake."
 
 #: functions.php:355
 msgid "Hero"
-msgstr ""
+msgstr "Hero"
 
 #: functions.php:356
 msgid "Hero widgets appear over the header image on the front page."
-msgstr ""
+msgstr "Hero-vimpaimet näkyvät etusivun otsikkokuvan päällä."
 
 #: header.php:42
 msgid "Skip to content"
@@ -200,312 +179,298 @@ msgid ""
 "Primer requires at least WordPress version %s. You are running version %s. "
 "Please upgrade and try again."
 msgstr ""
+"Edellyttää vähintään WordPress-version %s. Olet käyttämässä versiota %s. "
+"Päivitä ja yritä uudelleen."
 
 #: inc/customizer.php:173
 msgid "Use featured image"
-msgstr ""
+msgstr "Käytä pääkuvaa"
 
 #: inc/customizer.php:174
 msgid ""
 "Allow the featured image on the current post to override the hero image."
-msgstr ""
+msgstr "Anna nykyisen artikkelin pääkuvan korvata hero-kuva."
 
 #: inc/customizer/colors.php:41
-#, fuzzy
 msgid "Site Title Text"
-msgstr "Toissijainen sivupalkki"
+msgstr "Sivuston nimen teksti"
 
 #: inc/customizer/colors.php:57
 msgid "Tagline Text"
-msgstr ""
+msgstr "Tunnuslauseteksti"
 
 #: inc/customizer/colors.php:68
 msgid "Hero Text"
-msgstr ""
+msgstr "Hero-teksti"
 
 #: inc/customizer/colors.php:91 inc/customizer/colors.php:284
 msgid "Text"
-msgstr ""
+msgstr "Teksti"
 
 #: inc/customizer/colors.php:113
 msgid "Heading Text"
-msgstr ""
+msgstr "Otsikkoteksti"
 
 #: inc/customizer/colors.php:114
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
+msgstr "Artikkelien nimet, widget-nimet, lomakenimet, taulukkojen otsikot ja painikkeet."
 
 #: inc/customizer/colors.php:135
-#, fuzzy
 msgid "Primary Text"
-msgstr "Ensisijainen valikko"
+msgstr "Ensisijainen teksti"
 
 #: inc/customizer/colors.php:136
 msgid "Paragraphs, lists, menu links, quotes and tables."
-msgstr ""
+msgstr "Kappaleet, luettelot, valikkolinkit, lainaukset ja taulukot."
 
 #: inc/customizer/colors.php:183
-#, fuzzy
 msgid "Secondary Text"
-msgstr "Toissijainen sivupalkki"
+msgstr "Toissijainen teksti"
 
 #: inc/customizer/colors.php:184
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
+msgstr "Artikkelin tekijöiden nimet, kommenttimäärät, artikkelien alapalkit ja lainausten alapalkit."
 
 #: inc/customizer/colors.php:198
 msgid "Widget Heading Text"
-msgstr ""
+msgstr "Widget-otsikkoteksti"
 
 #: inc/customizer/colors.php:215
 msgid "Widget Text"
-msgstr ""
+msgstr "Widget-teksti"
 
 #: inc/customizer/colors.php:226
 msgid "Menu Text"
-msgstr ""
+msgstr "Valikkoteksti"
 
 #: inc/customizer/colors.php:248
 msgid "Copyright Text"
-msgstr ""
+msgstr "Copyright-teksti"
 
 #: inc/customizer/colors.php:262
 msgid "Link Text"
-msgstr ""
+msgstr "Linkkiteksti"
 
 #: inc/customizer/colors.php:299 inc/customizer/colors.php:368
 msgid "Background"
-msgstr ""
+msgstr "Tausta"
 
 #: inc/customizer/colors.php:329
 msgid "Page Background"
-msgstr ""
+msgstr "Sivun tausta"
 
 #: inc/customizer/colors.php:339
 msgid "Content Background"
-msgstr ""
+msgstr "Sisällön tausta"
 
 #: inc/customizer/colors.php:349
 msgid "Hero Background"
-msgstr ""
+msgstr "Hero-tausta"
 
 #: inc/customizer/colors.php:378
 msgid "Widgets Background"
-msgstr ""
+msgstr "Widget-tausta"
 
 #: inc/customizer/colors.php:389
 msgid "Widget Content Background"
-msgstr ""
+msgstr "Widget-sisällön tausta"
 
 #: inc/customizer/colors.php:400
 msgid "Footer Background"
-msgstr ""
+msgstr "Alapalkin tausta"
 
 #: inc/customizer/colors.php:438 inc/customizer/layouts.php:311
 msgid "Custom"
-msgstr ""
+msgstr "Mukautettu"
 
 #: inc/customizer/colors.php:455 inc/customizer/layouts.php:302
-#, fuzzy
 msgid "Default"
 msgstr "Oletus"
 
 #: inc/customizer/colors.php:465
 msgctxt "color scheme name"
 msgid "Blush"
-msgstr ""
+msgstr "Blush-punainen"
 
 #: inc/customizer/colors.php:475
 msgctxt "color scheme name"
 msgid "Bronze"
-msgstr ""
+msgstr "Pronssi"
 
 #: inc/customizer/colors.php:485
 msgctxt "color scheme name"
 msgid "Canary"
-msgstr ""
+msgstr "Kanariankeltainen"
 
 #: inc/customizer/colors.php:495
 msgctxt "color scheme name"
 msgid "Cool"
-msgstr ""
+msgstr "Viileä"
 
 #: inc/customizer/colors.php:505
 msgctxt "color scheme name"
 msgid "Dark"
-msgstr ""
+msgstr "Tumma"
 
 #: inc/customizer/colors.php:532
 msgctxt "color scheme name"
 msgid "Iguana"
-msgstr ""
+msgstr "Leguaaninvihreä"
 
 #: inc/customizer/colors.php:542
 msgctxt "color scheme name"
 msgid "Muted"
-msgstr ""
+msgstr "Hillitty"
 
 #: inc/customizer/colors.php:567
 msgctxt "color scheme name"
 msgid "Plum"
-msgstr ""
+msgstr "Luumu"
 
 #: inc/customizer/colors.php:577
 msgctxt "color scheme name"
 msgid "Rose"
-msgstr ""
+msgstr "Ruusu"
 
 #: inc/customizer/colors.php:587
 msgctxt "color scheme name"
 msgid "Tangerine"
-msgstr ""
+msgstr "Mandariini"
 
 #: inc/customizer/colors.php:597
 msgctxt "color scheme name"
 msgid "Turquoise"
-msgstr ""
+msgstr "Turkoosi"
 
 #: inc/customizer/colors.php:666
 msgid "Colors"
-msgstr ""
+msgstr "Värit"
 
 #: inc/customizer/colors.php:675
 msgid "Color Schemes"
-msgstr ""
+msgstr "Värit"
 
 #: inc/customizer/colors.php:683
-#, fuzzy
 msgid "Header"
-msgstr "Toissijainen sivupalkki"
+msgstr "Otsikko"
 
 #: inc/customizer/colors.php:691
 msgid "Menu"
-msgstr ""
+msgstr "Valikko"
 
 #: inc/customizer/colors.php:699
 msgid "Buttons"
-msgstr ""
+msgstr "Painikkeet"
 
 #: inc/customizer/colors.php:707
 msgid "Content"
-msgstr ""
+msgstr "Sisältö"
 
 #: inc/customizer/colors.php:715
-#, fuzzy
 msgid "Footer"
-msgstr "Alatunniste, vasen"
+msgstr "Alatunniste"
 
 #: inc/customizer/colors.php:925
 msgid "Base Color Scheme"
-msgstr ""
+msgstr "Perusväri"
 
 #: inc/customizer/colors.php:1234
 msgid "Hero Background Overlay"
-msgstr ""
+msgstr "Hero-taustan peitekerros"
 
 #: inc/customizer/colors.php:1235
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr ""
+"Hallitse värikerroksen läpinäkyvyyttä mukautettua otsikkokuvaa käytettäessä."
 
 #: inc/customizer/fonts.php:81
-#, fuzzy
 msgid "Site Title"
-msgstr "Toissijainen sivupalkki"
+msgstr "Sivuston nimi"
 
 #: inc/customizer/fonts.php:82
 msgid "Site title text in the header."
-msgstr ""
+msgstr "Sivuston nimen teksti otsikossa."
 
 #: inc/customizer/fonts.php:91
-#, fuzzy
 msgid "Navigation"
-msgstr "Julkaisunavigointi"
+msgstr "Navigointi"
 
 #: inc/customizer/fonts.php:92
 msgid "Primary menu links and button links."
-msgstr ""
+msgstr "Ensisijaiset valikkolinkit ja painikelinkit"
 
 #: inc/customizer/fonts.php:102
 msgid "Headings"
-msgstr ""
+msgstr "Otsikot"
 
 #: inc/customizer/fonts.php:103
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr ""
+msgstr "Artikkelien nimet, widget-nimet, lomakenimet ja taulukkojen otsikot."
 
 #: inc/customizer/fonts.php:118
-#, fuzzy
 msgid "Primary"
-msgstr "Ensisijainen valikko"
+msgstr "Ensisijainen"
 
 #: inc/customizer/fonts.php:119
 msgid "Paragraphs, lists, links, quotes, and tables."
-msgstr ""
+msgstr "Kappaleet, luettelot, linkit, lainaukset ja taulukot."
 
 #: inc/customizer/fonts.php:133
-#, fuzzy
 msgid "Secondary"
-msgstr "Toissijainen sivupalkki"
+msgstr "Toissijainen"
 
 #: inc/customizer/fonts.php:134
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
+msgstr "Tekijöiden nimet, kommenttimäärät, vastauslinkit, artikkelien alapalkit ja lainausten alapalkit."
 
 #: inc/customizer/fonts.php:182
 msgid "Fonts"
-msgstr ""
+msgstr "Fontit"
 
 #: inc/customizer/fonts.php:207
-#, fuzzy, php-format
+#, php-format
 msgctxt "font name"
 msgid "%s (Default)"
-msgstr "Oletus"
+msgstr "%s (Oletus)"
 
 #: inc/customizer/layouts.php:47
-#, fuzzy
 msgid "One Column: Wide"
-msgstr "1 sarake leveä"
+msgstr "Yksi sarake: Leveä"
 
 #: inc/customizer/layouts.php:48
-#, fuzzy
 msgid "One Column: Narrow"
-msgstr "1 sarake kapea"
+msgstr "Yksi sarake: Kapea"
 
 #: inc/customizer/layouts.php:49 inc/customizer/layouts.php:138
-#, fuzzy
 msgid "Two Columns: Content | Sidebar"
-msgstr "2 saraketta: Sisältö / Sivupalkki"
+msgstr "Kaksi saraketta: Sisältö | Sivupalkki"
 
 #: inc/customizer/layouts.php:50 inc/customizer/layouts.php:137
-#, fuzzy
 msgid "Two Columns: Sidebar | Content"
-msgstr "2 saraketta: Sivupalkki / Sisältö"
+msgstr "Kaksi saraketta: Sivupalkki | Sisältö"
 
 #: inc/customizer/layouts.php:51 inc/customizer/layouts.php:140
-#, fuzzy
 msgid "Three Columns: Content | Sidebar | Sidebar"
-msgstr "3 saraketta: Sisältö / Sivupalkki / Sivupalkki"
+msgstr "Kolme saraketta: Sisältö | Sivupalkki | Sivupalkki"
 
 #: inc/customizer/layouts.php:52
-#, fuzzy
 msgid "Three Columns: Sidebar | Content | Sidebar"
-msgstr "3 saraketta: Sivupalkki / Sisältö / Sivupalkki"
+msgstr "Kolme saraketta: Sivupalkki | Sisältö | Sivupalkki"
 
 #: inc/customizer/layouts.php:53 inc/customizer/layouts.php:139
-#, fuzzy
 msgid "Three Columns: Sidebar | Sidebar | Content"
-msgstr "3 saraketta: Sivupalkki / Sivupalkki / Sisältö"
+msgstr "Kolme saraketta: Sivupalkki | Sivupalkki | Sisältö"
 
 #: inc/customizer/layouts.php:91
 msgctxt "fixed-width page layout"
 msgid "Fixed"
-msgstr ""
+msgstr "Kiinteä"
 
 #: inc/customizer/layouts.php:92
 msgctxt "fluid-width page layout"
 msgid "Fluid"
-msgstr ""
+msgstr "Joustava"
 
 #: inc/customizer/layouts.php:252 inc/customizer/layouts.php:443
 msgid "Layout"
@@ -515,30 +480,28 @@ msgstr "Asettelu"
 #, php-format
 msgctxt "link to the Customizer"
 msgid "The site-wide Default layout setting is located in the %s."
-msgstr ""
+msgstr "Sivuston laajuisen oletusasettelun määrittelyn sijainti:%s."
 
 #: inc/customizer/layouts.php:288
 msgctxt "title of a component found in WordPress"
 msgid "Customizer"
-msgstr ""
+msgstr "Mukauttaja"
 
 #: inc/customizer/layouts.php:465
-#, fuzzy
 msgid "Default Layout"
-msgstr "Oletus"
+msgstr "Oletusasettelu"
 
 #: inc/customizer/layouts.php:466
 msgid "All posts and pages on your site will use this layout by default."
-msgstr ""
+msgstr "Kaikki sivuston julkaisut ja sivut käyttävät tätä asettelua oletusarvoisesti."
 
 #: inc/customizer/layouts.php:495
-#, fuzzy
 msgid "Page Width"
-msgstr "Sivu %d"
+msgstr "Sivun leveys"
 
 #: inc/customizer/layouts.php:496
 msgid "Display your site differently on larger screens."
-msgstr ""
+msgstr "Näyttää sivustosi eri lailla suuremmissa näytöissä."
 
 #: inc/helpers.php:38
 #, php-format
@@ -548,7 +511,7 @@ msgstr "Tulokset haulle: %s"
 
 #: inc/helpers.php:49
 msgid "404 Page Not Found"
-msgstr ""
+msgstr "404 Sivua ei löytynyt"
 
 #: inc/hooks.php:360
 #, php-format
@@ -580,13 +543,13 @@ msgstr "Blogi"
 #, php-format
 msgctxt "1. copyright symbol, 2. year, 3. site title"
 msgid "Copyright %1$s %2$d %3$s"
-msgstr ""
+msgstr "Copyright %1$s %2$d %3$s"
 
 #: templates/parts/credit.php:24
-#, fuzzy, php-format
+#, php-format
 msgctxt "1. theme name link, 2. theme author link"
 msgid "%1$s theme by %2$s"
-msgstr "%1$s – %2$s"
+msgstr "%1$s-teeman tarjoaa %2$s"
 
 #: templates/parts/loop/page-content.php:17
 #: templates/parts/loop/post-content.php:17
@@ -607,7 +570,7 @@ msgstr "Lue lisää <span class=\"meta-nav\">&rarr;</span>"
 #, php-format
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Continue Reading %s"
-msgstr ""
+msgstr "Jatka lukemista %s"
 
 #: templates/parts/loop/post-footer.php:19
 #: templates/parts/loop/post-footer.php:31
@@ -646,41 +609,3 @@ msgstr "1 kommentti"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% kommenttia"
-
-#, fuzzy
-#~ msgid "Primary Font"
-#~ msgstr "Ensisijainen valikko"
-
-#~ msgid "Featured"
-#~ msgstr "Esittelyssä"
-
-#~ msgid "Read More"
-#~ msgstr "Lue lisää"
-
-#~ msgctxt "theme layout"
-#~ msgid "Default"
-#~ msgstr "Oletus"
-
-#~ msgid "Global Layout"
-#~ msgstr "Globaalinen asettelu"
-
-#~ msgctxt "1. theme name link, 2. theme author link"
-#~ msgid "Built with %1$s by %2$s."
-#~ msgstr "Rakennettu käyttämällä teemaa %1$s, jonka on luonut %2$s."
-
-#~ msgid "Most Used Categories"
-#~ msgstr "Kaikkein käytetyimmät luokat"
-
-#~ msgid "Try looking in the monthly archives. %1$s"
-#~ msgstr "Yritä etsiä kuukausittaisista arkistoista. %1$s"
-
-#~ msgid "Footer Right"
-#~ msgstr "Alatunniste, oikea"
-
-#~ msgctxt "Lato font: on or off"
-#~ msgid "on"
-#~ msgstr "päällä"
-
-#~ msgctxt "Merriweather font: on or off"
-#~ msgid "on"
-#~ msgstr "päällä"

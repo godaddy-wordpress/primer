@@ -1,6 +1,6 @@
-# Primer Theme for WordPress
+# Primer
 # Copyright (C) 2016
-# This file is distributed under the same license as the Primer package.
+# This file is distributed under the same license as the primer package.
 # GoDaddy Operating Company, LLC.
 #
 #, fuzzy
@@ -25,41 +25,38 @@ msgstr ""
 #. * @since 1.0.0
 #.
 #: 404.php:22
-#, fuzzy
 msgid "Oops! That page can't be found."
-msgstr "¡Uy! No se pudo encontrar esa página."
+msgstr "¡Oh! No se pudo encontrar esa página."
 
 #: 404.php:28
-#, fuzzy
 msgid ""
 "It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
-"Parece que no se encontró nada en esta ubicación. Quizás te convenga "
-"intentar con uno de los enlaces a continuación o hacer una búsqueda."
+"Parece que no se encontró nada en esta ubicación. Intenta buscar más abajo:"
 
 #: comments.php:35
-#, fuzzy, php-format
+#, php-format
 msgctxt "1. number of comments, 2. post title"
 msgid "One thought on %2$s"
 msgid_plural "%1$d thoughts on %2$s"
-msgstr[0] "Un pensamiento en &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s pensamientos acerca de &ldquo;%2$s&rdquo;"
+msgstr[0] "Una idea con respecto a %2$s"
+msgstr[1] "%1$d ideas con respecto a %2$s"
 
 #: comments.php:54 comments.php:79
 msgid "Comment navigation"
 msgstr "Navegación de comentarios"
 
 #: comments.php:56
-#, fuzzy, php-format
+#, php-format
 msgctxt "left arrow (LTR) / right arrow (RTL)"
 msgid "%s Older Comments"
-msgstr "&larr; Comentarios antiguos"
+msgstr "%s Comentarios antiguos"
 
 #: comments.php:58
-#, fuzzy, php-format
+#, php-format
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Newer Comments %s"
-msgstr "Comentarios más nuevos &rarr;"
+msgstr "Comentarios más nuevos %s"
 
 #: comments.php:81
 msgid "&larr; Older Comments"
@@ -83,15 +80,14 @@ msgid "Nothing Found"
 msgstr "No se encontró nada"
 
 #: content-none.php:27
-#, fuzzy, php-format
+#, php-format
 msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
-msgstr ""
-"¿Listo para publicar tu primera entrada? <a href=\"%1$s\">Comienza aquí</a>"
+msgstr "¿Listo para publicar tu primera entrada? %s."
 
 #: content-none.php:31
 msgid "Get started here"
-msgstr ""
+msgstr "Comienza aquí"
 
 #: content-none.php:39
 msgid ""
@@ -102,7 +98,6 @@ msgstr ""
 "nuevo con otras palabras clave diferentes."
 
 #: content-none.php:45
-#, fuzzy
 msgid ""
 "It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr ""
@@ -118,9 +113,8 @@ msgid "Social Menu"
 msgstr "Menú social"
 
 #: functions.php:219
-#, fuzzy
 msgid "Footer Menu"
-msgstr "Pie de página al centro"
+msgstr "Menú de pie de página"
 
 #: functions.php:315
 msgid "Sidebar"
@@ -143,52 +137,39 @@ msgid ""
 "The secondary sidebar will only appear when you have selected a three-column "
 "layout."
 msgstr ""
-"La barra lateral secundaria solo aparece cuando seleccionas un diseño de "
-"tres columnas."
+"La barra lateral secundaria solo aparece cuando seleccionas un diseño de tres columnas."
 
 #: functions.php:331
-#, fuzzy
 msgid "Footer 1"
-msgstr "Pie de página a la izquierda"
+msgstr "Pie de página 1"
 
 #: functions.php:332
-#, fuzzy
 msgid "This sidebar is the first column of the footer widget area."
-msgstr ""
-"La barra lateral izquierda de pie de página aparece en la primera columna "
-"del área de wiget del pie de página."
+msgstr "Esta barra lateral es la primera columna del área de widgets del pie de página."
 
 #: functions.php:339
-#, fuzzy
 msgid "Footer 2"
-msgstr "Pie de página a la izquierda"
+msgstr "Pie de página 2"
 
 #: functions.php:340
-#, fuzzy
 msgid "This sidebar is the second column of the footer widget area."
-msgstr ""
-"La barra lateral central de pie de página aparece en la segunda columna del "
-"área de wiget del pie de página."
+msgstr "Esta barra lateral es la segunda columna del área de widgets del pie de página."
 
 #: functions.php:347
-#, fuzzy
 msgid "Footer 3"
-msgstr "Pie de página a la izquierda"
+msgstr "Pie de página 3"
 
 #: functions.php:348
-#, fuzzy
 msgid "This sidebar is the third column of the footer widget area."
-msgstr ""
-"La barra lateral derecha de pie de página aparece en la tercera columna del "
-"área de wiget del pie de página."
+msgstr "Esta barra lateral es la tercera columna del área de widgets del pie de página."
 
 #: functions.php:355
 msgid "Hero"
-msgstr ""
+msgstr "Hero"
 
 #: functions.php:356
 msgid "Hero widgets appear over the header image on the front page."
-msgstr ""
+msgstr "Los widgets Hero aparecen sobre la imagen del encabezado en la página frontal."
 
 #: header.php:42
 msgid "Skip to content"
@@ -200,312 +181,300 @@ msgid ""
 "Primer requires at least WordPress version %s. You are running version %s. "
 "Please upgrade and try again."
 msgstr ""
+"Primer requiere al menos la versión de WordPress %s. Estás ejecutando la "
+"versión %s. Actualiza e inténtalo de nuevo."
 
 #: inc/customizer.php:173
 msgid "Use featured image"
-msgstr ""
+msgstr "Usar imagen destacada"
 
 #: inc/customizer.php:174
 msgid ""
 "Allow the featured image on the current post to override the hero image."
 msgstr ""
+"Permite que la imagen destacada de la publicación actual anule la imagen de Hero."
 
 #: inc/customizer/colors.php:41
-#, fuzzy
 msgid "Site Title Text"
-msgstr "Barra lateral secundaria"
+msgstr "Texto del título del sitio"
 
 #: inc/customizer/colors.php:57
 msgid "Tagline Text"
-msgstr ""
+msgstr "Texto del subtítulo"
 
 #: inc/customizer/colors.php:68
 msgid "Hero Text"
-msgstr ""
+msgstr "Texto de Hero"
 
 #: inc/customizer/colors.php:91 inc/customizer/colors.php:284
 msgid "Text"
-msgstr ""
+msgstr "Texto"
 
 #: inc/customizer/colors.php:113
 msgid "Heading Text"
-msgstr ""
+msgstr "Texto de encabezado"
 
 #: inc/customizer/colors.php:114
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
+msgstr "Títulos de la publicación, títulos de widgets, etiquetas de formularios, encabezados de tablas y botones."
 
 #: inc/customizer/colors.php:135
-#, fuzzy
 msgid "Primary Text"
-msgstr "Menú principal"
+msgstr "Texto primario"
 
 #: inc/customizer/colors.php:136
 msgid "Paragraphs, lists, menu links, quotes and tables."
-msgstr ""
+msgstr "Párrafos, listas, enlaces de menús, citas y tablas."
 
 #: inc/customizer/colors.php:183
-#, fuzzy
 msgid "Secondary Text"
-msgstr "Barra lateral secundaria"
+msgstr "Texto secundario"
 
 #: inc/customizer/colors.php:184
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
+msgstr "Pies de autor de la publicación, recuentos de comentarios, pies de página de la publicación y pies de página de citas."
 
 #: inc/customizer/colors.php:198
 msgid "Widget Heading Text"
-msgstr ""
+msgstr "Texto de encabezado del widget"
 
 #: inc/customizer/colors.php:215
 msgid "Widget Text"
-msgstr ""
+msgstr "Texto del widget"
 
 #: inc/customizer/colors.php:226
 msgid "Menu Text"
-msgstr ""
+msgstr "Texto del menú"
 
 #: inc/customizer/colors.php:248
 msgid "Copyright Text"
-msgstr ""
+msgstr "Texto de copyright"
 
 #: inc/customizer/colors.php:262
 msgid "Link Text"
-msgstr ""
+msgstr "Texto del vínculo"
 
 #: inc/customizer/colors.php:299 inc/customizer/colors.php:368
 msgid "Background"
-msgstr ""
+msgstr "Fondo"
 
 #: inc/customizer/colors.php:329
 msgid "Page Background"
-msgstr ""
+msgstr "Fondo de la página"
 
 #: inc/customizer/colors.php:339
 msgid "Content Background"
-msgstr ""
+msgstr "Fondo del contenido"
 
 #: inc/customizer/colors.php:349
 msgid "Hero Background"
-msgstr ""
+msgstr "Fondo de Hero"
 
 #: inc/customizer/colors.php:378
 msgid "Widgets Background"
-msgstr ""
+msgstr "Fondo de widgets"
 
 #: inc/customizer/colors.php:389
 msgid "Widget Content Background"
-msgstr ""
+msgstr "Fondo de contenidos de widgets"
 
 #: inc/customizer/colors.php:400
 msgid "Footer Background"
-msgstr ""
+msgstr "Fondo de pie de página"
 
 #: inc/customizer/colors.php:438 inc/customizer/layouts.php:311
 msgid "Custom"
-msgstr ""
+msgstr "Personalizado"
 
 #: inc/customizer/colors.php:455 inc/customizer/layouts.php:302
-#, fuzzy
 msgid "Default"
 msgstr "Predeterminado"
 
 #: inc/customizer/colors.php:465
 msgctxt "color scheme name"
 msgid "Blush"
-msgstr ""
+msgstr "Rubor"
 
 #: inc/customizer/colors.php:475
 msgctxt "color scheme name"
 msgid "Bronze"
-msgstr ""
+msgstr "Bronce"
 
 #: inc/customizer/colors.php:485
 msgctxt "color scheme name"
 msgid "Canary"
-msgstr ""
+msgstr "Canario"
 
 #: inc/customizer/colors.php:495
 msgctxt "color scheme name"
 msgid "Cool"
-msgstr ""
+msgstr "Fantástico"
 
 #: inc/customizer/colors.php:505
 msgctxt "color scheme name"
 msgid "Dark"
-msgstr ""
+msgstr "Ocuro"
 
 #: inc/customizer/colors.php:532
 msgctxt "color scheme name"
 msgid "Iguana"
-msgstr ""
+msgstr "Iguana"
 
 #: inc/customizer/colors.php:542
 msgctxt "color scheme name"
 msgid "Muted"
-msgstr ""
+msgstr "Tenue"
 
 #: inc/customizer/colors.php:567
 msgctxt "color scheme name"
 msgid "Plum"
-msgstr ""
+msgstr "Plum"
 
 #: inc/customizer/colors.php:577
 msgctxt "color scheme name"
 msgid "Rose"
-msgstr ""
+msgstr "Rosa"
 
 #: inc/customizer/colors.php:587
 msgctxt "color scheme name"
 msgid "Tangerine"
-msgstr ""
+msgstr "Mandarina"
 
 #: inc/customizer/colors.php:597
 msgctxt "color scheme name"
 msgid "Turquoise"
-msgstr ""
+msgstr "Turquoise"
 
 #: inc/customizer/colors.php:666
 msgid "Colors"
-msgstr ""
+msgstr "Colores"
 
 #: inc/customizer/colors.php:675
 msgid "Color Schemes"
-msgstr ""
+msgstr "Esquemas de colores"
 
 #: inc/customizer/colors.php:683
-#, fuzzy
 msgid "Header"
-msgstr "Barra lateral secundaria"
+msgstr "Encabezado"
 
 #: inc/customizer/colors.php:691
 msgid "Menu"
-msgstr ""
+msgstr "Menú"
 
 #: inc/customizer/colors.php:699
 msgid "Buttons"
-msgstr ""
+msgstr "Botones"
 
 #: inc/customizer/colors.php:707
 msgid "Content"
-msgstr ""
+msgstr "Contenido"
 
 #: inc/customizer/colors.php:715
-#, fuzzy
 msgid "Footer"
-msgstr "Pie de página a la izquierda"
+msgstr "Pie de página"
 
 #: inc/customizer/colors.php:925
 msgid "Base Color Scheme"
-msgstr ""
+msgstr "Esquema de colores de fondo"
 
 #: inc/customizer/colors.php:1234
 msgid "Hero Background Overlay"
-msgstr ""
+msgstr "Superposición del fondo de Hero"
 
 #: inc/customizer/colors.php:1235
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr ""
+"Controla la transparencia de la superposición del color al utilizar una "
+"imagen personalizada del encabezado."
 
 #: inc/customizer/fonts.php:81
-#, fuzzy
 msgid "Site Title"
-msgstr "Barra lateral secundaria"
+msgstr "Título del sitio"
 
 #: inc/customizer/fonts.php:82
 msgid "Site title text in the header."
-msgstr ""
+msgstr "Texto del título del sitio en el encabezado."
 
 #: inc/customizer/fonts.php:91
-#, fuzzy
 msgid "Navigation"
-msgstr "Navegación en publicaciones"
+msgstr "Navegación"
 
 #: inc/customizer/fonts.php:92
 msgid "Primary menu links and button links."
-msgstr ""
+msgstr "Enlaces al menú primario y enlaces a los botones."
 
 #: inc/customizer/fonts.php:102
 msgid "Headings"
-msgstr ""
+msgstr "Títulos"
 
 #: inc/customizer/fonts.php:103
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr ""
+msgstr "Títulos de la publicación, títulos de widgets, etiquetas de formularios y encabezados de tablas."
 
 #: inc/customizer/fonts.php:118
-#, fuzzy
 msgid "Primary"
-msgstr "Menú principal"
+msgstr "Primario"
 
 #: inc/customizer/fonts.php:119
 msgid "Paragraphs, lists, links, quotes, and tables."
-msgstr ""
+msgstr "Párrafos, listas, enlaces, citas y tablas."
 
 #: inc/customizer/fonts.php:133
-#, fuzzy
 msgid "Secondary"
-msgstr "Barra lateral secundaria"
+msgstr "Secundario"
 
 #: inc/customizer/fonts.php:134
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
+msgstr "Pies de autor, recuentos de comentarios, enlaces de respuestas, pies de página de la publicación y pies de página de citas."
 
 #: inc/customizer/fonts.php:182
 msgid "Fonts"
-msgstr ""
+msgstr "Fuentes"
 
 #: inc/customizer/fonts.php:207
-#, fuzzy, php-format
+#, php-format
 msgctxt "font name"
 msgid "%s (Default)"
-msgstr "Predeterminado"
+msgstr "%s (Predeterminado)"
 
 #: inc/customizer/layouts.php:47
-#, fuzzy
 msgid "One Column: Wide"
-msgstr "1 columna amplia"
+msgstr "Una columna: Ancha"
 
 #: inc/customizer/layouts.php:48
-#, fuzzy
 msgid "One Column: Narrow"
-msgstr "1 columna estrecha"
+msgstr "Una columna: Angosta"
 
 #: inc/customizer/layouts.php:49 inc/customizer/layouts.php:138
-#, fuzzy
 msgid "Two Columns: Content | Sidebar"
-msgstr "2 columnas: Contenido / Barra lateral"
+msgstr "Dos columnas: Contenido | Barra lateral"
 
 #: inc/customizer/layouts.php:50 inc/customizer/layouts.php:137
-#, fuzzy
 msgid "Two Columns: Sidebar | Content"
-msgstr "2 columnas: Barra lateral / Contenido"
+msgstr "Dos columnas: Barra lateral | Contenido"
 
 #: inc/customizer/layouts.php:51 inc/customizer/layouts.php:140
-#, fuzzy
 msgid "Three Columns: Content | Sidebar | Sidebar"
-msgstr "3 columnas: Contenido / Barra lateral / Barra lateral"
+msgstr "Tres columnas: Contenido | Barra lateral | Barra lateral"
 
 #: inc/customizer/layouts.php:52
-#, fuzzy
 msgid "Three Columns: Sidebar | Content | Sidebar"
-msgstr "3 columnas: Barra lateral / Contenido / Barra lateral"
+msgstr "Tres columnas: Barra lateral | Contenido | Barra lateral"
 
 #: inc/customizer/layouts.php:53 inc/customizer/layouts.php:139
-#, fuzzy
 msgid "Three Columns: Sidebar | Sidebar | Content"
-msgstr "3 columnas: Barra lateral / Barra lateral / Contenido"
+msgstr "Tres columnas: Barra lateral | Barra lateral | Contenido"
 
 #: inc/customizer/layouts.php:91
 msgctxt "fixed-width page layout"
 msgid "Fixed"
-msgstr ""
+msgstr "Fija"
 
 #: inc/customizer/layouts.php:92
 msgctxt "fluid-width page layout"
 msgid "Fluid"
-msgstr ""
+msgstr "Fluido"
 
 #: inc/customizer/layouts.php:252 inc/customizer/layouts.php:443
 msgid "Layout"
@@ -515,30 +484,28 @@ msgstr "Disposición"
 #, php-format
 msgctxt "link to the Customizer"
 msgid "The site-wide Default layout setting is located in the %s."
-msgstr ""
+msgstr "La configuración de la disposición predeterminada a lo largo del sitio se encuentra en el %s."
 
 #: inc/customizer/layouts.php:288
 msgctxt "title of a component found in WordPress"
 msgid "Customizer"
-msgstr ""
+msgstr "Customizer"
 
 #: inc/customizer/layouts.php:465
-#, fuzzy
 msgid "Default Layout"
-msgstr "Predeterminado"
+msgstr "Disposición predeterminada"
 
 #: inc/customizer/layouts.php:466
 msgid "All posts and pages on your site will use this layout by default."
-msgstr ""
+msgstr "Todas las publicaciones y páginas de tu sitio utilizarán esta disposición de manera predeterminada."
 
 #: inc/customizer/layouts.php:495
-#, fuzzy
 msgid "Page Width"
-msgstr "Página %d"
+msgstr "Ancho de la página"
 
 #: inc/customizer/layouts.php:496
 msgid "Display your site differently on larger screens."
-msgstr ""
+msgstr "Muestra tu sitio de manera diferente en pantallas más grandes."
 
 #: inc/helpers.php:38
 #, php-format
@@ -548,7 +515,7 @@ msgstr "Resultados de la búsqueda para: %s"
 
 #: inc/helpers.php:49
 msgid "404 Page Not Found"
-msgstr ""
+msgstr "404 No se encontró la página"
 
 #: inc/hooks.php:360
 #, php-format
@@ -580,13 +547,13 @@ msgstr "Blog"
 #, php-format
 msgctxt "1. copyright symbol, 2. year, 3. site title"
 msgid "Copyright %1$s %2$d %3$s"
-msgstr ""
+msgstr "Copyright %1$s %2$d %3$s"
 
 #: templates/parts/credit.php:24
-#, fuzzy, php-format
+#, php-format
 msgctxt "1. theme name link, 2. theme author link"
 msgid "%1$s theme by %2$s"
-msgstr "%1$s by %2$s"
+msgstr "%1$s tema por %2$s"
 
 #: templates/parts/loop/page-content.php:17
 #: templates/parts/loop/post-content.php:17
@@ -607,7 +574,7 @@ msgstr "Leer más <span class=\"meta-nav\">&rarr;</span>"
 #, php-format
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Continue Reading %s"
-msgstr ""
+msgstr "Continuar leyendo %s"
 
 #: templates/parts/loop/post-footer.php:19
 #: templates/parts/loop/post-footer.php:31
@@ -646,41 +613,3 @@ msgstr "1 comentario"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% comentarios"
-
-#, fuzzy
-#~ msgid "Primary Font"
-#~ msgstr "Menú principal"
-
-#~ msgid "Featured"
-#~ msgstr "Destacadas"
-
-#~ msgid "Read More"
-#~ msgstr "Más información"
-
-#~ msgctxt "theme layout"
-#~ msgid "Default"
-#~ msgstr "Predeterminado"
-
-#~ msgid "Global Layout"
-#~ msgstr "Diseño global"
-
-#~ msgctxt "1. theme name link, 2. theme author link"
-#~ msgid "Built with %1$s by %2$s."
-#~ msgstr "Desarrollado con %1$s por %2$s."
-
-#~ msgid "Most Used Categories"
-#~ msgstr "Las categorías más usadas"
-
-#~ msgid "Try looking in the monthly archives. %1$s"
-#~ msgstr "Intenta buscar en los archivos mensuales. %1$s"
-
-#~ msgid "Footer Right"
-#~ msgstr "Pie de página a la derecha"
-
-#~ msgctxt "Lato font: on or off"
-#~ msgid "on"
-#~ msgstr "activado"
-
-#~ msgctxt "Merriweather font: on or off"
-#~ msgid "on"
-#~ msgstr "activado"

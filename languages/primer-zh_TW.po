@@ -1,6 +1,6 @@
-# Primer Theme for WordPress
+# Primer
 # Copyright (C) 2016
-# This file is distributed under the same license as the Primer package.
+# This file is distributed under the same license as the primer package.
 # GoDaddy Operating Company, LLC.
 #
 #, fuzzy
@@ -25,39 +25,37 @@ msgstr ""
 #. * @since 1.0.0
 #.
 #: 404.php:22
-#, fuzzy
 msgid "Oops! That page can't be found."
-msgstr "糟糕了！ 找不到該頁面。"
+msgstr "糟糕了！找不到該頁面。"
 
 #: 404.php:28
-#, fuzzy
 msgid ""
 "It looks like nothing was found at this location. Please try searching below:"
-msgstr "在此位置中找不到。 請嘗試下列其中一個連結或搜尋項目。"
+msgstr "在此位置中找不到。請嘗試搜尋下列項目："
 
 #: comments.php:35
-#, fuzzy, php-format
+#, php-format
 msgctxt "1. number of comments, 2. post title"
 msgid "One thought on %2$s"
 msgid_plural "%1$d thoughts on %2$s"
-msgstr[0] "對於 &ldquo;%2$s&rdquo; 的看法"
-msgstr[1] "%1$d 對於 &ldquo;%2$s&rdquo; 的看法"
+msgstr[0] "對 %2$s 有一個想法"
+msgstr[1] "對 %2$s 有 %1$d 個想法"
 
 #: comments.php:54 comments.php:79
 msgid "Comment navigation"
 msgstr "評論瀏覽"
 
 #: comments.php:56
-#, fuzzy, php-format
+#, php-format
 msgctxt "left arrow (LTR) / right arrow (RTL)"
 msgid "%s Older Comments"
-msgstr "&larr; 較舊的評論"
+msgstr "%s 較舊的評論"
 
 #: comments.php:58
-#, fuzzy, php-format
+#, php-format
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Newer Comments %s"
-msgstr "較新的評論 &rarr;"
+msgstr "較新的評論 %s"
 
 #: comments.php:81
 msgid "&larr; Older Comments"
@@ -81,14 +79,14 @@ msgid "Nothing Found"
 msgstr "找不到項目"
 
 #: content-none.php:27
-#, fuzzy, php-format
+#, php-format
 msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
-msgstr "準備好發佈第一則貼文嗎？ <a href=\"%1$s\">立即開始</a>。"
+msgstr "準備好發佈第一則貼文嗎？%s"
 
 #: content-none.php:31
 msgid "Get started here"
-msgstr ""
+msgstr "立即開始"
 
 #: content-none.php:39
 msgid ""
@@ -97,10 +95,9 @@ msgid ""
 msgstr "抱歉，沒有與您的搜尋相符的項目。 請用其他關鍵字再試一次。"
 
 #: content-none.php:45
-#, fuzzy
 msgid ""
 "It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr "我們找不到您要尋找的項目。 請試試搜尋功能。"
+msgstr "我們找不到您要尋找的項目。請試試搜尋功能。"
 
 #: functions.php:217
 msgid "Primary Menu"
@@ -111,9 +108,8 @@ msgid "Social Menu"
 msgstr "社交選單"
 
 #: functions.php:219
-#, fuzzy
 msgid "Footer Menu"
-msgstr "頁尾置中"
+msgstr "結尾功能表"
 
 #: functions.php:315
 msgid "Sidebar"
@@ -136,42 +132,36 @@ msgid ""
 msgstr "次要側邊欄只會在您選取三欄版面配置時才會出現。"
 
 #: functions.php:331
-#, fuzzy
 msgid "Footer 1"
-msgstr "頁尾靠左"
+msgstr "結尾 1"
 
 #: functions.php:332
-#, fuzzy
 msgid "This sidebar is the first column of the footer widget area."
-msgstr "頁尾左側的側邊欄會出現在頁尾小工具區域的第一欄中。"
+msgstr "此側邊欄會出現在結尾小工具區域的第一欄中。"
 
 #: functions.php:339
-#, fuzzy
 msgid "Footer 2"
-msgstr "頁尾靠左"
+msgstr "結尾 2"
 
 #: functions.php:340
-#, fuzzy
 msgid "This sidebar is the second column of the footer widget area."
-msgstr "頁尾置中的側邊欄會出現在頁尾小工具區域的第二欄中。"
+msgstr "此側邊欄會出現在結尾小工具區域的第二欄中。"
 
 #: functions.php:347
-#, fuzzy
 msgid "Footer 3"
-msgstr "頁尾靠左"
+msgstr "結尾 3"
 
 #: functions.php:348
-#, fuzzy
 msgid "This sidebar is the third column of the footer widget area."
-msgstr "頁尾靠右的側邊欄會出現在頁尾小工具區域的第三欄中。"
+msgstr "此側邊欄會出現在結尾小工具區域的第三欄中。"
 
 #: functions.php:355
 msgid "Hero"
-msgstr ""
+msgstr "Hero"
 
 #: functions.php:356
 msgid "Hero widgets appear over the header image on the front page."
-msgstr ""
+msgstr "Hero 小工具會出現在首頁的標題圖片上。"
 
 #: header.php:42
 msgid "Skip to content"
@@ -182,313 +172,296 @@ msgstr "略過內容"
 msgid ""
 "Primer requires at least WordPress version %s. You are running version %s. "
 "Please upgrade and try again."
-msgstr ""
+msgstr "至少需要 WordPress 版本 %s。您執行的是 %s。請升級並再試一次。"
 
 #: inc/customizer.php:173
 msgid "Use featured image"
-msgstr ""
+msgstr "使用特色圖片"
 
 #: inc/customizer.php:174
 msgid ""
 "Allow the featured image on the current post to override the hero image."
-msgstr ""
+msgstr "允許特色圖片出現在目前貼文中並取代 Hero 圖片。"
 
 #: inc/customizer/colors.php:41
-#, fuzzy
 msgid "Site Title Text"
-msgstr "次要側邊欄"
+msgstr "網站標題文字"
 
 #: inc/customizer/colors.php:57
 msgid "Tagline Text"
-msgstr ""
+msgstr "標語文字"
 
 #: inc/customizer/colors.php:68
 msgid "Hero Text"
-msgstr ""
+msgstr "Hero 文字"
 
 #: inc/customizer/colors.php:91 inc/customizer/colors.php:284
 msgid "Text"
-msgstr ""
+msgstr "文字"
 
 #: inc/customizer/colors.php:113
 msgid "Heading Text"
-msgstr ""
+msgstr "標題文字"
 
 #: inc/customizer/colors.php:114
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
+msgstr "貼文標題、小工具標題、表格標籤、表格標題和按鈕。"
 
 #: inc/customizer/colors.php:135
-#, fuzzy
 msgid "Primary Text"
-msgstr "主功能表"
+msgstr "主要文字"
 
 #: inc/customizer/colors.php:136
 msgid "Paragraphs, lists, menu links, quotes and tables."
-msgstr ""
+msgstr "段落、清單、功能表連結、引文和表格。"
 
 #: inc/customizer/colors.php:183
-#, fuzzy
 msgid "Secondary Text"
-msgstr "次要側邊欄"
+msgstr "次要文字"
 
 #: inc/customizer/colors.php:184
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
+msgstr "貼文署名、評論次數、貼文結尾及引文結尾。"
 
 #: inc/customizer/colors.php:198
 msgid "Widget Heading Text"
-msgstr ""
+msgstr "小工具標題文字"
 
 #: inc/customizer/colors.php:215
 msgid "Widget Text"
-msgstr ""
+msgstr "小工具文字"
 
 #: inc/customizer/colors.php:226
 msgid "Menu Text"
-msgstr ""
+msgstr "功能表文字"
 
 #: inc/customizer/colors.php:248
 msgid "Copyright Text"
-msgstr ""
+msgstr "著作權文字"
 
 #: inc/customizer/colors.php:262
 msgid "Link Text"
-msgstr ""
+msgstr "連結文字"
 
 #: inc/customizer/colors.php:299 inc/customizer/colors.php:368
 msgid "Background"
-msgstr ""
+msgstr "背景"
 
 #: inc/customizer/colors.php:329
 msgid "Page Background"
-msgstr ""
+msgstr "網頁背景"
 
 #: inc/customizer/colors.php:339
 msgid "Content Background"
-msgstr ""
+msgstr "內容背景"
 
 #: inc/customizer/colors.php:349
 msgid "Hero Background"
-msgstr ""
+msgstr "Hero 背景"
 
 #: inc/customizer/colors.php:378
 msgid "Widgets Background"
-msgstr ""
+msgstr "小工具背景"
 
 #: inc/customizer/colors.php:389
 msgid "Widget Content Background"
-msgstr ""
+msgstr "小工具內容背景"
 
 #: inc/customizer/colors.php:400
 msgid "Footer Background"
-msgstr ""
+msgstr "結尾背景"
 
 #: inc/customizer/colors.php:438 inc/customizer/layouts.php:311
 msgid "Custom"
-msgstr ""
+msgstr "自訂"
 
 #: inc/customizer/colors.php:455 inc/customizer/layouts.php:302
-#, fuzzy
 msgid "Default"
 msgstr "預設"
 
 #: inc/customizer/colors.php:465
 msgctxt "color scheme name"
 msgid "Blush"
-msgstr ""
+msgstr "筆刷"
 
 #: inc/customizer/colors.php:475
 msgctxt "color scheme name"
 msgid "Bronze"
-msgstr ""
+msgstr "銅牌"
 
 #: inc/customizer/colors.php:485
 msgctxt "color scheme name"
 msgid "Canary"
-msgstr ""
+msgstr "金絲雀"
 
 #: inc/customizer/colors.php:495
 msgctxt "color scheme name"
 msgid "Cool"
-msgstr ""
+msgstr "很棒的"
 
 #: inc/customizer/colors.php:505
 msgctxt "color scheme name"
 msgid "Dark"
-msgstr ""
+msgstr "暗"
 
 #: inc/customizer/colors.php:532
 msgctxt "color scheme name"
 msgid "Iguana"
-msgstr ""
+msgstr "鬣蜥蜴"
 
 #: inc/customizer/colors.php:542
 msgctxt "color scheme name"
 msgid "Muted"
-msgstr ""
+msgstr "靜音"
 
 #: inc/customizer/colors.php:567
 msgctxt "color scheme name"
 msgid "Plum"
-msgstr ""
+msgstr "梅紅"
 
 #: inc/customizer/colors.php:577
 msgctxt "color scheme name"
 msgid "Rose"
-msgstr ""
+msgstr "玫瑰"
 
 #: inc/customizer/colors.php:587
 msgctxt "color scheme name"
 msgid "Tangerine"
-msgstr ""
+msgstr "橘子"
 
 #: inc/customizer/colors.php:597
 msgctxt "color scheme name"
 msgid "Turquoise"
-msgstr ""
+msgstr "綠寶"
 
 #: inc/customizer/colors.php:666
 msgid "Colors"
-msgstr ""
+msgstr "顏色"
 
 #: inc/customizer/colors.php:675
 msgid "Color Schemes"
-msgstr ""
+msgstr "色彩配置"
 
 #: inc/customizer/colors.php:683
-#, fuzzy
 msgid "Header"
-msgstr "次要側邊欄"
+msgstr "標題"
 
 #: inc/customizer/colors.php:691
 msgid "Menu"
-msgstr ""
+msgstr "功能表"
 
 #: inc/customizer/colors.php:699
 msgid "Buttons"
-msgstr ""
+msgstr "按鈕"
 
 #: inc/customizer/colors.php:707
 msgid "Content"
-msgstr ""
+msgstr "內容"
 
 #: inc/customizer/colors.php:715
-#, fuzzy
 msgid "Footer"
-msgstr "頁尾靠左"
+msgstr "頁尾"
 
 #: inc/customizer/colors.php:925
 msgid "Base Color Scheme"
-msgstr ""
+msgstr "基本色彩配置"
 
 #: inc/customizer/colors.php:1234
 msgid "Hero Background Overlay"
-msgstr ""
+msgstr "Hero 背景重疊"
 
 #: inc/customizer/colors.php:1235
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
-msgstr ""
+msgstr "使用自訂標頭圖片時控制色彩重疊透明度。"
 
 #: inc/customizer/fonts.php:81
-#, fuzzy
 msgid "Site Title"
-msgstr "次要側邊欄"
+msgstr "網站標題"
 
 #: inc/customizer/fonts.php:82
 msgid "Site title text in the header."
-msgstr ""
+msgstr "標頭中的網站標題文字。"
 
 #: inc/customizer/fonts.php:91
-#, fuzzy
 msgid "Navigation"
-msgstr "貼文瀏覽"
+msgstr "導覽"
 
 #: inc/customizer/fonts.php:92
 msgid "Primary menu links and button links."
-msgstr ""
+msgstr "主要功能表連結及按鈕連結。"
 
 #: inc/customizer/fonts.php:102
 msgid "Headings"
-msgstr ""
+msgstr "標頭"
 
 #: inc/customizer/fonts.php:103
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr ""
+msgstr "貼文標題、小工具標題、表格標籤以及表格標頭。"
 
 #: inc/customizer/fonts.php:118
-#, fuzzy
 msgid "Primary"
-msgstr "主功能表"
+msgstr "主要"
 
 #: inc/customizer/fonts.php:119
 msgid "Paragraphs, lists, links, quotes, and tables."
-msgstr ""
+msgstr "段落、清單、連結、引文和表格。"
 
 #: inc/customizer/fonts.php:133
-#, fuzzy
 msgid "Secondary"
-msgstr "次要側邊欄"
+msgstr "次要"
 
 #: inc/customizer/fonts.php:134
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
+msgstr "署名、評論次數、回覆連結、貼文結尾及引文結尾。"
 
 #: inc/customizer/fonts.php:182
 msgid "Fonts"
-msgstr ""
+msgstr "字型"
 
 #: inc/customizer/fonts.php:207
-#, fuzzy, php-format
+#, php-format
 msgctxt "font name"
 msgid "%s (Default)"
-msgstr "預設"
+msgstr "%s (預設)"
 
 #: inc/customizer/layouts.php:47
-#, fuzzy
 msgid "One Column: Wide"
-msgstr "1 個欄寬"
+msgstr "單欄：寬"
 
 #: inc/customizer/layouts.php:48
-#, fuzzy
 msgid "One Column: Narrow"
-msgstr "1 個欄窄"
+msgstr "單欄：窄"
 
 #: inc/customizer/layouts.php:49 inc/customizer/layouts.php:138
-#, fuzzy
 msgid "Two Columns: Content | Sidebar"
-msgstr "2 欄： 內容/側邊欄"
+msgstr "2 欄：內容 | 側邊欄"
 
 #: inc/customizer/layouts.php:50 inc/customizer/layouts.php:137
-#, fuzzy
 msgid "Two Columns: Sidebar | Content"
-msgstr "2 欄： 側邊欄/內容"
+msgstr "2 欄：側邊欄 | 內容"
 
 #: inc/customizer/layouts.php:51 inc/customizer/layouts.php:140
-#, fuzzy
 msgid "Three Columns: Content | Sidebar | Sidebar"
-msgstr "3 欄： 內容/側邊欄/側邊欄"
+msgstr "3 欄：內容 | 側邊欄 | 側邊欄"
 
 #: inc/customizer/layouts.php:52
-#, fuzzy
 msgid "Three Columns: Sidebar | Content | Sidebar"
-msgstr "3 欄： 側邊欄/內容/側邊欄"
+msgstr "3 欄：側邊欄 | 內容 | 側邊欄"
 
 #: inc/customizer/layouts.php:53 inc/customizer/layouts.php:139
-#, fuzzy
 msgid "Three Columns: Sidebar | Sidebar | Content"
-msgstr "3 欄： 側邊欄/側邊欄/內容"
+msgstr "3 欄：側邊欄 | 側邊欄 | 內容"
 
 #: inc/customizer/layouts.php:91
 msgctxt "fixed-width page layout"
 msgid "Fixed"
-msgstr ""
+msgstr "固定"
 
 #: inc/customizer/layouts.php:92
 msgctxt "fluid-width page layout"
 msgid "Fluid"
-msgstr ""
+msgstr "流暢"
 
 #: inc/customizer/layouts.php:252 inc/customizer/layouts.php:443
 msgid "Layout"
@@ -498,30 +471,28 @@ msgstr "版面"
 #, php-format
 msgctxt "link to the Customizer"
 msgid "The site-wide Default layout setting is located in the %s."
-msgstr ""
+msgstr "網站寬度預設版面配置設定位於 %s。"
 
 #: inc/customizer/layouts.php:288
 msgctxt "title of a component found in WordPress"
 msgid "Customizer"
-msgstr ""
+msgstr "自訂工具"
 
 #: inc/customizer/layouts.php:465
-#, fuzzy
 msgid "Default Layout"
-msgstr "預設"
+msgstr "預設版面配置"
 
 #: inc/customizer/layouts.php:466
 msgid "All posts and pages on your site will use this layout by default."
-msgstr ""
+msgstr "網站上的所有貼文和頁面預設都會使用此版面配置。"
 
 #: inc/customizer/layouts.php:495
-#, fuzzy
 msgid "Page Width"
-msgstr "第 %d 頁"
+msgstr "網頁寬度"
 
 #: inc/customizer/layouts.php:496
 msgid "Display your site differently on larger screens."
-msgstr ""
+msgstr "在較大的螢幕上以不同方式顯示網站。"
 
 #: inc/helpers.php:38
 #, php-format
@@ -531,7 +502,7 @@ msgstr "搜尋以下項目的結果： %s"
 
 #: inc/helpers.php:49
 msgid "404 Page Not Found"
-msgstr ""
+msgstr "404 找不到頁面"
 
 #: inc/hooks.php:360
 #, php-format
@@ -563,13 +534,13 @@ msgstr "部落格"
 #, php-format
 msgctxt "1. copyright symbol, 2. year, 3. site title"
 msgid "Copyright %1$s %2$d %3$s"
-msgstr ""
+msgstr "Copyright %1$s %2$d %3$s"
 
 #: templates/parts/credit.php:24
-#, fuzzy, php-format
+#, php-format
 msgctxt "1. theme name link, 2. theme author link"
 msgid "%1$s theme by %2$s"
-msgstr "%1$s，作者 %2$s"
+msgstr "%1$s 主題，作者：%2$s"
 
 #: templates/parts/loop/page-content.php:17
 #: templates/parts/loop/post-content.php:17
@@ -590,7 +561,7 @@ msgstr "閱讀更多 <span class=\"meta-nav\">&rarr;</span>"
 #, php-format
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Continue Reading %s"
-msgstr ""
+msgstr "繼續閱讀 %s"
 
 #: templates/parts/loop/post-footer.php:19
 #: templates/parts/loop/post-footer.php:31
@@ -629,41 +600,3 @@ msgstr "1 則評論"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% 則評論"
-
-#, fuzzy
-#~ msgid "Primary Font"
-#~ msgstr "主功能表"
-
-#~ msgid "Featured"
-#~ msgstr "特色"
-
-#~ msgid "Read More"
-#~ msgstr "參閱更多"
-
-#~ msgctxt "theme layout"
-#~ msgid "Default"
-#~ msgstr "預設"
-
-#~ msgid "Global Layout"
-#~ msgstr "全域版面配置"
-
-#~ msgctxt "1. theme name link, 2. theme author link"
-#~ msgid "Built with %1$s by %2$s."
-#~ msgstr "主題為 %2$s，作者 %1$s。"
-
-#~ msgid "Most Used Categories"
-#~ msgstr "最常用分類"
-
-#~ msgid "Try looking in the monthly archives. %1$s"
-#~ msgstr "請嘗試在每月封存中尋找。 %1$s"
-
-#~ msgid "Footer Right"
-#~ msgstr "頁尾靠右"
-
-#~ msgctxt "Lato font: on or off"
-#~ msgid "on"
-#~ msgstr "在"
-
-#~ msgctxt "Merriweather font: on or off"
-#~ msgid "on"
-#~ msgstr "在"
