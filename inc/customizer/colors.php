@@ -355,7 +355,7 @@ class Primer_Customizer_Colors {
 				),
 				'hero_background_color' => array(
 					'label'    => esc_html__( 'Hero Background', 'primer' ),
-					'default'  => '#252525',
+					'default'  => '#0b3954',
 					'section'  => 'colors-header',
 					'priority' => 20,
 					'css'      => array(
