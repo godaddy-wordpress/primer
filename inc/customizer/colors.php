@@ -531,6 +531,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['blush']['base'],
 						'button_color'                   => $color_schemes['blush']['base'],
+						'hero_background_color'          => $color_schemes['blush']['base'],
 						'menu_background_color'          => $color_schemes['blush']['base'],
 						'footer_widget_background_color' => $color_schemes['blush']['base'],
 					),
@@ -539,6 +540,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['bronze']['base'],
 						'button_color'                   => $color_schemes['bronze']['base'],
+						'hero_background_color'          => $color_schemes['bronze']['base'],
 						'menu_background_color'          => $color_schemes['bronze']['base'],
 						'footer_widget_background_color' => $color_schemes['bronze']['base'],
 					),
@@ -547,6 +549,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['canary']['base'],
 						'button_color'                   => $color_schemes['canary']['base'],
+						'hero_background_color'          => $color_schemes['canary']['base'],
 						'menu_background_color'          => $color_schemes['canary']['base'],
 						'footer_widget_background_color' => $color_schemes['canary']['base'],
 					),
@@ -555,6 +558,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['cool']['base'],
 						'button_color'                   => $color_schemes['cool']['base'],
+						'hero_background_color'          => $color_schemes['cool']['base'],
 						'menu_background_color'          => $color_schemes['cool']['base'],
 						'footer_widget_background_color' => $color_schemes['cool']['base'],
 					),
@@ -582,6 +586,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['iguana']['base'],
 						'button_color'                   => $color_schemes['iguana']['base'],
+						'hero_background_color'          => $color_schemes['iguana']['base'],
 						'menu_background_color'          => $color_schemes['iguana']['base'],
 						'footer_widget_background_color' => $color_schemes['iguana']['base'],
 					),
@@ -611,6 +616,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['plum']['base'],
 						'button_color'                   => $color_schemes['plum']['base'],
+						'hero_background_color'          => $color_schemes['plum']['base'],
 						'menu_background_color'          => $color_schemes['plum']['base'],
 						'footer_widget_background_color' => $color_schemes['plum']['base'],
 					),
@@ -619,6 +625,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['rose']['base'],
 						'button_color'                   => $color_schemes['rose']['base'],
+						'hero_background_color'          => $color_schemes['rose']['base'],
 						'menu_background_color'          => $color_schemes['rose']['base'],
 						'footer_widget_background_color' => $color_schemes['rose']['base'],
 					),
@@ -627,6 +634,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['tangerine']['base'],
 						'button_color'                   => $color_schemes['tangerine']['base'],
+						'hero_background_color'          => $color_schemes['tangerine']['base'],
 						'menu_background_color'          => $color_schemes['tangerine']['base'],
 						'footer_widget_background_color' => $color_schemes['tangerine']['base'],
 					),
@@ -635,6 +643,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['turquoise']['base'],
 						'button_color'                   => $color_schemes['turquoise']['base'],
+						'hero_background_color'          => $color_schemes['turquoise']['base'],
 						'menu_background_color'          => $color_schemes['turquoise']['base'],
 						'footer_widget_background_color' => $color_schemes['turquoise']['base'],
 					),
