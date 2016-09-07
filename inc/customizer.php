@@ -3,9 +3,18 @@
 class Primer_Customizer {
 
 	/**
+	 * Stylesheet slug.
+	 *
+	 * @var string
+	 */
+	public static $stylesheet;
+
+	/**
 	 * Class constructor.
 	 */
 	public function __construct() {
+
+		self::$stylesheet = get_stylesheet();
 
 		/**
 		 * Autoload all customizer components.

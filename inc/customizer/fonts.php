@@ -353,7 +353,7 @@ class Primer_Customizer_Fonts {
 			)
 		);
 
-		wp_enqueue_style( 'primer-google-fonts', add_query_arg( $query_args, '//fonts.googleapis.com/css' ), false );
+		wp_enqueue_style( Primer_Customizer::$stylesheet . '-fonts', add_query_arg( $query_args, '//fonts.googleapis.com/css' ), false );
 
 	}
 
@@ -378,7 +378,7 @@ class Primer_Customizer_Fonts {
 				$this->get_font( $name )
 			);
 
-			wp_add_inline_style( 'primer-google-fonts', $css );
+			wp_add_inline_style( Primer_Customizer::$stylesheet . '-fonts', $css );
 
 		}
 

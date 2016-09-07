@@ -380,11 +380,12 @@ add_action( 'widgets_init', 'primer_register_sidebars' );
  */
 function primer_scripts() {
 
-	$suffix = SCRIPT_DEBUG ? '' : '.min';
+	$stylesheet = get_stylesheet();
+	$suffix     = SCRIPT_DEBUG ? '' : '.min';
 
-	wp_enqueue_style( 'primer', get_stylesheet_uri(), false, PRIMER_VERSION );
+	wp_enqueue_style( $stylesheet, get_stylesheet_uri(), false, defined( 'PRIMER_CHILD_VERSION' ) ? PRIMER_CHILD_VERSION : PRIMER_VERSION );
 
-	wp_style_add_data( 'primer', 'rtl', 'replace' );
+	wp_style_add_data( $stylesheet, 'rtl', 'replace' );
 
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", array( 'jquery' ), PRIMER_VERSION, true );
@@ -399,7 +400,7 @@ function primer_scripts() {
 	if ( primer_has_hero_image() ) {
 
 		wp_add_inline_style(
-			'primer',
+			$stylesheet,
 			sprintf(
 				'%s { background-image: url(%s); }',
 				primer_get_hero_image_selector(),
@@ -408,36 +409,6 @@ function primer_scripts() {
 		);
 
 	}
-
-	/**
-	 * Enqueue lt IE 9 Conditional
-	 */
-	wp_enqueue_style( 'primer-lt-ie9-style', get_template_directory_uri() . '/assets/css/ie.css', array(), PRIMER_VERSION );
-	wp_style_add_data( 'primer-lt-ie9-style', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'primer-respond', get_template_directory_uri() . '/assets/js/respond.min.js', array(), PRIMER_VERSION );
-	wp_script_add_data( 'primer-respond', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'primer-nwmatcher', get_template_directory_uri() . '/assets/js/nwmatcher.min.js', array(), PRIMER_VERSION );
-	wp_script_add_data( 'primer-nwmatcher', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'primer-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), PRIMER_VERSION );
-	wp_script_add_data( 'primer-jquery', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'primer-html5shiv', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), PRIMER_VERSION );
-	wp_script_add_data( 'primer-html5shiv', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'primer-selectivizr', get_template_directory_uri() . '/assets/js/selectivizr.min.js', array(), PRIMER_VERSION );
-	wp_script_add_data( 'primer-selectivizr', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'primer-rem', get_template_directory_uri() . '/assets/js/rem.min.js', array(), PRIMER_VERSION );
-	wp_script_add_data( 'primer-rem', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'primer-jquery-backgroundSize', get_template_directory_uri() . '/assets/js/jquery.backgroundSize.min.js', array( 'primer-jquery' ), PRIMER_VERSION );
-	wp_script_add_data( 'primer-jquery-backgroundSize', 'conditional', 'lt IE 9' );
-
-	wp_enqueue_script( 'primer-lt-ie9-script', get_template_directory_uri() . "/assets/js/lt-ie9$suffix.js", array( 'primer-jquery' ), PRIMER_VERSION );
-	wp_script_add_data( 'primer-lt-ie9-script', 'conditional', 'lt IE 9' );
 
 }
 add_action( 'wp_enqueue_scripts', 'primer_scripts' );

@@ -854,7 +854,7 @@ class Primer_Customizer_Colors {
 
 		}
 
-		wp_add_inline_style( 'primer', $css );
+		wp_add_inline_style( Primer_Customizer::$stylesheet, $css );
 
 	}
 
