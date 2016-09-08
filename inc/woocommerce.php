@@ -73,3 +73,39 @@ function primer_woo_shop_layout( $layout ) {
 
 }
 add_filter( 'theme_mod_layout', 'primer_woo_shop_layout' );
+
+/**
+ * Filter the page title for the WooCommerce shop page.
+ *
+ * @param  string $title
+ *
+ * @return string
+ */
+function primer_woo_shop_title( $title ) {
+
+	if ( function_exists( 'wc_get_page_id' ) && function_exists( 'is_shop' ) && is_shop() ) {
+
+		$title = get_the_title( wc_get_page_id( 'shop' ) );
+
+		// Remove the WooCommerce shop loop title
+		add_filter( 'woocommerce_page_title', 'primer_woo_shop_loop_title' );
+
+	}
+
+	return $title;
+
+}
+add_filter( 'primer_the_page_title', 'primer_woo_shop_title' );
+
+/**
+ * Filter the page title for the WooCommerce page.
+ *
+ * @param  string $title
+ *
+ * @return null
+ */
+function primer_woo_shop_loop_title( $title ) {
+
+	return;
+
+}
