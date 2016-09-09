@@ -298,7 +298,8 @@ class Primer_Customizer_Colors {
 						.content-area .fl-builder-content a.fl-button, .content-area .fl-builder-content a.fl-button:visited,
 						input[type="button"],
 						input[type="reset"],
-						input[type="submit"]' => array(
+						input[type="submit"],
+						.woocommerce a.button, .woocommerce button.button.alt' => array(
 							'background-color' => '%1$s',
 							'border-color'     => '%1$s',
 						),
@@ -309,7 +310,9 @@ class Primer_Customizer_Colors {
 						.content-area .fl-builder-content a.fl-button:hover, .content-area .fl-builder-content a.fl-button:active, .content-area .fl-builder-content a.fl-button:focus, .content-area .fl-builder-content a.fl-button:visited:hover, .content-area .fl-builder-content a.fl-button:visited:active, .content-area .fl-builder-content a.fl-button:visited:focus,
 						input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
 						input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
-						input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
+						input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus,
+						.woocommerce a.button:hover, .woocommerce a.button:active, .woocommerce a.button:focus,
+						.woocommerce button.button.alt:hover, .woocommerce button.button.alt:active, .woocommerce button.button.alt:focus' => array(
 							'background-color' => 'rgba(%1$s, 0.8)',
 							'border-color'     => 'rgba(%1$s, 0.8)',
 						),
@@ -325,7 +328,9 @@ class Primer_Customizer_Colors {
 						a.fl-button, .content-area .fl-builder-content a.fl-button, .content-area .fl-builder-content a.fl-button:visited, .content-area .fl-builder-content a.fl-button *, .content-area .fl-builder-content a.fl-button:visited *, a.fl-button:hover, a.fl-button:active, a.fl-button:focus, a.fl-button:visited, a.fl-button:visited:hover, a.fl-button:visited:active, a.fl-button:visited:focus,
 						input[type="button"], input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
 						input[type="reset"], input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
-						input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
+						input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus,
+						.woocommerce a.button,  .woocommerce a.button:hover,
+						.woocommerce button.button.alt, .woocommerce button.button.alt:hover' => array(
 							'color' => '%1$s',
 						),
 					),
@@ -377,7 +382,7 @@ class Primer_Customizer_Colors {
 					'default' => '#0b3954',
 					'section' => 'colors-menu',
 					'css'     => array(
-						'.main-navigation-container, .main-navigation.open, .main-navigation ul ul, .main-navigation .sub-menu' => array(
+						'.main-navigation-container, .main-navigation.open, .main-navigation ul ul, .main-navigation .sub-menu, .woocommerce .product span.onsale' => array(
 							'background-color' => '%1$s',
 						),
 					),
