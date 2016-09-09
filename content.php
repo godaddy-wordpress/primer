@@ -11,6 +11,17 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<?php
+	/**
+	 * Fires inside the `article` element, before the content.
+	 *
+	 * @hooked primer_woo_shop_messages - 10
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'primer_before_post_content' );
+	?>
+
 	<?php if ( ! is_single() || ! primer_use_featured_hero_image() ) : ?>
 
 		<?php get_template_part( 'templates/parts/loop/post', 'thumbnail' ); ?>
@@ -39,5 +50,14 @@
 	<?php endif; ?>
 
 	<?php get_template_part( 'templates/parts/loop/post', 'footer' ); ?>
+
+	<?php
+	/**
+	 * Fires inside the `article` element, after the content.
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'primer_after_post_content' );
+	?>
 
 </article><!-- #post-## -->
