@@ -102,6 +102,7 @@ function primer_woo_shop_columns( $number_columns ) {
 }
 add_filter( 'loop_shop_columns', 'primer_woo_shop_columns' );
 add_filter( 'woocommerce_related_products_columns', 'primer_woo_shop_columns' );
+add_filter( 'woocommerce_upsells_products_columns', 'primer_woo_shop_columns' );
 
 /**
  * Filter the WooCommerce product class.
@@ -124,7 +125,7 @@ function primer_woo_product_classes( $classes ) {
 
 	}
 
-	if ( is_single() && ( isset( $woocommerce_loop['name'] ) && 'related' === $woocommerce_loop['name'] ) && 'product' === $post->post_type ) {
+	if ( is_single() && ( isset( $woocommerce_loop['name'] ) && ( 'related' === $woocommerce_loop['name'] || 'up-sells' === $woocommerce_loop['name'] ) ) && 'product' === $post->post_type ) {
 
 		$classes[] = 'primer-2-column-product';
 
