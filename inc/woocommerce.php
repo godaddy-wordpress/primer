@@ -53,7 +53,23 @@ function primer_woo_wrapper_end() {
 add_action( 'woocommerce_after_main_content', 'primer_woo_wrapper_end', 10 );
 
 /**
+ * Safely check if the current page is the WooCommerce shop.
+ *
+ * @since 1.0.0
+ *
+ * @return bool
+ */
+function primer_is_woo_shop() {
+
+	return ( function_exists( 'is_shop' ) && is_shop() );
+
+}
+
+/**
  * Filter the layout for the WooCommerce shop page.
+ *
+ * @filter theme_mod_layout
+ * @since  1.0.0
  *
  * @param  string $layout
  *
@@ -61,7 +77,7 @@ add_action( 'woocommerce_after_main_content', 'primer_woo_wrapper_end', 10 );
  */
 function primer_woo_shop_layout( $layout ) {
 
-	if ( function_exists( 'wc_get_page_id' ) && function_exists( 'is_shop' ) && is_shop() ) {
+	if ( primer_is_woo_shop() && function_exists( 'wc_get_page_id' ) ) {
 
 		remove_filter( 'theme_mod_layout', __FUNCTION__ ); // Prevent infinite loop
 
@@ -73,3 +89,28 @@ function primer_woo_shop_layout( $layout ) {
 
 }
 add_filter( 'theme_mod_layout', 'primer_woo_shop_layout' );
+
+/**
+ * Filter the layout for the WooCommerce shop page.
+ *
+ * @filter primer_layout_has_sidebar
+ * @since  1.0.0
+ *
+ * @param  string $has_sidebar
+ *
+ * @return string
+ */
+function primer_woo_shop_layout_has_sidebar( $has_sidebar ) {
+
+	if ( primer_is_woo_shop() && function_exists( 'wc_get_page_id' ) ) {
+
+		remove_filter( 'primer_layout_has_sidebar', __FUNCTION__ ); // Prevent infinite loop
+
+		$has_sidebar = primer_layout_has_sidebar( primer_get_layout( wc_get_page_id( 'shop' ) ) );
+
+	}
+
+	return $has_sidebar;
+
+}
+add_filter( 'primer_layout_has_sidebar', 'primer_woo_shop_layout_has_sidebar' );
