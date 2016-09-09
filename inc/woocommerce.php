@@ -77,13 +77,18 @@ add_filter( 'theme_mod_layout', 'primer_woo_shop_layout' );
 /**
  * Display the shop messages on the page
  *
- * @return string
+ * @return mixed
+ *
+ * @since 1.0.0
  */
-function primer_woo_shop_message() {
+function primer_woo_shop_messages() {
 
 	if ( function_exists( 'is_checkout' ) && ! is_checkout() ) {
+
 		echo wp_kses_post( do_shortcode( '[woocommerce_messages]' ) );
+
 	}
 
 }
-add_action( 'primer_before_content', 'primer_woo_shop_message', 10 );
+add_action( 'primer_before_page_content', 'primer_woo_shop_messages' );
+add_action( 'primer_before_post_content', 'primer_woo_shop_messages' );

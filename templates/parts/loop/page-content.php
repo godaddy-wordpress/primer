@@ -11,13 +11,13 @@
 	<?php
 
 	/**
-	 * primer_before_content hook.
+	 * Fires inside the `.page-content` element, before the content.
 	 *
-	 * @hooked primer_woo_shop_message - 10
+	 * @hooked primer_woo_shop_messages - 10
 	 *
 	 * @since 1.0.0
 	 */
-	do_action( 'primer_before_content' );
+	do_action( 'primer_before_page_content' );
 
 	the_content();
 
@@ -29,11 +29,11 @@
 	);
 
 	/**
-	 * primer_after_content hook.
+	* Fires inside the `.page-content` element, after the content.
 	 *
 	 * @since 1.0.0
 	 */
-	do_action( 'primer_after_content' );
+	do_action( 'primer_after_page_content' );
 
 	?>
 

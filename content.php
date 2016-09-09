@@ -13,13 +13,13 @@
 
 	<?php
 	/**
-	 * primer_before_content hook.
+	 * Fires inside the `article` element, before the content.
 	 *
-	 * @hooked primer_woo_shop_message - 10
+	 * @hooked primer_woo_shop_messages - 10
 	 *
 	 * @since 1.0.0
 	 */
-	do_action( 'primer_before_content' );
+	do_action( 'primer_before_post_content' );
 	?>
 
 	<?php if ( ! is_single() || ! primer_use_featured_hero_image() ) : ?>
@@ -53,10 +53,11 @@
 
 	<?php
 	/**
-	 * primer_after_content hook.
+	 * Fires inside the `article` element, after the content.
 	 *
 	 * @since 1.0.0
 	 */
-	do_action( 'primer_after_content' );
+	do_action( 'primer_after_post_content' );
 	?>
+
 </article><!-- #post-## -->
