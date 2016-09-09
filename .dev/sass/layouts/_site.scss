@@ -12,8 +12,18 @@ body.no-max-width .site-content {
 	max-width: none;
 }
 
-body.layout-one-column-narrow .site-content {
-	@include container(66.66667%);
+@media #{$medium-only} {
+
+	body.layout-one-column-narrow .site-content {
+		@include container(80%);
+	}
+}
+
+@media #{$large-up} {
+
+	body.layout-one-column-narrow .site-content {
+		@include container(66.66667%);
+	}
 }
 
 .content-area {

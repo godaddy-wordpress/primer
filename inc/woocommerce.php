@@ -75,6 +75,52 @@ function primer_woo_shop_layout( $layout ) {
 add_filter( 'theme_mod_layout', 'primer_woo_shop_layout' );
 
 /**
+ * Display the shop messages on the page
+ *
+ * @return mixed
+ *
+ * @since 1.0.0
+ */
+function primer_woo_shop_messages() {
+
+	if ( function_exists( 'is_checkout' ) && ! is_checkout() ) {
+
+		echo wp_kses_post( do_shortcode( '[woocommerce_messages]' ) );
+
+	}
+
+}
+add_action( 'primer_before_page_content', 'primer_woo_shop_messages' );
+add_action( 'primer_before_post_content', 'primer_woo_shop_messages' );
+
+/**
+ * Filter the page title for the WooCommerce shop page.
+ *
+ * @filter primer_the_page_title
+ *
+ * @param  string $title
+ *
+ * @return string
+ *
+ * @since 1.0.0
+ */
+function primer_woo_shop_title( $title ) {
+
+	if ( function_exists( 'wc_get_page_id' ) && function_exists( 'is_shop' ) && is_shop() ) {
+
+		$title = get_the_title( wc_get_page_id( 'shop' ) );
+
+		// Remove the WooCommerce shop loop title
+		add_filter( 'woocommerce_page_title', '__return_null' );
+
+	}
+
+	return $title;
+
+}
+add_filter( 'primer_the_page_title', 'primer_woo_shop_title' );
+
+/**
  * Filter the number of WooCommerce shop columns
  *
  * @filter primer_woo_shop_columns
@@ -88,7 +134,7 @@ add_filter( 'theme_mod_layout', 'primer_woo_shop_layout' );
 function primer_woo_shop_columns( $number_columns ) {
 
 	// If the layout is not a three-column layout, return number of columns
-	if ( false === strpos( primer_woo_shop_layout( primer_get_layout() ), 'three-column-' ) ) {
+	if ( strpos( primer_woo_shop_layout( primer_get_layout() ), 'three-column-' ) === false ) {
 
 		return $number_columns;
 
@@ -132,6 +178,7 @@ function primer_woo_product_classes( $classes ) {
 	 *
 	 * @var boolean
 	 */
+
 	$is_upsell_or_related_product = ( is_single() && isset( $woocommerce_loop['name'] ) && ( 'related' === $woocommerce_loop['name'] || 'up-sells' === $woocommerce_loop['name'] ) && 'product' === $post->post_type ) ? true : false;
 
 	// Main WooCommerce shop loop products

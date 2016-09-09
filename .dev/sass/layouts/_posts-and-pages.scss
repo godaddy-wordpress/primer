@@ -49,13 +49,45 @@
 .entry-meta {
 	font-size: 90%;
 	color: $color__secondary-text;
+
+	.posted-date,
+	.posted-author,
+	.comments-number {
+		margin-right: 1rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media #{$small-only} {
+			display: block;
+			margin-right: 0;
+		}
+
+		&:before {
+			position: relative;
+			top: 3px;
+			font-family: 'genericons';
+			font-size: 18px;
+			padding-right: 2px;
+		}
+	}
+
+	.posted-date:before {
+		content: '\f303';
+		top: 4px;
+	}
+
+	.posted-author:before {
+		content: '\f304';
+	}
+
+	.comments-number:before {
+		content: '\f300';
+	}
 }
 
 @media #{$small-only} {
-
-	.comments-number {
-		display: block;
-	}
 
 	.post-navigation {
 		font-size: 90%;
@@ -75,7 +107,7 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1em 0 0;
 }
 
 .entry-footer {
