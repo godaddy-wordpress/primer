@@ -12,6 +12,10 @@
 
 	/**
 	 * primer_before_content hook.
+	 *
+	 * @hooked primer_woo_shop_message - 10
+	 *
+	 * @since 1.0.0
 	 */
 	do_action( 'primer_before_content' );
 
@@ -26,6 +30,8 @@
 
 	/**
 	 * primer_after_content hook.
+	 *
+	 * @since 1.0.0
 	 */
 	do_action( 'primer_after_content' );
 

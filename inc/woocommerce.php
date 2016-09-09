@@ -81,7 +81,7 @@ add_filter( 'theme_mod_layout', 'primer_woo_shop_layout' );
  */
 function primer_woo_shop_message() {
 
-	if ( ! is_checkout() ) {
+	if ( function_exists( 'is_checkout' ) && ! is_checkout() ) {
 		echo wp_kses_post( do_shortcode( '[woocommerce_messages]' ) );
 	}
 
