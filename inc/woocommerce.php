@@ -19,8 +19,8 @@ add_action( 'after_setup_theme', 'primer_woocommerce_setup' );
  *
  * @since 1.0.0
  */
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper' );
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end' );
 
 /**
  * Markup for page wrapper start.
@@ -39,7 +39,7 @@ function primer_woo_wrapper_start() {
 	<?php
 
 }
-add_action( 'woocommerce_before_main_content', 'primer_woo_wrapper_start', 10 );
+add_action( 'woocommerce_before_main_content', 'primer_woo_wrapper_start' );
 
 /**
  * Markup for page wrapper end.
@@ -54,7 +54,20 @@ function primer_woo_wrapper_end() {
 	<?php
 
 }
-add_action( 'woocommerce_after_main_content', 'primer_woo_wrapper_end', 10 );
+add_action( 'woocommerce_after_main_content', 'primer_woo_wrapper_end' );
+
+/**
+ * Add tertiary sidebar to WooCommerce templates.
+ *
+ * @action woocommerce_sidebar
+ * @since  1.0.0
+ */
+function primer_woocommerce_sidebar() {
+
+	get_sidebar( 'tertiary' );
+
+}
+add_action( 'woocommerce_sidebar', 'primer_woocommerce_sidebar' );
 
 /**
  * Display WooCommerce messages above post and page content.
@@ -166,20 +179,21 @@ add_filter( 'primer_the_page_title', 'primer_woo_shop_title' );
 /**
  * Filter the number of WooCommerce shop columns
  *
- * @filter primer_woo_shop_columns
- *
- * @param  integer $number_columns
- *
- * @return integer
- *
+ * @filter loop_shop_columns
+ * @filter woocommerce_related_products_columns
+ * @filter woocommerce_upsells_products_columns
  * @since 1.0.0
+ *
+ * @param  int $columns
+ *
+ * @return int
  */
-function primer_woo_shop_columns( $number_columns ) {
+function primer_woo_shop_columns( $columns ) {
 
 	// If the layout is not a three-column layout, return number of columns
 	if ( strpos( primer_woo_shop_layout( primer_get_layout() ), 'three-column-' ) === false ) {
 
-		return $number_columns;
+		return $columns;
 
 	}
 
@@ -189,7 +203,7 @@ function primer_woo_shop_columns( $number_columns ) {
 	return 2;
 
 }
-add_filter( 'loop_shop_columns', 'primer_woo_shop_columns' );
+add_filter( 'loop_shop_columns',                    'primer_woo_shop_columns' );
 add_filter( 'woocommerce_related_products_columns', 'primer_woo_shop_columns' );
 add_filter( 'woocommerce_upsells_products_columns', 'primer_woo_shop_columns' );
 
@@ -197,6 +211,8 @@ add_filter( 'woocommerce_upsells_products_columns', 'primer_woo_shop_columns' );
  * Filter the WooCommerce product class.
  *
  * @filter primer_woo_product_classes
+ * @global WP_Post $post
+ * @global array   $woocommerce_loop
  *
  * @param  array $classes
  *
