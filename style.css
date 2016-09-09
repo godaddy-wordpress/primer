@@ -1408,14 +1408,15 @@ object {
 body.no-max-width .site-content {
   max-width: none; }
 
-body.layout-one-column-narrow .site-content {
-  max-width: 66.66667%;
-  margin-left: auto;
-  margin-right: auto; }
-  body.layout-one-column-narrow .site-content:after {
-    content: " ";
-    display: block;
-    clear: both; }
+@media only screen and (min-width: 40.063em) {
+  body.layout-one-column-narrow .site-content {
+    max-width: 66.66667%;
+    margin-left: auto;
+    margin-right: auto; }
+    body.layout-one-column-narrow .site-content:after {
+      content: " ";
+      display: block;
+      clear: both; } }
 
 .content-area {
   width: 63.88889%;
