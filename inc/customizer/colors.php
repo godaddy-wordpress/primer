@@ -301,7 +301,8 @@ class Primer_Customizer_Colors {
 						input[type="submit"],
 						.woocommerce a.button,
 						.woocommerce button.button.alt,
-						.woocommerce a.button.alt' => array(
+						.woocommerce a.button.alt,
+						.woocommerce .product span.onsale' => array(
 							'background-color' => '%1$s',
 							'border-color'     => '%1$s',
 						),
@@ -334,7 +335,8 @@ class Primer_Customizer_Colors {
 						input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus,
 						.woocommerce a.button,  .woocommerce a.button:hover,
 						.woocommerce button.button.alt, .woocommerce button.button.alt:hover,
-						.woocommerce a.button.alt, .woocommerce a.button.alt:hover' => array(
+						.woocommerce a.button.alt, .woocommerce a.button.alt:hover,
+						.woocommerce .product span.onsale' => array(
 							'color' => '%1$s',
 						),
 					),
@@ -386,7 +388,7 @@ class Primer_Customizer_Colors {
 					'default' => '#0b3954',
 					'section' => 'colors-menu',
 					'css'     => array(
-						'.main-navigation-container, .main-navigation.open, .main-navigation ul ul, .main-navigation .sub-menu, .woocommerce .product span.onsale' => array(
+						'.main-navigation-container, .main-navigation.open, .main-navigation ul ul, .main-navigation .sub-menu' => array(
 							'background-color' => '%1$s',
 						),
 					),
