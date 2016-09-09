@@ -88,7 +88,7 @@ add_filter( 'theme_mod_layout', 'primer_woo_shop_layout' );
 function primer_woo_shop_columns( $number_columns ) {
 
 	// If the layout is not a three-column layout, return number of columns
-	if ( strpos( primer_woo_shop_layout( primer_get_layout() ), 'three-column-' ) === false ) {
+	if ( false === strpos( primer_woo_shop_layout( primer_get_layout() ), 'three-column-' ) ) {
 
 		return $number_columns;
 
