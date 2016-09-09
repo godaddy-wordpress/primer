@@ -87,7 +87,7 @@ add_filter( 'theme_mod_layout', 'primer_woo_shop_layout' );
  */
 function primer_woo_shop_columns( $number_columns ) {
 
-	// If the layout is not a three-column layout, abort
+	// If the layout is not a three-column layout, return number of columns
 	if ( strpos( primer_woo_shop_layout( primer_get_layout() ), 'three-column-' ) === false ) {
 
 		return $number_columns;
@@ -119,13 +119,23 @@ function primer_woo_product_classes( $classes ) {
 
 	global $post, $woocommerce_loop;
 
-	if ( function_exists( 'is_shop' ) && is_shop() && 'product' === $post->post_type ) {
+	/**
+	 * Check if on the WooCommerce shop page, and the post type is 'product'
+	 *
+	 * @var boolean
+	 */
+	$is_woo_shop = ( function_exists( 'is_shop' ) && is_shop() && 'product' === $post->post_type ) ? true : false;
 
-		$classes[] = 'primer-2-column-product';
+	/**
+	 * Check if on single product page, in upsell or related product loop
+	 * and the post type is 'product'
+	 *
+	 * @var boolean
+	 */
+	$is_upsell_or_related_product_loop = ( is_single() && isset( $woocommerce_loop['name'] ) && ( 'related' === $woocommerce_loop['name'] || 'up-sells' === $woocommerce_loop['name'] ) && 'product' === $post->post_type ) ? true : false;
 
-	}
-
-	if ( is_single() && ( isset( $woocommerce_loop['name'] ) && ( 'related' === $woocommerce_loop['name'] || 'up-sells' === $woocommerce_loop['name'] ) ) && 'product' === $post->post_type ) {
+	// Main WooCommerce shop loop products
+	if ( $is_woo_shop ||  $is_upsell_or_related_product_loop ) {
 
 		$classes[] = 'primer-2-column-product';
 
