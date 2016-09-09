@@ -12,18 +12,15 @@ body.no-max-width .site-content {
 	max-width: none;
 }
 
-<<<<<<< Updated upstream
 @media #{$medium-only} {
+
 	body.layout-one-column-narrow .site-content {
 		@include container(80%);
 	}
 }
 
 @media #{$large-up} {
-=======
-@media #{$medium-up} {
 
->>>>>>> Stashed changes
 	body.layout-one-column-narrow .site-content {
 		@include container(66.66667%);
 	}
