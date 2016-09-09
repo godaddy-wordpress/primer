@@ -1602,7 +1602,6 @@ body.no-max-width .site-header-wrapper {
     margin-right: auto;
     margin-left: auto;
     position: relative;
-    z-index: 9999;
     clear: both; }
     .page-title-container .page-header:after {
       content: " ";
