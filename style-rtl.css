@@ -1408,14 +1408,15 @@ object {
 body.no-max-width .site-content {
   max-width: none; }
 
-body.layout-one-column-narrow .site-content {
-  max-width: 66.66667%;
-  margin-right: auto;
-  margin-left: auto; }
-  body.layout-one-column-narrow .site-content:after {
-    content: " ";
-    display: block;
-    clear: both; }
+@media only screen and (min-width: 40.063em) {
+  body.layout-one-column-narrow .site-content {
+    max-width: 66.66667%;
+    margin-right: auto;
+    margin-left: auto; }
+    body.layout-one-column-narrow .site-content:after {
+      content: " ";
+      display: block;
+      clear: both; } }
 
 .content-area {
   width: 63.88889%;
@@ -1985,10 +1986,37 @@ body.no-max-width .site-info-wrapper .site-info {
 .entry-meta {
   font-size: 90%;
   color: #686868; }
+  .entry-meta .posted-date,
+  .entry-meta .posted-author,
+  .entry-meta .comments-number {
+    margin-left: 1rem; }
+    .entry-meta .posted-date:last-child,
+    .entry-meta .posted-author:last-child,
+    .entry-meta .comments-number:last-child {
+      margin-left: 0; }
+    @media only screen and (max-width: 40.063em) {
+      .entry-meta .posted-date,
+      .entry-meta .posted-author,
+      .entry-meta .comments-number {
+        display: block;
+        margin-left: 0; } }
+    .entry-meta .posted-date:before,
+    .entry-meta .posted-author:before,
+    .entry-meta .comments-number:before {
+      position: relative;
+      top: 3px;
+      font-family: 'genericons';
+      font-size: 18px;
+      padding-left: 2px; }
+  .entry-meta .posted-date:before {
+    content: '\f303';
+    top: 4px; }
+  .entry-meta .posted-author:before {
+    content: '\f304'; }
+  .entry-meta .comments-number:before {
+    content: '\f300'; }
 
 @media only screen and (max-width: 40.063em) {
-  .comments-number {
-    display: block; }
   .post-navigation {
     font-size: 90%; } }
 
@@ -2003,7 +2031,7 @@ body.no-max-width .site-info-wrapper .site-info {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 1em 0 0; }
 
 .entry-footer {
   font-size: 85%;

@@ -24,8 +24,6 @@ remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wra
  * Markup for page wrapper start.
  *
  * @action woocommerce_before_main_content
- *
- * @since 1.0.0
  */
 function primer_woo_wrapper_start() {
 
@@ -44,8 +42,6 @@ add_action( 'woocommerce_before_main_content', 'primer_woo_wrapper_start', 10 );
  * Markup for page wrapper end.
  *
  * @action woocommerce_after_main_content
- *
- * @since 1.0.0
  */
 function primer_woo_wrapper_end() {
 
@@ -59,13 +55,9 @@ add_action( 'woocommerce_after_main_content', 'primer_woo_wrapper_end', 10 );
 /**
  * Filter the layout for the WooCommerce shop page.
  *
- * @filter theme_mod_layout
- *
  * @param  string $layout
  *
  * @return string
- *
- * @since 1.0.0
  */
 function primer_woo_shop_layout( $layout ) {
 
@@ -81,30 +73,3 @@ function primer_woo_shop_layout( $layout ) {
 
 }
 add_filter( 'theme_mod_layout', 'primer_woo_shop_layout' );
-
-/**
- * Filter the page title for the WooCommerce shop page.
- *
- * @filter primer_the_page_title
- *
- * @param  string $title
- *
- * @return string
- *
- * @since 1.0.0
- */
-function primer_woo_shop_title( $title ) {
-
-	if ( function_exists( 'wc_get_page_id' ) && function_exists( 'is_shop' ) && is_shop() ) {
-
-		$title = get_the_title( wc_get_page_id( 'shop' ) );
-
-		// Remove the WooCommerce shop loop title
-		add_filter( 'woocommerce_page_title', '__return_null' );
-
-	}
-
-	return $title;
-
-}
-add_filter( 'primer_the_page_title', 'primer_woo_shop_title' );
