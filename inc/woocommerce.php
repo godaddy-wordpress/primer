@@ -124,7 +124,7 @@ function primer_woo_product_classes( $classes ) {
 	 *
 	 * @var boolean
 	 */
-	$is_woo_shop = ( function_exists( 'is_shop' ) && is_shop() && 'product' === $post->post_type ) ? true : false;
+	$is_woo_shop_product = ( function_exists( 'is_shop' ) && is_shop() && 'product' === $post->post_type ) ? true : false;
 
 	/**
 	 * Check if on single product page, in upsell or related product loop
@@ -132,10 +132,10 @@ function primer_woo_product_classes( $classes ) {
 	 *
 	 * @var boolean
 	 */
-	$is_upsell_or_related_product_loop = ( is_single() && isset( $woocommerce_loop['name'] ) && ( 'related' === $woocommerce_loop['name'] || 'up-sells' === $woocommerce_loop['name'] ) && 'product' === $post->post_type ) ? true : false;
+	$is_upsell_or_related_product = ( is_single() && isset( $woocommerce_loop['name'] ) && ( 'related' === $woocommerce_loop['name'] || 'up-sells' === $woocommerce_loop['name'] ) && 'product' === $post->post_type ) ? true : false;
 
 	// Main WooCommerce shop loop products
-	if ( $is_woo_shop ||  $is_upsell_or_related_product_loop ) {
+	if ( $is_woo_shop_product ||  $is_upsell_or_related_product ) {
 
 		$classes[] = 'primer-2-column-product';
 
