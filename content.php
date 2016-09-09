@@ -11,6 +11,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<?php
+	/**
+	 * primer_before_content hook.
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'primer_before_content' );
+	?>
+
 	<?php if ( ! is_single() || ! primer_use_featured_hero_image() ) : ?>
 
 		<?php get_template_part( 'templates/parts/loop/post', 'thumbnail' ); ?>
@@ -40,4 +49,12 @@
 
 	<?php get_template_part( 'templates/parts/loop/post', 'footer' ); ?>
 
+	<?php
+	/**
+	 * primer_after_content hook.
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'primer_after_content' );
+	?>
 </article><!-- #post-## -->

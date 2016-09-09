@@ -73,3 +73,17 @@ function primer_woo_shop_layout( $layout ) {
 
 }
 add_filter( 'theme_mod_layout', 'primer_woo_shop_layout' );
+
+/**
+ * Display the shop messages on the page
+ *
+ * @return string
+ */
+function primer_woo_shop_message() {
+
+	if ( ! is_checkout() ) {
+		echo wp_kses_post( do_shortcode( '[woocommerce_messages]' ) );
+	}
+
+}
+add_action( 'primer_before_content', 'primer_woo_shop_message', 10 );

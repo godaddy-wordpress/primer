@@ -10,6 +10,11 @@
 
 	<?php
 
+	/**
+	 * primer_before_content hook.
+	 */
+	do_action( 'primer_before_content' );
+
 	the_content();
 
 	wp_link_pages(
@@ -18,6 +23,11 @@
 			'after'  => '</div>',
 		)
 	);
+
+	/**
+	 * primer_after_content hook.
+	 */
+	do_action( 'primer_after_content' );
 
 	?>
 
