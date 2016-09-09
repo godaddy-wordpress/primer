@@ -2104,3 +2104,6 @@ body.no-max-width .site-info-wrapper .site-info {
 --------------------------------------------------------------*/
 .woocommerce-page ul.products li.product.primer-2-column-product {
   width: 48.05%; }
+
+.single-product.woocommerce-page ul.products li.product.primer-2-column-related-product {
+  width: 46.05%; }
