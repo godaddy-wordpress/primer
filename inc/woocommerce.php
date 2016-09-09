@@ -61,7 +61,7 @@ add_action( 'woocommerce_after_main_content', 'primer_woo_wrapper_end', 10 );
  *
  * @filter theme_mod_layout
  *
- * @var string
+ * @param  string $layout
  *
  * @return string
  *
@@ -87,7 +87,7 @@ add_filter( 'theme_mod_layout', 'primer_woo_shop_layout' );
  *
  * @filter primer_the_page_title
  *
- * @var string
+ * @param  string $title
  *
  * @return string
  *
