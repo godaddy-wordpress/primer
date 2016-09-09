@@ -2136,3 +2136,9 @@ body.no-max-width .site-info-wrapper .site-info {
   float: right;
   margin-top: 0.6em;
   font-size: 60%; }
+
+/*--------------------------------------------------------------
+# Compatibility
+--------------------------------------------------------------*/
+.woocommerce-page ul.products li.product.primer-2-column-product {
+  width: 48.05%; }
