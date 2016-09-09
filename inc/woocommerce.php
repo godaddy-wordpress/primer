@@ -133,3 +133,28 @@ function primer_woo_shop_messages() {
 }
 add_action( 'primer_before_post_content', 'primer_woo_shop_messages' );
 add_action( 'primer_before_page_content', 'primer_woo_shop_messages' );
+
+/**
+ * Filter the WooCommerce shop page title.
+ *
+ * @filter primer_the_page_title
+ * @since  1.0.0
+ *
+ * @param  string $title
+ *
+ * @return string
+ */
+function primer_woo_shop_title( $title ) {
+
+	if ( primer_is_woo_shop() && function_exists( 'wc_get_page_id' ) ) {
+
+		$title = get_the_title( wc_get_page_id( 'shop' ) );
+
+		add_filter( 'woocommerce_page_title', '__return_null' );
+
+	}
+
+	return $title;
+
+}
+add_filter( 'primer_the_page_title', 'primer_woo_shop_title' );
