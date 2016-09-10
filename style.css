@@ -1736,7 +1736,8 @@ body.no-max-width .footer-widget-area {
     float: right;
     margin-left: 1.38889%;
     margin-right: 1.38889%; }
-  @media only screen and (max-width: 40.063em) {
+  @media only screen and (max-width: 61.063em) {
+    .site-info-wrapper .footer-menu,
     .site-info-wrapper .site-info-text,
     .site-info-wrapper .social-menu {
       width: 97.22222%;
@@ -1758,10 +1759,11 @@ body.no-max-width .footer-widget-area {
   .footer-menu li {
     display: inline-block;
     margin: 0.5em 1em; }
-    .footer-menu li:first-child {
-      margin-left: 0; }
-    .footer-menu li:last-child {
-      margin-right: 0; }
+    @media only screen and (min-width: 61.063em) {
+      .footer-menu li:first-child {
+        margin-left: 0; }
+      .footer-menu li:last-child {
+        margin-right: 0; } }
     .footer-menu li a, .footer-menu li a:visited {
       color: #686868; }
       .footer-menu li a:hover, .footer-menu li a:visited:hover {
@@ -1772,6 +1774,9 @@ body.no-max-width .site-info-wrapper .site-info {
 
 .social-menu {
   text-align: right; }
+  @media only screen and (max-width: 61.063em) {
+    .social-menu {
+      margin-bottom: 1em; } }
   .social-menu ul {
     list-style: none;
     margin: 0;
@@ -1782,10 +1787,11 @@ body.no-max-width .site-info-wrapper .site-info {
       position: relative;
       padding: 0;
       margin: 3px; }
-      .social-menu ul li:first-child {
-        margin-left: 0; }
-      .social-menu ul li:last-child {
-        margin-right: 0; }
+      @media only screen and (min-width: 61.063em) {
+        .social-menu ul li:first-child {
+          margin-left: 0; }
+        .social-menu ul li:last-child {
+          margin-right: 0; } }
   .social-menu a {
     font-size: 0;
     text-indent: -9999em;
