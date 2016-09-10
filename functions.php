@@ -124,9 +124,12 @@ require_once get_template_directory() . '/inc/customizer.php';
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  *
- * @since 1.0.0
+ * @global array $primer_image_sizes
+ * @since  1.0.0
  */
 function primer_setup() {
+
+	global $primer_image_sizes;
 
 	/**
 	 * Load theme translations.
@@ -147,41 +150,48 @@ function primer_setup() {
 	 *
 	 * @var array
 	 */
-	$images_sizes = (array) apply_filters( 'primer_image_sizes',
+	$primer_image_sizes = (array) apply_filters( 'primer_image_sizes',
 		array(
 			'primer-featured' => array(
 				'width'  => 1600,
 				'height' => 9999,
 				'crop'   => false,
+				'label'  => esc_html__( 'Featured', 'primer' ),
 			),
 			'primer-hero' => array(
 				'width'  => 2400,
 				'height' => 1300,
 				'crop'   => array( 'center', 'center' ),
+				'label'  => esc_html__( 'Hero', 'primer' ),
 			),
 		)
 	);
 
-	foreach ( $images_sizes as $name => $args ) {
+	foreach ( $primer_image_sizes as $name => &$args ) {
 
-		if (
-			! empty( $name )
-			&&
-			! empty( $args['width'] )
-			&&
-			! empty( $args['height'] )
-			&&
-			! empty( $args['crop'] )
-		) {
+		if ( empty( $name ) || empty( $args['width'] ) || empty( $args['height'] ) ) {
 
-			add_image_size(
-				sanitize_key( $name ),
-				absint( $args['width'] ),
-				absint( $args['height'] ),
-				$args['crop']
-			);
+			unset( $primer_image_sizes[ $name ] );
+
+			continue;
 
 		}
+
+		$args['crop']  = ! empty( $args['crop'] ) ? $args['crop'] : false;
+		$args['label'] = ! empty( $args['label'] ) ? $args['label'] : ucwords( str_replace( array( '-', '_' ), ' ', $name ) );
+
+		add_image_size(
+			sanitize_key( $name ),
+			absint( $args['width'] ),
+			absint( $args['height'] ),
+			$args['crop']
+		);
+
+	}
+
+	if ( $primer_image_sizes ) {
+
+		add_filter( 'image_size_names_choose', 'primer_image_size_names_choose' );
 
 	}
 
@@ -276,6 +286,29 @@ function primer_setup() {
 
 }
 add_action( 'after_setup_theme', 'primer_setup' );
+
+/**
+ * Register image size labels.
+ *
+ * @filter image_size_names_choose
+ * @since  1.0.0
+ *
+ * @param  array $sizes
+ *
+ * @return array
+ */
+function primer_image_size_names_choose( $sizes ) {
+
+	global $primer_image_sizes;
+
+	$labels = array_combine(
+		array_keys( $primer_image_sizes ),
+		wp_list_pluck( $primer_image_sizes, 'label' )
+	);
+
+	return array_merge( $sizes, $labels );
+
+}
 
 /**
  * Sets the content width in pixels, based on the theme layout.
