@@ -1,6 +1,6 @@
 <?php
 /**
- * Primer back compat functionality.
+ * WordPress backwards compatibility.
  *
  * Prevents Primer from running on older WordPress versions since
  * this theme is not meant to be backward compatible beyond two
