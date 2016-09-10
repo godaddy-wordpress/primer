@@ -17,13 +17,16 @@ Primer is a powerful theme that brings clarity to your content in a fresh design
 **Features**
 
 * Responsive Layout
-* Custom Colors
 * Color Scheme Presets
-* Custom Fonts
-* Custom Header
-* Header Image Widget
-* Social Links Menu
+* Customize Colors
+* Customize Fonts
+* One, Two, and Three Column Layouts
 * Fixed & Fluid Widths
+* Header Image Widget Area
+* Social Links Menu
+* WooCommerce-Ready
+* Available in 29 Languages
+* RTL Language Support
 
 **Contributing**
 
