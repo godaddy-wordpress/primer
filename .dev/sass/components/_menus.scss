@@ -19,6 +19,10 @@
 		display: block;
 		padding-top: 80px;
 
+		ul a:not(.expand) {
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		}
+
 		@media only screen and (max-width: 641px) {
 			.admin-bar & {
 				padding-top: 148px;
@@ -40,8 +44,8 @@
 		width: 50px;
 		line-height: 1;
 		text-align: center;
-		border-bottom: none;
 		border-left: 1px solid rgba(0, 0, 0, 0.1);
+		border-bottom: none;
 		text-indent: 0;
 
 		&:hover {
@@ -91,7 +95,6 @@
 
 		a {
 			color: $color__menu-text;
-			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 		}
 
 		@media #{$small-only} {

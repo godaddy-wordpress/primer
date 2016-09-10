@@ -590,6 +590,8 @@ a {
   .main-navigation.open {
     display: block;
     padding-top: 80px; }
+    .main-navigation.open ul a:not(.expand) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
     @media only screen and (max-width: 641px) {
       .admin-bar .main-navigation.open {
         padding-top: 148px; } }
@@ -606,8 +608,8 @@ a {
     width: 50px;
     line-height: 1;
     text-align: center;
-    border-bottom: none;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: none;
     text-indent: 0; }
     .main-navigation .expand:hover {
       background-color: rgba(0, 0, 0, 0.1); }
@@ -636,8 +638,7 @@ a {
     margin: 0;
     padding-right: 0; }
     .main-navigation ul a {
-      color: #ffffff;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      color: #ffffff; }
     @media only screen and (max-width: 40.063em) {
       .main-navigation ul .open > .sub-menu {
         display: block; } }
