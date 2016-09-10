@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-06 16:33-0500\n"
+"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
+"POT-Creation-Date: 2016-09-10 03:49:59+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#. //codex.wordpress.org/Creating_an_Error_404_Page
-#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#404-php
-#. *
-#. * @package Primer
-#. * @since 1.0.0
-#.
 #: 404.php:22
 msgid "Oops! That page can't be found."
 msgstr "‌‌अरेरे! ते पृष्ठ आढळू शकत नाही."
@@ -33,29 +27,9 @@ msgid ""
 "It looks like nothing was found at this location. Please try searching below:"
 msgstr "या स्थानावर काहीही सापडले नाही असे दिसते. कृपया खाली शोधण्याचा प्रयत्न कराः"
 
-#: comments.php:35
-#, php-format
-msgctxt "1. number of comments, 2. post title"
-msgid "One thought on %2$s"
-msgid_plural "%1$d thoughts on %2$s"
-msgstr[0] "%2$s वरील एक विचार"
-msgstr[1] "%2$s वरील %1$d विचार"
-
 #: comments.php:54 comments.php:79
 msgid "Comment navigation"
 msgstr "टिप्पणी नेव्हिगेशन"
-
-#: comments.php:56
-#, php-format
-msgctxt "left arrow (LTR) / right arrow (RTL)"
-msgid "%s Older Comments"
-msgstr "%s जुन्या टिप्पण्या"
-
-#: comments.php:58
-#, php-format
-msgctxt "right arrow (LTR) / left arrow (RTL)"
-msgid "Newer Comments %s"
-msgstr "नवीन टिप्पण्या %s"
 
 #: comments.php:81
 msgid "&larr; Older Comments"
@@ -69,20 +43,9 @@ msgstr "नवीन टिप्पण्‍या &rarr;"
 msgid "Comments are closed."
 msgstr "टिप्पण्या बंद केल्या आहेत."
 
-#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
-#. *
-#. * @package Primer
-#. * @since 1.0.0
-#.
 #: content-none.php:16
 msgid "Nothing Found"
 msgstr "काहीही सापडले नाही"
-
-#: content-none.php:27
-#, php-format
-msgctxt "link to write a new post"
-msgid "Ready to publish your first post? %s."
-msgstr "आपण आपली पहिली पोस्ट प्रकाशित करण्यास तयार आहात? %s."
 
 #: content-none.php:31
 msgid "Get started here"
@@ -172,23 +135,12 @@ msgid "Skip to content"
 msgstr "सामग्रीवर जा"
 
 #: inc/back-compat.php:49
-#, php-format
 msgid ""
 "Primer requires at least WordPress version %s. You are running version %s. "
 "Please upgrade and try again."
 msgstr ""
 "किमान WordPress आवृत्तीची प्राथमिक आवश्यकता आहे %s. आपण %s आवृत्ती रन करीत आहात. "
 "कृपया श्रेणीसुधारित करा आणि पुन्हा प्रयत्न करा."
-
-#: inc/customizer.php:173
-msgid "Use featured image"
-msgstr "वैशिष्ट्यीकृत प्रतिमा वापरा"
-
-#: inc/customizer.php:174
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr ""
-"हिरो प्रतिमा ओव्हरराइड करण्यासाठी वैशिष्ट्यीकृत प्रतिमेला सद्य पोस्ट वर परवानगी द्या."
 
 #: inc/customizer/colors.php:41
 msgid "Site Title Text"
@@ -286,61 +238,6 @@ msgstr "सानुकूल"
 msgid "Default"
 msgstr "डिफॉल्ट"
 
-#: inc/customizer/colors.php:473
-msgctxt "color scheme name"
-msgid "Blush"
-msgstr "लाली"
-
-#: inc/customizer/colors.php:477
-msgctxt "color scheme name"
-msgid "Bronze"
-msgstr "तांबूस"
-
-#: inc/customizer/colors.php:481
-msgctxt "color scheme name"
-msgid "Canary"
-msgstr "कॅनरी"
-
-#: inc/customizer/colors.php:485
-msgctxt "color scheme name"
-msgid "Cool"
-msgstr "थंड"
-
-#: inc/customizer/colors.php:489
-msgctxt "color scheme name"
-msgid "Dark"
-msgstr "गडद"
-
-#: inc/customizer/colors.php:493
-msgctxt "color scheme name"
-msgid "Iguana"
-msgstr "घोरपड"
-
-#: inc/customizer/colors.php:497
-msgctxt "color scheme name"
-msgid "Muted"
-msgstr "नि: शब्द केलेले"
-
-#: inc/customizer/colors.php:501
-msgctxt "color scheme name"
-msgid "Plum"
-msgstr "प्लम"
-
-#: inc/customizer/colors.php:505
-msgctxt "color scheme name"
-msgid "Rose"
-msgstr "गुलाब"
-
-#: inc/customizer/colors.php:509
-msgctxt "color scheme name"
-msgid "Tangerine"
-msgstr "नारिंगी"
-
-#: inc/customizer/colors.php:513
-msgctxt "color scheme name"
-msgid "Turquoise"
-msgstr "आकाशी"
-
 #: inc/customizer/colors.php:703
 msgid "Colors"
 msgstr "रंग"
@@ -407,6 +304,7 @@ msgid "Post titles, widget titles, form labels, and table headers."
 msgstr "पोस्ट शीर्षक, विजेट्स शीर्षक, फॉर्म लेबल आणि शीर्षलेख सारणी."
 
 #: inc/customizer/fonts.php:118
+#, fuzzy
 msgid "Primary"
 msgstr "प्राथमिक"
 
@@ -425,12 +323,6 @@ msgstr "बायलाईन, टिप्पणी संख्या, प्�
 #: inc/customizer/fonts.php:182
 msgid "Fonts"
 msgstr "फॉन्ट"
-
-#: inc/customizer/fonts.php:207
-#, php-format
-msgctxt "font name"
-msgid "%s (Default)"
-msgstr "%s (डिफॉल्ट)"
 
 #: inc/customizer/layouts.php:47
 msgid "One Column: Wide"
@@ -460,30 +352,9 @@ msgstr "तीन स्तंभः साइडबार / सामग्र�
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "तीन स्तंभः साइडबार / साइडबार / सामग्री"
 
-#: inc/customizer/layouts.php:91
-msgctxt "fixed-width page layout"
-msgid "Fixed"
-msgstr "निराकरण केलेले"
-
-#: inc/customizer/layouts.php:92
-msgctxt "fluid-width page layout"
-msgid "Fluid"
-msgstr "प्रवाही"
-
 #: inc/customizer/layouts.php:251 inc/customizer/layouts.php:442
 msgid "Layout"
 msgstr "लेआउट"
-
-#: inc/customizer/layouts.php:283
-#, php-format
-msgctxt "link to the Customizer"
-msgid "The site-wide Default layout setting is located in the %s."
-msgstr "साइट-रुंद डिफॉल्ट लेआउट %s मध्ये स्थित आहे."
-
-#: inc/customizer/layouts.php:287
-msgctxt "title of a component found in WordPress"
-msgid "Customizer"
-msgstr "सानुकूलित करणारा"
 
 #: inc/customizer/layouts.php:464
 msgid "Default Layout"
@@ -501,21 +372,19 @@ msgstr "पृष्ठ रुंदी"
 msgid "Display your site differently on larger screens."
 msgstr "मोठ्या स्क्रिनवर आपली साइट वेगळ्या पद्धतीने प्रदर्शित करा."
 
-#: inc/helpers.php:40
-#, php-format
-msgctxt "search term"
-msgid "Search Results for: %s"
-msgstr "साठी शोध परिणाम: %s"
+#: inc/customizer.php:182
+msgid "Use featured image"
+msgstr "वैशिष्ट्यीकृत प्रतिमा वापरा"
+
+#: inc/customizer.php:183
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+"हिरो प्रतिमा ओव्हरराइड करण्यासाठी वैशिष्ट्यीकृत प्रतिमेला सद्य पोस्ट वर परवानगी द्या."
 
 #: inc/helpers.php:51
 msgid "404 Page Not Found"
 msgstr "404 पृष्ठ आढळले नाही"
-
-#: inc/hooks.php:383
-#, php-format
-msgctxt "page number"
-msgid "Page %d"
-msgstr "पृष्ठ %d"
 
 #: inc/template-tags.php:132
 msgid "Posts navigation"
@@ -537,19 +406,7 @@ msgstr "पोस्ट नेव्हिगेशन"
 msgid "Blog"
 msgstr "ब्लॉग"
 
-#: templates/parts/credit.php:13
-#, php-format
-msgctxt "1. copyright symbol, 2. year, 3. site title"
-msgid "Copyright %1$s %2$d %3$s"
-msgstr "कॉपीराइट %1$s%2$d %3$s."
-
-#: templates/parts/credit.php:24
-#, php-format
-msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s theme by %2$s"
-msgstr "%2$s द्वारे %1$s थीम"
-
-#: templates/parts/loop/page-content.php:17
+#: templates/parts/loop/page-content.php:26
 #: templates/parts/loop/post-content.php:17
 msgid "Pages:"
 msgstr "पृष्‍ठे:"
@@ -564,11 +421,165 @@ msgstr "संपादित करा"
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "आणखी वाचा <span class=\"meta-nav\">&rarr;</span>"
 
+#: templates/parts/loop/post-meta.php:21
+#: templates/parts/loop/post-search-footer.php:41
+msgid "Leave a comment"
+msgstr "एक टिप्पणी द्या"
+
+#: templates/parts/loop/post-meta.php:21
+#: templates/parts/loop/post-search-footer.php:41
+msgid "1 Comment"
+msgstr "1 टिप्पणी"
+
+#. Theme Name of the plugin/theme
+#, fuzzy
+msgid "Primer"
+msgstr "प्राथमिक"
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/godaddy/wp-primer-theme"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Primer is a powerful theme that brings clarity to your content in a fresh "
+"design."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "GoDaddy"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.godaddy.com/"
+msgstr ""
+
+#: comments.php:34
+msgctxt "1. number of comments, 2. post title"
+msgid "One thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
+msgstr[0] "%2$s वरील एक विचार"
+msgstr[1] "%2$s वरील %1$d विचार"
+
+#: comments.php:56
+msgctxt "left arrow (LTR) / right arrow (RTL)"
+msgid "%s Older Comments"
+msgstr "%s जुन्या टिप्पण्या"
+
+#: comments.php:58
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Newer Comments %s"
+msgstr "नवीन टिप्पण्या %s"
+
 #: templates/parts/loop/post-excerpt.php:13
-#, php-format
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Continue Reading %s"
 msgstr "वाचन सुरू ठेवा %s"
+
+#: content-none.php:27
+msgctxt "link to write a new post"
+msgid "Ready to publish your first post? %s."
+msgstr "आपण आपली पहिली पोस्ट प्रकाशित करण्यास तयार आहात? %s."
+
+#: inc/customizer/colors.php:473
+msgctxt "color scheme name"
+msgid "Blush"
+msgstr "लाली"
+
+#: inc/customizer/colors.php:477
+msgctxt "color scheme name"
+msgid "Bronze"
+msgstr "तांबूस"
+
+#: inc/customizer/colors.php:481
+msgctxt "color scheme name"
+msgid "Canary"
+msgstr "कॅनरी"
+
+#: inc/customizer/colors.php:485
+msgctxt "color scheme name"
+msgid "Cool"
+msgstr "थंड"
+
+#: inc/customizer/colors.php:489
+msgctxt "color scheme name"
+msgid "Dark"
+msgstr "गडद"
+
+#: inc/customizer/colors.php:493
+msgctxt "color scheme name"
+msgid "Iguana"
+msgstr "घोरपड"
+
+#: inc/customizer/colors.php:497
+msgctxt "color scheme name"
+msgid "Muted"
+msgstr "नि: शब्द केलेले"
+
+#: inc/customizer/colors.php:501
+msgctxt "color scheme name"
+msgid "Plum"
+msgstr "प्लम"
+
+#: inc/customizer/colors.php:505
+msgctxt "color scheme name"
+msgid "Rose"
+msgstr "गुलाब"
+
+#: inc/customizer/colors.php:509
+msgctxt "color scheme name"
+msgid "Tangerine"
+msgstr "नारिंगी"
+
+#: inc/customizer/colors.php:513
+msgctxt "color scheme name"
+msgid "Turquoise"
+msgstr "आकाशी"
+
+#: inc/customizer/fonts.php:207
+msgctxt "font name"
+msgid "%s (Default)"
+msgstr "%s (डिफॉल्ट)"
+
+#: inc/customizer/layouts.php:91
+msgctxt "fixed-width page layout"
+msgid "Fixed"
+msgstr "निराकरण केलेले"
+
+#: inc/customizer/layouts.php:92
+msgctxt "fluid-width page layout"
+msgid "Fluid"
+msgstr "प्रवाही"
+
+#: inc/customizer/layouts.php:283
+msgctxt "link to the Customizer"
+msgid "The site-wide Default layout setting is located in the %s."
+msgstr "साइट-रुंद डिफॉल्ट लेआउट %s मध्ये स्थित आहे."
+
+#: inc/customizer/layouts.php:287
+msgctxt "title of a component found in WordPress"
+msgid "Customizer"
+msgstr "सानुकूलित करणारा"
+
+#: inc/helpers.php:40
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr "साठी शोध परिणाम: %s"
+
+#: inc/hooks.php:383
+msgctxt "page number"
+msgid "Page %d"
+msgstr "पृष्ठ %d"
+
+#: templates/parts/credit.php:13
+msgctxt "1. copyright symbol, 2. year, 3. site title"
+msgid "Copyright %1$s %2$d %3$s"
+msgstr "कॉपीराइट %1$s%2$d %3$s."
+
+#: templates/parts/credit.php:24
+msgctxt "1. theme name link, 2. theme author link"
+msgid "%1$s theme by %2$s"
+msgstr "%2$s द्वारे %1$s थीम"
 
 #: templates/parts/loop/post-footer.php:19
 #: templates/parts/loop/post-footer.php:31
@@ -580,27 +591,15 @@ msgstr ", "
 
 #: templates/parts/loop/post-footer.php:25
 #: templates/parts/loop/post-search-footer.php:19
-#, php-format
 msgctxt "category list"
 msgid "Posted in: %s"
 msgstr "यामध्ये पोस्ट केले: %s"
 
 #: templates/parts/loop/post-footer.php:37
 #: templates/parts/loop/post-search-footer.php:31
-#, php-format
 msgctxt "tag list"
 msgid "Filed under: %s"
 msgstr "या अंतर्गत फाईल केले: %s"
-
-#: templates/parts/loop/post-meta.php:21
-#: templates/parts/loop/post-search-footer.php:41
-msgid "Leave a comment"
-msgstr "एक टिप्पणी द्या"
-
-#: templates/parts/loop/post-meta.php:21
-#: templates/parts/loop/post-search-footer.php:41
-msgid "1 Comment"
-msgstr "1 टिप्पणी"
 
 #: templates/parts/loop/post-meta.php:21
 #: templates/parts/loop/post-search-footer.php:41
