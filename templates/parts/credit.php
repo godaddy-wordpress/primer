@@ -17,6 +17,13 @@ printf(
 	get_bloginfo( 'blogname' )
 );
 
+/**
+ * Filter the footer author credit display.
+ *
+ * @since 1.0.0
+ *
+ * @var bool
+ */
 if ( (bool) apply_filters( 'primer_author_credit', true ) ) {
 
 	echo ' &mdash; ';
