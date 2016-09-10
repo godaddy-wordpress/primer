@@ -3,6 +3,7 @@
  * Custom template tags for this theme.
  *
  * @package Primer
+ * @since   1.0.0
  */
 
 /**

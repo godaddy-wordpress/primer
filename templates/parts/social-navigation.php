@@ -3,6 +3,7 @@
  * Displays the social navigation.
  *
  * @package Primer
+ * @since   1.0.0
  */
 ?>
 

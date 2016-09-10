@@ -1,4 +1,10 @@
 <?php
+/**
+ * Customizer bootstrap.
+ *
+ * @package Primer
+ * @since   1.0.0
+ */
 
 class Primer_Customizer {
 

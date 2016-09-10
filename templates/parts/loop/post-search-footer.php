@@ -3,6 +3,7 @@
  * Template part for displaying the post footer on search results inside The Loop.
  *
  * @package Primer
+ * @since   1.0.0
  */
 ?>
 

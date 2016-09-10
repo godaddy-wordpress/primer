@@ -1,4 +1,10 @@
 <?php
+/**
+ * Customizer Fonts functionality.
+ *
+ * @package Primer
+ * @since   1.0.0
+ */
 
 class Primer_Customizer_Fonts {
 

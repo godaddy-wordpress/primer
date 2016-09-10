@@ -3,6 +3,7 @@
  * Displays site credit.
  *
  * @package Primer
+ * @since   1.0.0
  */
 ?>
 

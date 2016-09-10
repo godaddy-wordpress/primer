@@ -1,4 +1,10 @@
 <?php
+/**
+ * Customizer Layouts controls.
+ *
+ * @package Primer
+ * @since   1.0.0
+ */
 
 class Primer_Customizer_Layouts_Control extends WP_Customize_Control {
 
@@ -68,13 +74,19 @@ class Primer_Customizer_Layouts_Control extends WP_Customize_Control {
 
 		if ( ! empty( $this->label ) ) {
 
-			printf( '<span class="customize-control-title">%s</span>', esc_html( $this->label ) );
+			printf(
+				'<span class="customize-control-title">%s</span>',
+				esc_html( $this->label )
+			);
 
 		}
 
 		if ( ! empty( $this->description ) ) {
 
-			printf( '<span class="description customize-control-description">%s</span>', esc_html( $this->description ) );
+			printf(
+				'<span class="description customize-control-description">%s</span>',
+				esc_html( $this->description )
+			);
 
 		}
 

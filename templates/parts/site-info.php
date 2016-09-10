@@ -3,6 +3,7 @@
  * Displays the footer site info.
  *
  * @package Primer
+ * @since   1.0.0
  */
 ?>
 

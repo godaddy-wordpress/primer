@@ -1,4 +1,10 @@
 <?php
+/**
+ * Customizer Colors functionality.
+ *
+ * @package Primer
+ * @since   1.0.0
+ */
 
 class Primer_Customizer_Colors {
 
@@ -164,9 +170,7 @@ class Primer_Customizer_Colors {
 						input[type="datetime"]:focus,
 						input[type="datetime-local"]:focus,
 						input[type="color"]:focus,
-						textarea:focus,
-						.fl-callout-text,
-						.fl-rich-text' => array(
+						textarea:focus' => array(
 							'color' => '%1$s',
 						),
 					),
@@ -295,15 +299,9 @@ class Primer_Customizer_Colors {
 					'css'     => array(
 						'button,
 						a.button, a.button:visited,
-						.content-area .fl-builder-content a.fl-button, .content-area .fl-builder-content a.fl-button:visited,
 						input[type="button"],
 						input[type="reset"],
-						input[type="submit"],
-						.woocommerce button.button.alt,
-						.woocommerce a.button,
-						.woocommerce a.button.alt,
-						.woocommerce #respond input#submit,
-						.woocommerce .product span.onsale' => array(
+						input[type="submit"]' => array(
 							'background-color' => '%1$s',
 							'border-color'     => '%1$s',
 						),
@@ -311,14 +309,9 @@ class Primer_Customizer_Colors {
 					'rgba_css' => array(
 						'button:hover, button:active, button:focus,
 						a.button:hover, a.button:active, a.button:focus, a.button:visited:hover, a.button:visited:active, a.button:visited:focus,
-						.content-area .fl-builder-content a.fl-button:hover, .content-area .fl-builder-content a.fl-button:active, .content-area .fl-builder-content a.fl-button:focus, .content-area .fl-builder-content a.fl-button:visited:hover, .content-area .fl-builder-content a.fl-button:visited:active, .content-area .fl-builder-content a.fl-button:visited:focus,
 						input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
 						input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
-						input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus,
-						.woocommerce button.button.alt:hover, .woocommerce button.button.alt:active, .woocommerce button.button.alt:focus,
-						.woocommerce a.button:hover, .woocommerce a.button:active, .woocommerce a.button:focus,
-						.woocommerce a.button.alt:hover, .woocommerce a.button.alt:active, .woocommerce a.button.alt:focus,
-						.woocommerce #respond input#submit:hover' => array(
+						input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
 							'background-color' => 'rgba(%1$s, 0.8)',
 							'border-color'     => 'rgba(%1$s, 0.8)',
 						),
@@ -331,15 +324,9 @@ class Primer_Customizer_Colors {
 					'css'     => array(
 						'button, button:hover, button:active, button:focus,
 						a.button, a.button:hover, a.button:active, a.button:focus, a.button:visited, a.button:visited:hover, a.button:visited:active, a.button:visited:focus,
-						a.fl-button, .content-area .fl-builder-content a.fl-button, .content-area .fl-builder-content a.fl-button:visited, .content-area .fl-builder-content a.fl-button *, .content-area .fl-builder-content a.fl-button:visited *, a.fl-button:hover, a.fl-button:active, a.fl-button:focus, a.fl-button:visited, a.fl-button:visited:hover, a.fl-button:visited:active, a.fl-button:visited:focus,
 						input[type="button"], input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
 						input[type="reset"], input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
-						input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus,
-						.woocommerce button.button.alt, .woocommerce button.button.alt:hover,
-						.woocommerce a.button, .woocommerce a.button:visited, .woocommerce a.button:hover, .woocommerce a.button:visited:hover,
-						.woocommerce a.button.alt, .woocommerce a.button.alt:visited, .woocommerce a.button.alt:hover, .woocommerce a.button.alt:visited:hover,
-						.woocommerce #respond input#submit, .woocommerce #respond input#submit:hover,
-						.woocommerce .product span.onsale' => array(
+						input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
 							'color' => '%1$s',
 						),
 					),

@@ -3,6 +3,7 @@
  * Displays the site title.
  *
  * @package Primer
+ * @since   1.0.0
  */
 ?>
 

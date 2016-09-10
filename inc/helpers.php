@@ -3,6 +3,7 @@
  * Custom helper functions for this theme.
  *
  * @package Primer
+ * @since   1.0.0
  */
 
 /**
@@ -123,7 +124,7 @@ function primer_is_fixed_width() {
 /**
  * Return the current layout.
  *
- * @global string $primer_customizer_layouts
+ * @global Primer_Customizer_Layouts $primer_customizer_layouts
  * @since  1.0.0
  *
  * @param  int $post_id (optional)
@@ -143,8 +144,8 @@ function primer_get_layout( $post_id = null ) {
 /**
  * Return the global layout.
  *
- * @global string $primer_customizer_layouts
- * @since 1.0.0
+ * @global Primer_Customizer_Layouts $primer_customizer_layouts
+ * @since  1.0.0
  *
  * @return string
  */

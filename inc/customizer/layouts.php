@@ -1,4 +1,10 @@
 <?php
+/**
+ * Customizer Layouts functionality.
+ *
+ * @package Primer
+ * @since   1.0.0
+ */
 
 class Primer_Customizer_Layouts {
 
@@ -98,7 +104,6 @@ class Primer_Customizer_Layouts {
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 		add_action( 'customize_register',    array( $this, 'customize_register' ) );
-		add_action( 'add_post_meta',         array( $this, 'page_builder_layout' ), 10, 3 );
 
 		if ( $this->meta_box ) {
 
@@ -503,26 +508,6 @@ class Primer_Customizer_Layouts {
 	}
 
 	/**
-	 * Use full-width layout by default on Page Builder posts.
-	 *
-	 * @action add_post_meta
-	 * @since  1.0.0
-	 *
-	 * @param int    $post_id
-	 * @param string $meta_key
-	 * @param mixed  $meta_value
-	 */
-	public function page_builder_layout( $post_id, $meta_key, $meta_value ) {
-
-		if ( '_fl_builder_draft' === $meta_key && isset( $this->layouts['one-column-wide'] ) ) {
-
-			update_post_meta( $post_id, 'primer_layout', 'one-column-wide' );
-
-		}
-
-	}
-
-	/**
 	 * Add layout class to body element on the front-end.
 	 *
 	 * @filter body_class
@@ -604,6 +589,17 @@ class Primer_Customizer_Layouts {
 
 		$override = $this->get_post_layout( $post );
 		$layout   = ( $override ) ? $override : $this->get_global_layout();
+
+		/**
+		 * Filter the current layout.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param WP_Post|int|null $post
+		 *
+		 * @var string
+		 */
+		$layout = (string) apply_filters( 'primer_current_layout', $layout, $post );
 
 		return $this->layout_exists( $layout ) ? $layout : $this->default;
 

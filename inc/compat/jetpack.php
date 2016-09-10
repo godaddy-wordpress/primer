@@ -3,6 +3,7 @@
  * Jetpack compatibility.
  *
  * @package Primer
+ * @since   1.0.0
  */
 
 /**

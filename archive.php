@@ -12,7 +12,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package Primer
- * @since 1.0.0
+ * @since   1.0.0
  */
 get_header(); ?>
 

@@ -45,7 +45,7 @@ if ( ! defined( 'PRIMER_MIN_WP_VERSION' ) ) {
  */
 if ( version_compare( get_bloginfo( 'version' ), PRIMER_MIN_WP_VERSION, '<' ) ) {
 
-	require_once get_template_directory() . '/inc/back-compat.php';
+	require_once get_template_directory() . '/inc/compat/wordpress.php';
 
 }
 
@@ -78,25 +78,44 @@ require_once get_template_directory() . '/inc/walker-nav-menu.php';
 require_once get_template_directory() . '/inc/hooks.php';
 
 /**
- * Load Customizer class.
+ * Load Beaver Builder compatibility file.
  *
  * @since 1.0.0
  */
-require_once get_template_directory() . '/inc/customizer.php';
+if ( class_exists( 'FLBuilder' ) ) {
 
-/**
- * Load WooCommerce compatibility file.
- *
- * @since 1.0.0
- */
-require_once get_template_directory() . '/inc/woocommerce.php';
+	require_once get_template_directory() . '/inc/compat/beaver-builder.php';
+
+}
 
 /**
  * Load Jetpack compatibility file.
  *
  * @since 1.0.0
  */
-require_once get_template_directory() . '/inc/jetpack.php';
+if ( class_exists( 'Jetpack' ) ) {
+
+	require_once get_template_directory() . '/inc/compat/jetpack.php';
+
+}
+
+/**
+ * Load WooCommerce compatibility file.
+ *
+ * @since 1.0.0
+ */
+if ( class_exists( 'WooCommerce' ) ) {
+
+	require_once get_template_directory() . '/inc/compat/woocommerce.php';
+
+}
+
+/**
+ * Load Customizer class (must be required last).
+ *
+ * @since 1.0.0
+ */
+require_once get_template_directory() . '/inc/customizer.php';
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.

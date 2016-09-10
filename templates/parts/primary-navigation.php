@@ -3,6 +3,7 @@
  * Displays the primary navigation.
  *
  * @package Primer
+ * @since   1.0.0
  */
 ?>
 

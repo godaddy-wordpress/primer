@@ -2,7 +2,8 @@
 /**
  * Display the mobile menu
  *
- * @since 1.0.0
+ * @package Primer
+ * @since   1.0.0
  */
 ?>
 <div class="menu-toggle" id="menu-toggle">

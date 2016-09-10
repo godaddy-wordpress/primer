@@ -3,6 +3,7 @@
  * Template part for displaying the post thumbnail inside The Loop.
  *
  * @package Primer
+ * @since   1.0.0
  */
 ?>
 

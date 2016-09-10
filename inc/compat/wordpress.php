@@ -11,9 +11,7 @@
  */
 
 /**
- * Prevent switching to Primer on old versions of WordPress.
- *
- * Switches to the default theme.
+ * Switch to the default theme immediately.
  *
  * @since 1.0.0
  */
@@ -26,7 +24,7 @@ function primer_switch_theme() {
 	add_action( 'admin_notices', 'primer_upgrade_notice' );
 
 }
-add_action( 'after_switch_theme', 'primer_switch_theme' );
+add_action( 'after_setup_theme', 'primer_switch_theme', 1 );
 
 /**
  * Return the required WordPress version upgrade message.

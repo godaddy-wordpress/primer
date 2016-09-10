@@ -3,6 +3,7 @@
  * Template part for displaying the page content inside The Loop.
  *
  * @package Primer
+ * @since   1.0.0
  */
 ?>
 

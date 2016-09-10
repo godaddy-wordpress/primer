@@ -3,6 +3,7 @@
  * Displays the site header.
  *
  * @package Primer
+ * @since   1.0.0
  */
 ?>
 

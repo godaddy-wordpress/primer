@@ -5,6 +5,7 @@
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
  * @package Primer
+ * @since   1.0.0
  */
 
 /**
