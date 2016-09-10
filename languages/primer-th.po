@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: primer 1.0.0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-06 16:33-0500\n"
+"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
+"POT-Creation-Date: 2016-09-10 03:49:59+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#. //codex.wordpress.org/Creating_an_Error_404_Page
-#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#404-php
-#. *
-#. * @package Primer
-#. * @since 1.0.0
-#.
 #: 404.php:22
 msgid "Oops! That page can't be found."
 msgstr "ขออภัย! ไม่สามารถค้นหาหน้านี้ได้"
@@ -33,29 +27,9 @@ msgid ""
 "It looks like nothing was found at this location. Please try searching below:"
 msgstr "ดูเหมือนว่าจะไม่พบสิ่งใดในตำแหน่งที่ตั้งนี้ โปรดลองค้นหาตามด้านล่าง:"
 
-#: comments.php:35
-#, php-format
-msgctxt "1. number of comments, 2. post title"
-msgid "One thought on %2$s"
-msgid_plural "%1$d thoughts on %2$s"
-msgstr[0] "หนึ่งความคิดเกี่ยวกับ%2$s"
-msgstr[1] "%1$d ความคิดเกี่ยวกับ%2$s"
-
 #: comments.php:54 comments.php:79
 msgid "Comment navigation"
 msgstr "การนำทางความคิดเห็น"
-
-#: comments.php:56
-#, php-format
-msgctxt "left arrow (LTR) / right arrow (RTL)"
-msgid "%s Older Comments"
-msgstr "%s ความคิดเห็นก่อนหน้า"
-
-#: comments.php:58
-#, php-format
-msgctxt "right arrow (LTR) / left arrow (RTL)"
-msgid "Newer Comments %s"
-msgstr "ความคิดเห็นใหม่ %s"
 
 #: comments.php:81
 msgid "&larr; Older Comments"
@@ -69,20 +43,9 @@ msgstr "ความคิดเห็นใหม่ &rarr;"
 msgid "Comments are closed."
 msgstr "ปิดรับความคิดเห็นแล้ว"
 
-#. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
-#. *
-#. * @package Primer
-#. * @since 1.0.0
-#.
 #: content-none.php:16
 msgid "Nothing Found"
 msgstr "ไม่พบสิ่งใด"
-
-#: content-none.php:27
-#, php-format
-msgctxt "link to write a new post"
-msgid "Ready to publish your first post? %s."
-msgstr "พร้อมที่จะเผยแพร่โพสต์แรกของคุณแล้วหรือยัง%s"
 
 #: content-none.php:31
 msgid "Get started here"
@@ -168,22 +131,12 @@ msgid "Skip to content"
 msgstr "ข้ามไปยังเนื้อหา"
 
 #: inc/back-compat.php:49
-#, php-format
 msgid ""
 "Primer requires at least WordPress version %s. You are running version %s. "
 "Please upgrade and try again."
 msgstr ""
 "แบบเรียนขั้นต้นต้องใช้เวอร์ชัน WordPress version %s คุณกำลังใช้งานเวอร์ชัน%s "
 "โปรดอัปเกรดและลองอีกครั้ง"
-
-#: inc/customizer.php:173
-msgid "Use featured image"
-msgstr "ใช้รูปภาพที่น่าสนใจ"
-
-#: inc/customizer.php:174
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr "อนุญาตให้มีรูปภาพที่น่าสนใจปรากฏบนโพสต์ปัจจุบันเพื่อแทนที่รูปภาพฮีโร่"
 
 #: inc/customizer/colors.php:41
 msgid "Site Title Text"
@@ -281,61 +234,6 @@ msgstr "กำหนดเอง"
 msgid "Default"
 msgstr "ค่าดีฟอลต์"
 
-#: inc/customizer/colors.php:473
-msgctxt "color scheme name"
-msgid "Blush"
-msgstr "แดงระเรื่อ"
-
-#: inc/customizer/colors.php:477
-msgctxt "color scheme name"
-msgid "Bronze"
-msgstr "บรอนซ์"
-
-#: inc/customizer/colors.php:481
-msgctxt "color scheme name"
-msgid "Canary"
-msgstr "เหลืองสว่าง"
-
-#: inc/customizer/colors.php:485
-msgctxt "color scheme name"
-msgid "Cool"
-msgstr "เท่"
-
-#: inc/customizer/colors.php:489
-msgctxt "color scheme name"
-msgid "Dark"
-msgstr "มืด"
-
-#: inc/customizer/colors.php:493
-msgctxt "color scheme name"
-msgid "Iguana"
-msgstr "อีกัวน่า"
-
-#: inc/customizer/colors.php:497
-msgctxt "color scheme name"
-msgid "Muted"
-msgstr "มิ้วท์"
-
-#: inc/customizer/colors.php:501
-msgctxt "color scheme name"
-msgid "Plum"
-msgstr "สีม่วงพลัม"
-
-#: inc/customizer/colors.php:505
-msgctxt "color scheme name"
-msgid "Rose"
-msgstr "แดงชมพู"
-
-#: inc/customizer/colors.php:509
-msgctxt "color scheme name"
-msgid "Tangerine"
-msgstr "ส้มอมแดง"
-
-#: inc/customizer/colors.php:513
-msgctxt "color scheme name"
-msgid "Turquoise"
-msgstr "สีฟ้าเทอร์คอยส์"
-
 #: inc/customizer/colors.php:703
 msgid "Colors"
 msgstr "สี"
@@ -402,6 +300,7 @@ msgid "Post titles, widget titles, form labels, and table headers."
 msgstr "หัวข้อโพสต์ หัวข้อวิดเจ็ต ป้ายชื่อแบบฟอร์ม ส่วนหัวตาราง"
 
 #: inc/customizer/fonts.php:118
+#, fuzzy
 msgid "Primary"
 msgstr "หลัก"
 
@@ -420,12 +319,6 @@ msgstr "โพสต์ตามบรรทัด จำนวนความ�
 #: inc/customizer/fonts.php:182
 msgid "Fonts"
 msgstr "แบบอักษร"
-
-#: inc/customizer/fonts.php:207
-#, php-format
-msgctxt "font name"
-msgid "%s (Default)"
-msgstr "%s (ค่าเริ่มต้น)"
 
 #: inc/customizer/layouts.php:47
 msgid "One Column: Wide"
@@ -455,30 +348,9 @@ msgstr "3 คอลัมน์: แถบข้าง | เนื้อหา |
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "3 คอลัมน์: แถบข้าง | แถบข้าง | เนื้อหา"
 
-#: inc/customizer/layouts.php:91
-msgctxt "fixed-width page layout"
-msgid "Fixed"
-msgstr "อยู่กับที่"
-
-#: inc/customizer/layouts.php:92
-msgctxt "fluid-width page layout"
-msgid "Fluid"
-msgstr "เอนเอียง"
-
 #: inc/customizer/layouts.php:251 inc/customizer/layouts.php:442
 msgid "Layout"
 msgstr "เค้าโครง"
-
-#: inc/customizer/layouts.php:283
-#, php-format
-msgctxt "link to the Customizer"
-msgid "The site-wide Default layout setting is located in the %s."
-msgstr "การตั้งค่าเค้าโครงค่าเริ่มต้นของความกว้างสำหรับเว็บไซต์อยู่ที่%s"
-
-#: inc/customizer/layouts.php:287
-msgctxt "title of a component found in WordPress"
-msgid "Customizer"
-msgstr "โปรแกรมปรับแต่ง"
 
 #: inc/customizer/layouts.php:464
 msgid "Default Layout"
@@ -496,21 +368,18 @@ msgstr "ความกว้างหน้า"
 msgid "Display your site differently on larger screens."
 msgstr "แสดงไซต์ของคุณได้อย่างแตกต่างบนหน้าจอที่ขยายใหญ่ขึ้น"
 
-#: inc/helpers.php:40
-#, php-format
-msgctxt "search term"
-msgid "Search Results for: %s"
-msgstr "ผลลัพธ์การค้นหาสำหรับ: %s"
+#: inc/customizer.php:182
+msgid "Use featured image"
+msgstr "ใช้รูปภาพที่น่าสนใจ"
+
+#: inc/customizer.php:183
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr "อนุญาตให้มีรูปภาพที่น่าสนใจปรากฏบนโพสต์ปัจจุบันเพื่อแทนที่รูปภาพฮีโร่"
 
 #: inc/helpers.php:51
 msgid "404 Page Not Found"
 msgstr "404 ไม่พบหน้าที่ต้องการ"
-
-#: inc/hooks.php:383
-#, php-format
-msgctxt "page number"
-msgid "Page %d"
-msgstr "หน้า %d"
 
 #: inc/template-tags.php:132
 msgid "Posts navigation"
@@ -532,19 +401,7 @@ msgstr "การนำทางโพสต์"
 msgid "Blog"
 msgstr "บล็อก"
 
-#: templates/parts/credit.php:13
-#, php-format
-msgctxt "1. copyright symbol, 2. year, 3. site title"
-msgid "Copyright %1$s %2$d %3$s"
-msgstr "ลิขสิทธิ์%1$s %2$d %3$s"
-
-#: templates/parts/credit.php:24
-#, php-format
-msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s theme by %2$s"
-msgstr "%1$s ธีมโดย %2$s"
-
-#: templates/parts/loop/page-content.php:17
+#: templates/parts/loop/page-content.php:26
 #: templates/parts/loop/post-content.php:17
 msgid "Pages:"
 msgstr "หน้าเพจ:"
@@ -559,11 +416,165 @@ msgstr "แก้ไข"
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "อ่านเพิ่มเติม <span class=\"meta-nav\">&rarr;</span>"
 
+#: templates/parts/loop/post-meta.php:21
+#: templates/parts/loop/post-search-footer.php:41
+msgid "Leave a comment"
+msgstr "ฝากความคิดเห็น"
+
+#: templates/parts/loop/post-meta.php:21
+#: templates/parts/loop/post-search-footer.php:41
+msgid "1 Comment"
+msgstr "1 ความคิดเห็น"
+
+#. Theme Name of the plugin/theme
+#, fuzzy
+msgid "Primer"
+msgstr "หลัก"
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/godaddy/wp-primer-theme"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Primer is a powerful theme that brings clarity to your content in a fresh "
+"design."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "GoDaddy"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.godaddy.com/"
+msgstr ""
+
+#: comments.php:34
+msgctxt "1. number of comments, 2. post title"
+msgid "One thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
+msgstr[0] "หนึ่งความคิดเกี่ยวกับ%2$s"
+msgstr[1] "%1$d ความคิดเกี่ยวกับ%2$s"
+
+#: comments.php:56
+msgctxt "left arrow (LTR) / right arrow (RTL)"
+msgid "%s Older Comments"
+msgstr "%s ความคิดเห็นก่อนหน้า"
+
+#: comments.php:58
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Newer Comments %s"
+msgstr "ความคิดเห็นใหม่ %s"
+
 #: templates/parts/loop/post-excerpt.php:13
-#, php-format
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Continue Reading %s"
 msgstr "อ่านต่อ %s"
+
+#: content-none.php:27
+msgctxt "link to write a new post"
+msgid "Ready to publish your first post? %s."
+msgstr "พร้อมที่จะเผยแพร่โพสต์แรกของคุณแล้วหรือยัง%s"
+
+#: inc/customizer/colors.php:473
+msgctxt "color scheme name"
+msgid "Blush"
+msgstr "แดงระเรื่อ"
+
+#: inc/customizer/colors.php:477
+msgctxt "color scheme name"
+msgid "Bronze"
+msgstr "บรอนซ์"
+
+#: inc/customizer/colors.php:481
+msgctxt "color scheme name"
+msgid "Canary"
+msgstr "เหลืองสว่าง"
+
+#: inc/customizer/colors.php:485
+msgctxt "color scheme name"
+msgid "Cool"
+msgstr "เท่"
+
+#: inc/customizer/colors.php:489
+msgctxt "color scheme name"
+msgid "Dark"
+msgstr "มืด"
+
+#: inc/customizer/colors.php:493
+msgctxt "color scheme name"
+msgid "Iguana"
+msgstr "อีกัวน่า"
+
+#: inc/customizer/colors.php:497
+msgctxt "color scheme name"
+msgid "Muted"
+msgstr "มิ้วท์"
+
+#: inc/customizer/colors.php:501
+msgctxt "color scheme name"
+msgid "Plum"
+msgstr "สีม่วงพลัม"
+
+#: inc/customizer/colors.php:505
+msgctxt "color scheme name"
+msgid "Rose"
+msgstr "แดงชมพู"
+
+#: inc/customizer/colors.php:509
+msgctxt "color scheme name"
+msgid "Tangerine"
+msgstr "ส้มอมแดง"
+
+#: inc/customizer/colors.php:513
+msgctxt "color scheme name"
+msgid "Turquoise"
+msgstr "สีฟ้าเทอร์คอยส์"
+
+#: inc/customizer/fonts.php:207
+msgctxt "font name"
+msgid "%s (Default)"
+msgstr "%s (ค่าเริ่มต้น)"
+
+#: inc/customizer/layouts.php:91
+msgctxt "fixed-width page layout"
+msgid "Fixed"
+msgstr "อยู่กับที่"
+
+#: inc/customizer/layouts.php:92
+msgctxt "fluid-width page layout"
+msgid "Fluid"
+msgstr "เอนเอียง"
+
+#: inc/customizer/layouts.php:283
+msgctxt "link to the Customizer"
+msgid "The site-wide Default layout setting is located in the %s."
+msgstr "การตั้งค่าเค้าโครงค่าเริ่มต้นของความกว้างสำหรับเว็บไซต์อยู่ที่%s"
+
+#: inc/customizer/layouts.php:287
+msgctxt "title of a component found in WordPress"
+msgid "Customizer"
+msgstr "โปรแกรมปรับแต่ง"
+
+#: inc/helpers.php:40
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr "ผลลัพธ์การค้นหาสำหรับ: %s"
+
+#: inc/hooks.php:383
+msgctxt "page number"
+msgid "Page %d"
+msgstr "หน้า %d"
+
+#: templates/parts/credit.php:13
+msgctxt "1. copyright symbol, 2. year, 3. site title"
+msgid "Copyright %1$s %2$d %3$s"
+msgstr "ลิขสิทธิ์%1$s %2$d %3$s"
+
+#: templates/parts/credit.php:24
+msgctxt "1. theme name link, 2. theme author link"
+msgid "%1$s theme by %2$s"
+msgstr "%1$s ธีมโดย %2$s"
 
 #: templates/parts/loop/post-footer.php:19
 #: templates/parts/loop/post-footer.php:31
@@ -575,27 +586,15 @@ msgstr "  "
 
 #: templates/parts/loop/post-footer.php:25
 #: templates/parts/loop/post-search-footer.php:19
-#, php-format
 msgctxt "category list"
 msgid "Posted in: %s"
 msgstr "โพสต์ไว้ที่: %s"
 
 #: templates/parts/loop/post-footer.php:37
 #: templates/parts/loop/post-search-footer.php:31
-#, php-format
 msgctxt "tag list"
 msgid "Filed under: %s"
 msgstr "เก็บเข้าไฟล์ไว้ที่: %s"
-
-#: templates/parts/loop/post-meta.php:21
-#: templates/parts/loop/post-search-footer.php:41
-msgid "Leave a comment"
-msgstr "ฝากความคิดเห็น"
-
-#: templates/parts/loop/post-meta.php:21
-#: templates/parts/loop/post-search-footer.php:41
-msgid "1 Comment"
-msgstr "1 ความคิดเห็น"
 
 #: templates/parts/loop/post-meta.php:21
 #: templates/parts/loop/post-search-footer.php:41

@@ -29,9 +29,6 @@ module.exports = function( grunt ) {
 		clean: {
 			mo: {
 				src: [ 'languages/' + pkg.name + '-*.mo' ]
-			},
-			po: {
-				src: [ 'languages/*.po~' ]
 			}
 		},
 
@@ -121,68 +118,30 @@ module.exports = function( grunt ) {
 			all: [ 'Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js', '!assets/js/jquery.backgroundSize.js' ]
 		},
 
+		makepot: {
+			target: {
+				options: {
+					domainPath: 'languages/',
+					include: [ '.+\.php' ],
+					exclude: [ '.dev/', 'node_modules/' ],
+					potComments: 'Copyright (c) {year} GoDaddy Operating Company, LLC. All Rights Reserved.',
+					potHeaders: {
+						'x-poedit-keywordslist': true
+					},
+					processPot: function( pot, options ) {
+						pot.headers['report-msgid-bugs-to'] = pkg.bugs.url;
+						return pot;
+					},
+					type: 'wp-theme',
+					updatePoFiles: true
+				}
+			}
+		},
+
 		po2mo: {
 			files: {
 				src: 'languages/*.po',
 				expand: true
-			}
-		},
-
-		pot: {
-			files: {
-				expand: true,
-				src: [ '**/*.php', '!node_modules/**' ]
-			},
-			options: {
-				text_domain: pkg.name,
-				msgmerge: true,
-				dest: 'languages/',
-				encoding: 'UTF-8',
-				keywords: [
-					'__',
-					'_e',
-					'__ngettext:1,2',
-					'_n:1,2',
-					'__ngettext_noop:1,2',
-					'_n_noop:1,2',
-					'_c',
-					'_nc:4c,1,2',
-					'_x:1,2c',
-					'_nx:4c,1,2',
-					'_nx_noop:4c,1,2',
-					'_ex:1,2c',
-					'esc_attr__',
-					'esc_attr_e',
-					'esc_attr_x:1,2c',
-					'esc_html__',
-					'esc_html_e',
-					'esc_html_x:1,2c'
-				]
-			}
-		},
-
-		replace: {
-			pot: {
-				src: 'languages/*.po*',
-				overwrite: true,
-				replacements: [
-					{
-						from: 'SOME DESCRIPTIVE TITLE.',
-						to: pkg.title
-					},
-					{
-						from: "YEAR THE PACKAGE'S COPYRIGHT HOLDER",
-						to: new Date().getFullYear()
-					},
-					{
-						from: 'FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.',
-						to: 'GoDaddy Operating Company, LLC.'
-					},
-					{
-						from: 'charset=CHARSET',
-						to: 'charset=UTF-8'
-					}
-				]
 			}
 		},
 
@@ -248,7 +207,7 @@ module.exports = function( grunt ) {
 
 	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify' ] );
 	grunt.registerTask( 'lint', [ 'jshint' ] );
-	grunt.registerTask( 'update-pot', [ 'pot', 'replace:pot', 'clean:po' ] );
+	grunt.registerTask( 'update-pot', [ 'makepot' ] );
 	grunt.registerTask( 'update-mo', [ 'po2mo', 'copy:mo', 'clean:mo' ] );
 
 };

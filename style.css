@@ -336,7 +336,7 @@ code {
 pre code {
   padding: 0;
   border: none;
-  background-color: none; }
+  background-color: transparent; }
 
 abbr, acronym {
   border-bottom: 1px dotted rgba(37, 37, 37, 0.1);
@@ -590,6 +590,8 @@ a {
   .main-navigation.open {
     display: block;
     padding-top: 80px; }
+    .main-navigation.open ul a:not(.expand) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
     @media only screen and (max-width: 641px) {
       .admin-bar .main-navigation.open {
         padding-top: 148px; } }
@@ -606,8 +608,8 @@ a {
     width: 50px;
     line-height: 1;
     text-align: center;
-    border-bottom: none;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: none;
     text-indent: 0; }
     .main-navigation .expand:hover {
       background-color: rgba(0, 0, 0, 0.1); }
@@ -636,8 +638,7 @@ a {
     margin: 0;
     padding-left: 0; }
     .main-navigation ul a {
-      color: #ffffff;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      color: #ffffff; }
     @media only screen and (max-width: 40.063em) {
       .main-navigation ul .open > .sub-menu {
         display: block; } }
@@ -1602,7 +1603,6 @@ body.no-max-width .site-header-wrapper {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    z-index: 9999;
     clear: both; }
     .page-title-container .page-header:after {
       content: " ";
@@ -1963,6 +1963,11 @@ body.no-max-width .site-info-wrapper .site-info {
   margin: 0 0 1.5em;
   padding: 2.5em 3.375em;
   background-color: #ffffff; }
+  .hentry:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+    clear: both; }
   @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
     .hentry {
       padding: 1.5em 2.375em; } }

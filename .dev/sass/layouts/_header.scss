@@ -58,7 +58,6 @@ body.no-max-width .site-header-wrapper {
 		@include container($container-size);
 
 		position: relative;
-		z-index: 9999;
 		clear: both;
 
 		h1 {

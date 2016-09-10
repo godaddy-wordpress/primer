@@ -1,54 +1,30 @@
 === Primer ===
-Contributors:      godaddy, fjarrett, jonathanbardo
-Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, fixed-layout, flexible-header, fluid-layout, left-sidebar, light, one-column, responsive-layout, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
+Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
+Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
 Tested up to:      4.6
 Stable tag:        1.0.0
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Primer is a modern WordPress theme based on _s.
+Primer is a powerful theme that brings clarity to your content in a fresh design.
 
 == Description ==
 
-Primer is a modern WordPress theme based on _s.
+**Features**
 
-**Languages Supported:**
+* Responsive Layout
+* Custom Colors
+* Color Scheme Presets
+* Custom Fonts
+* Custom Header
+* Header Image Widget
+* Social Links Menu
+* Fixed & Fluid Widths
 
-* English
-* Dansk
-* Deutsch
-* Ελληνικά
-* Español
-* Español de México
-* Suomi
-* Français
-* हिन्दी
-* Bahasa Indonesia
-* Italiano
-* 日本語
-* 한국어
-* मराठी
-* Bahasa Melayu
-* Norsk bokmål
-* Nederlands
-* Polski
-* Português do Brasil
-* Português
-* Русский
-* Svenska
-* ไทย
-* Tagalog
-* Türkçe
-* Українська
-* Tiếng Việt
-* 简体中文
-* 香港中文版
-* 繁體中文
+**Contributing**
 
-**Contributing:**
-
-You can fork and contribute to Primer by visiting [our public repo on GitHub](https://github.com/godaddy/wp-primer-theme).
+You can fork and contribute back to Primer by visiting [our public repo on GitHub](https://github.com/godaddy/wp-primer-theme).
 
 == Installation ==
 
@@ -79,16 +55,8 @@ Genericons icon font, Copyright 2013 Automattic, Inc.
 License: GPL-2.0 (or later)
 Source: https://genericons.com/
 
-== Frequently Asked Questions ==
-
-TODO
-
-== Developer Tools ==
-
-TODO
-
 == Changelog ==
 
-= 1.0.0 - June, 2016 =
+= 1.0.0 - September 2016 =
 
 * Initial release.
