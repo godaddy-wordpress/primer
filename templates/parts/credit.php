@@ -21,14 +21,20 @@ if ( (bool) apply_filters( 'primer_author_credit', true ) ) {
 
 	echo ' &mdash; ';
 
+	$theme = wp_get_theme();
+
 	printf(
 		esc_html_x( '%1$s theme by %2$s', '1. theme name link, 2. theme author link', 'primer' ),
 		sprintf(
-			'<a href="https://wordpress.org/themes/%s/" rel="designer">%s</a>',
-			sanitize_key( get_stylesheet() ),
-			esc_html( get_option( 'current_theme', ucwords( get_stylesheet() ) ) )
+			'<a href="%s">%s</a>',
+			esc_url( $theme->get( 'ThemeURI' ) ),
+			esc_html( $theme->get( 'Name' ) )
 		),
-		'<a href="https://www.godaddy.com/" rel="designer">GoDaddy</a>'
+		sprintf(
+			'<a href="%s" rel="designer">%s</a>',
+			esc_url( $theme->get( 'AuthorURI' ) ),
+			esc_html( $theme->get( 'Author' ) )
+		)
 	);
 
 }
