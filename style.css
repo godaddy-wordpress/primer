@@ -1962,6 +1962,11 @@ body.no-max-width .site-info-wrapper .site-info {
   margin: 0 0 1.5em;
   padding: 2.5em 3.375em;
   background-color: #ffffff; }
+  .hentry:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+    clear: both; }
   @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
     .hentry {
       padding: 1.5em 2.375em; } }
