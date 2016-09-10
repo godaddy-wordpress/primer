@@ -333,9 +333,9 @@ class Primer_Customizer_Colors {
 						input[type="button"], input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
 						input[type="reset"], input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
 						input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus,
-						.woocommerce a.button,  .woocommerce a.button:hover,
 						.woocommerce button.button.alt, .woocommerce button.button.alt:hover,
-						.woocommerce a.button.alt, .woocommerce a.button.alt:hover,
+						.woocommerce a.button, .woocommerce a.button:visited, .woocommerce a.button:hover, .woocommerce a.button:visited:hover,
+						.woocommerce a.button.alt, .woocommerce a.button.alt:visited, .woocommerce a.button.alt:hover, .woocommerce a.button.alt:visited:hover,
 						.woocommerce .product span.onsale' => array(
 							'color' => '%1$s',
 						),
