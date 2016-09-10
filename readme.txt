@@ -11,15 +11,18 @@ Primer is a powerful theme that brings clarity to your content in a fresh design
 
 == Description ==
 
+**Features**
+
 * Responsive Layout
 * Custom Colors
 * Color Scheme Presets
+* Custom Fonts
 * Custom Header
+* Header Image Widget
 * Social Links Menu
-* Post Formats
-* The GPL v2.0 or later license. :) Use it to make something cool.
+* Fixed & Fluid Widths
 
-**Contributing:**
+**Contributing**
 
 You can fork and contribute back to Primer by visiting [our public repo on GitHub](https://github.com/godaddy/wp-primer-theme).
 
