@@ -8,6 +8,8 @@
 
 .site-header-wrapper {
 	@include container($container-size);
+
+	margin-right: 5rem;
 }
 
 body.no-max-width .site-header-wrapper {
@@ -18,7 +20,7 @@ body.no-max-width .site-header-wrapper {
 	@include span(12);
 
 	position: relative;
-	z-index: 1;
+	z-index: 10;
 	padding: 6% 1rem;
 
 	@media #{$small-only} {

@@ -1,13 +1,10 @@
 .main-navigation-container {
+	width: 100%;
 	background-color: $color__menu-bg;
 
-	@media #{$small-only} {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 9999;
-	}
+	@include clearfix;
+
+	@include clearfix-after;
 }
 
 .main-navigation {
@@ -17,20 +14,9 @@
 
 	&.open {
 		display: block;
-		padding-top: 80px;
 
 		ul a:not(.expand) {
 			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-		}
-
-		@media only screen and (max-width: 641px) {
-			.admin-bar & {
-				padding-top: 148px;
-			}
-		}
-
-		@media #{$medium-up} {
-			padding-top: 0;
 		}
 	}
 
@@ -40,9 +26,8 @@
 		position: absolute;
 		right: 0;
 		top: 0;
-		padding: 16px 0;
+		padding: 1.2rem 0;
 		width: 50px;
-		line-height: 1;
 		text-align: center;
 		border-left: 1px solid rgba(0, 0, 0, 0.1);
 		border-bottom: none;
@@ -56,7 +41,7 @@
 			content: "+";
 		}
 
-		@media #{$medium-up} {
+		@media #{$large-up} {
 			display: none;
 		}
 	}
@@ -65,16 +50,16 @@
 		position: relative;
 
 		&.open > .expand:before {
-			content: "-";
+			content: "\2013";
 		}
 	}
 
-	@media #{$medium-up} {
+	@media #{$large-up} {
 		display: block;
 	}
 
 	.menu-main-menu-container {
-		@media #{$medium-up} {
+		@media #{$large-up} {
 			float: left;
 			margin-left: 25px;
 		}
@@ -97,7 +82,7 @@
 			color: $color__menu-text;
 		}
 
-		@media #{$small-only} {
+		@media #{$medium-down} {
 
 			.open > .sub-menu {
 				display: block;
@@ -108,11 +93,11 @@
 			z-index: 99999;
 			background-color: $color__menu-bg;
 
-			@media #{$small-only} {
+			@media #{$medium-down} {
 				display: none;
 			}
 
-			@media #{$medium-up} {
+			@media #{$large-up} {
 				position: absolute;
 				left: -999em;
 				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -141,7 +126,7 @@
 		}
 	}
 
-	@media #{$medium-up} {
+	@media #{$large-up} {
 
 		li {
 			position: relative;
@@ -152,12 +137,12 @@
 	a {
 		display: block;
 		text-decoration: none;
-		padding: 1.6em 1em;
+		padding: 1.6rem 1rem;
+		line-height: 1rem;
 		color: $color__menu-text;
 
-		@media #{$small-only} {
-			padding-top: 1.2em;
-			padding-bottom: 1.2em;
+		@media #{$medium-down} {
+			padding: 1.2rem 1rem;
 		}
 
 		&:hover,
@@ -188,7 +173,7 @@
 		transform: translateY(-50%);
 		display: none;
 
-		@media #{$medium-up} {
+		@media #{$large-up} {
 			display: inline;
 		}
 	}
@@ -198,7 +183,7 @@
 		clear: both;
 		position: relative;
 
-		@media #{$medium-up} {
+		@media #{$large-up} {
 			padding: 0;
 			float: right;
 			margin: 1em;
@@ -242,7 +227,7 @@
 			right: 30px;
 			top: 27px;
 
-			@media #{$medium-up} {
+			@media #{$large-up} {
 				right: 10px;
 				top: 10px;
 			}
@@ -263,23 +248,24 @@ body.no-max-width .main-navigation {
 }
 
 .menu-toggle {
-	width: 4rem;
-	padding: 0.6rem;
-	cursor: pointer;
-	position: absolute;
-	z-index: 9999;
-	display: none;
-	top: 15px;
-	right: 0;
 	display: block;
-	padding: 0 9px 24px 0;
-	z-index: 99999;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	width: 4rem;
+	padding: 6% 5px 0;
+	z-index: 15;
 
-	.admin-bar & {
-		top: 48px;
+	body.admin-bar & {
+		padding-top: calc(6% + 32px);
+
+		@media only screen and (max-width: 782px) {
+			padding-top: calc(6% + 46px);
+		}
 	}
 
-	@media #{$medium-up} {
+	@media #{$large-up} {
 		display: none;
 	}
 
@@ -293,8 +279,6 @@ body.no-max-width .main-navigation {
 	}
 
 	&.open {
-		top: 15px;
-
 		div {
 			&:nth-child(1) {
 				transform: rotate(45deg);
@@ -308,12 +292,6 @@ body.no-max-width .main-navigation {
 			&:nth-child(3) {
 				transform: rotate(-45deg);
 			}
-		}
-	}
-
-	@media only screen and (max-width: 768px) {
-		.admin-bar & {
-			top: 68px;
 		}
 	}
 }
