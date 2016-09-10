@@ -1887,6 +1887,13 @@ body.no-max-width .site-info-wrapper .site-info {
   margin: 0 0 1.5rem;
   padding: 2rem;
   background-color: #ffffff; }
+  .widget p:last-child {
+    margin-bottom: 0; }
+  .widget:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+    clear: both; }
   @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
     .widget {
       padding: 1.5rem; } }
@@ -1963,6 +1970,8 @@ body.no-max-width .site-info-wrapper .site-info {
   margin: 0 0 1.5em;
   padding: 2.5em 3.375em;
   background-color: #ffffff; }
+  .hentry p:last-child {
+    margin-bottom: 0; }
   .hentry:after {
     content: "";
     display: table;

@@ -3,6 +3,10 @@
 	padding: 2.5em 3.375em;
 	background-color: $color__content-bg;
 
+	p:last-child {
+		margin-bottom: 0;
+	}
+
 	&:after {
 		@include clearfix;
 		@include clearfix-after;
