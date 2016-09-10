@@ -299,9 +299,10 @@ class Primer_Customizer_Colors {
 						input[type="button"],
 						input[type="reset"],
 						input[type="submit"],
-						.woocommerce a.button,
 						.woocommerce button.button.alt,
+						.woocommerce a.button,
 						.woocommerce a.button.alt,
+						.woocommerce #respond input#submit,
 						.woocommerce .product span.onsale' => array(
 							'background-color' => '%1$s',
 							'border-color'     => '%1$s',
@@ -314,9 +315,10 @@ class Primer_Customizer_Colors {
 						input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
 						input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
 						input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus,
-						.woocommerce a.button:hover, .woocommerce a.button:active, .woocommerce a.button:focus,
 						.woocommerce button.button.alt:hover, .woocommerce button.button.alt:active, .woocommerce button.button.alt:focus,
-						.woocommerce a.button.alt:hover, .woocommerce a.button.alt:active, .woocommerce a.button.alt:focus' => array(
+						.woocommerce a.button:hover, .woocommerce a.button:active, .woocommerce a.button:focus,
+						.woocommerce a.button.alt:hover, .woocommerce a.button.alt:active, .woocommerce a.button.alt:focus,
+						.woocommerce #respond input#submit:hover' => array(
 							'background-color' => 'rgba(%1$s, 0.8)',
 							'border-color'     => 'rgba(%1$s, 0.8)',
 						),
@@ -336,6 +338,7 @@ class Primer_Customizer_Colors {
 						.woocommerce button.button.alt, .woocommerce button.button.alt:hover,
 						.woocommerce a.button, .woocommerce a.button:visited, .woocommerce a.button:hover, .woocommerce a.button:visited:hover,
 						.woocommerce a.button.alt, .woocommerce a.button.alt:visited, .woocommerce a.button.alt:hover, .woocommerce a.button.alt:visited:hover,
+						.woocommerce #respond input#submit, .woocommerce #respond input#submit:hover,
 						.woocommerce .product span.onsale' => array(
 							'color' => '%1$s',
 						),
