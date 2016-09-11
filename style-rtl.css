@@ -2154,12 +2154,17 @@ body.no-max-width .site-info-wrapper .site-info {
 /*--------------------------------------------------------------
 # Compatibility
 --------------------------------------------------------------*/
-.woocommerce-page ul.products li.product.primer-2-column-product {
-  width: 48.05%; }
+.woocommerce-page {
+  /* 2 Column Layout */
+  /* Quantity field */ }
+  .woocommerce-page ul.products li.product.primer-2-column-product {
+    width: 48.05%; }
+  .woocommerce-page .primer-woocommerce .cart .qty {
+    padding: 0.18em; }
 
-.woocommerce-page .primer-woocommerce .cart .qty {
-  padding: 0.18em; }
-
-body.post-type-archive span.onsale,
-body.single-product span.onsale {
-  padding: 0; }
+body.post-type-archive,
+body.single-product {
+  /* On sale badge */ }
+  body.post-type-archive span.onsale,
+  body.single-product span.onsale {
+    padding: 0; }
