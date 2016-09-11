@@ -278,3 +278,31 @@ function primer_wc_colors( $colors ) {
 
 }
 add_filter( 'primer_colors', 'primer_wc_colors' );
+
+/**
+ * Add font type targets for WooCommerce elements.
+ *
+ * @filter primer_font_types
+ * @since  1.0.0
+ *
+ * @param  array $font_types
+ *
+ * @return array
+ */
+function primer_wc_font_types( $font_types ) {
+
+	$wc_font_types = array(
+		'navigation_font' => array(
+			'css' => array(
+				'.woocommerce button.button.alt
+				.woocommerce a.button' => array(
+					'font-family' => '"%1$s", sans-serif',
+				),
+			),
+		),
+	);
+
+	return primer_array_replace_recursive( $font_types, $wc_font_types );
+
+}
+add_filter( 'primer_font_types', 'primer_wc_font_types' );
