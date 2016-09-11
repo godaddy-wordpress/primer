@@ -2159,3 +2159,7 @@ body.no-max-width .site-info-wrapper .site-info {
 
 .woocommerce-page .primer-woocommerce .cart .qty {
   padding: 0.18em; }
+
+body.post-type-archive span.onsale,
+body.single-product span.onsale {
+  padding: 0; }
