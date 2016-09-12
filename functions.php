@@ -511,3 +511,19 @@ add_action( 'create_category', 'primer_has_active_categories_reset' );
 add_action( 'edit_category',   'primer_has_active_categories_reset' );
 add_action( 'delete_category', 'primer_has_active_categories_reset' );
 add_action( 'save_post',       'primer_has_active_categories_reset' );
+
+/**
+ * Link back to GoDaddy in the Admin Footer
+ *
+ * @return mixed
+ *
+ * @since 1.0.0
+ */
+function primer_admin_footer_link( $footer_text ) {
+
+	$text = sprintf( __( 'Primer Theme built by <a href="%s" target="_blank">GoDaddy</a>.' ), __( 'https://www.godaddy.com/' ) );
+
+	return wp_kses_post( $footer_text . ' | <span>' . $text . '</span>' );
+
+}
+add_filter( 'admin_footer_text', 'primer_admin_footer_link' );
