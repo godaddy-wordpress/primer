@@ -521,9 +521,20 @@ add_action( 'save_post',       'primer_has_active_categories_reset' );
  */
 function primer_admin_footer_link( $footer_text ) {
 
-	$text = sprintf( __( 'Primer Theme built by <a href="%s" target="_blank">GoDaddy</a>.' ), __( 'https://www.godaddy.com/' ) );
+	// Get the active theme name
+	$theme_name = wp_get_theme();
 
-	return wp_kses_post( $footer_text . ' | <span>' . $text . '</span>' );
+	$additional_text = sprintf(
+		_x(
+			'%1$s Theme built by <a href="%2$s" target="_blank">GoDaddy</a>.',
+			'First: The active theme name. Second: URL to Godaddy.',
+			'primer'
+		),
+		$theme_name,
+		__( 'https://www.godaddy.com/' )
+	);
+
+	return wp_kses_post( $footer_text . ' | <span>' . $additional_text . '</span>' );
 
 }
 add_filter( 'admin_footer_text', 'primer_admin_footer_link' );
