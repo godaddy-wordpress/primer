@@ -526,7 +526,7 @@ function primer_admin_footer_link( $footer_text ) {
 
 	$additional_text = sprintf(
 		_x(
-			'%1$s built by <a href="%2$s" target="_blank">GoDaddy</a>.',
+			'%1$s Theme by <a href="%2$s" target="_blank">GoDaddy</a>.',
 			'First: The active theme name. Second: URL to Godaddy.',
 			'primer'
 		),
