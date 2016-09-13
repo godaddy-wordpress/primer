@@ -502,7 +502,8 @@ a {
 
 .wp-pointer-buttons a.close,
 .wp-pointer-buttons a.close:visited {
-  color: #0073aa; }
+  color: #0073aa;
+  line-height: 1.5; }
   .wp-pointer-buttons a.close:hover, .wp-pointer-buttons a.close:active, .wp-pointer-buttons a.close:focus,
   .wp-pointer-buttons a.close:visited:hover,
   .wp-pointer-buttons a.close:visited:active,
