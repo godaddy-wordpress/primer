@@ -500,6 +500,13 @@ a {
   a:hover, a:active, a:focus {
     outline: 0; }
 
+.wp-pointer-buttons a.close,
+.wp-pointer-buttons a.close:hover,
+.wp-pointer-buttons a.close:active,
+.wp-pointer-buttons a.close:focus,
+.wp-pointer-buttons a.close:visited {
+  color: inherit; }
+
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
