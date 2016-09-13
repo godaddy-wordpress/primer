@@ -580,7 +580,8 @@ a {
 .wp-pointer-content a.close:visited {
   color: #0073aa;
   line-height: 1.5;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  font-weight: 400; }
   .wp-pointer-content a.close:hover, .wp-pointer-content a.close:active, .wp-pointer-content a.close:focus,
   .wp-pointer-content a.close:visited:hover,
   .wp-pointer-content a.close:visited:active,
