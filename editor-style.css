@@ -504,14 +504,14 @@ a {
 .wp-pointer-content p {
   font-family: inherit; }
 
-.wp-pointer-content .wp-pointer-buttons a.close,
-.wp-pointer-content .wp-pointer-buttons a.close:visited {
+.wp-pointer-content a.close,
+.wp-pointer-content a.close:visited {
   color: #0073aa;
   line-height: 1.5; }
-  .wp-pointer-content .wp-pointer-buttons a.close:hover, .wp-pointer-content .wp-pointer-buttons a.close:active, .wp-pointer-content .wp-pointer-buttons a.close:focus,
-  .wp-pointer-content .wp-pointer-buttons a.close:visited:hover,
-  .wp-pointer-content .wp-pointer-buttons a.close:visited:active,
-  .wp-pointer-content .wp-pointer-buttons a.close:visited:focus {
+  .wp-pointer-content a.close:hover, .wp-pointer-content a.close:active, .wp-pointer-content a.close:focus,
+  .wp-pointer-content a.close:visited:hover,
+  .wp-pointer-content a.close:visited:active,
+  .wp-pointer-content a.close:visited:focus {
     color: #00a0d2; }
 
 .page-content .wp-smiley,
