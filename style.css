@@ -566,11 +566,13 @@ a {
     outline: 0; }
 
 .wp-pointer-buttons a.close,
-.wp-pointer-buttons a.close:hover,
-.wp-pointer-buttons a.close:active,
-.wp-pointer-buttons a.close:focus,
 .wp-pointer-buttons a.close:visited {
-  color: inherit; }
+  color: #0073aa; }
+  .wp-pointer-buttons a.close:hover, .wp-pointer-buttons a.close:active, .wp-pointer-buttons a.close:focus,
+  .wp-pointer-buttons a.close:visited:hover,
+  .wp-pointer-buttons a.close:visited:active,
+  .wp-pointer-buttons a.close:visited:focus {
+    color: #00a0d2; }
 
 /*--------------------------------------------------------------
 # Menus
