@@ -500,14 +500,18 @@ a {
   a:hover, a:active, a:focus {
     outline: 0; }
 
-.wp-pointer-buttons a.close,
-.wp-pointer-buttons a.close:visited {
+.wp-pointer-content h3,
+.wp-pointer-content p {
+  font-family: inherit; }
+
+.wp-pointer-content .wp-pointer-buttons a.close,
+.wp-pointer-content .wp-pointer-buttons a.close:visited {
   color: #0073aa;
   line-height: 1.5; }
-  .wp-pointer-buttons a.close:hover, .wp-pointer-buttons a.close:active, .wp-pointer-buttons a.close:focus,
-  .wp-pointer-buttons a.close:visited:hover,
-  .wp-pointer-buttons a.close:visited:active,
-  .wp-pointer-buttons a.close:visited:focus {
+  .wp-pointer-content .wp-pointer-buttons a.close:hover, .wp-pointer-content .wp-pointer-buttons a.close:active, .wp-pointer-content .wp-pointer-buttons a.close:focus,
+  .wp-pointer-content .wp-pointer-buttons a.close:visited:hover,
+  .wp-pointer-content .wp-pointer-buttons a.close:visited:active,
+  .wp-pointer-content .wp-pointer-buttons a.close:visited:focus {
     color: #00a0d2; }
 
 .page-content .wp-smiley,
