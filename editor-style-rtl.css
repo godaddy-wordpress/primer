@@ -500,9 +500,13 @@ a {
   a:hover, a:active, a:focus {
     outline: 0; }
 
-.wp-pointer-content h3,
-.wp-pointer-content p {
+.wp-pointer-content h3 {
   font-family: inherit; }
+
+.wp-pointer-content p {
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.4; }
 
 .wp-pointer-content a.close,
 .wp-pointer-content a.close:visited {
