@@ -18,28 +18,3 @@ a {
 		outline: 0;
 	}
 }
-
-.wp-pointer-content {
-
-	h3 {
-		font-family: inherit;
-	}
-
-	p {
-		font-family: inherit;
-		font-size: 13px;
-		line-height: 1.4;
-	}
-
-	a.close,
-	a.close:visited {
-		color: #0073aa;
-		line-height: 1.5;
-
-		&:hover,
-		&:active,
-		&:focus {
-			color: #00a0d2;
-		}
-	}
-}
