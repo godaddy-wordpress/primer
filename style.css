@@ -1396,6 +1396,9 @@ object {
 body.no-max-width .site-content {
   max-width: none; }
 
+body.error404 .site-content {
+  margin-bottom: 2em; }
+
 @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
   body.layout-one-column-narrow .site-content {
     max-width: 80%;

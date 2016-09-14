@@ -12,6 +12,10 @@ body.no-max-width .site-content {
 	max-width: none;
 }
 
+body.error404 .site-content {
+	margin-bottom: 2em;
+}
+
 @media #{$medium-only} {
 
 	body.layout-one-column-narrow .site-content {
