@@ -8,12 +8,12 @@
 	}
 }
 
-body.no-max-width .site-content {
-	max-width: none;
-}
-
 body.error404 .site-content {
 	margin-bottom: 2em;
+}
+
+body.no-max-width .site-content {
+	max-width: none;
 }
 
 @media #{$medium-only} {

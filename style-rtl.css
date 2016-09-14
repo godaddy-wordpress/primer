@@ -1393,11 +1393,11 @@ object {
     .site-content {
       margin-top: 1.38889%; } }
 
-body.no-max-width .site-content {
-  max-width: none; }
-
 body.error404 .site-content {
   margin-bottom: 2em; }
+
+body.no-max-width .site-content {
+  max-width: none; }
 
 @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
   body.layout-one-column-narrow .site-content {
