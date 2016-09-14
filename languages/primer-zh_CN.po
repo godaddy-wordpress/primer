@@ -1,22 +1,19 @@
-# Primer
-# Copyright (C) 2016
-# This file is distributed under the same license as the primer package.
-# GoDaddy Operating Company, LLC.
-#
-#, fuzzy
+# Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: primer 1.0.0\n"
+"Project-Id-Version: Primer 0.9.0\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-09-10 03:49:59+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2016-09-10 04:06:01+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 
 #: 404.php:22
 msgid "Oops! That page can't be found."
@@ -24,7 +21,8 @@ msgstr "哎呀！无法找到该页面。"
 
 #: 404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr "似乎在这个地址没有找到任何东西。请尝试以下搜索："
 
 #: comments.php:54 comments.php:79
@@ -58,8 +56,7 @@ msgid ""
 msgstr "抱歉，没有符合搜索条件的内容。 请试试其他关键词。"
 
 #: content-none.php:45
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "看来我们不能找到您要找的东西。请尝试进行搜索。"
 
 #: functions.php:217
@@ -90,8 +87,8 @@ msgstr "辅侧边栏"
 
 #: functions.php:324
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr "辅侧边栏仅将在您选择三列布局时出现。"
 
 #: functions.php:331
@@ -134,8 +131,7 @@ msgstr "跳至内容"
 msgid ""
 "Primer requires at least WordPress version %s. You are running version %s. "
 "Please upgrade and try again."
-msgstr ""
-"初级读物至少要求 WordPress 版本 %s。您正在运行版本 %s。请升级并再次尝试。"
+msgstr "初级读物至少要求 WordPress 版本 %s。您正在运行版本 %s。请升级并再次尝试。"
 
 #: inc/customizer/colors.php:41
 msgid "Site Title Text"
@@ -270,8 +266,7 @@ msgid "Hero Background Overlay"
 msgstr "英雄背景叠加"
 
 #: inc/customizer/colors.php:1272
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
+msgid "Control the color overlay transparency when using a custom Header Image."
 msgstr "当使用自定义标题图片时，控制颜色叠加透明度。"
 
 #: inc/customizer/fonts.php:81
@@ -299,7 +294,6 @@ msgid "Post titles, widget titles, form labels, and table headers."
 msgstr "帖子标题、小组件标题、表单标签和表格标题。"
 
 #: inc/customizer/fonts.php:118
-#, fuzzy
 msgid "Primary"
 msgstr "主"
 
@@ -372,8 +366,7 @@ msgid "Use featured image"
 msgstr "使用特色图片"
 
 #: inc/customizer.php:183
-msgid ""
-"Allow the featured image on the current post to override the hero image."
+msgid "Allow the featured image on the current post to override the hero image."
 msgstr "让当前帖子的特色图片覆盖英雄图片。"
 
 #: inc/helpers.php:51
@@ -426,27 +419,27 @@ msgid "1 Comment"
 msgstr "1 条评论"
 
 #. Theme Name of the plugin/theme
-#, fuzzy
 msgid "Primer"
-msgstr "主"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
-msgstr ""
+msgstr "https://github.com/godaddy/wp-primer-theme"
 
 #. Description of the plugin/theme
 msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
+"Primer is a powerful theme that brings clarity to your content in a fresh design."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
-msgstr ""
+msgstr "GoDaddy"
 
 #. Author URI of the plugin/theme
 msgid "https://www.godaddy.com/"
-msgstr ""
+msgstr "https://www.godaddy.com/"
 
 #: comments.php:34
 msgctxt "1. number of comments, 2. post title"

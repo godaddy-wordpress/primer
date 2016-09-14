@@ -1,22 +1,19 @@
-# Primer
-# Copyright (C) 2016
-# This file is distributed under the same license as the primer package.
-# GoDaddy Operating Company, LLC.
-#
-#, fuzzy
+# Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: primer 1.0.0\n"
+"Project-Id-Version: Primer 0.9.0\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-09-10 03:49:59+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2016-09-10 04:06:01+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 
 #: 404.php:22
 msgid "Oops! That page can't be found."
@@ -24,7 +21,8 @@ msgstr "Hov! Siden kunne ikke findes."
 
 #: 404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
 "Det ser ud til at der ikke er noget på den adresse. Prøv at søge nedenfor:"
 
@@ -61,11 +59,8 @@ msgstr ""
 "venligst igen med andre nøgleord."
 
 #: content-none.php:45
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr ""
-"Det ser ud til, at vi ikke kan finde det, du leder efter. Måske kan en "
-"søgning hjælpe."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Det ser ud til, at vi ikke kan finde det, du leder efter. Måske kan en søgning hjælpe."
 
 #: functions.php:217
 msgid "Primary Menu"
@@ -97,11 +92,10 @@ msgstr "Sekundær Sidebjælke"
 
 #: functions.php:324
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
-"Den sekundære sidebjælke vises kun når du har valgt et layouut med tre "
-"kolonner."
+"Den sekundære sidebjælke vises kun når du har valgt et layouut med tre kolonner."
 
 #: functions.php:331
 msgid "Footer 1"
@@ -169,9 +163,7 @@ msgstr "Overskriftstekst"
 
 #: inc/customizer/colors.php:122
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Indlægstitler, widget-titler, formularetiketter, tabeloverskrifter og "
-"knapper."
+msgstr "Indlægstitler, widget-titler, formularetiketter, tabeloverskrifter og knapper."
 
 #: inc/customizer/colors.php:143
 msgid "Primary Text"
@@ -187,9 +179,7 @@ msgstr "Sekundær tekst"
 
 #: inc/customizer/colors.php:192
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
-"Indlæggets forfatterlinje, kommentarantal, indlæggets sidefod og citatets "
-"sidefod."
+msgstr "Indlæggets forfatterlinje, kommentarantal, indlæggets sidefod og citatets sidefod."
 
 #: inc/customizer/colors.php:206
 msgid "Widget Heading Text"
@@ -284,11 +274,8 @@ msgid "Hero Background Overlay"
 msgstr "Baggrundsoverlejring til Hero"
 
 #: inc/customizer/colors.php:1272
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Administrér farveoverlejringens gennemsigtighed, når et brugerdefineret "
-"overskriftsbillede anvendes."
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Administrér farveoverlejringens gennemsigtighed, når et brugerdefineret overskriftsbillede anvendes."
 
 #: inc/customizer/fonts.php:81
 msgid "Site Title"
@@ -315,7 +302,6 @@ msgid "Post titles, widget titles, form labels, and table headers."
 msgstr "Indlægstitler, widget-titler, formularetiketter og tabeloverskrifter."
 
 #: inc/customizer/fonts.php:118
-#, fuzzy
 msgid "Primary"
 msgstr "Primær"
 
@@ -329,9 +315,7 @@ msgstr "Sekundært"
 
 #: inc/customizer/fonts.php:134
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Forfatterlinjer, kommentarantal, svarlinks, indlæggets sidefødder og "
-"citatets sidefødder."
+msgstr "Forfatterlinjer, kommentarantal, svarlinks, indlæggets sidefødder og citatets sidefødder."
 
 #: inc/customizer/fonts.php:182
 msgid "Fonts"
@@ -390,10 +374,8 @@ msgid "Use featured image"
 msgstr "Brug fremhævet billede"
 
 #: inc/customizer.php:183
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr ""
-"Lad det fremhævede billede på det aktuelle indlæg tilsidesætte hero-billedet."
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "Lad det fremhævede billede på det aktuelle indlæg tilsidesætte hero-billedet."
 
 #: inc/helpers.php:51
 msgid "404 Page Not Found"
@@ -445,27 +427,27 @@ msgid "1 Comment"
 msgstr "1 kommentar"
 
 #. Theme Name of the plugin/theme
-#, fuzzy
 msgid "Primer"
-msgstr "Primær"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
-msgstr ""
+msgstr "https://github.com/godaddy/wp-primer-theme"
 
 #. Description of the plugin/theme
 msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
+"Primer is a powerful theme that brings clarity to your content in a fresh design."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
-msgstr ""
+msgstr "GoDaddy"
 
 #. Author URI of the plugin/theme
 msgid "https://www.godaddy.com/"
-msgstr ""
+msgstr "https://www.godaddy.com/"
 
 #: comments.php:34
 msgctxt "1. number of comments, 2. post title"

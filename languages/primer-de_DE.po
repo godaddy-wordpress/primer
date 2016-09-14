@@ -1,22 +1,19 @@
-# Primer
-# Copyright (C) 2016
-# This file is distributed under the same license as the primer package.
-# GoDaddy Operating Company, LLC.
-#
-#, fuzzy
+# Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: primer 1.0.0\n"
+"Project-Id-Version: Primer 0.9.0\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-09-10 03:49:59+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2016-09-10 04:06:01+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 
 #: 404.php:22
 msgid "Oops! That page can't be found."
@@ -24,10 +21,11 @@ msgstr "Ups! Diese Seite kann nicht gefunden werden."
 
 #: 404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
-"Es sieht so aus, als ob an dieser Stelle nichts gefunden wurde. Versuchen "
-"Sie im Folgenden zu suchen:"
+"Es sieht so aus, als ob an dieser Stelle nichts gefunden wurde. Versuchen Sie "
+"im Folgenden zu suchen:"
 
 #: comments.php:54 comments.php:79
 msgid "Comment navigation"
@@ -62,11 +60,8 @@ msgstr ""
 "gefunden. Bitte versuchen Sie es erneut mit einem anderen Suchbegriffen."
 
 #: content-none.php:45
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr ""
-"Das, was Sie suchen, scheinen wir nicht finden können. Vielleicht kann eine "
-"Suchabfrage helfen."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Das, was Sie suchen, scheinen wir nicht finden können. Vielleicht kann eine Suchabfrage helfen."
 
 #: functions.php:217
 msgid "Primary Menu"
@@ -89,8 +84,8 @@ msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr ""
-"Die primäre Seitenleiste erscheint neben dem Inhalt jeder Seite, Post, "
-"Archiv und Suchvorlage."
+"Die primäre Seitenleiste erscheint neben dem Inhalt jeder Seite, Post, Archiv "
+"und Suchvorlage."
 
 #: functions.php:323
 msgid "Secondary Sidebar"
@@ -98,8 +93,8 @@ msgstr "Sekundäre Seitenleiste"
 
 #: functions.php:324
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
 "Die sekundäre Seitenleiste erscheint nur, wenn sie ein dreispaltiges Layout "
 "gewählt haben."
@@ -134,8 +129,7 @@ msgstr "Hero"
 
 #: functions.php:356
 msgid "Hero widgets appear over the header image on the front page."
-msgstr ""
-"Hero-Widgets werden über dem Header-Bild auf der ersten Seite angezeigt."
+msgstr "Hero-Widgets werden über dem Header-Bild auf der ersten Seite angezeigt."
 
 #: header.php:42
 msgid "Skip to content"
@@ -171,9 +165,7 @@ msgstr "Überschrifttext"
 
 #: inc/customizer/colors.php:122
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Posttitel, Widget-Titel, Formularbeschriftungen, Tabellenüberschriften und "
-"Schaltflächen."
+msgstr "Posttitel, Widget-Titel, Formularbeschriftungen, Tabellenüberschriften und Schaltflächen."
 
 #: inc/customizer/colors.php:143
 msgid "Primary Text"
@@ -189,8 +181,7 @@ msgstr "Sekundärer Text"
 
 #: inc/customizer/colors.php:192
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
-"Verfasserzeilen von Posts, Kommentarzähler, Post-Footer und Zitat-Footer."
+msgstr "Verfasserzeilen von Posts, Kommentarzähler, Post-Footer und Zitat-Footer."
 
 #: inc/customizer/colors.php:206
 msgid "Widget Heading Text"
@@ -285,11 +276,8 @@ msgid "Hero Background Overlay"
 msgstr "Hero-Hintergrund Überlagerung"
 
 #: inc/customizer/colors.php:1272
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Steuert die Transparenz der Farbüberlagerung bei Verwendung eines "
-"benutzerdefinierten Header-Bilds."
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Steuert die Transparenz der Farbüberlagerung bei Verwendung eines benutzerdefinierten Header-Bilds."
 
 #: inc/customizer/fonts.php:81
 msgid "Site Title"
@@ -313,11 +301,9 @@ msgstr "Überschriften"
 
 #: inc/customizer/fonts.php:103
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr ""
-"Posttitel, Widget-Titel, Formularbeschriftungen und Tabellenüberschriften."
+msgstr "Posttitel, Widget-Titel, Formularbeschriftungen und Tabellenüberschriften."
 
 #: inc/customizer/fonts.php:118
-#, fuzzy
 msgid "Primary"
 msgstr "Primär"
 
@@ -331,9 +317,7 @@ msgstr "Neben"
 
 #: inc/customizer/fonts.php:134
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Verfasserzeilen, Kommentarzähler, Antwort-Links, Post-Footer und Zitat-"
-"Footer."
+msgstr "Verfasserzeilen, Kommentarzähler, Antwort-Links, Post-Footer und Zitat-Footer."
 
 #: inc/customizer/fonts.php:182
 msgid "Fonts"
@@ -377,9 +361,7 @@ msgstr "Standardlayout"
 
 #: inc/customizer/layouts.php:465
 msgid "All posts and pages on your site will use this layout by default."
-msgstr ""
-"Alle Posts und Seiten auf Ihrer Website verwenden standardmäßig dieses "
-"Layout."
+msgstr "Alle Posts und Seiten auf Ihrer Website verwenden standardmäßig dieses Layout."
 
 #: inc/customizer/layouts.php:494
 msgid "Page Width"
@@ -394,10 +376,8 @@ msgid "Use featured image"
 msgstr "Bild im Fokus verwenden"
 
 #: inc/customizer.php:183
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr ""
-"Das Bild im Fokus in diesem aktuellen Post darf das Hero-Bild überschreiben."
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "Das Bild im Fokus in diesem aktuellen Post darf das Hero-Bild überschreiben."
 
 #: inc/helpers.php:51
 msgid "404 Page Not Found"
@@ -449,27 +429,27 @@ msgid "1 Comment"
 msgstr "1 Kommentar"
 
 #. Theme Name of the plugin/theme
-#, fuzzy
 msgid "Primer"
-msgstr "Primär"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
-msgstr ""
+msgstr "https://github.com/godaddy/wp-primer-theme"
 
 #. Description of the plugin/theme
 msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
+"Primer is a powerful theme that brings clarity to your content in a fresh design."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
-msgstr ""
+msgstr "GoDaddy"
 
 #. Author URI of the plugin/theme
 msgid "https://www.godaddy.com/"
-msgstr ""
+msgstr "https://www.godaddy.com/"
 
 #: comments.php:34
 msgctxt "1. number of comments, 2. post title"
@@ -571,9 +551,7 @@ msgstr "Fließend"
 #: inc/customizer/layouts.php:283
 msgctxt "link to the Customizer"
 msgid "The site-wide Default layout setting is located in the %s."
-msgstr ""
-"Die für die Seite geltende Einstellung für das Standardlayout befindet sind "
-"in %s."
+msgstr "Die für die Seite geltende Einstellung für das Standardlayout befindet sind in %s."
 
 #: inc/customizer/layouts.php:287
 msgctxt "title of a component found in WordPress"
