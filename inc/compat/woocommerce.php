@@ -158,7 +158,7 @@ add_filter( 'primer_the_page_title', 'primer_wc_shop_title' );
  */
 function primer_wc_shop_columns( $columns ) {
 
-	if ( is_shop() && 0 === strpos( primer_get_layout(), 'three-column-' ) ) {
+	if ( is_shop() && 0 === strpos( primer_get_layout( wc_get_page_id( 'shop' ) ), 'three-column-' ) ) {
 
 		add_filter( 'post_class', 'primer_wc_product_classes' );
 
