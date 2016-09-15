@@ -427,7 +427,7 @@ msgstr "1 टिप्पणी"
 
 #. Theme Name of the plugin/theme
 msgid "Primer"
-msgstr "Primer"
+msgstr "प्राइमर"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -438,7 +438,7 @@ msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer is a powerful theme that brings clarity to your content in a fresh design."
+"प्राइमर एक शक्तिशाली थीम है, जो नए डिज़ाइन में आपकी सामग्री पर स्पष्टता लाती है."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"

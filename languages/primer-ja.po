@@ -431,8 +431,7 @@ msgstr "https://github.com/godaddy/wp-primer-theme"
 msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
-msgstr ""
-"Primer is a powerful theme that brings clarity to your content in a fresh design."
+msgstr "Primerは、フレッシュなデザインであなたのコンテンツに明瞭さをもたらすパワフルなテーマです。"
 
 #. Author of the plugin/theme
 msgid "GoDaddy"

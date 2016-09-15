@@ -440,7 +440,8 @@ msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer is a powerful theme that brings clarity to your content in a fresh design."
+"O Primer é um tema sofisticado, proporcionando clareza ao seu conteúdo "
+"através de uma conceção inovadora."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
