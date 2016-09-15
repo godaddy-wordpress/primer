@@ -421,7 +421,7 @@ msgstr "1 의견"
 
 #. Theme Name of the plugin/theme
 msgid "Primer"
-msgstr "프라이머"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -431,7 +431,7 @@ msgstr "https://github.com/godaddy/wp-primer-theme"
 msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
-msgstr "프라이머는 신선한 디자인의 컨텐트에 명료함을 불어 넣는 강력한 테마입니다."
+msgstr "Primer는 신선한 디자인의 컨텐트에 명료함을 불어 넣는 강력한 테마입니다."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
