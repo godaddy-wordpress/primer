@@ -8,8 +8,6 @@
 
 .site-header-wrapper {
 	@include container($container-size);
-
-	margin-right: 5rem;
 }
 
 body.no-max-width .site-header-wrapper {

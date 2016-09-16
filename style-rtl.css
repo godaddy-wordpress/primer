@@ -1571,8 +1571,7 @@ body.no-max-width .site-content {
 .site-header-wrapper {
   max-width: 1100px;
   margin-right: auto;
-  margin-left: auto;
-  margin-left: 5rem; }
+  margin-left: auto; }
   .site-header-wrapper:after {
     content: " ";
     display: block;
