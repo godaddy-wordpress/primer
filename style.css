@@ -1416,6 +1416,9 @@ object {
     .site-content {
       margin-top: 1.38889%; } }
 
+body.error404 .site-content {
+  margin-bottom: 2em; }
+
 body.no-max-width .site-content {
   max-width: none; }
 
