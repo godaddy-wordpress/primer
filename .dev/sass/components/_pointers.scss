@@ -1,0 +1,28 @@
+.wp-pointer-content {
+
+	border-top: none;
+
+	h3 {
+		font-family: sans-serif;
+	}
+
+	p {
+		font-family: sans-serif;
+		font-size: 13px;
+		line-height: 1.4;
+	}
+
+	a.close,
+	a.close:visited {
+		color: #0073aa;
+		line-height: 1.5;
+		font-family: sans-serif;
+		font-weight: 400;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: #00a0d2;
+		}
+	}
+}
