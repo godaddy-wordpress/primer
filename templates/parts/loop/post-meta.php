@@ -9,7 +9,11 @@
 
 <div class="entry-meta">
 
-	<span class="posted-date"><?php the_date(); ?></span>
+    <?php if ( is_new_day() ) : ?>
+
+	    <span class="posted-date"><?php the_date(); ?></span>
+
+    <?php endif; ?>
 
 	<span class="posted-author"><?php the_author_posts_link(); ?></span>
 
