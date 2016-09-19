@@ -81,7 +81,7 @@ function primer_the_site_title() {
 function primer_the_site_description() {
 
 	$html = sprintf(
-		'<div class="site-description">%s</a></div>',
+		'<div class="site-description">%s</div>',
 		get_bloginfo( 'description' )
 	);
 
