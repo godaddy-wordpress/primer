@@ -22,7 +22,7 @@
 		do_action( 'primer_before_footer' );
 		?>
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
+		<footer id="colophon" class="site-footer">
 
 			<div class="site-footer-inner">
 
