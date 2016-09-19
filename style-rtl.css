@@ -2077,6 +2077,7 @@ body.no-max-width .site-info-wrapper .site-info {
   margin: 1em 0 0; }
 
 .entry-footer {
+  padding-top: 1em;
   font-size: 85%;
   color: #686868; }
   .entry-footer .entry-footer-right {
