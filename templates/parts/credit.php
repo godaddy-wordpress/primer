@@ -38,7 +38,7 @@ if ( (bool) apply_filters( 'primer_author_credit', true ) ) {
 			esc_html( $theme->get( 'Name' ) )
 		),
 		sprintf(
-			'<a href="%s" rel="designer">%s</a>',
+			'<a href="%s" rel="author">%s</a>',
 			esc_url( $theme->get( 'AuthorURI' ) ),
 			esc_html( $theme->get( 'Author' ) )
 		)

@@ -130,7 +130,7 @@ function primer_paging_nav() {
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
 
-		<h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'primer' ); ?></h1>
+		<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'primer' ); ?></h2>
 
 		<div class="nav-links">
 
