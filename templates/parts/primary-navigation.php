@@ -18,11 +18,11 @@
 	do_action( 'primer_before_site_navigation' );
 	?>
 
-	<nav id="site-navigation" class="main-navigation" role="navigation">
+	<nav id="site-navigation" class="main-navigation">
 
 		<?php
 		/**
-		 * Fires inside the `<nav id="site-navigation" class="main-navigation" role="navigation">` element.
+		 * Fires inside the `<nav id="site-navigation" class="main-navigation">` element.
 		 *
 		 * @since 1.0.0
 		 */

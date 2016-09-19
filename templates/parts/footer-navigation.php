@@ -7,7 +7,7 @@
  */
 ?>
 
-<nav class="footer-menu" role="navigation">
+<nav class="footer-menu">
 
 	<?php
 
