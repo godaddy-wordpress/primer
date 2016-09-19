@@ -33,7 +33,7 @@
 
 	<?php
 	/**
-	 * Fires after the `<nav id="site-navigation" class="main-navigation" role="navigation">` element.
+	 * Fires after the `<nav id="site-navigation" class="main-navigation">` element.
 	 *
 	 * @since 1.0.0
 	 */
