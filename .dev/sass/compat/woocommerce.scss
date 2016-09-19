@@ -1,0 +1,39 @@
+.woocommerce-page {
+
+	/* 2 Column Layout */
+	ul.products li.product.primer-2-column-product {
+		width: 48.05%;
+	}
+
+	/* Quantity field */
+	.primer-woocommerce .cart .qty {
+		padding: 0.18em;
+	}
+
+}
+
+body.post-type-archive,
+body.single-product {
+
+	/* On sale badge */
+	span.onsale,
+	ul.products li.product .onsale {
+		padding: 2px 8px;
+		border-radius: 0;
+		margin: 0;
+		min-height: auto;
+		min-width: auto;
+		line-height: inherit;
+	}
+
+}
+
+body.single-product {
+
+	span.onsale {
+		padding: 3px 18px;
+		top: 0;
+		left: 0;
+	}
+
+}
