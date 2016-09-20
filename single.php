@@ -18,7 +18,7 @@ get_header(); ?>
 
 		<?php get_template_part( 'content' ); ?>
 
-		<?php the_primer_post_nav(); ?>
+		<?php primer_post_nav(); ?>
 
 		<?php if ( comments_open() || get_comments_number() ) : ?>
 

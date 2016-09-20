@@ -19,7 +19,7 @@
 		 *
 		 * @since 1.0.0
 		 */
-		do_action( 'the_primer_before_footer' );
+		do_action( 'primer_before_footer' );
 		?>
 
 		<footer id="colophon" class="site-footer">
@@ -32,7 +32,7 @@
 				 *
 				 * @since 1.0.0
 				 */
-				do_action( 'the_primer_footer' );
+				do_action( 'primer_footer' );
 				?>
 
 			</div><!-- .site-footer-inner -->
@@ -45,7 +45,7 @@
 		 *
 		 * @since 1.0.0
 		 */
-		do_action( 'the_primer_after_footer' );
+		do_action( 'primer_after_footer' );
 		?>
 
 	</div><!-- #page -->
