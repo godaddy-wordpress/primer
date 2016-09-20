@@ -6,4 +6,4 @@
  * @since   1.0.0
  */
 
-edit_post_link( esc_html__( 'Edit', 'primer' ), '<span class="edit-link">', '</span>' );
+edit_post_link( esc_html__( 'Edit', 'the-primer' ), '<span class="edit-link">', '</span>' );

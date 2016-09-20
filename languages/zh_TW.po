@@ -1,0 +1,603 @@
+# Primer
+# Copyright (C) 2016
+# This file is distributed under the same license as the primer package.
+# GoDaddy Operating Company, LLC.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: primer 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
+"POT-Creation-Date: 2016-09-19 21:44:20+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: 404.php:22
+msgid "Oops! That page can't be found."
+msgstr "糟糕了！找不到該頁面。"
+
+#: 404.php:28
+msgid ""
+"It looks like nothing was found at this location. Please try searching below:"
+msgstr "在此位置中找不到。請嘗試搜尋下列項目："
+
+#: comments.php:54 comments.php:79
+msgid "Comment navigation"
+msgstr "評論瀏覽"
+
+#: comments.php:81
+msgid "&larr; Older Comments"
+msgstr "&larr; 較舊的評論"
+
+#: comments.php:83
+msgid "Newer Comments &rarr;"
+msgstr "較新的評論 &rarr;"
+
+#: comments.php:93
+msgid "Comments are closed."
+msgstr "意見已關閉。"
+
+#: content-none.php:16
+msgid "Nothing Found"
+msgstr "找不到項目"
+
+#: content-none.php:31
+msgid "Get started here"
+msgstr "立即開始"
+
+#: content-none.php:39
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "抱歉，沒有與您的搜尋相符的項目。 請用其他關鍵字再試一次。"
+
+#: content-none.php:45
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "我們找不到您要尋找的項目。請試試搜尋功能。"
+
+#: functions.php:159
+msgid "Featured"
+msgstr ""
+
+#: functions.php:165 functions.php:407
+msgid "Hero"
+msgstr "Hero"
+
+#: functions.php:246
+msgid "Primary Menu"
+msgstr "主功能表"
+
+#: functions.php:247
+msgid "Social Menu"
+msgstr "社交選單"
+
+#: functions.php:248
+msgid "Footer Menu"
+msgstr "結尾功能表"
+
+#: functions.php:367
+msgid "Sidebar"
+msgstr "側邊欄"
+
+#: functions.php:368
+msgid ""
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
+msgstr "主要側邊欄會出現在每個頁面、貼文、封存和搜尋範本的內容旁。"
+
+#: functions.php:375
+msgid "Secondary Sidebar"
+msgstr "次要側邊欄"
+
+#: functions.php:376
+msgid ""
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
+msgstr "次要側邊欄只會在您選取三欄版面配置時才會出現。"
+
+#: functions.php:383
+msgid "Footer 1"
+msgstr "結尾 1"
+
+#: functions.php:384
+msgid "This sidebar is the first column of the footer widget area."
+msgstr "此側邊欄會出現在結尾小工具區域的第一欄中。"
+
+#: functions.php:391
+msgid "Footer 2"
+msgstr "結尾 2"
+
+#: functions.php:392
+msgid "This sidebar is the second column of the footer widget area."
+msgstr "此側邊欄會出現在結尾小工具區域的第二欄中。"
+
+#: functions.php:399
+msgid "Footer 3"
+msgstr "結尾 3"
+
+#: functions.php:400
+msgid "This sidebar is the third column of the footer widget area."
+msgstr "此側邊欄會出現在結尾小工具區域的第三欄中。"
+
+#: functions.php:408
+msgid "Hero widgets appear over the header image on the front page."
+msgstr "Hero 小工具會出現在首頁的標題圖片上。"
+
+#: header.php:42
+msgid "Skip to content"
+msgstr "略過內容"
+
+#: inc/compat/wordpress.php:47
+msgid ""
+"Primer requires at least WordPress version %s. You are running version %s. "
+"Please upgrade and try again."
+msgstr "至少需要 WordPress 版本 %s。您執行的是 %s。請升級並再試一次。"
+
+#: inc/customizer/colors.php:47
+msgid "Site Title Text"
+msgstr "網站標題文字"
+
+#: inc/customizer/colors.php:63
+msgid "Tagline Text"
+msgstr "標語文字"
+
+#: inc/customizer/colors.php:74
+msgid "Hero Text"
+msgstr "Hero 文字"
+
+#: inc/customizer/colors.php:105 inc/customizer/colors.php:321
+msgid "Text"
+msgstr "文字"
+
+#: inc/customizer/colors.php:127
+msgid "Heading Text"
+msgstr "標題文字"
+
+#: inc/customizer/colors.php:128
+msgid "Post titles, widget titles, form labels, table headers and buttons."
+msgstr "貼文標題、小工具標題、表格標籤、表格標題和按鈕。"
+
+#: inc/customizer/colors.php:149
+msgid "Primary Text"
+msgstr "主要文字"
+
+#: inc/customizer/colors.php:150
+msgid "Paragraphs, lists, menu links, quotes and tables."
+msgstr "段落、清單、功能表連結、引文和表格。"
+
+#: inc/customizer/colors.php:195
+msgid "Secondary Text"
+msgstr "次要文字"
+
+#: inc/customizer/colors.php:196
+msgid "Post bylines, comment counts, post footers and quote footers."
+msgstr "貼文署名、評論次數、貼文結尾及引文結尾。"
+
+#: inc/customizer/colors.php:210
+msgid "Widget Heading Text"
+msgstr "小工具標題文字"
+
+#: inc/customizer/colors.php:227
+msgid "Widget Text"
+msgstr "小工具文字"
+
+#: inc/customizer/colors.php:238
+msgid "Menu Text"
+msgstr "功能表文字"
+
+#: inc/customizer/colors.php:260
+msgid "Copyright Text"
+msgstr "著作權文字"
+
+#: inc/customizer/colors.php:274
+msgid "Link Text"
+msgstr "連結文字"
+
+#: inc/customizer/colors.php:296 inc/customizer/colors.php:377
+msgid "Background"
+msgstr "背景"
+
+#: inc/customizer/colors.php:338
+msgid "Page Background"
+msgstr "網頁背景"
+
+#: inc/customizer/colors.php:348
+msgid "Content Background"
+msgstr "內容背景"
+
+#: inc/customizer/colors.php:358
+msgid "Hero Background"
+msgstr "Hero 背景"
+
+#: inc/customizer/colors.php:387
+msgid "Widgets Background"
+msgstr "小工具背景"
+
+#: inc/customizer/colors.php:398
+msgid "Widget Content Background"
+msgstr "小工具內容背景"
+
+#: inc/customizer/colors.php:409
+msgid "Footer Background"
+msgstr "結尾背景"
+
+#: inc/customizer/colors.php:447 inc/customizer/layouts.php:315
+msgid "Custom"
+msgstr "自訂"
+
+#: inc/customizer/colors.php:464 inc/customizer/layouts.php:306
+msgid "Default"
+msgstr "預設"
+
+#: inc/customizer/colors.php:704
+msgid "Colors"
+msgstr "顏色"
+
+#: inc/customizer/colors.php:713
+msgid "Color Schemes"
+msgstr "色彩配置"
+
+#: inc/customizer/colors.php:721
+msgid "Header"
+msgstr "標題"
+
+#: inc/customizer/colors.php:729
+msgid "Menu"
+msgstr "功能表"
+
+#: inc/customizer/colors.php:737
+msgid "Buttons"
+msgstr "按鈕"
+
+#: inc/customizer/colors.php:745
+msgid "Content"
+msgstr "內容"
+
+#: inc/customizer/colors.php:753
+msgid "Footer"
+msgstr "頁尾"
+
+#: inc/customizer/colors.php:963
+msgid "Base Color Scheme"
+msgstr "基本色彩配置"
+
+#: inc/customizer/colors.php:1272
+msgid "Hero Background Overlay"
+msgstr "Hero 背景重疊"
+
+#: inc/customizer/colors.php:1273
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr "使用自訂標頭圖片時控制色彩重疊透明度。"
+
+#: inc/customizer/fonts.php:87
+msgid "Site Title"
+msgstr "網站標題"
+
+#: inc/customizer/fonts.php:88
+msgid "Site title text in the header."
+msgstr "標頭中的網站標題文字。"
+
+#: inc/customizer/fonts.php:97
+msgid "Navigation"
+msgstr "導覽"
+
+#: inc/customizer/fonts.php:98
+msgid "Primary menu links and button links."
+msgstr "主要功能表連結及按鈕連結。"
+
+#: inc/customizer/fonts.php:108
+msgid "Headings"
+msgstr "標頭"
+
+#: inc/customizer/fonts.php:109
+msgid "Post titles, widget titles, form labels, and table headers."
+msgstr "貼文標題、小工具標題、表格標籤以及表格標頭。"
+
+#: inc/customizer/fonts.php:124
+#, fuzzy
+msgid "Primary"
+msgstr "主要"
+
+#: inc/customizer/fonts.php:125
+msgid "Paragraphs, lists, links, quotes, and tables."
+msgstr "段落、清單、連結、引文和表格。"
+
+#: inc/customizer/fonts.php:139
+msgid "Secondary"
+msgstr "次要"
+
+#: inc/customizer/fonts.php:140
+msgid "Bylines, comment counts, reply links, post footers, and quote footers."
+msgstr "署名、評論次數、回覆連結、貼文結尾及引文結尾。"
+
+#: inc/customizer/fonts.php:188
+msgid "Fonts"
+msgstr "字型"
+
+#: inc/customizer/layouts.php:53
+msgid "One Column: Wide"
+msgstr "單欄：寬"
+
+#: inc/customizer/layouts.php:54
+msgid "One Column: Narrow"
+msgstr "單欄：窄"
+
+#: inc/customizer/layouts.php:55 inc/customizer/layouts.php:144
+msgid "Two Columns: Content | Sidebar"
+msgstr "2 欄：內容 | 側邊欄"
+
+#: inc/customizer/layouts.php:56 inc/customizer/layouts.php:143
+msgid "Two Columns: Sidebar | Content"
+msgstr "2 欄：側邊欄 | 內容"
+
+#: inc/customizer/layouts.php:57 inc/customizer/layouts.php:146
+msgid "Three Columns: Content | Sidebar | Sidebar"
+msgstr "3 欄：內容 | 側邊欄 | 側邊欄"
+
+#: inc/customizer/layouts.php:58
+msgid "Three Columns: Sidebar | Content | Sidebar"
+msgstr "3 欄：側邊欄 | 內容 | 側邊欄"
+
+#: inc/customizer/layouts.php:59 inc/customizer/layouts.php:145
+msgid "Three Columns: Sidebar | Sidebar | Content"
+msgstr "3 欄：側邊欄 | 側邊欄 | 內容"
+
+#: inc/customizer/layouts.php:256 inc/customizer/layouts.php:447
+msgid "Layout"
+msgstr "版面"
+
+#: inc/customizer/layouts.php:473
+msgid "Page Width"
+msgstr "網頁寬度"
+
+#: inc/customizer/layouts.php:474
+msgid "Display your site differently on larger screens."
+msgstr "在較大的螢幕上以不同方式顯示網站。"
+
+#: inc/customizer.php:163
+msgid "Use featured image"
+msgstr "使用特色圖片"
+
+#: inc/customizer.php:164
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr "允許特色圖片出現在目前貼文中並取代 Hero 圖片。"
+
+#: inc/helpers.php:52
+msgid "404 Page Not Found"
+msgstr "404 找不到頁面"
+
+#: inc/template-tags.php:133
+msgid "Posts navigation"
+msgstr "貼文瀏覽"
+
+#: inc/template-tags.php:139
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> 較舊的貼文"
+
+#: inc/template-tags.php:145
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "較新的貼文 <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:178
+msgid "Post navigation"
+msgstr "貼文瀏覽"
+
+#: inc/template-tags.php:279
+msgid "Blog"
+msgstr "部落格"
+
+#: templates/parts/loop/page-content.php:27
+#: templates/parts/loop/post-content.php:18
+msgid "Pages:"
+msgstr "網頁："
+
+#: templates/parts/loop/page-footer.php:9
+#: templates/parts/loop/post-footer.php:14
+#: templates/parts/loop/post-search-footer.php:46
+msgid "Edit"
+msgstr "編輯"
+
+#: templates/parts/loop/post-content.php:14
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr "閱讀更多 <span class=\"meta-nav\">&rarr;</span>"
+
+#: templates/parts/loop/post-meta.php:26
+#: templates/parts/loop/post-search-footer.php:42
+msgid "Leave a comment"
+msgstr "留下評論"
+
+#: templates/parts/loop/post-meta.php:26
+#: templates/parts/loop/post-search-footer.php:42
+msgid "1 Comment"
+msgstr "1 則評論"
+
+#. Theme Name of the plugin/theme
+#, fuzzy
+msgid "The Primer"
+msgstr "主要"
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/godaddy/wp-primer-theme"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Primer is a powerful theme that brings clarity to your content in a fresh "
+"design."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "GoDaddy"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.godaddy.com/"
+msgstr ""
+
+#: comments.php:34
+msgctxt "1. number of comments, 2. post title"
+msgid "One thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
+msgstr[0] "對 %2$s 有一個想法"
+msgstr[1] "對 %2$s 有 %1$d 個想法"
+
+#: comments.php:56
+msgctxt "left arrow (LTR) / right arrow (RTL)"
+msgid "%s Older Comments"
+msgstr "%s 較舊的評論"
+
+#: comments.php:58
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Newer Comments %s"
+msgstr "較新的評論 %s"
+
+#: templates/parts/loop/post-excerpt.php:14
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Continue Reading %s"
+msgstr "繼續閱讀 %s"
+
+#: content-none.php:27
+msgctxt "link to write a new post"
+msgid "Ready to publish your first post? %s."
+msgstr "準備好發佈第一則貼文嗎？%s"
+
+#: inc/customizer/colors.php:474
+msgctxt "color scheme name"
+msgid "Blush"
+msgstr "筆刷"
+
+#: inc/customizer/colors.php:478
+msgctxt "color scheme name"
+msgid "Bronze"
+msgstr "銅牌"
+
+#: inc/customizer/colors.php:482
+msgctxt "color scheme name"
+msgid "Canary"
+msgstr "金絲雀"
+
+#: inc/customizer/colors.php:486
+msgctxt "color scheme name"
+msgid "Cool"
+msgstr "很棒的"
+
+#: inc/customizer/colors.php:490
+msgctxt "color scheme name"
+msgid "Dark"
+msgstr "暗"
+
+#: inc/customizer/colors.php:494
+msgctxt "color scheme name"
+msgid "Iguana"
+msgstr "鬣蜥蜴"
+
+#: inc/customizer/colors.php:498
+msgctxt "color scheme name"
+msgid "Muted"
+msgstr "靜音"
+
+#: inc/customizer/colors.php:502
+msgctxt "color scheme name"
+msgid "Plum"
+msgstr "梅紅"
+
+#: inc/customizer/colors.php:506
+msgctxt "color scheme name"
+msgid "Rose"
+msgstr "玫瑰"
+
+#: inc/customizer/colors.php:510
+msgctxt "color scheme name"
+msgid "Tangerine"
+msgstr "橘子"
+
+#: inc/customizer/colors.php:514
+msgctxt "color scheme name"
+msgid "Turquoise"
+msgstr "綠寶"
+
+#: inc/customizer/fonts.php:213
+msgctxt "font name"
+msgid "%s (Default)"
+msgstr "%s (預設)"
+
+#: inc/customizer/layouts.php:97
+msgctxt "fixed-width page layout"
+msgid "Fixed"
+msgstr "固定"
+
+#: inc/customizer/layouts.php:98
+msgctxt "fluid-width page layout"
+msgid "Fluid"
+msgstr "流暢"
+
+#: inc/customizer/layouts.php:288
+msgctxt "link to the Customizer"
+msgid "The site-wide Default layout setting is located in the %s."
+msgstr "網站寬度預設版面配置設定位於 %s。"
+
+#: inc/customizer/layouts.php:292
+msgctxt "title of a component found in WordPress"
+msgid "Customizer"
+msgstr "自訂工具"
+
+#: inc/helpers.php:41
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr "搜尋以下項目的結果： %s"
+
+#: inc/hooks.php:384
+msgctxt "page number"
+msgid "Page %d"
+msgstr "第 %d 頁"
+
+#: templates/parts/credit.php:14
+msgctxt "1. copyright symbol, 2. year, 3. site title"
+msgid "Copyright %1$s %2$d %3$s"
+msgstr "Copyright %1$s %2$d %3$s"
+
+#: templates/parts/credit.php:34
+msgctxt "1. theme name link, 2. theme author link"
+msgid "%1$s theme by %2$s"
+msgstr "%1$s 主題，作者：%2$s"
+
+#: templates/parts/loop/post-footer.php:20
+#: templates/parts/loop/post-footer.php:32
+#: templates/parts/loop/post-search-footer.php:14
+#: templates/parts/loop/post-search-footer.php:26
+msgctxt "separator for items in a list"
+msgid ", "
+msgstr "、 "
+
+#: templates/parts/loop/post-footer.php:26
+#: templates/parts/loop/post-search-footer.php:20
+msgctxt "category list"
+msgid "Posted in: %s"
+msgstr "發佈位置： %s"
+
+#: templates/parts/loop/post-footer.php:38
+#: templates/parts/loop/post-search-footer.php:32
+msgctxt "tag list"
+msgid "Filed under: %s"
+msgstr "歸檔位置： %s"
+
+#: templates/parts/loop/post-meta.php:26
+#: templates/parts/loop/post-search-footer.php:42
+msgctxt "number of comments"
+msgid "% Comments"
+msgstr "% 則評論"
+
+#~ msgid "Default Layout"
+#~ msgstr "預設版面配置"
+
+#~ msgid "All posts and pages on your site will use this layout by default."
+#~ msgstr "網站上的所有貼文和頁面預設都會使用此版面配置。"

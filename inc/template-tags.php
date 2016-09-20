@@ -130,19 +130,19 @@ function primer_paging_nav() {
 	?>
 	<nav class="navigation paging-navigation">
 
-		<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'primer' ); ?></h2>
+		<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'the-primer' ); ?></h2>
 
 		<div class="nav-links">
 
 		<?php if ( get_next_posts_link() ) : ?>
 
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'primer' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'the-primer' ) ); ?></div>
 
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
 
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'primer' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'the-primer' ) ); ?></div>
 
 		<?php endif; ?>
 
@@ -175,7 +175,7 @@ function primer_post_nav() {
 	?>
 	<nav class="navigation post-navigation">
 
-		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'primer' ); ?></h1>
+		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'the-primer' ); ?></h1>
 
 		<div class="nav-links">
 
@@ -276,7 +276,7 @@ function primer_breadcrumbs() {
 			printf(
 				'<a href="%s">%s</a>%s',
 				esc_url( primer_get_posts_url() ),
-				esc_html__( 'Blog', 'primer' ),
+				esc_html__( 'Blog', 'the-primer' ),
 				$separator // xss ok
 			);
 

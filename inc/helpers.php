@@ -38,7 +38,7 @@ function primer_get_the_page_title() {
 		case is_search() :
 
 			$title = sprintf(
-				esc_html_x( 'Search Results for: %s', 'search term', 'primer' ),
+				esc_html_x( 'Search Results for: %s', 'search term', 'the-primer' ),
 				sprintf(
 					'<span>%s</span>',
 					get_search_query()
@@ -49,7 +49,7 @@ function primer_get_the_page_title() {
 
 		case is_404() :
 
-			$title = esc_html__( '404 Page Not Found', 'primer' );
+			$title = esc_html__( '404 Page Not Found', 'the-primer' );
 
 			break;
 

@@ -44,7 +44,7 @@ class Primer_Customizer_Colors {
 				 * Text colors
 				 */
 				'header_textcolor' => array(
-					'label'           => esc_html__( 'Site Title Text', 'primer' ),
+					'label'           => esc_html__( 'Site Title Text', 'the-primer' ),
 					'default'         => '#ffffff',
 					'section'         => 'colors-header',
 					'active_callback' => 'display_header_text',
@@ -60,7 +60,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'tagline_text_color' => array(
-					'label'           => esc_html__( 'Tagline Text', 'primer' ),
+					'label'           => esc_html__( 'Tagline Text', 'the-primer' ),
 					'default'         => '#ffffff',
 					'section'         => 'colors-header',
 					'active_callback' => 'display_header_text',
@@ -71,7 +71,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'hero_text_color' => array(
-					'label'    => esc_html__( 'Hero Text', 'primer' ),
+					'label'    => esc_html__( 'Hero Text', 'the-primer' ),
 					'default'  => '#ffffff',
 					'section'  => 'colors-header',
 					'priority' => 20,
@@ -102,7 +102,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'menu_text_color' => array(
-					'label'   => esc_html__( 'Text', 'primer' ),
+					'label'   => esc_html__( 'Text', 'the-primer' ),
 					'default' => '#ffffff',
 					'section' => 'colors-menu',
 					'css'     => array(
@@ -124,8 +124,8 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'heading_text_color' => array(
-					'label'       => esc_html__( 'Heading Text', 'primer' ),
-					'description' => esc_html__( 'Post titles, widget titles, form labels, table headers and buttons.', 'primer' ),
+					'label'       => esc_html__( 'Heading Text', 'the-primer' ),
+					'description' => esc_html__( 'Post titles, widget titles, form labels, table headers and buttons.', 'the-primer' ),
 					'default'     => '#353535',
 					'section'     => 'colors-content',
 					'css'         => array(
@@ -146,8 +146,8 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'primary_text_color' => array(
-					'label'       => esc_html__( 'Primary Text', 'primer' ),
-					'description' => esc_html__( 'Paragraphs, lists, menu links, quotes and tables.', 'primer' ),
+					'label'       => esc_html__( 'Primary Text', 'the-primer' ),
+					'description' => esc_html__( 'Paragraphs, lists, menu links, quotes and tables.', 'the-primer' ),
 					'default'     => '#252525',
 					'section'     => 'colors-content',
 					'css'         => array(
@@ -192,8 +192,8 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'secondary_text_color' => array(
-					'label'       => esc_html__( 'Secondary Text', 'primer' ),
-					'description' => esc_html__( 'Post bylines, comment counts, post footers and quote footers.', 'primer' ),
+					'label'       => esc_html__( 'Secondary Text', 'the-primer' ),
+					'description' => esc_html__( 'Post bylines, comment counts, post footers and quote footers.', 'the-primer' ),
 					'default'     => '#686868',
 					'section'     => 'colors-content',
 					'css'         => array(
@@ -207,7 +207,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_widget_heading_text_color' => array(
-					'label'           => esc_html__( 'Widget Heading Text', 'primer' ),
+					'label'           => esc_html__( 'Widget Heading Text', 'the-primer' ),
 					'default'         => '#353535',
 					'section'         => 'colors-footer',
 					'active_callback' => 'primer_has_active_footer_sidebars',
@@ -224,7 +224,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_widget_text_color' => array(
-					'label'           => esc_html__( 'Widget Text', 'primer' ),
+					'label'           => esc_html__( 'Widget Text', 'the-primer' ),
 					'default'         => '#252525',
 					'section'         => 'colors-footer',
 					'active_callback' => 'primer_has_active_footer_sidebars',
@@ -235,7 +235,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_menu_text_color' => array(
-					'label'           => esc_html__( 'Menu Text', 'primer' ),
+					'label'           => esc_html__( 'Menu Text', 'the-primer' ),
 					'default'         => '#686868',
 					'section'         => 'colors-footer',
 					'priority'        => 20,
@@ -257,7 +257,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_text_color' => array(
-					'label'    => esc_html__( 'Copyright Text', 'primer' ),
+					'label'    => esc_html__( 'Copyright Text', 'the-primer' ),
 					'default'  => '#686868',
 					'section'  => 'colors-footer',
 					'priority' => 30,
@@ -271,7 +271,7 @@ class Primer_Customizer_Colors {
 				 * Link / Button colors
 				 */
 				'link_color' => array(
-					'label'   => esc_html__( 'Link Text', 'primer' ),
+					'label'   => esc_html__( 'Link Text', 'the-primer' ),
 					'default' => '#ff6663',
 					'section' => 'colors-content',
 					'css'     => array(
@@ -293,7 +293,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'button_color' => array(
-					'label'   => esc_html__( 'Background', 'primer' ),
+					'label'   => esc_html__( 'Background', 'the-primer' ),
 					'default' => '#ff6663',
 					'section' => 'colors-buttons',
 					'css'     => array(
@@ -318,7 +318,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'button_text_color' => array(
-					'label'   => esc_html__( 'Text', 'primer' ),
+					'label'   => esc_html__( 'Text', 'the-primer' ),
 					'default' => '#ffffff',
 					'section' => 'colors-buttons',
 					'css'     => array(
@@ -335,7 +335,7 @@ class Primer_Customizer_Colors {
 				 * Background colors
 				 */
 				'background_color' => array(
-					'label'   => esc_html__( 'Page Background', 'primer' ),
+					'label'   => esc_html__( 'Page Background', 'the-primer' ),
 					'default' => '#f5f5f5',
 					'section' => 'colors-content',
 					'css'     => array(
@@ -345,7 +345,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'content_background_color' => array(
-					'label'   => esc_html__( 'Content Background', 'primer' ),
+					'label'   => esc_html__( 'Content Background', 'the-primer' ),
 					'default' => '#ffffff',
 					'section' => 'colors-content',
 					'css'     => array(
@@ -355,7 +355,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'hero_background_color' => array(
-					'label'    => esc_html__( 'Hero Background', 'primer' ),
+					'label'    => esc_html__( 'Hero Background', 'the-primer' ),
 					'default'  => '#0b3954',
 					'section'  => 'colors-header',
 					'priority' => 20,
@@ -374,7 +374,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'menu_background_color' => array(
-					'label'   => esc_html__( 'Background', 'primer' ),
+					'label'   => esc_html__( 'Background', 'the-primer' ),
 					'default' => '#0b3954',
 					'section' => 'colors-menu',
 					'css'     => array(
@@ -384,7 +384,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_widget_background_color' => array(
-					'label'           => esc_html__( 'Widgets Background', 'primer' ),
+					'label'           => esc_html__( 'Widgets Background', 'the-primer' ),
 					'default'         => '#0b3954',
 					'section'         => 'colors-footer',
 					'active_callback' => 'primer_has_active_footer_sidebars',
@@ -395,7 +395,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_widget_content_background_color' => array(
-					'label'           => esc_html__( 'Widget Content Background', 'primer' ),
+					'label'           => esc_html__( 'Widget Content Background', 'the-primer' ),
 					'default'         => '#ffffff',
 					'section'         => 'colors-footer',
 					'active_callback' => 'primer_has_active_footer_sidebars',
@@ -406,7 +406,7 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'footer_background_color' => array(
-					'label'    => esc_html__( 'Footer Background', 'primer' ),
+					'label'    => esc_html__( 'Footer Background', 'the-primer' ),
 					'default'  => '#f5f5f5',
 					'section'  => 'colors-footer',
 					'priority' => 30,
@@ -444,7 +444,7 @@ class Primer_Customizer_Colors {
 		 */
 		$custom_scheme = array(
 			'_custom' => array(
-				'label' => sprintf( '- %s -' , esc_html__( 'Custom', 'primer' ) ),
+				'label' => sprintf( '- %s -' , esc_html__( 'Custom', 'the-primer' ) ),
 			),
 		);
 
@@ -461,7 +461,7 @@ class Primer_Customizer_Colors {
 		 */
 		$default_scheme = array(
 			'default' => array(
-				'label'  => esc_html__( 'Default', 'primer' ),
+				'label'  => esc_html__( 'Default', 'the-primer' ),
 				'colors' => array_combine(
 					array_keys( $this->colors ),
 					wp_list_pluck( $this->colors, 'default' )
@@ -471,47 +471,47 @@ class Primer_Customizer_Colors {
 
 		$color_schemes = array(
 			'blush' => array(
-				'label' => esc_html_x( 'Blush', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Blush', 'color scheme name', 'the-primer' ),
 				'base'  => '#cc494f',
 			),
 			'bronze' => array(
-				'label' => esc_html_x( 'Bronze', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Bronze', 'color scheme name', 'the-primer' ),
 				'base'  => '#b1a18b',
 			),
 			'canary' => array(
-				'label' => esc_html_x( 'Canary', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Canary', 'color scheme name', 'the-primer' ),
 				'base'  => '#e9c46a',
 			),
 			'cool' => array(
-				'label' => esc_html_x( 'Cool', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Cool', 'color scheme name', 'the-primer' ),
 				'base'  => '#78c3fb',
 			),
 			'dark' => array(
-				'label' => esc_html_x( 'Dark', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Dark', 'color scheme name', 'the-primer' ),
 				'base'  => '#222222',
 			),
 			'iguana' => array(
-				'label' => esc_html_x( 'Iguana', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Iguana', 'color scheme name', 'the-primer' ),
 				'base'  => '#62bf7c',
 			),
 			'muted' => array(
-				'label' => esc_html_x( 'Muted', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Muted', 'color scheme name', 'the-primer' ),
 				'base'  => '#3e4c75',
 			),
 			'plum' => array(
-				'label' => esc_html_x( 'Plum', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Plum', 'color scheme name', 'the-primer' ),
 				'base'  => '#5d5179',
 			),
 			'rose' => array(
-				'label' => esc_html_x( 'Rose', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Rose', 'color scheme name', 'the-primer' ),
 				'base'  => '#f49390',
 			),
 			'tangerine' => array(
-				'label' => esc_html_x( 'Tangerine', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Tangerine', 'color scheme name', 'the-primer' ),
 				'base'  => '#fc9e4f',
 			),
 			'turquoise' => array(
-				'label' => esc_html_x( 'Turquoise', 'color scheme name', 'primer' ),
+				'label' => esc_html_x( 'Turquoise', 'color scheme name', 'the-primer' ),
 				'base'  => '#48e5c2',
 			),
 		);
@@ -701,7 +701,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_panel(
 			'colors',
 			array(
-				'title'       => esc_html__( 'Colors', 'primer' ),
+				'title'       => esc_html__( 'Colors', 'the-primer' ),
 				'description' => 'Get what you need.',
 				'priority'    => 40,
 			)
@@ -710,7 +710,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_section(
 			'colors-scheme',
 			array(
-				'title' => esc_html__( 'Color Schemes', 'primer' ),
+				'title' => esc_html__( 'Color Schemes', 'the-primer' ),
 				'panel' => 'colors',
 			)
 		);
@@ -718,7 +718,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_section(
 			'colors-header',
 			array(
-				'title' => esc_html__( 'Header', 'primer' ),
+				'title' => esc_html__( 'Header', 'the-primer' ),
 				'panel' => 'colors',
 			)
 		);
@@ -726,7 +726,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_section(
 			'colors-menu',
 			array(
-				'title' => esc_html__( 'Menu', 'primer' ),
+				'title' => esc_html__( 'Menu', 'the-primer' ),
 				'panel' => 'colors',
 			)
 		);
@@ -734,7 +734,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_section(
 			'colors-buttons',
 			array(
-				'title' => esc_html__( 'Buttons', 'primer' ),
+				'title' => esc_html__( 'Buttons', 'the-primer' ),
 				'panel' => 'colors',
 			)
 		);
@@ -742,7 +742,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_section(
 			'colors-content',
 			array(
-				'title' => esc_html__( 'Content', 'primer' ),
+				'title' => esc_html__( 'Content', 'the-primer' ),
 				'panel' => 'colors',
 			)
 		);
@@ -750,7 +750,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_section(
 			'colors-footer',
 			array(
-				'title' => esc_html__( 'Footer', 'primer' ),
+				'title' => esc_html__( 'Footer', 'the-primer' ),
 				'panel' => 'colors',
 			)
 		);
@@ -960,7 +960,7 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_control(
 			'color_scheme',
 			array(
-				'label'    => esc_html__( 'Base Color Scheme', 'primer' ),
+				'label'    => esc_html__( 'Base Color Scheme', 'the-primer' ),
 				'section'  => 'colors-scheme',
 				'type'     => 'select',
 				'choices'  => $choices,
@@ -1269,8 +1269,8 @@ class Primer_Customizer_Colors {
 		$wp_customize->add_control(
 			'hero_image_color_overlay',
 			array(
-				'label'           => esc_html__( 'Hero Background Overlay', 'primer' ),
-				'description'     => esc_html__( 'Control the color overlay transparency when using a custom Header Image.', 'primer' ),
+				'label'           => esc_html__( 'Hero Background Overlay', 'the-primer' ),
+				'description'     => esc_html__( 'Control the color overlay transparency when using a custom Header Image.', 'the-primer' ),
 				'section'         => 'colors-header',
 				'priority'        => 20,
 				'active_callback' => 'primer_has_hero_image',

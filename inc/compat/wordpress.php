@@ -44,7 +44,7 @@ function primer_get_wp_upgrade_message() {
 	 */
 	return (string) apply_filters( 'primer_required_wp_version_message',
 		sprintf(
-			__( 'Primer requires at least WordPress version %s. You are running version %s. Please upgrade and try again.', 'primer' ),
+			__( 'Primer requires at least WordPress version %s. You are running version %s. Please upgrade and try again.', 'the-primer' ),
 			PRIMER_MIN_WP_VERSION,
 			get_bloginfo( 'version' )
 		)

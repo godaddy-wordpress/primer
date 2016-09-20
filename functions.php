@@ -141,7 +141,7 @@ function primer_setup() {
 	 * @link  https://codex.wordpress.org/Function_Reference/load_theme_textdomain
 	 * @since 1.0.0
 	 */
-	load_theme_textdomain( 'primer', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'the-primer', get_template_directory() . '/languages' );
 
 	/**
 	 * Filter registered image sizes.
@@ -156,13 +156,13 @@ function primer_setup() {
 				'width'  => 1600,
 				'height' => 9999,
 				'crop'   => false,
-				'label'  => esc_html__( 'Featured', 'primer' ),
+				'label'  => esc_html__( 'Featured', 'the-primer' ),
 			),
 			'primer-hero' => array(
 				'width'  => 2400,
 				'height' => 1300,
 				'crop'   => array( 'center', 'center' ),
-				'label'  => esc_html__( 'Hero', 'primer' ),
+				'label'  => esc_html__( 'Hero', 'the-primer' ),
 			),
 		)
 	);
@@ -243,9 +243,9 @@ function primer_setup() {
 		 */
 		(array) apply_filters( 'primer_nav_menus',
 			array(
-				'primary' => esc_html__( 'Primary Menu', 'primer' ),
-				'social'  => esc_html__( 'Social Menu', 'primer' ),
-				'footer'  => esc_html__( 'Footer Menu', 'primer' ),
+				'primary' => esc_html__( 'Primary Menu', 'the-primer' ),
+				'social'  => esc_html__( 'Social Menu', 'the-primer' ),
+				'footer'  => esc_html__( 'Footer Menu', 'the-primer' ),
 			)
 		)
 	);
@@ -364,48 +364,48 @@ function primer_register_sidebars() {
 	$sidebars = (array) apply_filters( 'primer_sidebars',
 		array(
 			'sidebar-1' => array(
-				'name'          => esc_html__( 'Sidebar', 'primer' ),
-				'description'   => esc_html__( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'primer' ),
+				'name'          => esc_html__( 'Sidebar', 'the-primer' ),
+				'description'   => esc_html__( 'The primary sidebar appears alongside the content of every page, post, archive, and search template.', 'the-primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
 			'sidebar-2' => array(
-				'name'          => esc_html__( 'Secondary Sidebar', 'primer' ),
-				'description'   => esc_html__( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'primer' ),
+				'name'          => esc_html__( 'Secondary Sidebar', 'the-primer' ),
+				'description'   => esc_html__( 'The secondary sidebar will only appear when you have selected a three-column layout.', 'the-primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
 			'footer-1' => array(
-				'name'          => esc_html__( 'Footer 1', 'primer' ),
-				'description'   => esc_html__( 'This sidebar is the first column of the footer widget area.', 'primer' ),
+				'name'          => esc_html__( 'Footer 1', 'the-primer' ),
+				'description'   => esc_html__( 'This sidebar is the first column of the footer widget area.', 'the-primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
 			'footer-2' => array(
-				'name'          => esc_html__( 'Footer 2', 'primer' ),
-				'description'   => esc_html__( 'This sidebar is the second column of the footer widget area.', 'primer' ),
+				'name'          => esc_html__( 'Footer 2', 'the-primer' ),
+				'description'   => esc_html__( 'This sidebar is the second column of the footer widget area.', 'the-primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
 			'footer-3' => array(
-				'name'          => esc_html__( 'Footer 3', 'primer' ),
-				'description'   => esc_html__( 'This sidebar is the third column of the footer widget area.', 'primer' ),
+				'name'          => esc_html__( 'Footer 3', 'the-primer' ),
+				'description'   => esc_html__( 'This sidebar is the third column of the footer widget area.', 'the-primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
 			'hero' => array(
-				'name'          => esc_html__( 'Hero', 'primer' ),
-				'description'   => esc_html__( 'Hero widgets appear over the header image on the front page.', 'primer' ),
+				'name'          => esc_html__( 'Hero', 'the-primer' ),
+				'description'   => esc_html__( 'Hero widgets appear over the header image on the front page.', 'the-primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h2 class="widget-title">',

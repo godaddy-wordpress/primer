@@ -11,11 +11,11 @@
 
 	<?php
 
-	the_content( __( 'Read More <span class="meta-nav">&rarr;</span>', 'primer' ) );
+	the_content( __( 'Read More <span class="meta-nav">&rarr;</span>', 'the-primer' ) );
 
 	wp_link_pages(
 		array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'primer' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'the-primer' ),
 			'after'  => '</div>',
 		)
 	);
