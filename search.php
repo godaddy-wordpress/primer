@@ -22,7 +22,7 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-		<?php the_primer_paging_nav(); ?>
+		<?php primer_paging_nav(); ?>
 
 	<?php else : ?>
 

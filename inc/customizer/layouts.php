@@ -6,7 +6,7 @@
  * @since   1.0.0
  */
 
-class The_Primer_Customizer_Layouts {
+class Primer_Customizer_Layouts {
 
 	/**
 	 * Array of custom layouts.
@@ -48,7 +48,7 @@ class The_Primer_Customizer_Layouts {
 		 *
 		 * @var array
 		 */
-		$this->layouts = (array) apply_filters( 'the_primer_layouts',
+		$this->layouts = (array) apply_filters( 'primer_layouts',
 			array(
 				'one-column-wide'       => esc_html__( 'One Column: Wide', 'the-primer' ),
 				'one-column-narrow'     => esc_html__( 'One Column: Narrow', 'the-primer' ),
@@ -73,7 +73,7 @@ class The_Primer_Customizer_Layouts {
 		 *
 		 * @var string
 		 */
-		$default       = (string) apply_filters( 'the_primer_default_layout', $this->default );
+		$default       = (string) apply_filters( 'primer_default_layout', $this->default );
 		$this->default = $this->layout_exists( $default ) ? $default : ( $this->layout_exists( $this->default ) ? $this->default : key( $this->layouts ) );
 
 		/**
@@ -83,7 +83,7 @@ class The_Primer_Customizer_Layouts {
 		 *
 		 * @var bool
 		 */
-		$this->meta_box = (bool) apply_filters( 'the_primer_layouts_meta_box_enabled', $this->meta_box );
+		$this->meta_box = (bool) apply_filters( 'primer_layouts_meta_box_enabled', $this->meta_box );
 
 		/**
 		 * Filter the registered page widths.
@@ -92,7 +92,7 @@ class The_Primer_Customizer_Layouts {
 		 *
 		 * @var array
 		 */
-		$this->page_widths = (array) apply_filters( 'the_primer_page_widths',
+		$this->page_widths = (array) apply_filters( 'primer_page_widths',
 			array(
 				'fixed' => esc_html_x( 'Fixed', 'fixed-width page layout', 'the-primer' ),
 				'fluid' => esc_html_x( 'Fluid', 'fluid-width page layout', 'the-primer' ),
@@ -138,7 +138,7 @@ class The_Primer_Customizer_Layouts {
 		 *
 		 * @var array
 		 */
-		$rtl_layouts = (array) apply_filters( 'the_primer_layouts_rtl',
+		$rtl_layouts = (array) apply_filters( 'primer_layouts_rtl',
 			array(
 				'two-column-default'    => esc_html__( 'Two Columns: Sidebar | Content', 'the-primer' ),
 				'two-column-reversed'   => esc_html__( 'Two Columns: Content | Sidebar', 'the-primer' ),
@@ -166,7 +166,7 @@ class The_Primer_Customizer_Layouts {
 		 *
 		 * @var array
 		 */
-		$post_types = (array) apply_filters( 'the_primer_layouts_post_types', get_post_types( array( 'public' => true ) ) );
+		$post_types = (array) apply_filters( 'primer_layouts_post_types', get_post_types( array( 'public' => true ) ) );
 
 		foreach ( $post_types as $post_type ) {
 
@@ -199,14 +199,14 @@ class The_Primer_Customizer_Layouts {
 			'primer-layouts',
 			get_template_directory_uri() . "/assets/js/admin/layouts{$suffix}.js",
 			array( 'jquery' ),
-			THE_PRIMER_VERSION
+			PRIMER_VERSION
 		);
 
 		wp_enqueue_style(
 			'primer-layouts',
 			get_template_directory_uri() . "/assets/css/admin/layouts{$rtl}{$suffix}.css",
 			array(),
-			THE_PRIMER_VERSION
+			PRIMER_VERSION
 		);
 
 	}
@@ -413,7 +413,7 @@ class The_Primer_Customizer_Layouts {
 
 		if ( ! $override && $current ) {
 
-			delete_post_meta( $post_id, 'the_primer_layout' );
+			delete_post_meta( $post_id, 'primer_layout' );
 
 			return;
 
@@ -427,7 +427,7 @@ class The_Primer_Customizer_Layouts {
 
 		}
 
-		update_post_meta( $post_id, 'the_primer_layout', $layout );
+		update_post_meta( $post_id, 'primer_layout', $layout );
 
 	}
 
@@ -494,7 +494,7 @@ class The_Primer_Customizer_Layouts {
 	public function body_class( array $classes ) {
 
 		$classes[] = sanitize_html_class( sprintf( 'layout-%s', $this->get_current_layout() ) );
-		$classes[] = the_primer_is_fluid_width() ? 'no-max-width' : null;
+		$classes[] = primer_is_fluid_width() ? 'no-max-width' : null;
 
 		return array_filter( $classes );
 
@@ -537,7 +537,7 @@ class The_Primer_Customizer_Layouts {
 	 */
 	protected function get_post_layout( $post = null ) {
 
-		return get_post_meta( $this->get_post_id( $post ), 'the_primer_layout', true );
+		return get_post_meta( $this->get_post_id( $post ), 'primer_layout', true );
 
 	}
 
@@ -573,7 +573,7 @@ class The_Primer_Customizer_Layouts {
 		 *
 		 * @var string
 		 */
-		$layout = (string) apply_filters( 'the_primer_current_layout', $layout, $post );
+		$layout = (string) apply_filters( 'primer_current_layout', $layout, $post );
 
 		return $this->layout_exists( $layout ) ? $layout : $this->default;
 
@@ -581,4 +581,4 @@ class The_Primer_Customizer_Layouts {
 
 }
 
-$GLOBALS['the_primer_customizer_layouts'] = new The_Primer_Customizer_Layouts;
+$GLOBALS['primer_customizer_layouts'] = new Primer_Customizer_Layouts;

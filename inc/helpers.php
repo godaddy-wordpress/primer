@@ -11,7 +11,7 @@
  *
  * @return string
  */
-function the_primer_get_the_page_title() {
+function primer_get_the_page_title() {
 
 	$title = '';
 
@@ -84,7 +84,7 @@ function the_primer_get_the_page_title() {
 	 *
 	 * @var string
 	 */
-	return (string) apply_filters( 'the_primer_the_page_title', $title );
+	return (string) apply_filters( 'primer_the_page_title', $title );
 
 }
 
@@ -93,7 +93,7 @@ function the_primer_get_the_page_title() {
  *
  * @return string
  */
-function the_primer_get_page_width() {
+function primer_get_page_width() {
 
 	return get_theme_mod( 'page_width', 'fixed' );
 
@@ -104,9 +104,9 @@ function the_primer_get_page_width() {
  *
  * @return bool
  */
-function the_primer_is_fluid_width() {
+function primer_is_fluid_width() {
 
-	return ( 'fluid' === the_primer_get_page_width() );
+	return ( 'fluid' === primer_get_page_width() );
 
 }
 
@@ -115,45 +115,45 @@ function the_primer_is_fluid_width() {
  *
  * @return bool
  */
-function the_primer_is_fixed_width() {
+function primer_is_fixed_width() {
 
-	return ( 'fixed' === the_primer_get_page_width() );
+	return ( 'fixed' === primer_get_page_width() );
 
 }
 
 /**
  * Return the current layout.
  *
- * @global The_Primer_Customizer_Layouts $the_primer_customizer_layouts
+ * @global Primer_Customizer_Layouts $primer_customizer_layouts
  * @since  1.0.0
  *
  * @param  int $post_id (optional)
  *
  * @return string
  */
-function the_primer_get_layout( $post_id = null ) {
+function primer_get_layout( $post_id = null ) {
 
-	global $the_primer_customizer_layouts;
+	global $primer_customizer_layouts;
 
 	$post_id = ( $post_id ) ? $post_id : get_queried_object_id();
 
-	return $the_primer_customizer_layouts->get_current_layout( $post_id );
+	return $primer_customizer_layouts->get_current_layout( $post_id );
 
 }
 
 /**
  * Return the global layout.
  *
- * @global The_Primer_Customizer_Layouts $the_primer_customizer_layouts
+ * @global Primer_Customizer_Layouts $primer_customizer_layouts
  * @since  1.0.0
  *
  * @return string
  */
-function the_primer_get_global_layout() {
+function primer_get_global_layout() {
 
-	global $the_primer_customizer_layouts;
+	global $primer_customizer_layouts;
 
-	return $the_primer_customizer_layouts->get_global_layout();
+	return $primer_customizer_layouts->get_global_layout();
 
 }
 
@@ -166,9 +166,9 @@ function the_primer_get_global_layout() {
  *
  * @return bool
  */
-function the_primer_layout_has_sidebar( $layout = null ) {
+function primer_layout_has_sidebar( $layout = null ) {
 
-	$layout      = ( $layout ) ? $layout : the_primer_get_layout();
+	$layout      = ( $layout ) ? $layout : primer_get_layout();
 	$has_sidebar = ! in_array( $layout, array( 'one-column-wide', 'one-column-narrow' ) );
 
 	/**
@@ -180,7 +180,7 @@ function the_primer_layout_has_sidebar( $layout = null ) {
 	 *
 	 * @var bool
 	 */
-	return (bool) apply_filters( 'the_primer_layout_has_sidebar', $has_sidebar, $layout );
+	return (bool) apply_filters( 'primer_layout_has_sidebar', $has_sidebar, $layout );
 
 }
 
@@ -191,7 +191,7 @@ function the_primer_layout_has_sidebar( $layout = null ) {
  *
  * @return bool
  */
-function the_primer_has_custom_logo() {
+function primer_has_custom_logo() {
 
  	/**
 	 * For backwards compatibility prior to WordPress 4.5.
@@ -208,7 +208,7 @@ function the_primer_has_custom_logo() {
 	 *
 	 * @var bool
 	 */
-	return (bool) apply_filters( 'the_primer_has_custom_logo', $enabled );
+	return (bool) apply_filters( 'primer_has_custom_logo', $enabled );
 
 }
 
@@ -219,7 +219,7 @@ function the_primer_has_custom_logo() {
  *
  * @return string
  */
-function the_primer_get_hero_image_selector() {
+function primer_get_hero_image_selector() {
 
 	/**
 	 * Filter the hero image element selector.
@@ -228,7 +228,7 @@ function the_primer_get_hero_image_selector() {
 	 *
 	 * @var string
 	 */
-	$selector = (string) apply_filters( 'the_primer_hero_image_selector', '.site-header' );
+	$selector = (string) apply_filters( 'primer_hero_image_selector', '.site-header' );
 
 	return wp_strip_all_tags( $selector );
 
@@ -241,7 +241,7 @@ function the_primer_get_hero_image_selector() {
  *
  * @return bool
  */
-function the_primer_use_featured_hero_image() {
+function primer_use_featured_hero_image() {
 
 	$enabled = (bool) get_theme_mod( 'use_featured_hero_image' );
 
@@ -252,7 +252,7 @@ function the_primer_use_featured_hero_image() {
 	 *
 	 * @var bool
 	 */
-	return (bool) apply_filters( 'the_primer_use_featured_hero_image', $enabled );
+	return (bool) apply_filters( 'primer_use_featured_hero_image', $enabled );
 
 }
 
@@ -263,9 +263,9 @@ function the_primer_use_featured_hero_image() {
  *
  * @return bool
  */
-function the_primer_has_hero_image() {
+function primer_has_hero_image() {
 
-	return ( has_header_image() || ( the_primer_use_featured_hero_image() && has_post_thumbnail( get_queried_object() ) ) );
+	return ( has_header_image() || ( primer_use_featured_hero_image() && has_post_thumbnail( get_queried_object() ) ) );
 
 }
 
@@ -276,7 +276,7 @@ function the_primer_has_hero_image() {
  *
  * @return string|null
  */
-function the_primer_get_hero_image() {
+function primer_get_hero_image() {
 
 	/**
 	 * Filter the hero image size.
@@ -285,12 +285,12 @@ function the_primer_get_hero_image() {
 	 *
 	 * @var string
 	 */
-	$size = (string) apply_filters( 'the_primer_hero_image_size', 'primer-hero' );
+	$size = (string) apply_filters( 'primer_hero_image_size', 'primer-hero' );
 
 	/**
 	 * Featured Image (if enabled)
 	 */
-	if ( the_primer_use_featured_hero_image() && ( $post = get_queried_object() ) && has_post_thumbnail( $post ) ) {
+	if ( primer_use_featured_hero_image() && ( $post = get_queried_object() ) && has_post_thumbnail( $post ) ) {
 
 		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post ), $size );
 
@@ -332,14 +332,14 @@ function the_primer_get_hero_image() {
  *
  * @return string
  */
-function the_primer_get_featured_image_size() {
+function primer_get_featured_image_size() {
 
 	/**
 	 * Filter the size to use for featured images.
 	 *
 	 * @var string
 	 */
-	return (string) apply_filters( 'the_primer_featured_image_size', 'primer-featured' );
+	return (string) apply_filters( 'primer_featured_image_size', 'primer-featured' );
 
 }
 
@@ -353,7 +353,7 @@ function the_primer_get_featured_image_size() {
  *
  * @return string
  */
-function the_primer_get_posts_url() {
+function primer_get_posts_url() {
 
 	$url = ( 'page' === get_option( 'show_on_front' ) ) ? get_permalink( (int) get_option( 'page_for_posts' ) ) : null;
 
@@ -364,7 +364,7 @@ function the_primer_get_posts_url() {
 	 *
 	 * @var string
 	 */
-	return (string) apply_filters( 'the_primer_posts_url', $url );
+	return (string) apply_filters( 'primer_posts_url', $url );
 
 }
 
@@ -376,7 +376,7 @@ function the_primer_get_posts_url() {
  *
  * @return array
  */
-function the_primer_get_footer_sidebars() {
+function primer_get_footer_sidebars() {
 
 	global $wp_registered_sidebars;
 
@@ -389,7 +389,7 @@ function the_primer_get_footer_sidebars() {
 	 *
 	 * @var array
 	 */
-	return (array) apply_filters( 'the_primer_footer_sidebars', $sidebars );
+	return (array) apply_filters( 'primer_footer_sidebars', $sidebars );
 
 }
 
@@ -400,9 +400,9 @@ function the_primer_get_footer_sidebars() {
  *
  * @return array
  */
-function the_primer_get_active_footer_sidebars() {
+function primer_get_active_footer_sidebars() {
 
-	return array_filter( the_primer_get_footer_sidebars(), 'is_active_sidebar' );
+	return array_filter( primer_get_footer_sidebars(), 'is_active_sidebar' );
 
 }
 
@@ -413,9 +413,9 @@ function the_primer_get_active_footer_sidebars() {
  *
  * @return bool
  */
-function the_primer_has_active_footer_sidebars() {
+function primer_has_active_footer_sidebars() {
 
-	return (bool) the_primer_get_active_footer_sidebars();
+	return (bool) primer_get_active_footer_sidebars();
 
 }
 
@@ -426,7 +426,7 @@ function the_primer_has_active_footer_sidebars() {
  *
  * @return bool
  */
-function the_primer_has_footer_menu() {
+function primer_has_footer_menu() {
 
 	return ( has_nav_menu( 'footer' ) || has_nav_menu( 'social' ) );
 
@@ -438,14 +438,14 @@ function the_primer_has_footer_menu() {
  * We will store the result in a transient so this function
  * can be called frequently without any performance concern.
  *
- * @see   the_primer_has_active_categories_reset()
+ * @see   primer_has_active_categories_reset()
  * @since 1.0.0
  *
  * @return bool
  */
-function the_primer_has_active_categories() {
+function primer_has_active_categories() {
 
-	if ( WP_DEBUG || false === ( $has_active_categories = get_transient( 'the_primer_has_active_categories' ) ) ) {
+	if ( WP_DEBUG || false === ( $has_active_categories = get_transient( 'primer_has_active_categories' ) ) ) {
 
 		$categories = get_categories(
 			array(
@@ -457,7 +457,7 @@ function the_primer_has_active_categories() {
 
 		$has_active_categories = ( count( $categories ) > 1 );
 
-		set_transient( 'the_primer_has_active_categories', $has_active_categories );
+		set_transient( 'primer_has_active_categories', $has_active_categories );
 
 	}
 
@@ -468,7 +468,7 @@ function the_primer_has_active_categories() {
 	 *
 	 * @var bool
 	 */
-	return (bool) apply_filters( 'the_primer_has_active_categories', ! empty( $has_active_categories ) );
+	return (bool) apply_filters( 'primer_has_active_categories', ! empty( $has_active_categories ) );
 
 }
 
@@ -481,7 +481,7 @@ function the_primer_has_active_categories() {
  *
  * @return array
  */
-function the_primer_hex2rgb( $color ) {
+function primer_hex2rgb( $color ) {
 
 	$color = trim( $color, '#' );
 
@@ -526,7 +526,7 @@ function the_primer_hex2rgb( $color ) {
  *
  * @return array
  */
-function the_primer_array_replace_recursive( array $array1, array $array2 ) {
+function primer_array_replace_recursive( array $array1, array $array2 ) {
 
 	if ( function_exists( 'array_replace_recursive' ) ) {
 

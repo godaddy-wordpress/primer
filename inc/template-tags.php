@@ -11,7 +11,7 @@
  *
  * @since 1.0.0
  */
-function the_primer_the_custom_logo() {
+function primer_the_custom_logo() {
 
 	/**
 	 * For backwards compatibility prior to WordPress 4.5.
@@ -54,7 +54,7 @@ function the_primer_the_custom_logo() {
  *
  * @since 1.0.0
  */
-function the_primer_the_site_title() {
+function primer_the_site_title() {
 
 	$html = sprintf(
 		'<h1 class="site-title"><a href="%s" rel="home">%s</a></h1>',
@@ -69,7 +69,7 @@ function the_primer_the_site_title() {
 	 *
 	 * @var string
 	 */
-	echo (string) apply_filters( 'the_primer_the_site_title', $html );
+	echo (string) apply_filters( 'primer_the_site_title', $html );
 
 }
 
@@ -78,7 +78,7 @@ function the_primer_the_site_title() {
  *
  * @since 1.0.0
  */
-function the_primer_the_site_description() {
+function primer_the_site_description() {
 
 	$html = sprintf(
 		'<div class="site-description">%s</div>',
@@ -92,7 +92,7 @@ function the_primer_the_site_description() {
 	 *
 	 * @var string
 	 */
-	echo (string) apply_filters( 'the_primer_the_site_description', $html );
+	echo (string) apply_filters( 'primer_the_site_description', $html );
 
 }
 
@@ -101,9 +101,9 @@ function the_primer_the_site_description() {
  *
  * @since 1.0.0
  */
-function the_primer_the_page_title() {
+function primer_the_page_title() {
 
-	if ( $title = the_primer_get_the_page_title() ) {
+	if ( $title = primer_get_the_page_title() ) {
 
 		echo $title; // xss ok
 
@@ -117,7 +117,7 @@ function the_primer_the_page_title() {
  * @global WP_Query $wp_query
  * @since  1.0.0
  */
-function the_primer_paging_nav() {
+function primer_paging_nav() {
 
 	global $wp_query;
 
@@ -159,7 +159,7 @@ function the_primer_paging_nav() {
  * @global WP_Post $post
  * @since  1.0.0
  */
-function the_primer_post_nav() {
+function primer_post_nav() {
 
 	global $post;
 
@@ -205,7 +205,7 @@ function the_primer_post_nav() {
  *
  * @since 1.0.0
  */
-function the_primer_posted_on() {
+function primer_posted_on() {
 
 	$time = sprintf(
 		'<time class="entry-date published" datetime="%s">%s</time>',
@@ -236,7 +236,7 @@ function the_primer_posted_on() {
  *
  * @since 1.0.0
  */
-function the_primer_post_format() {
+function primer_post_format() {
 
 	$format = get_post_format();
 	$format = empty( $format ) ? 'standard' : $format;
@@ -254,7 +254,7 @@ function the_primer_post_format() {
  * @link   https://wordpress.org/plugins/really-simple-breadcrumb/
  * @since  1.0.0
  */
-function the_primer_breadcrumbs() {
+function primer_breadcrumbs() {
 
 	global $post;
 
@@ -262,68 +262,66 @@ function the_primer_breadcrumbs() {
 
 	echo '<div class="breadcrumbs">';
 
-	if ( is_front_page() ) {
-
-		bloginfo( 'name' );
-
-		echo '</div>';
-
-		return;
-
-	}
-
-	printf(
-		'<a href="%s">%s</a>%s',
-		esc_url( home_url() ),
-		esc_html( get_bloginfo( 'name' ) ),
-		$separator // xss ok
-	);
-
-	if ( 'page' === get_option( 'show_on_front' ) ) {
+	if ( ! is_front_page() ) {
 
 		printf(
 			'<a href="%s">%s</a>%s',
-			esc_url( the_primer_get_posts_url() ),
-			esc_html__( 'Blog', 'the-primer' ),
+			esc_url( home_url() ),
+			esc_html( get_bloginfo( 'name' ) ),
 			$separator // xss ok
 		);
 
-	}
+		if ( 'page' === get_option( 'show_on_front' ) ) {
 
-	if ( is_category() || is_single() ) {
-
-		the_category( ', ' );
-
-		if ( is_single() ) {
-
-			echo $separator; // xss ok
-
-			the_title();
+			printf(
+				'<a href="%s">%s</a>%s',
+				esc_url( primer_get_posts_url() ),
+				esc_html__( 'Blog', 'the-primer' ),
+				$separator // xss ok
+			);
 
 		}
 
-	} elseif ( is_page() && $post->post_parent ) {
+		if ( is_category() || is_single() ) {
 
-		$home = get_post( get_option( 'page_on_front' ) );
+			the_category( ', ' );
 
-		for ( $i = count( $post->ancestors ) - 1; $i >= 0; $i-- ) {
+			if ( is_single() ) {
 
-			if ( ( $home->ID ) != ( $post->ancestors[ $i ] ) ) {
+				echo $separator; // xss ok
 
-				echo '<a href="' . get_permalink( $post->ancestors[ $i ] ) . '">' . get_the_title( $post->ancestors[ $i ] ) . '</a>' . $separator;
+				the_title();
 
 			}
+
+		} elseif ( is_page() && $post->post_parent ) {
+
+			$home = get_page( get_option( 'page_on_front' ) );
+
+			for ( $i = count( $post->ancestors )-1; $i >= 0; $i-- ) {
+
+				if ( ( $home->ID ) != ( $post->ancestors[$i] ) ) {
+
+					echo '<a href="' . get_permalink( $post->ancestors[$i] ) . '">' . get_the_title( $post->ancestors[$i] ) . '</a>' . $separator;
+
+				}
+			}
+
+			echo the_title();
+
+		} elseif ( is_page() ) {
+
+			echo the_title();
+
+		} elseif ( is_404() ) {
+
+			echo '404';
+
 		}
 
-		echo the_title();
+	} else {
 
-	} elseif ( is_page() ) {
-
-		echo the_title();
-
-	} elseif ( is_404() ) {
-
-		echo '404';
+		bloginfo( 'name' );
 
 	}
 

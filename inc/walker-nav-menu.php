@@ -5,9 +5,9 @@
  *
  * @package Primer
  * @since   1.0.0
- * @see     the_primer_add_primary_menu()
+ * @see     primer_add_primary_menu()
  */
-class The_Primer_Walker_Nav_Menu extends Walker_Nav_Menu {
+class Primer_Walker_Nav_Menu extends Walker_Nav_Menu {
 
 	/**
 	 * Starts the list before the elements are added.
