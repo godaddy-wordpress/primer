@@ -1,22 +1,19 @@
-# Primer
-# Copyright (C) 2016
-# This file is distributed under the same license as the primer package.
-# GoDaddy Operating Company, LLC.
-#
-#, fuzzy
+# Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: primer 1.0.0\n"
+"Project-Id-Version: Primer 0.9.0\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-09-20 01:39:31+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2016-09-10 04:06:01+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 
 #: 404.php:22
 msgid "Oops! That page can't be found."
@@ -24,7 +21,8 @@ msgstr "Oeps! We kunnen die pagina niet vinden."
 
 #: 404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
 "Er is helemaal niets gevonden op deze locatie. Probeer hieronder te zoeken:"
 
@@ -61,8 +59,7 @@ msgstr ""
 "opnieuw met andere trefwoorden."
 
 #: content-none.php:45
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "Wij kunnen niet vinden wat je zoekt. Probeer het met een zoekopdracht."
 
 #: functions.php:159
@@ -103,8 +100,8 @@ msgstr "Secundaire zijbalk"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
 "De secundaire zijbalk wordt alleen weergegeven je een indeling met drie "
 "kolommen hebt geselecteerd."
@@ -172,8 +169,7 @@ msgstr "Koptekst"
 
 #: inc/customizer/colors.php:128
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Publiceer titels, widgettitels, formulierlabels, tabelkoppen en knoppen."
+msgstr "Publiceer titels, widgettitels, formulierlabels, tabelkoppen en knoppen."
 
 #: inc/customizer/colors.php:149
 msgid "Primary Text"
@@ -189,9 +185,7 @@ msgstr "Secundaire tekst"
 
 #: inc/customizer/colors.php:196
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
-"Publiceer naamregels, opmerkingaantallen, voetteksten bij berichten en "
-"voetteksten bij citaten."
+msgstr "Publiceer naamregels, opmerkingaantallen, voetteksten bij berichten en voetteksten bij citaten."
 
 #: inc/customizer/colors.php:210
 msgid "Widget Heading Text"
@@ -285,12 +279,9 @@ msgstr "Basiskleuren"
 msgid "Hero Background Overlay"
 msgstr "Hero-achtergrondoverlay"
 
-#: inc/customizer/colors.php:1273
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Stel de transparantie van de kleurenoverlay in wanneer je een aangepaste "
-"afbeelding voor de kop gebruikt."
+#: inc/customizer/colors.php:1272
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Stel de transparantie van de kleurenoverlay in wanneer je een aangepaste afbeelding voor de kop gebruikt."
 
 #: inc/customizer/fonts.php:87
 msgid "Site Title"
@@ -316,8 +307,7 @@ msgstr "Koppen"
 msgid "Post titles, widget titles, form labels, and table headers."
 msgstr "Publiceer titels, widgettitels, formulierlabels en tabelkoppen."
 
-#: inc/customizer/fonts.php:124
-#, fuzzy
+#: inc/customizer/fonts.php:118
 msgid "Primary"
 msgstr "Primair"
 
@@ -331,9 +321,7 @@ msgstr "Secundair"
 
 #: inc/customizer/fonts.php:140
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Naamregels, opmerkingaantallen, antwoordkoppelingen, voetteksten bij "
-"berichten en voetteksten bij citaten."
+msgstr "Naamregels, opmerkingaantallen, antwoordkoppelingen, voetteksten bij berichten en voetteksten bij citaten."
 
 #: inc/customizer/fonts.php:188
 msgid "Fonts"
@@ -371,7 +359,15 @@ msgstr "Drie kolommen: Zijbalk | Zijbalk | Inhoud"
 msgid "Layout"
 msgstr "Lay-out"
 
-#: inc/customizer/layouts.php:473
+#: inc/customizer/layouts.php:464
+msgid "Default Layout"
+msgstr "Standaardopmaak"
+
+#: inc/customizer/layouts.php:465
+msgid "All posts and pages on your site will use this layout by default."
+msgstr "Voor alle berichten en pagina‘s op je site wordt standaard deze opmaak gebruikt."
+
+#: inc/customizer/layouts.php:494
 msgid "Page Width"
 msgstr "Paginabreedte"
 
@@ -383,12 +379,9 @@ msgstr "Geef je site anders weer op grotere schermen."
 msgid "Use featured image"
 msgstr "Uitgelichte afbeelding gebruiken"
 
-#: inc/customizer.php:164
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr ""
-"Sta toe dat de uitgelichte afbeelding van het huidige bericht de hero-"
-"afbeelding vervangt."
+#: inc/customizer.php:183
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "Sta toe dat de uitgelichte afbeelding van het huidige bericht de hero-afbeelding vervangt."
 
 #: inc/helpers.php:52
 msgid "404 Page Not Found"
@@ -440,27 +433,28 @@ msgid "1 Comment"
 msgstr "1 opmerking"
 
 #. Theme Name of the plugin/theme
-#, fuzzy
-msgid "The Primer"
-msgstr "Primair"
+msgid "Primer"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
-msgstr ""
+msgstr "https://github.com/godaddy/wp-primer-theme"
 
 #. Description of the plugin/theme
 msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
+"Primer is een krachtig thema dat je content voorziet van helderheid in een "
+"nieuw ontwerp."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
-msgstr ""
+msgstr "GoDaddy"
 
 #. Author URI of the plugin/theme
 msgid "https://www.godaddy.com/"
-msgstr ""
+msgstr "https://www.godaddy.com/"
 
 #: comments.php:34
 msgctxt "1. number of comments, 2. post title"
@@ -562,9 +556,7 @@ msgstr "Flexibel"
 #: inc/customizer/layouts.php:288
 msgctxt "link to the Customizer"
 msgid "The site-wide Default layout setting is located in the %s."
-msgstr ""
-"De standaardinstelling voor opmaak voor de volledige site bevindt zich hier: "
-"%s."
+msgstr "De standaardinstelling voor opmaak voor de volledige site bevindt zich hier: %s."
 
 #: inc/customizer/layouts.php:292
 msgctxt "title of a component found in WordPress"
