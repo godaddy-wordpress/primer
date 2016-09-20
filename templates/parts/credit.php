@@ -24,7 +24,7 @@ printf(
  *
  * @var bool
  */
-if ( (bool) apply_filters( 'primer_author_credit', true ) ) {
+if ( (bool) apply_filters( 'the_primer_author_credit', true ) ) {
 
 	echo ' &mdash; ';
 

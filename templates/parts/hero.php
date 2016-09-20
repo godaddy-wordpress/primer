@@ -17,7 +17,7 @@
 		 *
 		 * @since 1.0.0
 		 */
-		do_action( 'primer_hero' );
+		do_action( 'the_primer_hero' );
 		?>
 
 	</div>

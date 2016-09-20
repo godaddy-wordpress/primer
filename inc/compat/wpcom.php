@@ -15,7 +15,7 @@
  * @global array $themecolors
  * @since  1.0.0
  */
-function primer_wpcom_setup() {
+function the_primer_wpcom_setup() {
 
 	global $themecolors;
 
@@ -32,4 +32,4 @@ function primer_wpcom_setup() {
 	}
 
 }
-add_action( 'after_setup_theme', 'primer_wpcom_setup' );
+add_action( 'after_setup_theme', 'the_primer_wpcom_setup' );

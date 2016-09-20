@@ -8,7 +8,7 @@
  * @since   1.0.0
  */
 
-if ( ! primer_layout_has_sidebar() || ! is_active_sidebar( 'sidebar-1' ) ) {
+if ( ! the_primer_layout_has_sidebar() || ! is_active_sidebar( 'sidebar-1' ) ) {
 
 	return;
 

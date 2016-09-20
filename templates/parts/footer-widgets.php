@@ -7,7 +7,7 @@
  */
 ?>
 
-<?php if ( $sidebars = primer_get_active_footer_sidebars() ) : ?>
+<?php if ( $sidebars = the_primer_get_active_footer_sidebars() ) : ?>
 
 	<div class="footer-widget-area columns-<?php echo count( $sidebars ); ?>">
 

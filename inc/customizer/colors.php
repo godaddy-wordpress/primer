@@ -6,7 +6,7 @@
  * @since   1.0.0
  */
 
-class Primer_Customizer_Colors {
+class The_Primer_Customizer_Colors {
 
 	/**
 	 * Array of customizable colors.
@@ -38,7 +38,7 @@ class Primer_Customizer_Colors {
 		 *
 		 * @var array
 		 */
-		$this->colors = (array) apply_filters( 'primer_colors',
+		$this->colors = (array) apply_filters( 'the_primer_colors',
 			array(
 				/**
 				 * Text colors
@@ -210,7 +210,7 @@ class Primer_Customizer_Colors {
 					'label'           => esc_html__( 'Widget Heading Text', 'the-primer' ),
 					'default'         => '#353535',
 					'section'         => 'colors-footer',
-					'active_callback' => 'primer_has_active_footer_sidebars',
+					'active_callback' => 'the_primer_has_active_footer_sidebars',
 					'css'             => array(
 						'.site-footer .widget-title,
 						.site-footer h1,
@@ -227,7 +227,7 @@ class Primer_Customizer_Colors {
 					'label'           => esc_html__( 'Widget Text', 'the-primer' ),
 					'default'         => '#252525',
 					'section'         => 'colors-footer',
-					'active_callback' => 'primer_has_active_footer_sidebars',
+					'active_callback' => 'the_primer_has_active_footer_sidebars',
 					'css'             => array(
 						'.site-footer .widget' => array(
 							'color' => '%1$s',
@@ -239,7 +239,7 @@ class Primer_Customizer_Colors {
 					'default'         => '#686868',
 					'section'         => 'colors-footer',
 					'priority'        => 20,
-					'active_callback' => 'primer_has_footer_menu',
+					'active_callback' => 'the_primer_has_footer_menu',
 					'css'             => array(
 						'.footer-menu ul li a,
 						.footer-menu ul li a:visited' => array(
@@ -360,12 +360,12 @@ class Primer_Customizer_Colors {
 					'section'  => 'colors-header',
 					'priority' => 20,
 					'css'      => array(
-						primer_get_hero_image_selector() => array(
+						the_primer_get_hero_image_selector() => array(
 							'background-color' => '%1$s',
 						),
 					),
 					'rgba_css' => array(
-						primer_get_hero_image_selector() => array(
+						the_primer_get_hero_image_selector() => array(
 							'-webkit-box-shadow' => 'inset 0 0 0 9999em',
 							'-moz-box-shadow'    => 'inset 0 0 0 9999em',
 							'box-shadow'         => 'inset 0 0 0 9999em',
@@ -387,7 +387,7 @@ class Primer_Customizer_Colors {
 					'label'           => esc_html__( 'Widgets Background', 'the-primer' ),
 					'default'         => '#0b3954',
 					'section'         => 'colors-footer',
-					'active_callback' => 'primer_has_active_footer_sidebars',
+					'active_callback' => 'the_primer_has_active_footer_sidebars',
 					'css'             => array(
 						'.site-footer' => array(
 							'background-color' => '%1$s',
@@ -398,7 +398,7 @@ class Primer_Customizer_Colors {
 					'label'           => esc_html__( 'Widget Content Background', 'the-primer' ),
 					'default'         => '#ffffff',
 					'section'         => 'colors-footer',
-					'active_callback' => 'primer_has_active_footer_sidebars',
+					'active_callback' => 'the_primer_has_active_footer_sidebars',
 					'css'             => array(
 						'.site-footer .widget' => array(
 							'background-color' => '%1$s',
@@ -453,7 +453,7 @@ class Primer_Customizer_Colors {
 		 *
 		 * The `default` color scheme is required and not filterable.
 		 * If you want to customize values in this scheme, do so via
-		 * a `primer_colors` filter in your Child Theme.
+		 * a `the_primer_colors` filter in your Child Theme.
 		 *
 		 * @since 1.0.0
 		 *
@@ -651,7 +651,7 @@ class Primer_Customizer_Colors {
 				),
 			);
 
-			$color_schemes = primer_array_replace_recursive( $color_schemes, $overrides );
+			$color_schemes = the_primer_array_replace_recursive( $color_schemes, $overrides );
 
 		}
 
@@ -662,7 +662,7 @@ class Primer_Customizer_Colors {
 		 *
 		 * @var array
 		 */
-		$color_schemes = (array) apply_filters( 'primer_color_schemes', $color_schemes );
+		$color_schemes = (array) apply_filters( 'the_primer_color_schemes', $color_schemes );
 
 		// Remove any invalid color schemes
 		$color_schemes = array_filter(
@@ -844,18 +844,18 @@ class Primer_Customizer_Colors {
 
 		$default = $this->get_default_color( $name, 'default' );
 		$hex     = trim( get_theme_mod( $name, $default ), '#' );
-		$css     = sprintf( Primer_Customizer::parse_css_rules( $args['css'] ), '#' . $hex );
+		$css     = sprintf( The_Primer_Customizer::parse_css_rules( $args['css'] ), '#' . $hex );
 
 		if ( ! empty( $args['rgba_css'] ) ) {
 
 			$css .= sprintf(
-				Primer_Customizer::parse_css_rules( $args['rgba_css'] ),
-				implode( ', ', primer_hex2rgb( $hex ) )
+				The_Primer_Customizer::parse_css_rules( $args['rgba_css'] ),
+				implode( ', ', the_primer_hex2rgb( $hex ) )
 			);
 
 		}
 
-		wp_add_inline_style( Primer_Customizer::$stylesheet, $css );
+		wp_add_inline_style( The_Primer_Customizer::$stylesheet, $css );
 
 	}
 
@@ -980,7 +980,7 @@ class Primer_Customizer_Colors {
 
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-		wp_enqueue_script( 'primer-colors-control', get_template_directory_uri() . "/assets/js/admin/colors-control{$suffix}.js", array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), PRIMER_VERSION, true );
+		wp_enqueue_script( 'primer-colors-control', get_template_directory_uri() . "/assets/js/admin/colors-control{$suffix}.js", array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), THE_PRIMER_VERSION, true );
 
 		wp_localize_script( 'primer-colors-control', 'colorSchemes', $this->color_schemes );
 
@@ -1006,7 +1006,7 @@ class Primer_Customizer_Colors {
 				}
 
 				printf(
-					Primer_Customizer::parse_css_rules( $args['css'] ),
+					The_Primer_Customizer::parse_css_rules( $args['css'] ),
 					sprintf( '{{ data.%s }}', $name )
 				);
 
@@ -1032,7 +1032,7 @@ class Primer_Customizer_Colors {
 			foreach ( $rgba_colors as $name => $css ) {
 
 				printf(
-					Primer_Customizer::parse_css_rules( $css ),
+					The_Primer_Customizer::parse_css_rules( $css ),
 					sprintf( '{{ data.%s }}', $name )
 				);
 
@@ -1137,7 +1137,7 @@ class Primer_Customizer_Colors {
 		 *
 		 * @var array
 		 */
-		$args = (array) apply_filters( 'primer_custom_header_args',
+		$args = (array) apply_filters( 'the_primer_custom_header_args',
 			array(
 				'default-text-color' => $this->get_default_color( 'header_textcolor', 'default' ),
 				'width'              => 2400,
@@ -1154,7 +1154,7 @@ class Primer_Customizer_Colors {
 		 *
 		 * @var array
 		 */
-		$defaults = (array) apply_filters( 'primer_default_hero_images',
+		$defaults = (array) apply_filters( 'the_primer_default_hero_images',
 			array(
 				'default' => array(
 					'url'           => 'assets/images/hero.jpg',
@@ -1215,7 +1215,7 @@ class Primer_Customizer_Colors {
 
 			printf(
 				"<style type='text/css'>\n%s\n</style>",
-				sprintf( Primer_Customizer::parse_css_rules( $css ), $color )
+				sprintf( The_Primer_Customizer::parse_css_rules( $css ), $color )
 			);
 
 		}
@@ -1237,7 +1237,7 @@ class Primer_Customizer_Colors {
 		 *
 		 * @var array
 		 */
-		$args = (array) apply_filters( 'primer_custom_background_args',
+		$args = (array) apply_filters( 'the_primer_custom_background_args',
 			array(
 				'default-color' => $this->get_default_color( 'background_color', 'default' ),
 			)
@@ -1273,7 +1273,7 @@ class Primer_Customizer_Colors {
 				'description'     => esc_html__( 'Control the color overlay transparency when using a custom Header Image.', 'the-primer' ),
 				'section'         => 'colors-header',
 				'priority'        => 20,
-				'active_callback' => 'primer_has_hero_image',
+				'active_callback' => 'the_primer_has_hero_image',
 				'type'            => 'range',
 				'input_attrs'     => array(
 					'min'  => 0,
@@ -1301,7 +1301,7 @@ class Primer_Customizer_Colors {
 		 *
 		 * @var int
 		 */
-		return (int) apply_filters( 'primer_hero_image_color_overlay_default', 50 );
+		return (int) apply_filters( 'the_primer_hero_image_color_overlay_default', 50 );
 
 	}
 
@@ -1322,4 +1322,4 @@ class Primer_Customizer_Colors {
 
 }
 
-new Primer_Customizer_Colors;
+new The_Primer_Customizer_Colors;

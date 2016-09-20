@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php if ( ! primer_use_featured_hero_image() ) : ?>
+	<?php if ( ! the_primer_use_featured_hero_image() ) : ?>
 
 		<?php get_template_part( 'templates/parts/loop/post', 'thumbnail' ); ?>
 

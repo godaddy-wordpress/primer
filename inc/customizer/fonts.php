@@ -6,7 +6,7 @@
  * @since   1.0.0
  */
 
-class Primer_Customizer_Fonts {
+class The_Primer_Customizer_Fonts {
 
 	/**
 	 * Array of available fonts.
@@ -38,7 +38,7 @@ class Primer_Customizer_Fonts {
 		 *
 		 * @var array
 		 */
-		$this->fonts = (array) apply_filters( 'primer_fonts',
+		$this->fonts = (array) apply_filters( 'the_primer_fonts',
 			array(
 				'Architects Daughter',
 				'Asap',
@@ -81,7 +81,7 @@ class Primer_Customizer_Fonts {
 		 *
 		 * @var array
 		 */
-		$this->font_types = (array) apply_filters( 'primer_font_types',
+		$this->font_types = (array) apply_filters( 'the_primer_font_types',
 			array(
 				'site_title_font' => array(
 					'label'       => esc_html__( 'Site Title', 'the-primer' ),
@@ -302,7 +302,7 @@ class Primer_Customizer_Fonts {
 		 *
 		 * @var array
 		 */
-		$weights = (array) apply_filters( 'primer_font_weights', array( 300, 400, 700 ), $font, $font_type );
+		$weights = (array) apply_filters( 'the_primer_font_weights', array( 300, 400, 700 ), $font, $font_type );
 		$weights = array_filter( array_map( 'absint', $weights ) );
 
 		sort( $weights );
@@ -352,14 +352,14 @@ class Primer_Customizer_Fonts {
 		 *
 		 * @var array
 		 */
-		$query_args = (array) apply_filters( 'primer_google_fonts_query_args',
+		$query_args = (array) apply_filters( 'the_primer_google_fonts_query_args',
 			array(
 				'family' => $font_families,
 				'subset' => 'latin',
 			)
 		);
 
-		wp_enqueue_style( Primer_Customizer::$stylesheet . '-fonts', add_query_arg( $query_args, '//fonts.googleapis.com/css' ), false );
+		wp_enqueue_style( The_Primer_Customizer::$stylesheet . '-fonts', add_query_arg( $query_args, '//fonts.googleapis.com/css' ), false );
 
 	}
 
@@ -380,11 +380,11 @@ class Primer_Customizer_Fonts {
 			}
 
 			$css = sprintf(
-				Primer_Customizer::parse_css_rules( $args['css'] ),
+				The_Primer_Customizer::parse_css_rules( $args['css'] ),
 				$this->get_font( $name )
 			);
 
-			wp_add_inline_style( Primer_Customizer::$stylesheet . '-fonts', $css );
+			wp_add_inline_style( The_Primer_Customizer::$stylesheet . '-fonts', $css );
 
 		}
 
@@ -392,4 +392,4 @@ class Primer_Customizer_Fonts {
 
 }
 
-new Primer_Customizer_Fonts;
+new The_Primer_Customizer_Fonts;

@@ -19,7 +19,7 @@
 			 *
 			 * @since 1.0.0
 			 */
-			do_action( 'primer_site_info' );
+			do_action( 'the_primer_site_info' );
 			?>
 
 		</div><!-- .site-info-inner -->
