@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 0.9.0\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-09-20 01:48:41+00:00\n"
+"POT-Creation-Date: 2016-09-20 17:52:54+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -448,8 +448,8 @@ msgstr "Un commento"
 
 #. Theme Name of the plugin/theme
 #, fuzzy
-msgid "The Primer"
-msgstr "Primer"
+msgid "Primer"
+msgstr "Principale"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -623,11 +623,3 @@ msgstr "Archiviato sotto: %s"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% commenti"
-
-#~ msgid "Default Layout"
-#~ msgstr "Layout predefinito"
-
-#~ msgid "All posts and pages on your site will use this layout by default."
-#~ msgstr ""
-#~ "Tutti i post e tutte le pagine del sito assumeranno automaticamente "
-#~ "questo layout."

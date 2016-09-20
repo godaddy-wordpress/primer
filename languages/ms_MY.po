@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 0.9.0\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-09-20 01:48:41+00:00\n"
+"POT-Creation-Date: 2016-09-20 17:52:54+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -435,8 +435,8 @@ msgstr "1 Ulasan"
 
 #. Theme Name of the plugin/theme
 #, fuzzy
-msgid "The Primer"
-msgstr "Primer"
+msgid "Primer"
+msgstr "Utama"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -610,11 +610,3 @@ msgstr "Difailkan bawah: %s"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% Ulasan"
-
-#~ msgid "Default Layout"
-#~ msgstr "Reka Letak Lalai"
-
-#~ msgid "All posts and pages on your site will use this layout by default."
-#~ msgstr ""
-#~ "Semua pos dan halaman pada laman anda akan guna reka letak ini secara "
-#~ "lalai."
