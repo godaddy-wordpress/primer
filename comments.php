@@ -51,11 +51,11 @@ if ( post_password_required() ) {
 
 			<nav id="comment-nav-above" class="comment-navigation">
 
-				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'the-primer' ); ?></h1>
+				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'primer' ); ?></h1>
 
-				<div class="nav-previous"><?php previous_comments_link( sprintf( esc_html_x( '%s Older Comments', 'left arrow (LTR) / right arrow (RTL)', 'the-primer' ), is_rtl() ? '&rarr;' : '&larr;' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( sprintf( esc_html_x( '%s Older Comments', 'left arrow (LTR) / right arrow (RTL)', 'primer' ), is_rtl() ? '&rarr;' : '&larr;' ) ); ?></div>
 
-				<div class="nav-next"><?php next_comments_link( sprintf( esc_html_x( 'Newer Comments %s', 'right arrow (LTR) / left arrow (RTL)', 'the-primer' ), is_rtl() ? '&larr;' : '&rarr;' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( sprintf( esc_html_x( 'Newer Comments %s', 'right arrow (LTR) / left arrow (RTL)', 'primer' ), is_rtl() ? '&larr;' : '&rarr;' ) ); ?></div>
 
 			</nav><!-- #comment-nav-above -->
 
@@ -76,11 +76,11 @@ if ( post_password_required() ) {
 
 			<nav id="comment-nav-below" class="comment-navigation">
 
-				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'the-primer' ); ?></h1>
+				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'primer' ); ?></h1>
 
-				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'the-primer' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'primer' ) ); ?></div>
 
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'the-primer' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'primer' ) ); ?></div>
 
 			</nav><!-- #comment-nav-below -->
 
@@ -90,7 +90,7 @@ if ( post_password_required() ) {
 
 	<?php if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'the-primer' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'primer' ); ?></p>
 
 	<?php endif; ?>
 

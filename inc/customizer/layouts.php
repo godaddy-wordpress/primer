@@ -50,13 +50,13 @@ class Primer_Customizer_Layouts {
 		 */
 		$this->layouts = (array) apply_filters( 'primer_layouts',
 			array(
-				'one-column-wide'       => esc_html__( 'One Column: Wide', 'the-primer' ),
-				'one-column-narrow'     => esc_html__( 'One Column: Narrow', 'the-primer' ),
-				'two-column-default'    => esc_html__( 'Two Columns: Content | Sidebar', 'the-primer' ),
-				'two-column-reversed'   => esc_html__( 'Two Columns: Sidebar | Content', 'the-primer' ),
-				'three-column-default'  => esc_html__( 'Three Columns: Content | Sidebar | Sidebar', 'the-primer' ),
-				'three-column-center'   => esc_html__( 'Three Columns: Sidebar | Content | Sidebar', 'the-primer' ),
-				'three-column-reversed' => esc_html__( 'Three Columns: Sidebar | Sidebar | Content', 'the-primer' ),
+				'one-column-wide'       => esc_html__( 'One Column: Wide', 'primer' ),
+				'one-column-narrow'     => esc_html__( 'One Column: Narrow', 'primer' ),
+				'two-column-default'    => esc_html__( 'Two Columns: Content | Sidebar', 'primer' ),
+				'two-column-reversed'   => esc_html__( 'Two Columns: Sidebar | Content', 'primer' ),
+				'three-column-default'  => esc_html__( 'Three Columns: Content | Sidebar | Sidebar', 'primer' ),
+				'three-column-center'   => esc_html__( 'Three Columns: Sidebar | Content | Sidebar', 'primer' ),
+				'three-column-reversed' => esc_html__( 'Three Columns: Sidebar | Sidebar | Content', 'primer' ),
 			)
 		);
 
@@ -94,8 +94,8 @@ class Primer_Customizer_Layouts {
 		 */
 		$this->page_widths = (array) apply_filters( 'primer_page_widths',
 			array(
-				'fixed' => esc_html_x( 'Fixed', 'fixed-width page layout', 'the-primer' ),
-				'fluid' => esc_html_x( 'Fluid', 'fluid-width page layout', 'the-primer' ),
+				'fixed' => esc_html_x( 'Fixed', 'fixed-width page layout', 'primer' ),
+				'fluid' => esc_html_x( 'Fluid', 'fluid-width page layout', 'primer' ),
 			)
 		);
 
@@ -140,10 +140,10 @@ class Primer_Customizer_Layouts {
 		 */
 		$rtl_layouts = (array) apply_filters( 'primer_layouts_rtl',
 			array(
-				'two-column-default'    => esc_html__( 'Two Columns: Sidebar | Content', 'the-primer' ),
-				'two-column-reversed'   => esc_html__( 'Two Columns: Content | Sidebar', 'the-primer' ),
-				'three-column-default'  => esc_html__( 'Three Columns: Sidebar | Sidebar | Content', 'the-primer' ),
-				'three-column-reversed' => esc_html__( 'Three Columns: Content | Sidebar | Sidebar', 'the-primer' ),
+				'two-column-default'    => esc_html__( 'Two Columns: Sidebar | Content', 'primer' ),
+				'two-column-reversed'   => esc_html__( 'Two Columns: Content | Sidebar', 'primer' ),
+				'three-column-default'  => esc_html__( 'Three Columns: Sidebar | Sidebar | Content', 'primer' ),
+				'three-column-reversed' => esc_html__( 'Three Columns: Content | Sidebar | Sidebar', 'primer' ),
 			)
 		);
 
@@ -253,7 +253,7 @@ class Primer_Customizer_Layouts {
 
 		add_meta_box(
 			'primer-layouts-meta-box',
-			esc_html__( 'Layout', 'the-primer' ),
+			esc_html__( 'Layout', 'primer' ),
 			array( $this, 'render_meta_box' ),
 			$post_type,
 			'side',
@@ -285,11 +285,11 @@ class Primer_Customizer_Layouts {
 			<?php
 
 			printf(
-				'<p>' . esc_html_x( 'The site-wide Default layout setting is located in the %s.', 'link to the Customizer', 'the-primer' ) . '</p>',
+				'<p>' . esc_html_x( 'The site-wide Default layout setting is located in the %s.', 'link to the Customizer', 'primer' ) . '</p>',
 				sprintf(
 					'<a href="%s">%s</a>',
 					add_query_arg( 'autofocus[section]', 'layout', admin_url( 'customize.php' ) ),
-					esc_html_x( 'Customizer', 'title of a component found in WordPress', 'the-primer' )
+					esc_html_x( 'Customizer', 'title of a component found in WordPress', 'primer' )
 				)
 			);
 
@@ -303,7 +303,7 @@ class Primer_Customizer_Layouts {
 					       value="0"
 					       autocomplete="off"
 						<?php checked( ! $has_custom ); ?>>
-					<?php _e( 'Default', 'the-primer' ); ?>
+					<?php _e( 'Default', 'primer' ); ?>
 				</label>
 				<label for="primer-layout-use-custom">
 					<input type="radio"
@@ -312,7 +312,7 @@ class Primer_Customizer_Layouts {
 					       value="1"
 					       autocomplete="off"
 						<?php checked( $has_custom ); ?>>
-					<?php _e( 'Custom', 'the-primer' ); ?>
+					<?php _e( 'Custom', 'primer' ); ?>
 				</label>
 				<span class="clear"></span>
 			</p>
@@ -444,7 +444,7 @@ class Primer_Customizer_Layouts {
 		$wp_customize->add_section(
 			'layout',
 			array(
-				'title'      => esc_html__( 'Layout', 'the-primer' ),
+				'title'      => esc_html__( 'Layout', 'primer' ),
 				'priority'   => 30,
 				'capability' => 'edit_theme_options',
 			)
@@ -470,8 +470,8 @@ class Primer_Customizer_Layouts {
 		$wp_customize->add_control(
 			'page_width',
 			array(
-				'label'       => esc_html__( 'Page Width', 'the-primer' ),
-				'description' => esc_html__( 'Display your site differently on larger screens.', 'the-primer' ),
+				'label'       => esc_html__( 'Page Width', 'primer' ),
+				'description' => esc_html__( 'Display your site differently on larger screens.', 'primer' ),
 				'section'     => 'layout',
 				'settings'    => 'page_width',
 				'type'        => 'radio',

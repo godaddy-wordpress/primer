@@ -160,8 +160,8 @@ class Primer_Customizer {
 		$wp_customize->add_control(
 			'use_featured_hero_image',
 			array(
-				'label'       => esc_html__( 'Use featured image', 'the-primer' ),
-				'description' => esc_html__( 'Allow the featured image on the current post to override the hero image.', 'the-primer' ),
+				'label'       => esc_html__( 'Use featured image', 'primer' ),
+				'description' => esc_html__( 'Allow the featured image on the current post to override the hero image.', 'primer' ),
 				'section'     => 'header_image',
 				'priority'    => 5,
 				'type'        => 'checkbox',

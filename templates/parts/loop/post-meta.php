@@ -23,7 +23,7 @@
 
 				<a href="<?php echo get_comments_link(); ?>">
 
-					<span class="comments-link"><?php comments_popup_link( esc_html__( 'Leave a comment', 'the-primer' ), esc_html__( '1 Comment', 'the-primer' ), esc_html_x( '% Comments', 'number of comments', 'the-primer' ) ); ?></span>
+					<span class="comments-link"><?php comments_popup_link( esc_html__( 'Leave a comment', 'primer' ), esc_html__( '1 Comment', 'primer' ), esc_html_x( '% Comments', 'number of comments', 'primer' ) ); ?></span>
 
 				</a>
 

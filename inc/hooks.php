@@ -381,7 +381,7 @@ function primer_wp_title( $title, $sep ) {
 			' %s %s',
 			$sep, // xss ok
 			sprintf(
-				esc_html_x( 'Page %d', 'page number', 'the-primer' ),
+				esc_html_x( 'Page %d', 'page number', 'primer' ),
 				max( $paged, $page )
 			)
 		);

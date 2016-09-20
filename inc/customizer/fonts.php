@@ -84,8 +84,8 @@ class Primer_Customizer_Fonts {
 		$this->font_types = (array) apply_filters( 'primer_font_types',
 			array(
 				'site_title_font' => array(
-					'label'       => esc_html__( 'Site Title', 'the-primer' ),
-					'description' => esc_html__( 'Site title text in the header.', 'the-primer' ),
+					'label'       => esc_html__( 'Site Title', 'primer' ),
+					'description' => esc_html__( 'Site title text in the header.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
 						'.site-title' => array(
@@ -94,8 +94,8 @@ class Primer_Customizer_Fonts {
 					),
 				),
 				'navigation_font' => array(
-					'label'       => esc_html__( 'Navigation', 'the-primer' ),
-					'description' => esc_html__( 'Primary menu links and button links.', 'the-primer' ),
+					'label'       => esc_html__( 'Navigation', 'primer' ),
+					'description' => esc_html__( 'Primary menu links and button links.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
 						'.main-navigation ul li a, .main-navigation ul li a:visited,
@@ -105,8 +105,8 @@ class Primer_Customizer_Fonts {
 					),
 				),
 				'heading_font' => array(
-					'label'       => esc_html__( 'Headings', 'the-primer' ),
-					'description' => esc_html__( 'Post titles, widget titles, form labels, and table headers.', 'the-primer' ),
+					'label'       => esc_html__( 'Headings', 'primer' ),
+					'description' => esc_html__( 'Post titles, widget titles, form labels, and table headers.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
 						'h1, h2, h3, h4, h5, h6,
@@ -121,8 +121,8 @@ class Primer_Customizer_Fonts {
 					),
 				),
 				'primary_font' => array(
-					'label'       => esc_html__( 'Primary', 'the-primer' ),
-					'description' => esc_html__( 'Paragraphs, lists, links, quotes, and tables.', 'the-primer' ),
+					'label'       => esc_html__( 'Primary', 'primer' ),
+					'description' => esc_html__( 'Paragraphs, lists, links, quotes, and tables.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
 						'body,
@@ -136,8 +136,8 @@ class Primer_Customizer_Fonts {
 					),
 				),
 				'secondary_font' => array(
-					'label'       => esc_html__( 'Secondary', 'the-primer' ),
-					'description' => esc_html__( 'Bylines, comment counts, reply links, post footers, and quote footers.', 'the-primer' ),
+					'label'       => esc_html__( 'Secondary', 'primer' ),
+					'description' => esc_html__( 'Bylines, comment counts, reply links, post footers, and quote footers.', 'primer' ),
 					'default'     => 'Open Sans',
 					'css'         => array(
 						'blockquote,
@@ -185,7 +185,7 @@ class Primer_Customizer_Fonts {
 		$wp_customize->add_section(
 			'fonts',
 			array(
-				'title'    => esc_html__( 'Fonts', 'the-primer' ),
+				'title'    => esc_html__( 'Fonts', 'primer' ),
 				'priority' => 40,
 			)
 		);
@@ -210,7 +210,7 @@ class Primer_Customizer_Fonts {
 
 			$fonts             = array_combine( $this->fonts, $this->fonts );
 			$default           = $this->get_default_font( $name );
-			$fonts[ $default ] = sprintf( esc_html_x( '%s (Default)', 'font name', 'the-primer' ), $default );
+			$fonts[ $default ] = sprintf( esc_html_x( '%s (Default)', 'font name', 'primer' ), $default );
 
 			$wp_customize->add_control(
 				$name,
