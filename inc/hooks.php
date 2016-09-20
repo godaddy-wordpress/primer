@@ -251,7 +251,7 @@ add_action( 'the_primer_site_info', 'the_primer_add_credit' );
  *
  * @return int
  */
-function the_primer_excerpt_length( $length ) {
+function the_primer_excerpt_length() {
 
 	return 20;
 
@@ -270,6 +270,8 @@ add_filter( 'excerpt_length', 'the_primer_excerpt_length' );
  * @filter excerpt_more
  * @link   https://developer.wordpress.org/reference/hooks/excerpt_more/
  * @since  1.0.0
+ *
+ * @param string $more
  *
  * @return string
  */

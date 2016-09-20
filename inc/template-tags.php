@@ -306,11 +306,11 @@ function the_primer_breadcrumbs() {
 
 		$home = get_post( get_option( 'page_on_front' ) );
 
-		for ( $i = count( $post->ancestors )-1; $i >= 0; $i-- ) {
+		for ( $i = count( $post->ancestors ) - 1; $i >= 0; $i-- ) {
 
-			if ( ( $home->ID ) != ( $post->ancestors[$i] ) ) {
+			if ( ( $home->ID ) != ( $post->ancestors[ $i ] ) ) {
 
-				echo '<a href="' . get_permalink( $post->ancestors[$i] ) . '">' . get_the_title( $post->ancestors[$i] ) . '</a>' . $separator;
+				echo '<a href="' . get_permalink( $post->ancestors[ $i ] ) . '">' . get_the_title( $post->ancestors[ $i ] ) . '</a>' . $separator;
 
 			}
 		}
