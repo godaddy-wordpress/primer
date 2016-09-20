@@ -19,7 +19,7 @@
 
 		<?php $category_list = get_the_category_list( esc_html_x( ', ', 'separator for items in a list', 'the-primer' ) ); ?>
 
-		<?php if ( $category_list && primer_has_active_categories() ) : ?>
+		<?php if ( $category_list && the_primer_has_active_categories() ) : ?>
 
 			<span class="cat-links">
 

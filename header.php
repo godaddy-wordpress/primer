@@ -34,7 +34,7 @@
 	 *
 	 * @since 1.0.0
 	 */
-	do_action( 'primer_body' );
+	do_action( 'the_primer_body' );
 	?>
 
 	<div id="page" class="hfeed site">
@@ -47,7 +47,7 @@
 		 *
 		 * @since 1.0.0
 		 */
-		do_action( 'primer_before_header' );
+		do_action( 'the_primer_before_header' );
 		?>
 
 		<header id="masthead" class="site-header" role="banner">
@@ -60,7 +60,7 @@
 				 *
 				 * @since 1.0.0
 				 */
-				do_action( 'primer_header' );
+				do_action( 'the_primer_header' );
 				?>
 
 			</div><!-- .site-header-wrapper -->
@@ -71,7 +71,7 @@
 			 *
 			 * @since 1.0.0
 			 */
-			do_action( 'primer_after_site_header_wrapper' );
+			do_action( 'the_primer_after_site_header_wrapper' );
 			?>
 
 		</header><!-- #masthead -->
@@ -82,7 +82,7 @@
 		 *
 		 * @since 1.0.0
 		 */
-		do_action( 'primer_after_header' );
+		do_action( 'the_primer_after_header' );
 		?>
 
 		<div id="content" class="site-content">

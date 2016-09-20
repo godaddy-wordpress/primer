@@ -15,7 +15,7 @@
 	 *
 	 * @since 1.0.0
 	 */
-	do_action( 'primer_before_site_navigation' );
+	do_action( 'the_primer_before_site_navigation' );
 	?>
 
 	<nav id="site-navigation" class="main-navigation">
@@ -26,7 +26,7 @@
 		 *
 		 * @since 1.0.0
 		 */
-		do_action( 'primer_site_navigation' );
+		do_action( 'the_primer_site_navigation' );
 		?>
 
 	</nav><!-- #site-navigation -->
@@ -37,7 +37,7 @@
 	 *
 	 * @since 1.0.0
 	 */
-	do_action( 'primer_after_site_navigation' );
+	do_action( 'the_primer_after_site_navigation' );
 	?>
 
 </div>
