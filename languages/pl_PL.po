@@ -3,17 +3,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 0.9.0\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-09-10 04:06:01+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2016-09-20 01:40:42+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 
 #: 404.php:22
 msgid "Oops! That page can't be found."
@@ -21,8 +22,7 @@ msgstr "Ups! Tej strony nie można znaleźć."
 
 #: 404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
 "Wygląda na to, że w tej lokalizacji niczego nie znaleziono. Spróbuj "
 "wyszukiwania poniżej:"
@@ -60,8 +60,11 @@ msgstr ""
 "innych słów kluczowych."
 
 #: content-none.php:45
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr "Wygląda na to, że nie możemy znaleźć tego, czego szukasz. Może wyszukiwanie pomoże."
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"Wygląda na to, że nie możemy znaleźć tego, czego szukasz. Może wyszukiwanie "
+"pomoże."
 
 #: functions.php:159
 msgid "Featured"
@@ -101,8 +104,8 @@ msgstr "Dodatkowy pasek wyszukiwania"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr ""
 "Dodatkowy pasek wyszukiwania jest wyświetlany tylko po wybraniu układu z "
 "trzema kolumnami."
@@ -170,7 +173,9 @@ msgstr "Tekst nagłówka"
 
 #: inc/customizer/colors.php:128
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "Tytuły wpisów, tytuły widżetów, etykiety formularzy, nagłówki tabel i przyciski."
+msgstr ""
+"Tytuły wpisów, tytuły widżetów, etykiety formularzy, nagłówki tabel i "
+"przyciski."
 
 #: inc/customizer/colors.php:149
 msgid "Primary Text"
@@ -280,9 +285,12 @@ msgstr "Podstawowy schemat kolorystyczny"
 msgid "Hero Background Overlay"
 msgstr "Nakładka tła Hero"
 
-#: inc/customizer/colors.php:1272
-msgid "Control the color overlay transparency when using a custom Header Image."
-msgstr "Określ przezroczystość koloru nakładki w przypadku niestandardowego obrazu nagłówka."
+#: inc/customizer/colors.php:1273
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+"Określ przezroczystość koloru nakładki w przypadku niestandardowego obrazu "
+"nagłówka."
 
 #: inc/customizer/fonts.php:87
 msgid "Site Title"
@@ -308,7 +316,7 @@ msgstr "Nagłówki"
 msgid "Post titles, widget titles, form labels, and table headers."
 msgstr "Tytuły wpisów, tytuły widżetów, etykiety formularzy i nagłówki tabel."
 
-#: inc/customizer/fonts.php:118
+#: inc/customizer/fonts.php:124
 msgid "Primary"
 msgstr "Podstawowe"
 
@@ -322,7 +330,9 @@ msgstr "Dodatkowe"
 
 #: inc/customizer/fonts.php:140
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr "Notki o autorze wpisu, liczby komentarzy, łącza odpowiedzi, stopki wpisów i cytatów."
+msgstr ""
+"Notki o autorze wpisu, liczby komentarzy, łącza odpowiedzi, stopki wpisów i "
+"cytatów."
 
 #: inc/customizer/fonts.php:188
 msgid "Fonts"
@@ -372,9 +382,12 @@ msgstr "Wyświetlaj stronę inaczej na większych ekranach."
 msgid "Use featured image"
 msgstr "Użyj wyróżnionego obrazu"
 
-#: inc/customizer.php:183
-msgid "Allow the featured image on the current post to override the hero image."
-msgstr "Zezwól na zastąpienie w aktualnym wpisie obrazu frontalnego przez wyróżniony obraz."
+#: inc/customizer.php:164
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+"Zezwól na zastąpienie w aktualnym wpisie obrazu frontalnego przez wyróżniony "
+"obraz."
 
 #: inc/helpers.php:52
 msgid "404 Page Not Found"
@@ -426,7 +439,8 @@ msgid "1 Comment"
 msgstr "1 komentarz"
 
 #. Theme Name of the plugin/theme
-msgid "Primer"
+#, fuzzy
+msgid "The Primer"
 msgstr "Primer"
 
 #. Theme URI of the plugin/theme

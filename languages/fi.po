@@ -3,17 +3,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 0.9.0\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-09-10 04:06:01+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2016-09-20 01:47:05+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 
 #: 404.php:22
 msgid "Oops! That page can't be found."
@@ -21,8 +22,7 @@ msgstr "Hups! Sivua ei löydy."
 
 #: 404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
 "Näyttää siltä, että mitään ei löytynyt tästä sijainnista. Yritä etsiä alla:"
 
@@ -55,11 +55,15 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Pahoittelemme – mikään ei vastannut hakutermejäsi. Yritä uudelleen eri avainsanoilla."
+"Pahoittelemme – mikään ei vastannut hakutermejäsi. Yritä uudelleen eri "
+"avainsanoilla."
 
 #: content-none.php:45
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr "Näyttää siltä, ettemme löydä sitä, mitä olet etsimässä. Ehkä haku voisi auttaa."
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"Näyttää siltä, ettemme löydä sitä, mitä olet etsimässä. Ehkä haku voisi "
+"auttaa."
 
 #: functions.php:159
 msgid "Featured"
@@ -99,10 +103,11 @@ msgstr "Toissijainen sivupalkki"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr ""
-"Toissijainen sivupalkki näkyy vain, jos olet valinnut kolmesarakkeisen asettelun."
+"Toissijainen sivupalkki näkyy vain, jos olet valinnut kolmesarakkeisen "
+"asettelun."
 
 #: functions.php:383
 msgid "Footer 1"
@@ -167,7 +172,9 @@ msgstr "Otsikkoteksti"
 
 #: inc/customizer/colors.php:128
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "Artikkelien nimet, widget-nimet, lomakenimet, taulukkojen otsikot ja painikkeet."
+msgstr ""
+"Artikkelien nimet, widget-nimet, lomakenimet, taulukkojen otsikot ja "
+"painikkeet."
 
 #: inc/customizer/colors.php:149
 msgid "Primary Text"
@@ -183,7 +190,9 @@ msgstr "Toissijainen teksti"
 
 #: inc/customizer/colors.php:196
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr "Artikkelin tekijöiden nimet, kommenttimäärät, artikkelien alapalkit ja lainausten alapalkit."
+msgstr ""
+"Artikkelin tekijöiden nimet, kommenttimäärät, artikkelien alapalkit ja "
+"lainausten alapalkit."
 
 #: inc/customizer/colors.php:210
 msgid "Widget Heading Text"
@@ -277,9 +286,11 @@ msgstr "Perusväri"
 msgid "Hero Background Overlay"
 msgstr "Hero-taustan peitekerros"
 
-#: inc/customizer/colors.php:1272
-msgid "Control the color overlay transparency when using a custom Header Image."
-msgstr "Hallitse värikerroksen läpinäkyvyyttä mukautettua otsikkokuvaa käytettäessä."
+#: inc/customizer/colors.php:1273
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+"Hallitse värikerroksen läpinäkyvyyttä mukautettua otsikkokuvaa käytettäessä."
 
 #: inc/customizer/fonts.php:87
 msgid "Site Title"
@@ -305,7 +316,7 @@ msgstr "Otsikot"
 msgid "Post titles, widget titles, form labels, and table headers."
 msgstr "Artikkelien nimet, widget-nimet, lomakenimet ja taulukkojen otsikot."
 
-#: inc/customizer/fonts.php:118
+#: inc/customizer/fonts.php:124
 msgid "Primary"
 msgstr "Ensisijainen"
 
@@ -319,7 +330,9 @@ msgstr "Toissijainen"
 
 #: inc/customizer/fonts.php:140
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr "Tekijöiden nimet, kommenttimäärät, vastauslinkit, artikkelien alapalkit ja lainausten alapalkit."
+msgstr ""
+"Tekijöiden nimet, kommenttimäärät, vastauslinkit, artikkelien alapalkit ja "
+"lainausten alapalkit."
 
 #: inc/customizer/fonts.php:188
 msgid "Fonts"
@@ -357,15 +370,7 @@ msgstr "Kolme saraketta: Sivupalkki | Sivupalkki | Sisältö"
 msgid "Layout"
 msgstr "Asettelu"
 
-#: inc/customizer/layouts.php:464
-msgid "Default Layout"
-msgstr "Oletusasettelu"
-
-#: inc/customizer/layouts.php:465
-msgid "All posts and pages on your site will use this layout by default."
-msgstr "Kaikki sivuston julkaisut ja sivut käyttävät tätä asettelua oletusarvoisesti."
-
-#: inc/customizer/layouts.php:494
+#: inc/customizer/layouts.php:473
 msgid "Page Width"
 msgstr "Sivun leveys"
 
@@ -377,8 +382,9 @@ msgstr "Näyttää sivustosi eri lailla suuremmissa näytöissä."
 msgid "Use featured image"
 msgstr "Käytä pääkuvaa"
 
-#: inc/customizer.php:183
-msgid "Allow the featured image on the current post to override the hero image."
+#: inc/customizer.php:164
+msgid ""
+"Allow the featured image on the current post to override the hero image."
 msgstr "Anna nykyisen artikkelin pääkuvan korvata hero-kuva."
 
 #: inc/helpers.php:52
@@ -431,7 +437,8 @@ msgid "1 Comment"
 msgstr "1 kommentti"
 
 #. Theme Name of the plugin/theme
-msgid "Primer"
+#, fuzzy
+msgid "The Primer"
 msgstr "Primer"
 
 #. Theme URI of the plugin/theme

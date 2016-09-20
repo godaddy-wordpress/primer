@@ -3,17 +3,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 0.9.0\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-09-10 04:06:01+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2016-09-20 01:48:41+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 
 #: 404.php:22
 msgid "Oops! That page can't be found."
@@ -21,8 +22,7 @@ msgstr "Erreur ! Cette page est introuvable."
 
 #: 404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
 "On dirait qu'il n'y a rien à cet emplacement. Essayez d’effectuer une "
 "recherche ci-dessous :"
@@ -56,11 +56,15 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Vos termes de recherche n'ont rien renvoyé. Réessayez avec d'autres mots-clés."
+"Vos termes de recherche n'ont rien renvoyé. Réessayez avec d'autres mots-"
+"clés."
 
 #: content-none.php:45
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr "Nous n'arrivons pas à trouver ce que vous recherchez. Une recherche pourrait vous aider."
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"Nous n'arrivons pas à trouver ce que vous recherchez. Une recherche pourrait "
+"vous aider."
 
 #: functions.php:159
 msgid "Featured"
@@ -100,8 +104,8 @@ msgstr "Barre latérale secondaire"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr ""
 "La barre latérale secondaire n'apparaît que si vous avez sélectionné une "
 "présentation en 3 colonnes."
@@ -112,7 +116,9 @@ msgstr "Pied de page 1"
 
 #: functions.php:384
 msgid "This sidebar is the first column of the footer widget area."
-msgstr "Cette barre latérale est la première colonne de la zone de widget du pied de page."
+msgstr ""
+"Cette barre latérale est la première colonne de la zone de widget du pied de "
+"page."
 
 #: functions.php:391
 msgid "Footer 2"
@@ -120,7 +126,9 @@ msgstr "Pied de page 2"
 
 #: functions.php:392
 msgid "This sidebar is the second column of the footer widget area."
-msgstr "Cette barre latérale est la deuxième colonne de la zone de widget du pied de page."
+msgstr ""
+"Cette barre latérale est la deuxième colonne de la zone de widget du pied de "
+"page."
 
 #: functions.php:399
 msgid "Footer 3"
@@ -128,11 +136,14 @@ msgstr "Pied de page 3"
 
 #: functions.php:400
 msgid "This sidebar is the third column of the footer widget area."
-msgstr "Cette barre latérale est la troisième colonne de la zone de widget du pied de page."
+msgstr ""
+"Cette barre latérale est la troisième colonne de la zone de widget du pied "
+"de page."
 
 #: functions.php:408
 msgid "Hero widgets appear over the header image on the front page."
-msgstr "Les widgets Hero apparaissent sur l’image d’en-tête de la première page."
+msgstr ""
+"Les widgets Hero apparaissent sur l’image d’en-tête de la première page."
 
 #: header.php:42
 msgid "Skip to content"
@@ -169,7 +180,9 @@ msgstr "Texte du titre"
 
 #: inc/customizer/colors.php:128
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "Titres de publication, titres de widget, étiquettes de formulaire, en-têtes de tableau et boutons."
+msgstr ""
+"Titres de publication, titres de widget, étiquettes de formulaire, en-têtes "
+"de tableau et boutons."
 
 #: inc/customizer/colors.php:149
 msgid "Primary Text"
@@ -185,7 +198,9 @@ msgstr "Texte secondaire"
 
 #: inc/customizer/colors.php:196
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr "Légendes de publication, nombre de commentaires, pieds de page de publication et pieds de page de citation."
+msgstr ""
+"Légendes de publication, nombre de commentaires, pieds de page de "
+"publication et pieds de page de citation."
 
 #: inc/customizer/colors.php:210
 msgid "Widget Heading Text"
@@ -279,9 +294,12 @@ msgstr "Charte graphique de base"
 msgid "Hero Background Overlay"
 msgstr "Couche de fond Hero"
 
-#: inc/customizer/colors.php:1272
-msgid "Control the color overlay transparency when using a custom Header Image."
-msgstr "Contrôlez la transparence de la couche de fond lorsque vous utilisez une image d’en-tête personnalisée."
+#: inc/customizer/colors.php:1273
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+"Contrôlez la transparence de la couche de fond lorsque vous utilisez une "
+"image d’en-tête personnalisée."
 
 #: inc/customizer/fonts.php:87
 msgid "Site Title"
@@ -305,9 +323,11 @@ msgstr "Titres"
 
 #: inc/customizer/fonts.php:109
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr "Titres de publication, titres de widget, étiquettes de formulaire et en-têtes de tableau."
+msgstr ""
+"Titres de publication, titres de widget, étiquettes de formulaire et en-"
+"têtes de tableau."
 
-#: inc/customizer/fonts.php:118
+#: inc/customizer/fonts.php:124
 msgid "Primary"
 msgstr "Principal"
 
@@ -321,7 +341,9 @@ msgstr "Secondaire"
 
 #: inc/customizer/fonts.php:140
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr "Légendes, nombre de commentaires, liens de réponse, pieds de page de publication et pieds de page de citation."
+msgstr ""
+"Légendes, nombre de commentaires, liens de réponse, pieds de page de "
+"publication et pieds de page de citation."
 
 #: inc/customizer/fonts.php:188
 msgid "Fonts"
@@ -359,15 +381,7 @@ msgstr "Trois colonnes : Barre latérale | Barre latérale | Contenu"
 msgid "Layout"
 msgstr "Mise en page"
 
-#: inc/customizer/layouts.php:464
-msgid "Default Layout"
-msgstr "Mise en page par défaut"
-
-#: inc/customizer/layouts.php:465
-msgid "All posts and pages on your site will use this layout by default."
-msgstr "Toutes les publications et pages de votre site utiliseront cette mise en page par défaut."
-
-#: inc/customizer/layouts.php:494
+#: inc/customizer/layouts.php:473
 msgid "Page Width"
 msgstr "Largeur de page"
 
@@ -379,9 +393,12 @@ msgstr "Affichez votre site différemment sur les grands écrans."
 msgid "Use featured image"
 msgstr "Utiliser l’image en vedette"
 
-#: inc/customizer.php:183
-msgid "Allow the featured image on the current post to override the hero image."
-msgstr "Autorisez l’image en vedette sur la publication actuelle à remplacer l’image hero."
+#: inc/customizer.php:164
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+"Autorisez l’image en vedette sur la publication actuelle à remplacer l’image "
+"hero."
 
 #: inc/helpers.php:52
 msgid "404 Page Not Found"
@@ -433,7 +450,8 @@ msgid "1 Comment"
 msgstr "1 commentaire"
 
 #. Theme Name of the plugin/theme
-msgid "Primer"
+#, fuzzy
+msgid "The Primer"
 msgstr "Primer"
 
 #. Theme URI of the plugin/theme
@@ -445,8 +463,8 @@ msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer est un thème puissant qui apporte de la clarté à votre contenu grâce à "
-"un nouveau design."
+"Primer est un thème puissant qui apporte de la clarté à votre contenu grâce "
+"à un nouveau design."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
@@ -556,7 +574,9 @@ msgstr "Fluide"
 #: inc/customizer/layouts.php:288
 msgctxt "link to the Customizer"
 msgid "The site-wide Default layout setting is located in the %s."
-msgstr "Le paramètre de mise en page par défaut à l’échelle du site est situé dans le %s."
+msgstr ""
+"Le paramètre de mise en page par défaut à l’échelle du site est situé dans "
+"le %s."
 
 #: inc/customizer/layouts.php:292
 msgctxt "title of a component found in WordPress"
