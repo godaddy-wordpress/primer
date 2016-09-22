@@ -67,10 +67,18 @@
 
 	li li {
 		text-indent: 1rem;
+
+		a {
+			text-indent: 0;
+		}
 	}
 
 	li li li {
 		text-indent: 1.5rem;
+
+		a {
+			text-indent: 0;
+		}
 	}
 
 	ul {

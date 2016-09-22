@@ -266,7 +266,7 @@ function primer_breadcrumbs() {
 
 		printf(
 			'<a href="%s">%s</a>%s',
-			esc_url( home_url() ),
+			esc_url( home_url( '/' ) ),
 			esc_html( get_bloginfo( 'name' ) ),
 			$separator // xss ok
 		);
@@ -296,7 +296,7 @@ function primer_breadcrumbs() {
 
 		} elseif ( is_page() && $post->post_parent ) {
 
-			$home = get_page( get_option( 'page_on_front' ) );
+			$home = get_post( get_option( 'page_on_front' ) );
 
 			for ( $i = count( $post->ancestors )-1; $i >= 0; $i-- ) {
 
@@ -307,11 +307,11 @@ function primer_breadcrumbs() {
 				}
 			}
 
-			echo the_title();
+			the_title();
 
 		} elseif ( is_page() ) {
 
-			echo the_title();
+			the_title();
 
 		} elseif ( is_404() ) {
 

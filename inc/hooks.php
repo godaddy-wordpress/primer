@@ -20,7 +20,7 @@ function primer_elements() {
 
 	}
 
-	if ( is_front_page() ) {
+	if ( ( is_front_page() && (bool) get_post_meta( get_queried_object_id(), '_fl_builder_enabled', true ) ) || is_home() ) {
 
 		remove_action( 'primer_after_header', 'primer_add_page_title' );
 
