@@ -645,8 +645,12 @@ a {
       margin-left: 25px; } }
   .main-navigation li li {
     text-indent: 1rem; }
+    .main-navigation li li a {
+      text-indent: 0; }
   .main-navigation li li li {
     text-indent: 1.5rem; }
+    .main-navigation li li li a {
+      text-indent: 0; }
   .main-navigation ul {
     list-style: none;
     margin: 0;

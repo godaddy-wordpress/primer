@@ -23,19 +23,25 @@ class Primer_Customizer {
 		self::$stylesheet = get_stylesheet();
 
 		/**
-		 * Autoload all customizer components.
+		 * Load Customizer Colors functionality.
 		 *
 		 * @since 1.0.0
 		 */
-		foreach( glob( dirname( __FILE__ ) . '/customizer/*.php' ) as $filename ) {
+		require_once get_template_directory() . '/inc/customizer/colors.php';
 
-			if ( is_readable( $filename ) ) {
+		/**
+		 * Load Customizer Fonts functionality.
+		 *
+		 * @since 1.0.0
+		 */
+		require_once get_template_directory() . '/inc/customizer/fonts.php';
 
-				require_once $filename;
-
-			}
-
-		}
+		/**
+		 * Load Customizer Layouts functionality.
+		 *
+		 * @since 1.0.0
+		 */
+		require_once get_template_directory() . '/inc/customizer/layouts.php';
 
 		add_action( 'after_setup_theme',      array( $this, 'logo' ) );
 		add_action( 'customize_register',     array( $this, 'selective_refresh' ), 11 );

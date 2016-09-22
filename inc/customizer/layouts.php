@@ -282,19 +282,6 @@ class Primer_Customizer_Layouts {
 
 		<div class="primer-layout">
 
-			<?php
-
-			printf(
-				'<p>' . esc_html_x( 'The site-wide Default layout setting is located in the %s.', 'link to the Customizer', 'primer' ) . '</p>',
-				sprintf(
-					'<a href="%s">%s</a>',
-					add_query_arg( 'autofocus[section]', 'layout', admin_url( 'customize.php' ) ),
-					esc_html_x( 'Customizer', 'title of a component found in WordPress', 'primer' )
-				)
-			);
-
-			?>
-
 			<p>
 				<label for="primer-layout-use-default">
 					<input type="radio"

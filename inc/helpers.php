@@ -61,9 +61,12 @@ function primer_get_the_page_title() {
 
 		case ( ( $post = get_queried_object() ) && ! is_post_type_hierarchical( get_post_type( $post ) ) ) :
 
-			if ( 'post' === $post->post_type ) {
+			$show_on_front  = get_option( 'show_on_front' );
+			$page_for_posts = get_option( 'page_for_posts' );
 
-				$title = get_the_title( get_option( 'page_for_posts' ) );
+			if ( 'post' === $post->post_type && 'posts' !== $show_on_front && ! empty( $page_for_posts ) ) {
+
+				$title = get_the_title( $page_for_posts );
 
 				break;
 

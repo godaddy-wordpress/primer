@@ -439,7 +439,6 @@ function primer_scripts() {
 
 	wp_style_add_data( $stylesheet, 'rtl', 'replace' );
 
-	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", array( 'jquery' ), PRIMER_VERSION, true );
 	wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), PRIMER_VERSION, true );
 
