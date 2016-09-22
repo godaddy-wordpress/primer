@@ -301,7 +301,8 @@ class Primer_Customizer_Colors {
 						a.button, a.button:visited,
 						input[type="button"],
 						input[type="reset"],
-						input[type="submit"]' => array(
+						input[type="submit"],
+						.site-info-wrapper .social-menu a:hover' => array(
 							'background-color' => '%1$s',
 							'border-color'     => '%1$s',
 						),
