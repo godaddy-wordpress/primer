@@ -1,0 +1,598 @@
+# Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
+msgid ""
+msgstr ""
+"Project-Id-Version: Primer 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
+"POT-Creation-Date: 2016-09-20 17:52:54+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+
+#: 404.php:22
+msgid "Oops! That page can't be found."
+msgstr "ओह! यह पृष्ठ नहीं मिल सकता है."
+
+#: 404.php:28
+msgid ""
+"It looks like nothing was found at this location. Please try searching "
+"below:"
+msgstr "ऐसा लग रहा है इस स्थान पर कुछ नहीं मिला था. कृपया नीचे खोजकर आज़माएं:"
+
+#: comments.php:54 comments.php:79
+msgid "Comment navigation"
+msgstr "टिप्पणी नेविगेशन"
+
+#: comments.php:81
+msgid "&larr; Older Comments"
+msgstr "&larr; पुरानी टिप्पणियां"
+
+#: comments.php:83
+msgid "Newer Comments &rarr;"
+msgstr "नई टिप्पणियां &rarr;"
+
+#: comments.php:93
+msgid "Comments are closed."
+msgstr "टिप्पणियां बंद हैं."
+
+#: content-none.php:16
+msgid "Nothing Found"
+msgstr "कुछ नहीं मिला"
+
+#: content-none.php:31
+msgid "Get started here"
+msgstr "यहां प्रारंभ करें"
+
+#: content-none.php:39
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"क्षमा करें, लेकिन आपके खोज शब्दों से मेल खाने का कुछ नहीं. कृपया कुछ भिन्न "
+"कीवर्ड्स से पुनः प्रयास करें."
+
+#: content-none.php:45
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "ऐसा लग रहा है, हमें आपके द्वारा खोजी जा रही चीज नहीं मिल सकती है. शायद खोजने से मदद मिल सकती है."
+
+#: functions.php:159
+msgid "Featured"
+msgstr "प्रदर्शित किए गए"
+
+#: functions.php:165 functions.php:407
+msgid "Hero"
+msgstr "हीरो"
+
+#: functions.php:246
+msgid "Primary Menu"
+msgstr "प्राथमिक मेनू"
+
+#: functions.php:247
+msgid "Social Menu"
+msgstr "सामाजिक मेनू"
+
+#: functions.php:248
+msgid "Footer Menu"
+msgstr "पादलेख मेनू"
+
+#: functions.php:367
+msgid "Sidebar"
+msgstr "साइडबार"
+
+#: functions.php:368
+msgid ""
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
+msgstr ""
+"प्राथमिक साइडबार प्रत्येक पृष्ठ, पोस्ट, संकलन और खोज टेम्पलेट की सामग्री के "
+"साथ प्रकट होता है."
+
+#: functions.php:375
+msgid "Secondary Sidebar"
+msgstr "द्धितीयक साइडबार"
+
+#: functions.php:376
+msgid ""
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
+msgstr ""
+"द्धितीयक साइडबार आपके द्वारा तीन-स्तंभ वाला लेआउट चुनने पर ही प्रकट होगा."
+
+#: functions.php:383
+msgid "Footer 1"
+msgstr "पादलेख 1"
+
+#: functions.php:384
+msgid "This sidebar is the first column of the footer widget area."
+msgstr "यह साइडबार पादलेख विजेट क्षेत्र का पहला स्तंभ है."
+
+#: functions.php:391
+msgid "Footer 2"
+msgstr "पादलेख 2"
+
+#: functions.php:392
+msgid "This sidebar is the second column of the footer widget area."
+msgstr "यह साइडबार पादलेख विजेट क्षेत्र का दूसरा स्तंभ है."
+
+#: functions.php:399
+msgid "Footer 3"
+msgstr "पादलेख 3"
+
+#: functions.php:400
+msgid "This sidebar is the third column of the footer widget area."
+msgstr "यह साइडबार पादलेख विजेट क्षेत्र का तीसरा स्तंभ है."
+
+#: functions.php:408
+msgid "Hero widgets appear over the header image on the front page."
+msgstr "हीरो विजेट्स फ़्रंट पेज के शीर्षलेख छवि पर प्रकट होते हैं."
+
+#: header.php:42
+msgid "Skip to content"
+msgstr "सामग्री पर जाएं"
+
+#: inc/compat/wordpress.php:47
+msgid ""
+"Primer requires at least WordPress version %1$s. You are running version "
+"%2$s. Please upgrade and try again."
+msgstr ""
+"Primer के लिए कम से कम WordPress संस्करण %1$s आवश्यक. आप संस्करण %2$s चला रहे "
+"हैं. कृपया अपग्रेड करें और पुनः आज़माएं."
+
+#: inc/customizer/colors.php:47
+msgid "Site Title Text"
+msgstr "साइट शीर्षक पाठ"
+
+#: inc/customizer/colors.php:63
+msgid "Tagline Text"
+msgstr "टैगलाइन पाठ"
+
+#: inc/customizer/colors.php:74
+msgid "Hero Text"
+msgstr "मुख्य पाठ"
+
+#: inc/customizer/colors.php:105 inc/customizer/colors.php:321
+msgid "Text"
+msgstr "टेक्स्ट"
+
+#: inc/customizer/colors.php:127
+msgid "Heading Text"
+msgstr "शीर्ष पाठ"
+
+#: inc/customizer/colors.php:128
+msgid "Post titles, widget titles, form labels, table headers and buttons."
+msgstr "पोस्ट शीर्षक, विजेट शीर्षक, प्रपत्र लेबल, तालिका शीषलेख और बटन"
+
+#: inc/customizer/colors.php:149
+msgid "Primary Text"
+msgstr "प्राथमिक पाठ"
+
+#: inc/customizer/colors.php:150
+msgid "Paragraphs, lists, menu links, quotes and tables."
+msgstr "अनुच्छेद, सूची, मेनू लिंक्स, उद्धरण और तालिकाएं."
+
+#: inc/customizer/colors.php:195
+msgid "Secondary Text"
+msgstr "द्वितीयक पाठ"
+
+#: inc/customizer/colors.php:196
+msgid "Post bylines, comment counts, post footers and quote footers."
+msgstr "पोस्ट बायलाइन, टिप्पणी गणना, पोस्ट पादलेख और उद्धरण पादलेख."
+
+#: inc/customizer/colors.php:210
+msgid "Widget Heading Text"
+msgstr "विजेट शीर्ष पाठ"
+
+#: inc/customizer/colors.php:227
+msgid "Widget Text"
+msgstr "विजेट पाठ"
+
+#: inc/customizer/colors.php:238
+msgid "Menu Text"
+msgstr "मेनू पाठ"
+
+#: inc/customizer/colors.php:260
+msgid "Copyright Text"
+msgstr "कॉपीराइट पाठ"
+
+#: inc/customizer/colors.php:274
+msgid "Link Text"
+msgstr "लिंक पाठ"
+
+#: inc/customizer/colors.php:296 inc/customizer/colors.php:377
+msgid "Background"
+msgstr "पृष्ठभूमि"
+
+#: inc/customizer/colors.php:338
+msgid "Page Background"
+msgstr "पृष्ठ पृष्ठभूमि"
+
+#: inc/customizer/colors.php:348
+msgid "Content Background"
+msgstr "सामग्री पृष्ठभूमि"
+
+#: inc/customizer/colors.php:358
+msgid "Hero Background"
+msgstr "मुख्य पृष्ठभूमि"
+
+#: inc/customizer/colors.php:387
+msgid "Widgets Background"
+msgstr "विजेट पृष्ठभूमि"
+
+#: inc/customizer/colors.php:398
+msgid "Widget Content Background"
+msgstr "विजेट सामग्री पृष्ठभूमि"
+
+#: inc/customizer/colors.php:409
+msgid "Footer Background"
+msgstr "पादलेख पृष्ठभूमि"
+
+#: inc/customizer/colors.php:447 inc/customizer/layouts.php:315
+msgid "Custom"
+msgstr "विशेष"
+
+#: inc/customizer/colors.php:464 inc/customizer/layouts.php:306
+msgid "Default"
+msgstr "डिफ़ॉल्ट"
+
+#: inc/customizer/colors.php:704
+msgid "Colors"
+msgstr "रंग"
+
+#: inc/customizer/colors.php:713
+msgid "Color Schemes"
+msgstr "क्लर स्कीम"
+
+#: inc/customizer/colors.php:721
+msgid "Header"
+msgstr "शीर्षलेख"
+
+#: inc/customizer/colors.php:729
+msgid "Menu"
+msgstr "मेनू"
+
+#: inc/customizer/colors.php:737
+msgid "Buttons"
+msgstr "बटन"
+
+#: inc/customizer/colors.php:745
+msgid "Content"
+msgstr "सामग्री"
+
+#: inc/customizer/colors.php:753
+msgid "Footer"
+msgstr "फुटर"
+
+#: inc/customizer/colors.php:963
+msgid "Base Color Scheme"
+msgstr "मूल रंग स्कीम"
+
+#: inc/customizer/colors.php:1272
+msgid "Hero Background Overlay"
+msgstr "मुख्य पृष्ठभूमि ओवरले"
+
+#: inc/customizer/colors.php:1273
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "कस्टम शीर्षलेख छवि उपयोग करते समय रंग ओवरले पारदर्शिता नियंत्रित करें."
+
+#: inc/customizer/fonts.php:87
+msgid "Site Title"
+msgstr "साइट शीर्षक"
+
+#: inc/customizer/fonts.php:88
+msgid "Site title text in the header."
+msgstr "शीर्षलेख में साइट शीर्षक"
+
+#: inc/customizer/fonts.php:97
+msgid "Navigation"
+msgstr "नेविगेशन"
+
+#: inc/customizer/fonts.php:98
+msgid "Primary menu links and button links."
+msgstr "प्राथमिक मेनू लिंक और बटन लिंक"
+
+#: inc/customizer/fonts.php:108
+msgid "Headings"
+msgstr "शीर्ष"
+
+#: inc/customizer/fonts.php:109
+msgid "Post titles, widget titles, form labels, and table headers."
+msgstr "पोस्ट शीर्षक, विजेट शीर्षक, प्रपत्र लेबल और तालिका शीषलेख"
+
+#: inc/customizer/fonts.php:124
+msgid "Primary"
+msgstr "प्राथमिक"
+
+#: inc/customizer/fonts.php:125
+msgid "Paragraphs, lists, links, quotes, and tables."
+msgstr "अनुच्छेद, सूची, लिंक्स, उद्धरण और तालिकाएं."
+
+#: inc/customizer/fonts.php:139
+msgid "Secondary"
+msgstr "द्धितीयक"
+
+#: inc/customizer/fonts.php:140
+msgid "Bylines, comment counts, reply links, post footers, and quote footers."
+msgstr "बायलाइन, टिप्पणी गणना, उत्तर लिंक, पोस्ट पादलेख और उद्धरण पादलेख."
+
+#: inc/customizer/fonts.php:188
+msgid "Fonts"
+msgstr "फ़ॉन्ट्स"
+
+#: inc/customizer/layouts.php:53
+msgid "One Column: Wide"
+msgstr "एक स्तंभ: चौड़ा"
+
+#: inc/customizer/layouts.php:54
+msgid "One Column: Narrow"
+msgstr "एक स्तंभ: संकरा"
+
+#: inc/customizer/layouts.php:55 inc/customizer/layouts.php:144
+msgid "Two Columns: Content | Sidebar"
+msgstr "दो स्तंभ: सामग्री । साइडबार"
+
+#: inc/customizer/layouts.php:56 inc/customizer/layouts.php:143
+msgid "Two Columns: Sidebar | Content"
+msgstr "दो स्तंभ: साइडबार । सामग्री"
+
+#: inc/customizer/layouts.php:57 inc/customizer/layouts.php:146
+msgid "Three Columns: Content | Sidebar | Sidebar"
+msgstr "तीन स्तंभ: सामग्री । साइडबार । साइडबार"
+
+#: inc/customizer/layouts.php:58
+msgid "Three Columns: Sidebar | Content | Sidebar"
+msgstr "तीन स्तंभ: साइडबार । सामग्री । साइडबार"
+
+#: inc/customizer/layouts.php:59 inc/customizer/layouts.php:145
+msgid "Three Columns: Sidebar | Sidebar | Content"
+msgstr "तीन स्तंभ: साइडबार । साइडबार । सामग्री"
+
+#: inc/customizer/layouts.php:256 inc/customizer/layouts.php:447
+msgid "Layout"
+msgstr "लेआउट"
+
+#: inc/customizer/layouts.php:473
+msgid "Page Width"
+msgstr "पृष्ठ की चौड़ाई"
+
+#: inc/customizer/layouts.php:474
+msgid "Display your site differently on larger screens."
+msgstr "अपनी साइट बड़ी स्कीनों पर अलग-अलग प्रदर्शित करें."
+
+#: inc/customizer.php:163
+msgid "Use featured image"
+msgstr "प्रदर्शित छवि उपयोग करें"
+
+#: inc/customizer.php:164
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "मुख्य छवि ओवरराइड करने के लिए वर्तमान पोस्ट पर प्रदर्शित छवि की अनुमति दें."
+
+#: inc/helpers.php:52
+msgid "404 Page Not Found"
+msgstr "404 पृष्ठ नहीं मिला"
+
+#: inc/template-tags.php:133
+msgid "Posts navigation"
+msgstr "पोस्ट नेविगेशन"
+
+#: inc/template-tags.php:139
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> पुराने पोस्ट"
+
+#: inc/template-tags.php:145
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "नए पोस्ट <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:178
+msgid "Post navigation"
+msgstr "पोस्ट नेविगेशन"
+
+#: inc/template-tags.php:279
+msgid "Blog"
+msgstr "ब्लॉग"
+
+#: templates/parts/loop/page-content.php:27
+#: templates/parts/loop/post-content.php:18
+msgid "Pages:"
+msgstr "पृष्ठ:"
+
+#: templates/parts/loop/page-footer.php:9
+#: templates/parts/loop/post-footer.php:14
+#: templates/parts/loop/post-search-footer.php:46
+msgid "Edit"
+msgstr "संपादित करें"
+
+#: templates/parts/loop/post-content.php:14
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr "अधिक पढ़ें <span class=\"meta-nav\">&rarr;</span>"
+
+#: templates/parts/loop/post-meta.php:26
+#: templates/parts/loop/post-search-footer.php:42
+msgid "Leave a comment"
+msgstr "टिप्पणी दें"
+
+#: templates/parts/loop/post-meta.php:26
+#: templates/parts/loop/post-search-footer.php:42
+msgid "1 Comment"
+msgstr "1 टिप्पणी"
+
+#. Theme Name of the plugin/theme
+msgid "Primer"
+msgstr "Primer"
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/godaddy/wp-primer-theme"
+msgstr "https://github.com/godaddy/wp-primer-theme"
+
+#. Description of the plugin/theme
+msgid ""
+"Primer is a powerful theme that brings clarity to your content in a fresh "
+"design."
+msgstr ""
+"Primer एक शक्तिशाली थीम है, जो नए डिज़ाइन में आपकी सामग्री पर स्पष्टता लाती है."
+
+#. Author of the plugin/theme
+msgid "GoDaddy"
+msgstr "GoDaddy"
+
+#. Author URI of the plugin/theme
+msgid "https://www.godaddy.com/"
+msgstr "https://www.godaddy.com/"
+
+#: comments.php:34
+msgctxt "1. number of comments, 2. post title"
+msgid "One thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
+msgstr[0] "%2$s पर एक सुझाव"
+msgstr[1] "%1$d सुझाव %2$s पर"
+
+#: comments.php:56
+msgctxt "left arrow (LTR) / right arrow (RTL)"
+msgid "%s Older Comments"
+msgstr "%s पुरानी टिप्पणियां"
+
+#: comments.php:58
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Newer Comments %s"
+msgstr "नई टिप्पणियां %s"
+
+#: templates/parts/loop/post-excerpt.php:14
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Continue Reading %s"
+msgstr "पठन जारी %s"
+
+#: content-none.php:27
+msgctxt "link to write a new post"
+msgid "Ready to publish your first post? %s."
+msgstr "अपना पहला पोस्ट प्रकाशित करने के लिए तैयार हैं? %s."
+
+#: inc/customizer/colors.php:474
+msgctxt "color scheme name"
+msgid "Blush"
+msgstr "लालिमा"
+
+#: inc/customizer/colors.php:478
+msgctxt "color scheme name"
+msgid "Bronze"
+msgstr "ब्रॉंज"
+
+#: inc/customizer/colors.php:482
+msgctxt "color scheme name"
+msgid "Canary"
+msgstr "कनेरी"
+
+#: inc/customizer/colors.php:486
+msgctxt "color scheme name"
+msgid "Cool"
+msgstr "ठंडा"
+
+#: inc/customizer/colors.php:490
+msgctxt "color scheme name"
+msgid "Dark"
+msgstr "गहरा"
+
+#: inc/customizer/colors.php:494
+msgctxt "color scheme name"
+msgid "Iguana"
+msgstr "इग्यूएना"
+
+#: inc/customizer/colors.php:498
+msgctxt "color scheme name"
+msgid "Muted"
+msgstr "म्यूटेड"
+
+#: inc/customizer/colors.php:502
+msgctxt "color scheme name"
+msgid "Plum"
+msgstr "प्लम"
+
+#: inc/customizer/colors.php:506
+msgctxt "color scheme name"
+msgid "Rose"
+msgstr "गुलाब"
+
+#: inc/customizer/colors.php:510
+msgctxt "color scheme name"
+msgid "Tangerine"
+msgstr "टैंजरीन"
+
+#: inc/customizer/colors.php:514
+msgctxt "color scheme name"
+msgid "Turquoise"
+msgstr "टर्क्वाइज"
+
+#: inc/customizer/fonts.php:213
+msgctxt "font name"
+msgid "%s (Default)"
+msgstr "%s (डिफ़ॉल्ट)"
+
+#: inc/customizer/layouts.php:97
+msgctxt "fixed-width page layout"
+msgid "Fixed"
+msgstr "निश्चित"
+
+#: inc/customizer/layouts.php:98
+msgctxt "fluid-width page layout"
+msgid "Fluid"
+msgstr "फ्ल्यूड"
+
+#: inc/customizer/layouts.php:288
+msgctxt "link to the Customizer"
+msgid "The site-wide Default layout setting is located in the %s."
+msgstr "साइट-वाइड डिफ़ॉल्ट लेआउट सेटिंग %s में है."
+
+#: inc/customizer/layouts.php:292
+msgctxt "title of a component found in WordPress"
+msgid "Customizer"
+msgstr "कस्टमाइज़र"
+
+#: inc/helpers.php:41
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr "इनके खोज परिणाम: %s"
+
+#: inc/hooks.php:384
+msgctxt "page number"
+msgid "Page %d"
+msgstr "पृष्ठ %d"
+
+#: templates/parts/credit.php:14
+msgctxt "1. copyright symbol, 2. year, 3. site title"
+msgid "Copyright %1$s %2$d %3$s"
+msgstr "कॉपीराइट %1$s %2$d%3$s"
+
+#: templates/parts/credit.php:34
+msgctxt "1. theme name link, 2. theme author link"
+msgid "%1$s theme by %2$s"
+msgstr "%1$s थीम %2$s के द्वारा"
+
+#: templates/parts/loop/post-footer.php:20
+#: templates/parts/loop/post-footer.php:32
+#: templates/parts/loop/post-search-footer.php:14
+#: templates/parts/loop/post-search-footer.php:26
+msgctxt "separator for items in a list"
+msgid ", "
+msgstr ", "
+
+#: templates/parts/loop/post-footer.php:26
+#: templates/parts/loop/post-search-footer.php:20
+msgctxt "category list"
+msgid "Posted in: %s"
+msgstr "इसमें पोस्ट: %s"
+
+#: templates/parts/loop/post-footer.php:38
+#: templates/parts/loop/post-search-footer.php:32
+msgctxt "tag list"
+msgid "Filed under: %s"
+msgstr "इसके अंतर्गत फ़ाइल: %s"
+
+#: templates/parts/loop/post-meta.php:26
+#: templates/parts/loop/post-search-footer.php:42
+msgctxt "number of comments"
+msgid "% Comments"
+msgstr "% टिप्पणियां"
