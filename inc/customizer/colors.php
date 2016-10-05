@@ -229,7 +229,8 @@ class Primer_Customizer_Colors {
 					'section'         => 'colors-footer',
 					'active_callback' => 'primer_has_active_footer_sidebars',
 					'css'             => array(
-						'.site-footer .widget' => array(
+						'.site-footer .widget,
+						.site-footer .widget form label' => array(
 							'color' => '%1$s',
 						),
 					),
