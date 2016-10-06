@@ -143,8 +143,8 @@ msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer requires at least WordPress version %1$s. You are running version "
-"%2$s. Please upgrade and try again."
+"Primer nécessite au moins la version WordPress %1$s. Vous disposez de la "
+"version %2$s. Veuillez installer la dernière version de WordPress et réessayer."
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
