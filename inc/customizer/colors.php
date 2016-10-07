@@ -1,4 +1,10 @@
 <?php
+/**
+ * Customizer Colors functionality.
+ *
+ * @package Primer
+ * @since   1.0.0
+ */
 
 class Primer_Customizer_Colors {
 
@@ -164,9 +170,7 @@ class Primer_Customizer_Colors {
 						input[type="datetime"]:focus,
 						input[type="datetime-local"]:focus,
 						input[type="color"]:focus,
-						textarea:focus,
-						.fl-callout-text,
-						.fl-rich-text' => array(
+						textarea:focus' => array(
 							'color' => '%1$s',
 						),
 					),
@@ -225,7 +229,8 @@ class Primer_Customizer_Colors {
 					'section'         => 'colors-footer',
 					'active_callback' => 'primer_has_active_footer_sidebars',
 					'css'             => array(
-						'.site-footer .widget' => array(
+						'.site-footer .widget,
+						.site-footer .widget form label' => array(
 							'color' => '%1$s',
 						),
 					),
@@ -295,10 +300,10 @@ class Primer_Customizer_Colors {
 					'css'     => array(
 						'button,
 						a.button, a.button:visited,
-						.content-area .fl-builder-content a.fl-button, .content-area .fl-builder-content a.fl-button:visited,
 						input[type="button"],
 						input[type="reset"],
-						input[type="submit"]' => array(
+						input[type="submit"],
+						.site-info-wrapper .social-menu a:hover' => array(
 							'background-color' => '%1$s',
 							'border-color'     => '%1$s',
 						),
@@ -306,7 +311,6 @@ class Primer_Customizer_Colors {
 					'rgba_css' => array(
 						'button:hover, button:active, button:focus,
 						a.button:hover, a.button:active, a.button:focus, a.button:visited:hover, a.button:visited:active, a.button:visited:focus,
-						.content-area .fl-builder-content a.fl-button:hover, .content-area .fl-builder-content a.fl-button:active, .content-area .fl-builder-content a.fl-button:focus, .content-area .fl-builder-content a.fl-button:visited:hover, .content-area .fl-builder-content a.fl-button:visited:active, .content-area .fl-builder-content a.fl-button:visited:focus,
 						input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
 						input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
 						input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
@@ -322,7 +326,6 @@ class Primer_Customizer_Colors {
 					'css'     => array(
 						'button, button:hover, button:active, button:focus,
 						a.button, a.button:hover, a.button:active, a.button:focus, a.button:visited, a.button:visited:hover, a.button:visited:active, a.button:visited:focus,
-						a.fl-button, .content-area .fl-builder-content a.fl-button, .content-area .fl-builder-content a.fl-button:visited, .content-area .fl-builder-content a.fl-button *, .content-area .fl-builder-content a.fl-button:visited *, a.fl-button:hover, a.fl-button:active, a.fl-button:focus, a.fl-button:visited, a.fl-button:visited:hover, a.fl-button:visited:active, a.fl-button:visited:focus,
 						input[type="button"], input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
 						input[type="reset"], input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
 						input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
@@ -355,7 +358,7 @@ class Primer_Customizer_Colors {
 				),
 				'hero_background_color' => array(
 					'label'    => esc_html__( 'Hero Background', 'primer' ),
-					'default'  => '#252525',
+					'default'  => '#0b3954',
 					'section'  => 'colors-header',
 					'priority' => 20,
 					'css'      => array(
@@ -531,6 +534,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['blush']['base'],
 						'button_color'                   => $color_schemes['blush']['base'],
+						'hero_background_color'          => $color_schemes['blush']['base'],
 						'menu_background_color'          => $color_schemes['blush']['base'],
 						'footer_widget_background_color' => $color_schemes['blush']['base'],
 					),
@@ -539,6 +543,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['bronze']['base'],
 						'button_color'                   => $color_schemes['bronze']['base'],
+						'hero_background_color'          => $color_schemes['bronze']['base'],
 						'menu_background_color'          => $color_schemes['bronze']['base'],
 						'footer_widget_background_color' => $color_schemes['bronze']['base'],
 					),
@@ -547,6 +552,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['canary']['base'],
 						'button_color'                   => $color_schemes['canary']['base'],
+						'hero_background_color'          => $color_schemes['canary']['base'],
 						'menu_background_color'          => $color_schemes['canary']['base'],
 						'footer_widget_background_color' => $color_schemes['canary']['base'],
 					),
@@ -555,6 +561,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['cool']['base'],
 						'button_color'                   => $color_schemes['cool']['base'],
+						'hero_background_color'          => $color_schemes['cool']['base'],
 						'menu_background_color'          => $color_schemes['cool']['base'],
 						'footer_widget_background_color' => $color_schemes['cool']['base'],
 					),
@@ -582,6 +589,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['iguana']['base'],
 						'button_color'                   => $color_schemes['iguana']['base'],
+						'hero_background_color'          => $color_schemes['iguana']['base'],
 						'menu_background_color'          => $color_schemes['iguana']['base'],
 						'footer_widget_background_color' => $color_schemes['iguana']['base'],
 					),
@@ -611,6 +619,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['plum']['base'],
 						'button_color'                   => $color_schemes['plum']['base'],
+						'hero_background_color'          => $color_schemes['plum']['base'],
 						'menu_background_color'          => $color_schemes['plum']['base'],
 						'footer_widget_background_color' => $color_schemes['plum']['base'],
 					),
@@ -619,6 +628,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['rose']['base'],
 						'button_color'                   => $color_schemes['rose']['base'],
+						'hero_background_color'          => $color_schemes['rose']['base'],
 						'menu_background_color'          => $color_schemes['rose']['base'],
 						'footer_widget_background_color' => $color_schemes['rose']['base'],
 					),
@@ -627,6 +637,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['tangerine']['base'],
 						'button_color'                   => $color_schemes['tangerine']['base'],
+						'hero_background_color'          => $color_schemes['tangerine']['base'],
 						'menu_background_color'          => $color_schemes['tangerine']['base'],
 						'footer_widget_background_color' => $color_schemes['tangerine']['base'],
 					),
@@ -635,6 +646,7 @@ class Primer_Customizer_Colors {
 					'colors' => array(
 						'link_color'                     => $color_schemes['turquoise']['base'],
 						'button_color'                   => $color_schemes['turquoise']['base'],
+						'hero_background_color'          => $color_schemes['turquoise']['base'],
 						'menu_background_color'          => $color_schemes['turquoise']['base'],
 						'footer_widget_background_color' => $color_schemes['turquoise']['base'],
 					),
@@ -653,6 +665,12 @@ class Primer_Customizer_Colors {
 		 * @var array
 		 */
 		$color_schemes = (array) apply_filters( 'primer_color_schemes', $color_schemes );
+
+		// Remove any invalid color schemes
+		$color_schemes = array_filter(
+			$color_schemes,
+			array( $this, 'is_valid_color_scheme_array' )
+		);
 
 		ksort( $color_schemes );
 
@@ -839,7 +857,7 @@ class Primer_Customizer_Colors {
 
 		}
 
-		wp_add_inline_style( 'primer', $css );
+		wp_add_inline_style( Primer_Customizer::$stylesheet, $css );
 
 	}
 
