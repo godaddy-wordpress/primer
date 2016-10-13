@@ -199,6 +199,40 @@ module.exports = function( grunt ) {
 					interrupt: true
 				}
 			}
+		},
+
+		replace: {
+			version_php: {
+				src: [
+					'**/*.php',
+					'.dev/**/*.scss'
+				],
+				overwrite: true,
+				replacements: [ {
+					from: /Version:(\s*?)[a-zA-Z0-9\.\-\+]+$/m,
+					to: 'Version:$1' + pkg.version
+				}, {
+					from: /@version(\s*?)[a-zA-Z0-9\.\-\+]+$/m,
+					to: '@version$1' + pkg.version
+				}, {
+					from: /@since(.*?)NEXT/mg,
+					to: '@since$1' + pkg.version
+				}, {
+					from: /VERSION(\s*?)=(\s*?['"])[a-zA-Z0-9\.\-\+]+/mg,
+					to: 'VERSION$1=$2' + pkg.version
+				}, {
+					from: /'PRIMER_VERSION', '[a-zA-Z0-9\.\-\+]+'/mg,
+					to: '\'PRIMER_VERSION\', \'' + pkg.version + '\''
+				}]
+			},
+			version_readme: {
+				src: 'readme.*',
+				overwrite: true,
+				replacements: [ {
+					from: /^(\*\*|)Stable tag:(\*\*|)(\s*?)[a-zA-Z0-9.-]+(\s*?)$/mi,
+					to: '$1Stable tag:$2$3<%= pkg.version %>$4'
+				} ]
+			}
 		}
 
 	});
@@ -209,5 +243,6 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'lint', [ 'jshint' ] );
 	grunt.registerTask( 'update-pot', [ 'makepot' ] );
 	grunt.registerTask( 'update-mo', [ 'po2mo', 'copy:mo', 'clean:mo' ] );
+	grunt.registerTask( 'version', [ 'replace' ] );
 
 };
