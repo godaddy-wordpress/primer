@@ -10,9 +10,6 @@
   "bugs": {
     "url": "https://github.com/godaddy/wp-primer-theme/issues"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-autoprefixer": "~3.0.4",
@@ -27,9 +24,14 @@
     "grunt-dev-update": "~2.0.0",
     "grunt-po2mo": "~0.1.2",
     "grunt-sass": "1.2.0",
+    "grunt-text-replace": "^0.4.0",
     "grunt-wp-i18n": "~0.5.4",
     "load-grunt-tasks": "~3.5.0",
     "matchdep": "~1.0.1",
     "susy": "~2.2.12"
+  },
+  "scripts": {
+    "version": "grunt version && grunt && git add -A .",
+    "postversion": "git push && git push --tags"
   }
 }

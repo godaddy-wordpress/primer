@@ -1,0 +1,10 @@
+.distignore
+.git
+.gitignore
+.gitmodules
+.travis.yml
+.dev
+package.json
+node_modules
+Gruntfile.js
+readme.md
