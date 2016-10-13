@@ -35,7 +35,7 @@ after_script:
 before_deploy:
   - export RELEASE_FOLDER=activation
   - php /tmp/wp-cli.phar package install runcommand/dist-archive
-  - cp -rv ${TRAVIS_BUILD_DIR} /tmp/${RELEASE_FOLDER}
+  - cp -r ${TRAVIS_BUILD_DIR} /tmp/${RELEASE_FOLDER}
   - mv /tmp/${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}
   - php /tmp/wp-cli.phar dist-archive ${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}/${RELEASE_FOLDER}.zip --format=zip --debug
 
@@ -47,5 +47,7 @@ deploy:
   on:
     tags: true
     repo: godaddy/wp-primer-theme
+    php: '7.0'
+    condition: "$WP_VERSION=trunk"
   skip_cleanup: true
   overwrite: true
