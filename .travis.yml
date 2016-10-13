@@ -33,7 +33,7 @@ after_script:
   - source $DEV_LIB_PATH/travis.after_script.sh
 
 before_deploy:
-  - export RELEASE_FOLDER=activation
+  - export RELEASE_FOLDER=primer
   - php /tmp/wp-cli.phar package install runcommand/dist-archive
   - cp -r ${TRAVIS_BUILD_DIR} /tmp/${RELEASE_FOLDER}
   - mv /tmp/${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}
