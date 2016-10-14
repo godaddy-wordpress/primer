@@ -1331,7 +1331,7 @@ class Primer_Customizer_Colors {
 	 */
 	public function __get( $name ) {
 
-		if ( ! in_array( $name, [ 'colors', 'color_schemes' ] ) ) {
+		if ( ! in_array( $name, array( 'colors', 'color_schemes' ) ) ) {
 
 			return false;
 
