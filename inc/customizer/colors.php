@@ -15,7 +15,7 @@ class Primer_Customizer_Colors {
 	 *
 	 * @var array
 	 */
-	public $colors = array();
+	protected $colors = array();
 
 	/**
 	 * Array of available color schemes.
@@ -24,7 +24,7 @@ class Primer_Customizer_Colors {
 	 *
 	 * @var array
 	 */
-	public $color_schemes = array();
+	protected $color_schemes = array();
 
 	/**
 	 * Class constructor.
@@ -1319,6 +1319,25 @@ class Primer_Customizer_Colors {
 		$default = $this->get_color_overlay_transparency_default_value();
 
 		return sprintf( '%.2f', absint( get_theme_mod( 'hero_image_color_overlay', $default ) ) * 0.01 );
+
+	}
+
+	/**
+	 * Magic getter for colors and color_schemes property
+	 *
+	 * @param $name
+	 *
+	 * @return bool
+	 */
+	public function __get( $name ) {
+
+		if ( ! in_array( $name, [ 'colors', 'color_schemes' ] ) ) {
+
+			return false;
+
+		}
+
+		return $this->$name;
 
 	}
 
