@@ -1322,6 +1322,25 @@ class Primer_Customizer_Colors {
 
 	}
 
+	/**
+	 * Magic getter for colors and color_schemes property
+	 *
+	 * @param $name
+	 *
+	 * @return bool
+	 */
+	public function __get( $name ) {
+
+		if ( ! in_array( $name, [ 'colors', 'color_schemes' ] ) ) {
+
+			return false;
+
+		}
+
+		return $this->$name;
+
+	}
+
 }
 
-new Primer_Customizer_Colors;
+$GLOBALS['primer_customizer_colors'] = new Primer_Customizer_Colors;
