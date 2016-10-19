@@ -1986,6 +1986,10 @@ body.no-max-width .site-info-wrapper .site-info {
   .widget_search .search-submit {
     display: none; }
 
+.hero .widget.widget_text p {
+  font-size: 125%;
+  line-height: 1.4; }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
