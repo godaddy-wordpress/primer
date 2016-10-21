@@ -3,7 +3,7 @@ Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
 Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
 Tested up to:      4.6
-Stable tag:        1.3.0
+Stable tag:        1.4.0
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,6 +59,10 @@ License: GPL-2.0 (or later)
 Source: https://genericons.com/
 
 == Changelog ==
+
+= 1.4.0 - October 21st 2016 =
+* Fixed comment meta template @props [wpexplorer](https://github.com/wpexplorer)
+* Expose color schemes array @props [evanherman](https://github.com/EvanHerman), [jonathanbardo](https://github.com/jonathanbardo)
 
 = 1.0.0 - September 2016 =
 
