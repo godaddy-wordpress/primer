@@ -24,6 +24,7 @@ install:
   - if [ ! -e "$DEV_LIB_PATH" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
   - if [ ! -e "$DEV_LIB_PATH" ]; then git clone https://github.com/xwp/wp-dev-lib.git $DEV_LIB_PATH; fi
   - source $DEV_LIB_PATH/travis.install.sh
+  - curl -s https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
 
 script:
   - source $DEV_LIB_PATH/travis.script.sh
@@ -32,9 +33,9 @@ after_script:
   - source $DEV_LIB_PATH/travis.after_script.sh
 
 before_deploy:
-  - export RELEASE_FOLDER=activation
+  - export RELEASE_FOLDER=primer
   - php /tmp/wp-cli.phar package install runcommand/dist-archive
-  - cp -rv ${TRAVIS_BUILD_DIR} /tmp/${RELEASE_FOLDER}
+  - cp -r ${TRAVIS_BUILD_DIR} /tmp/${RELEASE_FOLDER}
   - mv /tmp/${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}
   - php /tmp/wp-cli.phar dist-archive ${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}/${RELEASE_FOLDER}.zip --format=zip --debug
 
@@ -46,5 +47,7 @@ deploy:
   on:
     tags: true
     repo: godaddy/wp-primer-theme
+    php: '7.0'
+    condition: "$WP_VERSION=trunk"
   skip_cleanup: true
   overwrite: true

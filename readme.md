@@ -7,7 +7,7 @@ Primer is a powerful theme that brings clarity to your content in a fresh design
 **Tags:** [custom-background](https://wordpress.org/plugins/tags/custom-background), [custom-colors](https://wordpress.org/plugins/tags/custom-colors), [custom-header](https://wordpress.org/plugins/tags/custom-header), [custom-menu](https://wordpress.org/plugins/tags/custom-menu), [editor-style](https://wordpress.org/plugins/tags/editor-style), [featured-images](https://wordpress.org/plugins/tags/featured-images), [flexible-header](https://wordpress.org/plugins/tags/flexible-header), [left-sidebar](https://wordpress.org/plugins/tags/left-sidebar), [one-column](https://wordpress.org/plugins/tags/one-column), [right-sidebar](https://wordpress.org/plugins/tags/right-sidebar), [rtl-language-support](https://wordpress.org/plugins/tags/rtl-language-support), [sticky-post](https://wordpress.org/plugins/tags/sticky-post), [threaded-comments](https://wordpress.org/plugins/tags/threaded-comments), [three-columns](https://wordpress.org/plugins/tags/three-columns), [translation-ready](https://wordpress.org/plugins/tags/translation-ready), [two-columns](https://wordpress.org/plugins/tags/two-columns)  
 **Requires at least:** 4.4  
 **Tested up to:** 4.6  
-**Stable tag:** 1.0.0  
+**Stable tag:** 1.3.0  
 **License:** [GPL-2.0](https://www.gnu.org/licenses/gpl-2.0.html)  
 
 [![Build Status](https://travis-ci.org/godaddy/wp-primer-theme.svg?branch=master)](https://travis-ci.org/godaddy/wp-primer-theme) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com) 
