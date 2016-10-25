@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 0.9.0\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-09-20 17:52:54+00:00\n"
+"POT-Creation-Date: 2016-10-25 19:43:08+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -166,7 +166,7 @@ msgstr "Текст лозунга"
 msgid "Hero Text"
 msgstr "Текст Hero"
 
-#: inc/customizer/colors.php:105 inc/customizer/colors.php:321
+#: inc/customizer/colors.php:105 inc/customizer/colors.php:323
 msgid "Text"
 msgstr "Текст"
 
@@ -204,91 +204,91 @@ msgstr "Текст заголовка виджета"
 msgid "Widget Text"
 msgstr "Текст виджета"
 
-#: inc/customizer/colors.php:238
+#: inc/customizer/colors.php:239
 msgid "Menu Text"
 msgstr "Текст меню"
 
-#: inc/customizer/colors.php:260
+#: inc/customizer/colors.php:261
 msgid "Copyright Text"
 msgstr "Текст сообщения об авторском праве"
 
-#: inc/customizer/colors.php:274
+#: inc/customizer/colors.php:275
 msgid "Link Text"
 msgstr "Текст ссылки"
 
-#: inc/customizer/colors.php:296 inc/customizer/colors.php:377
+#: inc/customizer/colors.php:297 inc/customizer/colors.php:379
 msgid "Background"
 msgstr "Фон"
 
-#: inc/customizer/colors.php:338
+#: inc/customizer/colors.php:340
 msgid "Page Background"
 msgstr "Фон страницы"
 
-#: inc/customizer/colors.php:348
+#: inc/customizer/colors.php:350
 msgid "Content Background"
 msgstr "Фон содержания"
 
-#: inc/customizer/colors.php:358
+#: inc/customizer/colors.php:360
 msgid "Hero Background"
 msgstr "Фон Hero"
 
-#: inc/customizer/colors.php:387
+#: inc/customizer/colors.php:389
 msgid "Widgets Background"
 msgstr "Фон виджетов"
 
-#: inc/customizer/colors.php:398
+#: inc/customizer/colors.php:400
 msgid "Widget Content Background"
 msgstr "Фон содержания виджетов"
 
-#: inc/customizer/colors.php:409
+#: inc/customizer/colors.php:411
 msgid "Footer Background"
 msgstr "Фон нижнего колонтитула"
 
-#: inc/customizer/colors.php:447 inc/customizer/layouts.php:315
+#: inc/customizer/colors.php:449 inc/customizer/layouts.php:302
 msgid "Custom"
 msgstr "Произвольно"
 
-#: inc/customizer/colors.php:464 inc/customizer/layouts.php:306
+#: inc/customizer/colors.php:466 inc/customizer/layouts.php:293
 msgid "Default"
 msgstr "По умолчанию"
 
-#: inc/customizer/colors.php:704
+#: inc/customizer/colors.php:706
 msgid "Colors"
 msgstr "Цвета"
 
-#: inc/customizer/colors.php:713
+#: inc/customizer/colors.php:715
 msgid "Color Schemes"
 msgstr "Цветовые схемы"
 
-#: inc/customizer/colors.php:721
+#: inc/customizer/colors.php:723
 msgid "Header"
 msgstr "Верхний колонтитул"
 
-#: inc/customizer/colors.php:729
+#: inc/customizer/colors.php:731
 msgid "Menu"
 msgstr "Меню"
 
-#: inc/customizer/colors.php:737
+#: inc/customizer/colors.php:739
 msgid "Buttons"
 msgstr "Кнопки"
 
-#: inc/customizer/colors.php:745
+#: inc/customizer/colors.php:747
 msgid "Content"
 msgstr "Содержание"
 
-#: inc/customizer/colors.php:753
+#: inc/customizer/colors.php:755
 msgid "Footer"
 msgstr "Нижний колонтитул"
 
-#: inc/customizer/colors.php:963
+#: inc/customizer/colors.php:965
 msgid "Base Color Scheme"
 msgstr "Основная цветовая схема"
 
-#: inc/customizer/colors.php:1272
+#: inc/customizer/colors.php:1274
 msgid "Hero Background Overlay"
 msgstr "Наложение фона Hero"
 
-#: inc/customizer/colors.php:1273
+#: inc/customizer/colors.php:1275
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr ""
@@ -368,23 +368,23 @@ msgstr "Три столбца: Боковая панель | Содержани�
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "Три столбца: Боковая панель | Боковая панель | Содержание"
 
-#: inc/customizer/layouts.php:256 inc/customizer/layouts.php:447
+#: inc/customizer/layouts.php:256 inc/customizer/layouts.php:434
 msgid "Layout"
 msgstr "Макет"
 
-#: inc/customizer/layouts.php:473
+#: inc/customizer/layouts.php:460
 msgid "Page Width"
 msgstr "Ширина страницы"
 
-#: inc/customizer/layouts.php:474
+#: inc/customizer/layouts.php:461
 msgid "Display your site differently on larger screens."
 msgstr "Отображайте свой сайт по-другому на больших экранах."
 
-#: inc/customizer.php:163
+#: inc/customizer.php:169
 msgid "Use featured image"
 msgstr "Используйте рекомендованное изображение"
 
-#: inc/customizer.php:164
+#: inc/customizer.php:170
 msgid ""
 "Allow the featured image on the current post to override the hero image."
 msgstr ""
@@ -430,12 +430,12 @@ msgstr "Изменить"
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Подробнее <span class=\"meta-nav\">&rarr;</span>"
 
-#: templates/parts/loop/post-meta.php:26
+#: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgid "Leave a comment"
 msgstr "Оставить комментарий"
 
-#: templates/parts/loop/post-meta.php:26
+#: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgid "1 Comment"
 msgstr "1 комментарий"
@@ -492,57 +492,57 @@ msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
 msgstr "Готовы создать первую публикацию?%s."
 
-#: inc/customizer/colors.php:474
+#: inc/customizer/colors.php:476
 msgctxt "color scheme name"
 msgid "Blush"
 msgstr "Румянец"
 
-#: inc/customizer/colors.php:478
+#: inc/customizer/colors.php:480
 msgctxt "color scheme name"
 msgid "Bronze"
 msgstr "Бронза"
 
-#: inc/customizer/colors.php:482
+#: inc/customizer/colors.php:484
 msgctxt "color scheme name"
 msgid "Canary"
 msgstr "Канарейка"
 
-#: inc/customizer/colors.php:486
+#: inc/customizer/colors.php:488
 msgctxt "color scheme name"
 msgid "Cool"
 msgstr "Отличный"
 
-#: inc/customizer/colors.php:490
+#: inc/customizer/colors.php:492
 msgctxt "color scheme name"
 msgid "Dark"
 msgstr "Темная"
 
-#: inc/customizer/colors.php:494
+#: inc/customizer/colors.php:496
 msgctxt "color scheme name"
 msgid "Iguana"
 msgstr "Игуана"
 
-#: inc/customizer/colors.php:498
+#: inc/customizer/colors.php:500
 msgctxt "color scheme name"
 msgid "Muted"
 msgstr "Приглушенная"
 
-#: inc/customizer/colors.php:502
+#: inc/customizer/colors.php:504
 msgctxt "color scheme name"
 msgid "Plum"
 msgstr "Слива"
 
-#: inc/customizer/colors.php:506
+#: inc/customizer/colors.php:508
 msgctxt "color scheme name"
 msgid "Rose"
 msgstr "Роза"
 
-#: inc/customizer/colors.php:510
+#: inc/customizer/colors.php:512
 msgctxt "color scheme name"
 msgid "Tangerine"
 msgstr "Мандарин"
 
-#: inc/customizer/colors.php:514
+#: inc/customizer/colors.php:516
 msgctxt "color scheme name"
 msgid "Turquoise"
 msgstr "Бирюзовый"
@@ -561,16 +561,6 @@ msgstr "Фиксированная"
 msgctxt "fluid-width page layout"
 msgid "Fluid"
 msgstr "Пропорциональный"
-
-#: inc/customizer/layouts.php:288
-msgctxt "link to the Customizer"
-msgid "The site-wide Default layout setting is located in the %s."
-msgstr "Параметр макета по умолчанию для всего сайта находится в %s."
-
-#: inc/customizer/layouts.php:292
-msgctxt "title of a component found in WordPress"
-msgid "Customizer"
-msgstr "Customizer"
 
 #: inc/helpers.php:41
 msgctxt "search term"
@@ -612,8 +602,16 @@ msgctxt "tag list"
 msgid "Filed under: %s"
 msgstr "Рубрика: %s"
 
-#: templates/parts/loop/post-meta.php:26
+#: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% комментариев"
+
+#~ msgctxt "link to the Customizer"
+#~ msgid "The site-wide Default layout setting is located in the %s."
+#~ msgstr "Параметр макета по умолчанию для всего сайта находится в %s."
+
+#~ msgctxt "title of a component found in WordPress"
+#~ msgid "Customizer"
+#~ msgstr "Customizer"

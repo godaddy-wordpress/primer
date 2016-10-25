@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 0.9.0\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-09-20 17:52:54+00:00\n"
+"POT-Creation-Date: 2016-10-25 19:43:08+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -159,7 +159,7 @@ msgstr "टैगलाइन पाठ"
 msgid "Hero Text"
 msgstr "मुख्य पाठ"
 
-#: inc/customizer/colors.php:105 inc/customizer/colors.php:321
+#: inc/customizer/colors.php:105 inc/customizer/colors.php:323
 msgid "Text"
 msgstr "टेक्स्ट"
 
@@ -195,91 +195,91 @@ msgstr "विजेट शीर्ष पाठ"
 msgid "Widget Text"
 msgstr "विजेट पाठ"
 
-#: inc/customizer/colors.php:238
+#: inc/customizer/colors.php:239
 msgid "Menu Text"
 msgstr "मेनू पाठ"
 
-#: inc/customizer/colors.php:260
+#: inc/customizer/colors.php:261
 msgid "Copyright Text"
 msgstr "कॉपीराइट पाठ"
 
-#: inc/customizer/colors.php:274
+#: inc/customizer/colors.php:275
 msgid "Link Text"
 msgstr "लिंक पाठ"
 
-#: inc/customizer/colors.php:296 inc/customizer/colors.php:377
+#: inc/customizer/colors.php:297 inc/customizer/colors.php:379
 msgid "Background"
 msgstr "पृष्ठभूमि"
 
-#: inc/customizer/colors.php:338
+#: inc/customizer/colors.php:340
 msgid "Page Background"
 msgstr "पृष्ठ पृष्ठभूमि"
 
-#: inc/customizer/colors.php:348
+#: inc/customizer/colors.php:350
 msgid "Content Background"
 msgstr "सामग्री पृष्ठभूमि"
 
-#: inc/customizer/colors.php:358
+#: inc/customizer/colors.php:360
 msgid "Hero Background"
 msgstr "मुख्य पृष्ठभूमि"
 
-#: inc/customizer/colors.php:387
+#: inc/customizer/colors.php:389
 msgid "Widgets Background"
 msgstr "विजेट पृष्ठभूमि"
 
-#: inc/customizer/colors.php:398
+#: inc/customizer/colors.php:400
 msgid "Widget Content Background"
 msgstr "विजेट सामग्री पृष्ठभूमि"
 
-#: inc/customizer/colors.php:409
+#: inc/customizer/colors.php:411
 msgid "Footer Background"
 msgstr "पादलेख पृष्ठभूमि"
 
-#: inc/customizer/colors.php:447 inc/customizer/layouts.php:315
+#: inc/customizer/colors.php:449 inc/customizer/layouts.php:302
 msgid "Custom"
 msgstr "विशेष"
 
-#: inc/customizer/colors.php:464 inc/customizer/layouts.php:306
+#: inc/customizer/colors.php:466 inc/customizer/layouts.php:293
 msgid "Default"
 msgstr "डिफ़ॉल्ट"
 
-#: inc/customizer/colors.php:704
+#: inc/customizer/colors.php:706
 msgid "Colors"
 msgstr "रंग"
 
-#: inc/customizer/colors.php:713
+#: inc/customizer/colors.php:715
 msgid "Color Schemes"
 msgstr "क्लर स्कीम"
 
-#: inc/customizer/colors.php:721
+#: inc/customizer/colors.php:723
 msgid "Header"
 msgstr "शीर्षलेख"
 
-#: inc/customizer/colors.php:729
+#: inc/customizer/colors.php:731
 msgid "Menu"
 msgstr "मेनू"
 
-#: inc/customizer/colors.php:737
+#: inc/customizer/colors.php:739
 msgid "Buttons"
 msgstr "बटन"
 
-#: inc/customizer/colors.php:745
+#: inc/customizer/colors.php:747
 msgid "Content"
 msgstr "सामग्री"
 
-#: inc/customizer/colors.php:753
+#: inc/customizer/colors.php:755
 msgid "Footer"
 msgstr "फुटर"
 
-#: inc/customizer/colors.php:963
+#: inc/customizer/colors.php:965
 msgid "Base Color Scheme"
 msgstr "मूल रंग स्कीम"
 
-#: inc/customizer/colors.php:1272
+#: inc/customizer/colors.php:1274
 msgid "Hero Background Overlay"
 msgstr "मुख्य पृष्ठभूमि ओवरले"
 
-#: inc/customizer/colors.php:1273
+#: inc/customizer/colors.php:1275
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr "कस्टम शीर्षलेख छवि उपयोग करते समय रंग ओवरले पारदर्शिता नियंत्रित करें."
@@ -356,23 +356,23 @@ msgstr "तीन स्तंभ: साइडबार । सामग्र�
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "तीन स्तंभ: साइडबार । साइडबार । सामग्री"
 
-#: inc/customizer/layouts.php:256 inc/customizer/layouts.php:447
+#: inc/customizer/layouts.php:256 inc/customizer/layouts.php:434
 msgid "Layout"
 msgstr "लेआउट"
 
-#: inc/customizer/layouts.php:473
+#: inc/customizer/layouts.php:460
 msgid "Page Width"
 msgstr "पृष्ठ की चौड़ाई"
 
-#: inc/customizer/layouts.php:474
+#: inc/customizer/layouts.php:461
 msgid "Display your site differently on larger screens."
 msgstr "अपनी साइट बड़ी स्कीनों पर अलग-अलग प्रदर्शित करें."
 
-#: inc/customizer.php:163
+#: inc/customizer.php:169
 msgid "Use featured image"
 msgstr "प्रदर्शित छवि उपयोग करें"
 
-#: inc/customizer.php:164
+#: inc/customizer.php:170
 msgid ""
 "Allow the featured image on the current post to override the hero image."
 msgstr "मुख्य छवि ओवरराइड करने के लिए वर्तमान पोस्ट पर प्रदर्शित छवि की अनुमति दें."
@@ -416,12 +416,12 @@ msgstr "संपादित करें"
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "अधिक पढ़ें <span class=\"meta-nav\">&rarr;</span>"
 
-#: templates/parts/loop/post-meta.php:26
+#: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgid "Leave a comment"
 msgstr "टिप्पणी दें"
 
-#: templates/parts/loop/post-meta.php:26
+#: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgid "1 Comment"
 msgstr "1 टिप्पणी"
@@ -476,57 +476,57 @@ msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
 msgstr "अपना पहला पोस्ट प्रकाशित करने के लिए तैयार हैं? %s."
 
-#: inc/customizer/colors.php:474
+#: inc/customizer/colors.php:476
 msgctxt "color scheme name"
 msgid "Blush"
 msgstr "लालिमा"
 
-#: inc/customizer/colors.php:478
+#: inc/customizer/colors.php:480
 msgctxt "color scheme name"
 msgid "Bronze"
 msgstr "ब्रॉंज"
 
-#: inc/customizer/colors.php:482
+#: inc/customizer/colors.php:484
 msgctxt "color scheme name"
 msgid "Canary"
 msgstr "कनेरी"
 
-#: inc/customizer/colors.php:486
+#: inc/customizer/colors.php:488
 msgctxt "color scheme name"
 msgid "Cool"
 msgstr "ठंडा"
 
-#: inc/customizer/colors.php:490
+#: inc/customizer/colors.php:492
 msgctxt "color scheme name"
 msgid "Dark"
 msgstr "गहरा"
 
-#: inc/customizer/colors.php:494
+#: inc/customizer/colors.php:496
 msgctxt "color scheme name"
 msgid "Iguana"
 msgstr "इग्यूएना"
 
-#: inc/customizer/colors.php:498
+#: inc/customizer/colors.php:500
 msgctxt "color scheme name"
 msgid "Muted"
 msgstr "म्यूटेड"
 
-#: inc/customizer/colors.php:502
+#: inc/customizer/colors.php:504
 msgctxt "color scheme name"
 msgid "Plum"
 msgstr "प्लम"
 
-#: inc/customizer/colors.php:506
+#: inc/customizer/colors.php:508
 msgctxt "color scheme name"
 msgid "Rose"
 msgstr "गुलाब"
 
-#: inc/customizer/colors.php:510
+#: inc/customizer/colors.php:512
 msgctxt "color scheme name"
 msgid "Tangerine"
 msgstr "टैंजरीन"
 
-#: inc/customizer/colors.php:514
+#: inc/customizer/colors.php:516
 msgctxt "color scheme name"
 msgid "Turquoise"
 msgstr "टर्क्वाइज"
@@ -545,16 +545,6 @@ msgstr "निश्चित"
 msgctxt "fluid-width page layout"
 msgid "Fluid"
 msgstr "फ्ल्यूड"
-
-#: inc/customizer/layouts.php:288
-msgctxt "link to the Customizer"
-msgid "The site-wide Default layout setting is located in the %s."
-msgstr "साइट-वाइड डिफ़ॉल्ट लेआउट सेटिंग %s में है."
-
-#: inc/customizer/layouts.php:292
-msgctxt "title of a component found in WordPress"
-msgid "Customizer"
-msgstr "कस्टमाइज़र"
 
 #: inc/helpers.php:41
 msgctxt "search term"
@@ -596,8 +586,16 @@ msgctxt "tag list"
 msgid "Filed under: %s"
 msgstr "इसके अंतर्गत फ़ाइल: %s"
 
-#: templates/parts/loop/post-meta.php:26
+#: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% टिप्पणियां"
+
+#~ msgctxt "link to the Customizer"
+#~ msgid "The site-wide Default layout setting is located in the %s."
+#~ msgstr "साइट-वाइड डिफ़ॉल्ट लेआउट सेटिंग %s में है."
+
+#~ msgctxt "title of a component found in WordPress"
+#~ msgid "Customizer"
+#~ msgstr "कस्टमाइज़र"
