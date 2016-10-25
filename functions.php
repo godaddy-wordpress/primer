@@ -39,6 +39,18 @@ if ( ! defined( 'PRIMER_MIN_WP_VERSION' ) ) {
 }
 
 /**
+ * Load theme translations.
+ *
+ * Translations can be filed in the /languages/ directory. If you're
+ * building a theme based on Primer, use a find and replace to change
+ * 'primer' to the name of your theme in all the template files.
+ *
+ * @link  https://codex.wordpress.org/Function_Reference/load_theme_textdomain
+ * @since 1.0.0
+ */
+load_theme_textdomain( 'primer', get_template_directory() . '/languages' );
+
+/**
  * Enforce the minimum WordPress version requirement.
  *
  * @since 1.0.0
@@ -130,18 +142,6 @@ require_once get_template_directory() . '/inc/customizer.php';
 function primer_setup() {
 
 	global $primer_image_sizes;
-
-	/**
-	 * Load theme translations.
-	 *
-	 * Translations can be filed in the /languages/ directory. If you're
-	 * building a theme based on Primer, use a find and replace to change
-	 * 'primer' to the name of your theme in all the template files.
-	 *
-	 * @link  https://codex.wordpress.org/Function_Reference/load_theme_textdomain
-	 * @since 1.0.0
-	 */
-	load_theme_textdomain( 'primer', get_template_directory() . '/languages' );
 
 	/**
 	 * Filter registered image sizes.
