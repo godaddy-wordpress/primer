@@ -27,23 +27,19 @@ get_header(); ?>
 
 				<p><?php esc_html_e( 'It looks like nothing was found at this location. Please try searching below:', 'primer' ); ?></p>
 
-				<section aria-label="Search">
+				<section aria-label="<?php esc_html__( 'Search', 'primer' ); ?>">
 
 					<?php the_widget( 'WC_Widget_Product_Search' ); ?>
 
 				</section>
 
-				<div class="fourohfour-columns-2">
+				<section aria-label="<?php esc_html__( 'Promoted Products', 'primer' ); ?>">
 
-					<section class="col-1" aria-label="Promoted Products">
+					<?php primer_promoted_products(); ?>
 
-						<?php primer_promoted_products(); ?>
+				</section>
 
-					</section>
-
-				</div>
-
-				<section aria-label="Popular Products" >
+				<section aria-label="<?php esc_html__( 'Popular Products', 'primer' ); ?>">
 
 					<h2><?php esc_html_e( 'Popular Products', 'primer' ); ?></h2>
 
