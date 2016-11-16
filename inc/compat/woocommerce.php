@@ -278,3 +278,69 @@ function primer_wc_colors( $colors ) {
 
 }
 add_filter( 'primer_colors', 'primer_wc_colors' );
+
+/**
+ * Load a custom template for WooCommerce 404 pages
+ *
+ * @param  string $original_template The original template to load.
+ *
+ * @return string
+ */
+function woocommerce_404_template( $original_template ) {
+
+	if ( is_404() ) {
+
+		return get_stylesheet_directory() . '/templates/parts/404_woocommerce.php';
+
+	}
+
+	return $original_template;
+
+}
+add_filter( 'template_include', 'woocommerce_404_template' );
+
+/**
+ * Display Promoted Products
+ */
+if ( ! function_exists( 'primer_promoted_products' ) ) {
+	/**
+	 * Featured and On-Sale Products
+	 * Check for featured products then on-sale products and use the appropiate shortcode.
+	 * If neither exist, it can fallback to show recently added products.
+	 *
+	 * @param integer $per_page total products to display.
+	 * @param integer $columns columns to arrange products in to.
+	 * @param boolean $recent_fallback Should the function display recent products as a fallback when there are no featured or on-sale products?.
+	 *
+	 * @uses  wc_get_featured_product_ids()
+	 * @uses  wc_get_product_ids_on_sale()
+	 *
+	 * @return void
+	 */
+	function primer_promoted_products( $per_page = '4', $columns = '4', $recent_fallback = true ) {
+
+		if ( wc_get_featured_product_ids() ) {
+
+			echo '<h2>' . esc_html__( 'Featured Products', 'primer' ) . '</h2>';
+
+			echo do_shortcode( "[featured_products per_page='{$per_page}' columns='{$columns}']" );
+
+			return;
+
+		} elseif ( wc_get_product_ids_on_sale() ) {
+
+			echo '<h2>' . esc_html__( 'On Sale Now', 'primer' ) . '</h2>';
+
+			echo do_shortcode( "[sale_products per_page='{$per_page}' columns='{$columns}']" );
+
+			return;
+
+		}
+
+		echo '<h2>' . esc_html__( 'New In Store', 'primer' ) . '</h2>';
+
+		echo do_shortcode( "[recent_products per_page='{$per_page}' columns='{$columns}']" );
+
+	}
+
+}
