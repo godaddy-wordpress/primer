@@ -14,7 +14,7 @@
 	/**
 	 * Fires inside the `.page-content` element, before the content.
 	 *
-	 * @hooked primer_woo_shop_messages - 10
+	 * @hooked primer_wc_shop_messages - 10
 	 *
 	 * @since 1.0.0
 	 */
