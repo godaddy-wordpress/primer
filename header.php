@@ -85,7 +85,6 @@
 		 *
 		 * @hooked primer_add_page_title - 10
 		 * @hooked primer_add_primary_navigation - 11
-		 * @hooked primer_add_primary_navigation - 12
 		 *
 		 * @since 1.0.0
 		 */
