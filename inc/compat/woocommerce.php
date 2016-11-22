@@ -27,7 +27,7 @@ add_action( 'after_setup_theme', 'primer_wc_setup' );
  */
 function primer_wc_scripts() {
 
-	wp_enqueue_script( 'woocommerce-compat', get_stylesheet_directory_uri() . '/inc/compat/js/woocommerce-compat.js', array( 'primer-navigation' ), PRIMER_VERSION, true );
+	wp_enqueue_script( 'woocommerce-compat', get_template_directory_uri() . '/inc/compat/js/woocommerce-compat.js', array( 'primer-navigation' ), PRIMER_VERSION, true );
 
 }
 add_action( 'wp_enqueue_scripts', 'primer_wc_scripts' );
