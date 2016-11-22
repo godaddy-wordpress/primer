@@ -510,3 +510,5 @@ add_action( 'create_category', 'primer_has_active_categories_reset' );
 add_action( 'edit_category',   'primer_has_active_categories_reset' );
 add_action( 'delete_category', 'primer_has_active_categories_reset' );
 add_action( 'save_post',       'primer_has_active_categories_reset' );
+
+// add_filter( 'primer_woocommerce_cart_menu', '__return_false' );

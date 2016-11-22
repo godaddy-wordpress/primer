@@ -21,6 +21,18 @@ function primer_wc_setup() {
 add_action( 'after_setup_theme', 'primer_wc_setup' );
 
 /**
+ * Enqueue WooCommerce scripts
+ *
+ * @since 1.4.2
+ */
+function primer_wc_scripts() {
+
+	wp_enqueue_script( 'woocommerce-compat', get_stylesheet_directory_uri() . '/inc/compat/js/woocommerce-compat.js', array( 'primer-navigation' ), PRIMER_VERSION, true );
+
+}
+add_action( 'wp_enqueue_scripts', 'primer_wc_scripts' );
+
+/**
  * Remove the default WooCommerce page wrapper.
  *
  * @since 1.0.0
@@ -344,3 +356,74 @@ if ( ! function_exists( 'primer_promoted_products' ) ) {
 	}
 
 }
+
+/**
+ * Add custom 'cart' menu item when woocommerce is active
+ * @param	array	$items
+ * @param	object $menu
+ * @return array	$items
+ */
+function generate_custom_cart_menu_item( $items, $menu ) {
+
+	$theme_locations = get_nav_menu_locations();
+
+	if ( ! apply_filters( 'primer_woocommerce_cart_menu', true ) || $menu->term_id !== $theme_locations['primary'] ) {
+
+		return $items;
+
+	}
+
+	global $woocommerce;
+
+	$cart_total = $woocommerce->cart->get_cart_total();
+
+	$cart_item_count = (int) $woocommerce->cart->get_cart_contents_count();
+
+	$product_count = sprintf( _n( '%s item', '%s items', $cart_item_count, 'primer' ), $cart_item_count );
+
+	$items[] = primer_generate_nav_menu_item(
+		wp_kses_post( '<span class="cart-preview-total">' . $cart_total . '</span><span class="cart-preview-count">' . $product_count . '</span><i class="fa fa-shopping-cart" aria-hidden="true"></i>' ),
+		null,
+		100
+	);
+
+	return $items;
+
+}
+add_filter( 'wp_get_nav_menu_items', 'generate_custom_cart_menu_item', 20, 2 );
+
+/**
+ * Generate the sub-menu, beneath 'Cart'
+ *
+ * @return mixed HTML
+ *
+ * @since 1.4.2
+ */
+function primer_generate_cart_submenu() {
+
+	if ( ! apply_filters( 'primer_woocommerce_cart_menu', true ) ) {
+
+		return;
+
+	}
+
+	$class = is_cart() ? 'current-menu-item' : '';
+
+	?>
+
+	<div class="site-header-cart-container">
+
+		<ul class="site-header-cart menu">
+
+			<li>
+				<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+			</li>
+
+		</ul>
+
+	</div>
+
+	<?php
+
+}
+add_action( 'primer_after_header', 'primer_generate_cart_submenu', 11 );

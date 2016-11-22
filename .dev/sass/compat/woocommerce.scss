@@ -15,7 +15,7 @@
 body.post-type-archive,
 body.single-product {
 
-	/* On sale badge */
+	/* On Sale Badge */
 	span.onsale,
 	ul.products li.product .onsale {
 		padding: 2px 8px;
@@ -34,6 +34,144 @@ body.single-product {
 		padding: 3px 18px;
 		top: 0;
 		left: 0;
+	}
+
+}
+
+/**
+ * Custom Shopping Cart Menu Item
+ */
+.main-navigation {
+
+	.menu-item-object-cart {
+		float: right;
+		min-width: 275px;
+		text-align: right;
+		border-bottom: none;
+
+		a {
+			padding-left: 0;
+			float: right;
+			cursor: pointer;
+
+			i {
+				font-size: 20px;
+			}
+
+		}
+
+		&:hover a {
+			background: transparent;
+		}
+
+		.cart-preview-total {
+			float: left;
+			margin-right: 1rem;
+			font-weight: bold;
+		}
+
+		.cart-preview-count {
+			float: left;
+			font-weight: 200;
+		}
+
+	}
+
+}
+
+ul.site-header-cart.menu {
+	width: 100%;
+	max-width: 275px;
+	padding: 0;
+	list-style: none;
+	float: right;
+	display: none;
+	position: relative;
+	z-index: 10001;
+
+	li {
+		border: none, 1px solid grey, 1px solid grey, 1px solid grey;
+		box-shadow: 0 0 10px 0 grey;
+	}
+
+	ul.product_list_widget {
+
+		li {
+			border: none;
+			box-shadow: none;
+		}
+
+		li.mini_cart_item {
+			margin: 8px 0;
+
+			a {
+				line-height: 20px;
+			}
+
+			a.remove {
+				line-height: 22px;
+			}
+
+		}
+
+	}
+
+	.widget_shopping_cart {
+		margin-bottom: 0;
+		padding: 10px 0 2px 0;
+
+		.product_list_widget {
+			padding: 0 .5em;
+			max-height: 220px;
+			overflow-y: auto;
+
+			img.attachment-shop_thumbnail {
+				width: 55px;
+				border-radius: 5px;
+			}
+
+		}
+
+		.total {
+			padding: 10px;
+			margin: .5em 0;
+		}
+
+		.buttons {
+			padding: 0 .5em;
+			margin: 0;
+
+			a {
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+
+		}
+
+	}
+
+}
+
+.site-header-cart-container {
+	width: 100%;
+	display: block;
+	max-width: 1100px;
+	margin: 0 auto;
+	position: absolute;
+	right: 0;
+	left: 0;
+
+	.buttons a {
+		margin-bottom: 5px;
+	}
+
+}
+
+@media #{$medium-down} {
+
+	.menu-item-object-cart {
+		display: none;
 	}
 
 }
