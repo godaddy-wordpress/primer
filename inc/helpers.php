@@ -599,11 +599,20 @@ function primer_generate_nav_menu_item( $title, $url, $order, $parent = 0, $clas
 	$item->url              = $url;
 	$item->menu_order       = $order;
 	$item->menu_item_parent = $parent;
-	$item->xfn              = '';
-	$item->target           = '';
-	$item->attr_title       = '';
-	$item->description      = '';
-	$item->status           = '';
+
+	$null_attr = [
+		'xfn',
+		'target',
+		'attr_title',
+		'description',
+		'status',
+	];
+
+	foreach ( $null_attr as $attr ) {
+
+		$item->$attr = null;
+
+	}
 
 	return $item;
 
