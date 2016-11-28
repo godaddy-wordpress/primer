@@ -375,9 +375,9 @@ function generate_custom_cart_menu_item( $items, $menu ) {
 
 	global $woocommerce;
 
-	$cart_total = $woocommerce->cart->get_cart_total();
+	$cart_total = is_customize_preview() ? '0.00' : $woocommerce->cart->get_cart_total();
 
-	$cart_item_count = (int) $woocommerce->cart->get_cart_contents_count();
+	$cart_item_count = is_customize_preview() ? 0 : (int) $woocommerce->cart->get_cart_contents_count();
 
 	$product_count = sprintf( _n( '%s item', '%s items', $cart_item_count, 'primer' ), $cart_item_count );
 
@@ -401,7 +401,9 @@ add_filter( 'wp_get_nav_menu_items', 'generate_custom_cart_menu_item', 20, 2 );
  */
 function primer_generate_cart_submenu() {
 
-	if ( ! apply_filters( 'primer_woocommerce_cart_menu', true ) ) {
+	if ( ! apply_filters( 'primer_woocommerce_cart_menu', true ) || is_customize_preview() ) {
+
+		add_filter( 'woocommerce_widget_cart_is_hidden', '__return_true' );
 
 		return;
 
