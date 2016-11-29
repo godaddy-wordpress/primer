@@ -617,3 +617,16 @@ function primer_generate_nav_menu_item( $title, $url, $order, $parent = 0, $clas
 	return $item;
 
 }
+
+if ( ! function_exists( 'get_the_widget' ) ) {
+
+	function get_the_widget( $widget, $instance = '', $args = '' ) {
+
+		ob_start();
+
+		the_widget( $widget, $instance, $args );
+
+		return ob_get_clean();
+
+	}
+}
