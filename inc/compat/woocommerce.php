@@ -21,18 +21,6 @@ function primer_wc_setup() {
 add_action( 'after_setup_theme', 'primer_wc_setup' );
 
 /**
- * Enqueue WooCommerce scripts
- *
- * @since 1.4.2
- */
-function primer_wc_scripts() {
-
-	wp_enqueue_script( 'woocommerce-compat', get_template_directory_uri() . '/inc/compat/js/woocommerce-compat.js', array( 'primer-navigation' ), PRIMER_VERSION, true );
-
-}
-add_action( 'wp_enqueue_scripts', 'primer_wc_scripts' );
-
-/**
  * Remove the default WooCommerce page wrapper.
  *
  * @since 1.0.0
@@ -359,15 +347,48 @@ if ( ! function_exists( 'primer_promoted_products' ) ) {
 
 /**
  * Add custom 'cart' menu item when woocommerce is active
- * @param	array	$items
- * @param	object $menu
- * @return array	$items
+ *
+ * @param  array  $items
+ * @param  object $menu
+ *
+ * @return array  $items
  */
 function generate_custom_cart_menu_item( $items, $menu ) {
 
 	$theme_locations = get_nav_menu_locations();
 
-	if ( ! apply_filters( 'primer_woocommerce_cart_menu', true ) || $menu->term_id !== $theme_locations['primary'] || is_admin() ) {
+	if ( empty( $theme_locations['primary'] ) ) {
+
+		return $items;
+
+	}
+
+	$nav_obj = wp_get_nav_menu_object( $theme_locations['primary'] );
+
+	if ( $menu->term_id !== $theme_locations['primary'] || is_admin() ) {
+
+		return $items;
+
+	}
+
+	add_filter( "wp_nav_menu_{$nav_obj->slug}_items", 'woocommerce_cart_menu', 10, 2 );
+
+	return $items;
+
+}
+add_filter( 'wp_get_nav_menu_items', 'generate_custom_cart_menu_item', 20, 2 );
+
+/**
+ * Generate the custom woocommerce menu item
+ *
+ * @param  array $items
+ * @param  array $args
+ *
+ * @return mixed
+ */
+function woocommerce_cart_menu( $items, $args ) {
+
+	if ( ! apply_filters( 'primer_woocommerce_cart_menu', true ) ) {
 
 		return $items;
 
@@ -381,74 +402,16 @@ function generate_custom_cart_menu_item( $items, $menu ) {
 
 	$product_count = sprintf( _n( '%s item', '%s items', $cart_item_count, 'primer' ), $cart_item_count );
 
-	$class = is_cart() ? 'current-menu-item' : '';
-
-	$sub_menu = '<ul class="woocommerce-cart sub-menu">
-		<li id="menu-item-1100" class="menu-item menu-item-1100"><a href="#test">' . get_the_widget( 'WC_Widget_Cart' ) . '</a></li>
-	</ul>';
-
-	$items[] = primer_generate_nav_menu_item(
-		wp_kses_post( '<span class="cart-preview-total">' . $cart_total . '</span><span class="cart-preview-count">' . $product_count . '</span><i class="fa fa-shopping-cart" aria-hidden="true"></i>' . $sub_menu ),
-		null,
-		100,
-		0,
-		[ 'menu-item-has-children' ]
+	$cart_menu     = sprintf(
+		'<li id="woocommerce-cart-menu-item" class="menu-item-has-children menu-item menu-item-type-nav_menu_item menu-item-object-cart woocommerce-cart-menu-item"><a><span class="cart-preview-total"><span class="woocommerce-price-amount amount">%1$s</span></span><span class="cart-preview-count">%2$s</span><i class="fa fa-shopping-cart"></i></a><a class="expand" href="#"></a>%3$s</li>',
+		$cart_total,
+		esc_attr( $product_count ),
+		sprintf(
+			'<ul class="sub-menu"><li id="woocommerce-cart-menu-item" class="menu-item woocommerce-cart-menu-item">%1$s</li></ul>',
+			get_the_widget( 'WC_Widget_Cart' )
+		)
 	);
-
-	return $items;
-
-}
-// add_filter( 'wp_get_nav_menu_items', 'generate_custom_cart_menu_item', 20, 2 );
-
-function test( $items, $args ) {
-
-	$cart_sub_menu = '<ul class="sub-menu">
-		<li id="woocommerce-cart-menu-item" class="menu-item woocommerce-cart-menu-item">
-		' . get_the_widget( 'WC_Widget_Cart' ) . '
-		</li>
-	</ul>';
-
-	$cart_menu     = '<li id="woocommerce-cart-menu-item" class="menu-item-has-children menu-item menu-item-type-nav_menu_item menu-item-object-cart woocommerce-cart-menu-item"><a><span class="cart-preview-total"><span class="woocommerce-price-amount amount"><span class="woocommerce-price-currencySymbol">$</span>560.00</span></span><span class="cart-preview-count">16 items</span><i class="fa fa-shopping-cart"></i></a><a class="expand" href="#"></a>' . $cart_sub_menu . '</li>';
 
 	return $items . $cart_menu;
 
 }
-add_filter( 'wp_nav_menu_items', 'test', 10, 2 );
-
-/**
- * Generate the sub-menu, beneath 'Cart'
- *
- * @return mixed HTML
- *
- * @since 1.4.2
- */
-function primer_generate_cart_submenu() {
-
-	if ( ! apply_filters( 'primer_woocommerce_cart_menu', true ) || is_customize_preview() ) {
-
-		add_filter( 'woocommerce_widget_cart_is_hidden', '__return_true' );
-
-		return;
-
-	}
-
-	$class = is_cart() ? 'current-menu-item' : '';
-
-	?>
-
-	<div class="site-header-cart-container">
-
-		<ul class="site-header-cart menu">
-
-			<li>
-				<?php // the_widget( 'WC_Widget_Cart', 'title=' ); ?>
-			</li>
-
-		</ul>
-
-	</div>
-
-	<?php
-
-}
-// add_action( 'primer_after_header', 'primer_generate_cart_submenu', 11 );
