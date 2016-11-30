@@ -246,7 +246,11 @@ function primer_wc_colors( $colors ) {
 				.woocommerce a.button,
 				.woocommerce a.button.alt,
 				.woocommerce #respond input#submit,
-				.woocommerce .product span.onsale' => array(
+				.woocommerce .product span.onsale,
+				#woocommerce-cart-menu-item .widget_shopping_cart p.buttons a,
+				#woocommerce-cart-menu-item .widget_shopping_cart p.buttons a:visited,
+				ul.products a.button,
+				ul.products a.button:visited' => array(
 					'background-color' => '%1$s',
 					'border-color'     => '%1$s',
 				),
@@ -255,7 +259,9 @@ function primer_wc_colors( $colors ) {
 				'.woocommerce button.button.alt:hover, .woocommerce button.button.alt:active, .woocommerce button.button.alt:focus,
 				.woocommerce a.button:hover, .woocommerce a.button:active, .woocommerce a.button:focus,
 				.woocommerce a.button.alt:hover, .woocommerce a.button.alt:active, .woocommerce a.button.alt:focus,
-				.woocommerce #respond input#submit:hover' => array(
+				.woocommerce #respond input#submit:hover,
+				#woocommerce-cart-menu-item .widget_shopping_cart p.buttons a:hover,
+				a.button:hover' => array(
 					'background-color' => 'rgba(%1$s, 0.8)',
 					'border-color'     => 'rgba(%1$s, 0.8)',
 				),
