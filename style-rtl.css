@@ -2248,7 +2248,9 @@ body.single-product span.onsale {
   display: inline-block;
   background: inherit;
   -webkit-box-shadow: none;
-  box-shadow: none; }
+  box-shadow: none;
+  max-height: 250px;
+  overflow-y: auto; }
 
 .main-navigation ul ul ul.cart_list {
   position: inherit; }
@@ -2308,10 +2310,10 @@ ul.cart_list li.mini_cart_item a:nth-child(2) {
   .woocommerce-cart-menu-item.open ul.sub-menu {
     display: inline-block;
     width: 100%; }
-  li #woocommerce-cart-menu-item .widget_shopping_cart {
+  li#woocommerce-cart-menu-item .widget_shopping_cart {
     width: 100%;
     margin-right: 0; }
-  li #woocommerce-cart-menu-item .product_list_widget {
+  li#woocommerce-cart-menu-item .product_list_widget {
     display: inline-block;
     width: 100%; }
   ul.cart_list li.mini_cart_item a:nth-child(2) {

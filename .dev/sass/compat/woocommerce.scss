@@ -86,6 +86,8 @@ body.single-product {
 		display: inline-block;
 		background: inherit;
 		box-shadow: none;
+		max-height: 250px;
+		overflow-y: auto;
 	}
 
 }
@@ -170,7 +172,7 @@ ul.cart_list li.mini_cart_item a:nth-child(2) {
 		width: 100%;
 	}
 
-	li #woocommerce-cart-menu-item {
+	li#woocommerce-cart-menu-item {
 
 		.widget_shopping_cart {
 			width: 100%;
