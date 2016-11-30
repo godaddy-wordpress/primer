@@ -261,7 +261,8 @@ function primer_wc_colors( $colors ) {
 				.woocommerce a.button.alt:hover, .woocommerce a.button.alt:active, .woocommerce a.button.alt:focus,
 				.woocommerce #respond input#submit:hover,
 				#woocommerce-cart-menu-item .widget_shopping_cart p.buttons a:hover,
-				a.button:hover' => array(
+				a.button:hover,
+				ul.products .button:hover, ul.products .button:active, ul.products .button:focus' => array(
 					'background-color' => 'rgba(%1$s, 0.8)',
 					'border-color'     => 'rgba(%1$s, 0.8)',
 				),
