@@ -2232,7 +2232,9 @@ body.single-product span.onsale {
     margin: 0; }
     #woocommerce-cart-menu-item .widget_shopping_cart p.buttons a {
       text-align: center;
-      width: 100%; }
+      width: 100%;
+      background-color: #ff6663;
+      color: #ffffff; }
 
 #woocommerce-cart-menu-item .widget_shopping_cart_content p.total {
   float: left;
