@@ -2214,9 +2214,6 @@ body.single-product span.onsale {
   top: 0;
   left: 0; }
 
-#woocommerce-cart-menu-item.empty-cart .widget_shopping_cart {
-  padding-top: 1em; }
-
 #woocommerce-cart-menu-item .cart-preview-count {
   font-weight: 800;
   margin-left: 8px; }
@@ -2256,13 +2253,17 @@ body.single-product span.onsale {
 .main-navigation ul ul ul.cart_list {
   position: inherit; }
 
+#woocommerce-cart-menu-item ul.cart_list.product_list_widget {
+  display: block;
+  width: 100%; }
+
 ul.cart_list li.mini_cart_item img {
   width: 100%;
   max-width: 55px; }
 
 ul.cart_list li.mini_cart_item a:nth-child(2) {
   color: #333;
-  padding: 1rem 1rem 5px 2rem;
+  padding: 1rem 0 5px 1.75rem;
   width: 100%;
   opacity: 1;
   transition: opacity .25s ease-out;

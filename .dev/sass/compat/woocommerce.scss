@@ -94,6 +94,11 @@ body.single-product {
 	position: inherit;
 }
 
+#woocommerce-cart-menu-item ul.cart_list.product_list_widget {
+	display: block;
+	width: 100%;
+}
+
 ul.cart_list li.mini_cart_item img {
 	width: 100%;
 	max-width: 55px;
@@ -101,7 +106,7 @@ ul.cart_list li.mini_cart_item img {
 
 ul.cart_list li.mini_cart_item a:nth-child(2) {
 	color: #333;
-	padding: 1rem 1rem 5px 2rem;
+	padding: 1rem 0 5px 1.75rem;
 	width: 100%;
 	opacity: 1;
 	transition: opacity .25s ease-out;
