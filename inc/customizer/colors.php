@@ -304,7 +304,7 @@ class Primer_Customizer_Colors {
 						input[type="reset"],
 						input[type="submit"],
 						.site-info-wrapper .social-menu a:hover,
-						.woocommerce-cart-menu-item .woocommerce.widget_shopping_cart p.buttons a' => array(
+						#woocommerce-cart-menu-item .widget_shopping_cart p.buttons a' => array(
 							'background-color' => '%1$s',
 							'border-color'     => '%1$s',
 						),
@@ -315,7 +315,8 @@ class Primer_Customizer_Colors {
 						input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
 						input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
 						input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus,
-						.woocommerce-cart-menu-item .woocommerce.widget_shopping_cart p.buttons a:hover' => array(
+						.woocommerce-cart-menu-item .woocommerce.widget_shopping_cart p.buttons a:hover,
+						#woocommerce-cart-menu-item .widget_shopping_cart p.buttons a:hover' => array(
 							'background-color' => 'rgba(%1$s, 0.8)',
 							'border-color'     => 'rgba(%1$s, 0.8)',
 						),
