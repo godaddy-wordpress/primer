@@ -620,6 +620,15 @@ function primer_generate_nav_menu_item( $title, $url, $order, $parent = 0, $clas
 
 if ( ! function_exists( 'get_the_widget' ) ) {
 
+	/**
+	 * Render a widget and store it in an output buffer
+	 *
+	 * @param  string $widget   Class name of the widget to render.
+	 * @param  string $instance Instance
+	 * @param  array  $args     Array of arguments for the widget.
+	 *
+	 * @return mixed
+	 */
 	function get_the_widget( $widget, $instance = '', $args = '' ) {
 
 		ob_start();
