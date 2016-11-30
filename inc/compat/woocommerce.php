@@ -396,18 +396,19 @@ function woocommerce_cart_menu( $items, $args ) {
 
 	global $woocommerce;
 
-	$cart_total = is_customize_preview() ? '0.00' : $woocommerce->cart->get_cart_total();
-
+	$cart_total      = is_customize_preview() ? '0.00' : $woocommerce->cart->get_cart_total();
 	$cart_item_count = is_customize_preview() ? 0 : (int) $woocommerce->cart->get_cart_contents_count();
+	$product_count   = sprintf( _n( '%s item', '%s items', $cart_item_count, 'primer' ), $cart_item_count );
 
-	$product_count = sprintf( _n( '%s item', '%s items', $cart_item_count, 'primer' ), $cart_item_count );
+	$empty_class = ( 0 === $cart_item_count ) ? ' empty-cart' : '';
 
 	$cart_menu     = sprintf(
 		'<li id="woocommerce-cart-menu-item" class="menu-item-has-children menu-item menu-item-type-nav_menu_item menu-item-object-cart woocommerce-cart-menu-item"><a><span class="cart-preview-total"><span class="woocommerce-price-amount amount">%1$s</span></span><span class="cart-preview-count">%2$s</span><i class="fa fa-shopping-cart"></i></a><a class="expand" href="#"></a>%3$s</li>',
 		$cart_total,
 		esc_attr( $product_count ),
 		sprintf(
-			'<ul class="sub-menu"><li id="woocommerce-cart-menu-item" class="menu-item woocommerce-cart-menu-item">%1$s</li></ul>',
+			'<ul class="sub-menu"><li id="woocommerce-cart-menu-item" class="menu-item woocommerce-cart-menu-item%1$s">%2$s</li></ul>',
+			esc_attr( $empty_class ),
 			get_the_widget( 'WC_Widget_Cart' )
 		)
 	);

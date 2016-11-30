@@ -2214,6 +2214,9 @@ body.single-product span.onsale {
   top: 0;
   left: 0; }
 
+#woocommerce-cart-menu-item.empty-cart .widget_shopping_cart {
+  padding-top: 1em; }
+
 #woocommerce-cart-menu-item .cart-preview-count {
   font-weight: 800;
   margin-left: 8px; }

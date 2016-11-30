@@ -40,6 +40,10 @@ body.single-product {
 
 #woocommerce-cart-menu-item {
 
+	&.empty-cart .widget_shopping_cart {
+		padding-top: 1em;
+	}
+
 	.cart-preview-count {
 		font-weight: 800;
 		margin-left: 8px;
