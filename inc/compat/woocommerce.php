@@ -297,7 +297,7 @@ function woocommerce_404_template( $original_template ) {
 
 	if ( is_404() ) {
 
-		return get_stylesheet_directory() . '/templates/parts/404_woocommerce.php';
+		return get_stylesheet_directory() . '/templates/parts/404-woocommerce.php';
 
 	}
 
