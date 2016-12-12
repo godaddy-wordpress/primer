@@ -35,7 +35,7 @@ get_header(); ?>
 
 				<section aria-label="<?php esc_html__( 'Promoted Products', 'primer' ); ?>">
 
-					<?php primer_promoted_products(); ?>
+					<?php primer_wc_promoted_products(); ?>
 
 				</section>
 

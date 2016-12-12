@@ -293,7 +293,7 @@ add_filter( 'primer_colors', 'primer_wc_colors' );
  *
  * @return string
  */
-function woocommerce_404_template( $original_template ) {
+function primer_wc_404_template( $original_template ) {
 
 	if ( is_404() ) {
 
@@ -304,12 +304,12 @@ function woocommerce_404_template( $original_template ) {
 	return $original_template;
 
 }
-add_filter( 'template_include', 'woocommerce_404_template' );
+add_filter( 'template_include', 'primer_wc_404_template' );
 
 /**
  * Display Promoted Products
  */
-if ( ! function_exists( 'primer_promoted_products' ) ) {
+if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 	/**
 	 * Featured and On-Sale Products
 	 * Check for featured products then on-sale products and use the appropiate shortcode.
@@ -324,7 +324,7 @@ if ( ! function_exists( 'primer_promoted_products' ) ) {
 	 *
 	 * @return void
 	 */
-	function primer_promoted_products( $per_page = '4', $columns = '4', $recent_fallback = true ) {
+	function primer_wc_promoted_products( $per_page = '4', $columns = '4', $recent_fallback = true ) {
 
 		if ( wc_get_featured_product_ids() ) {
 
@@ -360,7 +360,7 @@ if ( ! function_exists( 'primer_promoted_products' ) ) {
  *
  * @return array  $items
  */
-function generate_custom_cart_menu_item( $items, $menu ) {
+function primer_wc_generate_custom_cart_menu_item( $items, $menu ) {
 
 	$theme_locations = get_nav_menu_locations();
 
@@ -378,12 +378,12 @@ function generate_custom_cart_menu_item( $items, $menu ) {
 
 	}
 
-	add_filter( "wp_nav_menu_{$nav_obj->slug}_items", 'woocommerce_cart_menu', 10, 2 );
+	add_filter( "wp_nav_menu_{$nav_obj->slug}_items", 'primer_wc_cart_menu', 10, 2 );
 
 	return $items;
 
 }
-add_filter( 'wp_get_nav_menu_items', 'generate_custom_cart_menu_item', 20, 2 );
+add_filter( 'wp_get_nav_menu_items', 'primer_wc_generate_custom_cart_menu_item', 20, 2 );
 
 /**
  * Generate the custom woocommerce menu item
@@ -393,9 +393,9 @@ add_filter( 'wp_get_nav_menu_items', 'generate_custom_cart_menu_item', 20, 2 );
  *
  * @return mixed
  */
-function woocommerce_cart_menu( $items, $args ) {
+function primer_wc_cart_menu( $items, $args ) {
 
-	if ( ! apply_filters( 'primer_woocommerce_cart_menu', true ) ) {
+	if ( ! apply_filters( 'primer_wc_cart_menu', true ) ) {
 
 		return $items;
 
