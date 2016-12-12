@@ -13,7 +13,7 @@ class Primer_Site_Identity_Options {
 	 */
 	public function __construct() {
 
-		add_filter( 'primer_author_credit', array( $this, 'toggle_footer_site_credits' ) );
+		add_filter( 'primer_author_credit', array( $this, 'toggle_primer_author_credit' ) );
 
 		add_action( 'customize_register', array( $this, 'customize_register' ) );
 
@@ -27,9 +27,9 @@ class Primer_Site_Identity_Options {
 	 *
 	 * @return boolean true|false based on site option
 	 */
-	public function toggle_footer_site_credits() {
+	public function toggle_primer_author_credit() {
 
-		if ( get_theme_mod( 'primer_footer_credits_visibility' ) ) {
+		if ( get_theme_mod( 'primer_author_credit' ) ) {
 
 			return true;
 
@@ -50,7 +50,7 @@ class Primer_Site_Identity_Options {
 	public function customize_register( WP_Customize_Manager $wp_customize ) {
 
 		$wp_customize->add_setting(
-			'primer_footer_credits_visibility',
+			'primer_author_credit',
 			array(
 				'default' => 1,
 			)
@@ -61,7 +61,7 @@ class Primer_Site_Identity_Options {
 			array(
 				'label'       => esc_html__( 'Display theme author credits', 'primer' ),
 				'section'     => 'title_tagline',
-				'settings'    => 'primer_footer_credits_visibility',
+				'settings'    => 'primer_author_credit',
 				'type'        => 'checkbox',
 			)
 		);
