@@ -3,7 +3,7 @@
  * Additional site identity customizer options.
  *
  * @package Primer
- * @since   1.4.2
+ * @since   NEXT
  */
 
 class Primer_Site_Identity_Options {
@@ -16,7 +16,7 @@ class Primer_Site_Identity_Options {
 		/**
 		 * Disable additional site identity options
 		 *
-		 * @since 1.4.2
+		 * @since NEXT
 		 */
 		if ( ! (bool) apply_filters( 'primer_show_site_identity_settings', true ) ) {
 
@@ -34,7 +34,7 @@ class Primer_Site_Identity_Options {
 	 * Toggle the visibility of the site credits in the footer.
 	 *
 	 * @action primer_author_credit
-	 * @since 1.4.2
+	 * @since  NEXT
 	 *
 	 * @return bool
 	 */
@@ -48,7 +48,7 @@ class Primer_Site_Identity_Options {
 	 * Register additional site identity options.
 	 *
 	 * @action customize_register
-	 * @since  1.4.2
+	 * @since  NEXT
 	 *
 	 * @param WP_Customize_Manager $wp_customize
 	 */
