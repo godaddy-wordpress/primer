@@ -14,9 +14,11 @@ class Primer_Site_Identity_Options {
 	public function __construct() {
 
 		/**
-		 * Disable additional site identity options
+		 * Filter the site identity settings display.
 		 *
 		 * @since NEXT
+		 *
+		 * @var bool
 		 */
 		if ( ! (bool) apply_filters( 'primer_show_site_identity_settings', true ) ) {
 
