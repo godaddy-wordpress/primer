@@ -573,51 +573,6 @@ function primer_array_replace_recursive( array $array1, array $array2 ) {
 
 }
 
-/**
- * Helper function to generate a new menu item object
- *
- * @param  string   $title
- * @param  string   $url
- * @param  integer  $order
- * @param  integer  $parent
- * @param  array    $classes
- *
- * @return object
- *
- * @since 1.4.2
- */
-function primer_generate_nav_menu_item( $title, $url, $order, $parent = 0, $classes = array() ) {
-
-	$item                   = new stdClass();
-	$item->ID               = 1000 + $order + $parent;
-	$item->object_id        = $item->ID;
-	$item->db_id            = $item->ID;
-	$item->title            = $title;
-	$item->type             = 'nav_menu_item';
-	$item->object           = 'cart';
-	$item->classes          = $classes;
-	$item->url              = $url;
-	$item->menu_order       = $order;
-	$item->menu_item_parent = $parent;
-
-	$null_attr = [
-		'xfn',
-		'target',
-		'attr_title',
-		'description',
-		'status',
-	];
-
-	foreach ( $null_attr as $attr ) {
-
-		$item->$attr = null;
-
-	}
-
-	return $item;
-
-}
-
 if ( ! function_exists( 'primer_get_the_widget' ) ) {
 
 	/**
