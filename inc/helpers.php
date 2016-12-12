@@ -618,7 +618,7 @@ function primer_generate_nav_menu_item( $title, $url, $order, $parent = 0, $clas
 
 }
 
-if ( ! function_exists( 'get_the_widget' ) ) {
+if ( ! function_exists( 'primer_get_the_widget' ) ) {
 
 	/**
 	 * Render a widget and store it in an output buffer
@@ -629,7 +629,7 @@ if ( ! function_exists( 'get_the_widget' ) ) {
 	 *
 	 * @return mixed
 	 */
-	function get_the_widget( $widget, $instance = '', $args = '' ) {
+	function primer_get_the_widget( $widget, $instance = '', $args = '' ) {
 
 		ob_start();
 

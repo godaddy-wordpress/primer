@@ -380,7 +380,7 @@ function primer_wc_generate_cart_menu_item( $items, $menu ) {
 
 	add_filter( "wp_nav_menu_{$nav_obj->slug}_items", 'primer_wc_cart_menu', 10, 2 );
 
-	return $items;
+	return $items;g
 
 }
 add_filter( 'wp_get_nav_menu_items', 'primer_wc_generate_cart_menu_item', 20, 2 );
@@ -412,7 +412,7 @@ function primer_wc_cart_menu( $items, $args ) {
 	$sub_menu = ( 0 < $cart_item_count ) ? sprintf(
 		'<ul class="sub-menu"><li id="woocommerce-cart-menu-item" class="menu-item woocommerce-cart-menu-item%1$s">%2$s</li></ul>',
 		esc_attr( $empty_class ),
-		get_the_widget( 'WC_Widget_Cart' )
+		primer_get_the_widget( 'WC_Widget_Cart' )
 	) : '';
 
 	$cart_menu = sprintf(
