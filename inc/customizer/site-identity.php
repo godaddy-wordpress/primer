@@ -31,7 +31,7 @@ class Primer_Site_Identity_Options {
 	 * @action primer_author_credit
 	 * @since 1.4.2
 	 *
-	 * @return boolean true|false based on site option
+	 * @return boolean true|false based on theme mod
 	 */
 	public function toggle_primer_author_credit() {
 
