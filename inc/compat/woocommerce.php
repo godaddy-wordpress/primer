@@ -360,7 +360,7 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
  *
  * @return array  $items
  */
-function primer_wc_generate_custom_cart_menu_item( $items, $menu ) {
+function primer_wc_generate_cart_menu_item( $items, $menu ) {
 
 	$theme_locations = get_nav_menu_locations();
 
@@ -383,7 +383,7 @@ function primer_wc_generate_custom_cart_menu_item( $items, $menu ) {
 	return $items;
 
 }
-add_filter( 'wp_get_nav_menu_items', 'primer_wc_generate_custom_cart_menu_item', 20, 2 );
+add_filter( 'wp_get_nav_menu_items', 'primer_wc_generate_cart_menu_item', 20, 2 );
 
 /**
  * Generate the custom woocommerce menu item
