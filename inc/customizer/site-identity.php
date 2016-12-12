@@ -64,7 +64,7 @@ class Primer_Site_Identity_Options {
 		$wp_customize->add_control(
 			'page_width',
 			array(
-				'label'       => esc_html__( 'Display theme author credits', 'primer' ),
+				'label'       => esc_html__( 'Display theme author credit', 'primer' ),
 				'section'     => 'title_tagline',
 				'settings'    => 'primer_author_credit',
 				'type'        => 'checkbox',
