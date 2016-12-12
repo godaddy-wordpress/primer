@@ -416,7 +416,7 @@ function woocommerce_cart_menu( $items, $args ) {
 	) : '';
 
 	$cart_menu = sprintf(
-		'<li id="woocommerce-cart-menu-item" class="menu-item-has-children menu-item menu-item-type-nav_menu_item menu-item-object-cart woocommerce-cart-menu-item"><a><span class="cart-preview-total"><span class="woocommerce-price-amount amount">%1$s</span></span><span class="cart-preview-count">%2$s</span><i class="fa fa-shopping-cart"></i></a><a class="expand" href="#"></a>%3$s</li>',
+		'<li id="woocommerce-cart-menu-item" class="menu-item-has-children menu-item menu-item-type-nav_menu_item menu-item-object-cart woocommerce-cart-menu-item"><a><span class="cart-preview-total"><span class="woocommerce-price-amount amount">%1$s</span></span><span class="cart-preview-count">%2$s</span></a><a class="expand" href="#"></a>%3$s</li>',
 		$cart_total,
 		esc_attr( $product_count ),
 		$sub_menu
