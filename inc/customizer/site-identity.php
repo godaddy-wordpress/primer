@@ -13,6 +13,12 @@ class Primer_Site_Identity_Options {
 	 */
 	public function __construct() {
 
+		if ( class_exists( 'WPaaS\Log\Components\Plugin' ) && WPaaS\Plugin::is_reseller() ) {
+
+			return;
+
+		}
+
 		add_filter( 'primer_author_credit', array( $this, 'toggle_primer_author_credit' ) );
 
 		add_action( 'customize_register', array( $this, 'customize_register' ) );
