@@ -13,7 +13,7 @@ class Primer_Site_Identity_Options {
 	 */
 	public function __construct() {
 
-		if ( class_exists( 'WPaaS\Log\Components\Plugin' ) && WPaaS\Plugin::is_reseller() ) {
+		if ( ! apply_filters( 'primer_expose_site_identity_settings', true ) ) {
 
 			return;
 
