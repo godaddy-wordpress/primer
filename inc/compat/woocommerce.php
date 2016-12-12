@@ -380,7 +380,7 @@ function primer_wc_generate_cart_menu_item( $items, $menu ) {
 
 	add_filter( "wp_nav_menu_{$nav_obj->slug}_items", 'primer_wc_cart_menu', 10, 2 );
 
-	return $items;g
+	return $items;
 
 }
 add_filter( 'wp_get_nav_menu_items', 'primer_wc_generate_cart_menu_item', 20, 2 );
