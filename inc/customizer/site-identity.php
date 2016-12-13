@@ -42,7 +42,7 @@ class Primer_Site_Identity_Options {
 	 */
 	public function toggle_primer_author_credit() {
 
-		return get_theme_mod( 'primer_author_credit' ) ? true : false;
+		return get_theme_mod( 'show_author_credit' ) ? true : false;
 
 	}
 
@@ -57,9 +57,10 @@ class Primer_Site_Identity_Options {
 	public function customize_register( WP_Customize_Manager $wp_customize ) {
 
 		$wp_customize->add_setting(
-			'primer_author_credit',
+			'show_author_credit',
 			array(
-				'default' => 1,
+				'default'           => 1,
+				'sanitize_callback' => 'absint',
 			)
 		);
 
@@ -68,8 +69,9 @@ class Primer_Site_Identity_Options {
 			array(
 				'label'    => esc_html__( 'Display theme author credit', 'primer' ),
 				'section'  => 'title_tagline',
-				'settings' => 'primer_author_credit',
+				'settings' => 'show_author_credit',
 				'type'     => 'checkbox',
+				'priority' => 40,
 			)
 		);
 
