@@ -35,7 +35,7 @@ class Primer_Site_Identity_Options {
 	/**
 	 * Toggle the visibility of the site credits in the footer.
 	 *
-	 * @action primer_author_credit
+	 * @filter primer_author_credit
 	 * @since  NEXT
 	 *
 	 * @return bool
