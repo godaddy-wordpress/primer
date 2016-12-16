@@ -43,6 +43,13 @@ class Primer_Customizer {
 		 */
 		require_once get_template_directory() . '/inc/customizer/layouts.php';
 
+		/**
+		 * Load additional site identity options
+		 *
+		 * @since NEXT
+		 */
+		require_once get_template_directory() . '/inc/customizer/site-identity.php';
+
 		add_action( 'after_setup_theme',      array( $this, 'logo' ) );
 		add_action( 'customize_register',     array( $this, 'selective_refresh' ), 11 );
 		add_action( 'customize_register',     array( $this, 'use_featured_hero_image' ) );
