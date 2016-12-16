@@ -46,7 +46,7 @@ class Primer_Customizer {
 		/**
 		 * Load additional site identity options
 		 *
-		 * @since 1.4.2
+		 * @since NEXT
 		 */
 		require_once get_template_directory() . '/inc/customizer/site-identity.php';
 
