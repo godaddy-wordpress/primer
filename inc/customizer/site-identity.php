@@ -42,7 +42,7 @@ class Primer_Site_Identity_Options {
 	 */
 	public function toggle_primer_author_credit() {
 
-		return get_theme_mod( 'show_author_credit' ) ? true : false;
+		return ! empty( get_theme_mod( 'show_author_credit' ) );
 
 	}
 
