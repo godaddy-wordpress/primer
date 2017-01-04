@@ -34,7 +34,7 @@ if ( (bool) apply_filters( 'primer_author_credit', true ) ) {
 		esc_html_x( '%1$s WordPress theme by %2$s', '1. theme name link, 2. theme author link', 'primer' ),
 		$theme->get( 'Name' ),
 		sprintf(
-			'<a href="%s" rel="author" rel="nofollow">%s</a>',
+			'<a href="%s" rel="author nofollow">%s</a>',
 			esc_url( $theme->get( 'AuthorURI' ) ),
 			esc_html( $theme->get( 'Author' ) )
 		)
