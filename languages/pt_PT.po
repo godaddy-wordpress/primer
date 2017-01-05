@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 0.9.0\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-10-25 19:43:08+00:00\n"
+"POT-Creation-Date: 2017-01-05 17:07:46+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -384,11 +384,15 @@ msgid "Display your site differently on larger screens."
 msgstr ""
 "Apresente o seu sítio de forma diferente em ecrãs de maiores dimensões."
 
-#: inc/customizer.php:169
+#: inc/customizer/site-identity.php:72
+msgid "Display theme author credit"
+msgstr ""
+
+#: inc/customizer.php:176
 msgid "Use featured image"
 msgstr "Utilizar imagem em destaque"
 
-#: inc/customizer.php:170
+#: inc/customizer.php:177
 msgid ""
 "Allow the featured image on the current post to override the hero image."
 msgstr ""
@@ -582,8 +586,9 @@ msgid "Copyright %1$s %2$d %3$s"
 msgstr "Copyright %1$s %2$d %3$s"
 
 #: templates/parts/credit.php:34
+#, fuzzy
 msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s theme by %2$s"
+msgid "%1$s WordPress theme by %2$s"
 msgstr "Tema %1$s de %2$s"
 
 #: templates/parts/loop/post-footer.php:20
