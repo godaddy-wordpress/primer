@@ -6,7 +6,7 @@ Primer is a powerful theme that brings clarity to your content in a fresh design
 **Contributors:** [godaddy](https://profiles.wordpress.org/godaddy), [fjarrett](https://profiles.wordpress.org/fjarrett), [jonathanbardo](https://profiles.wordpress.org/jonathanbardo), [eherman24](https://profiles.wordpress.org/eherman24)  
 **Tags:** [custom-background](https://wordpress.org/plugins/tags/custom-background), [custom-colors](https://wordpress.org/plugins/tags/custom-colors), [custom-header](https://wordpress.org/plugins/tags/custom-header), [custom-menu](https://wordpress.org/plugins/tags/custom-menu), [editor-style](https://wordpress.org/plugins/tags/editor-style), [featured-images](https://wordpress.org/plugins/tags/featured-images), [flexible-header](https://wordpress.org/plugins/tags/flexible-header), [left-sidebar](https://wordpress.org/plugins/tags/left-sidebar), [one-column](https://wordpress.org/plugins/tags/one-column), [right-sidebar](https://wordpress.org/plugins/tags/right-sidebar), [rtl-language-support](https://wordpress.org/plugins/tags/rtl-language-support), [sticky-post](https://wordpress.org/plugins/tags/sticky-post), [threaded-comments](https://wordpress.org/plugins/tags/threaded-comments), [three-columns](https://wordpress.org/plugins/tags/three-columns), [translation-ready](https://wordpress.org/plugins/tags/translation-ready), [two-columns](https://wordpress.org/plugins/tags/two-columns)  
 **Requires at least:** 4.4  
-**Tested up to:** 4.6  
+**Tested up to:** 4.7  
 **Stable tag:** 1.4.1  
 **License:** [GPL-2.0](https://www.gnu.org/licenses/gpl-2.0.html)  
 
@@ -63,11 +63,20 @@ Source: https://genericons.com/
 
 ## Changelog ##
 
-### 1.4.0 - October 21st 2016 ###
+### 1.4.2 ###
+* Added word-wrap where text was overflowing @props [evanherman](https://github.com/EvanHerman)
+* Updated translations @props [jonathanbardo](https://github.com/jonathanbardo)
+* Added font-family support for WooCommerce buttons @props [fjarret](https://github.com/fjarrett)
+* Introduced 'Author Credit' toggle in the customizer @props [evanherman](https://github.com/EvanHerman)
+
+### 1.4.1 ###
+* Fixed hero widget font sizes @props [jonathanbardo](https://github.com/jonathanbardo)
+
+### 1.4.0 ###
 * Fixed comment meta template @props [wpexplorer](https://github.com/wpexplorer)
 * Expose color schemes array @props [evanherman](https://github.com/EvanHerman), [jonathanbardo](https://github.com/jonathanbardo)
 
-### 1.0.0 - September 2016 ###
+### 1.3.0 ###
 * Initial release.
 
 
