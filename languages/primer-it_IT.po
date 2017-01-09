@@ -1,415 +1,396 @@
 # Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 0.9.0\n"
+"Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-01-05 17:07:46+00:00\n"
+"POT-Creation-Date: 2016-10-25 19:43:08+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 
 #: 404.php:22
 msgid "Oops! That page can't be found."
-msgstr "Üzgünüz! Bu sayfa bulunamadı."
+msgstr "Errore. Impossibile trovare la pagina."
 
 #: 404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
-msgstr "Bu konumda bulunan bir şey yok. Lütfen aşağıdan aramayı deneyin:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
+msgstr "Non è stato trovato nulla in questa posizione. Prova a cercare:"
 
 #: comments.php:54 comments.php:79
 msgid "Comment navigation"
-msgstr "Yorum gezinti çubuğu"
+msgstr "Navigazione tra i commenti"
 
 #: comments.php:81
 msgid "&larr; Older Comments"
-msgstr "&larr; Eski Yorumlar"
+msgstr "&larr; Commenti più vecchi"
 
 #: comments.php:83
 msgid "Newer Comments &rarr;"
-msgstr "Yeni Yorumlar &rarr;"
+msgstr "Commenti più recenti &rarr;"
 
 #: comments.php:93
 msgid "Comments are closed."
-msgstr "Yorumlar kapalı."
+msgstr "I commenti sono chiusi."
 
 #: content-none.php:16
 msgid "Nothing Found"
-msgstr "Hiçbir Şey Bulunamadı"
+msgstr "Nessun risultato"
 
 #: content-none.php:31
 msgid "Get started here"
-msgstr "Buradan başlayın"
+msgstr "Comincia da qui"
 
 #: content-none.php:39
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Üzgünüz, aradığınız terimlerle eşleşen bir şey bulunamadı. Lütfen farklı "
-"anahtar kelimeler ile tekrar deneyin."
+"I criteri di ricerca che hai inserito non hanno portato ad alcun risultato. "
+"Riprova con parole chiave differenti."
 
 #: content-none.php:45
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr ""
-"Görünüşe göre aradığınızı bulamadık. Belki arama yapmanız yardımcı olabilir."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Sembra che tu non riesca a trovare quello che cerchi. Forse una ricerca ti può aiutare."
 
 #: functions.php:159
 msgid "Featured"
-msgstr ""
+msgstr "In Evidenza"
 
 #: functions.php:165 functions.php:407
 msgid "Hero"
-msgstr "Ana Site"
+msgstr "Hero"
 
 #: functions.php:246
 msgid "Primary Menu"
-msgstr "Birincil Menü"
+msgstr "Menu principale"
 
 #: functions.php:247
 msgid "Social Menu"
-msgstr "Sosyal Menü"
+msgstr "Menu Social"
 
 #: functions.php:248
 msgid "Footer Menu"
-msgstr "Altbilgi Menüsü"
+msgstr "Menu piè di pagina"
 
 #: functions.php:367
 msgid "Sidebar"
-msgstr "Kenar Çubuğu"
+msgstr "Barra laterale"
 
 #: functions.php:368
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr ""
-"Birincil kenar çubuğu; her sayfanın, gönderinin, arşivin ve arama şablonunun "
-"içeriğiyle beraber görünür.  "
+"La barra laterale principale appare insieme al contenuto di ogni pagina, ai "
+"post, all'archivio e al modello di ricerca."
 
 #: functions.php:375
 msgid "Secondary Sidebar"
-msgstr "İkincil Kenar Çubuğu"
+msgstr "Barra laterale secondaria"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
-"İkincil Kenar Çubuğu, sadece üç sütunlu sayfa düzenini seçtiğinizde görünür."
+"La barra laterale secondaria appare solo se selezioni un layout a tre colonne."
 
 #: functions.php:383
 msgid "Footer 1"
-msgstr "Altbilgi 1"
+msgstr "Piè di pagina 1"
 
 #: functions.php:384
 msgid "This sidebar is the first column of the footer widget area."
-msgstr "Kenar çubuğu, altbilgi pencere öğesi alanının ilk sütunundadır."
+msgstr "Questa barra laterale appare nella prima colonna dell'area widget del piè di pagina."
 
 #: functions.php:391
 msgid "Footer 2"
-msgstr "Altbilgi 2"
+msgstr "Piè di pagina 2"
 
 #: functions.php:392
 msgid "This sidebar is the second column of the footer widget area."
-msgstr "Bu kenar çubuğu, altbilgi pencere öğesi alanının ikinci sütunundadır."
+msgstr "Questa barra laterale appare nella seconda colonna dell'area widget del piè di pagina."
 
 #: functions.php:399
 msgid "Footer 3"
-msgstr "Altbilgi 3"
+msgstr "Piè di pagina 3"
 
 #: functions.php:400
 msgid "This sidebar is the third column of the footer widget area."
-msgstr "Bu kenar çubuğu, altbilgi pencere öğesi alanının üçüncü sütunundadır."
+msgstr "Questa barra laterale appare nella terza colonna dell'area widget del piè di pagina."
 
 #: functions.php:408
 msgid "Hero widgets appear over the header image on the front page."
-msgstr ""
-"Ana site pencere öğeleri, ön sayfadaki üstbaşlık görselinin üzerinde görünür."
+msgstr "I widget Hero appaiono sopra l’immagine di intestazione nella prima pagina."
 
 #: header.php:42
 msgid "Skip to content"
-msgstr "İçeriğe atla"
+msgstr "Passa al contenuto"
 
 #: inc/compat/wordpress.php:47
-#, fuzzy
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-" Primer, en azından WordPress %s sürümünü gerektirir. Siz, %s sürümünü "
-"çalıştırıyorsunuz. Lütfen yükseltin ve tekrar deneyin."
+"Primer richiede almeno la versione %1$s di WordPress. La versione in "
+"esecuzione è la %2$s. Aggiorna e riprova."
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
-msgstr "Site Başlık Metni"
+msgstr "Testo titolo del sito"
 
 #: inc/customizer/colors.php:63
 msgid "Tagline Text"
-msgstr "Etiket Satırı Metni"
+msgstr "Testo tagline"
 
 #: inc/customizer/colors.php:74
 msgid "Hero Text"
-msgstr "Ana Site Metni"
+msgstr "Testo Hero"
 
 #: inc/customizer/colors.php:105 inc/customizer/colors.php:323
 msgid "Text"
-msgstr "Metin"
+msgstr "Testo"
 
 #: inc/customizer/colors.php:127
 msgid "Heading Text"
-msgstr "Üstbilgi Metni"
+msgstr "Testo intestazione"
 
 #: inc/customizer/colors.php:128
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Gönderi başlıkları, pencere öğesi başlıkları, form etiketleri ve düğmeler."
+msgstr "Titoli di post e di widget, etichette di form, intestazioni di tabelle e pulsanti."
 
 #: inc/customizer/colors.php:149
 msgid "Primary Text"
-msgstr "Birincil Metin"
+msgstr "Testo principale"
 
 #: inc/customizer/colors.php:150
 msgid "Paragraphs, lists, menu links, quotes and tables."
-msgstr "Paragraflar, listeler, menü bağlantıları, alıntılar ve tablolar."
+msgstr "Paragrafi, elenchi, link a menu, citazioni e tabelle."
 
 #: inc/customizer/colors.php:195
 msgid "Secondary Text"
-msgstr "İkincil Metin"
+msgstr "Testo secondario"
 
 #: inc/customizer/colors.php:196
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
-"Gönderi yazarlarının isimleri, yorum sayıları, gönderi ve alıntı "
-"altbilgileri."
+msgstr "Autori dei post, conteggio dei commenti, piè di pagina dei post e delle citazioni."
 
 #: inc/customizer/colors.php:210
 msgid "Widget Heading Text"
-msgstr "Pencere Öğesi Üstbilgi Metni"
+msgstr "Testo intestazione widget"
 
 #: inc/customizer/colors.php:227
 msgid "Widget Text"
-msgstr "Pencere Öğesi Metni"
+msgstr "Testo widget"
 
 #: inc/customizer/colors.php:239
 msgid "Menu Text"
-msgstr "Menü Metni"
+msgstr "Testo menu"
 
 #: inc/customizer/colors.php:261
 msgid "Copyright Text"
-msgstr "Telif Hakkı Metni"
+msgstr "Testo copyright"
 
 #: inc/customizer/colors.php:275
 msgid "Link Text"
-msgstr "Bağlantı Metni"
+msgstr "Testo link"
 
 #: inc/customizer/colors.php:297 inc/customizer/colors.php:379
 msgid "Background"
-msgstr "Arkaplan"
+msgstr "Sfondo"
 
 #: inc/customizer/colors.php:340
 msgid "Page Background"
-msgstr "Sayfa Arka Planı"
+msgstr "Sfondo della pagina"
 
 #: inc/customizer/colors.php:350
 msgid "Content Background"
-msgstr "İçerik Arka Planı"
+msgstr "Sfondo contenuti"
 
 #: inc/customizer/colors.php:360
 msgid "Hero Background"
-msgstr "Ana Site Arka Planı"
+msgstr "Sfondo Hero"
 
 #: inc/customizer/colors.php:389
 msgid "Widgets Background"
-msgstr "Pencere Öğeleri Arka Planı"
+msgstr "Sfondo widget"
 
 #: inc/customizer/colors.php:400
 msgid "Widget Content Background"
-msgstr "Pencere Öğeleri İçerik Arka Planı"
+msgstr "Sfondo contenuti widget"
 
 #: inc/customizer/colors.php:411
 msgid "Footer Background"
-msgstr "Altbilgi Arka Planı"
+msgstr "Sfondo piè di pagina"
 
 #: inc/customizer/colors.php:449 inc/customizer/layouts.php:302
 msgid "Custom"
-msgstr "Özel"
+msgstr "Personalizzato"
 
 #: inc/customizer/colors.php:466 inc/customizer/layouts.php:293
 msgid "Default"
-msgstr "Varsayılan"
+msgstr "Default"
 
 #: inc/customizer/colors.php:706
 msgid "Colors"
-msgstr "Renkler"
+msgstr "Colori"
 
 #: inc/customizer/colors.php:715
 msgid "Color Schemes"
-msgstr "Renk Şemaları"
+msgstr "Schemi di colori"
 
 #: inc/customizer/colors.php:723
 msgid "Header"
-msgstr "Başlık"
+msgstr "Intestazione"
 
 #: inc/customizer/colors.php:731
 msgid "Menu"
-msgstr "Menü"
+msgstr "Menu"
 
 #: inc/customizer/colors.php:739
 msgid "Buttons"
-msgstr "Düğmeler"
+msgstr "Pulsanti"
 
 #: inc/customizer/colors.php:747
 msgid "Content"
-msgstr "İçerik"
+msgstr "Contenuto"
 
 #: inc/customizer/colors.php:755
 msgid "Footer"
-msgstr "Altbilgi"
+msgstr "Piè di pagina"
 
 #: inc/customizer/colors.php:965
 msgid "Base Color Scheme"
-msgstr "Taban Renk Şeması"
+msgstr "Schema di colori di base"
 
 #: inc/customizer/colors.php:1274
 msgid "Hero Background Overlay"
-msgstr "Ana Site Arka Plan Katmanı"
+msgstr "Sovrapposizione sfondo Hero"
 
 #: inc/customizer/colors.php:1275
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Özelleştirilmiş bir Üstbilgi Görseli kullanırken renk katmanının "
-"saydamlığını kontrol edin."
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Controlla la trasparenza di sovrapposizione dei colori quando viene usata un’immagine di intestazione personalizzata."
 
 #: inc/customizer/fonts.php:87
 msgid "Site Title"
-msgstr "Site Başlığı"
+msgstr "Titolo del sito"
 
 #: inc/customizer/fonts.php:88
 msgid "Site title text in the header."
-msgstr "Üstbilgideki site başlık metni."
+msgstr "Testo del titolo del sito nell’intestazione."
 
 #: inc/customizer/fonts.php:97
 msgid "Navigation"
-msgstr "Gezinti"
+msgstr "Navigazione"
 
 #: inc/customizer/fonts.php:98
 msgid "Primary menu links and button links."
-msgstr "Birincil menü bağlantıları ve düğme bağlantıları."
+msgstr "Link a menu principali e a pulsanti."
 
 #: inc/customizer/fonts.php:108
 msgid "Headings"
-msgstr "Üstbilgiler"
+msgstr "Intestazioni"
 
 #: inc/customizer/fonts.php:109
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr ""
-"Gönderi başlıkları, pencere öğesi başlıkları, form etiketleri ve tablo "
-"üstbilgileri."
+msgstr "Titoli di post e di widget, etichette di form e intestazioni di tabelle."
 
 #: inc/customizer/fonts.php:124
 msgid "Primary"
-msgstr "Birincil"
+msgstr "Principale"
 
 #: inc/customizer/fonts.php:125
 msgid "Paragraphs, lists, links, quotes, and tables."
-msgstr "Paragraflar, listeler, bağlantılar, alıntılar ve tablolar."
+msgstr "Paragrafi, elenchi, link, citazioni e tabelle."
 
 #: inc/customizer/fonts.php:139
 msgid "Secondary"
-msgstr "İkincil"
+msgstr "Secondario"
 
 #: inc/customizer/fonts.php:140
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr "Yazar isimleri, yorum sayıları, gönderi ve alıntı altbilgileri."
+msgstr "Autori dei testi, conteggio dei commenti, link di risposta, piè di pagina dei post e delle citazioni."
 
 #: inc/customizer/fonts.php:188
 msgid "Fonts"
-msgstr "Yazı Tipleri"
+msgstr "Caratteri"
 
 #: inc/customizer/layouts.php:53
 msgid "One Column: Wide"
-msgstr "Bir Sütun: Geniş"
+msgstr "Una colonna: Larga"
 
 #: inc/customizer/layouts.php:54
 msgid "One Column: Narrow"
-msgstr "Bir Sütun: Dar"
+msgstr "Una colonna: Stretta"
 
 #: inc/customizer/layouts.php:55 inc/customizer/layouts.php:144
 msgid "Two Columns: Content | Sidebar"
-msgstr "İki Sütun: İçerik | Kenar Çubuğu"
+msgstr "Due colonne: Contenuto | Barra laterale"
 
 #: inc/customizer/layouts.php:56 inc/customizer/layouts.php:143
 msgid "Two Columns: Sidebar | Content"
-msgstr "İki Sütun: Kenar Çubuğu | İçerik"
+msgstr "Due colonne: Barra laterale | Contenuto"
 
 #: inc/customizer/layouts.php:57 inc/customizer/layouts.php:146
 msgid "Three Columns: Content | Sidebar | Sidebar"
-msgstr "Üç Sütun: İçerik / Kenar Çubuğu / Kenar Çubuğu"
+msgstr "Tre colonne: Contenuto | Barra laterale | Barra laterale"
 
 #: inc/customizer/layouts.php:58
 msgid "Three Columns: Sidebar | Content | Sidebar"
-msgstr "Üç Sütun: Kenar Çubuğu / İçerik / Kenar Çubuğu"
+msgstr "Tre colonne: Barra laterale | Contenuto | Barra laterale"
 
 #: inc/customizer/layouts.php:59 inc/customizer/layouts.php:145
 msgid "Three Columns: Sidebar | Sidebar | Content"
-msgstr "Üç Sütun: Kenar Çubuğu / Kenar Çubuğu / İçerik"
+msgstr "Tre colonne: Barra laterale | Barra laterale | Contenuto"
 
 #: inc/customizer/layouts.php:256 inc/customizer/layouts.php:434
 msgid "Layout"
-msgstr "Düzen"
+msgstr "Layout"
 
 #: inc/customizer/layouts.php:460
 msgid "Page Width"
-msgstr "Sayfa Genişliği"
+msgstr "Larghezza pagina"
 
 #: inc/customizer/layouts.php:461
 msgid "Display your site differently on larger screens."
-msgstr "Sitenizi daha geniş ekranlarda daha farklı gösterin."
+msgstr "Visualizza il sito in modo diverso su schermi più grandi."
 
-#: inc/customizer/site-identity.php:72
-msgid "Display theme author credit"
-msgstr ""
-
-#: inc/customizer.php:176
+#: inc/customizer.php:169
 msgid "Use featured image"
-msgstr "Öne çıkan görsel kullanın"
+msgstr "Usa immagine in evidenza"
 
-#: inc/customizer.php:177
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr ""
-"Geçerli gönderideki öne çıkan görselin ana site görselinin üzerine geçmesine "
-"izin verin."
+#: inc/customizer.php:170
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "Consenti all’immagine in evidenza nel post attuale di sovrascrivere l’immagine Hero."
 
 #: inc/helpers.php:52
 msgid "404 Page Not Found"
-msgstr "404 Sayfa Bulunamadı"
+msgstr "404 Pagina non trovata"
 
 #: inc/template-tags.php:133
 msgid "Posts navigation"
-msgstr "Gönderiler gezinti çubuğu"
+msgstr "Navigazione tra i post"
 
 #: inc/template-tags.php:139
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> Eski gönderiler"
+msgstr "<span class=\"meta-nav\">&larr;</span> Post più vecchi"
 
 #: inc/template-tags.php:145
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Yeni gönderiler <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Post più recenti <span class=\"meta-nav\">&rarr;</span>"
 
 #: inc/template-tags.php:178
 msgid "Post navigation"
-msgstr "Gönderi gezinti çubuğu"
+msgstr "Navigazione tra i post"
 
 #: inc/template-tags.php:279
 msgid "Blog"
@@ -418,32 +399,31 @@ msgstr "Blog"
 #: templates/parts/loop/page-content.php:27
 #: templates/parts/loop/post-content.php:18
 msgid "Pages:"
-msgstr "Sayfalar:"
+msgstr "Pagine:"
 
 #: templates/parts/loop/page-footer.php:9
 #: templates/parts/loop/post-footer.php:14
 #: templates/parts/loop/post-search-footer.php:46
 msgid "Edit"
-msgstr "Düzenle"
+msgstr "Modifica"
 
 #: templates/parts/loop/post-content.php:14
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Devamını Oku <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Per saperne di più <span class=\"meta-nav\">&rarr;</span>"
 
 #: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgid "Leave a comment"
-msgstr "Yorum bırakın"
+msgstr "Lascia un commento"
 
 #: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgid "1 Comment"
-msgstr "1 Yorum"
+msgstr "Un commento"
 
 #. Theme Name of the plugin/theme
-#, fuzzy
 msgid "Primer"
-msgstr "Birincil"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -454,8 +434,8 @@ msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer, yepyeni bir tasarımla içeriklerinize net bir görünüm kazandıran "
-"güçlü bir temadır."
+"Primer è un tema completo che garantisce la chiarezza dei contenuti in un "
+"design fresco e accattivante."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
@@ -469,119 +449,118 @@ msgstr "https://www.godaddy.com/"
 msgctxt "1. number of comments, 2. post title"
 msgid "One thought on %2$s"
 msgid_plural "%1$d thoughts on %2$s"
-msgstr[0] "%2$s hakkında bir görüş"
-msgstr[1] "%2$s hakkında %1$d görüş"
+msgstr[0] "Un pensiero su %2$s"
+msgstr[1] "%1$d pensieri su %2$s"
 
 #: comments.php:56
 msgctxt "left arrow (LTR) / right arrow (RTL)"
 msgid "%s Older Comments"
-msgstr "%s Daha Eski Yorumlar"
+msgstr "%s Commenti più vecchi"
 
 #: comments.php:58
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Newer Comments %s"
-msgstr "Yeni Yorumlar %s"
+msgstr "Commenti più recenti %s"
 
 #: templates/parts/loop/post-excerpt.php:14
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Continue Reading %s"
-msgstr "Okumaya Devam Et %s"
+msgstr "Continua a leggere %s"
 
 #: content-none.php:27
 msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
-msgstr "İlk gönderinizi yayınlamaya hazır mısınız? %s"
+msgstr "Pronto a pubblicare il tuo primo post? %s."
 
 #: inc/customizer/colors.php:476
 msgctxt "color scheme name"
 msgid "Blush"
-msgstr "Kızarık"
+msgstr "Incarnato"
 
 #: inc/customizer/colors.php:480
 msgctxt "color scheme name"
 msgid "Bronze"
-msgstr "Bronz"
+msgstr "Bronzo"
 
 #: inc/customizer/colors.php:484
 msgctxt "color scheme name"
 msgid "Canary"
-msgstr "Kanarya"
+msgstr "Canarino"
 
 #: inc/customizer/colors.php:488
 msgctxt "color scheme name"
 msgid "Cool"
-msgstr "Serin"
+msgstr "Cool"
 
 #: inc/customizer/colors.php:492
 msgctxt "color scheme name"
 msgid "Dark"
-msgstr "Koyu renkli"
+msgstr "Scuro"
 
 #: inc/customizer/colors.php:496
 msgctxt "color scheme name"
 msgid "Iguana"
-msgstr "İguana"
+msgstr "Iguana"
 
 #: inc/customizer/colors.php:500
 msgctxt "color scheme name"
 msgid "Muted"
-msgstr "Sessiz"
+msgstr "Tenue"
 
 #: inc/customizer/colors.php:504
 msgctxt "color scheme name"
 msgid "Plum"
-msgstr "Erik Rengi"
+msgstr "Susina"
 
 #: inc/customizer/colors.php:508
 msgctxt "color scheme name"
 msgid "Rose"
-msgstr "Gül"
+msgstr "Rosa"
 
 #: inc/customizer/colors.php:512
 msgctxt "color scheme name"
 msgid "Tangerine"
-msgstr "Mandalina"
+msgstr "Mandarino"
 
 #: inc/customizer/colors.php:516
 msgctxt "color scheme name"
 msgid "Turquoise"
-msgstr "Turkuaz "
+msgstr "Turchese"
 
 #: inc/customizer/fonts.php:213
 msgctxt "font name"
 msgid "%s (Default)"
-msgstr "%s (Varsayılan)"
+msgstr "%s (predefinito)"
 
 #: inc/customizer/layouts.php:97
 msgctxt "fixed-width page layout"
 msgid "Fixed"
-msgstr "Sabit"
+msgstr "Fissa"
 
 #: inc/customizer/layouts.php:98
 msgctxt "fluid-width page layout"
 msgid "Fluid"
-msgstr "Akışkan"
+msgstr "Fluido"
 
 #: inc/helpers.php:41
 msgctxt "search term"
 msgid "Search Results for: %s"
-msgstr "Şunun için Arama Sonuçları: %s"
+msgstr "Risultati di ricerca per: %s"
 
 #: inc/hooks.php:384
 msgctxt "page number"
 msgid "Page %d"
-msgstr "Sayfa %d"
+msgstr "Pagina %d"
 
 #: templates/parts/credit.php:14
 msgctxt "1. copyright symbol, 2. year, 3. site title"
 msgid "Copyright %1$s %2$d %3$s"
-msgstr "Telif Hakkı %1$s %2$d %3$s"
+msgstr "Copyright %1$s %2$d %3$s"
 
 #: templates/parts/credit.php:34
-#, fuzzy
 msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s WordPress theme by %2$s"
-msgstr "%2$s tarafından %1$s teması "
+msgid "%1$s theme by %2$s"
+msgstr "Tema %1$s di %2$s"
 
 #: templates/parts/loop/post-footer.php:20
 #: templates/parts/loop/post-footer.php:32
@@ -595,24 +574,16 @@ msgstr ", "
 #: templates/parts/loop/post-search-footer.php:20
 msgctxt "category list"
 msgid "Posted in: %s"
-msgstr "Şu kategoriye gönderildi: %s"
+msgstr "Inserito in: %s"
 
 #: templates/parts/loop/post-footer.php:38
 #: templates/parts/loop/post-search-footer.php:32
 msgctxt "tag list"
 msgid "Filed under: %s"
-msgstr "Şu etiketin altına yerleştirildi:  %s"
+msgstr "Archiviato sotto: %s"
 
 #: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgctxt "number of comments"
 msgid "% Comments"
-msgstr "% Yorum"
-
-#~ msgctxt "link to the Customizer"
-#~ msgid "The site-wide Default layout setting is located in the %s."
-#~ msgstr "Site genelindeki Varsayılan sayfa düzeni ayarı, %s konumundadır."
-
-#~ msgctxt "title of a component found in WordPress"
-#~ msgid "Customizer"
-#~ msgstr "Kişiselleştirici"
+msgstr "% commenti"

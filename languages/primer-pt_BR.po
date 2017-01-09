@@ -1,73 +1,69 @@
 # Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 0.9.0\n"
+"Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-01-05 17:07:46+00:00\n"
+"POT-Creation-Date: 2016-10-25 19:43:08+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 
 #: 404.php:22
 msgid "Oops! That page can't be found."
-msgstr "¡Oh! No se pudo encontrar esa página."
+msgstr "Opa! Página não encontrada."
 
 #: 404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
-msgstr ""
-"Parece que no se encontró nada en esta ubicación. Intenta buscar más abajo:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
+msgstr "Parece que não há nada nesse local. Tente pesquisar abaixo:"
 
 #: comments.php:54 comments.php:79
 msgid "Comment navigation"
-msgstr "Navegación de comentarios"
+msgstr "Explorar comentários"
 
 #: comments.php:81
 msgid "&larr; Older Comments"
-msgstr "&larr; Comentarios antiguos"
+msgstr "&larr; Comentários mais antigos"
 
 #: comments.php:83
 msgid "Newer Comments &rarr;"
-msgstr "Comentarios más nuevos &rarr;"
+msgstr "Comentários mais recentes &rarr;"
 
 #: comments.php:93
 msgid "Comments are closed."
-msgstr "Los comentarios son cerrados."
+msgstr "Comentários estão fechados."
 
 #: content-none.php:16
 msgid "Nothing Found"
-msgstr "No se encontró nada"
+msgstr "Nada encontrado"
 
 #: content-none.php:31
 msgid "Get started here"
-msgstr "Comienza aquí"
+msgstr "Comece aqui"
 
 #: content-none.php:39
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Lo sentimos, pero nada coincide con los términos de búsqueda. Inténtalo de "
-"nuevo con otras palabras clave diferentes."
+"Infelizmente não encontramos correspondências para os termos buscados. Tente "
+"novamente com outras palavras-chave."
 
 #: content-none.php:45
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr ""
-"Parece que no podemos encontrar lo que estás buscando. Quizás buscar pueda "
-"ser de ayuda."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Não foi possível encontrar o que você buscava. Talvez valha a pena pesquisar."
 
 #: functions.php:159
 msgid "Featured"
-msgstr ""
+msgstr "Destaque"
 
 #: functions.php:165 functions.php:407
 msgid "Hero"
@@ -75,100 +71,90 @@ msgstr "Hero"
 
 #: functions.php:246
 msgid "Primary Menu"
-msgstr "Menú principal"
+msgstr "Menu principal"
 
 #: functions.php:247
 msgid "Social Menu"
-msgstr "Menú social"
+msgstr "Menu Social"
 
 #: functions.php:248
 msgid "Footer Menu"
-msgstr "Menú de pie de página"
+msgstr "Menu do rodapé"
 
 #: functions.php:367
 msgid "Sidebar"
-msgstr "Barra lateral"
+msgstr "Barra Lateral"
 
 #: functions.php:368
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr ""
-"La barra lateral principal aparece a un lado del contenido de cada página, "
-"publicación, archivo y plantilla de búsqueda."
+"A principal barra lateral aparece ao lado do conteúdo de cada modelo de "
+"página, publicação, arquivo e busca."
 
 #: functions.php:375
 msgid "Secondary Sidebar"
-msgstr "Barra lateral secundaria"
+msgstr "Barra Lateral Secundária"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
-"La barra lateral secundaria solo aparece cuando seleccionas un diseño de "
-"tres columnas."
+"A barra lateral secundária aparece apenas quando você seleciona o layout de 3 colunas."
 
 #: functions.php:383
 msgid "Footer 1"
-msgstr "Pie de página 1"
+msgstr "Rodapé 1"
 
 #: functions.php:384
 msgid "This sidebar is the first column of the footer widget area."
-msgstr ""
-"Esta barra lateral es la primera columna del área de widgets del pie de "
-"página."
+msgstr "A barra lateral é a primeira coluna da área de widgets do rodapé."
 
 #: functions.php:391
 msgid "Footer 2"
-msgstr "Pie de página 2"
+msgstr "Rodapé 2"
 
 #: functions.php:392
 msgid "This sidebar is the second column of the footer widget area."
-msgstr ""
-"Esta barra lateral es la segunda columna del área de widgets del pie de "
-"página."
+msgstr "A barra lateral é a segunda coluna da área de widgets do rodapé."
 
 #: functions.php:399
 msgid "Footer 3"
-msgstr "Pie de página 3"
+msgstr "Rodapé 3"
 
 #: functions.php:400
 msgid "This sidebar is the third column of the footer widget area."
-msgstr ""
-"Esta barra lateral es la tercera columna del área de widgets del pie de "
-"página."
+msgstr "A barra lateral é a terceira coluna da área de widgets do rodapé."
 
 #: functions.php:408
 msgid "Hero widgets appear over the header image on the front page."
-msgstr ""
-"Los widgets Hero aparecen sobre la imagen del encabezado en la página "
-"frontal."
+msgstr "Widgets principais são exibidos sobre a imagem do cabeçalho, na frente da página."
 
 #: header.php:42
 msgid "Skip to content"
-msgstr "Saltar al contenido"
+msgstr "Ir direto para o conteúdo"
 
 #: inc/compat/wordpress.php:47
-#, fuzzy
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer requiere al menos la versión de WordPress %s. Estás ejecutando la "
-"versión %s. Actualiza e inténtalo de nuevo."
+"O Primer requer pelo menos a versão %1$s do WordPress. Sua versão é a %2$s. "
+"Faça o upgrade e tente novamente."
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
-msgstr "Texto del título del sitio"
+msgstr "Texto do título do site"
 
 #: inc/customizer/colors.php:63
 msgid "Tagline Text"
-msgstr "Texto del subtítulo"
+msgstr "Texto da tagline"
 
 #: inc/customizer/colors.php:74
 msgid "Hero Text"
-msgstr "Texto de Hero"
+msgstr "Texto principal"
 
 #: inc/customizer/colors.php:105 inc/customizer/colors.php:323
 msgid "Text"
@@ -176,43 +162,39 @@ msgstr "Texto"
 
 #: inc/customizer/colors.php:127
 msgid "Heading Text"
-msgstr "Texto de encabezado"
+msgstr "Texto do título"
 
 #: inc/customizer/colors.php:128
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Títulos de la publicación, títulos de widgets, etiquetas de formularios, "
-"encabezados de tablas y botones."
+msgstr "Títulos da publicação, títulos de widgets, legendas de formulários, cabeçalhos de tabelas e botões."
 
 #: inc/customizer/colors.php:149
 msgid "Primary Text"
-msgstr "Texto primario"
+msgstr "Texto principal"
 
 #: inc/customizer/colors.php:150
 msgid "Paragraphs, lists, menu links, quotes and tables."
-msgstr "Párrafos, listas, enlaces de menús, citas y tablas."
+msgstr "Parágrafos, listas, links de menus, cotações e tabelas."
 
 #: inc/customizer/colors.php:195
 msgid "Secondary Text"
-msgstr "Texto secundario"
+msgstr "Texto secundário"
 
 #: inc/customizer/colors.php:196
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
-"Pies de autor de la publicación, recuentos de comentarios, pies de página de "
-"la publicación y pies de página de citas."
+msgstr "Assinaturas da publicação, número de comentários, rodapés da publicação e rodapés da cotação."
 
 #: inc/customizer/colors.php:210
 msgid "Widget Heading Text"
-msgstr "Texto de encabezado del widget"
+msgstr "Texto do título do widget"
 
 #: inc/customizer/colors.php:227
 msgid "Widget Text"
-msgstr "Texto del widget"
+msgstr "Texto do widget"
 
 #: inc/customizer/colors.php:239
 msgid "Menu Text"
-msgstr "Texto del menú"
+msgstr "Texto do menu"
 
 #: inc/customizer/colors.php:261
 msgid "Copyright Text"
@@ -220,102 +202,99 @@ msgstr "Texto de copyright"
 
 #: inc/customizer/colors.php:275
 msgid "Link Text"
-msgstr "Texto del vínculo"
+msgstr "Texto do link"
 
 #: inc/customizer/colors.php:297 inc/customizer/colors.php:379
 msgid "Background"
-msgstr "Fondo"
+msgstr "Fundo"
 
 #: inc/customizer/colors.php:340
 msgid "Page Background"
-msgstr "Fondo de la página"
+msgstr "Plano de fundo da página"
 
 #: inc/customizer/colors.php:350
 msgid "Content Background"
-msgstr "Fondo del contenido"
+msgstr "Plano de fundo do conteúdo"
 
 #: inc/customizer/colors.php:360
 msgid "Hero Background"
-msgstr "Fondo de Hero"
+msgstr "Plano de fundo principal"
 
 #: inc/customizer/colors.php:389
 msgid "Widgets Background"
-msgstr "Fondo de widgets"
+msgstr "Plano de fundo dos widgets"
 
 #: inc/customizer/colors.php:400
 msgid "Widget Content Background"
-msgstr "Fondo de contenidos de widgets"
+msgstr "Plano de fundo do conteúdo do widget"
 
 #: inc/customizer/colors.php:411
 msgid "Footer Background"
-msgstr "Fondo de pie de página"
+msgstr "Plano de fundo do rodapé"
 
 #: inc/customizer/colors.php:449 inc/customizer/layouts.php:302
 msgid "Custom"
-msgstr "Personalizado"
+msgstr "Customizado"
 
 #: inc/customizer/colors.php:466 inc/customizer/layouts.php:293
 msgid "Default"
-msgstr "Predeterminado"
+msgstr "Padrão"
 
 #: inc/customizer/colors.php:706
 msgid "Colors"
-msgstr "Colores"
+msgstr "Cores"
 
 #: inc/customizer/colors.php:715
 msgid "Color Schemes"
-msgstr "Esquemas de colores"
+msgstr "Esquemas de cores"
 
 #: inc/customizer/colors.php:723
 msgid "Header"
-msgstr "Encabezado"
+msgstr "Cabeçalho"
 
 #: inc/customizer/colors.php:731
 msgid "Menu"
-msgstr "Menú"
+msgstr "Menu"
 
 #: inc/customizer/colors.php:739
 msgid "Buttons"
-msgstr "Botones"
+msgstr "Botões"
 
 #: inc/customizer/colors.php:747
 msgid "Content"
-msgstr "Contenido"
+msgstr "Conteúdo"
 
 #: inc/customizer/colors.php:755
 msgid "Footer"
-msgstr "Pie de página"
+msgstr "Rodapé"
 
 #: inc/customizer/colors.php:965
 msgid "Base Color Scheme"
-msgstr "Esquema de colores de fondo"
+msgstr "Paleta de cores básicas"
 
 #: inc/customizer/colors.php:1274
 msgid "Hero Background Overlay"
-msgstr "Superposición del fondo de Hero"
+msgstr "Sobreposição do plano de fundo principal"
 
 #: inc/customizer/colors.php:1275
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Controla la transparencia de la superposición del color al utilizar una "
-"imagen personalizada del encabezado."
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Controle a transparência da sobreposição de cores usando uma imagem de cabeçalho personalizada."
 
 #: inc/customizer/fonts.php:87
 msgid "Site Title"
-msgstr "Título del sitio"
+msgstr "Título do site"
 
 #: inc/customizer/fonts.php:88
 msgid "Site title text in the header."
-msgstr "Texto del título del sitio en el encabezado."
+msgstr "Texto do título do site no cabeçalho."
 
 #: inc/customizer/fonts.php:97
 msgid "Navigation"
-msgstr "Navegación"
+msgstr "Navegação"
 
 #: inc/customizer/fonts.php:98
 msgid "Primary menu links and button links."
-msgstr "Enlaces al menú primario y enlaces a los botones."
+msgstr "Links de menu e botão principais."
 
 #: inc/customizer/fonts.php:108
 msgid "Headings"
@@ -323,106 +302,95 @@ msgstr "Títulos"
 
 #: inc/customizer/fonts.php:109
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr ""
-"Títulos de la publicación, títulos de widgets, etiquetas de formularios y "
-"encabezados de tablas."
+msgstr "Títulos da publicação, títulos de widgets, legendas de formulários e cabeçalhos de tabelas."
 
 #: inc/customizer/fonts.php:124
 msgid "Primary"
-msgstr "Primario"
+msgstr "Principal"
 
 #: inc/customizer/fonts.php:125
 msgid "Paragraphs, lists, links, quotes, and tables."
-msgstr "Párrafos, listas, enlaces, citas y tablas."
+msgstr "Parágrafos, listas, links, cotações e tabelas."
 
 #: inc/customizer/fonts.php:139
 msgid "Secondary"
-msgstr "Secundario"
+msgstr "Secundário"
 
 #: inc/customizer/fonts.php:140
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Pies de autor, recuentos de comentarios, enlaces de respuestas, pies de "
-"página de la publicación y pies de página de citas."
+msgstr "Assinaturas, número de comentários, links de resposta, rodapés da publicação e rodapés da cotação."
 
 #: inc/customizer/fonts.php:188
 msgid "Fonts"
-msgstr "Fuentes"
+msgstr "Fontes"
 
 #: inc/customizer/layouts.php:53
 msgid "One Column: Wide"
-msgstr "Una columna: Ancha"
+msgstr "Uma coluna: Larga"
 
 #: inc/customizer/layouts.php:54
 msgid "One Column: Narrow"
-msgstr "Una columna: Angosta"
+msgstr "Uma coluna: Estreita"
 
 #: inc/customizer/layouts.php:55 inc/customizer/layouts.php:144
 msgid "Two Columns: Content | Sidebar"
-msgstr "Dos columnas: Contenido | Barra lateral"
+msgstr "Duas colunas: Conteúdo | Barra lateral"
 
 #: inc/customizer/layouts.php:56 inc/customizer/layouts.php:143
 msgid "Two Columns: Sidebar | Content"
-msgstr "Dos columnas: Barra lateral | Contenido"
+msgstr "Duas colunas: Barra Lateral | Conteúdo"
 
 #: inc/customizer/layouts.php:57 inc/customizer/layouts.php:146
 msgid "Three Columns: Content | Sidebar | Sidebar"
-msgstr "Tres columnas: Contenido | Barra lateral | Barra lateral"
+msgstr "Três colunas: Conteúdo | Barra lateral | Barra lateral"
 
 #: inc/customizer/layouts.php:58
 msgid "Three Columns: Sidebar | Content | Sidebar"
-msgstr "Tres columnas: Barra lateral | Contenido | Barra lateral"
+msgstr "Três colunas: Barra Lateral | Conteúdo | Barra Lateral"
 
 #: inc/customizer/layouts.php:59 inc/customizer/layouts.php:145
 msgid "Three Columns: Sidebar | Sidebar | Content"
-msgstr "Tres columnas: Barra lateral | Barra lateral | Contenido"
+msgstr "Três colunas: Barra Lateral | Barra Lateral | Conteúdo"
 
 #: inc/customizer/layouts.php:256 inc/customizer/layouts.php:434
 msgid "Layout"
-msgstr "Disposición"
+msgstr "Layout"
 
 #: inc/customizer/layouts.php:460
 msgid "Page Width"
-msgstr "Ancho de la página"
+msgstr "Largura da página"
 
 #: inc/customizer/layouts.php:461
 msgid "Display your site differently on larger screens."
-msgstr "Muestra tu sitio de manera diferente en pantallas más grandes."
+msgstr "Exiba seu site de maneira diferente em telas maiores."
 
-#: inc/customizer/site-identity.php:72
-msgid "Display theme author credit"
-msgstr ""
-
-#: inc/customizer.php:176
+#: inc/customizer.php:169
 msgid "Use featured image"
-msgstr "Usar imagen destacada"
+msgstr "Use imagens em destaque"
 
-#: inc/customizer.php:177
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr ""
-"Permite que la imagen destacada de la publicación actual anule la imagen de "
-"Hero."
+#: inc/customizer.php:170
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "Permita que a imagem em destaque da publicação atual sobreponha a imagem principal."
 
 #: inc/helpers.php:52
 msgid "404 Page Not Found"
-msgstr "404 No se encontró la página"
+msgstr "404 Página não encontrada"
 
 #: inc/template-tags.php:133
 msgid "Posts navigation"
-msgstr "Navegación en publicaciones"
+msgstr "Explorar publicações"
 
 #: inc/template-tags.php:139
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> Publicaciones antiguas"
+msgstr "<span class=\"meta-nav\">&larr;</span> Publicações mais antigas"
 
 #: inc/template-tags.php:145
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Publicaciones más nuevas <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Publicações mais recentes <span class=\"meta-nav\">&rarr;</span>"
 
 #: inc/template-tags.php:178
 msgid "Post navigation"
-msgstr "Navegación en publicaciones"
+msgstr "Explorar publicações"
 
 #: inc/template-tags.php:279
 msgid "Blog"
@@ -437,26 +405,25 @@ msgstr "Páginas:"
 #: templates/parts/loop/post-footer.php:14
 #: templates/parts/loop/post-search-footer.php:46
 msgid "Edit"
-msgstr "Modificar"
+msgstr "Editar"
 
 #: templates/parts/loop/post-content.php:14
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Leer más <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Saiba mais <span class=\"meta-nav\">&rarr;</span>"
 
 #: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgid "Leave a comment"
-msgstr "Deja un comentario"
+msgstr "Deixe um comentário"
 
 #: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgid "1 Comment"
-msgstr "1 comentario"
+msgstr "1 comentário"
 
 #. Theme Name of the plugin/theme
-#, fuzzy
 msgid "Primer"
-msgstr "Primario"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -467,8 +434,8 @@ msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer es un tema potente que le brinda claridad a tu contenido con un "
-"diseño innovador."
+"Primer é um tema incrível que proporciona clareza ao seu conteúdo em um "
+"design novo."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
@@ -482,53 +449,53 @@ msgstr "https://www.godaddy.com/"
 msgctxt "1. number of comments, 2. post title"
 msgid "One thought on %2$s"
 msgid_plural "%1$d thoughts on %2$s"
-msgstr[0] "Una idea con respecto a %2$s"
-msgstr[1] "%1$d ideas con respecto a %2$s"
+msgstr[0] "Uma opinião sobre %2$s"
+msgstr[1] "%1$d opiniões sobre %2$s"
 
 #: comments.php:56
 msgctxt "left arrow (LTR) / right arrow (RTL)"
 msgid "%s Older Comments"
-msgstr "%s Comentarios antiguos"
+msgstr "%s comentários mais antigos"
 
 #: comments.php:58
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Newer Comments %s"
-msgstr "Comentarios más nuevos %s"
+msgstr "Comentários mais recentes %s"
 
 #: templates/parts/loop/post-excerpt.php:14
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Continue Reading %s"
-msgstr "Continuar leyendo %s"
+msgstr "Continuar leitura %s"
 
 #: content-none.php:27
 msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
-msgstr "¿Listo para publicar tu primera entrada? %s."
+msgstr "Você está pronto para fazer sua primeira publicação? %s."
 
 #: inc/customizer/colors.php:476
 msgctxt "color scheme name"
 msgid "Blush"
-msgstr "Rubor"
+msgstr "Vermelho"
 
 #: inc/customizer/colors.php:480
 msgctxt "color scheme name"
 msgid "Bronze"
-msgstr "Bronce"
+msgstr "Bronze\n"
 
 #: inc/customizer/colors.php:484
 msgctxt "color scheme name"
 msgid "Canary"
-msgstr "Canario"
+msgstr "Amarelo-vivo"
 
 #: inc/customizer/colors.php:488
 msgctxt "color scheme name"
 msgid "Cool"
-msgstr "Fantástico"
+msgstr "Fresco"
 
 #: inc/customizer/colors.php:492
 msgctxt "color scheme name"
 msgid "Dark"
-msgstr "Ocuro"
+msgstr "Escuro"
 
 #: inc/customizer/colors.php:496
 msgctxt "color scheme name"
@@ -538,7 +505,7 @@ msgstr "Iguana"
 #: inc/customizer/colors.php:500
 msgctxt "color scheme name"
 msgid "Muted"
-msgstr "Tenue"
+msgstr "Suave"
 
 #: inc/customizer/colors.php:504
 msgctxt "color scheme name"
@@ -553,7 +520,7 @@ msgstr "Rosa"
 #: inc/customizer/colors.php:512
 msgctxt "color scheme name"
 msgid "Tangerine"
-msgstr "Mandarina"
+msgstr "Laranja"
 
 #: inc/customizer/colors.php:516
 msgctxt "color scheme name"
@@ -563,22 +530,22 @@ msgstr "Turquoise"
 #: inc/customizer/fonts.php:213
 msgctxt "font name"
 msgid "%s (Default)"
-msgstr "%s (Predeterminado)"
+msgstr "%s (Padrão)"
 
 #: inc/customizer/layouts.php:97
 msgctxt "fixed-width page layout"
 msgid "Fixed"
-msgstr "Fija"
+msgstr "Fixa"
 
 #: inc/customizer/layouts.php:98
 msgctxt "fluid-width page layout"
 msgid "Fluid"
-msgstr "Fluido"
+msgstr "Fluida"
 
 #: inc/helpers.php:41
 msgctxt "search term"
 msgid "Search Results for: %s"
-msgstr "Resultados de la búsqueda para: %s"
+msgstr "Pesquisar resultados por:  %s"
 
 #: inc/hooks.php:384
 msgctxt "page number"
@@ -591,10 +558,9 @@ msgid "Copyright %1$s %2$d %3$s"
 msgstr "Copyright %1$s %2$d %3$s"
 
 #: templates/parts/credit.php:34
-#, fuzzy
 msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s WordPress theme by %2$s"
-msgstr "%1$s tema por %2$s"
+msgid "%1$s theme by %2$s"
+msgstr "%1$s tema da %2$s"
 
 #: templates/parts/loop/post-footer.php:20
 #: templates/parts/loop/post-footer.php:32
@@ -608,26 +574,16 @@ msgstr ", "
 #: templates/parts/loop/post-search-footer.php:20
 msgctxt "category list"
 msgid "Posted in: %s"
-msgstr "Publicado en: %s"
+msgstr "Publicado em %s"
 
 #: templates/parts/loop/post-footer.php:38
 #: templates/parts/loop/post-search-footer.php:32
 msgctxt "tag list"
 msgid "Filed under: %s"
-msgstr "Presentado bajo: %s"
+msgstr "Arquivado em: %s"
 
 #: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgctxt "number of comments"
 msgid "% Comments"
-msgstr "% comentarios"
-
-#~ msgctxt "link to the Customizer"
-#~ msgid "The site-wide Default layout setting is located in the %s."
-#~ msgstr ""
-#~ "La configuración de la disposición predeterminada a lo largo del sitio se "
-#~ "encuentra en el %s."
-
-#~ msgctxt "title of a component found in WordPress"
-#~ msgid "Customizer"
-#~ msgstr "Customizer"
+msgstr "% comentários"
