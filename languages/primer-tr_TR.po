@@ -3,17 +3,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-10-25 19:43:08+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-01-09 23:11:17+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 
 #: 404.php:22
 msgid "Oops! That page can't be found."
@@ -21,8 +22,7 @@ msgstr "Üzgünüz! Bu sayfa bulunamadı."
 
 #: 404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr "Bu konumda bulunan bir şey yok. Lütfen aşağıdan aramayı deneyin:"
 
 #: comments.php:54 comments.php:79
@@ -58,8 +58,10 @@ msgstr ""
 "anahtar kelimeler ile tekrar deneyin."
 
 #: content-none.php:45
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr "Görünüşe göre aradığınızı bulamadık. Belki arama yapmanız yardımcı olabilir."
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"Görünüşe göre aradığınızı bulamadık. Belki arama yapmanız yardımcı olabilir."
 
 #: functions.php:159
 msgid "Featured"
@@ -99,8 +101,8 @@ msgstr "İkincil Kenar Çubuğu"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr ""
 "İkincil Kenar Çubuğu, sadece üç sütunlu sayfa düzenini seçtiğinizde görünür."
 
@@ -130,7 +132,8 @@ msgstr "Bu kenar çubuğu, altbilgi pencere öğesi alanının üçüncü sütun
 
 #: functions.php:408
 msgid "Hero widgets appear over the header image on the front page."
-msgstr "Ana site pencere öğeleri, ön sayfadaki üstbaşlık görselinin üzerinde görünür."
+msgstr ""
+"Ana site pencere öğeleri, ön sayfadaki üstbaşlık görselinin üzerinde görünür."
 
 #: header.php:42
 msgid "Skip to content"
@@ -166,7 +169,8 @@ msgstr "Üstbilgi Metni"
 
 #: inc/customizer/colors.php:128
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "Gönderi başlıkları, pencere öğesi başlıkları, form etiketleri ve düğmeler."
+msgstr ""
+"Gönderi başlıkları, pencere öğesi başlıkları, form etiketleri ve düğmeler."
 
 #: inc/customizer/colors.php:149
 msgid "Primary Text"
@@ -182,7 +186,9 @@ msgstr "İkincil Metin"
 
 #: inc/customizer/colors.php:196
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr "Gönderi yazarlarının isimleri, yorum sayıları, gönderi ve alıntı altbilgileri."
+msgstr ""
+"Gönderi yazarlarının isimleri, yorum sayıları, gönderi ve alıntı "
+"altbilgileri."
 
 #: inc/customizer/colors.php:210
 msgid "Widget Heading Text"
@@ -277,8 +283,11 @@ msgid "Hero Background Overlay"
 msgstr "Ana Site Arka Plan Katmanı"
 
 #: inc/customizer/colors.php:1275
-msgid "Control the color overlay transparency when using a custom Header Image."
-msgstr "Özelleştirilmiş bir Üstbilgi Görseli kullanırken renk katmanının saydamlığını kontrol edin."
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+"Özelleştirilmiş bir Üstbilgi Görseli kullanırken renk katmanının "
+"saydamlığını kontrol edin."
 
 #: inc/customizer/fonts.php:87
 msgid "Site Title"
@@ -302,7 +311,9 @@ msgstr "Üstbilgiler"
 
 #: inc/customizer/fonts.php:109
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr "Gönderi başlıkları, pencere öğesi başlıkları, form etiketleri ve tablo üstbilgileri."
+msgstr ""
+"Gönderi başlıkları, pencere öğesi başlıkları, form etiketleri ve tablo "
+"üstbilgileri."
 
 #: inc/customizer/fonts.php:124
 msgid "Primary"
@@ -364,13 +375,20 @@ msgstr "Sayfa Genişliği"
 msgid "Display your site differently on larger screens."
 msgstr "Sitenizi daha geniş ekranlarda daha farklı gösterin."
 
-#: inc/customizer.php:169
+#: inc/customizer/site-identity.php:72
+msgid "Display theme author credit"
+msgstr ""
+
+#: inc/customizer.php:176
 msgid "Use featured image"
 msgstr "Öne çıkan görsel kullanın"
 
-#: inc/customizer.php:170
-msgid "Allow the featured image on the current post to override the hero image."
-msgstr "Geçerli gönderideki öne çıkan görselin ana site görselinin üzerine geçmesine izin verin."
+#: inc/customizer.php:177
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+"Geçerli gönderideki öne çıkan görselin ana site görselinin üzerine geçmesine "
+"izin verin."
 
 #: inc/helpers.php:52
 msgid "404 Page Not Found"
@@ -434,8 +452,8 @@ msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer, yepyeni bir tasarımla içeriklerinize net bir görünüm kazandıran güçlü "
-"bir temadır."
+"Primer, yepyeni bir tasarımla içeriklerinize net bir görünüm kazandıran "
+"güçlü bir temadır."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
@@ -558,8 +576,9 @@ msgid "Copyright %1$s %2$d %3$s"
 msgstr "Telif Hakkı %1$s %2$d %3$s"
 
 #: templates/parts/credit.php:34
+#, fuzzy
 msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s theme by %2$s"
+msgid "%1$s WordPress theme by %2$s"
 msgstr "%2$s tarafından %1$s teması "
 
 #: templates/parts/loop/post-footer.php:20

@@ -3,17 +3,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-10-25 19:43:08+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-01-09 23:11:17+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 
 #: 404.php:22
 msgid "Oops! That page can't be found."
@@ -21,10 +22,8 @@ msgstr "‌‌अरेरे! ते पृष्ठ आढळू शकत न
 
 #: 404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
-msgstr ""
-"या स्थानावर काहीही सापडले नाही असे दिसते. कृपया खाली शोधण्याचा प्रयत्न कराः"
+"It looks like nothing was found at this location. Please try searching below:"
+msgstr "या स्थानावर काहीही सापडले नाही असे दिसते. कृपया खाली शोधण्याचा प्रयत्न कराः"
 
 #: comments.php:54 comments.php:79
 msgid "Comment navigation"
@@ -55,11 +54,12 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"क्षमस्व, परंतु आपल्या शोध संज्ञांशी काहीही जुळले नाही. कृपया काही भिन्न "
-"कीवर्डसह पुन्हा प्रयत्न करा."
+"क्षमस्व, परंतु आपल्या शोध संज्ञांशी काहीही जुळले नाही. कृपया काही भिन्न कीवर्डसह पुन्हा "
+"प्रयत्न करा."
 
 #: content-none.php:45
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "आपण शोधत असलेले आम्ही शोधू शकत नाही असे दिसते. कदाचित शोधण्याने मदत होऊ शकते."
 
 #: functions.php:159
@@ -91,8 +91,8 @@ msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr ""
-"प्रत्येक पृष्‍ठ, पोस्ट, संग्रहण आणि शोध टेम्पलेटच्या सामग्रीच्या बाजूस "
-"प्राथमिक साइडबार दिसतो. "
+"प्रत्येक पृष्‍ठ, पोस्ट, संग्रहण आणि शोध टेम्पलेटच्या सामग्रीच्या बाजूस प्राथमिक साइडबार "
+"दिसतो. "
 
 #: functions.php:375
 msgid "Secondary Sidebar"
@@ -100,8 +100,8 @@ msgstr "दुय्यम साइडबार"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr "आपण एक तृतीय-स्तंभ लेआउट निवडता केवळ तेव्हाच दुय्यम साइडबार दिसेल. "
 
 #: functions.php:383
@@ -141,8 +141,8 @@ msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer ला किमान WordPress आवृत्तीची आवश्यकता आहे %1$s. आपण %2$s आवृत्ती रन "
-"करीत आहात. कृपया श्रेणीसुधारित करा आणि पुन्हा प्रयत्न करा."
+"Primer ला किमान WordPress आवृत्तीची आवश्यकता आहे %1$s. आपण %2$s आवृत्ती रन करीत "
+"आहात. कृपया श्रेणीसुधारित करा आणि पुन्हा प्रयत्न करा."
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -277,7 +277,8 @@ msgid "Hero Background Overlay"
 msgstr "हिरो पार्श्वभूमी आच्छादन"
 
 #: inc/customizer/colors.php:1275
-msgid "Control the color overlay transparency when using a custom Header Image."
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
 msgstr "सानुकूल शीर्षलेख प्रतिमा वापरताना रंग आच्छादन पारदर्शकता नियंत्रित करा."
 
 #: inc/customizer/fonts.php:87
@@ -364,13 +365,19 @@ msgstr "पृष्ठ रुंदी"
 msgid "Display your site differently on larger screens."
 msgstr "मोठ्या स्क्रिनवर आपली साइट वेगळ्या पद्धतीने प्रदर्शित करा."
 
-#: inc/customizer.php:169
+#: inc/customizer/site-identity.php:72
+msgid "Display theme author credit"
+msgstr ""
+
+#: inc/customizer.php:176
 msgid "Use featured image"
 msgstr "वैशिष्ट्यीकृत प्रतिमा वापरा"
 
-#: inc/customizer.php:170
-msgid "Allow the featured image on the current post to override the hero image."
-msgstr "हिरो प्रतिमा ओव्हरराइड करण्यासाठी वैशिष्ट्यीकृत प्रतिमेला सद्य पोस्ट वर परवानगी द्या."
+#: inc/customizer.php:177
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+"हिरो प्रतिमा ओव्हरराइड करण्यासाठी वैशिष्ट्यीकृत प्रतिमेला सद्य पोस्ट वर परवानगी द्या."
 
 #: inc/helpers.php:52
 msgid "404 Page Not Found"
@@ -557,8 +564,9 @@ msgid "Copyright %1$s %2$d %3$s"
 msgstr "कॉपीराइट %1$s%2$d %3$s."
 
 #: templates/parts/credit.php:34
+#, fuzzy
 msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s theme by %2$s"
+msgid "%1$s WordPress theme by %2$s"
 msgstr "%2$s द्वारे %1$s थीम"
 
 #: templates/parts/loop/post-footer.php:20

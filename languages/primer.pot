@@ -1,13 +1,13 @@
-# Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
+# Copyright (c) 2017 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-10-25 19:43:08+00:00\n"
+"POT-Creation-Date: 2017-01-09 23:11:28+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
@@ -357,11 +357,15 @@ msgstr ""
 msgid "Display your site differently on larger screens."
 msgstr ""
 
-#: inc/customizer.php:169
+#: inc/customizer/site-identity.php:72
+msgid "Display theme author credit"
+msgstr ""
+
+#: inc/customizer.php:176
 msgid "Use featured image"
 msgstr ""
 
-#: inc/customizer.php:170
+#: inc/customizer.php:177
 msgid "Allow the featured image on the current post to override the hero image."
 msgstr ""
 
@@ -550,7 +554,7 @@ msgstr ""
 
 #: templates/parts/credit.php:34
 msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s theme by %2$s"
+msgid "%1$s WordPress theme by %2$s"
 msgstr ""
 
 #: templates/parts/loop/post-footer.php:20

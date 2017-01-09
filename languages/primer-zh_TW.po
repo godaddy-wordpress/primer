@@ -3,17 +3,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-10-25 19:43:08+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-01-09 23:11:17+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 
 #: 404.php:22
 msgid "Oops! That page can't be found."
@@ -21,8 +22,7 @@ msgstr "糟糕了！找不到該頁面。"
 
 #: 404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr "在此位置中找不到。請嘗試搜尋下列項目："
 
 #: comments.php:54 comments.php:79
@@ -56,7 +56,8 @@ msgid ""
 msgstr "抱歉，沒有與您的搜尋相符的項目。 請用其他關鍵字再試一次。"
 
 #: content-none.php:45
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "我們找不到您要尋找的項目。請試試搜尋功能。"
 
 #: functions.php:159
@@ -95,8 +96,8 @@ msgstr "次要側邊欄"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr "次要側邊欄只會在您選取三欄版面配置時才會出現。"
 
 #: functions.php:383
@@ -135,7 +136,9 @@ msgstr "略過內容"
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
-msgstr "Primer 需要 WordPress %1$s 以上的版本。您目前使用的是 %2$s 版本。請升級並再試一次。"
+msgstr ""
+"Primer 需要 WordPress %1$s 以上的版本。您目前使用的是 %2$s 版本。請升級並再試"
+"一次。"
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -270,7 +273,8 @@ msgid "Hero Background Overlay"
 msgstr "Hero 背景重疊"
 
 #: inc/customizer/colors.php:1275
-msgid "Control the color overlay transparency when using a custom Header Image."
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
 msgstr "使用自訂標頭圖片時控制色彩重疊透明度。"
 
 #: inc/customizer/fonts.php:87
@@ -357,12 +361,17 @@ msgstr "網頁寬度"
 msgid "Display your site differently on larger screens."
 msgstr "在較大的螢幕上以不同方式顯示網站。"
 
-#: inc/customizer.php:169
+#: inc/customizer/site-identity.php:72
+msgid "Display theme author credit"
+msgstr ""
+
+#: inc/customizer.php:176
 msgid "Use featured image"
 msgstr "使用特色圖片"
 
-#: inc/customizer.php:170
-msgid "Allow the featured image on the current post to override the hero image."
+#: inc/customizer.php:177
+msgid ""
+"Allow the featured image on the current post to override the hero image."
 msgstr "允許特色圖片出現在目前貼文中並取代 Hero 圖片。"
 
 #: inc/helpers.php:52
@@ -549,8 +558,9 @@ msgid "Copyright %1$s %2$d %3$s"
 msgstr "Copyright %1$s %2$d %3$s"
 
 #: templates/parts/credit.php:34
+#, fuzzy
 msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s theme by %2$s"
+msgid "%1$s WordPress theme by %2$s"
 msgstr "%1$s 主題，作者：%2$s"
 
 #: templates/parts/loop/post-footer.php:20

@@ -3,17 +3,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-10-25 19:43:08+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-01-09 23:11:17+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 
 #: 404.php:22
 msgid "Oops! That page can't be found."
@@ -21,8 +22,7 @@ msgstr "ขออภัย! ไม่สามารถค้นหาหน้�
 
 #: 404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr "ดูเหมือนว่าจะไม่พบสิ่งใดในตำแหน่งที่ตั้งนี้ โปรดลองค้นหาตามด้านล่าง:"
 
 #: comments.php:54 comments.php:79
@@ -53,11 +53,11 @@ msgstr "เริ่มต้นที่นี่"
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr ""
-"ขออภัย แต่ไม่มีสิ่งใดตรงกับเงื่อนไขการค้นหาของคุณ โปรดลองอีกครั้งด้วยคำค้นหาอื่น"
+msgstr "ขออภัย แต่ไม่มีสิ่งใดตรงกับเงื่อนไขการค้นหาของคุณ โปรดลองอีกครั้งด้วยคำค้นหาอื่น"
 
 #: content-none.php:45
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "ดูเหมือนเราไม่อาจค้นหาสิ่งที่คุณกำลังมองหาอยู่ได้ บางทีการค้นหาอาจช่วยได้"
 
 #: functions.php:159
@@ -88,8 +88,7 @@ msgstr "แถบข้าง"
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
-msgstr ""
-"แถบข้างหลังปรากฏคู่กับเนื้อหาในทุกๆ หน้า โพสต์ ที่เก็บถาวรและเทมเพลตการค้นหา"
+msgstr "แถบข้างหลังปรากฏคู่กับเนื้อหาในทุกๆ หน้า โพสต์ ที่เก็บถาวรและเทมเพลตการค้นหา"
 
 #: functions.php:375
 msgid "Secondary Sidebar"
@@ -97,8 +96,8 @@ msgstr "แถบข้างรอง"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr "แถบข้างรองจะปรากฏขึ้นเมื่อคุณเลือกเค้าโครงแบบสามคอลัมน์เท่านั้น"
 
 #: functions.php:383
@@ -138,7 +137,8 @@ msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer จำเป็นต้องมีเวอร์ชัน WordPress ขั้นต้น%1$s คุณกำลังใช้งานเวอร์ชัน%2$s โปรดอัปเกรดและลองอีกครั้ง"
+"Primer จำเป็นต้องมีเวอร์ชัน WordPress ขั้นต้น%1$s คุณกำลังใช้งานเวอร์ชัน%2$s "
+"โปรดอัปเกรดและลองอีกครั้ง"
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -273,7 +273,8 @@ msgid "Hero Background Overlay"
 msgstr "ซ้อนทับพื้นหลังฮีโร่"
 
 #: inc/customizer/colors.php:1275
-msgid "Control the color overlay transparency when using a custom Header Image."
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
 msgstr "ควบคุมความโปร่งแสงการทับซ้อนสีเมื่อใช้ภาพส่วนหัวที่กำหนดเอง"
 
 #: inc/customizer/fonts.php:87
@@ -360,12 +361,17 @@ msgstr "ความกว้างหน้า"
 msgid "Display your site differently on larger screens."
 msgstr "แสดงไซต์ของคุณได้อย่างแตกต่างบนหน้าจอที่ขยายใหญ่ขึ้น"
 
-#: inc/customizer.php:169
+#: inc/customizer/site-identity.php:72
+msgid "Display theme author credit"
+msgstr ""
+
+#: inc/customizer.php:176
 msgid "Use featured image"
 msgstr "ใช้รูปภาพที่น่าสนใจ"
 
-#: inc/customizer.php:170
-msgid "Allow the featured image on the current post to override the hero image."
+#: inc/customizer.php:177
+msgid ""
+"Allow the featured image on the current post to override the hero image."
 msgstr "อนุญาตให้มีรูปภาพที่น่าสนใจปรากฏบนโพสต์ปัจจุบันเพื่อแทนที่รูปภาพฮีโร่"
 
 #: inc/helpers.php:52
@@ -553,8 +559,9 @@ msgid "Copyright %1$s %2$d %3$s"
 msgstr "ลิขสิทธิ์%1$s %2$d %3$s"
 
 #: templates/parts/credit.php:34
+#, fuzzy
 msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s theme by %2$s"
+msgid "%1$s WordPress theme by %2$s"
 msgstr "%1$s ธีมโดย %2$s"
 
 #: templates/parts/loop/post-footer.php:20
