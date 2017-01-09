@@ -503,7 +503,7 @@ msgstr "Vermelho"
 #: inc/customizer/colors.php:480
 msgctxt "color scheme name"
 msgid "Bronze"
-msgstr "Bronze\n"
+msgstr "Bronze"
 
 #: inc/customizer/colors.php:484
 msgctxt "color scheme name"
