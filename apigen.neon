@@ -19,7 +19,7 @@ exclude:
 templateTheme: default
 
 # template config location
-templateConfig: apigen/theme-woocommerce/config.neon
+templateConfig: apigen/theme-godaddy/config.neon
 
 # list of scanned file extensions (e.g. php5, phpt...)
 extensions: [php]
