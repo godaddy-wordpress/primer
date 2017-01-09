@@ -29,6 +29,9 @@ module.exports = function( grunt ) {
 		clean: {
 			mo: {
 				src: [ 'languages/' + pkg.name + '-*.mo' ]
+			},
+			apigen: {
+				src: [ 'primer-docs' ]
 			}
 		},
 
@@ -233,7 +236,18 @@ module.exports = function( grunt ) {
 					to: '$1Stable tag:$2$3<%= pkg.version %>$4'
 				} ]
 			}
-		}
+		},
+
+
+		shell: {
+			apigen: {
+				command: [
+					'apigen generate -q',
+					'cd apigen',
+					'php hook-docs.php'
+				].join( '&&' )
+			}
+		},
 
 	});
 
@@ -244,5 +258,7 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'update-pot', [ 'makepot' ] );
 	grunt.registerTask( 'update-mo', [ 'po2mo', 'copy:mo', 'clean:mo' ] );
 	grunt.registerTask( 'version', [ 'replace' ] );
+
+	grunt.registerTask( 'docs', [ 'clean:apigen', 'shell:apigen' ]);
 
 };
