@@ -19,15 +19,17 @@
  */
 function primer_bb_layout( $post_id, $meta_key, $meta_value ) {
 
-	if ( '_fl_builder_draft' === $meta_key ) {
+	if ( '_fl_builder_draft' !== $meta_key ) {
 
-		global $primer_customizer_layouts;
+		return;
 
-		if ( isset( $primer_customizer_layouts->layouts['one-column-wide'] ) ) {
+	}
 
-			update_post_meta( $post_id, 'primer_layout', 'one-column-wide' );
+	global $primer_customizer_layouts;
 
-		}
+	if ( isset( $primer_customizer_layouts->layouts['one-column-wide'] ) ) {
+
+		update_post_meta( $post_id, 'primer_layout', 'one-column-wide' );
 
 	}
 

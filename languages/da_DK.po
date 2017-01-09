@@ -1,9 +1,9 @@
 # Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 0.9.0\n"
+"Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-10-25 19:43:08+00:00\n"
+"POT-Creation-Date: 2017-01-09 23:11:17+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,7 +67,7 @@ msgstr ""
 
 #: functions.php:159
 msgid "Featured"
-msgstr ""
+msgstr "Udvalgte"
 
 #: functions.php:165 functions.php:407
 msgid "Hero"
@@ -142,13 +142,12 @@ msgid "Skip to content"
 msgstr "Gå til indhold"
 
 #: inc/compat/wordpress.php:47
-#, fuzzy
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer kræver mindst WordPress-version %s. Du bruger version %s. Opgradér og "
-"prøv igen."
+"Primer kræver som minimum Wordpress version %1$s. Du bruger version %2$s. "
+"Opgradér og prøv igen."
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -379,11 +378,15 @@ msgstr "Sidebredde"
 msgid "Display your site differently on larger screens."
 msgstr "Vis din site anderledes på store skærme."
 
-#: inc/customizer.php:169
+#: inc/customizer/site-identity.php:72
+msgid "Display theme author credit"
+msgstr ""
+
+#: inc/customizer.php:176
 msgid "Use featured image"
 msgstr "Brug fremhævet billede"
 
-#: inc/customizer.php:170
+#: inc/customizer.php:177
 msgid ""
 "Allow the featured image on the current post to override the hero image."
 msgstr ""
@@ -439,9 +442,8 @@ msgid "1 Comment"
 msgstr "1 kommentar"
 
 #. Theme Name of the plugin/theme
-#, fuzzy
 msgid "Primer"
-msgstr "Primær"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -576,8 +578,9 @@ msgid "Copyright %1$s %2$d %3$s"
 msgstr "Copyright %1$s %2$d %3$s"
 
 #: templates/parts/credit.php:34
+#, fuzzy
 msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s theme by %2$s"
+msgid "%1$s WordPress theme by %2$s"
 msgstr "%1$s tema udviklet af %2$s"
 
 #: templates/parts/loop/post-footer.php:20
@@ -605,11 +608,3 @@ msgstr "Arkiveret under: %s"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% kommentarer"
-
-#~ msgctxt "link to the Customizer"
-#~ msgid "The site-wide Default layout setting is located in the %s."
-#~ msgstr "Standard layoutindstilling for hele websiten kan findes i %s."
-
-#~ msgctxt "title of a component found in WordPress"
-#~ msgid "Customizer"
-#~ msgstr "Tilpasser"

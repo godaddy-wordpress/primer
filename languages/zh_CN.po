@@ -1,9 +1,9 @@
 # Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 0.9.0\n"
+"Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-10-25 19:43:08+00:00\n"
+"POT-Creation-Date: 2017-01-09 23:11:17+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,7 +62,7 @@ msgstr "看来我们不能找到您要找的东西。请尝试进行搜索。"
 
 #: functions.php:159
 msgid "Featured"
-msgstr ""
+msgstr "精选"
 
 #: functions.php:165 functions.php:407
 msgid "Hero"
@@ -133,12 +133,11 @@ msgid "Skip to content"
 msgstr "跳至内容"
 
 #: inc/compat/wordpress.php:47
-#, fuzzy
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"初级读物至少要求 WordPress 版本 %s。您正在运行版本 %s。请升级并再次尝试。"
+"Primer 要求 WordPress 至少为 %1$s 版。您正在使用 %2$s 版。请升级并再次尝试。"
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -361,11 +360,15 @@ msgstr "页面宽度"
 msgid "Display your site differently on larger screens."
 msgstr "在更大屏幕上不同地显示您的站点。"
 
-#: inc/customizer.php:169
+#: inc/customizer/site-identity.php:72
+msgid "Display theme author credit"
+msgstr ""
+
+#: inc/customizer.php:176
 msgid "Use featured image"
 msgstr "使用特色图片"
 
-#: inc/customizer.php:170
+#: inc/customizer.php:177
 msgid ""
 "Allow the featured image on the current post to override the hero image."
 msgstr "让当前帖子的特色图片覆盖英雄图片。"
@@ -420,9 +423,8 @@ msgid "1 Comment"
 msgstr "1 条评论"
 
 #. Theme Name of the plugin/theme
-#, fuzzy
 msgid "Primer"
-msgstr "主"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -555,8 +557,9 @@ msgid "Copyright %1$s %2$d %3$s"
 msgstr "版权 %1$s %2$d %3$s"
 
 #: templates/parts/credit.php:34
+#, fuzzy
 msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s theme by %2$s"
+msgid "%1$s WordPress theme by %2$s"
 msgstr "通过 %2$s 确定主题 %1$s"
 
 #: templates/parts/loop/post-footer.php:20
@@ -584,11 +587,3 @@ msgstr "归档位置： %s"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% 评论"
-
-#~ msgctxt "link to the Customizer"
-#~ msgid "The site-wide Default layout setting is located in the %s."
-#~ msgstr "网络范围默认布局设置位于 %s 内。"
-
-#~ msgctxt "title of a component found in WordPress"
-#~ msgid "Customizer"
-#~ msgstr "自定义器"

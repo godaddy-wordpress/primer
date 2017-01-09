@@ -1,9 +1,9 @@
 # Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 0.9.0\n"
+"Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2016-10-25 19:43:08+00:00\n"
+"POT-Creation-Date: 2017-01-09 23:11:17+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,7 +66,7 @@ msgstr ""
 
 #: functions.php:159
 msgid "Featured"
-msgstr ""
+msgstr "Рекомендуемый"
 
 #: functions.php:165 functions.php:407
 msgid "Hero"
@@ -146,13 +146,12 @@ msgid "Skip to content"
 msgstr "Перейти к контенту"
 
 #: inc/compat/wordpress.php:47
-#, fuzzy
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Для учебника необходима версия WordPress минимум %s. У вас версия %s. "
-"Обновите и повторите попытку."
+"Для использования Primer требуется версия WordPress не ниже %1$s. Вы "
+"используете версию %2$s. Выполните обновление и повторите попытку."
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -380,11 +379,15 @@ msgstr "Ширина страницы"
 msgid "Display your site differently on larger screens."
 msgstr "Отображайте свой сайт по-другому на больших экранах."
 
-#: inc/customizer.php:169
+#: inc/customizer/site-identity.php:72
+msgid "Display theme author credit"
+msgstr ""
+
+#: inc/customizer.php:176
 msgid "Use featured image"
 msgstr "Используйте рекомендованное изображение"
 
-#: inc/customizer.php:170
+#: inc/customizer.php:177
 msgid ""
 "Allow the featured image on the current post to override the hero image."
 msgstr ""
@@ -441,9 +444,8 @@ msgid "1 Comment"
 msgstr "1 комментарий"
 
 #. Theme Name of the plugin/theme
-#, fuzzy
 msgid "Primer"
-msgstr "Основной"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -578,8 +580,9 @@ msgid "Copyright %1$s %2$d %3$s"
 msgstr "Авторское право %1$s %2$d %3$s"
 
 #: templates/parts/credit.php:34
+#, fuzzy
 msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s theme by %2$s"
+msgid "%1$s WordPress theme by %2$s"
 msgstr "Тема: %1$s, автор: %2$s"
 
 #: templates/parts/loop/post-footer.php:20
@@ -607,11 +610,3 @@ msgstr "Рубрика: %s"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% комментариев"
-
-#~ msgctxt "link to the Customizer"
-#~ msgid "The site-wide Default layout setting is located in the %s."
-#~ msgstr "Параметр макета по умолчанию для всего сайта находится в %s."
-
-#~ msgctxt "title of a component found in WordPress"
-#~ msgid "Customizer"
-#~ msgstr "Customizer"
