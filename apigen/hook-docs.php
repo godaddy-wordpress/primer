@@ -149,7 +149,7 @@ class Primer_Hook_Finder {
 
 		$template_files   = self::get_files( '*.php', GLOB_MARK, '../templates/parts/' );
 
-		$other_files     = array(
+		$other_files = array(
 			'../inc/hooks.php',
 			'../inc/helpers.php',
 			'../inc/template-tags.php',
