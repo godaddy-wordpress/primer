@@ -43,7 +43,7 @@ get_header(); ?>
 
 					<h2><?php esc_html_e( 'Popular Products', 'primer' ); ?></h2>
 
-					<?php echo do_shortcode( '[best_selling_products per_page="4" columns="4"]' ); ?>
+					<?php primer_wc_best_selling_products(); ?>
 
 				</section>
 

@@ -247,8 +247,8 @@ function primer_wc_colors( $colors ) {
 				.woocommerce a.button.alt,
 				.woocommerce #respond input#submit,
 				.woocommerce .product span.onsale,
-				#woocommerce-cart-menu-item .widget_shopping_cart p.buttons a,
-				#woocommerce-cart-menu-item .widget_shopping_cart p.buttons a:visited,
+				#primer-cart-menu-item .widget_shopping_cart p.buttons a,
+				#primer-cart-menu-item .widget_shopping_cart p.buttons a:visited,
 				ul.products a.button,
 				ul.products a.button:visited' => array(
 					'background-color' => '%1$s',
@@ -260,7 +260,7 @@ function primer_wc_colors( $colors ) {
 				.woocommerce a.button:hover, .woocommerce a.button:active, .woocommerce a.button:focus,
 				.woocommerce a.button.alt:hover, .woocommerce a.button.alt:active, .woocommerce a.button.alt:focus,
 				.woocommerce #respond input#submit:hover,
-				#woocommerce-cart-menu-item .widget_shopping_cart p.buttons a:hover,
+				#primer-cart-menu-item .widget_shopping_cart p.buttons a:hover,
 				a.button:hover,
 				ul.products .button:hover, ul.products .button:active, ul.products .button:focus' => array(
 					'background-color' => 'rgba(%1$s, 0.8)',
@@ -323,20 +323,11 @@ add_filter( 'primer_font_types', 'primer_wc_font_types' );
  */
 function primer_wc_404_template( $original_template ) {
 
-	if ( is_404() ) {
-
-		return get_stylesheet_directory() . '/templates/parts/404-woocommerce.php';
-
-	}
-
-	return $original_template;
+	return ( is_404() && '' !== locate_template( '/templates/parts/404-woocommerce.php' ) ) ? get_template_part( '/templates/parts/404', 'woocommerce' ) : $original_template;
 
 }
 add_filter( 'template_include', 'primer_wc_404_template' );
 
-/**
- * Display Promoted Products
- */
 if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 	/**
 	 * Featured and On-Sale Products
@@ -352,7 +343,10 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 	 *
 	 * @return void
 	 */
-	function primer_wc_promoted_products( $per_page = '4', $columns = '4', $recent_fallback = true ) {
+	function primer_wc_promoted_products( $per_page = 4, $columns = 4, $recent_fallback = true ) {
+
+		$per_page = (int) apply_filters( 'primer_promoted_products_per_page', $per_page );
+		$columns  = (int) apply_filters( 'primer_promoted_products_columns', $columns );
 
 		if ( wc_get_featured_product_ids() ) {
 
@@ -362,7 +356,9 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 
 			return;
 
-		} elseif ( wc_get_product_ids_on_sale() ) {
+		}
+
+		if ( wc_get_product_ids_on_sale() ) {
 
 			echo '<h2>' . esc_html__( 'On Sale Now', 'primer' ) . '</h2>';
 
@@ -372,9 +368,35 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 
 		}
 
+		if ( ! $recent_fallback ) {
+
+			return;
+
+		}
+
 		echo '<h2>' . esc_html__( 'New In Store', 'primer' ) . '</h2>';
 
 		echo do_shortcode( "[recent_products per_page='{$per_page}' columns='{$columns}']" );
+
+	}
+
+}
+
+if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
+	/**
+	 * Best Selling Products
+	 *
+	 * @param integer $per_page total products to display.
+	 * @param integer $columns columns to arrange products in to.
+	 *
+	 * @return void
+	 */
+	function primer_wc_best_selling_products( $per_page = 4, $columns = 4 ) {
+
+		$per_page = (int) apply_filters( 'primer_best_selling_products_per_page', $per_page );
+		$columns  = (int) apply_filters( 'primer_best_selling_products_columns', $columns );
+
+		echo do_shortcode( "[best_selling_products per_page='{$per_page}' columns='{$columns}']" );
 
 	}
 
@@ -416,37 +438,61 @@ add_filter( 'wp_get_nav_menu_items', 'primer_wc_generate_cart_menu_item', 20, 2 
 /**
  * Generate the custom woocommerce menu item
  *
- * @param  array $items
- * @param  array $args
+ * @param  string   $items Menu items array
+ * @param  stdClass $args  wp_nav_menu() arguments
  *
  * @return mixed
  */
 function primer_wc_cart_menu( $items, $args ) {
 
-	if ( ! apply_filters( 'primer_wc_cart_menu', true ) ) {
+	/**
+	 * Toggle woocommerce cart menu item visiblity
+	 *
+	 * @since NEXT
+	 *
+	 * @var bool
+	*/
+	if ( ! apply_filters( 'primer_wc_show_cart_menu', true ) ) {
 
 		return $items;
 
 	}
 
+	if ( is_customize_preview() ) {
+
+		add_filter( 'woocommerce_cart_contents_count', '__return_zero' );
+
+		add_filter( 'woocommerce_cart_contents_total', function() {
+
+			return wc_price( 0 );
+
+		} );
+
+	}
+
 	global $woocommerce;
 
-	$cart_total      = is_customize_preview() ? '0.00' : $woocommerce->cart->get_cart_total();
-	$cart_item_count = is_customize_preview() ? 0 : (int) $woocommerce->cart->get_cart_contents_count();
-	$product_count   = sprintf( _n( '%s item', '%s items', $cart_item_count, 'primer' ), $cart_item_count );
-
-	$empty_class = ( 0 < $cart_item_count ) ? '' : ' empty-cart';
-
-	$sub_menu = ( 0 < $cart_item_count ) ? sprintf(
-		'<ul class="sub-menu"><li id="woocommerce-cart-menu-item" class="menu-item woocommerce-cart-menu-item%1$s">%2$s</li></ul>',
-		esc_attr( $empty_class ),
+	$sub_menu = ( $woocommerce->cart->get_cart_contents_count() ) ? sprintf(
+		'<ul class="sub-menu">
+			<li id="primer-cart-menu-item" class="menu-item primer-cart-menu-item empty-cart">%1$s</li>
+		</ul>',
 		primer_get_the_widget( 'WC_Widget_Cart' )
 	) : '';
 
 	$cart_menu = sprintf(
-		'<li id="woocommerce-cart-menu-item" class="menu-item-has-children menu-item menu-item-type-nav_menu_item menu-item-object-cart woocommerce-cart-menu-item"><a><span class="cart-preview-total"><span class="woocommerce-price-amount amount">%1$s</span></span><span class="cart-preview-count">%2$s</span></a><a class="expand" href="#"></a>%3$s</li>',
-		$cart_total,
-		esc_attr( $product_count ),
+		'<li id="primer-cart-menu-item" class="%1$s menu-item menu-item-type-nav_menu_item menu-item-object-cart primer-cart-menu-item">
+			<a>
+				<span class="cart-preview-total">
+					<span class="woocommerce-price-amount amount">%2$s</span>
+				</span>
+				<span class="cart-preview-count">%3$s</span>
+			</a>
+			<a class="expand" href="#"></a>
+			%4$s
+		</li>',
+		( $woocommerce->cart->get_cart_contents_count() ) ? 'menu-item-has-children' : '',
+		$woocommerce->cart->get_cart_total(),
+		esc_html( sprintf( _n( '%s item', '%s items', $woocommerce->cart->get_cart_contents_count(), 'primer' ), $woocommerce->cart->get_cart_contents_count() ) ),
 		$sub_menu
 	);
 
