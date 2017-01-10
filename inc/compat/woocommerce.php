@@ -460,7 +460,7 @@ function primer_wc_cart_menu( $items, $args ) {
 
 		add_filter( 'woocommerce_cart_contents_count', '__return_zero' );
 
-		add_filter( 'woocommerce_cart_contents_total', function() {
+		add_filter( 'woocommerce_cart_contents_total', function( $total ) {
 
 			return wc_price( 0 );
 
