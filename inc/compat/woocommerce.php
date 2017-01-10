@@ -379,7 +379,6 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 		echo do_shortcode( "[recent_products per_page='{$per_page}' columns='{$columns}']" );
 
 	}
-
 }
 
 if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
@@ -399,7 +398,6 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
 		echo do_shortcode( "[best_selling_products per_page='{$per_page}' columns='{$columns}']" );
 
 	}
-
 }
 
 /**
