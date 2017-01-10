@@ -58,9 +58,6 @@
 				/**
 				 * Fires inside the `<header>` element.
 				 *
-				 * @hooked primer_add_site_title - 5
-				 * @hooked primer_add_hero - 7
-				 *
 				 * @since 1.0.0
 				 */
 				do_action( 'primer_header' );
@@ -82,9 +79,6 @@
 		<?php
 		/**
 		 * Fires after the `<header>` element.
-		 *
-		 * @hooked primer_add_page_title - 10
-		 * @hooked primer_add_primary_navigation - 11
 		 *
 		 * @since 1.0.0
 		 */

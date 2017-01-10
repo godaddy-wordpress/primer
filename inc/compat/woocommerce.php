@@ -246,11 +246,7 @@ function primer_wc_colors( $colors ) {
 				.woocommerce a.button,
 				.woocommerce a.button.alt,
 				.woocommerce #respond input#submit,
-				.woocommerce .product span.onsale,
-				#woocommerce-cart-menu-item .widget_shopping_cart p.buttons a,
-				#woocommerce-cart-menu-item .widget_shopping_cart p.buttons a:visited,
-				ul.products a.button,
-				ul.products a.button:visited' => array(
+				.woocommerce .product span.onsale' => array(
 					'background-color' => '%1$s',
 					'border-color'     => '%1$s',
 				),
@@ -259,10 +255,7 @@ function primer_wc_colors( $colors ) {
 				'.woocommerce button.button.alt:hover, .woocommerce button.button.alt:active, .woocommerce button.button.alt:focus,
 				.woocommerce a.button:hover, .woocommerce a.button:active, .woocommerce a.button:focus,
 				.woocommerce a.button.alt:hover, .woocommerce a.button.alt:active, .woocommerce a.button.alt:focus,
-				.woocommerce #respond input#submit:hover,
-				#woocommerce-cart-menu-item .widget_shopping_cart p.buttons a:hover,
-				a.button:hover,
-				ul.products .button:hover, ul.products .button:active, ul.products .button:focus' => array(
+				.woocommerce #respond input#submit:hover' => array(
 					'background-color' => 'rgba(%1$s, 0.8)',
 					'border-color'     => 'rgba(%1$s, 0.8)',
 				),
@@ -313,143 +306,3 @@ function primer_wc_font_types( $font_types ) {
 
 }
 add_filter( 'primer_font_types', 'primer_wc_font_types' );
-
-/**
- * Load a custom template for WooCommerce 404 pages
- *
- * @param  string $original_template The original template to load.
- *
- * @return string
- */
-function primer_wc_404_template( $original_template ) {
-
-	if ( is_404() ) {
-
-		return get_stylesheet_directory() . '/templates/parts/404-woocommerce.php';
-
-	}
-
-	return $original_template;
-
-}
-add_filter( 'template_include', 'primer_wc_404_template' );
-
-/**
- * Display Promoted Products
- */
-if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
-	/**
-	 * Featured and On-Sale Products
-	 * Check for featured products then on-sale products and use the appropiate shortcode.
-	 * If neither exist, it can fallback to show recently added products.
-	 *
-	 * @param integer $per_page total products to display.
-	 * @param integer $columns columns to arrange products in to.
-	 * @param boolean $recent_fallback Should the function display recent products as a fallback when there are no featured or on-sale products?.
-	 *
-	 * @uses  wc_get_featured_product_ids()
-	 * @uses  wc_get_product_ids_on_sale()
-	 *
-	 * @return void
-	 */
-	function primer_wc_promoted_products( $per_page = '4', $columns = '4', $recent_fallback = true ) {
-
-		if ( wc_get_featured_product_ids() ) {
-
-			echo '<h2>' . esc_html__( 'Featured Products', 'primer' ) . '</h2>';
-
-			echo do_shortcode( "[featured_products per_page='{$per_page}' columns='{$columns}']" );
-
-			return;
-
-		} elseif ( wc_get_product_ids_on_sale() ) {
-
-			echo '<h2>' . esc_html__( 'On Sale Now', 'primer' ) . '</h2>';
-
-			echo do_shortcode( "[sale_products per_page='{$per_page}' columns='{$columns}']" );
-
-			return;
-
-		}
-
-		echo '<h2>' . esc_html__( 'New In Store', 'primer' ) . '</h2>';
-
-		echo do_shortcode( "[recent_products per_page='{$per_page}' columns='{$columns}']" );
-
-	}
-
-}
-
-/**
- * Add custom 'cart' menu item when woocommerce is active
- *
- * @param  array  $items
- * @param  object $menu
- *
- * @return array  $items
- */
-function primer_wc_generate_cart_menu_item( $items, $menu ) {
-
-	$theme_locations = get_nav_menu_locations();
-
-	if ( empty( $theme_locations['primary'] ) ) {
-
-		return $items;
-
-	}
-
-	$nav_obj = wp_get_nav_menu_object( $theme_locations['primary'] );
-
-	if ( $menu->term_id !== $theme_locations['primary'] || is_admin() ) {
-
-		return $items;
-
-	}
-
-	add_filter( "wp_nav_menu_{$nav_obj->slug}_items", 'primer_wc_cart_menu', 10, 2 );
-
-	return $items;
-
-}
-add_filter( 'wp_get_nav_menu_items', 'primer_wc_generate_cart_menu_item', 20, 2 );
-
-/**
- * Generate the custom woocommerce menu item
- *
- * @param  array $items
- * @param  array $args
- *
- * @return mixed
- */
-function primer_wc_cart_menu( $items, $args ) {
-
-	if ( ! apply_filters( 'primer_wc_cart_menu', true ) ) {
-
-		return $items;
-
-	}
-
-	global $woocommerce;
-
-	$cart_total      = is_customize_preview() ? '0.00' : $woocommerce->cart->get_cart_total();
-	$cart_item_count = is_customize_preview() ? 0 : (int) $woocommerce->cart->get_cart_contents_count();
-	$product_count   = sprintf( _n( '%s item', '%s items', $cart_item_count, 'primer' ), $cart_item_count );
-
-	$empty_class = ( 0 < $cart_item_count ) ? '' : ' empty-cart';
-
-	$sub_menu = ( 0 < $cart_item_count ) ? sprintf(
-		'<ul class="sub-menu"><li id="woocommerce-cart-menu-item" class="menu-item woocommerce-cart-menu-item%1$s">%2$s</li></ul>',
-		esc_attr( $empty_class ),
-		primer_get_the_widget( 'WC_Widget_Cart' )
-	) : '';
-
-	$cart_menu = sprintf(
-		'<li id="woocommerce-cart-menu-item" class="menu-item-has-children menu-item menu-item-type-nav_menu_item menu-item-object-cart woocommerce-cart-menu-item"><a><span class="cart-preview-total"><span class="woocommerce-price-amount amount">%1$s</span></span><span class="cart-preview-count">%2$s</span></a><a class="expand" href="#"></a>%3$s</li>',
-		$cart_total,
-		esc_attr( $product_count ),
-		$sub_menu
-	);
-
-	return $items . $cart_menu;
-
-}

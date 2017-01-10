@@ -15,8 +15,6 @@
 		/**
 		 * Fires inside the `.hero` element.
 		 *
-		 * @hooked primer_add_hero_content - 10
-		 *
 		 * @since 1.0.0
 		 */
 		do_action( 'primer_hero' );

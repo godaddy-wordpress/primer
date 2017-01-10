@@ -30,8 +30,6 @@
 				/**
 				 * Fires inside the `<footer>` element.
 				 *
-				 * @hooked primer_add_footer_widgets - 10
-				 *
 				 * @since 1.0.0
 				 */
 				do_action( 'primer_footer' );
@@ -44,8 +42,6 @@
 		<?php
 		/**
 		 * Fires after the `<footer>` element.
-		 *
-		 * @hooked primer_add_site_info - 10
 		 *
 		 * @since 1.0.0
 		 */
