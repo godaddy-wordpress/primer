@@ -460,11 +460,7 @@ function primer_wc_cart_menu( $items, $args ) {
 
 		add_filter( 'woocommerce_cart_contents_count', '__return_zero' );
 
-		add_filter( 'woocommerce_cart_contents_total', function( $total ) {
-
-			return wc_price( 0 );
-
-		} );
+		add_filter( 'woocommerce_cart_contents_total', 'customize_preview_cart_total' );
 
 	}
 
@@ -495,5 +491,18 @@ function primer_wc_cart_menu( $items, $args ) {
 	);
 
 	return $items . $cart_menu;
+
+}
+
+/**
+ * Set cart total to 0 when on customizer
+ *
+ * @param  integer $total Cart total
+ *
+ * @return string
+ */
+function customize_preview_cart_total( $total ) {
+
+	return wc_price( 0 );
 
 }
