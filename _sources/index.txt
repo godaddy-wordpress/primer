@@ -1,3 +1,5 @@
 ### Welcome
 
-<p>This is a test. Will the .MD file be parsed?</p>
+This is home to the Primer theme documentation.
+
+This is currently a work in project. Please check back often!
