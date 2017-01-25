@@ -8,4 +8,4 @@ svn-url
 svn-username
 tests/codeception/_output/*
 vendor/
-primer-docs/
+documentation/en/documentation/
