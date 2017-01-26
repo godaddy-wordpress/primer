@@ -295,6 +295,7 @@ module.exports = function( grunt ) {
 			sphinx: [
 				'cd documentation',
 				'make clean',
+				'git clone -b gh-pages git@github.com:godaddy/wp-primer-theme.git build/html/en/',
 				'make html',
 			].join( '&&' ),
 			docs: [
@@ -303,6 +304,12 @@ module.exports = function( grunt ) {
 				'php contributor-list.php',
 				'php hook-docs.php',
 				'php file-headers.php',
+			].join( '&&' ),
+			deploy_docs: [
+				'cd documentation/build/html/en',
+				'git add .',
+				'git commit -m "Update Documentation"',
+				'git push origin gh-pages --force'
 			].join( '&&' )
 		},
 
@@ -318,4 +325,5 @@ module.exports = function( grunt ) {
 
 	grunt.registerTask( 'docs', [ 'shell:sphinx', 'shell:docs', 'replace:version_docs', 'copy:readme', 'copy:docs', 'replace:intro_docs' ] );
 
+	grunt.registerTask( 'deploy-docs', [ 'shell:deploy_docs' ] );
 };
