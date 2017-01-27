@@ -10,6 +10,7 @@ You should never edit theme files directly, otherwise your customizations will b
     :caption: Tutorials
 
     tutorials-and-examples/tutorials/mu-plugin
+    tutorials-and-examples/tutorials/contributing
     tutorials-and-examples/tutorials/acceptance-tests
     tutorials-and-examples/tutorials/debugging
 
