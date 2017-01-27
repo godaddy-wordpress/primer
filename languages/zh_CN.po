@@ -1,9 +1,9 @@
 # Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 0.9.0\n"
+"Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-01-05 17:07:46+00:00\n"
+"POT-Creation-Date: 2017-01-09 23:11:17+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,7 +62,7 @@ msgstr "看来我们不能找到您要找的东西。请尝试进行搜索。"
 
 #: functions.php:159
 msgid "Featured"
-msgstr ""
+msgstr "精选"
 
 #: functions.php:165 functions.php:407
 msgid "Hero"
@@ -133,12 +133,11 @@ msgid "Skip to content"
 msgstr "跳至内容"
 
 #: inc/compat/wordpress.php:47
-#, fuzzy
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"初级读物至少要求 WordPress 版本 %s。您正在运行版本 %s。请升级并再次尝试。"
+"Primer 要求 WordPress 至少为 %1$s 版。您正在使用 %2$s 版。请升级并再次尝试。"
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -424,9 +423,8 @@ msgid "1 Comment"
 msgstr "1 条评论"
 
 #. Theme Name of the plugin/theme
-#, fuzzy
 msgid "Primer"
-msgstr "主"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -589,11 +587,3 @@ msgstr "归档位置： %s"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% 评论"
-
-#~ msgctxt "link to the Customizer"
-#~ msgid "The site-wide Default layout setting is located in the %s."
-#~ msgstr "网络范围默认布局设置位于 %s 内。"
-
-#~ msgctxt "title of a component found in WordPress"
-#~ msgid "Customizer"
-#~ msgstr "自定义器"

@@ -1,9 +1,9 @@
 # Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 0.9.0\n"
+"Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-01-05 17:07:46+00:00\n"
+"POT-Creation-Date: 2017-01-09 23:11:17+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,7 +68,7 @@ msgstr ""
 
 #: functions.php:159
 msgid "Featured"
-msgstr ""
+msgstr "Wyróżniony"
 
 #: functions.php:165 functions.php:407
 msgid "Hero"
@@ -143,12 +143,11 @@ msgid "Skip to content"
 msgstr "Przejdź do zawartości"
 
 #: inc/compat/wordpress.php:47
-#, fuzzy
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer wymaga WordPressa w wersji co najmniej %s. Używasz wersji %s. "
+"Primer wymaga WordPressa w wersji co najmniej %1$s. Używasz wersji %2$s. "
 "Zaktualizuj i spróbuj ponownie."
 
 #: inc/customizer/colors.php:47
@@ -443,9 +442,8 @@ msgid "1 Comment"
 msgstr "1 komentarz"
 
 #. Theme Name of the plugin/theme
-#, fuzzy
 msgid "Primer"
-msgstr "Podstawowe"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -609,12 +607,3 @@ msgstr "Kategoria: %s"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% koment."
-
-#~ msgctxt "link to the Customizer"
-#~ msgid "The site-wide Default layout setting is located in the %s."
-#~ msgstr ""
-#~ "Domyślne ustawienie układu dla całej witryny znajduje się tutaj: %s."
-
-#~ msgctxt "title of a component found in WordPress"
-#~ msgid "Customizer"
-#~ msgstr "Personalizator"

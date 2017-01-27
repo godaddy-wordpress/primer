@@ -1,9 +1,9 @@
 # Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 0.9.0\n"
+"Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-01-05 17:07:46+00:00\n"
+"POT-Creation-Date: 2017-01-09 23:11:17+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,7 +65,7 @@ msgstr "Wij kunnen niet vinden wat je zoekt. Probeer het met een zoekopdracht."
 
 #: functions.php:159
 msgid "Featured"
-msgstr ""
+msgstr "Uitgelicht"
 
 #: functions.php:165 functions.php:407
 msgid "Hero"
@@ -140,13 +140,12 @@ msgid "Skip to content"
 msgstr "Naar inhoud gaan"
 
 #: inc/compat/wordpress.php:47
-#, fuzzy
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Voor Primer is ten minste WordPress-versie %s vereist. Je voert versie %s "
-"uit. Upgrade en probeer het opnieuw."
+"Voor Primer is ten minste WordPress-versie %1$s vereist. Je voert versie "
+"%2$s uit. Upgrade en probeer het opnieuw."
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -441,9 +440,8 @@ msgid "1 Comment"
 msgstr "1 opmerking"
 
 #. Theme Name of the plugin/theme
-#, fuzzy
 msgid "Primer"
-msgstr "Primair"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -608,13 +606,3 @@ msgstr "Gearchiveerd onder: %s"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% opmerkingen"
-
-#~ msgctxt "link to the Customizer"
-#~ msgid "The site-wide Default layout setting is located in the %s."
-#~ msgstr ""
-#~ "De standaardinstelling voor opmaak voor de volledige site bevindt zich "
-#~ "hier: %s."
-
-#~ msgctxt "title of a component found in WordPress"
-#~ msgid "Customizer"
-#~ msgstr "Customizer"

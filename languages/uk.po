@@ -1,9 +1,9 @@
 # Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 0.9.0\n"
+"Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-01-05 17:07:46+00:00\n"
+"POT-Creation-Date: 2017-01-09 23:11:17+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,7 +64,7 @@ msgstr "Здається, ми не змогли знайти те, що ви ш
 
 #: functions.php:159
 msgid "Featured"
-msgstr ""
+msgstr "Рекомендовані"
 
 #: functions.php:165 functions.php:407
 msgid "Hero"
@@ -144,13 +144,12 @@ msgid "Skip to content"
 msgstr "Перейти до вмісту"
 
 #: inc/compat/wordpress.php:47
-#, fuzzy
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Для підручника потрібна версія WordPress мінімум %s. У вас версія %s. "
-"Оновіть та повторіть спробу."
+"Для Primer потрібна версія WordPress не менше %1$s. Ви працюєте з версією "
+"%2$s. Перейдіть на нову версію та повторіть спробу."
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -441,9 +440,8 @@ msgid "1 Comment"
 msgstr "1 коментар"
 
 #. Theme Name of the plugin/theme
-#, fuzzy
 msgid "Primer"
-msgstr "Основний"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -608,11 +606,3 @@ msgstr "Занесено до: %s"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% коментарів"
-
-#~ msgctxt "link to the Customizer"
-#~ msgid "The site-wide Default layout setting is located in the %s."
-#~ msgstr "Параметр макета за замовчуванням для всього сайту розташовано в %s."
-
-#~ msgctxt "title of a component found in WordPress"
-#~ msgid "Customizer"
-#~ msgstr "Customizer"

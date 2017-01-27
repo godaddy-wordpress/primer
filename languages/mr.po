@@ -1,9 +1,9 @@
 # Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 0.9.0\n"
+"Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-01-05 17:07:46+00:00\n"
+"POT-Creation-Date: 2017-01-09 23:11:17+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,7 +64,7 @@ msgstr "आपण शोधत असलेले आम्ही शोधू �
 
 #: functions.php:159
 msgid "Featured"
-msgstr ""
+msgstr "वैशिष्ट्यीकृत"
 
 #: functions.php:165 functions.php:407
 msgid "Hero"
@@ -137,13 +137,12 @@ msgid "Skip to content"
 msgstr "सामग्रीवर जा"
 
 #: inc/compat/wordpress.php:47
-#, fuzzy
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"किमान WordPress आवृत्तीची प्राथमिक आवश्यकता आहे %s. आपण %s आवृत्ती रन करीत आहात. "
-"कृपया श्रेणीसुधारित करा आणि पुन्हा प्रयत्न करा."
+"Primer ला किमान WordPress आवृत्तीची आवश्यकता आहे %1$s. आपण %2$s आवृत्ती रन करीत "
+"आहात. कृपया श्रेणीसुधारित करा आणि पुन्हा प्रयत्न करा."
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -430,9 +429,8 @@ msgid "1 Comment"
 msgstr "1 टिप्पणी"
 
 #. Theme Name of the plugin/theme
-#, fuzzy
 msgid "Primer"
-msgstr "प्राथमिक"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -596,11 +594,3 @@ msgstr "या अंतर्गत फाईल केले: %s"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% टिप्पण्या"
-
-#~ msgctxt "link to the Customizer"
-#~ msgid "The site-wide Default layout setting is located in the %s."
-#~ msgstr "साइट-रुंद डिफॉल्ट लेआउट %s मध्ये स्थित आहे."
-
-#~ msgctxt "title of a component found in WordPress"
-#~ msgid "Customizer"
-#~ msgstr "सानुकूलित करणारा"

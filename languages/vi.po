@@ -1,9 +1,9 @@
 # Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 0.9.0\n"
+"Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-01-05 17:07:46+00:00\n"
+"POT-Creation-Date: 2017-01-09 23:11:17+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,7 +68,7 @@ msgstr ""
 
 #: functions.php:159
 msgid "Featured"
-msgstr ""
+msgstr "Nổi bật"
 
 #: functions.php:165 functions.php:407
 msgid "Hero"
@@ -141,13 +141,12 @@ msgid "Skip to content"
 msgstr "Chuyển tới phần nội dung"
 
 #: inc/compat/wordpress.php:47
-#, fuzzy
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer yêu cầu tối thiểu WordPress phiên bản %s. Bạn đang chạy phiên bản %s. "
-"Vui lòng nâng cấp và thử lại."
+"Primer yêu cầu tối thiểu WordPress phiên bản %1$s. Bạn đang chạy phiên bản "
+"%2$s. Vui lòng nâng cấp và thử lại."
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -440,9 +439,8 @@ msgid "1 Comment"
 msgstr "1 nhận xét"
 
 #. Theme Name of the plugin/theme
-#, fuzzy
 msgid "Primer"
-msgstr "Chính"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -607,11 +605,3 @@ msgstr "Được sắp xếp bên dưới: %s"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% nhận xét"
-
-#~ msgctxt "link to the Customizer"
-#~ msgid "The site-wide Default layout setting is located in the %s."
-#~ msgstr "Phần cài đặt bố cục mặc định theo trang nằm trong %s."
-
-#~ msgctxt "title of a component found in WordPress"
-#~ msgid "Customizer"
-#~ msgstr "Công cụ tùy chỉnh"

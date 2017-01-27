@@ -1,9 +1,9 @@
 # Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 0.9.0\n"
+"Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-01-05 17:07:46+00:00\n"
+"POT-Creation-Date: 2017-01-09 23:11:17+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,7 +64,7 @@ msgstr "お探しのものが見つかりませんでした。検索してみて
 
 #: functions.php:159
 msgid "Featured"
-msgstr ""
+msgstr "おすすめ"
 
 #: functions.php:165 functions.php:407
 msgid "Hero"
@@ -137,13 +137,12 @@ msgid "Skip to content"
 msgstr "コンテンツへ移動"
 
 #: inc/compat/wordpress.php:47
-#, fuzzy
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"PrimerにはWordPressのバージョン%s以上が必要です。お使いのバージョンは%sです。"
-"アップグレードしてからもう一度お試しください。"
+"PrimerにはWordPressのバージョン%1$s以上が必要です。お使いのバージョンは%2$sで"
+"す。アップグレードしてからもう一度お試しください。"
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -436,9 +435,8 @@ msgid "1 Comment"
 msgstr "コメント1"
 
 #. Theme Name of the plugin/theme
-#, fuzzy
 msgid "Primer"
-msgstr "プライマリ"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -603,11 +601,3 @@ msgstr "タグ： %s"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "コメント%"
-
-#~ msgctxt "link to the Customizer"
-#~ msgid "The site-wide Default layout setting is located in the %s."
-#~ msgstr "サイト全体のデフォルトレイアウト設定は%sにあります。"
-
-#~ msgctxt "title of a component found in WordPress"
-#~ msgid "Customizer"
-#~ msgstr "カスタマイザ"

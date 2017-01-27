@@ -1,9 +1,9 @@
 # Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 0.9.0\n"
+"Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-01-05 17:07:46+00:00\n"
+"POT-Creation-Date: 2017-01-09 23:11:17+00:00\n"
 "PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,7 +62,7 @@ msgstr "Vi hittar inte vad du söker. Prova med att söka."
 
 #: functions.php:159
 msgid "Featured"
-msgstr ""
+msgstr "Utvald"
 
 #: functions.php:165 functions.php:407
 msgid "Hero"
@@ -137,13 +137,12 @@ msgid "Skip to content"
 msgstr "Gå till innehåll"
 
 #: inc/compat/wordpress.php:47
-#, fuzzy
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer kräver minst WordPress version %s. Du kör version %s. Uppgradera och "
-"försök på nytt."
+"Primer kräver minst WordPress version %1$s. Du kör version %2$s. Uppgradera "
+"och försök på nytt."
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -434,9 +433,8 @@ msgid "1 Comment"
 msgstr "1 kommentar"
 
 #. Theme Name of the plugin/theme
-#, fuzzy
 msgid "Primer"
-msgstr "Primär"
+msgstr "Primer"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -601,11 +599,3 @@ msgstr "Arkiverat under: %s"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% kommentarer"
-
-#~ msgctxt "link to the Customizer"
-#~ msgid "The site-wide Default layout setting is located in the %s."
-#~ msgstr "Den allmänna standardlayoutinställningen finns i %s."
-
-#~ msgctxt "title of a component found in WordPress"
-#~ msgid "Customizer"
-#~ msgstr "Anpassare"
