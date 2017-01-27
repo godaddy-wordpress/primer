@@ -16,7 +16,7 @@ $ grunt docs
 
 The documentation will be built and compiled into the `/documentation/build/html/en` directory. Feel free to preview the documentation before pushing changes live to the site.
 
-When you are content with the changes the documentation can be deployed using in a similar fashion as building them.
+When you are happy with the changes, the documentation can be deployed using:
 
 ```bash
 $ grunt deploy-docs
