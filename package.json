@@ -24,6 +24,7 @@
     "grunt-cssjanus": "^0.3.2",
     "grunt-dev-update": "^2.0.0",
     "grunt-html-md": "^0.2.2",
+    "grunt-output": "^0.1.5",
     "grunt-po2mo": "^0.1.2",
     "grunt-sass": "^2.0.0",
     "grunt-shell": "^2.1.0",

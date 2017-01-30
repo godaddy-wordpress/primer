@@ -291,6 +291,25 @@ module.exports = function( grunt ) {
 			}
 		},
 
+		output: {
+			doc_help: {
+				content : {
+					mode : 'log',
+					before: 'Before you can compile the documentation there are a few dependencies that need to be installed. \r\n\r\n' +
+						'First, ensure your system has Python installed. You can check if Python is installed by running the following command \r\n\r\n' +
+						'$ python --version \r\n\r\n' +
+						'Once Python is installed you need to install pip. You can install pip by running the following command \r\n\r\n' +
+						'$ sudo easy_install pip \r\n\r\n' +
+						'Finally you need to install the sphinx dependencies. You can do this by running the following command \r\n\r\n' +
+						'$ sudo pip install -r .dev/docs/requirements.txt \r\n\r\n' +
+						'After all of the dependencies are installed you can run "grunt docs" to compile the documentation into the .dev/docs/en/documentation/ directory.',
+					func : 'writeln',
+					color: 'white',
+					styles: []
+				},
+			}
+		},
+
 		shell: {
 			sphinx: [
 				'cd .dev/docs',
@@ -323,7 +342,8 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'update-mo', [ 'po2mo', 'copy:mo', 'clean:mo' ] );
 	grunt.registerTask( 'version', [ 'replace' ] );
 
-	grunt.registerTask( 'docs', [ 'shell:sphinx', 'shell:docs', 'replace:version_docs', 'copy:readme', 'copy:docs', 'replace:intro_docs' ] );
-	grunt.registerTask( 'deploy-docs', [ 'shell:deploy_docs' ] );
+	grunt.registerTask( 'docs-help', 'Instructions and required steps before compiling the documentation.', [ 'output:doc_help', ] );
+	grunt.registerTask( 'docs', 'Build and compile the documentation into the .dev/docs/documentation/en/ directory.', [ 'shell:sphinx', 'shell:docs', 'replace:version_docs', 'copy:readme', 'copy:docs', 'replace:intro_docs' ] );
+	grunt.registerTask( 'docs-deploy', 'Deploy the documentation to github-pages.', [ 'shell:deploy_docs' ] );
 
 };
