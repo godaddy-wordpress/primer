@@ -6,7 +6,7 @@ _Coming soon_
 
 ### Documentation
 
-#### Requirements
+#### Prerequisites
 
 Before you can compile the documentation there are a few dependencies that need to be installed.
 
