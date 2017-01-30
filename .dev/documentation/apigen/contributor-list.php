@@ -102,7 +102,7 @@ class Primer_Contributor_List {
 
 		echo '## Changelog';
 
-		$contents = file_get_contents( '../../readme.md' );
+		$contents = file_get_contents( '../../../readme.md' );
 
 		$explode = explode( '## Changelog ##', $contents );
 

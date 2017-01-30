@@ -147,12 +147,12 @@ class Primer_Hook_Finder {
 	 */
 	public static function process_hooks() {
 
-		$template_files   = self::get_files( '*.php', GLOB_MARK, '../../templates/parts/' );
+		$template_files   = self::get_files( '*.php', GLOB_MARK, '../../../templates/parts/' );
 
 		$other_files = array(
-			'../../inc/hooks.php',
-			'../../inc/helpers.php',
-			'../../inc/template-tags.php',
+			'../../../inc/hooks.php',
+			'../../../inc/helpers.php',
+			'../../../inc/template-tags.php',
 		);
 
 		self::$files_to_scan = array(

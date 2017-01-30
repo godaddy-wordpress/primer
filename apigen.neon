@@ -5,7 +5,7 @@ title: Primer Theme
 source: .
 
 # documentation destination
-destination: documentation/en/documentation/
+destination: .dev/documentation/en/documentation/
 
 ## excluded files
 exclude:
@@ -19,7 +19,7 @@ exclude:
 templateTheme: default
 
 # template config location
-templateConfig: documentation/apigen/theme-godaddy/config.neon
+templateConfig: .dev/documentation/apigen/theme-godaddy/config.neon
 
 # list of scanned file extensions (e.g. php5, php...)
 extensions: [php]
