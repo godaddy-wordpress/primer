@@ -1,3 +1,4 @@
+.dev/docs/en/documentation/
 .DS_Store
 .sass-cache/
 .sublime-grunt.cache
@@ -8,4 +9,3 @@ svn-url
 svn-username
 tests/codeception/_output/*
 vendor/
-docs/en/documentation/*
