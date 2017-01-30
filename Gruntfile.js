@@ -4,7 +4,7 @@ module.exports = function( grunt ) {
 
 	var pkg = grunt.file.readJSON( 'package.json' );
 
-	grunt.initConfig({
+	grunt.initConfig( {
 
 		pkg: pkg,
 
@@ -93,7 +93,7 @@ module.exports = function( grunt ) {
 					{
 						expand: true,
 						cwd: 'assets/css/admin',
-						src: [ '*.css','!*-rtl.css','!*.min.css','!*-rtl.min.css' ],
+						src: [ '*.css', '!*-rtl.css', '!*.min.css', '!*-rtl.min.css' ],
 						dest: 'assets/css/admin',
 						ext: '-rtl.css'
 					}
@@ -172,28 +172,6 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		sass: {
-			options: {
-				precision: 5,
-				sourceMap: false
-			},
-			dist: {
-				files: [
-					{
-						'style.css': '.dev/sass/style.scss',
-						'editor-style.css': '.dev/sass/editor-style.scss'
-					},
-					{
-						expand: true,
-						cwd: '.dev/sass/admin',
-						src: ['*.scss'],
-						dest: 'assets/css/admin',
-						ext: '.css'
-					}
-				]
-			}
-		},
-
 		uglify: {
 			options: {
 				ASCIIOnly: true
@@ -201,14 +179,14 @@ module.exports = function( grunt ) {
 			dist: {
 				expand: true,
 				cwd: 'assets/js',
-				src: ['*.js', '!*.min.js'],
+				src: [ '*.js', '!*.min.js' ],
 				dest: 'assets/js',
 				ext: '.min.js'
 			},
 			admin: {
 				expand: true,
 				cwd: 'assets/js/admin',
-				src: ['*.js', '!*.min.js'],
+				src: [ '*.js', '!*.min.js' ],
 				dest: 'assets/js/admin',
 				ext: '.min.js'
 			}
@@ -217,7 +195,7 @@ module.exports = function( grunt ) {
 		watch: {
 			css: {
 				files: '.dev/sass/**/*.scss',
-				tasks: [ 'sass','autoprefixer','cssjanus' ]
+				tasks: [ 'sass', 'autoprefixer', 'cssjanus' ]
 			},
 			scripts: {
 				files: [ 'Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js' ],
@@ -291,29 +269,51 @@ module.exports = function( grunt ) {
 			}
 		},
 
+		sass: {
+			options: {
+				precision: 5,
+				sourceMap: false
+			},
+			dist: {
+				files: [
+					{
+						'style.css': '.dev/sass/style.scss',
+						'editor-style.css': '.dev/sass/editor-style.scss'
+					},
+					{
+						expand: true,
+						cwd: '.dev/sass/admin',
+						src: [ '*.scss' ],
+						dest: 'assets/css/admin',
+						ext: '.css'
+					}
+				]
+			}
+		},
+
 		shell: {
 			sphinx: [
 				'cd .dev/docs',
 				'make clean',
-				'git clone -b gh-pages git@github.com:godaddy/wp-primer-theme.git build/html/en/',
+				'git clone -b gh-pages https://github.com/godaddy/wp-primer-theme.git build/html/en/',
 				'make html',
-			].join( '&&' ),
+			].join( ' && ' ),
 			docs: [
 				'apigen generate -q',
 				'cd .dev/docs/apigen',
 				'php contributor-list.php',
 				'php hook-docs.php',
 				'php file-headers.php',
-			].join( '&&' ),
+			].join( ' && ' ),
 			deploy_docs: [
 				'cd .dev/docs/build/html/en',
 				'git add .',
 				'git commit -m "Update Documentation"',
 				'git push origin gh-pages --force'
-			].join( '&&' )
-		},
+			].join( ' && ' )
+		}
 
-	});
+	} );
 
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
@@ -324,6 +324,6 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'version', [ 'replace' ] );
 
 	grunt.registerTask( 'docs', [ 'shell:sphinx', 'shell:docs', 'replace:version_docs', 'copy:readme', 'copy:docs', 'replace:intro_docs' ] );
-
 	grunt.registerTask( 'deploy-docs', [ 'shell:deploy_docs' ] );
+
 };
