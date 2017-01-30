@@ -34,7 +34,7 @@ If you installed Python another way you can install pip by doing the following:
 $ sudo easy_install pip
 ```
 
-Finally, you need to install the [Sphinx](http://www.sphinx-doc.org/) dependencies. You can do this by running the following command from the theme root.
+Finally, you need to install the [Sphinx](http://www.sphinx-doc.org/) dependencies. You can do this by running the following command from the Primer **theme root**.
 
 ```bash
 $ sudo pip install -r .dev/docs/requirements.txt
@@ -48,7 +48,7 @@ The documentation for Primer theme is auto-generated using [ApiGen](http://www.a
 
 Building the documentation is easy using the bundled Grunt tasks.
 
-From the **theme root** the following command is used to generate documentation.
+From the Primer **theme root** the following command is used to generate documentation.
 
 ```bash
 $ grunt docs
