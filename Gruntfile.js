@@ -31,7 +31,7 @@ module.exports = function( grunt ) {
 				src: [ 'languages/' + pkg.name + '-*.mo' ]
 			},
 			docs: {
-				src: [ '.dev/documentation/en/documentation/*' ]
+				src: [ '.dev/docs/en/documentation/*' ]
 			}
 		},
 
@@ -56,7 +56,7 @@ module.exports = function( grunt ) {
 						expand: true,
 						dot: true,
 						cwd: '.',
-						dest: '.dev/documentation/en/',
+						dest: '.dev/docs/en/',
 						src: [ 'readme.md' ],
 						rename: function( dest, src ) {
 							return dest + src.replace( 'readme', 'intro' );
@@ -67,9 +67,9 @@ module.exports = function( grunt ) {
 			docs: {
 				files: [
 					{
-						cwd: '.dev/documentation/en/documentation/',
+						cwd: '.dev/docs/en/documentation/',
 						src: '**/*',
-						dest: '.dev/documentation/build/html/en/documentation/',
+						dest: '.dev/docs/build/html/en/documentation/',
 						expand: true,
 					}
 				],
@@ -262,8 +262,8 @@ module.exports = function( grunt ) {
 			},
 			version_docs: {
 				src: [
-					'.dev/documentation/themes/godaddy/*.html',
-					'.dev/documentation/apigen/theme-godaddy/*.latte'
+					'.dev/docs/themes/godaddy/*.html',
+					'.dev/docs/apigen/theme-godaddy/*.latte'
 				],
 				overwrite: true,
 				replacements: [ {
@@ -273,7 +273,7 @@ module.exports = function( grunt ) {
 			},
 			intro_docs: {
 				src: [
-					'.dev/documentation/en/intro.md',
+					'.dev/docs/en/intro.md',
 				],
 				overwrite: true,
 				replacements: [ {
@@ -293,20 +293,20 @@ module.exports = function( grunt ) {
 
 		shell: {
 			sphinx: [
-				'cd .dev/documentation',
+				'cd .dev/docs',
 				'make clean',
 				'git clone -b gh-pages git@github.com:godaddy/wp-primer-theme.git build/html/en/',
 				'make html',
 			].join( '&&' ),
 			docs: [
 				'apigen generate -q',
-				'cd .dev/documentation/apigen',
+				'cd .dev/docs/apigen',
 				'php contributor-list.php',
 				'php hook-docs.php',
 				'php file-headers.php',
 			].join( '&&' ),
 			deploy_docs: [
-				'cd .dev/documentation/build/html/en',
+				'cd .dev/docs/build/html/en',
 				'git add .',
 				'git commit -m "Update Documentation"',
 				'git push origin gh-pages --force'
