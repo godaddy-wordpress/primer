@@ -4,7 +4,7 @@ https://godaddy.github.io/wp-primer-theme/index.html
 
 ### How To
 
-#### Requiremets
+#### Prerequisites
 
 Before you can compile the documentation there are a few dependencies that need to be installed.
 
