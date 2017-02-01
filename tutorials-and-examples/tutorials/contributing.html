@@ -190,12 +190,7 @@
                 <ul>
 <li><a class="reference internal" href="#">Contributing</a><ul>
 <li><a class="reference internal" href="#theme-contributions">Theme Contributions</a></li>
-<li><a class="reference internal" href="#documentation">Documentation</a><ul>
-<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
-<li><a class="reference internal" href="#building-the-documentation">Building the Documentation</a></li>
-<li><a class="reference internal" href="#deploying-the-documentation">Deploying the Documentation</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -210,50 +205,18 @@
 </div>
 <div class="section" id="documentation">
 <span id="documentation"></span><h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="prerequisites">
-<span id="prerequisites"></span><h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
-<p>Before you can compile the documentation there are a few dependencies that need to be installed.</p>
-<p>First, ensure your system has Python installed. You can check if Python is installed by running the following command:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ python --version
-</pre></div>
-</div>
-<p>If Python is installed you should see a version printed on screen:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>Python <span class="m">2</span>.7.13
-</pre></div>
-</div>
-<p>If Python is not installed you can install it via Homebrew using the following:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ brew update <span class="o">&amp;&amp;</span> brew install python
-</pre></div>
-</div>
-<p>Installing Python via Homebrew will also install pip.</p>
-<p>If you installed Python another way you can install pip by doing the following:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo easy_install pip
-</pre></div>
-</div>
-<p>Finally, you need to install the <a class="reference external" href="http://www.sphinx-doc.org/">Sphinx</a> dependencies. You can do this by running the following command from the Primer <strong>theme root</strong>.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo pip install -r .dev/docs/requirements.txt
-</pre></div>
-</div>
-<p>After all of the dependencies are installed you will want to run <code class="docutils literal"><span class="pre">npm</span> <span class="pre">install</span></code> to install the node dependencies. Finally you can run <code class="docutils literal"><span class="pre">grunt</span> <span class="pre">docs</span></code> to compile the documentation into the <code class="docutils literal"><span class="pre">.dev/docs/en/documentation/</span></code> directory.undefined</p>
-</div>
-<div class="section" id="building-the-documentation">
-<span id="building-the-documentation"></span><h3>Building the Documentation<a class="headerlink" href="#building-the-documentation" title="Permalink to this headline">¶</a></h3>
-<p>The documentation for Primer theme is auto-generated using <a class="reference external" href="http://www.apigen.org/">ApiGen</a> and <a class="reference external" href="http://www.sphinx-doc.org/">Sphinx</a> and get re-built each time a new version of Primer is released.</p>
+<p>The documentation for Primer theme is auto-generated using <a class="reference external" href="http://www.apigen.org/">APIgen</a> and <a class="reference external" href="http://www.sphinx-doc.org/">Sphinx</a> and get re-built each time a new version of Primer is released.</p>
 <p>Building the documentation is easy using the bundled Grunt tasks.</p>
-<p>From the Primer <strong>theme root</strong> the following command is used to generate documentation.</p>
+<p>From the <strong>theme root</strong> you can use the following command to generate the documentation.</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>$ grunt docs
 </pre></div>
 </div>
-<p>The documentation will be built and compiled into the <code class="docutils literal"><span class="pre">/documentation/build/html/en</span></code> directory. Feel free to preview the documentation before pushing changes live to the site.</p>
-</div>
-<div class="section" id="deploying-the-documentation">
-<span id="deploying-the-documentation"></span><h3>Deploying the Documentation<a class="headerlink" href="#deploying-the-documentation" title="Permalink to this headline">¶</a></h3>
+<p>The dependencies will be installed and the documentation will be built and compiled into the <code class="docutils literal"><span class="pre">/documentation/build/html/en</span></code> directory. Feel free to preview the documentation before pushing changes live to the site.</p>
 <p>When you are happy with the changes, the documentation can be deployed using:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ grunt docs-deploy
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ grunt deploy-docs
 </pre></div>
 </div>
-<p>Once the task is complete your changes should immediately be visible at https://godaddy.github.io/wp-primer-theme/index.html</p>
-</div>
+<p>Once completed your changes should immediately be visible at <a class="reference external" href="https://godaddy.github.io/wp-primer-theme/index.html">https://godaddy.github.io/wp-primer-theme/index.html</a></p>
 </div>
 </div>
 
@@ -404,7 +367,7 @@
             <div class="col-md-12 text-center mt30">
                 <p class="copyright">
                             &copy; Copyright 2017, GoDaddy, Inc.
-                        Last updated on Jan 30, 2017.
+                        Last updated on Feb 01, 2017.
                         Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.4.5.
                 </p>
             </div>
