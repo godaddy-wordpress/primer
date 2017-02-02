@@ -2,10 +2,12 @@
 /**
  * Customizer Colors functionality.
  *
- * @package Primer
- * @since   1.0.0
+ * @class    Primer_Customizer_Colors
+ * @package  Primer/Classes/Customizer
+ * @category Class
+ * @author   GoDaddy
+ * @since    1.0.0
  */
-
 class Primer_Customizer_Colors {
 
 	/**

@@ -2,10 +2,12 @@
 /**
  * Customizer Fonts functionality.
  *
- * @package Primer
- * @since   1.0.0
+ * @class    Primer_Customizer_Fonts
+ * @package  Primer/Classes/Customizer
+ * @category Class
+ * @author   GoDaddy
+ * @since    1.0.0
  */
-
 class Primer_Customizer_Fonts {
 
 	/**

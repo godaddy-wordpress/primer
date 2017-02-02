@@ -2,8 +2,11 @@
 /**
  * Additional site identity customizer options.
  *
- * @package Primer
- * @since   NEXT
+ * @class    Primer_Site_Identity_Options
+ * @package  Primer/Classes/Customizer
+ * @category Class
+ * @author   GoDaddy
+ * @since    NEXT
  */
 
 class Primer_Site_Identity_Options {

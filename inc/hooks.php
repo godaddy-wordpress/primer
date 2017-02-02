@@ -2,8 +2,10 @@
 /**
  * Custom actions for this theme.
  *
- * @package Primer
- * @since   1.0.0
+ * @package  Primer/Functions
+ * @category Core
+ * @author   GoDaddy
+ * @since    1.0.0
  */
 
 /**

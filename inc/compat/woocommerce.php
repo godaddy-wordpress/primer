@@ -2,8 +2,10 @@
 /**
  * WooCommerce compatibility.
  *
- * @package Primer
- * @since   1.0.0
+ * @package  Primer/Compatibility
+ * @category Core
+ * @author   GoDaddy
+ * @since    1.0.0
  */
 
 /**

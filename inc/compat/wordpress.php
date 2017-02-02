@@ -6,8 +6,10 @@
  * this theme is not meant to be backward compatible beyond two
  * major versions and relies on many newer functions and markup.
  *
- * @package Primer
- * @since   1.0.0
+ * @package  Primer/Compatibility
+ * @category Core
+ * @author   GoDaddy
+ * @since    1.0.0
  */
 
 /**

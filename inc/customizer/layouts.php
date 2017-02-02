@@ -2,10 +2,12 @@
 /**
  * Customizer Layouts functionality.
  *
- * @package Primer
- * @since   1.0.0
+ * @class    Primer_Customizer_Layouts
+ * @package  Primer/Classes/Customizer
+ * @category Class
+ * @author   GoDaddy
+ * @since    1.0.0
  */
-
 class Primer_Customizer_Layouts {
 
 	/**
