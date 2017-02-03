@@ -231,6 +231,18 @@ function primer_wc_product_classes( $classes ) {
 function primer_wc_colors( $colors ) {
 
 	$wc_colors = array(
+		'primary_text_color' => array(
+			'css' => array(
+				'ul.cart_list li.mini_cart_item a:nth-child(2)' => array(
+					'color' => '%1$s',
+				),
+			),
+			'rgba_css' => array(
+				'ul.cart_list li.mini_cart_item a:nth-child(2):hover' => array(
+					'color' => 'rgba(%1$s, 0.8)',
+				),
+			),
+		),
 		'button_color' => array(
 			'css' => array(
 				'.woocommerce button.button.alt,
@@ -270,6 +282,13 @@ function primer_wc_colors( $colors ) {
 				.woocommerce #respond input#submit, .woocommerce #respond input#submit:hover,
 				.woocommerce .product span.onsale' => array(
 					'color' => '%1$s',
+				),
+			),
+		),
+		'content_background_color' => array(
+			'css' => array(
+				'li.primer-wc-cart-menu .primer-wc-cart-sub-menu' => array(
+					'background-color' => '%1$s',
 				),
 			),
 		),

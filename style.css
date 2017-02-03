@@ -2279,10 +2279,8 @@ ul.cart_list li.mini_cart_item a:nth-child(2) {
   padding: 1rem 0 5px 1.75rem;
   width: 100%;
   opacity: 1;
-  transition: opacity .25s ease-out;
-  -moz-transition: opacity .25s ease-out;
   -webkit-transition: opacity .25s ease-out;
-  -o-transition: opacity .25s ease-out;
+  transition: opacity .25s ease-out;
   margin: 0;
   border: none; }
   ul.cart_list li.mini_cart_item a:nth-child(2):hover {
@@ -2313,6 +2311,9 @@ ul.cart_list li.mini_cart_item a:nth-child(2) {
 
 .footer-menu .primer-wc-cart-menu-item {
   display: none; }
+
+li.primer-wc-cart-menu .primer-wc-cart-sub-menu {
+  background-color: #ffffff; }
 
 @media only screen and (min-width: 61.063em) {
   li.primer-wc-cart-menu .primer-wc-cart-sub-menu {
