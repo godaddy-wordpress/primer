@@ -2,7 +2,7 @@
 /**
  * Custom actions for this theme.
  *
- * @package  Primer/Functions
+ * @package  Hooks
  * @category Core
  * @author   GoDaddy
  * @since    1.0.0

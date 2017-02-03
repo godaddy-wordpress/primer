@@ -1,0 +1,90 @@
+<section id="socials" class="back-3">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-5  social text-center">
+				<div class="col-sm-3 col-xs-3">
+				</div>
+
+				<div class="col-sm-3 col-xs-3">
+					<a class="github-button" href="https://github.com/godaddy/wp-primer-theme" data-icon="octicon-star" data-count-href="/godaddy/wp-primer-theme/stargazers" data-count-api="/repos/godaddy/wp-primer-theme#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star godaddy/wp-primer-theme on GitHub">Star</a>
+				</div>
+
+				<div class="col-sm-3 col-xs-3">
+					<a class="github-button" href="https://github.com/godaddy/wp-primer-theme/fork" data-icon="octicon-repo-forked" data-count-href="/godaddy/wp-primer-theme/network" data-count-api="/repos/godaddy/wp-primer-theme#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork godaddy/wp-primer-theme on GitHub">Fork</a>
+					<script async defer src="https://buttons.github.io/buttons.js"></script>
+				</div>
+
+				<div class="col-sm-3 col-xs-3">
+						<a href="https://twitter.com/GoDaddy" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @GoDaddy</a>
+						<script type="text/javascript">!function(d,s,id) { var js, fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){ js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);} }(document, 'script', 'twitter-wjs');</script>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-3 social-footer text-center">
+				<a href="https://twitter.com/GoDaddy" data-toggle="tooltip" title="Twitter"><i class="fa icon-social fa-twitter"></i>
+				<a href="https://github.com/GoDaddy" data-toggle="tooltip" title="Github"><i class="fa icon-social fa-github"></i></a>
+			</div>
+
+
+		</div>
+	</div>
+</section>
+
+<footer id="footer" class="footer-wrapper">
+	<div class="container">
+		<div class="row col-p30">
+			<div class="col-sm-12 col-md-3">
+				<div class="footer-widget t-footer">
+					<div class="col-md-12">
+						<a href="https://www.openhub.net/p/wp-primer-theme">
+							{var logoImg = 'resources/open-hub.png'}
+							<img alt="OpenHub" src="{$logoImg|staticFile}">
+						</a>
+					</div>
+					<br />
+					<br />
+					<div class="col-md-12">
+						{var gdLogo = 'resources/godaddy-logo-white.png'}
+							<a href="https://www.godaddy.com">
+								<img alt="GoDaddy Logo" src="{$gdLogo|staticFile}">
+							</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-9">
+				<div class="col-md-3 col-sm-6 business-solution">
+					<ul class="footer-menu">
+						{include 'menu/business-solutions.html'}
+					</ul>
+				</div>
+
+				<div class="col-md-3 col-sm-6">
+					<ul class="footer-menu">
+						{include 'menu/footer-documentation.html'}
+					</ul>
+				</div>
+
+				<div class="col-md-3 col-sm-6">
+					<ul class="footer-menu">
+						{include 'menu/community.html'}
+					</ul>
+				</div>
+
+				<div class="col-md-3 col-sm-6">
+					<ul class="footer-menu">
+						{include 'menu/help.html'}
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 text-center mt30">
+				<p class="copyright">
+					© Copyright 2017, GoDaddy, Inc. Generated using <a href="http://sphinx.pocoo.org/">Sphinx</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>

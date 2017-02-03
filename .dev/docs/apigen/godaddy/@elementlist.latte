@@ -1,0 +1,58 @@
+{*
+ApiGen 3.0dev - API documentation generator for PHP 5.3+
+
+Copyright (c) 2010-2011 David Grudl (http://davidgrudl.com)
+Copyright (c) 2011-2012 Jaroslav Hanslík (https://github.com/kukulich)
+Copyright (c) 2011-2012 Ondřej Nešpor (https://github.com/Andrewsville)
+
+For the full copyright and license information, please view
+the file LICENSE.md that was distributed with this source code.
+*}
+{define #elements}
+<li n:foreach="$elements as $element">
+	<h5><a href="{$element|elementUrl}" n:class="$element->deprecated ? deprecated, !$element->valid ? invalid">{if $namespace}{$element->shortName}{else}{$element->name}{/if}</a></h5>
+	<p>{$element|shortDescription|noescape}</p>
+</li>
+{/define}
+
+<div class="section" n:if="$classes">
+	<h3>Class summary</h3>
+	<ul class="summary-list">
+	{include #elements, elements => $classes}
+	</ul>
+</div>
+
+<div class="section" n:if="$interfaces">
+	<h3>Interface summary</h3>
+	<ul class="summary-list">
+	{include #elements, elements => $interfaces}
+	</ul>
+</div>
+
+<div class="section" n:if="$traits">
+	<h3>Traits summary</h3>
+	<ul class="summary-list">
+	{include #elements, elements => $traits}
+	</ul>
+</div>
+
+<div class="section" n:if="$exceptions">
+	<h3>Exception summary</h3>
+	<ul class="summary-list">
+	{include #elements, elements => $exceptions}
+	</ul>
+</div>
+
+<div class="section" n:if="$constants">
+	<h3>Constant summary</h3>
+	<ul class="summary-list">
+	{include #elements, elements => $constants}
+	</ul>
+</div>
+
+<div class="section" n:if="$functions">
+	<h3>Function summary</h3>
+	<ul class="summary-list">
+	{include #elements, elements => $functions}
+	</ul>
+</div>

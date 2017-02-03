@@ -3,7 +3,7 @@
  * Customizer bootstrap.
  *
  * @class    Primer_Customizer
- * @package  Primer/Classes/Customizer
+ * @package  Classes/Customizer
  * @category Class
  * @author   GoDaddy
  * @since    1.0.0

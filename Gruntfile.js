@@ -305,7 +305,7 @@ module.exports = function( grunt ) {
 				'cd .dev/docs/apigen',
 				'php contributor-list.php',
 				'php hook-docs.php',
-				'php file-headers.php',
+				// 'php file-headers.php',
 			].join( ' && ' ),
 			deploy_docs: [
 				'cd .dev/docs/build/html/en',

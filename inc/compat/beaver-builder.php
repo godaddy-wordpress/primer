@@ -2,10 +2,11 @@
 /**
  * Beaver Builder compatibility.
  *
- * @package  Primer/Compatibility
- * @category Core
- * @author   GoDaddy
- * @since    1.0.0
+ * @package    Compatibility
+ * @subpackage BeaverBuilder
+ * @category   Core
+ * @author     GoDaddy
+ * @since      1.0.0
  */
 
 /**

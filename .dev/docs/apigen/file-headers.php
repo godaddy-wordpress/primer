@@ -1,12 +1,21 @@
 <?php
 /**
- * Generate documentation for hooks in Primer
+ * Generate documentation headers
+ *
+ * @since 1.0.0
  */
 class Primer_File_Headers {
 
+	/**
+	 * Append the headers onto the generated files
+	 *
+	 * @since 1.0.0
+	 */
 	public static function append_headers() {
 
 		$html = file_get_contents( '../build/html/en/404.html' );
+
+		$html = str_replace( '<title>Not Found</title>', '<title>Primer Documentation</title>', $html );
 
 		$header = explode( '<div class="container page-container">', str_replace( '_static/', '../_static/', $html ) );
 

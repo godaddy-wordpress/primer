@@ -3,7 +3,7 @@
  * Customizer Layouts functionality.
  *
  * @class    Primer_Customizer_Layouts
- * @package  Primer/Classes/Customizer
+ * @package  Classes/Customizer
  * @category Class
  * @author   GoDaddy
  * @since    1.0.0

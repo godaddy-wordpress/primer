@@ -19,7 +19,8 @@ exclude:
 templateTheme: default
 
 # template config location
-templateConfig: .dev/docs/apigen/theme-godaddy/config.neon
+# templateConfig: .dev/docs/apigen/theme-godaddy/config.neon
+templateConfig: .dev/docs/apigen/godaddy/config.neon
 
 # list of scanned file extensions (e.g. php5, php...)
 extensions: [php]

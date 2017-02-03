@@ -3,7 +3,7 @@
  * Customizer Colors functionality.
  *
  * @class    Primer_Customizer_Colors
- * @package  Primer/Classes/Customizer
+ * @package  Classes/Customizer
  * @category Class
  * @author   GoDaddy
  * @since    1.0.0

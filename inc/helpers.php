@@ -2,7 +2,7 @@
 /**
  * Custom helper functions for this theme.
  *
- * @package  Primer/Functions
+ * @package  Functions
  * @category Core
  * @author   GoDaddy
  * @since    1.0.0

@@ -1,0 +1,176 @@
+{* Red Mega Menu *}
+<header class="nav-down">
+	<div class="container-fluid hidden-xs hidden-sm">
+		<div class="row">
+			<div class="col-sm-3 col-md-3">
+				<a class="logo-godaddy" href="http://cakephp.org">
+					{var logoImg = 'resources/godaddy-logo.png'}
+					<img alt="CakePHP" src="{$logoImg|staticFile}">
+				</a>
+			</div>
+
+			<div class="col-sm-9 col-md-9">
+				<nav class="navbar-right" id="cake-nav">
+					<ul class="menu">
+						<li class="first">
+							<a href="#"><i class="fa fa-menu fa-chevron-down"></i>Documentation</a>
+							<ul class="submenu">
+								{include 'menu/documentation.html'}
+							</ul>
+						</li>
+
+						<li><a href="contributors.html">Contributors</a></li>
+
+						<li>
+							<a href="#"><i class="fa fa-menu fa-chevron-down"></i>Community</a>
+							<div class="megamenu full">
+								<div class="row">
+									<div class="col-6 pl30">
+										<ul class="megamenu-list">
+											{include 'menu/community.html'}
+										</ul>
+									</div>
+									<div class="col-6 pl30">
+										<ul class="megamenu-list">
+											{include 'menu/help.html'}
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	{* Mobile responsive header *}
+	<div class="container-fluid hidden-md hidden-lg">
+		<div class="row">
+			<div class="col-sm-6 col-xs-6">
+				<a class="logo-cake" href="http://cakephp.org">
+					{var logoImg = 'resources/logo-cake.png'}
+					<img alt="CakePHP" src="{$logoImg|staticFile}">
+				</a>
+			</div>
+
+			<div class="col-sm-6 col-xs-6">
+				<div class="navbar-right">
+					<button id="btn-menu" class="btn-menu" data-toggle="modal" data-target="#modal">
+						<i class="fa fa-bars toggle-modal"></i>
+					</button>
+				</div>
+				<div id="wrap">
+					<form class="search" method="get">
+						<input type="hidden" name="ie" value="UTF-8">
+						<input type="search" name="q" placeholder="What are you looking for?">
+						<input id="search_submit" value="Search" type="submit">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{* Grey site bar *}
+	<section id="nav-cook" class="hidden-xs hidden-sm">
+		<div class="container-fluid ">
+			<div class="row back-book">
+				<div class="col-md-3 t-api-title hidden-sm hidden-xs">
+					<h2>
+						{var $activeVersion = $config->template->options->activeVersion}
+						<a href="../{$activeVersion}/">
+							<span class="glyph_range icon-submenu icon-submenu-cook">B</span>
+							{$config->title} {$activeVersion}
+							{if preg_match('/^3.*$/', $activeVersion) }{/if}
+							<strong>API</strong>
+						</a>
+					</h2>
+				</div>
+
+				<div class="col-md-5 t-api-nav p0">
+					<ul class="navigation">
+						<li n:class="'overview' === $active ? active, t-api-nav-el">
+							<a n:tag-if="'overview' !== $active" href="index.html" title="Overview">
+							<i class="fa fa-eye"></i><span>Overview</span></a>
+						</li>
+						<li n:class="'tree' === $active ? active, t-api-nav-el" n:if="$config->tree">
+							<a n:tag-if="'tree' !== $active" href="tree.html" title="Tree view of classes, interfaces, traits and exceptions">
+							<i class="fa fa-align-left"></i><span>Tree</span></a>
+						</li>
+						{foreach $annotationGroups as $annotationgrp}
+							<li n:class="$active === 'annotation-group-' . $annotationgrp ? active, t-api-nav-el">
+								<a n:tag-if="$active !== 'annotation-group-' . $annotationgrp" href="annotation-group-{$annotationgrp}.html" title="List of elements with {$annotationgrp} annotation">
+								<i n:tag-if="'deprecated' === $annotationgrp" class="fa fa-trash"></i><span>{$annotationgrp|firstUpper}</span></a>
+							</li>
+						{/foreach}
+
+						{* Version picker *}
+						<li class="version-picker">
+							<h6>Version:</h6>
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									{var $versions = $config->template->options->versions}
+									{var $activeVersion = $config->template->options->activeVersion}
+									{if $activeVersion != 'master' && !empty($versions)}
+										<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+											{$activeVersion} <i class="fa fa-menu-en fa-chevron-down"></i>
+										</a>
+										<ul class="dropdown-menu">
+											{foreach $versions as $ver}
+												<li><a href="../{$ver}">{$ver}</a></li>
+											{/foreach}
+										</ul>
+									{/if}
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 pull-right hidden-sm search-cook p0">
+					<form class="search" method="get">
+						<div class="col-md-10 p0">
+							<input class="form-control form-cook" autocomplete="off" type="search" name="q" size="18" placeholder='API Search' />
+						</div>
+						<div class="col-md-2 p0">
+							<button type="submit">
+								<span class="glyph_range icon-submenu icon-submenu-cook">A</span>
+							</button>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</section>
+</header>
+
+{* Responsive grey bar navigation. This is outside of header so it scrolls with the page. *}
+<section class="nav-btn visible-sm visible-xs">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-xs-6 text-center">
+				<button id="btn-nav" class="btn btn-b btn-nav" data-toggle="modal" data-target="#modal"><strong>Navigation</strong></button>
+			</div>
+
+			<div class="col-sm-6 col-xs-6 text-center">
+				<button id="btn-toc" class="btn btn-b btn-nav" data-toggle="modal" data-target="#modal"><strong>Class Navigation</strong></button>
+			</div>
+		</div>
+	</div>
+</section>
+
+{* modal used in mobile responsive views *}
+<div id="modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-header">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title-cookbook" id="modal-header">{* header text injected via js *}</h4>
+			</div>
+			<div class="modal-body">{* body is injected via js *}</div>
+		</div>
+	</div>
+</div>

@@ -3,7 +3,7 @@
  * Additional site identity customizer options.
  *
  * @class    Primer_Site_Identity_Options
- * @package  Primer/Classes/Customizer
+ * @package  Classes/Customizer
  * @category Class
  * @author   GoDaddy
  * @since    NEXT

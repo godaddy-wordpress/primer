@@ -3,7 +3,7 @@
  * Customizer Fonts functionality.
  *
  * @class    Primer_Customizer_Fonts
- * @package  Primer/Classes/Customizer
+ * @package  Classes/Customizer
  * @category Class
  * @author   GoDaddy
  * @since    1.0.0
