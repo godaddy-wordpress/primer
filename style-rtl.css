@@ -461,7 +461,8 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
+textarea,
+.select2-container .select2-choice {
   color: rgba(37, 37, 37, 0.5);
   border: 1px solid rgba(37, 37, 37, 0.1);
   -webkit-border-radius: 3px;
@@ -484,9 +485,19 @@ textarea {
   input[type="datetime"]:focus,
   input[type="datetime-local"]:focus,
   input[type="color"]:focus,
-  textarea:focus {
+  textarea:focus,
+  .select2-container .select2-choice:focus {
     color: #252525;
     background-color: rgba(255, 255, 255, 0.75); }
+
+.select2-container .select2-choice {
+  padding: 0.42rem 0.75rem; }
+
+.select2-drop-active,
+.select2-drop.select2-drop-above.select2-drop-active,
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+  border-color: rgba(37, 37, 37, 0.1); }
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -2278,6 +2289,9 @@ ul.cart_list li.mini_cart_item a:nth-child(2) {
     background: inherit;
     color: #545454;
     opacity: .85; }
+
+.woocommerce form .form-row .required {
+  text-decoration: none; }
 
 .woocommerce ul.product_list_widget li .quantity {
   padding-right: 7px;

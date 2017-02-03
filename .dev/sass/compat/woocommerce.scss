@@ -126,6 +126,10 @@ ul.cart_list li.mini_cart_item a:nth-child(2) {
 
 }
 
+.woocommerce form .form-row .required {
+	text-decoration: none;
+}
+
 .woocommerce ul.product_list_widget li .quantity {
 	padding-left: 7px;
 	font-style: italic;
