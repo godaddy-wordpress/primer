@@ -248,8 +248,8 @@ function primer_wc_colors( $colors ) {
 				.woocommerce a.button.alt,
 				.woocommerce #respond input#submit,
 				.woocommerce .product span.onsale,
-				#primer-cart-menu-item .widget_shopping_cart p.buttons a,
-				#primer-cart-menu-item .widget_shopping_cart p.buttons a:visited,
+				.primer-wc-cart-menu .widget_shopping_cart p.buttons a,
+				.primer-wc-cart-menu .widget_shopping_cart p.buttons a:visited,
 				ul.products a.button,
 				ul.products a.button:visited' => array(
 					'background-color' => '%1$s',
@@ -262,7 +262,7 @@ function primer_wc_colors( $colors ) {
 				.woocommerce a.button:hover, .woocommerce a.button:active, .woocommerce a.button:focus,
 				.woocommerce a.button.alt:hover, .woocommerce a.button.alt:active, .woocommerce a.button.alt:focus,
 				.woocommerce #respond input#submit:hover,
-				#primer-cart-menu-item .widget_shopping_cart p.buttons a:hover,
+				.primer-wc-cart-menu .widget_shopping_cart p.buttons a:hover,
 				a.button:hover,
 				ul.products .button:hover, ul.products .button:active, ul.products .button:focus' => array(
 					'background-color' => 'rgba(%1$s, 0.8)',
@@ -525,31 +525,40 @@ function primer_wc_cart_menu( $items, $args ) {
 
 	global $woocommerce;
 
-	$sub_menu = ( $woocommerce->cart->get_cart_contents_count() ) ? sprintf(
-		'<ul class="sub-menu">
-			<li id="primer-cart-menu-item" class="menu-item primer-cart-menu-item empty-cart">%1$s</li>
-		</ul>',
-		primer_get_the_widget( 'WC_Widget_Cart' )
-	) : '';
+	$sub_menu = '';
+	$classes  = array( 'menu-item', 'menu-item-type-nav_menu_item', 'menu-item-object-cart' );
 
-	$cart_menu = sprintf(
-		'<li id="primer-cart-menu-item" class="%1$s menu-item menu-item-type-nav_menu_item menu-item-object-cart primer-cart-menu-item">
+	if ( $woocommerce->cart->get_cart_contents_count() ) {
+
+		$sub_menu = sprintf(
+			'<ul class="sub-menu primer-wc-cart-sub-menu">
+				<li class="primer-wc-cart-sub-menu-item">%s</li>
+			</ul>',
+			primer_get_the_widget( 'WC_Widget_Cart' ) // xss ok
+		);
+
+		$classes[] = 'menu-item-has-children';
+
+	}
+
+	$cart_menu_item = sprintf(
+		'<li class="primer-wc-cart-menu primer-wc-cart-menu-item %s">
 			<a>
 				<span class="cart-preview-total">
-					<span class="woocommerce-price-amount amount">%2$s</span>
+					<span class="woocommerce-price-amount amount">%s</span>
 				</span>
-				<span class="cart-preview-count">%3$s</span>
+				<span class="cart-preview-count">%s</span>
 			</a>
 			<a class="expand" href="#"></a>
-			%4$s
+			%s
 		</li>',
-		( $woocommerce->cart->get_cart_contents_count() ) ? 'menu-item-has-children' : '',
-		$woocommerce->cart->get_cart_total(),
-		esc_html( sprintf( _n( '%s item', '%s items', $woocommerce->cart->get_cart_contents_count(), 'primer' ), $woocommerce->cart->get_cart_contents_count() ) ),
-		$sub_menu
+		implode( ' ', array_map( 'esc_attr', $classes ) ), // xss ok
+		$woocommerce->cart->get_cart_total(), // xss ok
+		esc_html( sprintf( _n( '%d item', '%d items', $woocommerce->cart->get_cart_contents_count(), 'primer' ), $woocommerce->cart->get_cart_contents_count() ) ),
+		$sub_menu // xss ok
 	);
 
-	return $items . $cart_menu;
+	return $items . $cart_menu_item;
 
 }
 
