@@ -2275,7 +2275,7 @@ ul.cart_list li.mini_cart_item img {
   max-width: 55px; }
 
 ul.cart_list li.mini_cart_item a:nth-child(2) {
-  color: #333;
+  color: #252525;
   padding: 1rem 1.75rem 5px 0;
   width: 100%;
   opacity: 1;
@@ -2287,8 +2287,7 @@ ul.cart_list li.mini_cart_item a:nth-child(2) {
   border: none; }
   ul.cart_list li.mini_cart_item a:nth-child(2):hover {
     background: inherit;
-    color: #545454;
-    opacity: .85; }
+    color: rgba(37, 37, 37, 0.8); }
 
 .woocommerce form .form-row .required {
   text-decoration: none; }
