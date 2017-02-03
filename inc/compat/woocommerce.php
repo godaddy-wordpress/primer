@@ -145,7 +145,7 @@ function primer_wc_shop_title( $title ) {
 add_filter( 'primer_the_page_title', 'primer_wc_shop_title' );
 
 /**
- * Filter the number of WooCommerce shop columns
+ * Filter the number of WooCommerce shop columns.
  *
  * @filter loop_shop_columns
  * @filter woocommerce_related_products_columns
@@ -195,7 +195,7 @@ function primer_wc_product_classes( $classes ) {
 	global $post, $woocommerce_loop;
 
 	/**
-	 * Check if on the WooCommerce shop page, and the post type is 'product'
+	 * Check if on the WooCommerce shop page, and the post type is `product`.
 	 *
 	 * @var bool
 	 */
@@ -203,7 +203,7 @@ function primer_wc_product_classes( $classes ) {
 
 	/**
 	 * Check if on single product page, in upsell or related product loop
-	 * and the post type is 'product'
+	 * and the post type is `product`.
 	 *
 	 * @var bool
 	 */
