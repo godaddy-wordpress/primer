@@ -2461,6 +2461,10 @@ pre::-webkit-scrollbar-thumb:horizontal {
     font-weight: bold;
 }
 
+li.active.t-api-nav-el {
+   color: #ff8a00;
+}
+
 #groups a {
     position:relative;
 }
