@@ -1,630 +1,637 @@
-
-
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Primer Documentation</title>
-    <link href="../_static/favicon.png" type="image/png" rel="icon" />
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex">
 
-    
-    <link rel="stylesheet" href="../_static/css/app.css" type="text/css" />
-    
-    <script type="text/javascript" src="../_static/app.js"></script>
+	<title>File inc/customizer.php | Primer Theme</title>
 
-    
+	<link href="resources/favicon.png?ae6b9b73563f359562b7a4d356903cd68bdaa887" type="image/png" rel="icon">
+	<link href="resources/favicon.png?ae6b9b73563f359562b7a4d356903cd68bdaa887" type="image/png" rel="shortcut icon">
+	<link rel="stylesheet" type="text/css" href="resources/css/font-awesome.min.css?12d6861075de8e293265ff6ff03b1f3adcb44c76">
+	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css?4cf1ebacd5d9ed77cfdde569db191675add8bd1b">
+	<link rel="stylesheet" type="text/css" href="resources/css/styles.css?965b639cc0feb73e4401c46795b5322fab074cda">
+	<link rel="stylesheet" type="text/css" href="resources/css/responsive.css?7eb614a15c031e4e367138caaf01e48f339e5cda">
 
-    <link rel="search" type="application/opensearchdescription+xml" title="Search within Primer Theme Documentation 1.x documentation" href="../_static/opensearchdescription-book-3-x.xml">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="top" title="Primer Theme Documentation 1.x documentation" href="index.html" />
+	<script type="text/javascript" src="resources/combined.js?27cd1966d9aea5a88b93c275e9bd9491710548be"></script>
+	<script type="text/javascript" src="elementlist.js?60f48ca101b2567c2ccdc5f078e5ed4f3e00ecec"></script>
 
-    <script type="text/javascript">
-    window.lang = "en";
-    </script>
-  </head>
-  <body>
+
+
+</head>
+
+<body>
 
 <div id="container">
-    
-    <header class="nav-down">
-        <div class="container-fluid hidden-xs hidden-sm">
-            <div class="row">
-                <div class="col-sm-3 col-md-3">
-                    <a class="logo-godaddy" href="https://godaddy.github.io/wp-primer-theme/intro.html">
-                        <img src="../_static/godaddy-logo.png" alt="GoDaddy" />
-                    </a>
-                </div>
+<header class="nav-down">
+	<div class="container-fluid hidden-xs hidden-sm">
+		<div class="row">
+			<div class="col-sm-3 col-md-3">
+				<a class="logo-godaddy" href="http://cakephp.org">
+					<img alt="CakePHP" src="resources/godaddy-logo.png?f99b9ab6703faadbd2f67d212cd8176592b1feb9">
+				</a>
+			</div>
 
-                <div class="col-sm-9 col-md-9">
-                    <nav class="navbar-right">
-                        <ul class="menu">
-                            <li class="first">
-                                <a href="#"><i class="fa fa-menu fa-chevron-down"></i>Documentation</a>
-                                <ul class="submenu">
-                                    
+			<div class="col-sm-9 col-md-9">
+				<nav class="navbar-right" id="cake-nav">
+					<ul class="menu">
+						<li class="first">
+							<a href="#"><i class="fa fa-menu fa-chevron-down"></i>Documentation</a>
+							<ul class="submenu">
 <li><a href="https://godaddy.github.io/wp-primer-theme/intro.html"><i class="fa fa-menu fa-chevron-right"></i>Wiki</a></li>
 <li><a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html"><i class="fa fa-menu fa-chevron-right"></i>Documentation</a></li>
 <li><a href="https://godaddy.github.io/wp-primer-theme/how-to.html"><i class="fa fa-menu fa-chevron-right"></i>Tutorials</a></li>
 <li><a href="https://godaddy.github.io/wp-primer-theme/license.html"><i class="fa fa-menu fa-chevron-right"></i>License</a></li>
 <li><a href="https://godaddy.github.io/wp-primer-theme/changelog.html"><i class="fa fa-menu fa-chevron-right"></i>Changelog</a></li>
-                                </ul>
-                            </li>
+							</ul>
+						</li>
 
-                            <li><a href="contributors.html">Contributors</a></li>
+						<li><a href="contributors.html">Contributors</a></li>
 
-                            <li>
-                                <a href="#"><i class="fa fa-menu fa-chevron-down"></i>Community</a>
-                                <div class="megamenu full">
-                                    <div class="row">
-                                        <div class="col-6 pl30">
-                                            <ul class="megamenu-list">
-                                                
+						<li>
+							<a href="#"><i class="fa fa-menu fa-chevron-down"></i>Community</a>
+							<div class="megamenu full">
+								<div class="row">
+									<div class="col-6 pl30">
+										<ul class="megamenu-list">
 <li class="menu-title"><i class="fa fa-menu-title fa-users"></i>Community</li>
 
 <li><a href="https://aboutus.godaddy.net/about-us/default.aspx"><i class="fa fa-menu fa-chevron-right"></i>About Us</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-6 pl30">
-                                            <ul class="megamenu-list">
-                                                
+										</ul>
+									</div>
+									<div class="col-6 pl30">
+										<ul class="megamenu-list">
 <li class="menu-title"><i class="fa fa-menu-title fa-comments-o"></i>Help &amp; Support</li>
 
 <li><a href="https://github.com/godaddy/wp-primer-theme/issues"><i class="fa fa-menu fa-github"></i>GitHub</a></li>
 <li><a href="https://wordpress.org/support/theme/primer"><i class="fa fa-menu fa-wordpress"></i>WordPress</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
 
-        
-        <div class="container-fluid hidden-md hidden-lg">
-            <div class="row">
-                <div class="col-sm-6 col-xs-6">
-                    <a class="logo-godaddy" href="https://godaddy.github.io/wp-primer-theme/intro.html">
-                        <img src="../_static/godaddy-logo.png" alt="GoDaddy" />
-                    </a>
-                </div>
+		<div class="container-fluid hidden-md hidden-lg">
+		<div class="row">
+			<div class="col-sm-6 col-xs-6">
+				<a class="logo-cake" href="http://cakephp.org">
+					<img alt="CakePHP" src="resources/logo-cake.png">
+				</a>
+			</div>
 
-                <div class="col-sm-6 col-xs-6">
-                    <div class="navbar-right">
-                        <button id="btn-menu" class="btn-menu" data-toggle="modal" data-target="#modal">
-                            <i class="fa fa-bars toggle-modal"></i>
-                        </button>
-                    </div>
-                    <div id="wrap">
-                        <form class="search" action="search.html" method="get">
-                            <input name="q" type="search" placeholder="What are you looking for?">
-                            <input id="search_submit" value="Search" type="submit">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+			<div class="col-sm-6 col-xs-6">
+				<div class="navbar-right">
+					<button id="btn-menu" class="btn-menu" data-toggle="modal" data-target="#modal">
+						<i class="fa fa-bars toggle-modal"></i>
+					</button>
+				</div>
+				<div id="wrap">
+					<form class="search" method="get">
+						<input type="hidden" name="ie" value="UTF-8">
+						<input type="search" name="q" placeholder="What are you looking for?">
+						<input id="search_submit" value="Search" type="submit">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
-        
-        <section id="nav-cook" class="hidden-xs hidden-sm">
-            <div class="container-fluid ">
-                <div class="row ">
-                    <div class="col-md-12 back-book">
-                        <div class="col-md-5 text-center t-cook-nav p0 hidden-sm hidden-xs">
-                            <h2>
-                                <a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html">
-                                    <span class="glyph_range icon-submenu icon-submenu-cook">B</span>
-                                    Primer Theme v1.4.1 <strong>Documentation</strong>
-                                </a>
-                            </h2>
-                        </div>
+		<section id="nav-cook" class="hidden-xs hidden-sm">
+		<div class="container-fluid ">
+			<div class="row back-book">
+				<div class="col-md-3 t-api-title hidden-sm hidden-xs">
+					<h2>
+						<a href="../1.4.1/">
+							<span class="glyph_range icon-submenu icon-submenu-cook">B</span>
+							Primer Theme 1.4.1
+							
+							<strong>API</strong>
+						</a>
+					</h2>
+				</div>
 
-                        <div class="col-md-4 pull-right hidden-sm">
-                            <form class="search" action="search.html" method="get">
-                                <input type="hidden" name="check_keywords" value="yes" />
-                                <input type="hidden" name="area" value="default" />
+				<div class="col-md-5 t-api-nav p0">
+					<ul class="navigation">
+						<li class="t-api-nav-el">
+							<a href="index.html" title="Overview">
+							<i class="fa fa-eye"></i><span>Overview</span></a>
+						</li>
+						<li class="t-api-nav-el">
+							<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions">
+							<i class="fa fa-align-left"></i><span>Tree</span></a>
+						</li>
+							<li class="t-api-nav-el">
+								<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<i class="fa fa-trash"></i><span>Deprecated</span></a>
+							</li>
+							<li class="t-api-nav-el">
+								<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+<span>Todo</span></a>
+							</li>
 
-                                <div class="col-md-10 p0">
-                                    <input class="form-control form-cook" autocomplete="off" type="search" name="q" size="18" placeholder='Documentation Search' />
-                                </div>
-                                <div class="col-md-2 p0 search-cook">
-                                    <button type="submit">
-                                        <span class="glyph_range icon-submenu icon-submenu-cook">A</span>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </header>
+												<li class="version-picker">
+							<h6>Version:</h6>
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+											1.4.1 <i class="fa fa-menu-en fa-chevron-down"></i>
+										</a>
+										<ul class="dropdown-menu">
+												<li><a href="../1.4.1">1.4.1</a></li>
+										</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 
-    
-    <section class="nav-btn visible-sm visible-xs">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-xs-6 text-center">
-                    <button id="btn-nav" class="btn btn-b btn-nav" data-toggle="modal" data-target="#modal"><strong>Nav</strong></button>
-                </div>
-
-                <div class="col-sm-6 col-xs-6 text-center">
-                    <button id="btn-toc" class="btn btn-b btn-nav" data-toggle="modal" data-target="#modal"><strong>Table of Contents</strong></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <div id="modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-header">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title-documentation" id="modal-header"></h4>
-                </div>
-                <div class="modal-body"></div>
-            </div>
-        </div>
-    </div>
-
-
-<div class="container page-container">
-
-	<div class="row">
-
-		<div class="col-sm-12 col-md-9 col-md-push-3 space-left push-off">
-
-			<div class="document-body">
-
-				<div class="section" id="welcome">
-
-					<div id="splitter"></div>
-
-					<div id="right">
-
-						<div id="rightInner">
-
-<div id="source">
-	<pre class="numbers"><code><span class="l"><a href="#1">  1 </a></span><span class="l"><a href="#2">  2 </a></span></span><span class="l"><a href="#3">  3 </a></span></span><span class="l"><a href="#4">  4 </a></span></span><span class="l"><a href="#5">  5 </a></span></span><span class="l"><a href="#6">  6 </a></span></span><span class="l"><a href="#7">  7 </a></span></span><span class="l"><a href="#8">  8 </a></span></span><span class="l"><a href="#9">  9 </a></span></span><span class="l"><a href="#10"> 10 </a></span><span class="l"><a href="#11"> 11 </a></span><span class="l"><a href="#12"> 12 </a></span><span class="l"><a href="#13"> 13 </a></span></span><span class="l"><a href="#14"> 14 </a></span></span><span class="l"><a href="#15"> 15 </a></span></span><span class="l"><a href="#16"> 16 </a></span></span><span class="l"><a href="#17"> 17 </a></span><span class="l"><a href="#18"> 18 </a></span><span class="l"><a href="#19"> 19 </a></span><span class="l"><a href="#20"> 20 </a></span></span><span class="l"><a href="#21"> 21 </a></span></span><span class="l"><a href="#22"> 22 </a></span><span class="l"><a href="#23"> 23 </a></span><span class="l"><a href="#24"> 24 </a></span><span class="l"><a href="#25"> 25 </a></span><span class="l"><a href="#26"> 26 </a></span><span class="l"><a href="#27"> 27 </a></span></span><span class="l"><a href="#28"> 28 </a></span></span><span class="l"><a href="#29"> 29 </a></span></span><span class="l"><a href="#30"> 30 </a></span></span><span class="l"><a href="#31"> 31 </a></span><span class="l"><a href="#32"> 32 </a></span><span class="l"><a href="#33"> 33 </a></span><span class="l"><a href="#34"> 34 </a></span></span><span class="l"><a href="#35"> 35 </a></span></span><span class="l"><a href="#36"> 36 </a></span></span><span class="l"><a href="#37"> 37 </a></span></span><span class="l"><a href="#38"> 38 </a></span><span class="l"><a href="#39"> 39 </a></span><span class="l"><a href="#40"> 40 </a></span><span class="l"><a href="#41"> 41 </a></span></span><span class="l"><a href="#42"> 42 </a></span></span><span class="l"><a href="#43"> 43 </a></span></span><span class="l"><a href="#44"> 44 </a></span></span><span class="l"><a href="#45"> 45 </a></span><span class="l"><a href="#46"> 46 </a></span><span class="l"><a href="#47"> 47 </a></span><span class="l"><a href="#48"> 48 </a></span></span><span class="l"><a href="#49"> 49 </a></span></span><span class="l"><a href="#50"> 50 </a></span></span><span class="l"><a href="#51"> 51 </a></span></span><span class="l"><a href="#52"> 52 </a></span><span class="l"><a href="#53"> 53 </a></span><span class="l"><a href="#54"> 54 </a></span><span class="l"><a href="#55"> 55 </a></span><span class="l"><a href="#56"> 56 </a></span><span class="l"><a href="#57"> 57 </a></span><span class="l"><a href="#58"> 58 </a></span><span class="l"><a href="#59"> 59 </a></span><span class="l"><a href="#60"> 60 </a></span><span class="l"><a href="#61"> 61 </a></span><span class="l"><a href="#62"> 62 </a></span></span><span class="l"><a href="#63"> 63 </a></span></span><span class="l"><a href="#64"> 64 </a></span></span><span class="l"><a href="#65"> 65 </a></span></span><span class="l"><a href="#66"> 66 </a></span></span><span class="l"><a href="#67"> 67 </a></span><span class="l"><a href="#68"> 68 </a></span><span class="l"><a href="#69"> 69 </a></span><span class="l"><a href="#70"> 70 </a></span></span><span class="l"><a href="#71"> 71 </a></span></span><span class="l"><a href="#72"> 72 </a></span></span><span class="l"><a href="#73"> 73 </a></span></span><span class="l"><a href="#74"> 74 </a></span></span><span class="l"><a href="#75"> 75 </a></span></span><span class="l"><a href="#76"> 76 </a></span><span class="l"><a href="#77"> 77 </a></span><span class="l"><a href="#78"> 78 </a></span><span class="l"><a href="#79"> 79 </a></span><span class="l"><a href="#80"> 80 </a></span><span class="l"><a href="#81"> 81 </a></span><span class="l"><a href="#82"> 82 </a></span><span class="l"><a href="#83"> 83 </a></span><span class="l"><a href="#84"> 84 </a></span><span class="l"><a href="#85"> 85 </a></span><span class="l"><a href="#86"> 86 </a></span><span class="l"><a href="#87"> 87 </a></span><span class="l"><a href="#88"> 88 </a></span><span class="l"><a href="#89"> 89 </a></span><span class="l"><a href="#90"> 90 </a></span><span class="l"><a href="#91"> 91 </a></span></span><span class="l"><a href="#92"> 92 </a></span></span><span class="l"><a href="#93"> 93 </a></span></span><span class="l"><a href="#94"> 94 </a></span></span><span class="l"><a href="#95"> 95 </a></span></span><span class="l"><a href="#96"> 96 </a></span></span><span class="l"><a href="#97"> 97 </a></span></span><span class="l"><a href="#98"> 98 </a></span></span><span class="l"><a href="#99"> 99 </a></span></span><span class="l"><a href="#100">100 </a></span><span class="l"><a href="#101">101 </a></span><span class="l"><a href="#102">102 </a></span><span class="l"><a href="#103">103 </a></span><span class="l"><a href="#104">104 </a></span><span class="l"><a href="#105">105 </a></span><span class="l"><a href="#106">106 </a></span><span class="l"><a href="#107">107 </a></span><span class="l"><a href="#108">108 </a></span><span class="l"><a href="#109">109 </a></span><span class="l"><a href="#110">110 </a></span><span class="l"><a href="#111">111 </a></span><span class="l"><a href="#112">112 </a></span><span class="l"><a href="#113">113 </a></span><span class="l"><a href="#114">114 </a></span><span class="l"><a href="#115">115 </a></span><span class="l"><a href="#116">116 </a></span><span class="l"><a href="#117">117 </a></span><span class="l"><a href="#118">118 </a></span><span class="l"><a href="#119">119 </a></span><span class="l"><a href="#120">120 </a></span><span class="l"><a href="#121">121 </a></span><span class="l"><a href="#122">122 </a></span><span class="l"><a href="#123">123 </a></span><span class="l"><a href="#124">124 </a></span><span class="l"><a href="#125">125 </a></span><span class="l"><a href="#126">126 </a></span><span class="l"><a href="#127">127 </a></span><span class="l"><a href="#128">128 </a></span><span class="l"><a href="#129">129 </a></span><span class="l"><a href="#130">130 </a></span><span class="l"><a href="#131">131 </a></span><span class="l"><a href="#132">132 </a></span><span class="l"><a href="#133">133 </a></span></span><span class="l"><a href="#134">134 </a></span></span><span class="l"><a href="#135">135 </a></span></span><span class="l"><a href="#136">136 </a></span></span><span class="l"><a href="#137">137 </a></span></span><span class="l"><a href="#138">138 </a></span><span class="l"><a href="#139">139 </a></span><span class="l"><a href="#140">140 </a></span><span class="l"><a href="#141">141 </a></span><span class="l"><a href="#142">142 </a></span><span class="l"><a href="#143">143 </a></span><span class="l"><a href="#144">144 </a></span><span class="l"><a href="#145">145 </a></span></span><span class="l"><a href="#146">146 </a></span></span><span class="l"><a href="#147">147 </a></span></span><span class="l"><a href="#148">148 </a></span></span><span class="l"><a href="#149">149 </a></span></span><span class="l"><a href="#150">150 </a></span><span class="l"><a href="#151">151 </a></span><span class="l"><a href="#152">152 </a></span><span class="l"><a href="#153">153 </a></span><span class="l"><a href="#154">154 </a></span><span class="l"><a href="#155">155 </a></span><span class="l"><a href="#156">156 </a></span><span class="l"><a href="#157">157 </a></span></span><span class="l"><a href="#158">158 </a></span></span><span class="l"><a href="#159">159 </a></span></span><span class="l"><a href="#160">160 </a></span></span><span class="l"><a href="#161">161 </a></span></span><span class="l"><a href="#162">162 </a></span></span><span class="l"><a href="#163">163 </a></span></span><span class="l"><a href="#164">164 </a></span><span class="l"><a href="#165">165 </a></span><span class="l"><a href="#166">166 </a></span><span class="l"><a href="#167">167 </a></span><span class="l"><a href="#168">168 </a></span><span class="l"><a href="#169">169 </a></span><span class="l"><a href="#170">170 </a></span><span class="l"><a href="#171">171 </a></span><span class="l"><a href="#172">172 </a></span><span class="l"><a href="#173">173 </a></span><span class="l"><a href="#174">174 </a></span><span class="l"><a href="#175">175 </a></span><span class="l"><a href="#176">176 </a></span><span class="l"><a href="#177">177 </a></span><span class="l"><a href="#178">178 </a></span><span class="l"><a href="#179">179 </a></span><span class="l"><a href="#180">180 </a></span><span class="l"><a href="#181">181 </a></span><span class="l"><a href="#182">182 </a></span><span class="l"><a href="#183">183 </a></span><span class="l"><a href="#184">184 </a></span><span class="l"><a href="#185">185 </a></span><span class="l"><a href="#186">186 </a></span><span class="l"><a href="#187">187 </a></span><span class="l"><a href="#188">188 </a></span></span><span class="l"><a href="#189">189 </a></span></span><span class="l"><a href="#190">190 </a></span></span><span class="l"><a href="#191">191 </a></span></span><span class="l"><a href="#192">192 </a></span></span><span class="l"><a href="#193">193 </a></span><span class="l"><a href="#194">194 </a></span><span class="l"><a href="#195">195 </a></span><span class="l"><a href="#196">196 </a></span><span class="l"><a href="#197">197 </a></span><span class="l"><a href="#198">198 </a></span><span class="l"><a href="#199">199 </a></span><span class="l"><a href="#200">200 </a></span><span class="l"><a href="#201">201 </a></span><span class="l"><a href="#202">202 </a></span><span class="l"><a href="#203">203 </a></span><span class="l"><a href="#204">204 </a></span></span><span class="l"><a href="#205">205 </a></span></span><span class="l"><a href="#206">206 </a></span></span><span class="l"><a href="#207">207 </a></span></span><span class="l"><a href="#208">208 </a></span></span><span class="l"><a href="#209">209 </a></span></span><span class="l"><a href="#210">210 </a></span></span><span class="l"><a href="#211">211 </a></span></span><span class="l"><a href="#212">212 </a></span><span class="l"><a href="#213">213 </a></span><span class="l"><a href="#214">214 </a></span><span class="l"><a href="#215">215 </a></span><span class="l"><a href="#216">216 </a></span><span class="l"><a href="#217">217 </a></span><span class="l"><a href="#218">218 </a></span><span class="l"><a href="#219">219 </a></span><span class="l"><a href="#220">220 </a></span><span class="l"><a href="#221">221 </a></span><span class="l"><a href="#222">222 </a></span><span class="l"><a href="#223">223 </a></span><span class="l"><a href="#224">224 </a></span><span class="l"><a href="#225">225 </a></span><span class="l"><a href="#226">226 </a></span><span class="l"><a href="#227">227 </a></span><span class="l"><a href="#228">228 </a></span><span class="l"><a href="#229">229 </a></span><span class="l"><a href="#230">230 </a></span><span class="l"><a href="#231">231 </a></span><span class="l"><a href="#232">232 </a></span><span class="l"><a href="#233">233 </a></span><span class="l"><a href="#234">234 </a></span><span class="l"><a href="#235">235 </a></span><span class="l"><a href="#236">236 </a></span><span class="l"><a href="#237">237 </a></span><span class="l"><a href="#238">238 </a></span><span class="l"><a href="#239">239 </a></span><span class="l"><a href="#240">240 </a></span><span class="l"><a href="#241">241 </a></span></code></pre>
-	<pre class="code"><code><span id="1" class="l"><span class="xlang">&lt;?php</span>
-</span><span id="2" class="l"><span class="php-comment">/**
-</span></span><span id="3" class="l"><span class="php-comment"> * Customizer bootstrap.
-</span></span><span id="4" class="l"><span class="php-comment"> *
-</span></span><span id="5" class="l"><span class="php-comment"> * @class    Primer_Customizer
-</span></span><span id="6" class="l"><span class="php-comment"> * @package  Classes/Customizer
-</span></span><span id="7" class="l"><span class="php-comment"> * @category Class
-</span></span><span id="8" class="l"><span class="php-comment"> * @author   GoDaddy
-</span></span><span id="9" class="l"><span class="php-comment"> * @since    1.0.0
-</span></span><span id="10" class="l"><span class="php-comment"> */</span>
-</span><span id="11" class="l"><span class="php-keyword1">class</span> Primer_Customizer {
-</span><span id="12" class="l">
-</span><span id="13" class="l">    <span class="php-comment">/**
-</span></span><span id="14" class="l"><span class="php-comment">     * Stylesheet slug.
-</span></span><span id="15" class="l"><span class="php-comment">     *
-</span></span><span id="16" class="l"><span class="php-comment">     * @var string
-</span></span><span id="17" class="l"><span class="php-comment">     */</span>
-</span><span id="18" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var">$stylesheet</span>;
-</span><span id="19" class="l">
-</span><span id="20" class="l">    <span class="php-comment">/**
-</span></span><span id="21" class="l"><span class="php-comment">     * Class constructor.
-</span></span><span id="22" class="l"><span class="php-comment">     */</span>
-</span><span id="23" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct() {
-</span><span id="24" class="l">
-</span><span id="25" class="l">        self::<span class="php-var">$stylesheet</span> = get_stylesheet();
-</span><span id="26" class="l">
-</span><span id="27" class="l">        <span class="php-comment">/**
-</span></span><span id="28" class="l"><span class="php-comment">         * Load Customizer Colors functionality.
-</span></span><span id="29" class="l"><span class="php-comment">         *
-</span></span><span id="30" class="l"><span class="php-comment">         * @since 1.0.0
-</span></span><span id="31" class="l"><span class="php-comment">         */</span>
-</span><span id="32" class="l">        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/colors.php'</span>;
-</span><span id="33" class="l">
-</span><span id="34" class="l">        <span class="php-comment">/**
-</span></span><span id="35" class="l"><span class="php-comment">         * Load Customizer Fonts functionality.
-</span></span><span id="36" class="l"><span class="php-comment">         *
-</span></span><span id="37" class="l"><span class="php-comment">         * @since 1.0.0
-</span></span><span id="38" class="l"><span class="php-comment">         */</span>
-</span><span id="39" class="l">        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/fonts.php'</span>;
-</span><span id="40" class="l">
-</span><span id="41" class="l">        <span class="php-comment">/**
-</span></span><span id="42" class="l"><span class="php-comment">         * Load Customizer Layouts functionality.
-</span></span><span id="43" class="l"><span class="php-comment">         *
-</span></span><span id="44" class="l"><span class="php-comment">         * @since 1.0.0
-</span></span><span id="45" class="l"><span class="php-comment">         */</span>
-</span><span id="46" class="l">        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/layouts.php'</span>;
-</span><span id="47" class="l">
-</span><span id="48" class="l">        <span class="php-comment">/**
-</span></span><span id="49" class="l"><span class="php-comment">         * Load additional site identity options
-</span></span><span id="50" class="l"><span class="php-comment">         *
-</span></span><span id="51" class="l"><span class="php-comment">         * @since NEXT
-</span></span><span id="52" class="l"><span class="php-comment">         */</span>
-</span><span id="53" class="l">        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/site-identity.php'</span>;
-</span><span id="54" class="l">
-</span><span id="55" class="l">        add_action( <span class="php-quote">'after_setup_theme'</span>,      <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'logo'</span> ) );
-</span><span id="56" class="l">        add_action( <span class="php-quote">'customize_register'</span>,     <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'selective_refresh'</span> ), <span class="php-num">11</span> );
-</span><span id="57" class="l">        add_action( <span class="php-quote">'customize_register'</span>,     <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'use_featured_hero_image'</span> ) );
-</span><span id="58" class="l">        add_action( <span class="php-quote">'customize_preview_init'</span>, <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'customize_preview_js'</span> ) );
-</span><span id="59" class="l">
-</span><span id="60" class="l">    }
-</span><span id="61" class="l">
-</span><span id="62" class="l">    <span class="php-comment">/**
-</span></span><span id="63" class="l"><span class="php-comment">     * Add custom logo support.
-</span></span><span id="64" class="l"><span class="php-comment">     *
-</span></span><span id="65" class="l"><span class="php-comment">     * @action after_setup_theme
-</span></span><span id="66" class="l"><span class="php-comment">     * @since  1.0.0
-</span></span><span id="67" class="l"><span class="php-comment">     */</span>
-</span><span id="68" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> logo() {
-</span><span id="69" class="l">
-</span><span id="70" class="l">        <span class="php-comment">/**
-</span></span><span id="71" class="l"><span class="php-comment">         * Filter the custom logo args.
-</span></span><span id="72" class="l"><span class="php-comment">         *
-</span></span><span id="73" class="l"><span class="php-comment">         * @since 1.0.0
-</span></span><span id="74" class="l"><span class="php-comment">         *
-</span></span><span id="75" class="l"><span class="php-comment">         * @var array
-</span></span><span id="76" class="l"><span class="php-comment">         */</span>
-</span><span id="77" class="l">        <span class="php-var">$args</span> = (<span class="php-keyword1">array</span>) apply_filters( <span class="php-quote">'primer_custom_logo_args'</span>,
-</span><span id="78" class="l">            <span class="php-keyword1">array</span>(
-</span><span id="79" class="l">                <span class="php-quote">'height'</span>      =&gt; <span class="php-num">100</span>,
-</span><span id="80" class="l">                <span class="php-quote">'width'</span>       =&gt; <span class="php-num">400</span>,
-</span><span id="81" class="l">                <span class="php-quote">'flex-height'</span> =&gt; <span class="php-keyword1">true</span>,
-</span><span id="82" class="l">                <span class="php-quote">'flex-width'</span>  =&gt; <span class="php-keyword1">true</span>,
-</span><span id="83" class="l">                <span class="php-quote">'header-text'</span> =&gt; <span class="php-keyword1">array</span>( <span class="php-quote">'site-title'</span>, <span class="php-quote">'site-description'</span> ),
-</span><span id="84" class="l">            )
-</span><span id="85" class="l">        );
-</span><span id="86" class="l">
-</span><span id="87" class="l">        add_theme_support( <span class="php-quote">'custom-logo'</span>, <span class="php-var">$args</span> );
-</span><span id="88" class="l">
-</span><span id="89" class="l">    }
-</span><span id="90" class="l">
-</span><span id="91" class="l">    <span class="php-comment">/**
-</span></span><span id="92" class="l"><span class="php-comment">     * Adds postMessage support for site title and description for the Customizer.
-</span></span><span id="93" class="l"><span class="php-comment">     *
-</span></span><span id="94" class="l"><span class="php-comment">     * @action customize_register
-</span></span><span id="95" class="l"><span class="php-comment">     * @since  1.0.0
-</span></span><span id="96" class="l"><span class="php-comment">     * @uses   $this-&gt;blogname()
-</span></span><span id="97" class="l"><span class="php-comment">     * @uses   $this-&gt;blogdescription()
-</span></span><span id="98" class="l"><span class="php-comment">     *
-</span></span><span id="99" class="l"><span class="php-comment">     * @param WP_Customize_Manager $wp_customize
-</span></span><span id="100" class="l"><span class="php-comment">     */</span>
-</span><span id="101" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> selective_refresh( WP_Customize_Manager <span class="php-var">$wp_customize</span> ) {
-</span><span id="102" class="l">
-</span><span id="103" class="l">        <span class="php-var">$wp_customize</span>-&gt;get_setting( <span class="php-quote">'blogname'</span> )-&gt;transport         = <span class="php-quote">'postMessage'</span>;
-</span><span id="104" class="l">        <span class="php-var">$wp_customize</span>-&gt;get_setting( <span class="php-quote">'blogdescription'</span> )-&gt;transport  = <span class="php-quote">'postMessage'</span>;
-</span><span id="105" class="l">        <span class="php-var">$wp_customize</span>-&gt;get_setting( <span class="php-quote">'header_textcolor'</span> )-&gt;transport = <span class="php-quote">'postMessage'</span>;
-</span><span id="106" class="l">
-</span><span id="107" class="l">        <span class="php-keyword1">if</span> ( ! <span class="php-keyword1">isset</span>( <span class="php-var">$wp_customize</span>-&gt;selective_refresh ) ) {
-</span><span id="108" class="l">
-</span><span id="109" class="l">            <span class="php-keyword1">return</span>;
-</span><span id="110" class="l">
-</span><span id="111" class="l">        }
-</span><span id="112" class="l">
-</span><span id="113" class="l">        <span class="php-var">$wp_customize</span>-&gt;selective_refresh-&gt;add_partial(
-</span><span id="114" class="l">            <span class="php-quote">'blogname'</span>,
-</span><span id="115" class="l">            <span class="php-keyword1">array</span>(
-</span><span id="116" class="l">                <span class="php-quote">'selector'</span>            =&gt; <span class="php-quote">'.site-title a'</span>,
-</span><span id="117" class="l">                <span class="php-quote">'container_inclusive'</span> =&gt; <span class="php-keyword1">false</span>,
-</span><span id="118" class="l">                <span class="php-quote">'render_callback'</span>     =&gt; <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'blogname'</span> ),
-</span><span id="119" class="l">            )
-</span><span id="120" class="l">        );
-</span><span id="121" class="l">
-</span><span id="122" class="l">        <span class="php-var">$wp_customize</span>-&gt;selective_refresh-&gt;add_partial(
-</span><span id="123" class="l">            <span class="php-quote">'blogdescription'</span>,
-</span><span id="124" class="l">            <span class="php-keyword1">array</span>(
-</span><span id="125" class="l">                <span class="php-quote">'selector'</span>            =&gt; <span class="php-quote">'.site-description'</span>,
-</span><span id="126" class="l">                <span class="php-quote">'container_inclusive'</span> =&gt; <span class="php-keyword1">false</span>,
-</span><span id="127" class="l">                <span class="php-quote">'render_callback'</span>     =&gt; <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'blogdescription'</span> ),
-</span><span id="128" class="l">            )
-</span><span id="129" class="l">        );
-</span><span id="130" class="l">
-</span><span id="131" class="l">    }
-</span><span id="132" class="l">
-</span><span id="133" class="l">    <span class="php-comment">/**
-</span></span><span id="134" class="l"><span class="php-comment">     * Display the blog name.
-</span></span><span id="135" class="l"><span class="php-comment">     *
-</span></span><span id="136" class="l"><span class="php-comment">     * @since 1.0.0
-</span></span><span id="137" class="l"><span class="php-comment">     * @see   $this-&gt;selective_refresh()
-</span></span><span id="138" class="l"><span class="php-comment">     */</span>
-</span><span id="139" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> blogname() {
-</span><span id="140" class="l">
-</span><span id="141" class="l">        bloginfo( <span class="php-quote">'name'</span> );
-</span><span id="142" class="l">
-</span><span id="143" class="l">    }
-</span><span id="144" class="l">
-</span><span id="145" class="l">    <span class="php-comment">/**
-</span></span><span id="146" class="l"><span class="php-comment">     * Display the blog description.
-</span></span><span id="147" class="l"><span class="php-comment">     *
-</span></span><span id="148" class="l"><span class="php-comment">     * @since 1.0.0
-</span></span><span id="149" class="l"><span class="php-comment">     * @see   $this-&gt;selective_refresh()
-</span></span><span id="150" class="l"><span class="php-comment">     */</span>
-</span><span id="151" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> blogdescription() {
-</span><span id="152" class="l">
-</span><span id="153" class="l">        bloginfo( <span class="php-quote">'description'</span> );
-</span><span id="154" class="l">
-</span><span id="155" class="l">    }
-</span><span id="156" class="l">
-</span><span id="157" class="l">    <span class="php-comment">/**
-</span></span><span id="158" class="l"><span class="php-comment">     * Add control to use featured images as the hero image.
-</span></span><span id="159" class="l"><span class="php-comment">     *
-</span></span><span id="160" class="l"><span class="php-comment">     * @action customize_register
-</span></span><span id="161" class="l"><span class="php-comment">     * @since  1.0.0
-</span></span><span id="162" class="l"><span class="php-comment">     *
-</span></span><span id="163" class="l"><span class="php-comment">     * @param WP_Customize_Manager $wp_customize
-</span></span><span id="164" class="l"><span class="php-comment">     */</span>
-</span><span id="165" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> use_featured_hero_image( WP_Customize_Manager <span class="php-var">$wp_customize</span> ) {
-</span><span id="166" class="l">
-</span><span id="167" class="l">        <span class="php-var">$wp_customize</span>-&gt;add_setting(
-</span><span id="168" class="l">            <span class="php-quote">'use_featured_hero_image'</span>,
-</span><span id="169" class="l">            <span class="php-keyword1">array</span>(
-</span><span id="170" class="l">                <span class="php-quote">'default'</span>           =&gt; <span class="php-num">1</span>,
-</span><span id="171" class="l">                <span class="php-quote">'sanitize_callback'</span> =&gt; <span class="php-quote">'absint'</span>,
-</span><span id="172" class="l">            )
-</span><span id="173" class="l">        );
-</span><span id="174" class="l">
-</span><span id="175" class="l">        <span class="php-var">$wp_customize</span>-&gt;add_control(
-</span><span id="176" class="l">            <span class="php-quote">'use_featured_hero_image'</span>,
-</span><span id="177" class="l">            <span class="php-keyword1">array</span>(
-</span><span id="178" class="l">                <span class="php-quote">'label'</span>       =&gt; esc_html__( <span class="php-quote">'Use featured image'</span>, <span class="php-quote">'primer'</span> ),
-</span><span id="179" class="l">                <span class="php-quote">'description'</span> =&gt; esc_html__( <span class="php-quote">'Allow the featured image on the current post to override the hero image.'</span>, <span class="php-quote">'primer'</span> ),
-</span><span id="180" class="l">                <span class="php-quote">'section'</span>     =&gt; <span class="php-quote">'header_image'</span>,
-</span><span id="181" class="l">                <span class="php-quote">'priority'</span>    =&gt; <span class="php-num">5</span>,
-</span><span id="182" class="l">                <span class="php-quote">'type'</span>        =&gt; <span class="php-quote">'checkbox'</span>,
-</span><span id="183" class="l">            )
-</span><span id="184" class="l">        );
-</span><span id="185" class="l">
-</span><span id="186" class="l">    }
-</span><span id="187" class="l">
-</span><span id="188" class="l">    <span class="php-comment">/**
-</span></span><span id="189" class="l"><span class="php-comment">     * Enqueue preview JS.
-</span></span><span id="190" class="l"><span class="php-comment">     *
-</span></span><span id="191" class="l"><span class="php-comment">     * @action customize_preview_init
-</span></span><span id="192" class="l"><span class="php-comment">     * @since 1.0.0
-</span></span><span id="193" class="l"><span class="php-comment">     */</span>
-</span><span id="194" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> customize_preview_js() {
-</span><span id="195" class="l">
-</span><span id="196" class="l">        <span class="php-var">$suffix</span> = SCRIPT_DEBUG ? <span class="php-quote">''</span> : <span class="php-quote">'.min'</span>;
-</span><span id="197" class="l">
-</span><span id="198" class="l">        wp_enqueue_script( <span class="php-quote">'primer-customize-preview'</span>, get_template_directory_uri() . <span class="php-quote">&quot;/assets/js/admin/customizer</span><span class="php-var">{$suffix}</span><span class="php-quote">.js&quot;</span>, <span class="php-keyword1">array</span>( <span class="php-quote">'customize-preview'</span> ), PRIMER_VERSION, <span class="php-keyword1">true</span> );
-</span><span id="199" class="l">
-</span><span id="200" class="l">        wp_localize_script( <span class="php-quote">'primer-customize-preview'</span>, <span class="php-quote">'colorsSettings'</span>, <span class="php-keyword1">array</span>( <span class="php-quote">'hero_background_selector'</span> =&gt; primer_get_hero_image_selector() ) );
-</span><span id="201" class="l">
-</span><span id="202" class="l">    }
-</span><span id="203" class="l">
-</span><span id="204" class="l">    <span class="php-comment">/**
-</span></span><span id="205" class="l"><span class="php-comment">     * Return an array of CSS rules as plain CSS.
-</span></span><span id="206" class="l"><span class="php-comment">     *
-</span></span><span id="207" class="l"><span class="php-comment">     * @since 1.0.0
-</span></span><span id="208" class="l"><span class="php-comment">     *
-</span></span><span id="209" class="l"><span class="php-comment">     * @param  array $rules
-</span></span><span id="210" class="l"><span class="php-comment">     *
-</span></span><span id="211" class="l"><span class="php-comment">     * @return string
-</span></span><span id="212" class="l"><span class="php-comment">     */</span>
-</span><span id="213" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> parse_css_rules( <span class="php-keyword1">array</span> <span class="php-var">$rules</span> ) {
-</span><span id="214" class="l">
-</span><span id="215" class="l">        <span class="php-keyword2">ob_start</span>();
-</span><span id="216" class="l">
-</span><span id="217" class="l">        <span class="php-keyword1">foreach</span> ( <span class="php-var">$rules</span> <span class="php-keyword1">as</span> <span class="php-var">$rule</span> =&gt; <span class="php-var">$properties</span> ) {
-</span><span id="218" class="l">
-</span><span id="219" class="l">            <span class="php-keyword2">printf</span>(
-</span><span id="220" class="l">                <span class="php-quote">&quot;%s {\n&quot;</span>,
-</span><span id="221" class="l">                <span class="php-keyword2">implode</span>( <span class="php-quote">&quot;,\n&quot;</span>, <span class="php-keyword2">array_map</span>( <span class="php-quote">'trim'</span>, <span class="php-keyword2">explode</span>( <span class="php-quote">','</span>, <span class="php-var">$rule</span> ) ) )
-</span><span id="222" class="l">            );
-</span><span id="223" class="l">
-</span><span id="224" class="l">            <span class="php-keyword1">foreach</span> ( <span class="php-var">$properties</span> <span class="php-keyword1">as</span> <span class="php-var">$property</span> =&gt; <span class="php-var">$value</span> ) {
-</span><span id="225" class="l">
-</span><span id="226" class="l">                <span class="php-keyword2">printf</span>( <span class="php-quote">&quot;\t%s: %s;\n&quot;</span>, <span class="php-var">$property</span>, <span class="php-var">$value</span> );
-</span><span id="227" class="l">
-</span><span id="228" class="l">            }
-</span><span id="229" class="l">
-</span><span id="230" class="l">            <span class="php-keyword1">echo</span> <span class="php-quote">&quot;}\n&quot;</span>;
-</span><span id="231" class="l">
-</span><span id="232" class="l">        }
-</span><span id="233" class="l">
-</span><span id="234" class="l">        <span class="php-keyword1">return</span> <span class="php-keyword2">ob_get_clean</span>();
-</span><span id="235" class="l">
-</span><span id="236" class="l">    }
-</span><span id="237" class="l">
-</span><span id="238" class="l">}
-</span><span id="239" class="l">
-</span><span id="240" class="l"><span class="php-keyword1">new</span> Primer_Customizer;
-</span><span id="241" class="l"></span></code></pre>
-</div>
-
+				<div class="col-md-4 pull-right hidden-sm search-cook p0">
+					<form class="search" method="get">
+						<div class="col-md-10 p0">
+							<input class="form-control form-cook" autocomplete="off" type="search" name="q" size="18" placeholder='API Search'>
 						</div>
-
-					</div>
-
+						<div class="col-md-2 p0">
+							<button type="submit">
+								<span class="glyph_range icon-submenu icon-submenu-cook">A</span>
+							</button>
+						</div>
+					</form>
 				</div>
 
 			</div>
-
 		</div>
+	</section>
+</header>
 
-		<!-- Sidebar -->
-		<div class="col-md-3 col-md-pull-9 pull-off hidden-xs hidden-sm" lang="en">
+<section class="nav-btn visible-sm visible-xs">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-xs-6 text-center">
+				<button id="btn-nav" class="btn btn-b btn-nav" data-toggle="modal" data-target="#modal"><strong>Navigation</strong></button>
+			</div>
 
-			<aside class="sidebar">
+			<div class="col-sm-6 col-xs-6 text-center">
+				<button id="btn-toc" class="btn btn-b btn-nav" data-toggle="modal" data-target="#modal"><strong>Class Navigation</strong></button>
+			</div>
+		</div>
+	</div>
+</section>
 
-				<div id="groups">
+<div id="modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-header">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title-cookbook" id="modal-header"></h4>
+			</div>
+			<div class="modal-body"></div>
+		</div>
+	</div>
+</div>
+
+	<div class="container page-container">
+		<div class="row">
+			<div id="class-nav" class="col-md-3 hidden-sm hidden-xs">
+				<div id="menu">
+
+					<div id="groups">
 						<h3>Packages</h3>
-					<ul>
-							<li>
-								<a href="package-Classes.html">
-									Classes<span></span>
-								</a>
+						<ul class="nav-list">
+							<li><a href="package-Classes.html">Classes<span></span></a>
 									<ul>
-							<li>
-								<a href="package-Classes.Customizer.html">
-									Customizer								</a>
+							<li><a href="package-Classes.Customizer.html">Customizer</a>
 									</li>
-							<li>
-								<a href="package-Classes.Navigation.html">
-									Navigation								</a>
+							<li><a href="package-Classes.Navigation.html">Navigation</a>
 									</li>
 										</ul></li>
-							<li>
-								<a href="package-Compatibility.html">
-									Compatibility<span></span>
-								</a>
+							<li><a href="package-Compatibility.html">Compatibility<span></span></a>
 									<ul>
-							<li>
-								<a href="package-Compatibility.BeaverBuilder.html">
-									BeaverBuilder								</a>
+							<li><a href="package-Compatibility.BeaverBuilder.html">BeaverBuilder</a>
 									</li>
-							<li>
-								<a href="package-Compatibility.Jetpack.html">
-									Jetpack								</a>
+							<li><a href="package-Compatibility.Jetpack.html">Jetpack</a>
 									</li>
-							<li>
-								<a href="package-Compatibility.WooCommerce.html">
-									WooCommerce								</a>
+							<li><a href="package-Compatibility.WooCommerce.html">WooCommerce</a>
 									</li>
-							<li>
-								<a href="package-Compatibility.WordPress.html">
-									WordPress								</a>
+							<li><a href="package-Compatibility.WordPress.html">WordPress</a>
 									</li>
 										</ul></li>
-							<li>
-								<a href="package-Functions.html">
-									Functions								</a>
+							<li><a href="package-Functions.html">Functions</a>
 									</li>
-							<li>
-								<a href="package-Hooks.html">
-									Hooks								</a>
+							<li><a href="package-Hooks.html">Hooks</a>
 									</li>
-					</ul>
+						</ul>
+					</div>
+
+
+					<div id="elements">
+						<h3 class="nav-title">Classes</h3>
+						<ul class="nav-list">
+							<li><a title="Primer_Customizer" href="class-Primer_Customizer.html">Primer_Customizer</a></li>
+							<li><a title="Primer_Customizer_Colors" href="class-Primer_Customizer_Colors.html">Primer_Customizer_Colors</a></li>
+							<li><a title="Primer_Customizer_Fonts" href="class-Primer_Customizer_Fonts.html">Primer_Customizer_Fonts</a></li>
+							<li><a title="Primer_Customizer_Layouts" href="class-Primer_Customizer_Layouts.html">Primer_Customizer_Layouts</a></li>
+							<li><a title="Primer_Site_Identity_Options" href="class-Primer_Site_Identity_Options.html">Primer_Site_Identity_Options</a></li>
+							<li><a title="Primer_Walker_Nav_Menu" href="class-Primer_Walker_Nav_Menu.html">Primer_Walker_Nav_Menu</a></li>
+						</ul>
+
+
+
+
+
+						<h3 class="nav-title">Functions</h3>
+						<ul class="nav-list">
+							<li><a title="primer_add_credit" href="function-primer_add_credit.html">primer_add_credit</a></li>
+							<li><a title="primer_add_footer_navigation" href="function-primer_add_footer_navigation.html">primer_add_footer_navigation</a></li>
+							<li><a title="primer_add_footer_widgets" href="function-primer_add_footer_widgets.html">primer_add_footer_widgets</a></li>
+							<li><a title="primer_add_hero" href="function-primer_add_hero.html">primer_add_hero</a></li>
+							<li><a title="primer_add_hero_content" href="function-primer_add_hero_content.html">primer_add_hero_content</a></li>
+							<li><a title="primer_add_mobile_menu" href="function-primer_add_mobile_menu.html">primer_add_mobile_menu</a></li>
+							<li><a title="primer_add_page_title" href="function-primer_add_page_title.html">primer_add_page_title</a></li>
+							<li><a title="primer_add_post_meta" href="function-primer_add_post_meta.html">primer_add_post_meta</a></li>
+							<li><a title="primer_add_primary_menu" href="function-primer_add_primary_menu.html">primer_add_primary_menu</a></li>
+							<li><a title="primer_add_primary_navigation" href="function-primer_add_primary_navigation.html">primer_add_primary_navigation</a></li>
+							<li><a title="primer_add_site_info" href="function-primer_add_site_info.html">primer_add_site_info</a></li>
+							<li><a title="primer_add_site_title" href="function-primer_add_site_title.html">primer_add_site_title</a></li>
+							<li><a title="primer_add_social_navigation" href="function-primer_add_social_navigation.html">primer_add_social_navigation</a></li>
+							<li><a title="primer_array_replace_recursive" href="function-primer_array_replace_recursive.html">primer_array_replace_recursive</a></li>
+							<li><a title="primer_bb_colors" href="function-primer_bb_colors.html">primer_bb_colors</a></li>
+							<li><a title="primer_bb_layout" href="function-primer_bb_layout.html">primer_bb_layout</a></li>
+							<li><a title="primer_body_class" href="function-primer_body_class.html">primer_body_class</a></li>
+							<li><a title="primer_breadcrumbs" href="function-primer_breadcrumbs.html">primer_breadcrumbs</a></li>
+							<li><a title="primer_conditional_jquery_tag" href="function-primer_conditional_jquery_tag.html">primer_conditional_jquery_tag</a></li>
+							<li><a title="primer_content_width" href="function-primer_content_width.html">primer_content_width</a></li>
+							<li><a title="primer_customize" href="function-primer_customize.html">primer_customize</a></li>
+							<li><a title="primer_elements" href="function-primer_elements.html">primer_elements</a></li>
+							<li><a title="primer_excerpt_length" href="function-primer_excerpt_length.html">primer_excerpt_length</a></li>
+							<li><a title="primer_excerpt_more" href="function-primer_excerpt_more.html">primer_excerpt_more</a></li>
+							<li><a title="primer_get_active_footer_sidebars" href="function-primer_get_active_footer_sidebars.html">primer_get_active_footer_sidebars</a></li>
+							<li><a title="primer_get_featured_image_size" href="function-primer_get_featured_image_size.html">primer_get_featured_image_size</a></li>
+							<li><a title="primer_get_footer_sidebars" href="function-primer_get_footer_sidebars.html">primer_get_footer_sidebars</a></li>
+							<li><a title="primer_get_global_layout" href="function-primer_get_global_layout.html">primer_get_global_layout</a></li>
+							<li><a title="primer_get_hero_image" href="function-primer_get_hero_image.html">primer_get_hero_image</a></li>
+							<li><a title="primer_get_hero_image_selector" href="function-primer_get_hero_image_selector.html">primer_get_hero_image_selector</a></li>
+							<li><a title="primer_get_layout" href="function-primer_get_layout.html">primer_get_layout</a></li>
+							<li><a title="primer_get_page_width" href="function-primer_get_page_width.html">primer_get_page_width</a></li>
+							<li><a title="primer_get_posts_url" href="function-primer_get_posts_url.html">primer_get_posts_url</a></li>
+							<li><a title="primer_get_the_page_title" href="function-primer_get_the_page_title.html">primer_get_the_page_title</a></li>
+							<li><a title="primer_get_wp_upgrade_message" href="function-primer_get_wp_upgrade_message.html">primer_get_wp_upgrade_message</a></li>
+							<li><a title="primer_has_active_categories" href="function-primer_has_active_categories.html">primer_has_active_categories</a></li>
+							<li><a title="primer_has_active_categories_reset" href="function-primer_has_active_categories_reset.html">primer_has_active_categories_reset</a></li>
+							<li><a title="primer_has_active_footer_sidebars" href="function-primer_has_active_footer_sidebars.html">primer_has_active_footer_sidebars</a></li>
+							<li><a title="primer_has_custom_logo" href="function-primer_has_custom_logo.html">primer_has_custom_logo</a></li>
+							<li><a title="primer_has_footer_menu" href="function-primer_has_footer_menu.html">primer_has_footer_menu</a></li>
+							<li><a title="primer_has_hero_image" href="function-primer_has_hero_image.html">primer_has_hero_image</a></li>
+							<li><a title="primer_hex2rgb" href="function-primer_hex2rgb.html">primer_hex2rgb</a></li>
+							<li><a title="primer_image_size_names_choose" href="function-primer_image_size_names_choose.html">primer_image_size_names_choose</a></li>
+							<li><a title="primer_is_fixed_width" href="function-primer_is_fixed_width.html">primer_is_fixed_width</a></li>
+							<li><a title="primer_is_fluid_width" href="function-primer_is_fluid_width.html">primer_is_fluid_width</a></li>
+							<li><a title="primer_jetpack_setup" href="function-primer_jetpack_setup.html">primer_jetpack_setup</a></li>
+							<li><a title="primer_layout_has_sidebar" href="function-primer_layout_has_sidebar.html">primer_layout_has_sidebar</a></li>
+							<li><a title="primer_paging_nav" href="function-primer_paging_nav.html">primer_paging_nav</a></li>
+							<li><a title="primer_post_format" href="function-primer_post_format.html">primer_post_format</a></li>
+							<li><a title="primer_post_nav" href="function-primer_post_nav.html">primer_post_nav</a></li>
+							<li><a title="primer_posted_on" href="function-primer_posted_on.html">primer_posted_on</a></li>
+							<li><a title="primer_preview" href="function-primer_preview.html">primer_preview</a></li>
+							<li><a title="primer_register_sidebars" href="function-primer_register_sidebars.html">primer_register_sidebars</a></li>
+							<li><a title="primer_scripts" href="function-primer_scripts.html">primer_scripts</a></li>
+							<li><a title="primer_setup" href="function-primer_setup.html">primer_setup</a></li>
+							<li><a title="primer_setup_author" href="function-primer_setup_author.html">primer_setup_author</a></li>
+							<li><a title="primer_switch_theme" href="function-primer_switch_theme.html">primer_switch_theme</a></li>
+							<li><a title="primer_the_custom_logo" href="function-primer_the_custom_logo.html">primer_the_custom_logo</a></li>
+							<li><a title="primer_the_page_title" href="function-primer_the_page_title.html">primer_the_page_title</a></li>
+							<li><a title="primer_the_site_description" href="function-primer_the_site_description.html">primer_the_site_description</a></li>
+							<li><a title="primer_the_site_title" href="function-primer_the_site_title.html">primer_the_site_title</a></li>
+							<li><a title="primer_upgrade_notice" href="function-primer_upgrade_notice.html">primer_upgrade_notice</a></li>
+							<li><a title="primer_use_featured_hero_image" href="function-primer_use_featured_hero_image.html">primer_use_featured_hero_image</a></li>
+							<li><a title="primer_wc_colors" href="function-primer_wc_colors.html">primer_wc_colors</a></li>
+							<li><a title="primer_wc_font_types" href="function-primer_wc_font_types.html">primer_wc_font_types</a></li>
+							<li><a title="primer_wc_product_classes" href="function-primer_wc_product_classes.html">primer_wc_product_classes</a></li>
+							<li><a title="primer_wc_setup" href="function-primer_wc_setup.html">primer_wc_setup</a></li>
+							<li><a title="primer_wc_shop_columns" href="function-primer_wc_shop_columns.html">primer_wc_shop_columns</a></li>
+							<li><a title="primer_wc_shop_layout" href="function-primer_wc_shop_layout.html">primer_wc_shop_layout</a></li>
+							<li><a title="primer_wc_shop_messages" href="function-primer_wc_shop_messages.html">primer_wc_shop_messages</a></li>
+							<li><a title="primer_wc_shop_title" href="function-primer_wc_shop_title.html">primer_wc_shop_title</a></li>
+							<li><a title="primer_wc_sidebar" href="function-primer_wc_sidebar.html">primer_wc_sidebar</a></li>
+							<li><a title="primer_wc_wrapper_end" href="function-primer_wc_wrapper_end.html">primer_wc_wrapper_end</a></li>
+							<li><a title="primer_wc_wrapper_start" href="function-primer_wc_wrapper_start.html">primer_wc_wrapper_start</a></li>
+							<li><a title="primer_wp_title" href="function-primer_wp_title.html">primer_wp_title</a></li>
+						</ul>
+					</div>
 				</div>
+			</div>
 
-
-				<div id="elements">
-					<h3>Classes</h3>
-					<ul>
-						<li><a href="class-Primer_Customizer.html">Primer_Customizer</a></li>
-						<li><a href="class-Primer_Customizer_Colors.html">Primer_Customizer_Colors</a></li>
-						<li><a href="class-Primer_Customizer_Fonts.html">Primer_Customizer_Fonts</a></li>
-						<li><a href="class-Primer_Customizer_Layouts.html">Primer_Customizer_Layouts</a></li>
-						<li><a href="class-Primer_Site_Identity_Options.html">Primer_Site_Identity_Options</a></li>
-						<li><a href="class-Primer_Walker_Nav_Menu.html">Primer_Walker_Nav_Menu</a></li>
-					</ul>
-
-
-
-
-
-					<h3>Functions</h3>
-					<ul>
-						<li><a href="function-primer_add_credit.html">primer_add_credit</a></li>
-						<li><a href="function-primer_add_footer_navigation.html">primer_add_footer_navigation</a></li>
-						<li><a href="function-primer_add_footer_widgets.html">primer_add_footer_widgets</a></li>
-						<li><a href="function-primer_add_hero.html">primer_add_hero</a></li>
-						<li><a href="function-primer_add_hero_content.html">primer_add_hero_content</a></li>
-						<li><a href="function-primer_add_mobile_menu.html">primer_add_mobile_menu</a></li>
-						<li><a href="function-primer_add_page_title.html">primer_add_page_title</a></li>
-						<li><a href="function-primer_add_post_meta.html">primer_add_post_meta</a></li>
-						<li><a href="function-primer_add_primary_menu.html">primer_add_primary_menu</a></li>
-						<li><a href="function-primer_add_primary_navigation.html">primer_add_primary_navigation</a></li>
-						<li><a href="function-primer_add_site_info.html">primer_add_site_info</a></li>
-						<li><a href="function-primer_add_site_title.html">primer_add_site_title</a></li>
-						<li><a href="function-primer_add_social_navigation.html">primer_add_social_navigation</a></li>
-						<li><a href="function-primer_array_replace_recursive.html">primer_array_replace_recursive</a></li>
-						<li><a href="function-primer_bb_colors.html">primer_bb_colors</a></li>
-						<li><a href="function-primer_bb_layout.html">primer_bb_layout</a></li>
-						<li><a href="function-primer_body_class.html">primer_body_class</a></li>
-						<li><a href="function-primer_breadcrumbs.html">primer_breadcrumbs</a></li>
-						<li><a href="function-primer_conditional_jquery_tag.html">primer_conditional_jquery_tag</a></li>
-						<li><a href="function-primer_content_width.html">primer_content_width</a></li>
-						<li><a href="function-primer_customize.html">primer_customize</a></li>
-						<li><a href="function-primer_elements.html">primer_elements</a></li>
-						<li><a href="function-primer_excerpt_length.html">primer_excerpt_length</a></li>
-						<li><a href="function-primer_excerpt_more.html">primer_excerpt_more</a></li>
-						<li><a href="function-primer_get_active_footer_sidebars.html">primer_get_active_footer_sidebars</a></li>
-						<li><a href="function-primer_get_featured_image_size.html">primer_get_featured_image_size</a></li>
-						<li><a href="function-primer_get_footer_sidebars.html">primer_get_footer_sidebars</a></li>
-						<li><a href="function-primer_get_global_layout.html">primer_get_global_layout</a></li>
-						<li><a href="function-primer_get_hero_image.html">primer_get_hero_image</a></li>
-						<li><a href="function-primer_get_hero_image_selector.html">primer_get_hero_image_selector</a></li>
-						<li><a href="function-primer_get_layout.html">primer_get_layout</a></li>
-						<li><a href="function-primer_get_page_width.html">primer_get_page_width</a></li>
-						<li><a href="function-primer_get_posts_url.html">primer_get_posts_url</a></li>
-						<li><a href="function-primer_get_the_page_title.html">primer_get_the_page_title</a></li>
-						<li><a href="function-primer_get_wp_upgrade_message.html">primer_get_wp_upgrade_message</a></li>
-						<li><a href="function-primer_has_active_categories.html">primer_has_active_categories</a></li>
-						<li><a href="function-primer_has_active_categories_reset.html">primer_has_active_categories_reset</a></li>
-						<li><a href="function-primer_has_active_footer_sidebars.html">primer_has_active_footer_sidebars</a></li>
-						<li><a href="function-primer_has_custom_logo.html">primer_has_custom_logo</a></li>
-						<li><a href="function-primer_has_footer_menu.html">primer_has_footer_menu</a></li>
-						<li><a href="function-primer_has_hero_image.html">primer_has_hero_image</a></li>
-						<li><a href="function-primer_hex2rgb.html">primer_hex2rgb</a></li>
-						<li><a href="function-primer_image_size_names_choose.html">primer_image_size_names_choose</a></li>
-						<li><a href="function-primer_is_fixed_width.html">primer_is_fixed_width</a></li>
-						<li><a href="function-primer_is_fluid_width.html">primer_is_fluid_width</a></li>
-						<li><a href="function-primer_jetpack_setup.html">primer_jetpack_setup</a></li>
-						<li><a href="function-primer_layout_has_sidebar.html">primer_layout_has_sidebar</a></li>
-						<li><a href="function-primer_paging_nav.html">primer_paging_nav</a></li>
-						<li><a href="function-primer_post_format.html">primer_post_format</a></li>
-						<li><a href="function-primer_post_nav.html">primer_post_nav</a></li>
-						<li><a href="function-primer_posted_on.html">primer_posted_on</a></li>
-						<li><a href="function-primer_preview.html">primer_preview</a></li>
-						<li><a href="function-primer_register_sidebars.html">primer_register_sidebars</a></li>
-						<li><a href="function-primer_scripts.html">primer_scripts</a></li>
-						<li><a href="function-primer_setup.html">primer_setup</a></li>
-						<li><a href="function-primer_setup_author.html">primer_setup_author</a></li>
-						<li><a href="function-primer_switch_theme.html">primer_switch_theme</a></li>
-						<li><a href="function-primer_the_custom_logo.html">primer_the_custom_logo</a></li>
-						<li><a href="function-primer_the_page_title.html">primer_the_page_title</a></li>
-						<li><a href="function-primer_the_site_description.html">primer_the_site_description</a></li>
-						<li><a href="function-primer_the_site_title.html">primer_the_site_title</a></li>
-						<li><a href="function-primer_upgrade_notice.html">primer_upgrade_notice</a></li>
-						<li><a href="function-primer_use_featured_hero_image.html">primer_use_featured_hero_image</a></li>
-						<li><a href="function-primer_wc_colors.html">primer_wc_colors</a></li>
-						<li><a href="function-primer_wc_font_types.html">primer_wc_font_types</a></li>
-						<li><a href="function-primer_wc_product_classes.html">primer_wc_product_classes</a></li>
-						<li><a href="function-primer_wc_setup.html">primer_wc_setup</a></li>
-						<li><a href="function-primer_wc_shop_columns.html">primer_wc_shop_columns</a></li>
-						<li><a href="function-primer_wc_shop_layout.html">primer_wc_shop_layout</a></li>
-						<li><a href="function-primer_wc_shop_messages.html">primer_wc_shop_messages</a></li>
-						<li><a href="function-primer_wc_shop_title.html">primer_wc_shop_title</a></li>
-						<li><a href="function-primer_wc_sidebar.html">primer_wc_sidebar</a></li>
-						<li><a href="function-primer_wc_wrapper_end.html">primer_wc_wrapper_end</a></li>
-						<li><a href="function-primer_wc_wrapper_start.html">primer_wc_wrapper_start</a></li>
-						<li><a href="function-primer_wp_title.html">primer_wp_title</a></li>
-					</ul>
-				</div>
-			</aside>
+						<div id="right" class="col-md-9">
+<pre><code><span id="1" class="codeline"><a class="number" href="#1">  1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="codeline"><a class="number" href="#2">  2: </a><span class="php-comment">/**
+</span></span><span id="3" class="codeline"><a class="number" href="#3">  3: </a><span class="php-comment"> * Customizer bootstrap.
+</span></span><span id="4" class="codeline"><a class="number" href="#4">  4: </a><span class="php-comment"> *
+</span></span><span id="5" class="codeline"><a class="number" href="#5">  5: </a><span class="php-comment"> * @class    Primer_Customizer
+</span></span><span id="6" class="codeline"><a class="number" href="#6">  6: </a><span class="php-comment"> * @package  Classes/Customizer
+</span></span><span id="7" class="codeline"><a class="number" href="#7">  7: </a><span class="php-comment"> * @category Class
+</span></span><span id="8" class="codeline"><a class="number" href="#8">  8: </a><span class="php-comment"> * @author   GoDaddy
+</span></span><span id="9" class="codeline"><a class="number" href="#9">  9: </a><span class="php-comment"> * @since    1.0.0
+</span></span><span id="10" class="codeline"><a class="number" href="#10"> 10: </a><span class="php-comment"> */</span>
+</span><span id="11" class="codeline"><a class="number" href="#11"> 11: </a><span class="php-keyword1">class</span> Primer_Customizer {
+</span><span id="12" class="codeline"><a class="number" href="#12"> 12: </a>
+</span><span id="13" class="codeline"><a class="number" href="#13"> 13: </a>    <span class="php-comment">/**
+</span></span><span id="14" class="codeline"><a class="number" href="#14"> 14: </a><span class="php-comment">     * Stylesheet slug.
+</span></span><span id="15" class="codeline"><a class="number" href="#15"> 15: </a><span class="php-comment">     *
+</span></span><span id="16" class="codeline"><a class="number" href="#16"> 16: </a><span class="php-comment">     * @var string
+</span></span><span id="17" class="codeline"><a class="number" href="#17"> 17: </a><span class="php-comment">     */</span>
+</span><span id="18" class="codeline"><a class="number" href="#18"> 18: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var">$stylesheet</span>;
+</span><span id="19" class="codeline"><a class="number" href="#19"> 19: </a>
+</span><span id="20" class="codeline"><a class="number" href="#20"> 20: </a>    <span class="php-comment">/**
+</span></span><span id="21" class="codeline"><a class="number" href="#21"> 21: </a><span class="php-comment">     * Class constructor.
+</span></span><span id="22" class="codeline"><a class="number" href="#22"> 22: </a><span class="php-comment">     */</span>
+</span><span id="23" class="codeline"><a class="number" href="#23"> 23: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct() {
+</span><span id="24" class="codeline"><a class="number" href="#24"> 24: </a>
+</span><span id="25" class="codeline"><a class="number" href="#25"> 25: </a>        self::<span class="php-var">$stylesheet</span> = get_stylesheet();
+</span><span id="26" class="codeline"><a class="number" href="#26"> 26: </a>
+</span><span id="27" class="codeline"><a class="number" href="#27"> 27: </a>        <span class="php-comment">/**
+</span></span><span id="28" class="codeline"><a class="number" href="#28"> 28: </a><span class="php-comment">         * Load Customizer Colors functionality.
+</span></span><span id="29" class="codeline"><a class="number" href="#29"> 29: </a><span class="php-comment">         *
+</span></span><span id="30" class="codeline"><a class="number" href="#30"> 30: </a><span class="php-comment">         * @since 1.0.0
+</span></span><span id="31" class="codeline"><a class="number" href="#31"> 31: </a><span class="php-comment">         */</span>
+</span><span id="32" class="codeline"><a class="number" href="#32"> 32: </a>        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/colors.php'</span>;
+</span><span id="33" class="codeline"><a class="number" href="#33"> 33: </a>
+</span><span id="34" class="codeline"><a class="number" href="#34"> 34: </a>        <span class="php-comment">/**
+</span></span><span id="35" class="codeline"><a class="number" href="#35"> 35: </a><span class="php-comment">         * Load Customizer Fonts functionality.
+</span></span><span id="36" class="codeline"><a class="number" href="#36"> 36: </a><span class="php-comment">         *
+</span></span><span id="37" class="codeline"><a class="number" href="#37"> 37: </a><span class="php-comment">         * @since 1.0.0
+</span></span><span id="38" class="codeline"><a class="number" href="#38"> 38: </a><span class="php-comment">         */</span>
+</span><span id="39" class="codeline"><a class="number" href="#39"> 39: </a>        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/fonts.php'</span>;
+</span><span id="40" class="codeline"><a class="number" href="#40"> 40: </a>
+</span><span id="41" class="codeline"><a class="number" href="#41"> 41: </a>        <span class="php-comment">/**
+</span></span><span id="42" class="codeline"><a class="number" href="#42"> 42: </a><span class="php-comment">         * Load Customizer Layouts functionality.
+</span></span><span id="43" class="codeline"><a class="number" href="#43"> 43: </a><span class="php-comment">         *
+</span></span><span id="44" class="codeline"><a class="number" href="#44"> 44: </a><span class="php-comment">         * @since 1.0.0
+</span></span><span id="45" class="codeline"><a class="number" href="#45"> 45: </a><span class="php-comment">         */</span>
+</span><span id="46" class="codeline"><a class="number" href="#46"> 46: </a>        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/layouts.php'</span>;
+</span><span id="47" class="codeline"><a class="number" href="#47"> 47: </a>
+</span><span id="48" class="codeline"><a class="number" href="#48"> 48: </a>        <span class="php-comment">/**
+</span></span><span id="49" class="codeline"><a class="number" href="#49"> 49: </a><span class="php-comment">         * Load additional site identity options
+</span></span><span id="50" class="codeline"><a class="number" href="#50"> 50: </a><span class="php-comment">         *
+</span></span><span id="51" class="codeline"><a class="number" href="#51"> 51: </a><span class="php-comment">         * @since NEXT
+</span></span><span id="52" class="codeline"><a class="number" href="#52"> 52: </a><span class="php-comment">         */</span>
+</span><span id="53" class="codeline"><a class="number" href="#53"> 53: </a>        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/site-identity.php'</span>;
+</span><span id="54" class="codeline"><a class="number" href="#54"> 54: </a>
+</span><span id="55" class="codeline"><a class="number" href="#55"> 55: </a>        add_action( <span class="php-quote">'after_setup_theme'</span>,      <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'logo'</span> ) );
+</span><span id="56" class="codeline"><a class="number" href="#56"> 56: </a>        add_action( <span class="php-quote">'customize_register'</span>,     <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'selective_refresh'</span> ), <span class="php-num">11</span> );
+</span><span id="57" class="codeline"><a class="number" href="#57"> 57: </a>        add_action( <span class="php-quote">'customize_register'</span>,     <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'use_featured_hero_image'</span> ) );
+</span><span id="58" class="codeline"><a class="number" href="#58"> 58: </a>        add_action( <span class="php-quote">'customize_preview_init'</span>, <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'customize_preview_js'</span> ) );
+</span><span id="59" class="codeline"><a class="number" href="#59"> 59: </a>
+</span><span id="60" class="codeline"><a class="number" href="#60"> 60: </a>    }
+</span><span id="61" class="codeline"><a class="number" href="#61"> 61: </a>
+</span><span id="62" class="codeline"><a class="number" href="#62"> 62: </a>    <span class="php-comment">/**
+</span></span><span id="63" class="codeline"><a class="number" href="#63"> 63: </a><span class="php-comment">     * Add custom logo support.
+</span></span><span id="64" class="codeline"><a class="number" href="#64"> 64: </a><span class="php-comment">     *
+</span></span><span id="65" class="codeline"><a class="number" href="#65"> 65: </a><span class="php-comment">     * @action after_setup_theme
+</span></span><span id="66" class="codeline"><a class="number" href="#66"> 66: </a><span class="php-comment">     * @since  1.0.0
+</span></span><span id="67" class="codeline"><a class="number" href="#67"> 67: </a><span class="php-comment">     */</span>
+</span><span id="68" class="codeline"><a class="number" href="#68"> 68: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> logo() {
+</span><span id="69" class="codeline"><a class="number" href="#69"> 69: </a>
+</span><span id="70" class="codeline"><a class="number" href="#70"> 70: </a>        <span class="php-comment">/**
+</span></span><span id="71" class="codeline"><a class="number" href="#71"> 71: </a><span class="php-comment">         * Filter the custom logo args.
+</span></span><span id="72" class="codeline"><a class="number" href="#72"> 72: </a><span class="php-comment">         *
+</span></span><span id="73" class="codeline"><a class="number" href="#73"> 73: </a><span class="php-comment">         * @since 1.0.0
+</span></span><span id="74" class="codeline"><a class="number" href="#74"> 74: </a><span class="php-comment">         *
+</span></span><span id="75" class="codeline"><a class="number" href="#75"> 75: </a><span class="php-comment">         * @var array
+</span></span><span id="76" class="codeline"><a class="number" href="#76"> 76: </a><span class="php-comment">         */</span>
+</span><span id="77" class="codeline"><a class="number" href="#77"> 77: </a>        <span class="php-var">$args</span> = (<span class="php-keyword1">array</span>) apply_filters( <span class="php-quote">'primer_custom_logo_args'</span>,
+</span><span id="78" class="codeline"><a class="number" href="#78"> 78: </a>            <span class="php-keyword1">array</span>(
+</span><span id="79" class="codeline"><a class="number" href="#79"> 79: </a>                <span class="php-quote">'height'</span>      =&gt; <span class="php-num">100</span>,
+</span><span id="80" class="codeline"><a class="number" href="#80"> 80: </a>                <span class="php-quote">'width'</span>       =&gt; <span class="php-num">400</span>,
+</span><span id="81" class="codeline"><a class="number" href="#81"> 81: </a>                <span class="php-quote">'flex-height'</span> =&gt; <span class="php-keyword1">true</span>,
+</span><span id="82" class="codeline"><a class="number" href="#82"> 82: </a>                <span class="php-quote">'flex-width'</span>  =&gt; <span class="php-keyword1">true</span>,
+</span><span id="83" class="codeline"><a class="number" href="#83"> 83: </a>                <span class="php-quote">'header-text'</span> =&gt; <span class="php-keyword1">array</span>( <span class="php-quote">'site-title'</span>, <span class="php-quote">'site-description'</span> ),
+</span><span id="84" class="codeline"><a class="number" href="#84"> 84: </a>            )
+</span><span id="85" class="codeline"><a class="number" href="#85"> 85: </a>        );
+</span><span id="86" class="codeline"><a class="number" href="#86"> 86: </a>
+</span><span id="87" class="codeline"><a class="number" href="#87"> 87: </a>        add_theme_support( <span class="php-quote">'custom-logo'</span>, <span class="php-var">$args</span> );
+</span><span id="88" class="codeline"><a class="number" href="#88"> 88: </a>
+</span><span id="89" class="codeline"><a class="number" href="#89"> 89: </a>    }
+</span><span id="90" class="codeline"><a class="number" href="#90"> 90: </a>
+</span><span id="91" class="codeline"><a class="number" href="#91"> 91: </a>    <span class="php-comment">/**
+</span></span><span id="92" class="codeline"><a class="number" href="#92"> 92: </a><span class="php-comment">     * Adds postMessage support for site title and description for the Customizer.
+</span></span><span id="93" class="codeline"><a class="number" href="#93"> 93: </a><span class="php-comment">     *
+</span></span><span id="94" class="codeline"><a class="number" href="#94"> 94: </a><span class="php-comment">     * @action customize_register
+</span></span><span id="95" class="codeline"><a class="number" href="#95"> 95: </a><span class="php-comment">     * @since  1.0.0
+</span></span><span id="96" class="codeline"><a class="number" href="#96"> 96: </a><span class="php-comment">     * @uses   $this-&gt;blogname()
+</span></span><span id="97" class="codeline"><a class="number" href="#97"> 97: </a><span class="php-comment">     * @uses   $this-&gt;blogdescription()
+</span></span><span id="98" class="codeline"><a class="number" href="#98"> 98: </a><span class="php-comment">     *
+</span></span><span id="99" class="codeline"><a class="number" href="#99"> 99: </a><span class="php-comment">     * @param WP_Customize_Manager $wp_customize
+</span></span><span id="100" class="codeline"><a class="number" href="#100">100: </a><span class="php-comment">     */</span>
+</span><span id="101" class="codeline"><a class="number" href="#101">101: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> selective_refresh( WP_Customize_Manager <span class="php-var">$wp_customize</span> ) {
+</span><span id="102" class="codeline"><a class="number" href="#102">102: </a>
+</span><span id="103" class="codeline"><a class="number" href="#103">103: </a>        <span class="php-var">$wp_customize</span>-&gt;get_setting( <span class="php-quote">'blogname'</span> )-&gt;transport         = <span class="php-quote">'postMessage'</span>;
+</span><span id="104" class="codeline"><a class="number" href="#104">104: </a>        <span class="php-var">$wp_customize</span>-&gt;get_setting( <span class="php-quote">'blogdescription'</span> )-&gt;transport  = <span class="php-quote">'postMessage'</span>;
+</span><span id="105" class="codeline"><a class="number" href="#105">105: </a>        <span class="php-var">$wp_customize</span>-&gt;get_setting( <span class="php-quote">'header_textcolor'</span> )-&gt;transport = <span class="php-quote">'postMessage'</span>;
+</span><span id="106" class="codeline"><a class="number" href="#106">106: </a>
+</span><span id="107" class="codeline"><a class="number" href="#107">107: </a>        <span class="php-keyword1">if</span> ( ! <span class="php-keyword1">isset</span>( <span class="php-var">$wp_customize</span>-&gt;selective_refresh ) ) {
+</span><span id="108" class="codeline"><a class="number" href="#108">108: </a>
+</span><span id="109" class="codeline"><a class="number" href="#109">109: </a>            <span class="php-keyword1">return</span>;
+</span><span id="110" class="codeline"><a class="number" href="#110">110: </a>
+</span><span id="111" class="codeline"><a class="number" href="#111">111: </a>        }
+</span><span id="112" class="codeline"><a class="number" href="#112">112: </a>
+</span><span id="113" class="codeline"><a class="number" href="#113">113: </a>        <span class="php-var">$wp_customize</span>-&gt;selective_refresh-&gt;add_partial(
+</span><span id="114" class="codeline"><a class="number" href="#114">114: </a>            <span class="php-quote">'blogname'</span>,
+</span><span id="115" class="codeline"><a class="number" href="#115">115: </a>            <span class="php-keyword1">array</span>(
+</span><span id="116" class="codeline"><a class="number" href="#116">116: </a>                <span class="php-quote">'selector'</span>            =&gt; <span class="php-quote">'.site-title a'</span>,
+</span><span id="117" class="codeline"><a class="number" href="#117">117: </a>                <span class="php-quote">'container_inclusive'</span> =&gt; <span class="php-keyword1">false</span>,
+</span><span id="118" class="codeline"><a class="number" href="#118">118: </a>                <span class="php-quote">'render_callback'</span>     =&gt; <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'blogname'</span> ),
+</span><span id="119" class="codeline"><a class="number" href="#119">119: </a>            )
+</span><span id="120" class="codeline"><a class="number" href="#120">120: </a>        );
+</span><span id="121" class="codeline"><a class="number" href="#121">121: </a>
+</span><span id="122" class="codeline"><a class="number" href="#122">122: </a>        <span class="php-var">$wp_customize</span>-&gt;selective_refresh-&gt;add_partial(
+</span><span id="123" class="codeline"><a class="number" href="#123">123: </a>            <span class="php-quote">'blogdescription'</span>,
+</span><span id="124" class="codeline"><a class="number" href="#124">124: </a>            <span class="php-keyword1">array</span>(
+</span><span id="125" class="codeline"><a class="number" href="#125">125: </a>                <span class="php-quote">'selector'</span>            =&gt; <span class="php-quote">'.site-description'</span>,
+</span><span id="126" class="codeline"><a class="number" href="#126">126: </a>                <span class="php-quote">'container_inclusive'</span> =&gt; <span class="php-keyword1">false</span>,
+</span><span id="127" class="codeline"><a class="number" href="#127">127: </a>                <span class="php-quote">'render_callback'</span>     =&gt; <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'blogdescription'</span> ),
+</span><span id="128" class="codeline"><a class="number" href="#128">128: </a>            )
+</span><span id="129" class="codeline"><a class="number" href="#129">129: </a>        );
+</span><span id="130" class="codeline"><a class="number" href="#130">130: </a>
+</span><span id="131" class="codeline"><a class="number" href="#131">131: </a>    }
+</span><span id="132" class="codeline"><a class="number" href="#132">132: </a>
+</span><span id="133" class="codeline"><a class="number" href="#133">133: </a>    <span class="php-comment">/**
+</span></span><span id="134" class="codeline"><a class="number" href="#134">134: </a><span class="php-comment">     * Display the blog name.
+</span></span><span id="135" class="codeline"><a class="number" href="#135">135: </a><span class="php-comment">     *
+</span></span><span id="136" class="codeline"><a class="number" href="#136">136: </a><span class="php-comment">     * @since 1.0.0
+</span></span><span id="137" class="codeline"><a class="number" href="#137">137: </a><span class="php-comment">     * @see   $this-&gt;selective_refresh()
+</span></span><span id="138" class="codeline"><a class="number" href="#138">138: </a><span class="php-comment">     */</span>
+</span><span id="139" class="codeline"><a class="number" href="#139">139: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> blogname() {
+</span><span id="140" class="codeline"><a class="number" href="#140">140: </a>
+</span><span id="141" class="codeline"><a class="number" href="#141">141: </a>        bloginfo( <span class="php-quote">'name'</span> );
+</span><span id="142" class="codeline"><a class="number" href="#142">142: </a>
+</span><span id="143" class="codeline"><a class="number" href="#143">143: </a>    }
+</span><span id="144" class="codeline"><a class="number" href="#144">144: </a>
+</span><span id="145" class="codeline"><a class="number" href="#145">145: </a>    <span class="php-comment">/**
+</span></span><span id="146" class="codeline"><a class="number" href="#146">146: </a><span class="php-comment">     * Display the blog description.
+</span></span><span id="147" class="codeline"><a class="number" href="#147">147: </a><span class="php-comment">     *
+</span></span><span id="148" class="codeline"><a class="number" href="#148">148: </a><span class="php-comment">     * @since 1.0.0
+</span></span><span id="149" class="codeline"><a class="number" href="#149">149: </a><span class="php-comment">     * @see   $this-&gt;selective_refresh()
+</span></span><span id="150" class="codeline"><a class="number" href="#150">150: </a><span class="php-comment">     */</span>
+</span><span id="151" class="codeline"><a class="number" href="#151">151: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> blogdescription() {
+</span><span id="152" class="codeline"><a class="number" href="#152">152: </a>
+</span><span id="153" class="codeline"><a class="number" href="#153">153: </a>        bloginfo( <span class="php-quote">'description'</span> );
+</span><span id="154" class="codeline"><a class="number" href="#154">154: </a>
+</span><span id="155" class="codeline"><a class="number" href="#155">155: </a>    }
+</span><span id="156" class="codeline"><a class="number" href="#156">156: </a>
+</span><span id="157" class="codeline"><a class="number" href="#157">157: </a>    <span class="php-comment">/**
+</span></span><span id="158" class="codeline"><a class="number" href="#158">158: </a><span class="php-comment">     * Add control to use featured images as the hero image.
+</span></span><span id="159" class="codeline"><a class="number" href="#159">159: </a><span class="php-comment">     *
+</span></span><span id="160" class="codeline"><a class="number" href="#160">160: </a><span class="php-comment">     * @action customize_register
+</span></span><span id="161" class="codeline"><a class="number" href="#161">161: </a><span class="php-comment">     * @since  1.0.0
+</span></span><span id="162" class="codeline"><a class="number" href="#162">162: </a><span class="php-comment">     *
+</span></span><span id="163" class="codeline"><a class="number" href="#163">163: </a><span class="php-comment">     * @param WP_Customize_Manager $wp_customize
+</span></span><span id="164" class="codeline"><a class="number" href="#164">164: </a><span class="php-comment">     */</span>
+</span><span id="165" class="codeline"><a class="number" href="#165">165: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> use_featured_hero_image( WP_Customize_Manager <span class="php-var">$wp_customize</span> ) {
+</span><span id="166" class="codeline"><a class="number" href="#166">166: </a>
+</span><span id="167" class="codeline"><a class="number" href="#167">167: </a>        <span class="php-var">$wp_customize</span>-&gt;add_setting(
+</span><span id="168" class="codeline"><a class="number" href="#168">168: </a>            <span class="php-quote">'use_featured_hero_image'</span>,
+</span><span id="169" class="codeline"><a class="number" href="#169">169: </a>            <span class="php-keyword1">array</span>(
+</span><span id="170" class="codeline"><a class="number" href="#170">170: </a>                <span class="php-quote">'default'</span>           =&gt; <span class="php-num">1</span>,
+</span><span id="171" class="codeline"><a class="number" href="#171">171: </a>                <span class="php-quote">'sanitize_callback'</span> =&gt; <span class="php-quote">'absint'</span>,
+</span><span id="172" class="codeline"><a class="number" href="#172">172: </a>            )
+</span><span id="173" class="codeline"><a class="number" href="#173">173: </a>        );
+</span><span id="174" class="codeline"><a class="number" href="#174">174: </a>
+</span><span id="175" class="codeline"><a class="number" href="#175">175: </a>        <span class="php-var">$wp_customize</span>-&gt;add_control(
+</span><span id="176" class="codeline"><a class="number" href="#176">176: </a>            <span class="php-quote">'use_featured_hero_image'</span>,
+</span><span id="177" class="codeline"><a class="number" href="#177">177: </a>            <span class="php-keyword1">array</span>(
+</span><span id="178" class="codeline"><a class="number" href="#178">178: </a>                <span class="php-quote">'label'</span>       =&gt; esc_html__( <span class="php-quote">'Use featured image'</span>, <span class="php-quote">'primer'</span> ),
+</span><span id="179" class="codeline"><a class="number" href="#179">179: </a>                <span class="php-quote">'description'</span> =&gt; esc_html__( <span class="php-quote">'Allow the featured image on the current post to override the hero image.'</span>, <span class="php-quote">'primer'</span> ),
+</span><span id="180" class="codeline"><a class="number" href="#180">180: </a>                <span class="php-quote">'section'</span>     =&gt; <span class="php-quote">'header_image'</span>,
+</span><span id="181" class="codeline"><a class="number" href="#181">181: </a>                <span class="php-quote">'priority'</span>    =&gt; <span class="php-num">5</span>,
+</span><span id="182" class="codeline"><a class="number" href="#182">182: </a>                <span class="php-quote">'type'</span>        =&gt; <span class="php-quote">'checkbox'</span>,
+</span><span id="183" class="codeline"><a class="number" href="#183">183: </a>            )
+</span><span id="184" class="codeline"><a class="number" href="#184">184: </a>        );
+</span><span id="185" class="codeline"><a class="number" href="#185">185: </a>
+</span><span id="186" class="codeline"><a class="number" href="#186">186: </a>    }
+</span><span id="187" class="codeline"><a class="number" href="#187">187: </a>
+</span><span id="188" class="codeline"><a class="number" href="#188">188: </a>    <span class="php-comment">/**
+</span></span><span id="189" class="codeline"><a class="number" href="#189">189: </a><span class="php-comment">     * Enqueue preview JS.
+</span></span><span id="190" class="codeline"><a class="number" href="#190">190: </a><span class="php-comment">     *
+</span></span><span id="191" class="codeline"><a class="number" href="#191">191: </a><span class="php-comment">     * @action customize_preview_init
+</span></span><span id="192" class="codeline"><a class="number" href="#192">192: </a><span class="php-comment">     * @since 1.0.0
+</span></span><span id="193" class="codeline"><a class="number" href="#193">193: </a><span class="php-comment">     */</span>
+</span><span id="194" class="codeline"><a class="number" href="#194">194: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> customize_preview_js() {
+</span><span id="195" class="codeline"><a class="number" href="#195">195: </a>
+</span><span id="196" class="codeline"><a class="number" href="#196">196: </a>        <span class="php-var">$suffix</span> = SCRIPT_DEBUG ? <span class="php-quote">''</span> : <span class="php-quote">'.min'</span>;
+</span><span id="197" class="codeline"><a class="number" href="#197">197: </a>
+</span><span id="198" class="codeline"><a class="number" href="#198">198: </a>        wp_enqueue_script( <span class="php-quote">'primer-customize-preview'</span>, get_template_directory_uri() . <span class="php-quote">&quot;/assets/js/admin/customizer</span><span class="php-var">{$suffix}</span><span class="php-quote">.js&quot;</span>, <span class="php-keyword1">array</span>( <span class="php-quote">'customize-preview'</span> ), PRIMER_VERSION, <span class="php-keyword1">true</span> );
+</span><span id="199" class="codeline"><a class="number" href="#199">199: </a>
+</span><span id="200" class="codeline"><a class="number" href="#200">200: </a>        wp_localize_script( <span class="php-quote">'primer-customize-preview'</span>, <span class="php-quote">'colorsSettings'</span>, <span class="php-keyword1">array</span>( <span class="php-quote">'hero_background_selector'</span> =&gt; primer_get_hero_image_selector() ) );
+</span><span id="201" class="codeline"><a class="number" href="#201">201: </a>
+</span><span id="202" class="codeline"><a class="number" href="#202">202: </a>    }
+</span><span id="203" class="codeline"><a class="number" href="#203">203: </a>
+</span><span id="204" class="codeline"><a class="number" href="#204">204: </a>    <span class="php-comment">/**
+</span></span><span id="205" class="codeline"><a class="number" href="#205">205: </a><span class="php-comment">     * Return an array of CSS rules as plain CSS.
+</span></span><span id="206" class="codeline"><a class="number" href="#206">206: </a><span class="php-comment">     *
+</span></span><span id="207" class="codeline"><a class="number" href="#207">207: </a><span class="php-comment">     * @since 1.0.0
+</span></span><span id="208" class="codeline"><a class="number" href="#208">208: </a><span class="php-comment">     *
+</span></span><span id="209" class="codeline"><a class="number" href="#209">209: </a><span class="php-comment">     * @param  array $rules
+</span></span><span id="210" class="codeline"><a class="number" href="#210">210: </a><span class="php-comment">     *
+</span></span><span id="211" class="codeline"><a class="number" href="#211">211: </a><span class="php-comment">     * @return string
+</span></span><span id="212" class="codeline"><a class="number" href="#212">212: </a><span class="php-comment">     */</span>
+</span><span id="213" class="codeline"><a class="number" href="#213">213: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> parse_css_rules( <span class="php-keyword1">array</span> <span class="php-var">$rules</span> ) {
+</span><span id="214" class="codeline"><a class="number" href="#214">214: </a>
+</span><span id="215" class="codeline"><a class="number" href="#215">215: </a>        <span class="php-keyword2">ob_start</span>();
+</span><span id="216" class="codeline"><a class="number" href="#216">216: </a>
+</span><span id="217" class="codeline"><a class="number" href="#217">217: </a>        <span class="php-keyword1">foreach</span> ( <span class="php-var">$rules</span> <span class="php-keyword1">as</span> <span class="php-var">$rule</span> =&gt; <span class="php-var">$properties</span> ) {
+</span><span id="218" class="codeline"><a class="number" href="#218">218: </a>
+</span><span id="219" class="codeline"><a class="number" href="#219">219: </a>            <span class="php-keyword2">printf</span>(
+</span><span id="220" class="codeline"><a class="number" href="#220">220: </a>                <span class="php-quote">&quot;%s {\n&quot;</span>,
+</span><span id="221" class="codeline"><a class="number" href="#221">221: </a>                <span class="php-keyword2">implode</span>( <span class="php-quote">&quot;,\n&quot;</span>, <span class="php-keyword2">array_map</span>( <span class="php-quote">'trim'</span>, <span class="php-keyword2">explode</span>( <span class="php-quote">','</span>, <span class="php-var">$rule</span> ) ) )
+</span><span id="222" class="codeline"><a class="number" href="#222">222: </a>            );
+</span><span id="223" class="codeline"><a class="number" href="#223">223: </a>
+</span><span id="224" class="codeline"><a class="number" href="#224">224: </a>            <span class="php-keyword1">foreach</span> ( <span class="php-var">$properties</span> <span class="php-keyword1">as</span> <span class="php-var">$property</span> =&gt; <span class="php-var">$value</span> ) {
+</span><span id="225" class="codeline"><a class="number" href="#225">225: </a>
+</span><span id="226" class="codeline"><a class="number" href="#226">226: </a>                <span class="php-keyword2">printf</span>( <span class="php-quote">&quot;\t%s: %s;\n&quot;</span>, <span class="php-var">$property</span>, <span class="php-var">$value</span> );
+</span><span id="227" class="codeline"><a class="number" href="#227">227: </a>
+</span><span id="228" class="codeline"><a class="number" href="#228">228: </a>            }
+</span><span id="229" class="codeline"><a class="number" href="#229">229: </a>
+</span><span id="230" class="codeline"><a class="number" href="#230">230: </a>            <span class="php-keyword1">echo</span> <span class="php-quote">&quot;}\n&quot;</span>;
+</span><span id="231" class="codeline"><a class="number" href="#231">231: </a>
+</span><span id="232" class="codeline"><a class="number" href="#232">232: </a>        }
+</span><span id="233" class="codeline"><a class="number" href="#233">233: </a>
+</span><span id="234" class="codeline"><a class="number" href="#234">234: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">ob_get_clean</span>();
+</span><span id="235" class="codeline"><a class="number" href="#235">235: </a>
+</span><span id="236" class="codeline"><a class="number" href="#236">236: </a>    }
+</span><span id="237" class="codeline"><a class="number" href="#237">237: </a>
+</span><span id="238" class="codeline"><a class="number" href="#238">238: </a>}
+</span><span id="239" class="codeline"><a class="number" href="#239">239: </a>
+</span><span id="240" class="codeline"><a class="number" href="#240">240: </a><span class="php-keyword1">new</span> Primer_Customizer;
+</span><span id="241" class="codeline"><a class="number" href="#241">241: </a></span></code></pre>
+			</div>
 		</div>
 
 	</div>
-
 </div>
+
+<section id="socials" class="back-3">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-5  social text-center">
+				<div class="col-sm-3 col-xs-3">
+				</div>
+
+				<div class="col-sm-3 col-xs-3">
+					<a class="github-button" href="https://github.com/godaddy/wp-primer-theme" data-icon="octicon-star" data-count-href="/godaddy/wp-primer-theme/stargazers" data-count-api="/repos/godaddy/wp-primer-theme#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star godaddy/wp-primer-theme on GitHub">Star</a>
+				</div>
+
+				<div class="col-sm-3 col-xs-3">
+					<a class="github-button" href="https://github.com/godaddy/wp-primer-theme/fork" data-icon="octicon-repo-forked" data-count-href="/godaddy/wp-primer-theme/network" data-count-api="/repos/godaddy/wp-primer-theme#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork godaddy/wp-primer-theme on GitHub">Fork</a>
+					<script async defer src="https://buttons.github.io/buttons.js"></script>
+				</div>
+
+				<div class="col-sm-3 col-xs-3">
+						<a href="https://twitter.com/GoDaddy" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @GoDaddy</a>
+						<script type="text/javascript">!function(d,s,id) { var js, fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){ js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);} }(document, 'script', 'twitter-wjs');</script>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-3 social-footer text-center">
+				<a href="https://twitter.com/GoDaddy" data-toggle="tooltip" title="Twitter"><i class="fa icon-social fa-twitter"></i>
+				<a href="https://github.com/GoDaddy" data-toggle="tooltip" title="Github"><i class="fa icon-social fa-github"></i></a>
+			</div>
+
+
+		</div>
+	</div>
+</section>
+
 <footer id="footer" class="footer-wrapper">
-    <div class="container">
+	<div class="container">
+		<div class="row col-p30">
+			<div class="col-sm-12 col-md-3">
+				<div class="footer-widget t-footer">
+					<div class="col-md-12">
+						<a href="https://www.openhub.net/p/wp-primer-theme">
+							<img alt="OpenHub" src="resources/open-hub.png?826742001627a261451eeee1b4203188f7b3db3c">
+						</a>
+					</div>
+					<br>
+					<br>
+					<div class="col-md-12">
+							<a href="https://www.godaddy.com">
+								<img alt="GoDaddy Logo" src="resources/godaddy-logo-white.png?0476a317128b1da2a394c50c82b04df794bc37d4">
+							</a>
+					</div>
+				</div>
+			</div>
 
-        <div class="row col-p30">
-            <div class="col-sm-12 col-md-3">
-                <div class="footer-widget t-footer">
-                    <div class="col-md-12">
-                        <a href="https://www.openhub.net/p/wp-primer-theme">
-                            <img src="../_static/open-hub.png">
-                        </a>
-                    </div>
-										<br /><br />
-										<div class="col-md-12">
-                        <a href="https://www.godaddy.com">
-                            <img src="../_static/godaddy-logo-white.png">
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-9">
-                <div class="col-md-3 col-sm-6 business-solution">
-                    <ul class="footer-menu">
-                        <li class="menu-title">
+			<div class="col-sm-12 col-md-9">
+				<div class="col-md-3 col-sm-6 business-solution">
+					<ul class="footer-menu">
+<li class="menu-title">
 
 	<a href="https://www.GoDaddy.com">
 
@@ -633,71 +640,49 @@
 	</a>
 
 </li>
-                    </ul>
-                </div>
+					</ul>
+				</div>
 
-                <div class="col-md-3 col-sm-6">
-                    <ul class="footer-menu">
-                        
+				<div class="col-md-3 col-sm-6">
+					<ul class="footer-menu">
 <li class="menu-title">
 	<i class="fa fa-menu-title fa-book"></i>Documentation
 </li>
-
 <li><a href="https://godaddy.github.io/wp-primer-theme/intro.html"><i class="fa fa-menu fa-chevron-right"></i>Wiki</a></li>
 <li><a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html"><i class="fa fa-menu fa-chevron-right"></i>Documentation</a></li>
 <li><a href="https://godaddy.github.io/wp-primer-theme/how-to.html"><i class="fa fa-menu fa-chevron-right"></i>Tutorials</a></li>
 <li><a href="https://godaddy.github.io/wp-primer-theme/license.html"><i class="fa fa-menu fa-chevron-right"></i>License</a></li>
 <li><a href="https://godaddy.github.io/wp-primer-theme/changelog.html"><i class="fa fa-menu fa-chevron-right"></i>Changelog</a></li>
-                    </ul>
-                </div>
+					</ul>
+				</div>
 
-                <div class="col-md-3 col-sm-6">
-                    <ul class="footer-menu">
-                        
+				<div class="col-md-3 col-sm-6">
+					<ul class="footer-menu">
 <li class="menu-title"><i class="fa fa-menu-title fa-users"></i>Community</li>
 
 <li><a href="https://aboutus.godaddy.net/about-us/default.aspx"><i class="fa fa-menu fa-chevron-right"></i>About Us</a></li>
-                    </ul>
-                </div>
+					</ul>
+				</div>
 
-                <div class="col-md-3 col-sm-6">
-                    <ul class="footer-menu">
-                        
+				<div class="col-md-3 col-sm-6">
+					<ul class="footer-menu">
 <li class="menu-title"><i class="fa fa-menu-title fa-comments-o"></i>Help &amp; Support</li>
 
 <li><a href="https://github.com/godaddy/wp-primer-theme/issues"><i class="fa fa-menu fa-github"></i>GitHub</a></li>
 <li><a href="https://wordpress.org/support/theme/primer"><i class="fa fa-menu fa-wordpress"></i>WordPress</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+					</ul>
+				</div>
+			</div>
+		</div>
 
-        <div class="row">
-            <div class="col-md-12 text-center mt30">
-                <p class="copyright">
-                            &copy; Copyright 2017, GoDaddy, Inc.
-                        Last updated on Feb 02, 2017.
-                        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.4.5.
-                </p>
-            </div>
-        </div>
-    </div>
+		<div class="row">
+			<div class="col-md-12 text-center mt30">
+				<p class="copyright">
+					© Copyright 2017, GoDaddy, Inc. Generated using <a href="http://sphinx.pocoo.org/">Sphinx</a>
+				</p>
+			</div>
+		</div>
+	</div>
 </footer>
-
-<div id="inline-search-results"></div>
-
-
-</div>
-
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-743287-3']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-</script>
-  </body>
+</body>
 </html>
