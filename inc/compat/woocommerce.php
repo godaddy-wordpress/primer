@@ -243,6 +243,7 @@ function primer_wc_colors( $colors ) {
 		'button_color' => array(
 			'css' => array(
 				'.woocommerce button.button.alt,
+				.woocommerce input.button.alt,
 				.woocommerce a.button,
 				.woocommerce a.button.alt,
 				.woocommerce #respond input#submit,
@@ -257,6 +258,7 @@ function primer_wc_colors( $colors ) {
 			),
 			'rgba_css' => array(
 				'.woocommerce button.button.alt:hover, .woocommerce button.button.alt:active, .woocommerce button.button.alt:focus,
+				.woocommerce input.button.alt:hover, .woocommerce input.button.alt:active, .woocommerce input.button.alt:focus,
 				.woocommerce a.button:hover, .woocommerce a.button:active, .woocommerce a.button:focus,
 				.woocommerce a.button.alt:hover, .woocommerce a.button.alt:active, .woocommerce a.button.alt:focus,
 				.woocommerce #respond input#submit:hover,
@@ -271,6 +273,7 @@ function primer_wc_colors( $colors ) {
 		'button_text_color' => array(
 			'css' => array(
 				'.woocommerce button.button.alt, .woocommerce button.button.alt:hover,
+				.woocommerce input.button.alt, .woocommerce input.button.alt:hover,
 				.woocommerce a.button, .woocommerce a.button:visited, .woocommerce a.button:hover, .woocommerce a.button:visited:hover,
 				.woocommerce a.button.alt, .woocommerce a.button.alt:visited, .woocommerce a.button.alt:hover, .woocommerce a.button.alt:visited:hover,
 				.woocommerce #respond input#submit, .woocommerce #respond input#submit:hover,
@@ -301,7 +304,8 @@ function primer_wc_font_types( $font_types ) {
 	$wc_font_types = array(
 		'navigation_font' => array(
 			'css' => array(
-				'.woocommerce button.button.alt
+				'.woocommerce button.button.alt,
+				.woocommerce input.button.alt,
 				.woocommerce a.button' => array(
 					'font-family' => '"%1$s", sans-serif',
 				),
