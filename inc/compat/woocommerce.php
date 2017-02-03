@@ -145,7 +145,7 @@ function primer_wc_shop_title( $title ) {
 add_filter( 'primer_the_page_title', 'primer_wc_shop_title' );
 
 /**
- * Filter the number of WooCommerce shop columns.
+ * Change the number of shop columns based on the Primer layout.
  *
  * @filter loop_shop_columns
  * @filter woocommerce_related_products_columns
@@ -179,9 +179,9 @@ add_filter( 'woocommerce_related_products_columns', 'primer_wc_shop_columns' );
 add_filter( 'woocommerce_upsells_products_columns', 'primer_wc_shop_columns' );
 
 /**
- * Filter the WooCommerce product class.
+ * Add post class to support 2-column product layouts in Primer.
  *
- * @filter primer_wc_product_classes
+ * @filter post_class
  * @global WP_Post $post
  * @global array   $woocommerce_loop
  * @since  1.0.0
@@ -194,19 +194,10 @@ function primer_wc_product_classes( $classes ) {
 
 	global $post, $woocommerce_loop;
 
-	/**
-	 * Check if on the WooCommerce shop page, and the post type is `product`.
-	 *
-	 * @var bool
-	 */
+	// Check if we are on a single product page
 	$is_product = ( is_shop() && 'product' === $post->post_type );
 
-	/**
-	 * Check if on single product page, in upsell or related product loop
-	 * and the post type is `product`.
-	 *
-	 * @var bool
-	 */
+	// Check if we are in an upsell or related product loop
 	$is_upsell_or_related = (
 		is_single()
 		&&
@@ -217,7 +208,7 @@ function primer_wc_product_classes( $classes ) {
 		( 'related' === $woocommerce_loop['name'] || 'up-sells' === $woocommerce_loop['name'] )
 	);
 
-	if ( $is_product ||  $is_upsell_or_related ) {
+	if ( $is_product || $is_upsell_or_related ) {
 
 		$classes[] = 'primer-2-column-product';
 
