@@ -450,14 +450,15 @@ function primer_scripts() {
 
 	if ( primer_has_hero_image() ) {
 
-		wp_add_inline_style(
-			$stylesheet,
-			sprintf(
-				'%s { background-image: url(%s); }',
-				primer_get_hero_image_selector(),
-				esc_url( primer_get_hero_image() )
-			)
+		$css = sprintf(
+			'%s { background-image: url(%s); }',
+			primer_get_hero_image_selector(),
+			esc_url( primer_get_hero_image() )
 		);
+
+		$css = SCRIPT_DEBUG ? $css : Primer_Customizer::compact_css( $css );
+
+		wp_add_inline_style( $stylesheet, $css );
 
 	}
 
