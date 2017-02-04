@@ -285,7 +285,7 @@ function primer_wc_colors( $colors ) {
 				),
 			),
 		),
-		'content_background_color' => array(
+		'background_color' => array(
 			'css' => array(
 				'li.primer-wc-cart-menu .primer-wc-cart-sub-menu' => array(
 					'background-color' => '%1$s',
