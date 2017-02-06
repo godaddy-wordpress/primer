@@ -13,6 +13,8 @@
  * Enable support for WooCommerce.
  *
  * @action after_setup_theme
+ * @uses   [add_theme_support](https://developer.wordpress.org/reference/functions/add_theme_support/) To enable WooCommerce support.
+ *
  * @link   https://docs.woothemes.com/document/third-party-custom-theme-compatibility/
  * @since  1.0.0
  */
@@ -36,6 +38,8 @@ remove_action( 'woocommerce_after_main_content',  'woocommerce_output_content_wr
  *
  * @action woocommerce_before_main_content
  * @since  1.0.0
+ *
+ * @return mixed Returns the opening WooCommerce content wrappers.
  */
 function primer_wc_wrapper_start() {
 
@@ -55,6 +59,8 @@ add_action( 'woocommerce_before_main_content', 'primer_wc_wrapper_start' );
  *
  * @action woocommerce_after_main_content
  * @since  1.0.0
+ *
+ * @return mixed Returns the closing WooCommerce content wrappers.
  */
 function primer_wc_wrapper_end() {
 
@@ -69,6 +75,8 @@ add_action( 'woocommerce_after_main_content', 'primer_wc_wrapper_end' );
  * Add tertiary sidebar to WooCommerce templates.
  *
  * @action woocommerce_sidebar
+ * @uses   [get_sidebar](https://developer.wordpress.org/reference/functions/get_sidebar/) To display the sidebar.
+ *
  * @since  1.0.0
  */
 function primer_wc_sidebar() {
@@ -83,7 +91,11 @@ add_action( 'woocommerce_sidebar', 'primer_wc_sidebar' );
  *
  * @action primer_before_post_content
  * @action primer_before_page_content
+ * @uses   [is_checkout](https://docs.woocommerce.com/wc-apidocs/function-is_checkout.html) To confirm user is not on the checkout page.
+ *
  * @since  1.0.0
+ *
+ * @return mixed Returns `[woocommerce_message]` shortcode if not on the checkout page.
  */
 function primer_wc_shop_messages() {
 
@@ -100,12 +112,14 @@ add_action( 'primer_before_page_content', 'primer_wc_shop_messages' );
 /**
  * Filter the layout for the WooCommerce shop page.
  *
- * @filter theme_mod_layout
+ * @filter primer_current_layout
+ * @uses   primer_get_layout     To retreive the page layout.
+ *
  * @since  1.0.0
  *
- * @param  string $layout
+ * @param  string $layout The default layout for the page.
  *
- * @return string
+ * @return mixed  string  Returns the shop page layout.
  */
 function primer_wc_shop_layout( $layout ) {
 
@@ -126,11 +140,13 @@ add_filter( 'primer_current_layout', 'primer_wc_shop_layout' );
  * Filter the WooCommerce shop page title.
  *
  * @filter primer_the_page_title
+ * @uses   [get_the_title](https://developer.wordpress.org/reference/functions/get_the_title/) To retreive the shop page title.
+ *
  * @since  1.0.0
  *
- * @param  string $title
+ * @param  string $title  The page title.
  *
- * @return string
+ * @return string Returns the shop page title.
  */
 function primer_wc_shop_title( $title ) {
 
@@ -153,11 +169,15 @@ add_filter( 'primer_the_page_title', 'primer_wc_shop_title' );
  * @filter loop_shop_columns
  * @filter woocommerce_related_products_columns
  * @filter woocommerce_upsells_products_columns
- * @since 1.0.0
+ * @uses   [is_shop](https://docs.woocommerce.com/wc-apidocs/function-is_shop.html) To check the if on the WooCommerce shop page.
+ * @uses   [wc_get_page_id](https://docs.woocommerce.com/wc-apidocs/function-wc_get_page_id.html) To retreive the WooCommerce page id.
+ * @uses   primer_get_layout To check if the current page is three columns.
  *
- * @param  int $columns
+ * @since  1.0.0
  *
- * @return int
+ * @param  integer $columns $columns The default number of columns.
+ *
+ * @return integer The number of columns to use.
  */
 function primer_wc_shop_columns( $columns ) {
 
@@ -184,14 +204,14 @@ add_filter( 'woocommerce_upsells_products_columns', 'primer_wc_shop_columns' );
  * Filter the WooCommerce product class.
  *
  * @filter primer_wc_product_classes
+ * @since  1.0.0
+ *
  * @global WP_Post $post
  * @global array   $woocommerce_loop
  *
- * @param  array $classes
+ * @param  array   $classes Array of body classes.
  *
- * @return array
- *
- * @since 1.0.0
+ * @return array   Returns the array of body classes.
  */
 function primer_wc_product_classes( $classes ) {
 
@@ -234,11 +254,13 @@ function primer_wc_product_classes( $classes ) {
  * Add color scheme targets for WooCommerce elements.
  *
  * @filter primer_colors
+ * @uses   primer_array_replace_recursive To replace items in the colors array with new values.
+ *
  * @since  1.0.0
  *
- * @param  array $colors
+ * @param  array $colors Original Primer_Customizer_Colors color array.
  *
- * @return array
+ * @return array Returns the CSS replacements for WooCommerce elements.
  */
 function primer_wc_colors( $colors ) {
 
@@ -286,11 +308,13 @@ add_filter( 'primer_colors', 'primer_wc_colors' );
  * Add font type targets for WooCommerce elements.
  *
  * @filter primer_font_types
+ * @uses   primer_array_replace_recursive To replace items in the colors array with new values.
+ *
  * @since  1.0.0
  *
- * @param  array $font_types
+ * @param  array $font_types Original Primer_Customizer_Fonts font type array.
  *
- * @return array
+ * @return array Returns an array of font alterations for WooCommerce elements.
  */
 function primer_wc_font_types( $font_types ) {
 

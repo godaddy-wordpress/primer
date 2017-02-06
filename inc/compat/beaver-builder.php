@@ -13,12 +13,13 @@
  * Use full-width layout by default on Page Builder posts.
  *
  * @action add_post_meta
- * @global Primer_Customizer_Layouts $primer_customizer_layouts
+ * @uses   [update_post_meta](https://codex.wordpress.org/Function_Reference/update_post_meta) To update the `primer_layout` meta value.
+ * @global $primer_customizer_layouts
  * @since  1.0.0
  *
- * @param int    $post_id
- * @param string $meta_key
- * @param mixed  $meta_value
+ * @param  int    $post_id    Post ID to retreive the layout for.
+ * @param  string $meta_key   Key of the custom field to be added.
+ * @param  mixed  $meta_value Value of the custom field to be added.
  */
 function primer_bb_layout( $post_id, $meta_key, $meta_value ) {
 
@@ -42,12 +43,13 @@ add_action( 'add_post_meta', 'primer_bb_layout', 10, 3 );
 /**
  * Add color scheme targets for Beaver Builder elements.
  *
- * @filter primer_colors
+ * @action primer_colors
+ * @uses   primer_array_replace_recursive To recursively replace existing styles.
  * @since  1.0.0
  *
- * @param  array $colors
+ * @param  array $colors Original Primer_Customizer_Colors color array.
  *
- * @return array
+ * @return array Returns the CSS replacements for beaver builder elements.
  */
 function primer_bb_colors( $colors ) {
 

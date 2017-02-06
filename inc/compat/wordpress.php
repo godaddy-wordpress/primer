@@ -14,10 +14,14 @@
  */
 
 /**
- * Switch to the default theme immediately.
- *
- * @since 1.0.0
- */
+* Switch to the default theme immediately.
+*
+* @action admin_notices
+* @action after_setup_theme
+* @uses   [switch_theme](https://codex.wordpress.org/Function_Reference/switch_theme) To switch WordPress themes.
+*
+* @since  1.0.0
+*/
 function primer_switch_theme() {
 
 	switch_theme( WP_DEFAULT_THEME, WP_DEFAULT_THEME );
@@ -32,9 +36,11 @@ add_action( 'after_setup_theme', 'primer_switch_theme', 1 );
 /**
  * Return the required WordPress version upgrade message.
  *
- * @since 1.0.0
+ * @filter primer_required_wp_version_message
+ * @action after_setup_theme
+ * @uses   [get_bloginfo](https://codex.wordpress.org/Function_Reference/get_bloginfo) To retreive the WordPress version.
  *
- * @return string
+ * @since  1.0.0
  */
 function primer_get_wp_upgrade_message() {
 
