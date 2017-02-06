@@ -279,7 +279,7 @@
 				1.0.0<br>
 				<b>Class:</b>
 				Primer_Customizer_Fonts<br>
-		<b>Location:</b> <a href="source-class-Primer_Customizer_Fonts.html#2-395" title="Go to source code">inc/customizer/fonts.php</a><br>
+		<b>Location:</b> <a href="source-class-Primer_Customizer_Fonts.html#2-397" title="Go to source code">inc/customizer/fonts.php</a><br>
 	</div>
 
 
@@ -465,7 +465,7 @@ __construct( )
 				<a id="_enqueue_google_fonts"></a>
 		<a id="method-Primer_Customizer_Fontsenqueue_google_fonts"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Fonts.html#316-366" title="Go to source code">enqueue_google_fonts()</a>
+<a href="source-class-Primer_Customizer_Fonts.html#318-368" title="Go to source code">enqueue_google_fonts()</a>
 
 		<span class="label">public</span>
 
@@ -498,7 +498,7 @@ enqueue_google_fonts( )
 				<a id="_enqueue_inline_css"></a>
 		<a id="method-Primer_Customizer_Fontsenqueue_inline_css"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Fonts.html#368-393" title="Go to source code">enqueue_inline_css()</a>
+<a href="source-class-Primer_Customizer_Fonts.html#370-395" title="Go to source code">enqueue_inline_css()</a>
 
 		<span class="label">public</span>
 
@@ -531,7 +531,7 @@ enqueue_inline_css( )
 				<a id="_fonts"></a>
 		<a id="method-Primer_Customizer_Fontsfonts"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Fonts.html#171-231" title="Go to source code">fonts()</a>
+<a href="source-class-Primer_Customizer_Fonts.html#171-233" title="Go to source code">fonts()</a>
 
 		<span class="label">public</span>
 
@@ -553,7 +553,7 @@ fonts( WP_Customize_Manager <var>$wp_customize</var> )
 							<var>$wp_customize</var>
 						
 					</dt>
-					<dd></dd>
+					<dd>Instance of the WP_Customize_Manager class.</dd>
 				</dl>
 				</div>
 
@@ -562,6 +562,10 @@ fonts( WP_Customize_Manager <var>$wp_customize</var> )
 				<h6>Since</h6>
 				<div class="list">
 						1.0.0<br>
+				</div>
+				<h6>See</h6>
+				<div class="list">
+						WP_Customize_Manager<br>
 				</div>
 				<h6>Action</h6>
 				<div class="list">
@@ -575,7 +579,7 @@ fonts( WP_Customize_Manager <var>$wp_customize</var> )
 				<a id="_get_default_font"></a>
 		<a id="method-Primer_Customizer_Fontsget_default_font"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Fonts.html#248-268" title="Go to source code">get_default_font()</a>
+<a href="source-class-Primer_Customizer_Fonts.html#250-270" title="Go to source code">get_default_font()</a>
 
 		<span class="label">public</span>
 
@@ -597,13 +601,13 @@ get_default_font( string <var>$font_type</var> )
 							<var>$font_type</var>
 						
 					</dt>
-					<dd></dd>
+					<dd>The font type to retreive.</dd>
 				</dl>
 				</div>
 
 				<h6>Returns</h6>
 				<div class="list">
-					string<br>
+					string<br>Returns the default font.<br>
 				</div>
 
 
@@ -619,7 +623,7 @@ get_default_font( string <var>$font_type</var> )
 				<a id="_get_font"></a>
 		<a id="method-Primer_Customizer_Fontsget_font"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Fonts.html#233-246" title="Go to source code">get_font()</a>
+<a href="source-class-Primer_Customizer_Fonts.html#235-248" title="Go to source code">get_font()</a>
 
 		<span class="label">public</span>
 
@@ -641,13 +645,13 @@ get_font( string <var>$font_type</var> )
 							<var>$font_type</var>
 						
 					</dt>
-					<dd></dd>
+					<dd>The font type to retreive.</dd>
 				</dl>
 				</div>
 
 				<h6>Returns</h6>
 				<div class="list">
-					string<br>
+					string<br>Returns the theme mod font type.<br>
 				</div>
 
 
@@ -663,7 +667,7 @@ get_font( string <var>$font_type</var> )
 				<a id="_get_font_weights"></a>
 		<a id="method-Primer_Customizer_Fontsget_font_weights"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Fonts.html#285-314" title="Go to source code">get_font_weights()</a>
+<a href="source-class-Primer_Customizer_Fonts.html#287-316" title="Go to source code">get_font_weights()</a>
 
 		<span class="label">public</span>
 
@@ -685,19 +689,19 @@ get_font_weights( string <var>$font</var> , string <var>$font_type</var> )
 							<var>$font</var>
 						
 					</dt>
-					<dd></dd>
+					<dd>Font name to retreive weights for.</dd>
 					<dt>
 						string
 							<var>$font_type</var>
 						
 					</dt>
-					<dd></dd>
+					<dd>The font type to retreive weights for.</dd>
 				</dl>
 				</div>
 
 				<h6>Returns</h6>
 				<div class="list">
-					array<br>
+					array<br>Returns the array of available font weights.<br>
 				</div>
 
 
@@ -713,7 +717,7 @@ get_font_weights( string <var>$font</var> , string <var>$font_type</var> )
 				<a id="_sanitize_font"></a>
 		<a id="method-Primer_Customizer_Fontssanitize_font"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Fonts.html#270-283" title="Go to source code">sanitize_font()</a>
+<a href="source-class-Primer_Customizer_Fonts.html#272-285" title="Go to source code">sanitize_font()</a>
 
 		<span class="label">public</span>
 
@@ -735,13 +739,13 @@ sanitize_font( string <var>$font</var> )
 							<var>$font</var>
 						
 					</dt>
-					<dd></dd>
+					<dd>The font name to sanitize.</dd>
 				</dl>
 				</div>
 
 				<h6>Returns</h6>
 				<div class="list">
-					string<br>
+					string<br>Returns the sanitized font name.<br>
 				</div>
 
 

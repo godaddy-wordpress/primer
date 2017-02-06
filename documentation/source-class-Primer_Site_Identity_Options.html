@@ -372,7 +372,7 @@
 </span></span><span id="41" class="codeline"><a class="number" href="#41">41: </a><span class="php-comment">     * @filter primer_author_credit
 </span></span><span id="42" class="codeline"><a class="number" href="#42">42: </a><span class="php-comment">     * @since  NEXT
 </span></span><span id="43" class="codeline"><a class="number" href="#43">43: </a><span class="php-comment">     *
-</span></span><span id="44" class="codeline"><a class="number" href="#44">44: </a><span class="php-comment">     * @return bool
+</span></span><span id="44" class="codeline"><a class="number" href="#44">44: </a><span class="php-comment">     * @return boolean Returns true when `show_author_credit` theme mod is set.
 </span></span><span id="45" class="codeline"><a class="number" href="#45">45: </a><span class="php-comment">     */</span>
 </span><span id="46" class="codeline"><a class="number" href="#46">46: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> toggle_primer_author_credit() {
 </span><span id="47" class="codeline"><a class="number" href="#47">47: </a>
@@ -386,37 +386,39 @@
 </span></span><span id="55" class="codeline"><a class="number" href="#55">55: </a><span class="php-comment">     * Register additional site identity options.
 </span></span><span id="56" class="codeline"><a class="number" href="#56">56: </a><span class="php-comment">     *
 </span></span><span id="57" class="codeline"><a class="number" href="#57">57: </a><span class="php-comment">     * @action customize_register
-</span></span><span id="58" class="codeline"><a class="number" href="#58">58: </a><span class="php-comment">     * @since  NEXT
+</span></span><span id="58" class="codeline"><a class="number" href="#58">58: </a><span class="php-comment">     * @see    WP_Customize_Manager
 </span></span><span id="59" class="codeline"><a class="number" href="#59">59: </a><span class="php-comment">     *
-</span></span><span id="60" class="codeline"><a class="number" href="#60">60: </a><span class="php-comment">     * @param WP_Customize_Manager $wp_customize
-</span></span><span id="61" class="codeline"><a class="number" href="#61">61: </a><span class="php-comment">     */</span>
-</span><span id="62" class="codeline"><a class="number" href="#62">62: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> customize_register( WP_Customize_Manager <span class="php-var">$wp_customize</span> ) {
-</span><span id="63" class="codeline"><a class="number" href="#63">63: </a>
-</span><span id="64" class="codeline"><a class="number" href="#64">64: </a>        <span class="php-var">$wp_customize</span>-&gt;add_setting(
-</span><span id="65" class="codeline"><a class="number" href="#65">65: </a>            <span class="php-quote">'show_author_credit'</span>,
-</span><span id="66" class="codeline"><a class="number" href="#66">66: </a>            <span class="php-keyword1">array</span>(
-</span><span id="67" class="codeline"><a class="number" href="#67">67: </a>                <span class="php-quote">'default'</span>           =&gt; <span class="php-num">1</span>,
-</span><span id="68" class="codeline"><a class="number" href="#68">68: </a>                <span class="php-quote">'sanitize_callback'</span> =&gt; <span class="php-quote">'absint'</span>,
-</span><span id="69" class="codeline"><a class="number" href="#69">69: </a>            )
-</span><span id="70" class="codeline"><a class="number" href="#70">70: </a>        );
-</span><span id="71" class="codeline"><a class="number" href="#71">71: </a>
-</span><span id="72" class="codeline"><a class="number" href="#72">72: </a>        <span class="php-var">$wp_customize</span>-&gt;add_control(
-</span><span id="73" class="codeline"><a class="number" href="#73">73: </a>            <span class="php-quote">'page_width'</span>,
-</span><span id="74" class="codeline"><a class="number" href="#74">74: </a>            <span class="php-keyword1">array</span>(
-</span><span id="75" class="codeline"><a class="number" href="#75">75: </a>                <span class="php-quote">'label'</span>    =&gt; esc_html__( <span class="php-quote">'Display theme author credit'</span>, <span class="php-quote">'primer'</span> ),
-</span><span id="76" class="codeline"><a class="number" href="#76">76: </a>                <span class="php-quote">'section'</span>  =&gt; <span class="php-quote">'title_tagline'</span>,
-</span><span id="77" class="codeline"><a class="number" href="#77">77: </a>                <span class="php-quote">'settings'</span> =&gt; <span class="php-quote">'show_author_credit'</span>,
-</span><span id="78" class="codeline"><a class="number" href="#78">78: </a>                <span class="php-quote">'type'</span>     =&gt; <span class="php-quote">'checkbox'</span>,
-</span><span id="79" class="codeline"><a class="number" href="#79">79: </a>                <span class="php-quote">'priority'</span> =&gt; <span class="php-num">40</span>,
-</span><span id="80" class="codeline"><a class="number" href="#80">80: </a>            )
-</span><span id="81" class="codeline"><a class="number" href="#81">81: </a>        );
-</span><span id="82" class="codeline"><a class="number" href="#82">82: </a>
-</span><span id="83" class="codeline"><a class="number" href="#83">83: </a>    }
+</span></span><span id="60" class="codeline"><a class="number" href="#60">60: </a><span class="php-comment">     * @since  NEXT
+</span></span><span id="61" class="codeline"><a class="number" href="#61">61: </a><span class="php-comment">     *
+</span></span><span id="62" class="codeline"><a class="number" href="#62">62: </a><span class="php-comment">     * @param  WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
+</span></span><span id="63" class="codeline"><a class="number" href="#63">63: </a><span class="php-comment">     */</span>
+</span><span id="64" class="codeline"><a class="number" href="#64">64: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> customize_register( WP_Customize_Manager <span class="php-var">$wp_customize</span> ) {
+</span><span id="65" class="codeline"><a class="number" href="#65">65: </a>
+</span><span id="66" class="codeline"><a class="number" href="#66">66: </a>        <span class="php-var">$wp_customize</span>-&gt;add_setting(
+</span><span id="67" class="codeline"><a class="number" href="#67">67: </a>            <span class="php-quote">'show_author_credit'</span>,
+</span><span id="68" class="codeline"><a class="number" href="#68">68: </a>            <span class="php-keyword1">array</span>(
+</span><span id="69" class="codeline"><a class="number" href="#69">69: </a>                <span class="php-quote">'default'</span>           =&gt; <span class="php-num">1</span>,
+</span><span id="70" class="codeline"><a class="number" href="#70">70: </a>                <span class="php-quote">'sanitize_callback'</span> =&gt; <span class="php-quote">'absint'</span>,
+</span><span id="71" class="codeline"><a class="number" href="#71">71: </a>            )
+</span><span id="72" class="codeline"><a class="number" href="#72">72: </a>        );
+</span><span id="73" class="codeline"><a class="number" href="#73">73: </a>
+</span><span id="74" class="codeline"><a class="number" href="#74">74: </a>        <span class="php-var">$wp_customize</span>-&gt;add_control(
+</span><span id="75" class="codeline"><a class="number" href="#75">75: </a>            <span class="php-quote">'page_width'</span>,
+</span><span id="76" class="codeline"><a class="number" href="#76">76: </a>            <span class="php-keyword1">array</span>(
+</span><span id="77" class="codeline"><a class="number" href="#77">77: </a>                <span class="php-quote">'label'</span>    =&gt; esc_html__( <span class="php-quote">'Display theme author credit'</span>, <span class="php-quote">'primer'</span> ),
+</span><span id="78" class="codeline"><a class="number" href="#78">78: </a>                <span class="php-quote">'section'</span>  =&gt; <span class="php-quote">'title_tagline'</span>,
+</span><span id="79" class="codeline"><a class="number" href="#79">79: </a>                <span class="php-quote">'settings'</span> =&gt; <span class="php-quote">'show_author_credit'</span>,
+</span><span id="80" class="codeline"><a class="number" href="#80">80: </a>                <span class="php-quote">'type'</span>     =&gt; <span class="php-quote">'checkbox'</span>,
+</span><span id="81" class="codeline"><a class="number" href="#81">81: </a>                <span class="php-quote">'priority'</span> =&gt; <span class="php-num">40</span>,
+</span><span id="82" class="codeline"><a class="number" href="#82">82: </a>            )
+</span><span id="83" class="codeline"><a class="number" href="#83">83: </a>        );
 </span><span id="84" class="codeline"><a class="number" href="#84">84: </a>
-</span><span id="85" class="codeline"><a class="number" href="#85">85: </a>}
+</span><span id="85" class="codeline"><a class="number" href="#85">85: </a>    }
 </span><span id="86" class="codeline"><a class="number" href="#86">86: </a>
-</span><span id="87" class="codeline"><a class="number" href="#87">87: </a><span class="php-var">$GLOBALS</span>[<span class="php-quote">'primer_site_identity_options'</span>] = <span class="php-keyword1">new</span> Primer_Site_Identity_Options;
-</span><span id="88" class="codeline"><a class="number" href="#88">88: </a></span></code></pre>
+</span><span id="87" class="codeline"><a class="number" href="#87">87: </a>}
+</span><span id="88" class="codeline"><a class="number" href="#88">88: </a>
+</span><span id="89" class="codeline"><a class="number" href="#89">89: </a><span class="php-var">$GLOBALS</span>[<span class="php-quote">'primer_site_identity_options'</span>] = <span class="php-keyword1">new</span> Primer_Site_Identity_Options;
+</span><span id="90" class="codeline"><a class="number" href="#90">90: </a></span></code></pre>
 			</div>
 		</div>
 

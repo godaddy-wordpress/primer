@@ -279,7 +279,7 @@
 				1.0.0<br>
 				<b>Class:</b>
 				Primer_Customizer_Layouts<br>
-		<b>Location:</b> <a href="source-class-Primer_Customizer_Layouts.html#2-571" title="Go to source code">inc/customizer/layouts.php</a><br>
+		<b>Location:</b> <a href="source-class-Primer_Customizer_Layouts.html#2-584" title="Go to source code">inc/customizer/layouts.php</a><br>
 	</div>
 
 
@@ -593,7 +593,7 @@ __construct( )
 				<a id="_add_meta_box"></a>
 		<a id="method-Primer_Customizer_Layoutsadd_meta_box"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Layouts.html#230-265" title="Go to source code">add_meta_box()</a>
+<a href="source-class-Primer_Customizer_Layouts.html#235-270" title="Go to source code">add_meta_box()</a>
 
 		<span class="label">public</span>
 
@@ -647,7 +647,7 @@ add_meta_box( string <var>$post_type</var> , WP_Post <var>$post</var> )
 				<a id="_admin_enqueue_scripts"></a>
 		<a id="method-Primer_Customizer_Layoutsadmin_enqueue_scripts"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Layouts.html#181-214" title="Go to source code">admin_enqueue_scripts()</a>
+<a href="source-class-Primer_Customizer_Layouts.html#185-218" title="Go to source code">admin_enqueue_scripts()</a>
 
 		<span class="label">public</span>
 
@@ -669,7 +669,7 @@ admin_enqueue_scripts( string <var>$hook</var> )
 							<var>$hook</var>
 						
 					</dt>
-					<dd></dd>
+					<dd>The suffix of the current admin page.</dd>
 				</dl>
 				</div>
 
@@ -691,7 +691,7 @@ admin_enqueue_scripts( string <var>$hook</var> )
 				<a id="_body_class"></a>
 		<a id="method-Primer_Customizer_Layoutsbody_class"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Layouts.html#473-490" title="Go to source code">body_class()</a>
+<a href="source-class-Primer_Customizer_Layouts.html#480-497" title="Go to source code">body_class()</a>
 
 		<span class="label">public</span>
 
@@ -713,13 +713,13 @@ body_class( array <var>$classes</var> )
 							<var>$classes</var>
 						
 					</dt>
-					<dd></dd>
+					<dd>Array of body classes.</dd>
 				</dl>
 				</div>
 
 				<h6>Returns</h6>
 				<div class="list">
-					array<br>
+					array<br>Returns the filtered array of body classes.<br>
 				</div>
 
 
@@ -739,7 +739,7 @@ body_class( array <var>$classes</var> )
 				<a id="_customize_register"></a>
 		<a id="method-Primer_Customizer_Layoutscustomize_register"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Layouts.html#423-471" title="Go to source code">customize_register()</a>
+<a href="source-class-Primer_Customizer_Layouts.html#428-478" title="Go to source code">customize_register()</a>
 
 		<span class="label">public</span>
 
@@ -761,7 +761,7 @@ customize_register( WP_Customize_Manager <var>$wp_customize</var> )
 							<var>$wp_customize</var>
 						
 					</dt>
-					<dd></dd>
+					<dd>Instance of the WP_Customize_Manager class.</dd>
 				</dl>
 				</div>
 
@@ -770,6 +770,10 @@ customize_register( WP_Customize_Manager <var>$wp_customize</var> )
 				<h6>Since</h6>
 				<div class="list">
 						1.0.0<br>
+				</div>
+				<h6>See</h6>
+				<div class="list">
+						WP_Customize_Manager<br>
 				</div>
 				<h6>Action</h6>
 				<div class="list">
@@ -783,7 +787,7 @@ customize_register( WP_Customize_Manager <var>$wp_customize</var> )
 				<a id="_get_current_layout"></a>
 		<a id="method-Primer_Customizer_Layoutsget_current_layout"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Layouts.html#544-569" title="Go to source code">get_current_layout()</a>
+<a href="source-class-Primer_Customizer_Layouts.html#553-582" title="Go to source code">get_current_layout()</a>
 
 		<span class="label">public</span>
 
@@ -807,16 +811,22 @@ get_current_layout( WP_Post|integer <var>$post</var> <span class="php-keyword1">
 							<span class="php-keyword1">null</span> 
 						
 					</dt>
-					<dd>(optional)</dd>
+					<dd>(optional) The WP_Post object.</dd>
 				</dl>
 				</div>
 
 				<h6>Returns</h6>
 				<div class="list">
-					string<br>
+					string<br>Returns the current layout which is set.<br>
 				</div>
 
 
+				<h6>Uses</h6>
+				<div class="list">
+						<code><a href="class-Primer_Customizer_Layouts.html#_get_post_layout">Primer_Customizer_Layouts::get_post_layout()</a></code><br>
+						<code><a href="class-Primer_Customizer_Layouts.html#_get_global_layout">Primer_Customizer_Layouts::get_global_layout()</a></code><br>
+						<code><a href="class-Primer_Customizer_Layouts.html#_layout_exists">Primer_Customizer_Layouts::layout_exists()</a></code><br>
+				</div>
 
 
 		</div>
@@ -825,7 +835,7 @@ get_current_layout( WP_Post|integer <var>$post</var> <span class="php-keyword1">
 				<a id="_get_global_layout"></a>
 		<a id="method-Primer_Customizer_Layoutsget_global_layout"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Layouts.html#533-542" title="Go to source code">get_global_layout()</a>
+<a href="source-class-Primer_Customizer_Layouts.html#540-551" title="Go to source code">get_global_layout()</a>
 
 		<span class="label">public</span>
 
@@ -842,10 +852,18 @@ get_global_layout( )
 
 				<h6>Returns</h6>
 				<div class="list">
-					string<br>
+					string<br>Returns the layout theme modification.<br>
 				</div>
 
 
+				<h6>Uses</h6>
+				<div class="list">
+						<a href="https://codex.wordpress.org/Function_Reference/get_theme_mod">get_theme_mod</a> To retreive the layout mod.<br>
+				</div>
+				<h6>Used by</h6>
+				<div class="list">
+						<code><a href="class-Primer_Customizer_Layouts.html#_get_current_layout">Primer_Customizer_Layouts::get_current_layout()</a></code><br>
+				</div>
 
 
 		</div>
@@ -854,7 +872,7 @@ get_global_layout( )
 				<a id="_get_post_id"></a>
 		<a id="method-Primer_Customizer_Layoutsget_post_id"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Layouts.html#507-518" title="Go to source code">get_post_id()</a>
+<a href="source-class-Primer_Customizer_Layouts.html#514-525" title="Go to source code">get_post_id()</a>
 
 		<span class="label">protected</span>
 
@@ -878,13 +896,13 @@ get_post_id( WP_Post|integer <var>$post</var> <span class="php-keyword1">null</s
 							<span class="php-keyword1">null</span> 
 						
 					</dt>
-					<dd>(optional)</dd>
+					<dd>(optional) The WP_Post object.</dd>
 				</dl>
 				</div>
 
 				<h6>Returns</h6>
 				<div class="list">
-					string<br>
+					integer<br>Returns the post ID.<br>
 				</div>
 
 
@@ -896,7 +914,7 @@ get_post_id( WP_Post|integer <var>$post</var> <span class="php-keyword1">null</s
 				<a id="_get_post_layout"></a>
 		<a id="method-Primer_Customizer_Layoutsget_post_layout"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Layouts.html#520-531" title="Go to source code">get_post_layout()</a>
+<a href="source-class-Primer_Customizer_Layouts.html#527-538" title="Go to source code">get_post_layout()</a>
 
 		<span class="label">protected</span>
 
@@ -920,16 +938,20 @@ get_post_layout( WP_Post|integer <var>$post</var> <span class="php-keyword1">nul
 							<span class="php-keyword1">null</span> 
 						
 					</dt>
-					<dd>(optional)</dd>
+					<dd>(optional) The WP_Post object.</dd>
 				</dl>
 				</div>
 
 				<h6>Returns</h6>
 				<div class="list">
-					string<br>
+					string<br>Returns the post layout.<br>
 				</div>
 
 
+				<h6>Used by</h6>
+				<div class="list">
+						<code><a href="class-Primer_Customizer_Layouts.html#_get_current_layout">Primer_Customizer_Layouts::get_current_layout()</a></code><br>
+				</div>
 
 
 		</div>
@@ -938,7 +960,7 @@ get_post_layout( WP_Post|integer <var>$post</var> <span class="php-keyword1">nul
 				<a id="_layout_exists"></a>
 		<a id="method-Primer_Customizer_Layoutslayout_exists"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Layouts.html#492-505" title="Go to source code">layout_exists()</a>
+<a href="source-class-Primer_Customizer_Layouts.html#499-512" title="Go to source code">layout_exists()</a>
 
 		<span class="label">protected</span>
 
@@ -960,19 +982,23 @@ layout_exists( string <var>$layout</var> )
 							<var>$layout</var>
 						
 					</dt>
-					<dd></dd>
+					<dd>The layout name to check.</dd>
 				</dl>
 				</div>
 
 				<h6>Returns</h6>
 				<div class="list">
-					boolean<br>
+					boolean<br>Returns true if the layout is set, otherwise false.<br>
 				</div>
 
 
 				<h6>Since</h6>
 				<div class="list">
 						1.0.0<br>
+				</div>
+				<h6>Used by</h6>
+				<div class="list">
+						<code><a href="class-Primer_Customizer_Layouts.html#_get_current_layout">Primer_Customizer_Layouts::get_current_layout()</a></code><br>
 				</div>
 
 
@@ -982,7 +1008,7 @@ layout_exists( string <var>$layout</var> )
 				<a id="_load_post"></a>
 		<a id="method-Primer_Customizer_Layoutsload_post"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Layouts.html#216-228" title="Go to source code">load_post()</a>
+<a href="source-class-Primer_Customizer_Layouts.html#220-233" title="Go to source code">load_post()</a>
 
 		<span class="label">public</span>
 
@@ -1020,7 +1046,7 @@ load_post( )
 				<a id="_post_type_support"></a>
 		<a id="method-Primer_Customizer_Layoutspost_type_support"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Layouts.html#156-179" title="Go to source code">post_type_support()</a>
+<a href="source-class-Primer_Customizer_Layouts.html#158-183" title="Go to source code">post_type_support()</a>
 
 		<span class="label">public</span>
 
@@ -1041,6 +1067,10 @@ post_type_support( )
 				<div class="list">
 						1.0.0<br>
 				</div>
+				<h6>Uses</h6>
+				<div class="list">
+						<a href="https://codex.wordpress.org/Function_Reference/add_post_type_support">add_post_type_support</a> To add layout support to specified post types.<br>
+				</div>
 				<h6>Action</h6>
 				<div class="list">
 						init<br>
@@ -1053,7 +1083,7 @@ post_type_support( )
 				<a id="_print_layout_choices"></a>
 		<a id="method-Primer_Customizer_Layoutsprint_layout_choices"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Layouts.html#317-378" title="Go to source code">print_layout_choices()</a>
+<a href="source-class-Primer_Customizer_Layouts.html#322-383" title="Go to source code">print_layout_choices()</a>
 
 		<span class="label">public</span>
 
@@ -1113,7 +1143,7 @@ print_layout_choices( <var>$layouts</var> , null <var>$post_id</var> <span class
 				<a id="_render_meta_box"></a>
 		<a id="method-Primer_Customizer_Layoutsrender_meta_box"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Layouts.html#267-315" title="Go to source code">render_meta_box()</a>
+<a href="source-class-Primer_Customizer_Layouts.html#272-320" title="Go to source code">render_meta_box()</a>
 
 		<span class="label">public</span>
 
@@ -1163,7 +1193,7 @@ render_meta_box( WP_Post <var>$post</var> , string <var>$box</var> )
 				<a id="_rtl_layouts"></a>
 		<a id="method-Primer_Customizer_Layoutsrtl_layouts"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Layouts.html#122-154" title="Go to source code">rtl_layouts()</a>
+<a href="source-class-Primer_Customizer_Layouts.html#122-156" title="Go to source code">rtl_layouts()</a>
 
 		<span class="label">public</span>
 
@@ -1184,6 +1214,10 @@ rtl_layouts( )
 				<div class="list">
 						1.0.0<br>
 				</div>
+				<h6>Uses</h6>
+				<div class="list">
+						primer_layouts_rtl To filter the possible layouts.<br>
+				</div>
 				<h6>Action</h6>
 				<div class="list">
 						init<br>
@@ -1196,7 +1230,7 @@ rtl_layouts( )
 				<a id="_save_post"></a>
 		<a id="method-Primer_Customizer_Layoutssave_post"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Layouts.html#380-421" title="Go to source code">save_post()</a>
+<a href="source-class-Primer_Customizer_Layouts.html#385-426" title="Go to source code">save_post()</a>
 
 		<span class="label">public</span>
 
