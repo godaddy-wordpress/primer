@@ -104,7 +104,7 @@ App.Search = (function () {
   };
 
   var init = function () {
-    searchInput = $('.form-control.form-cook');
+    searchInput = $('.standalone-search .search-input');
     searchResults = $('#search-results');
     paginationContainer = $('#search-pagination');
 
