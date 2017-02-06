@@ -1321,7 +1321,7 @@ App.Search = (function () {
   };
 
   var init = function () {
-    searchInput = $('.standalone-search .search-input');
+    searchInput = $('.form-control.form-cook');
     searchResults = $('#search-results');
     paginationContainer = $('#search-pagination');
 
