@@ -36,7 +36,6 @@ add_action( 'after_setup_theme', 'primer_switch_theme', 1 );
 /**
  * Return the required WordPress version upgrade message.
  *
- * @filter primer_required_wp_version_message
  * @action after_setup_theme
  * @uses   [get_bloginfo](https://codex.wordpress.org/Function_Reference/get_bloginfo) To retreive the WordPress version.
  *

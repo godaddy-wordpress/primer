@@ -41,7 +41,7 @@ class Primer_Site_Identity_Options {
 	 * @filter primer_author_credit
 	 * @since  NEXT
 	 *
-	 * @return bool
+	 * @return boolean Returns true when `show_author_credit` theme mod is set.
 	 */
 	public function toggle_primer_author_credit() {
 
@@ -55,9 +55,11 @@ class Primer_Site_Identity_Options {
 	 * Register additional site identity options.
 	 *
 	 * @action customize_register
+	 * @see    WP_Customize_Manager
+	 *
 	 * @since  NEXT
 	 *
-	 * @param WP_Customize_Manager $wp_customize
+	 * @param  WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
 	 */
 	public function customize_register( WP_Customize_Manager $wp_customize ) {
 

@@ -696,9 +696,11 @@ class Primer_Customizer_Colors {
 	 * Register color panel, sections, controls, and settings.
 	 *
 	 * @action customize_register
+	 * @see    WP_Customize_Manager
+	 *
 	 * @since  1.0.0
 	 *
-	 * @param WP_Customize_Manager $wp_customize
+	 * @param WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
 	 */
 	public function colors( WP_Customize_Manager $wp_customize ) {
 
@@ -772,8 +774,9 @@ class Primer_Customizer_Colors {
 	 *
 	 * @since 1.0.0
 	 * @see   $this->colors()
+	 * @see   WP_Customize_Manager
 	 *
-	 * @param WP_Customize_Manager $wp_customize
+	 * @param WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
 	 * @param string               $name
 	 * @param array                $args
 	 */
@@ -935,9 +938,11 @@ class Primer_Customizer_Colors {
 	 * Register a color scheme setting.
 	 *
 	 * @action customize_register
+	 * @see    WP_Customize_Manager
+	 *
 	 * @since  1.0.0
 	 *
-	 * @param WP_Customize_Manager $wp_customize
+	 * @param WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
 	 */
 	public function color_scheme( WP_Customize_Manager $wp_customize ) {
 
@@ -1255,9 +1260,11 @@ class Primer_Customizer_Colors {
 	 * Add setting and control for the hero image color overlay transparency.
 	 *
 	 * @action customize_register
+	 * @see    WP_Customize_Manager
+	 *
 	 * @since  1.0.0
 	 *
-	 * @param WP_Customize_Manager $wp_customize
+	 * @param WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
 	 */
 	public function color_overlay_transparency( WP_Customize_Manager $wp_customize ) {
 
@@ -1294,7 +1301,7 @@ class Primer_Customizer_Colors {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @return int
+	 * @return integer Returns the color overlay transparency value.
 	 */
 	public function get_color_overlay_transparency_default_value() {
 
@@ -1314,7 +1321,7 @@ class Primer_Customizer_Colors {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @return string
+	 * @return string Returns the hero color overlay transparency value.
 	 */
 	public function get_color_overlay_transparency_value() {
 
@@ -1329,7 +1336,7 @@ class Primer_Customizer_Colors {
 	 *
 	 * @param $name
 	 *
-	 * @return bool
+	 * @return string Return the specified property within the Primer_Customizer_Colors class.
 	 */
 	public function __get( $name ) {
 

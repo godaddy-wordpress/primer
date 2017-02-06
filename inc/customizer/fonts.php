@@ -172,9 +172,11 @@ class Primer_Customizer_Fonts {
 	 * Register fonts section and settings.
 	 *
 	 * @action customize_registers
-	 * @since 1.0.0
+	 * @see    WP_Customize_Manager
 	 *
-	 * @param WP_Customize_Manager $wp_customize
+	 * @since  1.0.0
+	 *
+	 * @param  WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
 	 */
 	public function fonts( WP_Customize_Manager $wp_customize ) {
 
@@ -233,11 +235,11 @@ class Primer_Customizer_Fonts {
 	/**
 	 * Return a font by type.
 	 *
-	 * @since 1.0.0
+	 * @since  1.0.0
 	 *
-	 * @param  string $font_type
+	 * @param  string $font_type The font type to retreive.
 	 *
-	 * @return string
+	 * @return string Returns the theme mod font type.
 	 */
 	public function get_font( $font_type ) {
 
@@ -248,11 +250,11 @@ class Primer_Customizer_Fonts {
 	/**
 	 * Return the default font for a given font type.
 	 *
-	 * @since 1.0.0
+	 * @since  1.0.0
 	 *
-	 * @param  string $font_type
+	 * @param  string $font_type The font type to retreive.
 	 *
-	 * @return string
+	 * @return string Returns the default font.
 	 */
 	public function get_default_font( $font_type ) {
 
@@ -272,9 +274,9 @@ class Primer_Customizer_Fonts {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $font
+	 * @param  string $font The font name to sanitize.
 	 *
-	 * @return string
+	 * @return string Returns the sanitized font name.
 	 */
 	public function sanitize_font( $font ) {
 
@@ -287,10 +289,10 @@ class Primer_Customizer_Fonts {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $font
-	 * @param  string $font_type
+	 * @param  string $font      Font name to retreive weights for.
+	 * @param  string $font_type The font type to retreive weights for.
 	 *
-	 * @return array
+	 * @return array Returns the array of available font weights.
 	 */
 	public function get_font_weights( $font, $font_type ) {
 
