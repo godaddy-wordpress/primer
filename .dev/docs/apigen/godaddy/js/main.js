@@ -87,7 +87,7 @@ $(function() {
         var contents, title;
         if (id == 'btn-menu') {
             title = 'Menu';
-            contents = $('#cake-nav').html();
+            contents = $('#godaddy-nav').html();
         }
         if (id == 'btn-nav') {
             title = 'Navigation';
