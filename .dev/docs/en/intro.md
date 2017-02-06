@@ -10,7 +10,6 @@ Primer is a powerful theme that brings clarity to your content in a fresh design
 **Stable tag:** 1.4.1 <br />
 **License:** [GPL-2.0](https://www.gnu.org/licenses/gpl-2.0.html) <br />
 
- 
 
 ## Description ##
 
@@ -78,5 +77,3 @@ Source: https://genericons.com/
 
 ### 1.3.0 ###
 * Initial release.
-
-
