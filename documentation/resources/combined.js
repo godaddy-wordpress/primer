@@ -910,6 +910,7 @@ $.fn.selection = function(start, end) {
 };
 
 })(jQuery);
+
 /**
  * @preserve
  * Project: Bootstrap Hover Dropdown
@@ -2180,12 +2181,10 @@ $(function() {
                 return data[1];
             },
             show: function(list) {
-                var listWidth = list.width();
+                var listWidth = $( '.form-control.form-cook' ).outerWidth();
                 var items = $('li span', list);
                 var listLeft = parseInt(list.css('left'), 10);
-                var maxWidth = Math.max.apply(null, items.map(function() {
-                    return $(this).width();
-                }));
+                var maxWidth = $( '.form-control.form-cook' ).outerWidth();
                 // Make the results wider, and shift left to accomodate new width.
                 list
                     .width(Math.max(maxWidth, $search.innerWidth()))
