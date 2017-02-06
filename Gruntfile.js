@@ -254,7 +254,7 @@ module.exports = function( grunt ) {
 					'.dev/docs/en/intro.md',
 				],
 				overwrite: true,
-				replacements: [ {
+				replacements: [ { // leaving the badges in the intro.md file causes errors in the sphinx build process
 					from: '[![Build Status](https://travis-ci.org/godaddy/wp-primer-theme.svg?branch=master)](https://travis-ci.org/godaddy/wp-primer-theme) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com)',
 					to: ''
 				},
