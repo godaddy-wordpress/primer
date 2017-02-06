@@ -28,13 +28,13 @@
 	<div class="container-fluid hidden-xs hidden-sm">
 		<div class="row">
 			<div class="col-sm-3 col-md-3">
-				<a class="logo-godaddy" href="http://cakephp.org">
-					<img alt="CakePHP" src="resources/godaddy-logo.png?f99b9ab6703faadbd2f67d212cd8176592b1feb9">
+				<a class="logo-godaddy" href="https://godaddy.github.io/wp-primer-theme/intro.html">
+					<img alt="GoDaddy" src="resources/godaddy-logo.png?f99b9ab6703faadbd2f67d212cd8176592b1feb9">
 				</a>
 			</div>
 
 			<div class="col-sm-9 col-md-9">
-				<nav class="navbar-right" id="cake-nav">
+				<nav class="navbar-right" id="godaddy-nav">
 					<ul class="menu">
 						<li class="first">
 							<a href="#"><i class="fa fa-menu fa-chevron-down"></i>Documentation</a>
@@ -47,7 +47,7 @@
 							</ul>
 						</li>
 
-						<li><a href="contributors.html">Contributors</a></li>
+						<li><a href="https://godaddy.github.io/wp-primer-theme/contributors.html">Contributors</a></li>
 
 						<li>
 							<a href="#"><i class="fa fa-menu fa-chevron-down"></i>Community</a>
@@ -80,8 +80,8 @@
 		<div class="container-fluid hidden-md hidden-lg">
 		<div class="row">
 			<div class="col-sm-6 col-xs-6">
-				<a class="logo-cake" href="http://cakephp.org">
-					<img alt="CakePHP" src="resources/logo-cake.png">
+				<a class="logo-godaddy" href="https://godaddy.github.io/wp-primer-theme/intro.html">
+					<img alt="GoDaddy" src="resources/godaddy-logo.png?f99b9ab6703faadbd2f67d212cd8176592b1feb9">
 				</a>
 			</div>
 
@@ -119,7 +119,7 @@
 				<div class="col-md-5 t-api-nav p0">
 					<ul class="navigation">
 						<li class="t-api-nav-el">
-							<a href="index.html" title="Overview">
+							<a href="https://godaddy.github.io/wp-primer-theme/intro.html" title="Overview">
 							<i class="fa fa-eye"></i><span>Overview</span></a>
 						</li>
 						<li class="t-api-nav-el">
@@ -344,23 +344,26 @@
 </span></span><span id="13" class="codeline"><a class="number" href="#13">13: </a><span class="php-comment"> * Enable support for certain Jetpack modules.
 </span></span><span id="14" class="codeline"><a class="number" href="#14">14: </a><span class="php-comment"> *
 </span></span><span id="15" class="codeline"><a class="number" href="#15">15: </a><span class="php-comment"> * @action after_setup_theme
-</span></span><span id="16" class="codeline"><a class="number" href="#16">16: </a><span class="php-comment"> * @link   https://jetpack.com/support/featured-content/
-</span></span><span id="17" class="codeline"><a class="number" href="#17">17: </a><span class="php-comment"> * @link   https://jetpack.com/support/infinite-scroll/
-</span></span><span id="18" class="codeline"><a class="number" href="#18">18: </a><span class="php-comment"> * @since  1.0.0
-</span></span><span id="19" class="codeline"><a class="number" href="#19">19: </a><span class="php-comment"> */</span>
-</span><span id="20" class="codeline"><a class="number" href="#20">20: </a><span class="php-keyword1">function</span> primer_jetpack_setup() {
-</span><span id="21" class="codeline"><a class="number" href="#21">21: </a>
-</span><span id="22" class="codeline"><a class="number" href="#22">22: </a>    add_theme_support(
-</span><span id="23" class="codeline"><a class="number" href="#23">23: </a>        <span class="php-quote">'infinite-scroll'</span>,
-</span><span id="24" class="codeline"><a class="number" href="#24">24: </a>        <span class="php-keyword1">array</span>(
-</span><span id="25" class="codeline"><a class="number" href="#25">25: </a>            <span class="php-quote">'container'</span> =&gt; <span class="php-quote">'main'</span>,
-</span><span id="26" class="codeline"><a class="number" href="#26">26: </a>            <span class="php-quote">'footer'</span>    =&gt; <span class="php-quote">'page'</span>,
-</span><span id="27" class="codeline"><a class="number" href="#27">27: </a>        )
-</span><span id="28" class="codeline"><a class="number" href="#28">28: </a>    );
-</span><span id="29" class="codeline"><a class="number" href="#29">29: </a>
-</span><span id="30" class="codeline"><a class="number" href="#30">30: </a>}
-</span><span id="31" class="codeline"><a class="number" href="#31">31: </a>add_action( <span class="php-quote">'after_setup_theme'</span>, <span class="php-quote">'primer_jetpack_setup'</span> );
-</span><span id="32" class="codeline"><a class="number" href="#32">32: </a></span></code></pre>
+</span></span><span id="16" class="codeline"><a class="number" href="#16">16: </a><span class="php-comment"> * @uses   [add_theme_support](https://developer.wordpress.org/reference/functions/add_theme_support/) To enable infinite-scroll.
+</span></span><span id="17" class="codeline"><a class="number" href="#17">17: </a><span class="php-comment"> *
+</span></span><span id="18" class="codeline"><a class="number" href="#18">18: </a><span class="php-comment"> * @link   https://jetpack.com/support/featured-content/
+</span></span><span id="19" class="codeline"><a class="number" href="#19">19: </a><span class="php-comment"> * @link   https://jetpack.com/support/infinite-scroll/
+</span></span><span id="20" class="codeline"><a class="number" href="#20">20: </a><span class="php-comment"> *
+</span></span><span id="21" class="codeline"><a class="number" href="#21">21: </a><span class="php-comment"> * @since  1.0.0
+</span></span><span id="22" class="codeline"><a class="number" href="#22">22: </a><span class="php-comment"> */</span>
+</span><span id="23" class="codeline"><a class="number" href="#23">23: </a><span class="php-keyword1">function</span> primer_jetpack_setup() {
+</span><span id="24" class="codeline"><a class="number" href="#24">24: </a>
+</span><span id="25" class="codeline"><a class="number" href="#25">25: </a>    add_theme_support(
+</span><span id="26" class="codeline"><a class="number" href="#26">26: </a>        <span class="php-quote">'infinite-scroll'</span>,
+</span><span id="27" class="codeline"><a class="number" href="#27">27: </a>        <span class="php-keyword1">array</span>(
+</span><span id="28" class="codeline"><a class="number" href="#28">28: </a>            <span class="php-quote">'container'</span> =&gt; <span class="php-quote">'main'</span>,
+</span><span id="29" class="codeline"><a class="number" href="#29">29: </a>            <span class="php-quote">'footer'</span>    =&gt; <span class="php-quote">'page'</span>,
+</span><span id="30" class="codeline"><a class="number" href="#30">30: </a>        )
+</span><span id="31" class="codeline"><a class="number" href="#31">31: </a>    );
+</span><span id="32" class="codeline"><a class="number" href="#32">32: </a>
+</span><span id="33" class="codeline"><a class="number" href="#33">33: </a>}
+</span><span id="34" class="codeline"><a class="number" href="#34">34: </a>add_action( <span class="php-quote">'after_setup_theme'</span>, <span class="php-quote">'primer_jetpack_setup'</span> );
+</span><span id="35" class="codeline"><a class="number" href="#35">35: </a></span></code></pre>
 			</div>
 		</div>
 

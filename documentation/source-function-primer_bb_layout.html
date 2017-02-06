@@ -28,13 +28,13 @@
 	<div class="container-fluid hidden-xs hidden-sm">
 		<div class="row">
 			<div class="col-sm-3 col-md-3">
-				<a class="logo-godaddy" href="http://cakephp.org">
-					<img alt="CakePHP" src="resources/godaddy-logo.png?f99b9ab6703faadbd2f67d212cd8176592b1feb9">
+				<a class="logo-godaddy" href="https://godaddy.github.io/wp-primer-theme/intro.html">
+					<img alt="GoDaddy" src="resources/godaddy-logo.png?f99b9ab6703faadbd2f67d212cd8176592b1feb9">
 				</a>
 			</div>
 
 			<div class="col-sm-9 col-md-9">
-				<nav class="navbar-right" id="cake-nav">
+				<nav class="navbar-right" id="godaddy-nav">
 					<ul class="menu">
 						<li class="first">
 							<a href="#"><i class="fa fa-menu fa-chevron-down"></i>Documentation</a>
@@ -47,7 +47,7 @@
 							</ul>
 						</li>
 
-						<li><a href="contributors.html">Contributors</a></li>
+						<li><a href="https://godaddy.github.io/wp-primer-theme/contributors.html">Contributors</a></li>
 
 						<li>
 							<a href="#"><i class="fa fa-menu fa-chevron-down"></i>Community</a>
@@ -80,8 +80,8 @@
 		<div class="container-fluid hidden-md hidden-lg">
 		<div class="row">
 			<div class="col-sm-6 col-xs-6">
-				<a class="logo-cake" href="http://cakephp.org">
-					<img alt="CakePHP" src="resources/logo-cake.png">
+				<a class="logo-godaddy" href="https://godaddy.github.io/wp-primer-theme/intro.html">
+					<img alt="GoDaddy" src="resources/godaddy-logo.png?f99b9ab6703faadbd2f67d212cd8176592b1feb9">
 				</a>
 			</div>
 
@@ -119,7 +119,7 @@
 				<div class="col-md-5 t-api-nav p0">
 					<ul class="navigation">
 						<li class="t-api-nav-el">
-							<a href="index.html" title="Overview">
+							<a href="https://godaddy.github.io/wp-primer-theme/intro.html" title="Overview">
 							<i class="fa fa-eye"></i><span>Overview</span></a>
 						</li>
 						<li class="t-api-nav-el">
@@ -344,106 +344,108 @@
 </span></span><span id="13" class="codeline"><a class="number" href="#13"> 13: </a><span class="php-comment"> * Use full-width layout by default on Page Builder posts.
 </span></span><span id="14" class="codeline"><a class="number" href="#14"> 14: </a><span class="php-comment"> *
 </span></span><span id="15" class="codeline"><a class="number" href="#15"> 15: </a><span class="php-comment"> * @action add_post_meta
-</span></span><span id="16" class="codeline"><a class="number" href="#16"> 16: </a><span class="php-comment"> * @global Primer_Customizer_Layouts $primer_customizer_layouts
-</span></span><span id="17" class="codeline"><a class="number" href="#17"> 17: </a><span class="php-comment"> * @since  1.0.0
-</span></span><span id="18" class="codeline"><a class="number" href="#18"> 18: </a><span class="php-comment"> *
-</span></span><span id="19" class="codeline"><a class="number" href="#19"> 19: </a><span class="php-comment"> * @param int    $post_id
-</span></span><span id="20" class="codeline"><a class="number" href="#20"> 20: </a><span class="php-comment"> * @param string $meta_key
-</span></span><span id="21" class="codeline"><a class="number" href="#21"> 21: </a><span class="php-comment"> * @param mixed  $meta_value
-</span></span><span id="22" class="codeline"><a class="number" href="#22"> 22: </a><span class="php-comment"> */</span>
-</span><span id="23" class="codeline"><a class="number" href="#23"> 23: </a><span class="php-keyword1">function</span> primer_bb_layout( <span class="php-var">$post_id</span>, <span class="php-var">$meta_key</span>, <span class="php-var">$meta_value</span> ) {
-</span><span id="24" class="codeline"><a class="number" href="#24"> 24: </a>
-</span><span id="25" class="codeline"><a class="number" href="#25"> 25: </a>    <span class="php-keyword1">if</span> ( <span class="php-quote">'_fl_builder_draft'</span> !== <span class="php-var">$meta_key</span> ) {
-</span><span id="26" class="codeline"><a class="number" href="#26"> 26: </a>
-</span><span id="27" class="codeline"><a class="number" href="#27"> 27: </a>        <span class="php-keyword1">return</span>;
-</span><span id="28" class="codeline"><a class="number" href="#28"> 28: </a>
-</span><span id="29" class="codeline"><a class="number" href="#29"> 29: </a>    }
-</span><span id="30" class="codeline"><a class="number" href="#30"> 30: </a>
-</span><span id="31" class="codeline"><a class="number" href="#31"> 31: </a>    <span class="php-keyword1">global</span> <span class="php-var">$primer_customizer_layouts</span>;
-</span><span id="32" class="codeline"><a class="number" href="#32"> 32: </a>
-</span><span id="33" class="codeline"><a class="number" href="#33"> 33: </a>    <span class="php-keyword1">if</span> ( <span class="php-keyword1">isset</span>( <span class="php-var">$primer_customizer_layouts</span>-&gt;layouts[<span class="php-quote">'one-column-wide'</span>] ) ) {
-</span><span id="34" class="codeline"><a class="number" href="#34"> 34: </a>
-</span><span id="35" class="codeline"><a class="number" href="#35"> 35: </a>        update_post_meta( <span class="php-var">$post_id</span>, <span class="php-quote">'primer_layout'</span>, <span class="php-quote">'one-column-wide'</span> );
-</span><span id="36" class="codeline"><a class="number" href="#36"> 36: </a>
-</span><span id="37" class="codeline"><a class="number" href="#37"> 37: </a>    }
-</span><span id="38" class="codeline"><a class="number" href="#38"> 38: </a>
-</span><span id="39" class="codeline"><a class="number" href="#39"> 39: </a>}
-</span><span id="40" class="codeline"><a class="number" href="#40"> 40: </a>add_action( <span class="php-quote">'add_post_meta'</span>, <span class="php-quote">'primer_bb_layout'</span>, <span class="php-num">10</span>, <span class="php-num">3</span> );
-</span><span id="41" class="codeline"><a class="number" href="#41"> 41: </a>
-</span><span id="42" class="codeline"><a class="number" href="#42"> 42: </a><span class="php-comment">/**
-</span></span><span id="43" class="codeline"><a class="number" href="#43"> 43: </a><span class="php-comment"> * Add color scheme targets for Beaver Builder elements.
-</span></span><span id="44" class="codeline"><a class="number" href="#44"> 44: </a><span class="php-comment"> *
-</span></span><span id="45" class="codeline"><a class="number" href="#45"> 45: </a><span class="php-comment"> * @filter primer_colors
-</span></span><span id="46" class="codeline"><a class="number" href="#46"> 46: </a><span class="php-comment"> * @since  1.0.0
-</span></span><span id="47" class="codeline"><a class="number" href="#47"> 47: </a><span class="php-comment"> *
-</span></span><span id="48" class="codeline"><a class="number" href="#48"> 48: </a><span class="php-comment"> * @param  array $colors
+</span></span><span id="16" class="codeline"><a class="number" href="#16"> 16: </a><span class="php-comment"> * @uses   [update_post_meta](https://codex.wordpress.org/Function_Reference/update_post_meta) To update the `primer_layout` meta value.
+</span></span><span id="17" class="codeline"><a class="number" href="#17"> 17: </a><span class="php-comment"> * @global $primer_customizer_layouts
+</span></span><span id="18" class="codeline"><a class="number" href="#18"> 18: </a><span class="php-comment"> * @since  1.0.0
+</span></span><span id="19" class="codeline"><a class="number" href="#19"> 19: </a><span class="php-comment"> *
+</span></span><span id="20" class="codeline"><a class="number" href="#20"> 20: </a><span class="php-comment"> * @param  int    $post_id    Post ID to retreive the layout for.
+</span></span><span id="21" class="codeline"><a class="number" href="#21"> 21: </a><span class="php-comment"> * @param  string $meta_key   Key of the custom field to be added.
+</span></span><span id="22" class="codeline"><a class="number" href="#22"> 22: </a><span class="php-comment"> * @param  mixed  $meta_value Value of the custom field to be added.
+</span></span><span id="23" class="codeline"><a class="number" href="#23"> 23: </a><span class="php-comment"> */</span>
+</span><span id="24" class="codeline"><a class="number" href="#24"> 24: </a><span class="php-keyword1">function</span> primer_bb_layout( <span class="php-var">$post_id</span>, <span class="php-var">$meta_key</span>, <span class="php-var">$meta_value</span> ) {
+</span><span id="25" class="codeline"><a class="number" href="#25"> 25: </a>
+</span><span id="26" class="codeline"><a class="number" href="#26"> 26: </a>    <span class="php-keyword1">if</span> ( <span class="php-quote">'_fl_builder_draft'</span> !== <span class="php-var">$meta_key</span> ) {
+</span><span id="27" class="codeline"><a class="number" href="#27"> 27: </a>
+</span><span id="28" class="codeline"><a class="number" href="#28"> 28: </a>        <span class="php-keyword1">return</span>;
+</span><span id="29" class="codeline"><a class="number" href="#29"> 29: </a>
+</span><span id="30" class="codeline"><a class="number" href="#30"> 30: </a>    }
+</span><span id="31" class="codeline"><a class="number" href="#31"> 31: </a>
+</span><span id="32" class="codeline"><a class="number" href="#32"> 32: </a>    <span class="php-keyword1">global</span> <span class="php-var">$primer_customizer_layouts</span>;
+</span><span id="33" class="codeline"><a class="number" href="#33"> 33: </a>
+</span><span id="34" class="codeline"><a class="number" href="#34"> 34: </a>    <span class="php-keyword1">if</span> ( <span class="php-keyword1">isset</span>( <span class="php-var">$primer_customizer_layouts</span>-&gt;layouts[<span class="php-quote">'one-column-wide'</span>] ) ) {
+</span><span id="35" class="codeline"><a class="number" href="#35"> 35: </a>
+</span><span id="36" class="codeline"><a class="number" href="#36"> 36: </a>        update_post_meta( <span class="php-var">$post_id</span>, <span class="php-quote">'primer_layout'</span>, <span class="php-quote">'one-column-wide'</span> );
+</span><span id="37" class="codeline"><a class="number" href="#37"> 37: </a>
+</span><span id="38" class="codeline"><a class="number" href="#38"> 38: </a>    }
+</span><span id="39" class="codeline"><a class="number" href="#39"> 39: </a>
+</span><span id="40" class="codeline"><a class="number" href="#40"> 40: </a>}
+</span><span id="41" class="codeline"><a class="number" href="#41"> 41: </a>add_action( <span class="php-quote">'add_post_meta'</span>, <span class="php-quote">'primer_bb_layout'</span>, <span class="php-num">10</span>, <span class="php-num">3</span> );
+</span><span id="42" class="codeline"><a class="number" href="#42"> 42: </a>
+</span><span id="43" class="codeline"><a class="number" href="#43"> 43: </a><span class="php-comment">/**
+</span></span><span id="44" class="codeline"><a class="number" href="#44"> 44: </a><span class="php-comment"> * Add color scheme targets for Beaver Builder elements.
+</span></span><span id="45" class="codeline"><a class="number" href="#45"> 45: </a><span class="php-comment"> *
+</span></span><span id="46" class="codeline"><a class="number" href="#46"> 46: </a><span class="php-comment"> * @action primer_colors
+</span></span><span id="47" class="codeline"><a class="number" href="#47"> 47: </a><span class="php-comment"> * @uses   primer_array_replace_recursive To recursively replace existing styles.
+</span></span><span id="48" class="codeline"><a class="number" href="#48"> 48: </a><span class="php-comment"> * @since  1.0.0
 </span></span><span id="49" class="codeline"><a class="number" href="#49"> 49: </a><span class="php-comment"> *
-</span></span><span id="50" class="codeline"><a class="number" href="#50"> 50: </a><span class="php-comment"> * @return array
-</span></span><span id="51" class="codeline"><a class="number" href="#51"> 51: </a><span class="php-comment"> */</span>
-</span><span id="52" class="codeline"><a class="number" href="#52"> 52: </a><span class="php-keyword1">function</span> primer_bb_colors( <span class="php-var">$colors</span> ) {
-</span><span id="53" class="codeline"><a class="number" href="#53"> 53: </a>
-</span><span id="54" class="codeline"><a class="number" href="#54"> 54: </a>    <span class="php-var">$bb_colors</span> = <span class="php-keyword1">array</span>(
-</span><span id="55" class="codeline"><a class="number" href="#55"> 55: </a>        <span class="php-quote">'primary_text_color'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="56" class="codeline"><a class="number" href="#56"> 56: </a>            <span class="php-quote">'css'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="57" class="codeline"><a class="number" href="#57"> 57: </a>                <span class="php-quote">'.fl-callout-text,
-</span></span><span id="58" class="codeline"><a class="number" href="#58"> 58: </a><span class="php-quote">                .fl-rich-text'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="59" class="codeline"><a class="number" href="#59"> 59: </a>                    <span class="php-quote">'color'</span> =&gt; <span class="php-quote">'%1$s'</span>,
-</span><span id="60" class="codeline"><a class="number" href="#60"> 60: </a>                ),
-</span><span id="61" class="codeline"><a class="number" href="#61"> 61: </a>            ),
-</span><span id="62" class="codeline"><a class="number" href="#62"> 62: </a>        ),
-</span><span id="63" class="codeline"><a class="number" href="#63"> 63: </a>        <span class="php-quote">'button_color'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="64" class="codeline"><a class="number" href="#64"> 64: </a>            <span class="php-quote">'css'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="65" class="codeline"><a class="number" href="#65"> 65: </a>                <span class="php-quote">'a.fl-button,
-</span></span><span id="66" class="codeline"><a class="number" href="#66"> 66: </a><span class="php-quote">                a.fl-button:visited,
-</span></span><span id="67" class="codeline"><a class="number" href="#67"> 67: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button,
-</span></span><span id="68" class="codeline"><a class="number" href="#68"> 68: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:visited'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="69" class="codeline"><a class="number" href="#69"> 69: </a>                    <span class="php-quote">'background-color'</span> =&gt; <span class="php-quote">'%1$s'</span>,
-</span><span id="70" class="codeline"><a class="number" href="#70"> 70: </a>                    <span class="php-quote">'border-color'</span>     =&gt; <span class="php-quote">'%1$s'</span>,
-</span><span id="71" class="codeline"><a class="number" href="#71"> 71: </a>                ),
-</span><span id="72" class="codeline"><a class="number" href="#72"> 72: </a>            ),
-</span><span id="73" class="codeline"><a class="number" href="#73"> 73: </a>            <span class="php-quote">'rgba_css'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="74" class="codeline"><a class="number" href="#74"> 74: </a>                <span class="php-quote">'a.fl-button:hover,
-</span></span><span id="75" class="codeline"><a class="number" href="#75"> 75: </a><span class="php-quote">                a.fl-button:active,
-</span></span><span id="76" class="codeline"><a class="number" href="#76"> 76: </a><span class="php-quote">                a.fl-button:focus,
-</span></span><span id="77" class="codeline"><a class="number" href="#77"> 77: </a><span class="php-quote">                a.fl-button:visited:hover,
-</span></span><span id="78" class="codeline"><a class="number" href="#78"> 78: </a><span class="php-quote">                a.fl-button:visited:active,
-</span></span><span id="79" class="codeline"><a class="number" href="#79"> 79: </a><span class="php-quote">                a.fl-button:visited:focus,
-</span></span><span id="80" class="codeline"><a class="number" href="#80"> 80: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:hover,
-</span></span><span id="81" class="codeline"><a class="number" href="#81"> 81: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:active,
-</span></span><span id="82" class="codeline"><a class="number" href="#82"> 82: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:focus,
-</span></span><span id="83" class="codeline"><a class="number" href="#83"> 83: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:visited:hover,
-</span></span><span id="84" class="codeline"><a class="number" href="#84"> 84: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:visited:active,
-</span></span><span id="85" class="codeline"><a class="number" href="#85"> 85: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:visited:focus'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="86" class="codeline"><a class="number" href="#86"> 86: </a>                    <span class="php-quote">'background-color'</span> =&gt; <span class="php-quote">'rgba(%1$s, 0.8)'</span>,
-</span><span id="87" class="codeline"><a class="number" href="#87"> 87: </a>                    <span class="php-quote">'border-color'</span>     =&gt; <span class="php-quote">'rgba(%1$s, 0.8)'</span>,
-</span><span id="88" class="codeline"><a class="number" href="#88"> 88: </a>                ),
-</span><span id="89" class="codeline"><a class="number" href="#89"> 89: </a>            ),
-</span><span id="90" class="codeline"><a class="number" href="#90"> 90: </a>        ),
-</span><span id="91" class="codeline"><a class="number" href="#91"> 91: </a>        <span class="php-quote">'button_text_color'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="92" class="codeline"><a class="number" href="#92"> 92: </a>            <span class="php-quote">'css'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="93" class="codeline"><a class="number" href="#93"> 93: </a>                <span class="php-quote">'a.fl-button
-</span></span><span id="94" class="codeline"><a class="number" href="#94"> 94: </a><span class="php-quote">                a.fl-button:hover,
-</span></span><span id="95" class="codeline"><a class="number" href="#95"> 95: </a><span class="php-quote">                a.fl-button:active,
-</span></span><span id="96" class="codeline"><a class="number" href="#96"> 96: </a><span class="php-quote">                a.fl-button:focus,
-</span></span><span id="97" class="codeline"><a class="number" href="#97"> 97: </a><span class="php-quote">                a.fl-button:visited,
-</span></span><span id="98" class="codeline"><a class="number" href="#98"> 98: </a><span class="php-quote">                a.fl-button:visited:hover,
-</span></span><span id="99" class="codeline"><a class="number" href="#99"> 99: </a><span class="php-quote">                a.fl-button:visited:active,
-</span></span><span id="100" class="codeline"><a class="number" href="#100">100: </a><span class="php-quote">                a.fl-button:visited:focus,
-</span></span><span id="101" class="codeline"><a class="number" href="#101">101: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button,
-</span></span><span id="102" class="codeline"><a class="number" href="#102">102: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button *,
-</span></span><span id="103" class="codeline"><a class="number" href="#103">103: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:visited,
-</span></span><span id="104" class="codeline"><a class="number" href="#104">104: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:visited *'</span> =&gt; <span class="php-keyword1">array</span>(
-</span><span id="105" class="codeline"><a class="number" href="#105">105: </a>                    <span class="php-quote">'color'</span> =&gt; <span class="php-quote">'%1$s'</span>,
-</span><span id="106" class="codeline"><a class="number" href="#106">106: </a>                ),
-</span><span id="107" class="codeline"><a class="number" href="#107">107: </a>            ),
-</span><span id="108" class="codeline"><a class="number" href="#108">108: </a>        ),
-</span><span id="109" class="codeline"><a class="number" href="#109">109: </a>    );
-</span><span id="110" class="codeline"><a class="number" href="#110">110: </a>
-</span><span id="111" class="codeline"><a class="number" href="#111">111: </a>    <span class="php-keyword1">return</span> primer_array_replace_recursive( <span class="php-var">$colors</span>, <span class="php-var">$bb_colors</span> );
+</span></span><span id="50" class="codeline"><a class="number" href="#50"> 50: </a><span class="php-comment"> * @param  array $colors Original Primer_Customizer_Colors color array.
+</span></span><span id="51" class="codeline"><a class="number" href="#51"> 51: </a><span class="php-comment"> *
+</span></span><span id="52" class="codeline"><a class="number" href="#52"> 52: </a><span class="php-comment"> * @return array Returns the CSS replacements for beaver builder elements.
+</span></span><span id="53" class="codeline"><a class="number" href="#53"> 53: </a><span class="php-comment"> */</span>
+</span><span id="54" class="codeline"><a class="number" href="#54"> 54: </a><span class="php-keyword1">function</span> primer_bb_colors( <span class="php-var">$colors</span> ) {
+</span><span id="55" class="codeline"><a class="number" href="#55"> 55: </a>
+</span><span id="56" class="codeline"><a class="number" href="#56"> 56: </a>    <span class="php-var">$bb_colors</span> = <span class="php-keyword1">array</span>(
+</span><span id="57" class="codeline"><a class="number" href="#57"> 57: </a>        <span class="php-quote">'primary_text_color'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="58" class="codeline"><a class="number" href="#58"> 58: </a>            <span class="php-quote">'css'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="59" class="codeline"><a class="number" href="#59"> 59: </a>                <span class="php-quote">'.fl-callout-text,
+</span></span><span id="60" class="codeline"><a class="number" href="#60"> 60: </a><span class="php-quote">                .fl-rich-text'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="61" class="codeline"><a class="number" href="#61"> 61: </a>                    <span class="php-quote">'color'</span> =&gt; <span class="php-quote">'%1$s'</span>,
+</span><span id="62" class="codeline"><a class="number" href="#62"> 62: </a>                ),
+</span><span id="63" class="codeline"><a class="number" href="#63"> 63: </a>            ),
+</span><span id="64" class="codeline"><a class="number" href="#64"> 64: </a>        ),
+</span><span id="65" class="codeline"><a class="number" href="#65"> 65: </a>        <span class="php-quote">'button_color'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="66" class="codeline"><a class="number" href="#66"> 66: </a>            <span class="php-quote">'css'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="67" class="codeline"><a class="number" href="#67"> 67: </a>                <span class="php-quote">'a.fl-button,
+</span></span><span id="68" class="codeline"><a class="number" href="#68"> 68: </a><span class="php-quote">                a.fl-button:visited,
+</span></span><span id="69" class="codeline"><a class="number" href="#69"> 69: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button,
+</span></span><span id="70" class="codeline"><a class="number" href="#70"> 70: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:visited'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="71" class="codeline"><a class="number" href="#71"> 71: </a>                    <span class="php-quote">'background-color'</span> =&gt; <span class="php-quote">'%1$s'</span>,
+</span><span id="72" class="codeline"><a class="number" href="#72"> 72: </a>                    <span class="php-quote">'border-color'</span>     =&gt; <span class="php-quote">'%1$s'</span>,
+</span><span id="73" class="codeline"><a class="number" href="#73"> 73: </a>                ),
+</span><span id="74" class="codeline"><a class="number" href="#74"> 74: </a>            ),
+</span><span id="75" class="codeline"><a class="number" href="#75"> 75: </a>            <span class="php-quote">'rgba_css'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="76" class="codeline"><a class="number" href="#76"> 76: </a>                <span class="php-quote">'a.fl-button:hover,
+</span></span><span id="77" class="codeline"><a class="number" href="#77"> 77: </a><span class="php-quote">                a.fl-button:active,
+</span></span><span id="78" class="codeline"><a class="number" href="#78"> 78: </a><span class="php-quote">                a.fl-button:focus,
+</span></span><span id="79" class="codeline"><a class="number" href="#79"> 79: </a><span class="php-quote">                a.fl-button:visited:hover,
+</span></span><span id="80" class="codeline"><a class="number" href="#80"> 80: </a><span class="php-quote">                a.fl-button:visited:active,
+</span></span><span id="81" class="codeline"><a class="number" href="#81"> 81: </a><span class="php-quote">                a.fl-button:visited:focus,
+</span></span><span id="82" class="codeline"><a class="number" href="#82"> 82: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:hover,
+</span></span><span id="83" class="codeline"><a class="number" href="#83"> 83: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:active,
+</span></span><span id="84" class="codeline"><a class="number" href="#84"> 84: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:focus,
+</span></span><span id="85" class="codeline"><a class="number" href="#85"> 85: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:visited:hover,
+</span></span><span id="86" class="codeline"><a class="number" href="#86"> 86: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:visited:active,
+</span></span><span id="87" class="codeline"><a class="number" href="#87"> 87: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:visited:focus'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="88" class="codeline"><a class="number" href="#88"> 88: </a>                    <span class="php-quote">'background-color'</span> =&gt; <span class="php-quote">'rgba(%1$s, 0.8)'</span>,
+</span><span id="89" class="codeline"><a class="number" href="#89"> 89: </a>                    <span class="php-quote">'border-color'</span>     =&gt; <span class="php-quote">'rgba(%1$s, 0.8)'</span>,
+</span><span id="90" class="codeline"><a class="number" href="#90"> 90: </a>                ),
+</span><span id="91" class="codeline"><a class="number" href="#91"> 91: </a>            ),
+</span><span id="92" class="codeline"><a class="number" href="#92"> 92: </a>        ),
+</span><span id="93" class="codeline"><a class="number" href="#93"> 93: </a>        <span class="php-quote">'button_text_color'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="94" class="codeline"><a class="number" href="#94"> 94: </a>            <span class="php-quote">'css'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="95" class="codeline"><a class="number" href="#95"> 95: </a>                <span class="php-quote">'a.fl-button
+</span></span><span id="96" class="codeline"><a class="number" href="#96"> 96: </a><span class="php-quote">                a.fl-button:hover,
+</span></span><span id="97" class="codeline"><a class="number" href="#97"> 97: </a><span class="php-quote">                a.fl-button:active,
+</span></span><span id="98" class="codeline"><a class="number" href="#98"> 98: </a><span class="php-quote">                a.fl-button:focus,
+</span></span><span id="99" class="codeline"><a class="number" href="#99"> 99: </a><span class="php-quote">                a.fl-button:visited,
+</span></span><span id="100" class="codeline"><a class="number" href="#100">100: </a><span class="php-quote">                a.fl-button:visited:hover,
+</span></span><span id="101" class="codeline"><a class="number" href="#101">101: </a><span class="php-quote">                a.fl-button:visited:active,
+</span></span><span id="102" class="codeline"><a class="number" href="#102">102: </a><span class="php-quote">                a.fl-button:visited:focus,
+</span></span><span id="103" class="codeline"><a class="number" href="#103">103: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button,
+</span></span><span id="104" class="codeline"><a class="number" href="#104">104: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button *,
+</span></span><span id="105" class="codeline"><a class="number" href="#105">105: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:visited,
+</span></span><span id="106" class="codeline"><a class="number" href="#106">106: </a><span class="php-quote">                .content-area .fl-builder-content a.fl-button:visited *'</span> =&gt; <span class="php-keyword1">array</span>(
+</span><span id="107" class="codeline"><a class="number" href="#107">107: </a>                    <span class="php-quote">'color'</span> =&gt; <span class="php-quote">'%1$s'</span>,
+</span><span id="108" class="codeline"><a class="number" href="#108">108: </a>                ),
+</span><span id="109" class="codeline"><a class="number" href="#109">109: </a>            ),
+</span><span id="110" class="codeline"><a class="number" href="#110">110: </a>        ),
+</span><span id="111" class="codeline"><a class="number" href="#111">111: </a>    );
 </span><span id="112" class="codeline"><a class="number" href="#112">112: </a>
-</span><span id="113" class="codeline"><a class="number" href="#113">113: </a>}
-</span><span id="114" class="codeline"><a class="number" href="#114">114: </a>add_filter( <span class="php-quote">'primer_colors'</span>, <span class="php-quote">'primer_bb_colors'</span> );
-</span><span id="115" class="codeline"><a class="number" href="#115">115: </a></span></code></pre>
+</span><span id="113" class="codeline"><a class="number" href="#113">113: </a>    <span class="php-keyword1">return</span> primer_array_replace_recursive( <span class="php-var">$colors</span>, <span class="php-var">$bb_colors</span> );
+</span><span id="114" class="codeline"><a class="number" href="#114">114: </a>
+</span><span id="115" class="codeline"><a class="number" href="#115">115: </a>}
+</span><span id="116" class="codeline"><a class="number" href="#116">116: </a>add_filter( <span class="php-quote">'primer_colors'</span>, <span class="php-quote">'primer_bb_colors'</span> );
+</span><span id="117" class="codeline"><a class="number" href="#117">117: </a></span></code></pre>
 			</div>
 		</div>
 

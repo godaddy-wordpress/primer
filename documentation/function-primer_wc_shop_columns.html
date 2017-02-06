@@ -27,13 +27,13 @@
 	<div class="container-fluid hidden-xs hidden-sm">
 		<div class="row">
 			<div class="col-sm-3 col-md-3">
-				<a class="logo-godaddy" href="http://cakephp.org">
-					<img alt="CakePHP" src="resources/godaddy-logo.png?f99b9ab6703faadbd2f67d212cd8176592b1feb9">
+				<a class="logo-godaddy" href="https://godaddy.github.io/wp-primer-theme/intro.html">
+					<img alt="GoDaddy" src="resources/godaddy-logo.png?f99b9ab6703faadbd2f67d212cd8176592b1feb9">
 				</a>
 			</div>
 
 			<div class="col-sm-9 col-md-9">
-				<nav class="navbar-right" id="cake-nav">
+				<nav class="navbar-right" id="godaddy-nav">
 					<ul class="menu">
 						<li class="first">
 							<a href="#"><i class="fa fa-menu fa-chevron-down"></i>Documentation</a>
@@ -46,7 +46,7 @@
 							</ul>
 						</li>
 
-						<li><a href="contributors.html">Contributors</a></li>
+						<li><a href="https://godaddy.github.io/wp-primer-theme/contributors.html">Contributors</a></li>
 
 						<li>
 							<a href="#"><i class="fa fa-menu fa-chevron-down"></i>Community</a>
@@ -79,8 +79,8 @@
 		<div class="container-fluid hidden-md hidden-lg">
 		<div class="row">
 			<div class="col-sm-6 col-xs-6">
-				<a class="logo-cake" href="http://cakephp.org">
-					<img alt="CakePHP" src="resources/logo-cake.png">
+				<a class="logo-godaddy" href="https://godaddy.github.io/wp-primer-theme/intro.html">
+					<img alt="GoDaddy" src="resources/godaddy-logo.png?f99b9ab6703faadbd2f67d212cd8176592b1feb9">
 				</a>
 			</div>
 
@@ -118,7 +118,7 @@
 				<div class="col-md-5 t-api-nav p0">
 					<ul class="navigation">
 						<li class="t-api-nav-el">
-							<a href="index.html" title="Overview">
+							<a href="https://godaddy.github.io/wp-primer-theme/intro.html" title="Overview">
 							<i class="fa fa-eye"></i><span>Overview</span></a>
 						</li>
 						<li class="t-api-nav-el">
@@ -270,13 +270,19 @@
 				GoDaddy<br>
 				<b>Since:</b>
 				1.0.0<br>
+				<b>Uses:</b>
+				<a href="https://docs.woocommerce.com/wc-apidocs/function-is_shop.html">is_shop</a> To check the if on the WooCommerce shop page.<br>
+				<b>Uses:</b>
+				<a href="https://docs.woocommerce.com/wc-apidocs/function-wc_get_page_id.html">wc_get_page_id</a> To retreive the WooCommerce page id.<br>
+				<b>Uses:</b>
+				<code><a href="function-primer_get_layout.html">primer_get_layout()</a></code><br>To check if the current page is three columns.<br>
 				<b>Filter:</b>
 				loop_shop_columns<br>
 				<b>Filter:</b>
 				woocommerce_related_products_columns<br>
 				<b>Filter:</b>
 				woocommerce_upsells_products_columns<br>
-		<b>Located at</b> <a href="source-function-primer_wc_shop_columns.html#150-178" title="Go to source code">inc/compat/woocommerce.php</a><br>
+		<b>Located at</b> <a href="source-function-primer_wc_shop_columns.html#166-198" title="Go to source code">inc/compat/woocommerce.php</a><br>
 	</div>
 
 	<p class="method-signature">
@@ -290,7 +296,7 @@ primer_wc_shop_columns( integer <var>$columns</var> )
 		<tr id="$columns">
 			<td class="name"><code>integer</code></td>
 			<td class="value"><code><var>$columns</var></code></td>
-			<td></td>
+			<td>$columns The default number of columns.</td>
 		</tr>
 		</table>
 	</div>
@@ -303,7 +309,7 @@ primer_wc_shop_columns( integer <var>$columns</var> )
 					integer
 				</code></span>
 				<span>
-					int
+					The number of columns to use.
 				</span>
 			</li>
 		</ul>
