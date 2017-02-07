@@ -3,17 +3,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-07 22:50:28+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-02-07 23:43:35+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 
 #: 404.php:22 templates/parts/404-woocommerce.php:22
 msgid "Oops! That page can't be found."
@@ -21,8 +22,7 @@ msgstr "申し訳ありません。ページが見つかりません。"
 
 #: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr "この場所には何も見つかりませんでした。下記を検索してみてください："
 
 #: comments.php:54 comments.php:79
@@ -53,10 +53,13 @@ msgstr "ここから始めましょう"
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr "申し訳ありません。検索ワードに一致する結果がありませんでした。 別のキーワードでもう一度試してみてください。"
+msgstr ""
+"申し訳ありません。検索ワードに一致する結果がありませんでした。 別のキーワード"
+"でもう一度試してみてください。"
 
 #: content-none.php:45
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "お探しのものが見つかりませんでした。検索してみてください。"
 
 #: functions.php:159
@@ -87,7 +90,9 @@ msgstr "サイドバー"
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
-msgstr "プライマリサイドバーはすべてのページ、投稿、アーカイブ、および検索テンプレートのコンテンツの横に表示されます。"
+msgstr ""
+"プライマリサイドバーはすべてのページ、投稿、アーカイブ、および検索テンプレー"
+"トのコンテンツの横に表示されます。"
 
 #: functions.php:375
 msgid "Secondary Sidebar"
@@ -95,8 +100,8 @@ msgstr "セカンダリサイドバー"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr "セカンダリサイドバーは3列レイアウトを選択した場合のみ表示されます。"
 
 #: functions.php:383
@@ -154,7 +159,8 @@ msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"PrimerにはWordPressのバージョン%1$s以上が必要です。お使いのバージョンは%2$sです。アップグレードしてからもう一度お試しください。"
+"PrimerにはWordPressのバージョン%1$s以上が必要です。お使いのバージョンは%2$sで"
+"す。アップグレードしてからもう一度お試しください。"
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -178,7 +184,9 @@ msgstr "見出しテキスト"
 
 #: inc/customizer/colors.php:128
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "投稿タイトル、ウィジェットタイトル、フォームラベル、テーブルヘッダーおよびボタン。"
+msgstr ""
+"投稿タイトル、ウィジェットタイトル、フォームラベル、テーブルヘッダーおよびボ"
+"タン。"
 
 #: inc/customizer/colors.php:149
 msgid "Primary Text"
@@ -289,8 +297,11 @@ msgid "Hero Background Overlay"
 msgstr "Hero背景オーバーレイ"
 
 #: inc/customizer/colors.php:1275
-msgid "Control the color overlay transparency when using a custom Header Image."
-msgstr "カスタムヘッダーイメージを使用している場合、カラーオーバーレイの透明度をコントロールします。"
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+"カスタムヘッダーイメージを使用している場合、カラーオーバーレイの透明度をコン"
+"トロールします。"
 
 #: inc/customizer/fonts.php:87
 msgid "Site Title"
@@ -314,7 +325,8 @@ msgstr "見出し"
 
 #: inc/customizer/fonts.php:109
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr "投稿タイトル、ウィジェットタイトル、フォームラベル、およびテーブルヘッダー。"
+msgstr ""
+"投稿タイトル、ウィジェットタイトル、フォームラベル、およびテーブルヘッダー。"
 
 #: inc/customizer/fonts.php:124
 msgid "Primary"
@@ -385,8 +397,11 @@ msgid "Use featured image"
 msgstr "注目のイメージを使用"
 
 #: inc/customizer.php:177
-msgid "Allow the featured image on the current post to override the hero image."
-msgstr "現在の投稿への注目イメージの使用を許可して、Heroイメージにオーバーライドさせます。"
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+"現在の投稿への注目イメージの使用を許可して、Heroイメージにオーバーライドさせ"
+"ます。"
 
 #: inc/helpers.php:52
 msgid "404 Page Not Found"
@@ -462,7 +477,9 @@ msgstr "https://github.com/godaddy/wp-primer-theme"
 msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
-msgstr "Primerは、フレッシュなデザインであなたのコンテンツに明瞭さをもたらすパワフルなテーマです。"
+msgstr ""
+"Primerは、フレッシュなデザインであなたのコンテンツに明瞭さをもたらすパワフル"
+"なテーマです。"
 
 #. Author of the plugin/theme
 msgid "GoDaddy"

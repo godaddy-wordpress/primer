@@ -3,17 +3,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-07 22:50:28+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-02-07 23:43:35+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 
 #: 404.php:22 templates/parts/404-woocommerce.php:22
 msgid "Oops! That page can't be found."
@@ -21,8 +22,7 @@ msgstr "¡Oh! No se pudo encontrar esa página."
 
 #: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
 "Parece que no se encontró nada en esta ubicación. Intenta buscar más abajo:"
 
@@ -59,8 +59,11 @@ msgstr ""
 "nuevo con otras palabras clave diferentes."
 
 #: content-none.php:45
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr "Parece que no podemos encontrar lo que estás buscando. Quizás buscar pueda ser de ayuda."
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"Parece que no podemos encontrar lo que estás buscando. Quizás buscar pueda "
+"ser de ayuda."
 
 #: functions.php:159
 msgid "Featured"
@@ -100,10 +103,11 @@ msgstr "Barra lateral secundaria"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr ""
-"La barra lateral secundaria solo aparece cuando seleccionas un diseño de tres columnas."
+"La barra lateral secundaria solo aparece cuando seleccionas un diseño de "
+"tres columnas."
 
 #: functions.php:383
 msgid "Footer 1"
@@ -111,7 +115,9 @@ msgstr "Pie de página 1"
 
 #: functions.php:384
 msgid "This sidebar is the first column of the footer widget area."
-msgstr "Esta barra lateral es la primera columna del área de widgets del pie de página."
+msgstr ""
+"Esta barra lateral es la primera columna del área de widgets del pie de "
+"página."
 
 #: functions.php:391
 msgid "Footer 2"
@@ -119,7 +125,9 @@ msgstr "Pie de página 2"
 
 #: functions.php:392
 msgid "This sidebar is the second column of the footer widget area."
-msgstr "Esta barra lateral es la segunda columna del área de widgets del pie de página."
+msgstr ""
+"Esta barra lateral es la segunda columna del área de widgets del pie de "
+"página."
 
 #: functions.php:399
 msgid "Footer 3"
@@ -127,11 +135,15 @@ msgstr "Pie de página 3"
 
 #: functions.php:400
 msgid "This sidebar is the third column of the footer widget area."
-msgstr "Esta barra lateral es la tercera columna del área de widgets del pie de página."
+msgstr ""
+"Esta barra lateral es la tercera columna del área de widgets del pie de "
+"página."
 
 #: functions.php:408
 msgid "Hero widgets appear over the header image on the front page."
-msgstr "Los widgets Hero aparecen sobre la imagen del encabezado en la página frontal."
+msgstr ""
+"Los widgets Hero aparecen sobre la imagen del encabezado en la página "
+"frontal."
 
 #: header.php:42
 msgid "Skip to content"
@@ -185,7 +197,9 @@ msgstr "Texto de encabezado"
 
 #: inc/customizer/colors.php:128
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "Títulos de la publicación, títulos de widgets, etiquetas de formularios, encabezados de tablas y botones."
+msgstr ""
+"Títulos de la publicación, títulos de widgets, etiquetas de formularios, "
+"encabezados de tablas y botones."
 
 #: inc/customizer/colors.php:149
 msgid "Primary Text"
@@ -201,7 +215,9 @@ msgstr "Texto secundario"
 
 #: inc/customizer/colors.php:196
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr "Pies de autor de la publicación, recuentos de comentarios, pies de página de la publicación y pies de página de citas."
+msgstr ""
+"Pies de autor de la publicación, recuentos de comentarios, pies de página de "
+"la publicación y pies de página de citas."
 
 #: inc/customizer/colors.php:210
 msgid "Widget Heading Text"
@@ -296,8 +312,11 @@ msgid "Hero Background Overlay"
 msgstr "Superposición del fondo de Hero"
 
 #: inc/customizer/colors.php:1275
-msgid "Control the color overlay transparency when using a custom Header Image."
-msgstr "Controla la transparencia de la superposición del color al utilizar una imagen personalizada del encabezado."
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+"Controla la transparencia de la superposición del color al utilizar una "
+"imagen personalizada del encabezado."
 
 #: inc/customizer/fonts.php:87
 msgid "Site Title"
@@ -321,7 +340,9 @@ msgstr "Títulos"
 
 #: inc/customizer/fonts.php:109
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr "Títulos de la publicación, títulos de widgets, etiquetas de formularios y encabezados de tablas."
+msgstr ""
+"Títulos de la publicación, títulos de widgets, etiquetas de formularios y "
+"encabezados de tablas."
 
 #: inc/customizer/fonts.php:124
 msgid "Primary"
@@ -337,7 +358,9 @@ msgstr "Secundario"
 
 #: inc/customizer/fonts.php:140
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr "Pies de autor, recuentos de comentarios, enlaces de respuestas, pies de página de la publicación y pies de página de citas."
+msgstr ""
+"Pies de autor, recuentos de comentarios, enlaces de respuestas, pies de "
+"página de la publicación y pies de página de citas."
 
 #: inc/customizer/fonts.php:188
 msgid "Fonts"
@@ -392,8 +415,11 @@ msgid "Use featured image"
 msgstr "Usar imagen destacada"
 
 #: inc/customizer.php:177
-msgid "Allow the featured image on the current post to override the hero image."
-msgstr "Permite que la imagen destacada de la publicación actual anule la imagen de Hero."
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+"Permite que la imagen destacada de la publicación actual anule la imagen de "
+"Hero."
 
 #: inc/helpers.php:52
 msgid "404 Page Not Found"
@@ -470,7 +496,8 @@ msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer es un tema potente que le brinda claridad a tu contenido con un diseño innovador."
+"Primer es un tema potente que le brinda claridad a tu contenido con un "
+"diseño innovador."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"

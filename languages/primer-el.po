@@ -3,17 +3,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-07 22:50:28+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-02-07 23:43:35+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 
 #: 404.php:22 templates/parts/404-woocommerce.php:22
 msgid "Oops! That page can't be found."
@@ -21,8 +22,7 @@ msgstr "Ωχ! Δεν είναι δυνατή η εύρεση αυτής της �
 
 #: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
 "Μάλλον δεν βρέθηκε τίποτα σε αυτή την τοποθεσία. Δοκιμάστε να κάνετε "
 "αναζήτηση παρακάτω:"
@@ -60,8 +60,11 @@ msgstr ""
 "ξανά με διαφορετικές λέξεις-κλειδιά."
 
 #: content-none.php:45
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr "Μάλλον δεν μπορούμε να βρούμε αυτό που ψάχνετε. Ίσως μπορεί να σας βοηθήσει η αναζήτηση."
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"Μάλλον δεν μπορούμε να βρούμε αυτό που ψάχνετε. Ίσως μπορεί να σας βοηθήσει "
+"η αναζήτηση."
 
 #: functions.php:159
 msgid "Featured"
@@ -101,8 +104,8 @@ msgstr "Δευτερεύουσα πλευρική γραμμή"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr ""
 "Η δευτερεύουσα πλευρική γραμμή θα εμφανίζεται μόνο όταν έχετε επιλέξει "
 "διάταξη τριών στηλών."
@@ -113,7 +116,9 @@ msgstr "Υποσέλιδο 1"
 
 #: functions.php:384
 msgid "This sidebar is the first column of the footer widget area."
-msgstr "Αυτή η πλευρική γραμμή εμφανίζεται στην πρώτη στήλη της περιοχής μικροεφαρμογής στο υποσέλιδο."
+msgstr ""
+"Αυτή η πλευρική γραμμή εμφανίζεται στην πρώτη στήλη της περιοχής "
+"μικροεφαρμογής στο υποσέλιδο."
 
 #: functions.php:391
 msgid "Footer 2"
@@ -121,7 +126,9 @@ msgstr "Υποσέλιδο 2"
 
 #: functions.php:392
 msgid "This sidebar is the second column of the footer widget area."
-msgstr "Αυτή η πλευρική γραμμή εμφανίζεται στη δεύτερη στήλη της περιοχής μικροεφαρμογής στο υποσέλιδο."
+msgstr ""
+"Αυτή η πλευρική γραμμή εμφανίζεται στη δεύτερη στήλη της περιοχής "
+"μικροεφαρμογής στο υποσέλιδο."
 
 #: functions.php:399
 msgid "Footer 3"
@@ -129,11 +136,15 @@ msgstr "Υποσέλιδο 3"
 
 #: functions.php:400
 msgid "This sidebar is the third column of the footer widget area."
-msgstr "Αυτή η πλευρική γραμμή εμφανίζεται στην τρίτη στήλη της περιοχής μικροεφαρμογής στο υποσέλιδο."
+msgstr ""
+"Αυτή η πλευρική γραμμή εμφανίζεται στην τρίτη στήλη της περιοχής "
+"μικροεφαρμογής στο υποσέλιδο."
 
 #: functions.php:408
 msgid "Hero widgets appear over the header image on the front page."
-msgstr "Οι μικροεφαρμογές Hero εμφανίζονται επάνω από την εικόνα κεφαλίδας στην πρώτη σελίδα."
+msgstr ""
+"Οι μικροεφαρμογές Hero εμφανίζονται επάνω από την εικόνα κεφαλίδας στην "
+"πρώτη σελίδα."
 
 #: header.php:42
 msgid "Skip to content"
@@ -187,7 +198,9 @@ msgstr "Κείμενο επικεφαλίδας"
 
 #: inc/customizer/colors.php:128
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "Τίτλοι άρθρων, τίτλοι μικροεφαρμογών, ετικέτες φορμών, κεφαλίδες πινάκων και κουμπιά."
+msgstr ""
+"Τίτλοι άρθρων, τίτλοι μικροεφαρμογών, ετικέτες φορμών, κεφαλίδες πινάκων και "
+"κουμπιά."
 
 #: inc/customizer/colors.php:149
 msgid "Primary Text"
@@ -203,7 +216,9 @@ msgstr "Δευτερεύον κείμενο"
 
 #: inc/customizer/colors.php:196
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr "Γραμμές συντάκτη άρθρου, πλήθος σχολίων, υποσέλιδα άρθρων και υποσέλιδα ρήσεων."
+msgstr ""
+"Γραμμές συντάκτη άρθρου, πλήθος σχολίων, υποσέλιδα άρθρων και υποσέλιδα "
+"ρήσεων."
 
 #: inc/customizer/colors.php:210
 msgid "Widget Heading Text"
@@ -298,8 +313,11 @@ msgid "Hero Background Overlay"
 msgstr "Επικάλυψη φόντου Hero"
 
 #: inc/customizer/colors.php:1275
-msgid "Control the color overlay transparency when using a custom Header Image."
-msgstr "Ελέγξτε τη διαφάνεια της επικάλυψης φόντου όταν χρησιμοποιείτε μια προσαρμοσμένη εικόνα κεφαλίδας."
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+"Ελέγξτε τη διαφάνεια της επικάλυψης φόντου όταν χρησιμοποιείτε μια "
+"προσαρμοσμένη εικόνα κεφαλίδας."
 
 #: inc/customizer/fonts.php:87
 msgid "Site Title"
@@ -323,7 +341,8 @@ msgstr "Κεφαλίδες"
 
 #: inc/customizer/fonts.php:109
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr "Τίτλοι άρθρων, τίτλοι μικροεφαρμογών, ετικέτες φορμών και κεφαλίδες πινάκων."
+msgstr ""
+"Τίτλοι άρθρων, τίτλοι μικροεφαρμογών, ετικέτες φορμών και κεφαλίδες πινάκων."
 
 #: inc/customizer/fonts.php:124
 msgid "Primary"
@@ -339,7 +358,9 @@ msgstr "Δευτερεύων"
 
 #: inc/customizer/fonts.php:140
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr "Γραμμές συντάκτη, πλήθος σχολίων, σύνδεσμοι απαντήσεων, υποσέλιδα άρθρων και υποσέλιδα ρήσεων."
+msgstr ""
+"Γραμμές συντάκτη, πλήθος σχολίων, σύνδεσμοι απαντήσεων, υποσέλιδα άρθρων και "
+"υποσέλιδα ρήσεων."
 
 #: inc/customizer/fonts.php:188
 msgid "Fonts"
@@ -394,8 +415,11 @@ msgid "Use featured image"
 msgstr "Χρήση επιλεγμένης εικόνας"
 
 #: inc/customizer.php:177
-msgid "Allow the featured image on the current post to override the hero image."
-msgstr "Να επιτρέπεται στην επιλεγμένη εικόνα της τρέχουσας ανάρτησης να υπερσκελίζει την εικόνα hero."
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+"Να επιτρέπεται στην επιλεγμένη εικόνα της τρέχουσας ανάρτησης να "
+"υπερσκελίζει την εικόνα hero."
 
 #: inc/helpers.php:52
 msgid "404 Page Not Found"
@@ -472,8 +496,8 @@ msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Το Primer είναι ένα ισχυρό θέμα που προσθέτει σαφήνεια στο περιεχόμενό σας με "
-"μοντέρνα σχεδίαση."
+"Το Primer είναι ένα ισχυρό θέμα που προσθέτει σαφήνεια στο περιεχόμενό σας "
+"με μοντέρνα σχεδίαση."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
