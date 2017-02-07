@@ -358,7 +358,7 @@ class Primer_Customizer_Layouts {
 							       value="<?php echo esc_attr( $layout ); ?>"
 								   <?php checked( $cur_layout, $layout ); ?>
 								   <?php disabled( 'disabled' === $class ); ?>>
-							<img src="<?php echo esc_url( sprintf( '%s/assets/layouts/%s%s.svg', get_template_directory_uri(), $layout, is_rtl() ? '-rtl' : '' ) ); ?>"
+							<img src="<?php echo esc_url( sprintf( '%s/assets/images/layouts/%s%s.svg', get_template_directory_uri(), $layout, is_rtl() ? '-rtl' : '' ) ); ?>"
 							     alt="<?php echo esc_attr( $label ); ?>"
 							     title="<?php echo esc_attr( $label ); ?>">
 							<span><?php echo esc_html( $label ); ?></span>
