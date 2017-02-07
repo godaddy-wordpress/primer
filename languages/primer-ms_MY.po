@@ -4,17 +4,16 @@ msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
 "POT-Creation-Date: 2017-02-07 22:50:28+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 
 #: 404.php:22 templates/parts/404-woocommerce.php:22
 msgid "Oops! That page can't be found."
@@ -22,10 +21,10 @@ msgstr "Oops! Halaman ini tidak dapat ditemui."
 
 #: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
-"Nampaknya tiada apa yang boleh ditemui di lokasi ini. Sila cuba cari di "
-"bawah:"
+"Nampaknya tiada apa yang boleh ditemui di lokasi ini. Sila cuba cari di bawah:"
 
 #: comments.php:54 comments.php:79
 msgid "Comment navigation"
@@ -60,11 +59,8 @@ msgstr ""
 "kata kunci yang lain."
 
 #: content-none.php:45
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr ""
-"Nampaknya kami tidak dapat temui apa yang anda cari. Mungkin carian boleh "
-"membantu."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Nampaknya kami tidak dapat temui apa yang anda cari. Mungkin carian boleh membantu."
 
 #: functions.php:159
 msgid "Featured"
@@ -104,11 +100,10 @@ msgstr "Palang Sisi Kedua"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
-"Palang sisi kedua hanya akan muncul apabila anda memilih susun atur tiga "
-"lajur."
+"Palang sisi kedua hanya akan muncul apabila anda memilih susun atur tiga lajur."
 
 #: functions.php:383
 msgid "Footer 1"
@@ -143,23 +138,22 @@ msgid "Skip to content"
 msgstr "Langkau ke kandungan"
 
 #: inc/compat/woocommerce.php:391
-#, fuzzy
 msgid "Featured Products"
-msgstr "Pilihan"
+msgstr "Featured Products"
 
 #: inc/compat/woocommerce.php:401
 msgid "On Sale Now"
-msgstr ""
+msgstr "On Sale Now"
 
 #: inc/compat/woocommerce.php:415
 msgid "New In Store"
-msgstr ""
+msgstr "New In Store"
 
 #: inc/compat/woocommerce.php:567
 msgid "%d item"
 msgid_plural "%d items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d item"
+msgstr[1] "%d items"
 
 #: inc/compat/wordpress.php:47
 msgid ""
@@ -302,10 +296,8 @@ msgid "Hero Background Overlay"
 msgstr "Lapisan Latar Belakang Hero"
 
 #: inc/customizer/colors.php:1275
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Kawal warna kelutsinaran lapisan semasa menggunakan Imej Pengepala tersuai."
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Kawal warna kelutsinaran lapisan semasa menggunakan Imej Pengepala tersuai."
 
 #: inc/customizer/fonts.php:87
 msgid "Site Title"
@@ -345,9 +337,7 @@ msgstr "Kedua"
 
 #: inc/customizer/fonts.php:140
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Panji pengarang, bilangan ulasan, pautan balasan, pengaki pos dan pengaki "
-"petikan."
+msgstr "Panji pengarang, bilangan ulasan, pautan balasan, pengaki pos dan pengaki petikan."
 
 #: inc/customizer/fonts.php:188
 msgid "Fonts"
@@ -402,8 +392,7 @@ msgid "Use featured image"
 msgstr "Guna imej dipaparkan"
 
 #: inc/customizer.php:177
-msgid ""
-"Allow the featured image on the current post to override the hero image."
+msgid "Allow the featured image on the current post to override the hero image."
 msgstr "Izinkan imej dipaparkan pada pos semasa mengatasi imej hero."
 
 #: inc/helpers.php:52
@@ -432,16 +421,16 @@ msgstr "Blog"
 
 #: templates/parts/404-woocommerce.php:30
 msgid "Search"
-msgstr ""
+msgstr "Search"
 
 #: templates/parts/404-woocommerce.php:36
 msgid "Promoted Products"
-msgstr ""
+msgstr "Promoted Products"
 
 #: templates/parts/404-woocommerce.php:42
 #: templates/parts/404-woocommerce.php:44
 msgid "Popular Products"
-msgstr ""
+msgstr "Popular Products"
 
 #: templates/parts/loop/page-content.php:27
 #: templates/parts/loop/post-content.php:18

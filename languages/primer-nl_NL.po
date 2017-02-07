@@ -4,17 +4,16 @@ msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
 "POT-Creation-Date: 2017-02-07 22:50:28+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 
 #: 404.php:22 templates/parts/404-woocommerce.php:22
 msgid "Oops! That page can't be found."
@@ -22,7 +21,8 @@ msgstr "Oeps! We kunnen die pagina niet vinden."
 
 #: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
 "Er is helemaal niets gevonden op deze locatie. Probeer hieronder te zoeken:"
 
@@ -59,8 +59,7 @@ msgstr ""
 "opnieuw met andere trefwoorden."
 
 #: content-none.php:45
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "Wij kunnen niet vinden wat je zoekt. Probeer het met een zoekopdracht."
 
 #: functions.php:159
@@ -101,8 +100,8 @@ msgstr "Secundaire zijbalk"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
 "De secundaire zijbalk wordt alleen weergegeven je een indeling met drie "
 "kolommen hebt geselecteerd."
@@ -140,31 +139,30 @@ msgid "Skip to content"
 msgstr "Naar inhoud gaan"
 
 #: inc/compat/woocommerce.php:391
-#, fuzzy
 msgid "Featured Products"
-msgstr "Uitgelicht"
+msgstr "Featured Products"
 
 #: inc/compat/woocommerce.php:401
 msgid "On Sale Now"
-msgstr ""
+msgstr "On Sale Now"
 
 #: inc/compat/woocommerce.php:415
 msgid "New In Store"
-msgstr ""
+msgstr "New In Store"
 
 #: inc/compat/woocommerce.php:567
 msgid "%d item"
 msgid_plural "%d items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d item"
+msgstr[1] "%d items"
 
 #: inc/compat/wordpress.php:47
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Voor Primer is ten minste WordPress-versie %1$s vereist. Je voert versie "
-"%2$s uit. Upgrade en probeer het opnieuw."
+"Voor Primer is ten minste WordPress-versie %1$s vereist. Je voert versie %2$s "
+"uit. Upgrade en probeer het opnieuw."
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -188,8 +186,7 @@ msgstr "Koptekst"
 
 #: inc/customizer/colors.php:128
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Publiceer titels, widgettitels, formulierlabels, tabelkoppen en knoppen."
+msgstr "Publiceer titels, widgettitels, formulierlabels, tabelkoppen en knoppen."
 
 #: inc/customizer/colors.php:149
 msgid "Primary Text"
@@ -205,9 +202,7 @@ msgstr "Secundaire tekst"
 
 #: inc/customizer/colors.php:196
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
-"Publiceer naamregels, opmerkingaantallen, voetteksten bij berichten en "
-"voetteksten bij citaten."
+msgstr "Publiceer naamregels, opmerkingaantallen, voetteksten bij berichten en voetteksten bij citaten."
 
 #: inc/customizer/colors.php:210
 msgid "Widget Heading Text"
@@ -302,11 +297,8 @@ msgid "Hero Background Overlay"
 msgstr "Hero-achtergrondoverlay"
 
 #: inc/customizer/colors.php:1275
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Stel de transparantie van de kleurenoverlay in wanneer je een aangepaste "
-"afbeelding voor de kop gebruikt."
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Stel de transparantie van de kleurenoverlay in wanneer je een aangepaste afbeelding voor de kop gebruikt."
 
 #: inc/customizer/fonts.php:87
 msgid "Site Title"
@@ -346,9 +338,7 @@ msgstr "Secundair"
 
 #: inc/customizer/fonts.php:140
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Naamregels, opmerkingaantallen, antwoordkoppelingen, voetteksten bij "
-"berichten en voetteksten bij citaten."
+msgstr "Naamregels, opmerkingaantallen, antwoordkoppelingen, voetteksten bij berichten en voetteksten bij citaten."
 
 #: inc/customizer/fonts.php:188
 msgid "Fonts"
@@ -403,11 +393,8 @@ msgid "Use featured image"
 msgstr "Uitgelichte afbeelding gebruiken"
 
 #: inc/customizer.php:177
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr ""
-"Sta toe dat de uitgelichte afbeelding van het huidige bericht de hero-"
-"afbeelding vervangt."
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "Sta toe dat de uitgelichte afbeelding van het huidige bericht de hero-afbeelding vervangt."
 
 #: inc/helpers.php:52
 msgid "404 Page Not Found"
@@ -435,16 +422,16 @@ msgstr "Blog"
 
 #: templates/parts/404-woocommerce.php:30
 msgid "Search"
-msgstr ""
+msgstr "Search"
 
 #: templates/parts/404-woocommerce.php:36
 msgid "Promoted Products"
-msgstr ""
+msgstr "Promoted Products"
 
 #: templates/parts/404-woocommerce.php:42
 #: templates/parts/404-woocommerce.php:44
 msgid "Popular Products"
-msgstr ""
+msgstr "Popular Products"
 
 #: templates/parts/loop/page-content.php:27
 #: templates/parts/loop/post-content.php:18
