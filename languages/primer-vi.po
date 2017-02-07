@@ -1,74 +1,70 @@
-# Copyright (c) 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
+# Copyright (c) 2017 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-01-09 23:11:17+00:00\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2017-01-09 23:11:28+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 
 #: 404.php:22
 msgid "Oops! That page can't be found."
-msgstr "Ups! Diese Seite kann nicht gefunden werden."
+msgstr "Rất tiếc! Không thể tìm được trang đó."
 
 #: 404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
-"Es sieht so aus, als ob an dieser Stelle nichts gefunden wurde. Versuchen "
-"Sie im Folgenden zu suchen:"
+"Có vẻ như không tìm thấy thông tin gì tại địa điểm này. Hãy thử tìm kiếm bên dưới:"
 
 #: comments.php:54 comments.php:79
 msgid "Comment navigation"
-msgstr "Kommentar-Navigation"
+msgstr "Điều hướng nhận xét"
 
 #: comments.php:81
 msgid "&larr; Older Comments"
-msgstr "&larr; ältere Kommentare"
+msgstr "&larr; Nhận xét trước đó"
 
 #: comments.php:83
 msgid "Newer Comments &rarr;"
-msgstr "Letzte Kommentare &rarr;"
+msgstr "Nhận xét gần đây&rarr;"
 
 #: comments.php:93
 msgid "Comments are closed."
-msgstr "Die Kommentierung wurde beendet."
+msgstr "Đã đóng nhận xét."
 
 #: content-none.php:16
 msgid "Nothing Found"
-msgstr "Nichts gefunden"
+msgstr "Không tìm thấy gì"
 
 #: content-none.php:31
 msgid "Get started here"
-msgstr "Hier geht‘s los"
+msgstr "Bắt đầu tại đây"
 
 #: content-none.php:39
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Es tut uns leid, aber es wurden keine Ergebnisse zu Ihren Suchbegriffen "
-"gefunden. Bitte versuchen Sie es erneut mit einem anderen Suchbegriffen."
+"Rất tiếc nhưng không có nội dung nào khớp với từ khóa tìm kiếm của bạn. Vui "
+"lòng thử lại với một vài từ khóa khác."
 
 #: content-none.php:45
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr ""
-"Das, was Sie suchen, scheinen wir nicht finden können. Vielleicht kann eine "
-"Suchabfrage helfen."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Có vẻ như chúng tôi không thể tìm được nội dung bạn cần tìm. Có lẽ bạn nên thử tìm kiếm xem."
 
 #: functions.php:159
 msgid "Featured"
-msgstr "Empfohlen"
+msgstr "Nổi bật"
 
 #: functions.php:165 functions.php:407
 msgid "Hero"
@@ -76,344 +72,329 @@ msgstr "Hero"
 
 #: functions.php:246
 msgid "Primary Menu"
-msgstr "Primäres Menü"
+msgstr "Menu chính"
 
 #: functions.php:247
 msgid "Social Menu"
-msgstr "Social-Menü"
+msgstr "Menu xã hội"
 
 #: functions.php:248
 msgid "Footer Menu"
-msgstr "Footer-Menü"
+msgstr "Menu chân trang"
 
 #: functions.php:367
 msgid "Sidebar"
-msgstr "Seitenleiste"
+msgstr "Thanh bên"
 
 #: functions.php:368
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr ""
-"Die primäre Seitenleiste erscheint neben dem Inhalt jeder Seite, Post, "
-"Archiv und Suchvorlage."
+"Thanh bên chính sẽ xuất hiện cùng với nội dung của mỗi trang, bài đăng, mục "
+"lưu trữ và mẫu tìm kiếm."
 
 #: functions.php:375
 msgid "Secondary Sidebar"
-msgstr "Sekundäre Seitenleiste"
+msgstr "Thanh bên phụ"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
-msgstr ""
-"Die sekundäre Seitenleiste erscheint nur, wenn sie ein dreispaltiges Layout "
-"gewählt haben."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
+msgstr "Thanh bên phụ sẽ chỉ xuất hiện khi bạn chọn bố cục ba cột."
 
 #: functions.php:383
 msgid "Footer 1"
-msgstr "Footer 1"
+msgstr "Chân trang 1"
 
 #: functions.php:384
 msgid "This sidebar is the first column of the footer widget area."
-msgstr "Diese Seitenleiste ist die erste Spalte des Footer-Widget-Bereichs."
+msgstr "Thanh bên này sẽ là cột đầu tiên trong khu vực widget chân trang."
 
 #: functions.php:391
 msgid "Footer 2"
-msgstr "Footer 2"
+msgstr "Chân trang 2"
 
 #: functions.php:392
 msgid "This sidebar is the second column of the footer widget area."
-msgstr "Diese Seitenleiste ist die zweite Spalte des Footer-Widget-Bereichs."
+msgstr "Thanh bên này sẽ là cột thứ hai trong khu vực widget chân trang."
 
 #: functions.php:399
 msgid "Footer 3"
-msgstr "Footer 3"
+msgstr "Chân trang 3"
 
 #: functions.php:400
 msgid "This sidebar is the third column of the footer widget area."
-msgstr "Diese Seitenleiste ist die dritte Spalte des Footer-Widget-Bereichs."
+msgstr "Thanh bên này sẽ là cột thứ ba trong khu vực widget chân trang."
 
 #: functions.php:408
 msgid "Hero widgets appear over the header image on the front page."
-msgstr ""
-"Hero-Widgets werden über dem Header-Bild auf der ersten Seite angezeigt."
+msgstr "Widget xuất hiện phía trên ảnh tiêu đề trên trang chủ."
 
 #: header.php:42
 msgid "Skip to content"
-msgstr "Zum Inhalt springen"
+msgstr "Chuyển tới phần nội dung"
 
 #: inc/compat/wordpress.php:47
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Für Primer benötigen Sie WordPress Version %1$s oder höher. Sie führen "
-"Version %2$s aus. Bitte führen Sie ein Upgrade durch und versuchen Sie es "
-"erneut."
+"Primer yêu cầu tối thiểu WordPress phiên bản %1$s. Bạn đang chạy phiên bản "
+"%2$s. Vui lòng nâng cấp và thử lại."
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
-msgstr "Site-Titeltext"
+msgstr "Nội dung tiêu đề trang"
 
 #: inc/customizer/colors.php:63
 msgid "Tagline Text"
-msgstr "Slogan-Text"
+msgstr "Nội dung câu khẩu hiệu"
 
 #: inc/customizer/colors.php:74
 msgid "Hero Text"
-msgstr "Hero-Text"
+msgstr "Nội dung Hero"
 
 #: inc/customizer/colors.php:105 inc/customizer/colors.php:323
 msgid "Text"
-msgstr "Textfeld"
+msgstr "Văn bản"
 
 #: inc/customizer/colors.php:127
 msgid "Heading Text"
-msgstr "Überschrifttext"
+msgstr "Nội dung đầu trang"
 
 #: inc/customizer/colors.php:128
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Posttitel, Widget-Titel, Formularbeschriftungen, Tabellenüberschriften und "
-"Schaltflächen."
+msgstr "Tiêu đề bài đăng, tiêu đề widget, nhãn mẫu, tiêu đề bảng và nút."
 
 #: inc/customizer/colors.php:149
 msgid "Primary Text"
-msgstr "Primärer Text"
+msgstr "Nội dung chính"
 
 #: inc/customizer/colors.php:150
 msgid "Paragraphs, lists, menu links, quotes and tables."
-msgstr "Paragraphen, Listen, Menülinks, Zitate und Tabellen."
+msgstr "Đoạn văn, danh sách, các liên kết menu, câu trích dẫn và bảng biểu."
 
 #: inc/customizer/colors.php:195
 msgid "Secondary Text"
-msgstr "Sekundärer Text"
+msgstr "Nội dung phụ"
 
 #: inc/customizer/colors.php:196
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
-"Verfasserzeilen von Posts, Kommentarzähler, Post-Footer und Zitat-Footer."
+msgstr "Dòng ghi tên tác giả bài đăng, số lượng nhận xét, chân trang bài đăng và chân trang trích dẫn."
 
 #: inc/customizer/colors.php:210
 msgid "Widget Heading Text"
-msgstr "Widget-Überschrifttext"
+msgstr "Nội dung đầu trang widget"
 
 #: inc/customizer/colors.php:227
 msgid "Widget Text"
-msgstr "Widget-Text"
+msgstr "Nội dung widget"
 
 #: inc/customizer/colors.php:239
 msgid "Menu Text"
-msgstr "Menütext"
+msgstr "Nội dung menu"
 
 #: inc/customizer/colors.php:261
 msgid "Copyright Text"
-msgstr "Copyright-Text"
+msgstr "Nội dung Bản quyền"
 
 #: inc/customizer/colors.php:275
 msgid "Link Text"
-msgstr "Linktext"
+msgstr "Nội dung liên kết"
 
 #: inc/customizer/colors.php:297 inc/customizer/colors.php:379
 msgid "Background"
-msgstr "Hintergrund"
+msgstr "Nền"
 
 #: inc/customizer/colors.php:340
 msgid "Page Background"
-msgstr "Seitenhintergrund"
+msgstr "Nền trang"
 
 #: inc/customizer/colors.php:350
 msgid "Content Background"
-msgstr "Hintergrund für Inhalt"
+msgstr "Nền nội dung"
 
 #: inc/customizer/colors.php:360
 msgid "Hero Background"
-msgstr "Hero-Hintergrund"
+msgstr "Nền Hero"
 
 #: inc/customizer/colors.php:389
 msgid "Widgets Background"
-msgstr "Hintergrund für Widgets"
+msgstr "Nền widget"
 
 #: inc/customizer/colors.php:400
 msgid "Widget Content Background"
-msgstr "Widget-Hintergrund für Inhalt"
+msgstr "Nền nội dung widget"
 
 #: inc/customizer/colors.php:411
 msgid "Footer Background"
-msgstr "Footer-Hintergrund"
+msgstr "Nền chân trang"
 
 #: inc/customizer/colors.php:449 inc/customizer/layouts.php:302
 msgid "Custom"
-msgstr "Benutzerdefiniert"
+msgstr "Tùy chỉnh"
 
 #: inc/customizer/colors.php:466 inc/customizer/layouts.php:293
 msgid "Default"
-msgstr "Standard"
+msgstr "Mặc định"
 
 #: inc/customizer/colors.php:706
 msgid "Colors"
-msgstr "Farben"
+msgstr "Màu sắc"
 
 #: inc/customizer/colors.php:715
 msgid "Color Schemes"
-msgstr "Farbschema"
+msgstr "Bảng màu"
 
 #: inc/customizer/colors.php:723
 msgid "Header"
-msgstr "Kopfzeile"
+msgstr "Đầu trang"
 
 #: inc/customizer/colors.php:731
 msgid "Menu"
-msgstr "Menü"
+msgstr "Danh mục"
 
 #: inc/customizer/colors.php:739
 msgid "Buttons"
-msgstr "Schaltflächen"
+msgstr "Nút"
 
 #: inc/customizer/colors.php:747
 msgid "Content"
-msgstr "Inhalt"
+msgstr "Nội dung"
 
 #: inc/customizer/colors.php:755
 msgid "Footer"
-msgstr "Fußzeile"
+msgstr "Chân trang"
 
 #: inc/customizer/colors.php:965
 msgid "Base Color Scheme"
-msgstr "Basisfarbschema"
+msgstr "Sơ đồ màu cơ bản"
 
 #: inc/customizer/colors.php:1274
 msgid "Hero Background Overlay"
-msgstr "Hero-Hintergrund Überlagerung"
+msgstr "Lớp phủ nền hero"
 
 #: inc/customizer/colors.php:1275
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Steuert die Transparenz der Farbüberlagerung bei Verwendung eines "
-"benutzerdefinierten Header-Bilds."
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Kiểm soát độ trong suốt của lớp phủ màu khi sử dụng ảnh tiêu đề tùy chỉnh."
 
 #: inc/customizer/fonts.php:87
 msgid "Site Title"
-msgstr "Site-Titel"
+msgstr "Tiêu đề trang"
 
 #: inc/customizer/fonts.php:88
 msgid "Site title text in the header."
-msgstr "Titeltext der Site im Header."
+msgstr "Nội dung tiêu đề trang trong phần đầu trang."
 
 #: inc/customizer/fonts.php:97
 msgid "Navigation"
-msgstr "Navigation"
+msgstr "Điều hướng"
 
 #: inc/customizer/fonts.php:98
 msgid "Primary menu links and button links."
-msgstr "Hauptmenülinks und Schaltflächenlinks"
+msgstr "Các liên kết menu và nút chính."
 
 #: inc/customizer/fonts.php:108
 msgid "Headings"
-msgstr "Überschriften"
+msgstr "Đề mục"
 
 #: inc/customizer/fonts.php:109
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr ""
-"Posttitel, Widget-Titel, Formularbeschriftungen und Tabellenüberschriften."
+msgstr "Tiêu đề bài đăng, tiêu đề widget, nhãn mẫu và tiêu đề bảng."
 
 #: inc/customizer/fonts.php:124
 msgid "Primary"
-msgstr "Primär"
+msgstr "Chính"
 
 #: inc/customizer/fonts.php:125
 msgid "Paragraphs, lists, links, quotes, and tables."
-msgstr "Paragraphen, Listen, Links, Zitate und Tabellen."
+msgstr "Đoạn văn, danh sách, liên kết, câu trích dẫn và bảng biểu."
 
 #: inc/customizer/fonts.php:139
 msgid "Secondary"
-msgstr "Neben"
+msgstr "Phụ"
 
 #: inc/customizer/fonts.php:140
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Verfasserzeilen, Kommentarzähler, Antwort-Links, Post-Footer und Zitat-"
-"Footer."
+msgstr "Dòng ghi tên tác giả, số lượng nhận xét, liên kết trả lời, chân trang bài đăng và chân trang trích dẫn."
 
 #: inc/customizer/fonts.php:188
 msgid "Fonts"
-msgstr "Schriftarten"
+msgstr "Phông chữ"
 
 #: inc/customizer/layouts.php:53
 msgid "One Column: Wide"
-msgstr "1 Spalte: Breit"
+msgstr "Một cột: Rộng"
 
 #: inc/customizer/layouts.php:54
 msgid "One Column: Narrow"
-msgstr "1 Spalte: Eng"
+msgstr "Một cột: Hẹp"
 
 #: inc/customizer/layouts.php:55 inc/customizer/layouts.php:144
 msgid "Two Columns: Content | Sidebar"
-msgstr "2 Spalten: Inhalt | Seitenleiste"
+msgstr "Hai cột: Nội dung | Thanh bên"
 
 #: inc/customizer/layouts.php:56 inc/customizer/layouts.php:143
 msgid "Two Columns: Sidebar | Content"
-msgstr "2 Spalten: Seitenleiste | Inhalt"
+msgstr "Hai cột: Thanh bên | Nội dung"
 
 #: inc/customizer/layouts.php:57 inc/customizer/layouts.php:146
 msgid "Three Columns: Content | Sidebar | Sidebar"
-msgstr "3 Spalten: Inhalt | Seitenleiste | Seitenleiste"
+msgstr "Ba cột: Nội dung | Thanh bên | Thanh bên"
 
 #: inc/customizer/layouts.php:58
 msgid "Three Columns: Sidebar | Content | Sidebar"
-msgstr "3 Spalten: Seitenleiste | Inhalt | Seitenleiste"
+msgstr "Ba cột: Thanh bên | Nội dung | Thanh bên"
 
 #: inc/customizer/layouts.php:59 inc/customizer/layouts.php:145
 msgid "Three Columns: Sidebar | Sidebar | Content"
-msgstr "3 Spalten: Seitenleiste | Seitenleiste | Inhalt"
+msgstr "Ba cột: Thanh bên | Thanh bên | Nội dung"
 
 #: inc/customizer/layouts.php:256 inc/customizer/layouts.php:434
 msgid "Layout"
-msgstr "Layout"
+msgstr "Bố cục"
 
 #: inc/customizer/layouts.php:460
 msgid "Page Width"
-msgstr "Seitenbreite"
+msgstr "Chiều rộng trang"
 
 #: inc/customizer/layouts.php:461
 msgid "Display your site differently on larger screens."
-msgstr "Zeigt Ihre Website auf größeren Bildschirmen anders an."
+msgstr "Hiển thị trang của bạn theo các cách khác nhau trên màn hình lớn hơn"
 
 #: inc/customizer/site-identity.php:72
 msgid "Display theme author credit"
-msgstr ""
+msgstr "Hiển thị tên tuổi tác giả của giao diện"
 
 #: inc/customizer.php:176
 msgid "Use featured image"
-msgstr "Bild im Fokus verwenden"
+msgstr "Sử dụng hình ảnh nổi bật"
 
 #: inc/customizer.php:177
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr ""
-"Das Bild im Fokus in diesem aktuellen Post darf das Hero-Bild überschreiben."
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "Cho phép hình ảnh nổi bật xuất hiện trong bài đăng hiện tại để ghi đè lên ảnh hero."
 
 #: inc/helpers.php:52
 msgid "404 Page Not Found"
-msgstr "404 Seite nicht gefunden"
+msgstr "404 Không tìm thấy trang"
 
 #: inc/template-tags.php:133
 msgid "Posts navigation"
-msgstr "Kommentar-Navigation"
+msgstr "Điều hướng bài đăng"
 
 #: inc/template-tags.php:139
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> ältere Kommentare"
+msgstr "<span class=\"meta-nav\">&larr;</span> Bài đăng trước đó"
 
 #: inc/template-tags.php:145
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Letzte Kommentare <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Bài đăng gần đây <span class=\"meta-nav\">&rarr;</span>"
 
 #: inc/template-tags.php:178
 msgid "Post navigation"
-msgstr "Kommentar-Navigation"
+msgstr "Điều hướng bài đăng"
 
 #: inc/template-tags.php:279
 msgid "Blog"
@@ -422,27 +403,27 @@ msgstr "Blog"
 #: templates/parts/loop/page-content.php:27
 #: templates/parts/loop/post-content.php:18
 msgid "Pages:"
-msgstr "Seiten:"
+msgstr "Trang:"
 
 #: templates/parts/loop/page-footer.php:9
 #: templates/parts/loop/post-footer.php:14
 #: templates/parts/loop/post-search-footer.php:46
 msgid "Edit"
-msgstr "Bearbeiten"
+msgstr "Sửa"
 
 #: templates/parts/loop/post-content.php:14
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Weiterlesen <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Đọc thêm <span class=\"meta-nav\">&rarr;</span>"
 
 #: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgid "Leave a comment"
-msgstr "Kommentar hinterlassen"
+msgstr "Đưa ra nhận xét"
 
 #: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgid "1 Comment"
-msgstr "1 Kommentar"
+msgstr "1 nhận xét"
 
 #. Theme Name of the plugin/theme
 msgid "Primer"
@@ -457,8 +438,8 @@ msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer ist ein leistungsstarkes WordPress-Theme, mit dem Sie Ihre Inhalte "
-"übersichtlich gestalten und ihnen ein frisches Design verpassen können."
+"Primer là một giao diện mạnh mẽ sẽ mang lại tính rõ ràng cho nội dung của bạn "
+"trong một thiết kế tươi mới."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
@@ -472,119 +453,118 @@ msgstr "https://www.godaddy.com/"
 msgctxt "1. number of comments, 2. post title"
 msgid "One thought on %2$s"
 msgid_plural "%1$d thoughts on %2$s"
-msgstr[0] "Ein Gedanke zu %2$s"
-msgstr[1] "%1$d Gedanken zu %2$s"
+msgstr[0] "Một nhận xét về %2$s"
+msgstr[1] "%1$d nhận xét về %2$s"
 
 #: comments.php:56
 msgctxt "left arrow (LTR) / right arrow (RTL)"
 msgid "%s Older Comments"
-msgstr "%s ältere Kommentare"
+msgstr "%s Nhận xét trước đó"
 
 #: comments.php:58
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Newer Comments %s"
-msgstr "Letzte Kommentare %s"
+msgstr "Nhận xét gần đây %s"
 
 #: templates/parts/loop/post-excerpt.php:14
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Continue Reading %s"
-msgstr "Weiterlesen %s"
+msgstr "Tiếp tục đọc %s"
 
 #: content-none.php:27
 msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
-msgstr "Bereit Ihren ersten Post zu veröffentlichen? %s."
+msgstr "Đã sẵn sàng đăng tải bài đăng đầu tiên của bạn? %s."
 
 #: inc/customizer/colors.php:476
 msgctxt "color scheme name"
 msgid "Blush"
-msgstr "Rötlich"
+msgstr "Màu phớt hồng"
 
 #: inc/customizer/colors.php:480
 msgctxt "color scheme name"
 msgid "Bronze"
-msgstr "Bronze"
+msgstr "Màu đồng"
 
 #: inc/customizer/colors.php:484
 msgctxt "color scheme name"
 msgid "Canary"
-msgstr "Kanariengelb"
+msgstr "Màu vàng chim hoàng yến"
 
 #: inc/customizer/colors.php:488
 msgctxt "color scheme name"
 msgid "Cool"
-msgstr "Cool"
+msgstr "Thú vị"
 
 #: inc/customizer/colors.php:492
 msgctxt "color scheme name"
 msgid "Dark"
-msgstr "Dunkel"
+msgstr "Màu tối"
 
 #: inc/customizer/colors.php:496
 msgctxt "color scheme name"
 msgid "Iguana"
-msgstr "Leguangrün"
+msgstr "Màu xanh Iguana"
 
 #: inc/customizer/colors.php:500
 msgctxt "color scheme name"
 msgid "Muted"
-msgstr "Gedeckt"
+msgstr "Màu nhạt"
 
 #: inc/customizer/colors.php:504
 msgctxt "color scheme name"
 msgid "Plum"
-msgstr "Pflaume"
+msgstr "Mận chín"
 
 #: inc/customizer/colors.php:508
 msgctxt "color scheme name"
 msgid "Rose"
-msgstr "Rose"
+msgstr "Màu hồng"
 
 #: inc/customizer/colors.php:512
 msgctxt "color scheme name"
 msgid "Tangerine"
-msgstr "Mandarine"
+msgstr "Màu hồng cam"
 
 #: inc/customizer/colors.php:516
 msgctxt "color scheme name"
 msgid "Turquoise"
-msgstr "Türkis"
+msgstr "Ngọc lam"
 
 #: inc/customizer/fonts.php:213
 msgctxt "font name"
 msgid "%s (Default)"
-msgstr "%s (Standard)"
+msgstr "%s (Mặc định)"
 
 #: inc/customizer/layouts.php:97
 msgctxt "fixed-width page layout"
 msgid "Fixed"
-msgstr "Fest"
+msgstr "Cố định"
 
 #: inc/customizer/layouts.php:98
 msgctxt "fluid-width page layout"
 msgid "Fluid"
-msgstr "Fließend"
+msgstr "Bố cục lưu động"
 
 #: inc/helpers.php:41
 msgctxt "search term"
 msgid "Search Results for: %s"
-msgstr "Suchergebnisse für: %s"
+msgstr "Kết quả tìm kiếm của: %s"
 
 #: inc/hooks.php:384
 msgctxt "page number"
 msgid "Page %d"
-msgstr "Seite %d"
+msgstr "Trang %d"
 
 #: templates/parts/credit.php:14
 msgctxt "1. copyright symbol, 2. year, 3. site title"
 msgid "Copyright %1$s %2$d %3$s"
-msgstr "Copyright %1$s %2$d %3$s"
+msgstr "Bản quyền %1$s %2$d %3$s"
 
 #: templates/parts/credit.php:34
-#, fuzzy
 msgctxt "1. theme name link, 2. theme author link"
 msgid "%1$s WordPress theme by %2$s"
-msgstr "%1$s-Thema von %2$s"
+msgstr "%1$s Giao diện WordPress bởi %2$s"
 
 #: templates/parts/loop/post-footer.php:20
 #: templates/parts/loop/post-footer.php:32
@@ -598,16 +578,16 @@ msgstr ", "
 #: templates/parts/loop/post-search-footer.php:20
 msgctxt "category list"
 msgid "Posted in: %s"
-msgstr "Geposted in:  %s"
+msgstr "Được đăng trong: %s"
 
 #: templates/parts/loop/post-footer.php:38
 #: templates/parts/loop/post-search-footer.php:32
 msgctxt "tag list"
 msgid "Filed under: %s"
-msgstr "Abgelegt in: %s"
+msgstr "Được sắp xếp bên dưới: %s"
 
 #: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgctxt "number of comments"
 msgid "% Comments"
-msgstr "% Kommentare"
+msgstr "% nhận xét"
