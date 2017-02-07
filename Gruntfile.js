@@ -2,9 +2,11 @@
 
 module.exports = function( grunt ) {
 
+	'use strict';
+
 	var pkg = grunt.file.readJSON( 'package.json' );
 
-	grunt.initConfig({
+	grunt.initConfig( {
 
 		pkg: pkg,
 
@@ -21,101 +23,113 @@ module.exports = function( grunt ) {
 				],
 				cascade: false
 			},
-			dist: {
-				src: [ '*.css', 'assets/css/**/*.css' ]
+			editor: {
+				src: [ 'editor-style.css' ]
+			},
+			main: {
+				src: [ 'style.css' ]
 			}
 		},
 
 		clean: {
-			mo: {
-				src: [ 'languages/' + pkg.name + '-*.mo' ]
-			}
+			options: {
+				force: true
+			},
+			build: [ 'build/*' ]
 		},
 
 		copy: {
-			mo: {
-				files: [
-					{
-						expand: true,
-						dot: true,
-						cwd: 'languages/',
-						dest: 'languages/',
-						src: [ pkg.name + '-*.mo' ],
-						rename: function( dest, src ) {
-							return dest + src.replace( pkg.name + '-', '' );
-						}
-					}
-				]
+			build: {
+				expand: true,
+				cwd: '.',
+				src: [
+					'*.css',
+					'*.php',
+					'*.txt',
+					'screenshot.png',
+					'assets/**',
+					'inc/**',
+					'languages/**/*.{mo,pot}',
+					'templates/**'
+				],
+				dest: 'build/'
 			}
 		},
 
 		cssjanus: {
-			theme: {
-				options: {
-					swapLtrRtlInUrl: false
-				},
-				files: [
-					{
-						src: 'style.css',
-						dest: 'style-rtl.css'
-					},
-					{
-						src: 'editor-style.css',
-						dest: 'editor-style-rtl.css'
-					},
-					{
-						expand: true,
-						cwd: 'assets/css/admin',
-						src: [ '*.css','!*-rtl.css','!*.min.css','!*-rtl.min.css' ],
-						dest: 'assets/css/admin',
-						ext: '-rtl.css'
-					}
-				]
+			options: {
+				swapLtrRtlInUrl: false
+			},
+			assets: {
+				expand: true,
+				cwd: 'assets/css/',
+				src: [ '**/*.css', '!**/*rtl.css', '!**/*min.css' ],
+				dest: 'assets/css/',
+				ext: '-rtl.css'
+			},
+			editor: {
+				files: {
+					'editor-style-rtl.css': 'editor-style.css'
+				}
+			},
+			main: {
+				files: {
+					'style-rtl.css': 'style.css'
+				}
 			}
 		},
 
 		cssmin: {
 			options: {
-				shorthandCompacting: false,
+				processImport: false,
 				roundingPrecision: 5,
-				processImport: false
+				shorthandCompacting: false
 			},
-			dist: {
-				files: [{
-					expand: true,
-					cwd: 'assets/css',
-					src: [ '*.css', '!*.min.css' ],
-					dest: 'assets/css',
-					ext: '.min.css'
-				},
-				{
-					expand: true,
-					cwd: 'assets/css/admin',
-					src: [ '*.css', '!*.min.css' ],
-					dest: 'assets/css/admin',
-					ext: '.min.css'
-				}]
+			assets: {
+				expand: true,
+				cwd: 'assets/css/',
+				src: [ '**/*.css', '!**/*.min.css' ],
+				dest: 'assets/css/',
+				ext: '.min.css'
 			}
 		},
 
 		devUpdate: {
-			main: {
+			packages: {
 				options: {
-					updateType: 'force', //just report outdated packages
-					reportUpdated: false, //don't report up-to-date packages
-					semver: true, //stay within semver when updating
+					packageJson: null,
 					packages: {
-						devDependencies: true, //only check for devDependencies
+						devDependencies: true,
 						dependencies: false
 					},
-					packageJson: null, //use matchdep default findup to locate package.json
-					reportOnlyPkgs: [] //use updateType action on all packages
+					reportOnlyPkgs: [],
+					reportUpdated: false,
+					semver: true,
+					updateType: 'force'
+				}
+			}
+		},
+
+		imagemin: {
+			options: {
+				optimizationLevel: 3
+			},
+			assets: {
+				expand: true,
+				cwd: 'assets/images/',
+				src: [ '**/*.{gif,jpeg,jpg,png,svg}' ],
+				dest: 'assets/images/'
+			},
+			screenshot: {
+				files: {
+					'screenshot.png': 'screenshot.png'
 				}
 			}
 		},
 
 		jshint: {
-			all: [ 'Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js', '!assets/js/jquery.backgroundSize.js' ]
+			assets: [ 'assets/js/**/*.js', '!assets/js/**/*.min.js' ],
+			gruntfile: [ 'Gruntfile.js' ]
 		},
 
 		makepot: {
@@ -138,10 +152,53 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		po2mo: {
+		potomo: {
 			files: {
-				src: 'languages/*.po',
-				expand: true
+				expand: true,
+				cwd: 'languages/',
+				src: [ '*.po' ],
+				dest: 'languages/',
+				ext: '.mo',
+				rename: function( dest, src ) {
+					return dest + src.replace( pkg.name + '-', '' );
+				}
+			}
+		},
+
+		replace: {
+			php: {
+				overwrite: true,
+				replacements: [
+					{
+						from: /@since(\s+)NEXT/g,
+						to: '@since$1<%= pkg.version %>'
+					},
+					{
+						from: /'PRIMER_VERSION',(\s*)'[\w.+-]+'/,
+						to: "'PRIMER_VERSION',$1'<%= pkg.version %>'"
+					}
+				],
+				src: [ '*.php', 'inc/**/*.php', 'templates/**/*.php' ]
+			},
+			readme: {
+				overwrite: true,
+				replacements: [
+					{
+						from: /Stable tag:(\s*)[\w.+-]+/,
+						to: 'Stable tag:$1<%= pkg.version %>'
+					}
+				],
+				src: [ 'readme.txt' ]
+			},
+			sass: {
+				overwrite: true,
+				replacements: [
+					{
+						from: /Version:(\s*)[\w.+-]+/,
+						to: 'Version:$1<%= pkg.version %>'
+					}
+				],
+				src: [ '.dev/sass/**/*.scss' ]
 			}
 		},
 
@@ -150,20 +207,21 @@ module.exports = function( grunt ) {
 				precision: 5,
 				sourceMap: false
 			},
-			dist: {
-				files: [
-					{
-						'style.css': '.dev/sass/style.scss',
-						'editor-style.css': '.dev/sass/editor-style.scss'
-					},
-					{
-						expand: true,
-						cwd: '.dev/sass/admin',
-						src: ['*.scss'],
-						dest: 'assets/css/admin',
-						ext: '.css'
-					}
-				]
+			assets: {
+				expand: true,
+				cwd: '.dev/sass/assets/',
+				src: [ '**/*.scss' ],
+				dest: 'assets/css/'
+			},
+			editor: {
+				files: {
+					'editor-style.css': '.dev/sass/editor-style.scss'
+				}
+			},
+			main: {
+				files: {
+					'style.css': '.dev/sass/style.scss'
+				}
 			}
 		},
 
@@ -171,78 +229,82 @@ module.exports = function( grunt ) {
 			options: {
 				ASCIIOnly: true
 			},
-			dist: {
+			assets: {
 				expand: true,
-				cwd: 'assets/js',
-				src: ['*.js', '!*.min.js'],
-				dest: 'assets/js',
-				ext: '.min.js'
-			},
-			admin: {
-				expand: true,
-				cwd: 'assets/js/admin',
-				src: ['*.js', '!*.min.js'],
-				dest: 'assets/js/admin',
+				cwd: 'assets/js/',
+				src: [ '**/*.js', '!**/*.min.js' ],
+				dest: 'assets/js/',
 				ext: '.min.js'
 			}
 		},
 
 		watch: {
-			css: {
-				files: '.dev/sass/**/*.scss',
-				tasks: [ 'sass','autoprefixer','cssjanus' ]
+			images: {
+				files: 'assets/images/**/*.{gif,jpeg,jpg,png,svg}',
+				tasks: [ 'imagemin' ]
 			},
-			scripts: {
-				files: [ 'Gruntfile.js', 'assets/js/**/*.js', '!assets/js/**/*.min.js' ],
-				tasks: [ 'jshint', 'uglify' ],
-				options: {
-					interrupt: true
-				}
+			js: {
+				files: 'assets/js/**/*.js',
+				tasks: [ 'jshint', 'uglify' ]
+			},
+			sass: {
+				files: '.dev/sass/**/*.scss',
+				tasks: [ 'sass', 'autoprefixer', 'cssjanus', 'cssmin' ]
 			}
 		},
 
-		replace: {
-			version_php: {
-				src: [
-					'**/*.php',
-					'.dev/**/*.scss'
-				],
-				overwrite: true,
-				replacements: [ {
-					from: /Version:(\s*?)[a-zA-Z0-9\.\-\+]+$/m,
-					to: 'Version:$1' + pkg.version
-				}, {
-					from: /@version(\s*?)[a-zA-Z0-9\.\-\+]+$/m,
-					to: '@version$1' + pkg.version
-				}, {
-					from: /@since(.*?)NEXT/mg,
-					to: '@since$1' + pkg.version
-				}, {
-					from: /VERSION(\s*?)=(\s*?['"])[a-zA-Z0-9\.\-\+]+/mg,
-					to: 'VERSION$1=$2' + pkg.version
-				}, {
-					from: /'PRIMER_VERSION', '[a-zA-Z0-9\.\-\+]+'/mg,
-					to: '\'PRIMER_VERSION\', \'' + pkg.version + '\''
-				}]
+		wp_readme_to_markdown: {
+			options: {
+				post_convert: function( readme ) {
+					var badges = {
+						grunt: '[![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](https://gruntjs.com)',
+						david_dev: '[![devDependency Status](https://david-dm.org/' + pkg.repository + '/dev-status.svg)](https://david-dm.org/' + pkg.repository + '?type=dev)',
+						php: '[![Required PHP Version](https://img.shields.io/badge/php-' + pkg.engines.php + '-8892bf.svg)](https://secure.php.net/supported-versions.php)',
+						locales: '[![Supported Locales](https://img.shields.io/badge/locales-' + pkg.locales.length + '-orange.svg)]()',
+						wordpress: '[![Required WordPress Version](https://img.shields.io/badge/wordpress-' + pkg.engines.wordpress + '-0073aa.svg)](https://wordpress.org/download/release-archive/)',
+						travis: '[![Build Status](https://travis-ci.org/' + pkg.repository + '.svg?branch=master)](https://travis-ci.org/' + pkg.repository + ')',
+						coveralls: '[![Coverage Status](https://coveralls.io/repos/' + pkg.repository + '/badge.svg?branch=master)](https://coveralls.io/github/' + pkg.repository + ')',
+						license: '[![License](https://img.shields.io/github/license/' + pkg.repository + '.svg)](https://github.com/' + pkg.repository + '/blob/master/license.txt)'
+					};
+
+					// Required
+					readme = readme.replace( '## Description ##', badges.grunt + "  \n\n## Description ##" );
+					readme = addBadge( readme, badges.david_dev );
+
+					// Extras
+					readme = ( pkg.engines.php )                   ? addBadge( readme, badges.php )       : readme;
+					readme = ( pkg.engines.wordpress )             ? addBadge( readme, badges.wordpress ) : readme;
+					readme = ( pkg.locales.length > 0 )            ? addBadge( readme, badges.locales )   : readme;
+					readme = grunt.file.exists( '.travis.yml' )    ? addBadge( readme, badges.travis )    : readme;
+					readme = grunt.file.exists( '.coveralls.yml' ) ? addBadge( readme, badges.coveralls ) : readme;
+					readme = grunt.file.exists( 'license.txt' )    ? addBadge( readme, badges.license )   : readme;
+
+					return readme;
+				}
 			},
-			version_readme: {
-				src: 'readme.*',
-				overwrite: true,
-				replacements: [ {
-					from: /^(\*\*|)Stable tag:(\*\*|)(\s*?)[a-zA-Z0-9.-]+(\s*?)$/mi,
-					to: '$1Stable tag:$2$3<%= pkg.version %>$4'
-				} ]
+			all: {
+				files: {
+					'readme.md': 'readme.txt'
+				}
 			}
 		}
 
-	});
+	} );
+
+	function addBadge( readme, badge ) {
+
+		return readme.replace( " \n\n## Description ##", badge + "  \n\n## Description ##" );
+
+	}
 
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify' ] );
-	grunt.registerTask( 'lint', [ 'jshint' ] );
+	grunt.registerTask( 'default',    [ 'sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify', 'imagemin' ] );
+	grunt.registerTask( 'build',      [ 'default', 'clean:build', 'copy:build' ] );
+	grunt.registerTask( 'check',      [ 'devUpdate' ] );
+	grunt.registerTask( 'readme',     [ 'wp_readme_to_markdown' ] );
 	grunt.registerTask( 'update-pot', [ 'makepot' ] );
-	grunt.registerTask( 'update-mo', [ 'po2mo', 'copy:mo', 'clean:mo' ] );
-	grunt.registerTask( 'version', [ 'replace' ] );
+	grunt.registerTask( 'update-mo',  [ 'potomo' ] );
+	grunt.registerTask( 'version',    [ 'replace', 'readme', 'build' ] );
 
 };
