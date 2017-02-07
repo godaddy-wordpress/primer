@@ -3,26 +3,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-01-09 23:11:28+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-02-07 22:50:28+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 
-#: 404.php:22
+#: 404.php:22 templates/parts/404-woocommerce.php:22
 msgid "Oops! That page can't be found."
 msgstr "Hoppsan! Den sidan finns inte."
 
-#: 404.php:28
+#: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr "Det fanns ingenting här. Försök söka nedan:"
 
 #: comments.php:54 comments.php:79
@@ -56,7 +56,8 @@ msgid ""
 msgstr "Inget matchade dina sökvillkor. Försök igen med andra nyckelord."
 
 #: content-none.php:45
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "Vi hittar inte vad du söker. Prova med att söka."
 
 #: functions.php:159
@@ -97,10 +98,11 @@ msgstr "Sekundärt sidofält"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr ""
-"Det sekundära sidofältet visas enbart när du har valt en layout med tre kolumner."
+"Det sekundära sidofältet visas enbart när du har valt en layout med tre "
+"kolumner."
 
 #: functions.php:383
 msgid "Footer 1"
@@ -134,6 +136,25 @@ msgstr "Herowidgets visas ovanför rubrikbilden på framsidan."
 msgid "Skip to content"
 msgstr "Gå till innehåll"
 
+#: inc/compat/woocommerce.php:391
+#, fuzzy
+msgid "Featured Products"
+msgstr "Utvald"
+
+#: inc/compat/woocommerce.php:401
+msgid "On Sale Now"
+msgstr ""
+
+#: inc/compat/woocommerce.php:415
+msgid "New In Store"
+msgstr ""
+
+#: inc/compat/woocommerce.php:567
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+
 #: inc/compat/wordpress.php:47
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
@@ -164,7 +185,8 @@ msgstr "Rubriktext"
 
 #: inc/customizer/colors.php:128
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "Uppläggstitlar, widgettitlar, formuläretiketter, tabellrubriker och knappar."
+msgstr ""
+"Uppläggstitlar, widgettitlar, formuläretiketter, tabellrubriker och knappar."
 
 #: inc/customizer/colors.php:149
 msgid "Primary Text"
@@ -180,7 +202,8 @@ msgstr "Sekundärtext"
 
 #: inc/customizer/colors.php:196
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr "Bylines, antal kommentarer, upplägg med sidfötter och citat med sidfötter."
+msgstr ""
+"Bylines, antal kommentarer, upplägg med sidfötter och citat med sidfötter."
 
 #: inc/customizer/colors.php:210
 msgid "Widget Heading Text"
@@ -275,8 +298,10 @@ msgid "Hero Background Overlay"
 msgstr "Herobakgrundoverlay"
 
 #: inc/customizer/colors.php:1275
-msgid "Control the color overlay transparency when using a custom Header Image."
-msgstr "Styr färgöverläggets genomskinlighet när du använder en anpassad rubrikbild."
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+"Styr färgöverläggets genomskinlighet när du använder en anpassad rubrikbild."
 
 #: inc/customizer/fonts.php:87
 msgid "Site Title"
@@ -316,7 +341,9 @@ msgstr "Sekundär"
 
 #: inc/customizer/fonts.php:140
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr "Bylines, antal kommentarer, svarslänkar, upplägg med sidfötter och citat med sidfötter."
+msgstr ""
+"Bylines, antal kommentarer, svarslänkar, upplägg med sidfötter och citat med "
+"sidfötter."
 
 #: inc/customizer/fonts.php:188
 msgid "Fonts"
@@ -371,7 +398,8 @@ msgid "Use featured image"
 msgstr "Använd aktuell bild"
 
 #: inc/customizer.php:177
-msgid "Allow the featured image on the current post to override the hero image."
+msgid ""
+"Allow the featured image on the current post to override the hero image."
 msgstr "Tillåt aktuell bild på aktuellt upplägg att åsidosätta herobilden."
 
 #: inc/helpers.php:52
@@ -397,6 +425,19 @@ msgstr "Navigera inlägg"
 #: inc/template-tags.php:279
 msgid "Blog"
 msgstr "Blogg"
+
+#: templates/parts/404-woocommerce.php:30
+msgid "Search"
+msgstr ""
+
+#: templates/parts/404-woocommerce.php:36
+msgid "Promoted Products"
+msgstr ""
+
+#: templates/parts/404-woocommerce.php:42
+#: templates/parts/404-woocommerce.php:44
+msgid "Popular Products"
+msgstr ""
 
 #: templates/parts/loop/page-content.php:27
 #: templates/parts/loop/post-content.php:18
@@ -436,7 +477,8 @@ msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer är ett kraftfullt tema som förtydligar ditt innehåll i en fräsch design."
+"Primer är ett kraftfullt tema som förtydligar ditt innehåll i en fräsch "
+"design."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"

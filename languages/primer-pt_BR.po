@@ -3,26 +3,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-01-09 23:11:28+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-02-07 22:50:28+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 
-#: 404.php:22
+#: 404.php:22 templates/parts/404-woocommerce.php:22
 msgid "Oops! That page can't be found."
 msgstr "Opa! Página não encontrada."
 
-#: 404.php:28
+#: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr "Parece que não há nada nesse local. Tente pesquisar abaixo:"
 
 #: comments.php:54 comments.php:79
@@ -58,8 +58,10 @@ msgstr ""
 "novamente com outras palavras-chave."
 
 #: content-none.php:45
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr "Não foi possível encontrar o que você buscava. Talvez valha a pena pesquisar."
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"Não foi possível encontrar o que você buscava. Talvez valha a pena pesquisar."
 
 #: functions.php:159
 msgid "Featured"
@@ -99,10 +101,11 @@ msgstr "Barra Lateral Secundária"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr ""
-"A barra lateral secundária aparece apenas quando você seleciona o layout de 3 colunas."
+"A barra lateral secundária aparece apenas quando você seleciona o layout de "
+"3 colunas."
 
 #: functions.php:383
 msgid "Footer 1"
@@ -130,11 +133,32 @@ msgstr "A barra lateral é a terceira coluna da área de widgets do rodapé."
 
 #: functions.php:408
 msgid "Hero widgets appear over the header image on the front page."
-msgstr "Widgets principais são exibidos sobre a imagem do cabeçalho, na frente da página."
+msgstr ""
+"Widgets principais são exibidos sobre a imagem do cabeçalho, na frente da "
+"página."
 
 #: header.php:42
 msgid "Skip to content"
 msgstr "Ir direto para o conteúdo"
+
+#: inc/compat/woocommerce.php:391
+#, fuzzy
+msgid "Featured Products"
+msgstr "Destaque"
+
+#: inc/compat/woocommerce.php:401
+msgid "On Sale Now"
+msgstr ""
+
+#: inc/compat/woocommerce.php:415
+msgid "New In Store"
+msgstr ""
+
+#: inc/compat/woocommerce.php:567
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
 
 #: inc/compat/wordpress.php:47
 msgid ""
@@ -166,7 +190,9 @@ msgstr "Texto do título"
 
 #: inc/customizer/colors.php:128
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "Títulos da publicação, títulos de widgets, legendas de formulários, cabeçalhos de tabelas e botões."
+msgstr ""
+"Títulos da publicação, títulos de widgets, legendas de formulários, "
+"cabeçalhos de tabelas e botões."
 
 #: inc/customizer/colors.php:149
 msgid "Primary Text"
@@ -182,7 +208,9 @@ msgstr "Texto secundário"
 
 #: inc/customizer/colors.php:196
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr "Assinaturas da publicação, número de comentários, rodapés da publicação e rodapés da cotação."
+msgstr ""
+"Assinaturas da publicação, número de comentários, rodapés da publicação e "
+"rodapés da cotação."
 
 #: inc/customizer/colors.php:210
 msgid "Widget Heading Text"
@@ -277,8 +305,11 @@ msgid "Hero Background Overlay"
 msgstr "Sobreposição do plano de fundo principal"
 
 #: inc/customizer/colors.php:1275
-msgid "Control the color overlay transparency when using a custom Header Image."
-msgstr "Controle a transparência da sobreposição de cores usando uma imagem de cabeçalho personalizada."
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+"Controle a transparência da sobreposição de cores usando uma imagem de "
+"cabeçalho personalizada."
 
 #: inc/customizer/fonts.php:87
 msgid "Site Title"
@@ -302,7 +333,9 @@ msgstr "Títulos"
 
 #: inc/customizer/fonts.php:109
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr "Títulos da publicação, títulos de widgets, legendas de formulários e cabeçalhos de tabelas."
+msgstr ""
+"Títulos da publicação, títulos de widgets, legendas de formulários e "
+"cabeçalhos de tabelas."
 
 #: inc/customizer/fonts.php:124
 msgid "Primary"
@@ -318,7 +351,9 @@ msgstr "Secundário"
 
 #: inc/customizer/fonts.php:140
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr "Assinaturas, número de comentários, links de resposta, rodapés da publicação e rodapés da cotação."
+msgstr ""
+"Assinaturas, número de comentários, links de resposta, rodapés da publicação "
+"e rodapés da cotação."
 
 #: inc/customizer/fonts.php:188
 msgid "Fonts"
@@ -373,8 +408,11 @@ msgid "Use featured image"
 msgstr "Use imagens em destaque"
 
 #: inc/customizer.php:177
-msgid "Allow the featured image on the current post to override the hero image."
-msgstr "Permita que a imagem em destaque da publicação atual sobreponha a imagem principal."
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+"Permita que a imagem em destaque da publicação atual sobreponha a imagem "
+"principal."
 
 #: inc/helpers.php:52
 msgid "404 Page Not Found"
@@ -399,6 +437,19 @@ msgstr "Explorar publicações"
 #: inc/template-tags.php:279
 msgid "Blog"
 msgstr "Blog"
+
+#: templates/parts/404-woocommerce.php:30
+msgid "Search"
+msgstr ""
+
+#: templates/parts/404-woocommerce.php:36
+msgid "Promoted Products"
+msgstr ""
+
+#: templates/parts/404-woocommerce.php:42
+#: templates/parts/404-woocommerce.php:44
+msgid "Popular Products"
+msgstr ""
 
 #: templates/parts/loop/page-content.php:27
 #: templates/parts/loop/post-content.php:18
@@ -484,7 +535,7 @@ msgstr "Vermelho"
 #: inc/customizer/colors.php:480
 msgctxt "color scheme name"
 msgid "Bronze"
-msgstr "Bronze\n"
+msgstr "Bronze"
 
 #: inc/customizer/colors.php:484
 msgctxt "color scheme name"

@@ -3,26 +3,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-01-09 23:11:28+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-02-07 22:50:28+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 
-#: 404.php:22
+#: 404.php:22 templates/parts/404-woocommerce.php:22
 msgid "Oops! That page can't be found."
 msgstr "이런! 해당 페이지를 찾을 수 없습니다."
 
-#: 404.php:28
+#: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr "이 곳에는 아무 것도 없는 것 같습니다. 아래에서 검색해 보십시오."
 
 #: comments.php:54 comments.php:79
@@ -53,11 +53,15 @@ msgstr "여기서부터 시작"
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr "죄송합니다, 검색 조건과 일치하는 것이 없습니다. 다른 키워드를 사용하여 다시 해보세요."
+msgstr ""
+"죄송합니다, 검색 조건과 일치하는 것이 없습니다. 다른 키워드를 사용하여 다시 "
+"해보세요."
 
 #: content-none.php:45
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr "귀하가 찾으시는 내용을 찾지 못한 것 같습니다. 검색이 도움될 수도 있습니다."
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"귀하가 찾으시는 내용을 찾지 못한 것 같습니다. 검색이 도움될 수도 있습니다."
 
 #: functions.php:159
 msgid "Featured"
@@ -87,7 +91,9 @@ msgstr "사이드바"
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
-msgstr "주 사이드바는 모든 페이지의 내용 게시물, 아카이브 및 검색 템플릿에서 표시됩니다."
+msgstr ""
+"주 사이드바는 모든 페이지의 내용 게시물, 아카이브 및 검색 템플릿에서 표시됩니"
+"다."
 
 #: functions.php:375
 msgid "Secondary Sidebar"
@@ -95,8 +101,8 @@ msgstr "보조 사이드바"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr "보조 사이드바는 3열 레이아웃을 선택할 때 표시됩니다."
 
 #: functions.php:383
@@ -131,12 +137,32 @@ msgstr "Hero 위젯은 첫 페이지의 머리글 이미지 위에 나타납니�
 msgid "Skip to content"
 msgstr "컨텐츠로 건너뛰기"
 
+#: inc/compat/woocommerce.php:391
+#, fuzzy
+msgid "Featured Products"
+msgstr "특성"
+
+#: inc/compat/woocommerce.php:401
+msgid "On Sale Now"
+msgstr ""
+
+#: inc/compat/woocommerce.php:415
+msgid "New In Store"
+msgstr ""
+
+#: inc/compat/woocommerce.php:567
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+
 #: inc/compat/wordpress.php:47
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer는 워드프레스 버전 %1$s 이상을 요구합니다. 귀하는 %2$s 버전을 실행 중입니다. 업그레이드하고 다시 시도하세요."
+"Primer는 워드프레스 버전 %1$s 이상을 요구합니다. 귀하는 %2$s 버전을 실행 중입"
+"니다. 업그레이드하고 다시 시도하세요."
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -271,7 +297,8 @@ msgid "Hero Background Overlay"
 msgstr "Hero 배경 오버레이"
 
 #: inc/customizer/colors.php:1275
-msgid "Control the color overlay transparency when using a custom Header Image."
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
 msgstr "사용자 지정 머리글 이미지를 사용할 때 색 오버레이 투명도를 제어합니다."
 
 #: inc/customizer/fonts.php:87
@@ -367,7 +394,8 @@ msgid "Use featured image"
 msgstr "추천 이미지 사용"
 
 #: inc/customizer.php:177
-msgid "Allow the featured image on the current post to override the hero image."
+msgid ""
+"Allow the featured image on the current post to override the hero image."
 msgstr "Hero 이미지를 재정의하려면 현재 게시물에 추천 이미지를 허용하세요."
 
 #: inc/helpers.php:52
@@ -393,6 +421,19 @@ msgstr "게시물 탐색"
 #: inc/template-tags.php:279
 msgid "Blog"
 msgstr "블로그"
+
+#: templates/parts/404-woocommerce.php:30
+msgid "Search"
+msgstr ""
+
+#: templates/parts/404-woocommerce.php:36
+msgid "Promoted Products"
+msgstr ""
+
+#: templates/parts/404-woocommerce.php:42
+#: templates/parts/404-woocommerce.php:44
+msgid "Popular Products"
+msgstr ""
 
 #: templates/parts/loop/page-content.php:27
 #: templates/parts/loop/post-content.php:18
@@ -431,7 +472,8 @@ msgstr "https://github.com/godaddy/wp-primer-theme"
 msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
-msgstr "Primer는 신선한 디자인의 컨텐트에 명료함을 불어 넣는 강력한 테마입니다."
+msgstr ""
+"Primer는 신선한 디자인의 컨텐트에 명료함을 불어 넣는 강력한 테마입니다."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"

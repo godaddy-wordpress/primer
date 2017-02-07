@@ -3,26 +3,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-01-09 23:11:28+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-02-07 22:50:28+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 
-#: 404.php:22
+#: 404.php:22 templates/parts/404-woocommerce.php:22
 msgid "Oops! That page can't be found."
 msgstr "ओह! यह पृष्ठ नहीं मिल सकता है."
 
-#: 404.php:28
+#: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr "ऐसा लग रहा है इस स्थान पर कुछ नहीं मिला था. कृपया नीचे खोजकर आज़माएं:"
 
 #: comments.php:54 comments.php:79
@@ -54,12 +54,15 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"क्षमा करें, लेकिन आपके खोज शब्दों से मेल खाने का कुछ नहीं. कृपया कुछ भिन्न "
-"कीवर्ड्स से पुनः प्रयास करें."
+"क्षमा करें, लेकिन आपके खोज शब्दों से मेल खाने का कुछ नहीं. कृपया कुछ भिन्न कीवर्ड्स से पुनः "
+"प्रयास करें."
 
 #: content-none.php:45
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr "ऐसा लग रहा है, हमें आपके द्वारा खोजी जा रही चीज नहीं मिल सकती है. शायद खोजने से मदद मिल सकती है."
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"ऐसा लग रहा है, हमें आपके द्वारा खोजी जा रही चीज नहीं मिल सकती है. शायद खोजने से मदद "
+"मिल सकती है."
 
 #: functions.php:159
 msgid "Featured"
@@ -90,8 +93,8 @@ msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr ""
-"प्राथमिक साइडबार प्रत्येक पृष्ठ, पोस्ट, संकलन और खोज टेम्पलेट की सामग्री के "
-"साथ प्रकट होता है."
+"प्राथमिक साइडबार प्रत्येक पृष्ठ, पोस्ट, संकलन और खोज टेम्पलेट की सामग्री के साथ प्रकट होता "
+"है."
 
 #: functions.php:375
 msgid "Secondary Sidebar"
@@ -99,10 +102,9 @@ msgstr "द्धितीयक साइडबार"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
-msgstr ""
-"द्धितीयक साइडबार आपके द्वारा तीन-स्तंभ वाला लेआउट चुनने पर ही प्रकट होगा."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
+msgstr "द्धितीयक साइडबार आपके द्वारा तीन-स्तंभ वाला लेआउट चुनने पर ही प्रकट होगा."
 
 #: functions.php:383
 msgid "Footer 1"
@@ -136,13 +138,32 @@ msgstr "हीरो विजेट्स फ़्रंट पेज के श�
 msgid "Skip to content"
 msgstr "सामग्री पर जाएं"
 
+#: inc/compat/woocommerce.php:391
+#, fuzzy
+msgid "Featured Products"
+msgstr "प्रदर्शित किए गए"
+
+#: inc/compat/woocommerce.php:401
+msgid "On Sale Now"
+msgstr ""
+
+#: inc/compat/woocommerce.php:415
+msgid "New In Store"
+msgstr ""
+
+#: inc/compat/woocommerce.php:567
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+
 #: inc/compat/wordpress.php:47
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer के लिए कम से कम WordPress संस्करण %1$s आवश्यक. आप संस्करण %2$s चला रहे "
-"हैं. कृपया अपग्रेड करें और पुनः आज़माएं."
+"Primer के लिए कम से कम WordPress संस्करण %1$s आवश्यक. आप संस्करण %2$s चला रहे हैं. "
+"कृपया अपग्रेड करें और पुनः आज़माएं."
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -277,7 +298,8 @@ msgid "Hero Background Overlay"
 msgstr "मुख्य पृष्ठभूमि ओवरले"
 
 #: inc/customizer/colors.php:1275
-msgid "Control the color overlay transparency when using a custom Header Image."
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
 msgstr "कस्टम शीर्षलेख छवि उपयोग करते समय रंग ओवरले पारदर्शिता नियंत्रित करें."
 
 #: inc/customizer/fonts.php:87
@@ -373,7 +395,8 @@ msgid "Use featured image"
 msgstr "प्रदर्शित छवि उपयोग करें"
 
 #: inc/customizer.php:177
-msgid "Allow the featured image on the current post to override the hero image."
+msgid ""
+"Allow the featured image on the current post to override the hero image."
 msgstr "मुख्य छवि ओवरराइड करने के लिए वर्तमान पोस्ट पर प्रदर्शित छवि की अनुमति दें."
 
 #: inc/helpers.php:52
@@ -399,6 +422,19 @@ msgstr "पोस्ट नेविगेशन"
 #: inc/template-tags.php:279
 msgid "Blog"
 msgstr "ब्लॉग"
+
+#: templates/parts/404-woocommerce.php:30
+msgid "Search"
+msgstr ""
+
+#: templates/parts/404-woocommerce.php:36
+msgid "Promoted Products"
+msgstr ""
+
+#: templates/parts/404-woocommerce.php:42
+#: templates/parts/404-woocommerce.php:44
+msgid "Popular Products"
+msgstr ""
 
 #: templates/parts/loop/page-content.php:27
 #: templates/parts/loop/post-content.php:18
@@ -437,8 +473,7 @@ msgstr "https://github.com/godaddy/wp-primer-theme"
 msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
-msgstr ""
-"Primer एक शक्तिशाली थीम है, जो नए डिज़ाइन में आपकी सामग्री पर स्पष्टता लाती है."
+msgstr "Primer एक शक्तिशाली थीम है, जो नए डिज़ाइन में आपकी सामग्री पर स्पष्टता लाती है."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"

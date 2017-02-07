@@ -3,26 +3,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-01-09 23:11:28+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-02-07 22:50:28+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 
-#: 404.php:22
+#: 404.php:22 templates/parts/404-woocommerce.php:22
 msgid "Oops! That page can't be found."
 msgstr "Hups! Sivua ei löydy."
 
-#: 404.php:28
+#: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
 "Näyttää siltä, että mitään ei löytynyt tästä sijainnista. Yritä etsiä alla:"
 
@@ -55,11 +55,15 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Pahoittelemme – mikään ei vastannut hakutermejäsi. Yritä uudelleen eri avainsanoilla."
+"Pahoittelemme – mikään ei vastannut hakutermejäsi. Yritä uudelleen eri "
+"avainsanoilla."
 
 #: content-none.php:45
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr "Näyttää siltä, ettemme löydä sitä, mitä olet etsimässä. Ehkä haku voisi auttaa."
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"Näyttää siltä, ettemme löydä sitä, mitä olet etsimässä. Ehkä haku voisi "
+"auttaa."
 
 #: functions.php:159
 msgid "Featured"
@@ -99,10 +103,11 @@ msgstr "Toissijainen sivupalkki"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr ""
-"Toissijainen sivupalkki näkyy vain, jos olet valinnut kolmesarakkeisen asettelun."
+"Toissijainen sivupalkki näkyy vain, jos olet valinnut kolmesarakkeisen "
+"asettelun."
 
 #: functions.php:383
 msgid "Footer 1"
@@ -136,13 +141,32 @@ msgstr "Hero-vimpaimet näkyvät etusivun otsikkokuvan päällä."
 msgid "Skip to content"
 msgstr "Siirry sisältöön"
 
+#: inc/compat/woocommerce.php:391
+#, fuzzy
+msgid "Featured Products"
+msgstr "Esittelyssä"
+
+#: inc/compat/woocommerce.php:401
+msgid "On Sale Now"
+msgstr ""
+
+#: inc/compat/woocommerce.php:415
+msgid "New In Store"
+msgstr ""
+
+#: inc/compat/woocommerce.php:567
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+
 #: inc/compat/wordpress.php:47
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer edellyttää vähintään WordPress-version %1$s. Olet käyttämässä versiota "
-"%2$s. Päivitä ja yritä uudelleen."
+"Primer edellyttää vähintään WordPress-version %1$s. Olet käyttämässä "
+"versiota %2$s. Päivitä ja yritä uudelleen."
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -166,7 +190,9 @@ msgstr "Otsikkoteksti"
 
 #: inc/customizer/colors.php:128
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "Artikkelien nimet, widget-nimet, lomakenimet, taulukkojen otsikot ja painikkeet."
+msgstr ""
+"Artikkelien nimet, widget-nimet, lomakenimet, taulukkojen otsikot ja "
+"painikkeet."
 
 #: inc/customizer/colors.php:149
 msgid "Primary Text"
@@ -182,7 +208,9 @@ msgstr "Toissijainen teksti"
 
 #: inc/customizer/colors.php:196
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr "Artikkelin tekijöiden nimet, kommenttimäärät, artikkelien alapalkit ja lainausten alapalkit."
+msgstr ""
+"Artikkelin tekijöiden nimet, kommenttimäärät, artikkelien alapalkit ja "
+"lainausten alapalkit."
 
 #: inc/customizer/colors.php:210
 msgid "Widget Heading Text"
@@ -277,8 +305,10 @@ msgid "Hero Background Overlay"
 msgstr "Hero-taustan peitekerros"
 
 #: inc/customizer/colors.php:1275
-msgid "Control the color overlay transparency when using a custom Header Image."
-msgstr "Hallitse värikerroksen läpinäkyvyyttä mukautettua otsikkokuvaa käytettäessä."
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+"Hallitse värikerroksen läpinäkyvyyttä mukautettua otsikkokuvaa käytettäessä."
 
 #: inc/customizer/fonts.php:87
 msgid "Site Title"
@@ -318,7 +348,9 @@ msgstr "Toissijainen"
 
 #: inc/customizer/fonts.php:140
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr "Tekijöiden nimet, kommenttimäärät, vastauslinkit, artikkelien alapalkit ja lainausten alapalkit."
+msgstr ""
+"Tekijöiden nimet, kommenttimäärät, vastauslinkit, artikkelien alapalkit ja "
+"lainausten alapalkit."
 
 #: inc/customizer/fonts.php:188
 msgid "Fonts"
@@ -373,7 +405,8 @@ msgid "Use featured image"
 msgstr "Käytä pääkuvaa"
 
 #: inc/customizer.php:177
-msgid "Allow the featured image on the current post to override the hero image."
+msgid ""
+"Allow the featured image on the current post to override the hero image."
 msgstr "Anna nykyisen artikkelin pääkuvan korvata hero-kuva."
 
 #: inc/helpers.php:52
@@ -399,6 +432,19 @@ msgstr "Julkaisunavigointi"
 #: inc/template-tags.php:279
 msgid "Blog"
 msgstr "Blogi"
+
+#: templates/parts/404-woocommerce.php:30
+msgid "Search"
+msgstr ""
+
+#: templates/parts/404-woocommerce.php:36
+msgid "Promoted Products"
+msgstr ""
+
+#: templates/parts/404-woocommerce.php:42
+#: templates/parts/404-woocommerce.php:44
+msgid "Popular Products"
+msgstr ""
 
 #: templates/parts/loop/page-content.php:27
 #: templates/parts/loop/post-content.php:18
