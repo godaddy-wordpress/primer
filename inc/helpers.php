@@ -572,3 +572,25 @@ function primer_array_replace_recursive( array $array1, array $array2 ) {
 	return (array) $result;
 
 }
+
+if ( ! function_exists( 'primer_get_the_widget' ) ) {
+
+	/**
+	 * Render a widget and store it in an output buffer
+	 *
+	 * @param  string $widget   Class name of the widget to render.
+	 * @param  string $instance Instance
+	 * @param  array  $args     Array of arguments for the widget.
+	 *
+	 * @return mixed
+	 */
+	function primer_get_the_widget( $widget, $instance = '', $args = '' ) {
+
+		ob_start();
+
+		the_widget( $widget, $instance, $args );
+
+		return ob_get_clean();
+
+	}
+}
