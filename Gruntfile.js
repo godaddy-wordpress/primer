@@ -331,6 +331,8 @@ module.exports = function( grunt ) {
 		wp_readme_to_markdown: {
 			options: {
 				post_convert: function( readme ) {
+					readme = addLinksToTags( readme );
+
 					var badges = {
 						grunt: '[![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](https://gruntjs.com)',
 						david_dev: '[![devDependency Status](https://david-dm.org/' + pkg.repository + '/dev-status.svg)](https://david-dm.org/' + pkg.repository + '?type=dev)',
@@ -365,6 +367,22 @@ module.exports = function( grunt ) {
 		}
 
 	} );
+
+	function addLinksToTags( readme ) {
+
+		var matches = readme.match( /\*\*Tags:\*\*(.*)\n/ ),
+		    tags    = matches[1].trim().split( ', ' ),
+		    section = matches[0];
+
+		for ( var i = 0; i < tags.length; i++ ) {
+
+			section = section.replace( tags[i], '[' + tags[i] + '](https://wordpress.org/themes/tags/' + tags[i] + '/)' );
+
+		}
+
+		return readme.replace( matches[0], section );
+
+	}
 
 	function addBadge( readme, badge ) {
 
