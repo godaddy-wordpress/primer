@@ -5,7 +5,7 @@
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
-BUILDDIR      = /build
+BUILDDIR      = ../src/build/
 PYTHON        = python
 LANG          = en
 
@@ -39,6 +39,6 @@ clean:
 	-rm -rf $(BUILDDIR)/*
 
 html:
-	$(SPHINXBUILD) -b html $(BUILDDIR)/html
+	$(SPHINXBUILD) -b html . $(BUILDDIR)/html/
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/."

@@ -9,4 +9,4 @@ svn-username
 tests/codeception/_output/*
 vendor/
 .dev/docs/build/
-.dev/docs/sphinx/src/documentation/
+.dev/docs/sphinx/src/documentation/*

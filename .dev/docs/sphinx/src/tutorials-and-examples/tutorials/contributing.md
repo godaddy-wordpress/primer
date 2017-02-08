@@ -16,7 +16,7 @@ From the **theme root** you can use the following command to generate the docume
 $ grunt docs
 ```
 
-The dependencies will be installed and the documentation will be built and compiled into the `/documentation/build/html/en` directory. Feel free to preview the documentation before pushing changes live to the site.
+The dependencies will be installed and the documentation will be built and compiled into the `/documentation/build/html/` directory. Feel free to preview the documentation before pushing changes live to the site.
 
 When you are happy with the changes, the documentation can be deployed using:
 
