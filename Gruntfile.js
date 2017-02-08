@@ -275,7 +275,7 @@ module.exports = function( grunt ) {
 				'pip install -r .dev/docs/requirements.txt',
 				'cd .dev/docs',
 				'make clean',
-				'git clone -b gh-pages https://github.com/godaddy/wp-primer-theme.git build/html/en/',
+				'git clone -b gh-pages git@github.com:godaddy/wp-primer-theme.git build/html/en/',
 				'make html'
 			].join( ' && ' ),
 			docs: [
@@ -380,7 +380,7 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'deploy',      [ 'build', 'wp_deploy', 'clean:build' ] );
 	grunt.registerTask( 'deploy-docs', [ 'update-docs', 'shell:deploy_docs' ] );
 	grunt.registerTask( 'readme',      [ 'wp_readme_to_markdown' ] );
-	grunt.registerTask( 'update-docs', [ 'shell:sphinx', 'shell:docs', 'replace:docs', 'copy:readme', 'clean:docs', 'copy:docs', 'replace:intro' ] );
+	grunt.registerTask( 'update-docs', [ 'readme', 'shell:sphinx', 'shell:docs', 'replace:docs', 'copy:readme', 'clean:docs', 'copy:docs', 'replace:intro' ] );
 	grunt.registerTask( 'update-pot',  [ 'makepot' ] );
 	grunt.registerTask( 'update-mo',   [ 'potomo' ] );
 	grunt.registerTask( 'version',     [ 'replace', 'readme', 'build' ] );
