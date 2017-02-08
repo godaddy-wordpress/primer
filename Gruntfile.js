@@ -331,7 +331,7 @@ module.exports = function( grunt ) {
 		wp_readme_to_markdown: {
 			options: {
 				post_convert: function( readme ) {
-					var matches = readme.match( /\*\*Tags:\*\*(.*)\n/ ),
+					var matches = readme.match( /\*\*Tags:\*\*(.*)\r\n/ ),
 					    tags    = matches[1].trim().split( ', ' ),
 					    section = matches[0];
 
@@ -343,12 +343,12 @@ module.exports = function( grunt ) {
 					readme = readme.replace( matches[0], section );
 
 					// Badges
-					readme = readme.replace( '## Description ##', grunt.template.process( pkg.badges.join( ' ' ) ) + "  \n\n## Description ##" );
+					readme = readme.replace( '## Description ##', grunt.template.process( pkg.badges.join( ' ' ) ) + "  \r\n\r\n## Description ##" );
 
 					return readme;
 				}
 			},
-			all: {
+			main: {
 				files: {
 					'readme.md': 'readme.txt'
 				}
