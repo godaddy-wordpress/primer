@@ -14,8 +14,8 @@
 	<link rel="stylesheet" type="text/css" href="resources/css/styles.css?1c0be7d42007b45e49f18eeb0d35db57c73b27a6">
 	<link rel="stylesheet" type="text/css" href="resources/css/responsive.css?23aedcbba2a71c6eae0181247948af42426549eb">
 
-	<script type="text/javascript" src="resources/combined.js?bee99a694b56e44a602b909e96c7c5018f0518cf"></script>
-	<script type="text/javascript" src="elementlist.js?60f48ca101b2567c2ccdc5f078e5ed4f3e00ecec"></script>
+	<script type="text/javascript" src="resources/combined.js?d24364d01e5cd6d6a6d4ccf4b37e28112df65e0c"></script>
+	<script type="text/javascript" src="elementlist.js?ee1af7edca783d9d56c1e85758adabcb366c9684"></script>
 
 
 
@@ -282,6 +282,7 @@
 							<li><a title="primer_get_page_width" href="function-primer_get_page_width.html">primer_get_page_width</a></li>
 							<li><a title="primer_get_posts_url" href="function-primer_get_posts_url.html">primer_get_posts_url</a></li>
 							<li><a title="primer_get_the_page_title" href="function-primer_get_the_page_title.html">primer_get_the_page_title</a></li>
+							<li><a title="primer_get_the_widget" href="function-primer_get_the_widget.html">primer_get_the_widget</a></li>
 							<li><a title="primer_get_wp_upgrade_message" href="function-primer_get_wp_upgrade_message.html">primer_get_wp_upgrade_message</a></li>
 							<li><a title="primer_has_active_categories" href="function-primer_has_active_categories.html">primer_has_active_categories</a></li>
 							<li><a title="primer_has_active_categories_reset" href="function-primer_has_active_categories_reset.html">primer_has_active_categories_reset</a></li>
@@ -311,9 +312,15 @@
 							<li><a title="primer_the_site_title" href="function-primer_the_site_title.html">primer_the_site_title</a></li>
 							<li><a title="primer_upgrade_notice" href="function-primer_upgrade_notice.html">primer_upgrade_notice</a></li>
 							<li><a title="primer_use_featured_hero_image" href="function-primer_use_featured_hero_image.html">primer_use_featured_hero_image</a></li>
+							<li><a title="primer_wc_404_template" href="function-primer_wc_404_template.html">primer_wc_404_template</a></li>
+							<li><a title="primer_wc_best_selling_products" href="function-primer_wc_best_selling_products.html">primer_wc_best_selling_products</a></li>
+							<li><a title="primer_wc_cart_menu" href="function-primer_wc_cart_menu.html">primer_wc_cart_menu</a></li>
 							<li><a title="primer_wc_colors" href="function-primer_wc_colors.html">primer_wc_colors</a></li>
+							<li><a title="primer_wc_customize_preview_cart_contents_total" href="function-primer_wc_customize_preview_cart_contents_total.html">primer_wc_customize_preview_cart_contents_total</a></li>
 							<li><a title="primer_wc_font_types" href="function-primer_wc_font_types.html">primer_wc_font_types</a></li>
+							<li><a title="primer_wc_generate_cart_menu_item" href="function-primer_wc_generate_cart_menu_item.html">primer_wc_generate_cart_menu_item</a></li>
 							<li><a title="primer_wc_product_classes" href="function-primer_wc_product_classes.html">primer_wc_product_classes</a></li>
+							<li><a title="primer_wc_promoted_products" href="function-primer_wc_promoted_products.html">primer_wc_promoted_products</a></li>
 							<li><a title="primer_wc_setup" href="function-primer_wc_setup.html">primer_wc_setup</a></li>
 							<li><a title="primer_wc_shop_columns" href="function-primer_wc_shop_columns.html">primer_wc_shop_columns</a></li>
 							<li><a title="primer_wc_shop_layout" href="function-primer_wc_shop_layout.html">primer_wc_shop_layout</a></li>
@@ -942,7 +949,29 @@
 </span><span id="611" class="codeline"><a class="number" href="#611">611: </a>    <span class="php-keyword1">return</span> (<span class="php-keyword1">array</span>) <span class="php-var">$result</span>;
 </span><span id="612" class="codeline"><a class="number" href="#612">612: </a>
 </span><span id="613" class="codeline"><a class="number" href="#613">613: </a>}
-</span><span id="614" class="codeline"><a class="number" href="#614">614: </a></span></code></pre>
+</span><span id="614" class="codeline"><a class="number" href="#614">614: </a>
+</span><span id="615" class="codeline"><a class="number" href="#615">615: </a><span class="php-keyword1">if</span> ( ! <span class="php-keyword2">function_exists</span>( <span class="php-quote">'primer_get_the_widget'</span> ) ) {
+</span><span id="616" class="codeline"><a class="number" href="#616">616: </a>
+</span><span id="617" class="codeline"><a class="number" href="#617">617: </a>    <span class="php-comment">/**
+</span></span><span id="618" class="codeline"><a class="number" href="#618">618: </a><span class="php-comment">     * Render a widget and store it in an output buffer
+</span></span><span id="619" class="codeline"><a class="number" href="#619">619: </a><span class="php-comment">     *
+</span></span><span id="620" class="codeline"><a class="number" href="#620">620: </a><span class="php-comment">     * @param  string $widget   Class name of the widget to render.
+</span></span><span id="621" class="codeline"><a class="number" href="#621">621: </a><span class="php-comment">     * @param  string $instance Instance
+</span></span><span id="622" class="codeline"><a class="number" href="#622">622: </a><span class="php-comment">     * @param  array  $args     Array of arguments for the widget.
+</span></span><span id="623" class="codeline"><a class="number" href="#623">623: </a><span class="php-comment">     *
+</span></span><span id="624" class="codeline"><a class="number" href="#624">624: </a><span class="php-comment">     * @return mixed
+</span></span><span id="625" class="codeline"><a class="number" href="#625">625: </a><span class="php-comment">     */</span>
+</span><span id="626" class="codeline"><a class="number" href="#626">626: </a>    <span class="php-keyword1">function</span> primer_get_the_widget( <span class="php-var">$widget</span>, <span class="php-var">$instance</span> = <span class="php-quote">''</span>, <span class="php-var">$args</span> = <span class="php-quote">''</span> ) {
+</span><span id="627" class="codeline"><a class="number" href="#627">627: </a>
+</span><span id="628" class="codeline"><a class="number" href="#628">628: </a>        <span class="php-keyword2">ob_start</span>();
+</span><span id="629" class="codeline"><a class="number" href="#629">629: </a>
+</span><span id="630" class="codeline"><a class="number" href="#630">630: </a>        the_widget( <span class="php-var">$widget</span>, <span class="php-var">$instance</span>, <span class="php-var">$args</span> );
+</span><span id="631" class="codeline"><a class="number" href="#631">631: </a>
+</span><span id="632" class="codeline"><a class="number" href="#632">632: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">ob_get_clean</span>();
+</span><span id="633" class="codeline"><a class="number" href="#633">633: </a>
+</span><span id="634" class="codeline"><a class="number" href="#634">634: </a>    }
+</span><span id="635" class="codeline"><a class="number" href="#635">635: </a>}
+</span><span id="636" class="codeline"><a class="number" href="#636">636: </a></span></code></pre>
 			</div>
 		</div>
 

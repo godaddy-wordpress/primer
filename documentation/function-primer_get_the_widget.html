@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Function primer_get_the_widget | Primer Theme</title>
+
+	<link href="resources/favicon.png?ae6b9b73563f359562b7a4d356903cd68bdaa887" type="image/png" rel="icon">
+	<link href="resources/favicon.png?ae6b9b73563f359562b7a4d356903cd68bdaa887" type="image/png" rel="shortcut icon">
+	<link rel="stylesheet" type="text/css" href="resources/css/font-awesome.min.css?12d6861075de8e293265ff6ff03b1f3adcb44c76">
+	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css?4cf1ebacd5d9ed77cfdde569db191675add8bd1b">
+	<link rel="stylesheet" type="text/css" href="resources/css/styles.css?1c0be7d42007b45e49f18eeb0d35db57c73b27a6">
+	<link rel="stylesheet" type="text/css" href="resources/css/responsive.css?23aedcbba2a71c6eae0181247948af42426549eb">
+
+	<script type="text/javascript" src="resources/combined.js?d24364d01e5cd6d6a6d4ccf4b37e28112df65e0c"></script>
+	<script type="text/javascript" src="elementlist.js?ee1af7edca783d9d56c1e85758adabcb366c9684"></script>
+
+
+
+</head>
+
+<body>
+
+<div id="container">
+<header class="nav-down">
+	<div class="container-fluid hidden-xs hidden-sm">
+		<div class="row">
+			<div class="col-sm-3 col-md-3">
+				<a class="logo-godaddy" href="https://godaddy.github.io/wp-primer-theme/intro.html">
+					<img alt="GoDaddy" src="resources/godaddy-logo.png?f99b9ab6703faadbd2f67d212cd8176592b1feb9">
+				</a>
+			</div>
+
+			<div class="col-sm-9 col-md-9">
+				<nav class="navbar-right" id="godaddy-nav">
+					<ul class="menu">
+						<li class="first">
+							<a href="#"><i class="fa fa-menu fa-chevron-down"></i>Documentation</a>
+							<ul class="submenu">
+<li><a href="https://godaddy.github.io/wp-primer-theme/intro.html"><i class="fa fa-menu fa-chevron-right"></i>Wiki</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html"><i class="fa fa-menu fa-chevron-right"></i>Documentation</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/how-to.html"><i class="fa fa-menu fa-chevron-right"></i>Tutorials</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/license.html"><i class="fa fa-menu fa-chevron-right"></i>License</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/changelog.html"><i class="fa fa-menu fa-chevron-right"></i>Changelog</a></li>
+							</ul>
+						</li>
+
+						<li><a href="https://godaddy.github.io/wp-primer-theme/contributors.html">Contributors</a></li>
+
+						<li>
+							<a href="#"><i class="fa fa-menu fa-chevron-down"></i>Community</a>
+							<div class="megamenu full">
+								<div class="row">
+									<div class="col-6 pl30">
+										<ul class="megamenu-list">
+<li class="menu-title"><i class="fa fa-menu-title fa-users"></i>Community</li>
+
+<li><a href="https://aboutus.godaddy.net/about-us/default.aspx"><i class="fa fa-menu fa-chevron-right"></i>About Us</a></li>
+										</ul>
+									</div>
+									<div class="col-6 pl30">
+										<ul class="megamenu-list">
+<li class="menu-title"><i class="fa fa-menu-title fa-comments-o"></i>Help &amp; Support</li>
+
+<li><a href="https://github.com/godaddy/wp-primer-theme/issues"><i class="fa fa-menu fa-github"></i>GitHub</a></li>
+<li><a href="https://wordpress.org/support/theme/primer"><i class="fa fa-menu fa-wordpress"></i>WordPress</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+		<div class="container-fluid hidden-md hidden-lg">
+		<div class="row">
+			<div class="col-sm-6 col-xs-6">
+				<a class="logo-godaddy" href="https://godaddy.github.io/wp-primer-theme/intro.html">
+					<img alt="GoDaddy" src="resources/godaddy-logo.png?f99b9ab6703faadbd2f67d212cd8176592b1feb9">
+				</a>
+			</div>
+
+			<div class="col-sm-6 col-xs-6">
+				<div class="navbar-right">
+					<button id="btn-menu" class="btn-menu" data-toggle="modal" data-target="#modal">
+						<i class="fa fa-bars toggle-modal"></i>
+					</button>
+				</div>
+				<div id="wrap">
+					<form class="search" method="get">
+						<input type="hidden" name="ie" value="UTF-8">
+						<input type="search" name="q" placeholder="What are you looking for?">
+						<input id="search_submit" value="Search" type="submit">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<section id="nav-cook" class="hidden-xs hidden-sm">
+		<div class="container-fluid ">
+			<div class="row back-book">
+				<div class="col-md-3 t-api-title hidden-sm hidden-xs">
+					<h2>
+						<a href="../1.4.1/">
+							<span class="glyph_range icon-submenu icon-submenu-cook">B</span>
+							Primer Theme 1.4.1
+							
+							<strong>API</strong>
+						</a>
+					</h2>
+				</div>
+
+				<div class="col-md-5 t-api-nav p0">
+					<ul class="navigation">
+						<li class="t-api-nav-el">
+							<a href="https://godaddy.github.io/wp-primer-theme/intro.html" title="Overview">
+							<i class="fa fa-eye"></i><span>Overview</span></a>
+						</li>
+						<li class="t-api-nav-el">
+							<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions">
+							<i class="fa fa-align-left"></i><span>Tree</span></a>
+						</li>
+							<li class="t-api-nav-el">
+								<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+								<i class="fa fa-trash"></i><span>Deprecated</span></a>
+							</li>
+							<li class="t-api-nav-el">
+								<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+<span>Todo</span></a>
+							</li>
+
+												<li class="version-picker">
+							<h6>Version:</h6>
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+											1.4.1 <i class="fa fa-menu-en fa-chevron-down"></i>
+										</a>
+										<ul class="dropdown-menu">
+												<li><a href="../1.4.1">1.4.1</a></li>
+										</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 pull-right hidden-sm search-cook p0">
+					<form class="search" method="get">
+						<div class="col-md-10 p0">
+							<input class="form-control form-cook" autocomplete="off" type="search" name="q" size="18" placeholder='API Search'>
+						</div>
+						<div class="col-md-2 p0">
+							<button type="submit">
+								<span class="glyph_range icon-submenu icon-submenu-cook">A</span>
+							</button>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</section>
+</header>
+
+<section class="nav-btn visible-sm visible-xs">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-xs-6 text-center">
+				<button id="btn-nav" class="btn btn-b btn-nav" data-toggle="modal" data-target="#modal"><strong>Navigation</strong></button>
+			</div>
+
+			<div class="col-sm-6 col-xs-6 text-center">
+				<button id="btn-toc" class="btn btn-b btn-nav" data-toggle="modal" data-target="#modal"><strong>Class Navigation</strong></button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div id="modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-header">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title-cookbook" id="modal-header"></h4>
+			</div>
+			<div class="modal-body"></div>
+		</div>
+	</div>
+</div>
+
+	<div class="container page-container">
+		<div class="row">
+			<div id="class-nav" class="col-md-3 hidden-sm hidden-xs">
+				<div id="menu">
+
+					<div id="groups">
+						<h3>Packages</h3>
+						<ul class="nav-list">
+							<li><a href="package-Classes.html">Classes<span></span></a>
+									<ul>
+							<li><a href="package-Classes.Customizer.html">Customizer</a>
+									</li>
+							<li><a href="package-Classes.Navigation.html">Navigation</a>
+									</li>
+										</ul></li>
+							<li><a href="package-Compatibility.html">Compatibility<span></span></a>
+									<ul>
+							<li><a href="package-Compatibility.BeaverBuilder.html">BeaverBuilder</a>
+									</li>
+							<li><a href="package-Compatibility.Jetpack.html">Jetpack</a>
+									</li>
+							<li><a href="package-Compatibility.WooCommerce.html">WooCommerce</a>
+									</li>
+							<li><a href="package-Compatibility.WordPress.html">WordPress</a>
+									</li>
+										</ul></li>
+							<li><a href="package-Functions.html">Functions</a>
+									</li>
+							<li><a href="package-Hooks.html">Hooks</a>
+									</li>
+						</ul>
+					</div>
+
+
+					<div id="elements">
+
+
+
+
+
+						<h3 class="nav-title">Functions</h3>
+						<ul class="nav-list">
+							<li><a title="primer_array_replace_recursive" href="function-primer_array_replace_recursive.html">primer_array_replace_recursive</a></li>
+							<li><a title="primer_breadcrumbs" href="function-primer_breadcrumbs.html">primer_breadcrumbs</a></li>
+							<li><a title="primer_content_width" href="function-primer_content_width.html">primer_content_width</a></li>
+							<li><a title="primer_get_active_footer_sidebars" href="function-primer_get_active_footer_sidebars.html">primer_get_active_footer_sidebars</a></li>
+							<li><a title="primer_get_featured_image_size" href="function-primer_get_featured_image_size.html">primer_get_featured_image_size</a></li>
+							<li><a title="primer_get_footer_sidebars" href="function-primer_get_footer_sidebars.html">primer_get_footer_sidebars</a></li>
+							<li><a title="primer_get_global_layout" href="function-primer_get_global_layout.html">primer_get_global_layout</a></li>
+							<li><a title="primer_get_hero_image" href="function-primer_get_hero_image.html">primer_get_hero_image</a></li>
+							<li><a title="primer_get_hero_image_selector" href="function-primer_get_hero_image_selector.html">primer_get_hero_image_selector</a></li>
+							<li><a title="primer_get_layout" href="function-primer_get_layout.html">primer_get_layout</a></li>
+							<li><a title="primer_get_page_width" href="function-primer_get_page_width.html">primer_get_page_width</a></li>
+							<li><a title="primer_get_posts_url" href="function-primer_get_posts_url.html">primer_get_posts_url</a></li>
+							<li><a title="primer_get_the_page_title" href="function-primer_get_the_page_title.html">primer_get_the_page_title</a></li>
+							<li class="active"><a title="primer_get_the_widget" href="function-primer_get_the_widget.html">primer_get_the_widget</a></li>
+							<li><a title="primer_has_active_categories" href="function-primer_has_active_categories.html">primer_has_active_categories</a></li>
+							<li><a title="primer_has_active_categories_reset" href="function-primer_has_active_categories_reset.html">primer_has_active_categories_reset</a></li>
+							<li><a title="primer_has_active_footer_sidebars" href="function-primer_has_active_footer_sidebars.html">primer_has_active_footer_sidebars</a></li>
+							<li><a title="primer_has_custom_logo" href="function-primer_has_custom_logo.html">primer_has_custom_logo</a></li>
+							<li><a title="primer_has_footer_menu" href="function-primer_has_footer_menu.html">primer_has_footer_menu</a></li>
+							<li><a title="primer_has_hero_image" href="function-primer_has_hero_image.html">primer_has_hero_image</a></li>
+							<li><a title="primer_hex2rgb" href="function-primer_hex2rgb.html">primer_hex2rgb</a></li>
+							<li><a title="primer_image_size_names_choose" href="function-primer_image_size_names_choose.html">primer_image_size_names_choose</a></li>
+							<li><a title="primer_is_fixed_width" href="function-primer_is_fixed_width.html">primer_is_fixed_width</a></li>
+							<li><a title="primer_is_fluid_width" href="function-primer_is_fluid_width.html">primer_is_fluid_width</a></li>
+							<li><a title="primer_layout_has_sidebar" href="function-primer_layout_has_sidebar.html">primer_layout_has_sidebar</a></li>
+							<li><a title="primer_paging_nav" href="function-primer_paging_nav.html">primer_paging_nav</a></li>
+							<li><a title="primer_post_format" href="function-primer_post_format.html">primer_post_format</a></li>
+							<li><a title="primer_post_nav" href="function-primer_post_nav.html">primer_post_nav</a></li>
+							<li><a title="primer_posted_on" href="function-primer_posted_on.html">primer_posted_on</a></li>
+							<li><a title="primer_register_sidebars" href="function-primer_register_sidebars.html">primer_register_sidebars</a></li>
+							<li><a title="primer_scripts" href="function-primer_scripts.html">primer_scripts</a></li>
+							<li><a title="primer_setup" href="function-primer_setup.html">primer_setup</a></li>
+							<li><a title="primer_setup_author" href="function-primer_setup_author.html">primer_setup_author</a></li>
+							<li><a title="primer_the_custom_logo" href="function-primer_the_custom_logo.html">primer_the_custom_logo</a></li>
+							<li><a title="primer_the_page_title" href="function-primer_the_page_title.html">primer_the_page_title</a></li>
+							<li><a title="primer_the_site_description" href="function-primer_the_site_description.html">primer_the_site_description</a></li>
+							<li><a title="primer_the_site_title" href="function-primer_the_site_title.html">primer_the_site_title</a></li>
+							<li><a title="primer_use_featured_hero_image" href="function-primer_use_featured_hero_image.html">primer_use_featured_hero_image</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+						<div id="right" class="col-md-9">
+<div id="content" class="function">
+	<h1>Function primer_get_the_widget</h1>
+
+
+	<div class="description">
+	<p>Render a widget and store it in an output buffer</p>
+	</div>
+
+	<div class="info">
+		
+		<b>Package:</b> <a href="package-Functions.html">Functions</a><br>
+				<b>Author:</b>
+				GoDaddy<br>
+		<b>Located at</b> <a href="source-function-primer_get_the_widget.html#617-634" title="Go to source code">inc/helpers.php</a><br>
+	</div>
+
+	<p class="method-signature">
+primer_get_the_widget( string <var>$widget</var> string <var>$instance</var> <span class="php-quote">''</span> array <var>$args</var> <span class="php-quote">''</span> )
+	</p>
+
+
+	<div class="section">
+		<h3>Parameters summary</h3>
+		<table class="summary">
+		<tr id="$widget">
+			<td class="name"><code>string</code></td>
+			<td class="value"><code><var>$widget</var></code></td>
+			<td>Class name of the widget to render.</td>
+		</tr>
+		<tr id="$instance">
+			<td class="name"><code>string</code></td>
+			<td class="value"><code><var>$instance</var> = <span class="php-quote">''</span></code></td>
+			<td>Instance</td>
+		</tr>
+		<tr id="$args">
+			<td class="name"><code>array</code></td>
+			<td class="value"><code><var>$args</var> = <span class="php-quote">''</span></code></td>
+			<td>Array of arguments for the widget.</td>
+		</tr>
+		</table>
+	</div>
+
+	<div class="section">
+		<h3>Returns</h3>
+		<ul>
+			<li>
+				<span class="name"><code>
+					mixed
+				</code></span>
+				<span>
+					mixed
+				</span>
+			</li>
+		</ul>
+	</div>
+
+
+</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<section id="socials" class="back-3">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-5  social text-center">
+				<div class="col-sm-3 col-xs-3">
+				</div>
+
+				<div class="col-sm-3 col-xs-3">
+					<a class="github-button" href="https://github.com/godaddy/wp-primer-theme" data-icon="octicon-star" data-count-href="/godaddy/wp-primer-theme/stargazers" data-count-api="/repos/godaddy/wp-primer-theme#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star godaddy/wp-primer-theme on GitHub">Star</a>
+				</div>
+
+				<div class="col-sm-3 col-xs-3">
+					<a class="github-button" href="https://github.com/godaddy/wp-primer-theme/fork" data-icon="octicon-repo-forked" data-count-href="/godaddy/wp-primer-theme/network" data-count-api="/repos/godaddy/wp-primer-theme#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork godaddy/wp-primer-theme on GitHub">Fork</a>
+					<script async defer src="https://buttons.github.io/buttons.js"></script>
+				</div>
+
+				<div class="col-sm-3 col-xs-3">
+						<a href="https://twitter.com/GoDaddy" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @GoDaddy</a>
+						<script type="text/javascript">!function(d,s,id) { var js, fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){ js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);} }(document, 'script', 'twitter-wjs');</script>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-3 social-footer text-center">
+				<a href="https://twitter.com/GoDaddy" data-toggle="tooltip" title="Twitter"><i class="fa icon-social fa-twitter"></i>
+				<a href="https://github.com/GoDaddy" data-toggle="tooltip" title="Github"><i class="fa icon-social fa-github"></i></a>
+			</div>
+
+
+		</div>
+	</div>
+</section>
+
+<footer id="footer" class="footer-wrapper">
+	<div class="container">
+		<div class="row col-p30">
+			<div class="col-sm-12 col-md-3">
+				<div class="footer-widget t-footer">
+					<div class="col-md-12">
+						<a href="https://www.openhub.net/p/wp-primer-theme">
+							<img alt="OpenHub" src="resources/open-hub.png?826742001627a261451eeee1b4203188f7b3db3c">
+						</a>
+					</div>
+					<br>
+					<br>
+					<div class="col-md-12">
+							<a href="https://www.godaddy.com">
+								<img alt="GoDaddy Logo" src="resources/godaddy-logo-white.png?0476a317128b1da2a394c50c82b04df794bc37d4">
+							</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-9">
+				<div class="col-md-3 col-sm-6 business-solution">
+					<ul class="footer-menu">
+<li class="menu-title">
+
+	<a href="https://www.GoDaddy.com">
+
+		<i class="fa fa-menu-title fa-briefcase"></i> GoDaddy Products
+
+	</a>
+
+</li>
+					</ul>
+				</div>
+
+				<div class="col-md-3 col-sm-6">
+					<ul class="footer-menu">
+<li class="menu-title">
+	<i class="fa fa-menu-title fa-book"></i>Documentation
+</li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/intro.html"><i class="fa fa-menu fa-chevron-right"></i>Wiki</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html"><i class="fa fa-menu fa-chevron-right"></i>Documentation</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/how-to.html"><i class="fa fa-menu fa-chevron-right"></i>Tutorials</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/license.html"><i class="fa fa-menu fa-chevron-right"></i>License</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/changelog.html"><i class="fa fa-menu fa-chevron-right"></i>Changelog</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-3 col-sm-6">
+					<ul class="footer-menu">
+<li class="menu-title"><i class="fa fa-menu-title fa-users"></i>Community</li>
+
+<li><a href="https://aboutus.godaddy.net/about-us/default.aspx"><i class="fa fa-menu fa-chevron-right"></i>About Us</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-3 col-sm-6">
+					<ul class="footer-menu">
+<li class="menu-title"><i class="fa fa-menu-title fa-comments-o"></i>Help &amp; Support</li>
+
+<li><a href="https://github.com/godaddy/wp-primer-theme/issues"><i class="fa fa-menu fa-github"></i>GitHub</a></li>
+<li><a href="https://wordpress.org/support/theme/primer"><i class="fa fa-menu fa-wordpress"></i>WordPress</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 text-center mt30">
+				<p class="copyright">
+					© Copyright 2017, GoDaddy, Inc. Generated using <a href="http://sphinx.pocoo.org/">Sphinx</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
