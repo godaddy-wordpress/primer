@@ -1,0 +1,637 @@
+# Copyright (c) 2017 GoDaddy Operating Company, LLC. All Rights Reserved.
+msgid ""
+msgstr ""
+"Project-Id-Version: Primer 1.4.1\n"
+"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
+"POT-Creation-Date: 2017-02-07 23:43:35+00:00\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
+
+#: 404.php:22 templates/parts/404-woocommerce.php:22
+msgid "Oops! That page can't be found."
+msgstr "Hups! Sivua ei löydy."
+
+#: 404.php:28 templates/parts/404-woocommerce.php:28
+msgid ""
+"It looks like nothing was found at this location. Please try searching below:"
+msgstr ""
+"Näyttää siltä, että mitään ei löytynyt tästä sijainnista. Yritä etsiä alla:"
+
+#: comments.php:54 comments.php:79
+msgid "Comment navigation"
+msgstr "Kommenttien navigointi"
+
+#: comments.php:81
+msgid "&larr; Older Comments"
+msgstr "&larr; Vanhemmat kommentit"
+
+#: comments.php:83
+msgid "Newer Comments &rarr;"
+msgstr "Uudemmat kommentit &rarr;"
+
+#: comments.php:93
+msgid "Comments are closed."
+msgstr "Kommentit on suljettu."
+
+#: content-none.php:16
+msgid "Nothing Found"
+msgstr "Ei tuloksia"
+
+#: content-none.php:31
+msgid "Get started here"
+msgstr "Aloita tästä"
+
+#: content-none.php:39
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Pahoittelemme – mikään ei vastannut hakutermejäsi. Yritä uudelleen eri "
+"avainsanoilla."
+
+#: content-none.php:45
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"Näyttää siltä, ettemme löydä sitä, mitä olet etsimässä. Ehkä haku voisi "
+"auttaa."
+
+#: functions.php:159
+msgid "Featured"
+msgstr "Esittelyssä"
+
+#: functions.php:165 functions.php:407
+msgid "Hero"
+msgstr "Hero"
+
+#: functions.php:246
+msgid "Primary Menu"
+msgstr "Ensisijainen valikko"
+
+#: functions.php:247
+msgid "Social Menu"
+msgstr "Sosiaalinen valikko"
+
+#: functions.php:248
+msgid "Footer Menu"
+msgstr "Alapalkkivalikko"
+
+#: functions.php:367
+msgid "Sidebar"
+msgstr "Sivupalkki"
+
+#: functions.php:368
+msgid ""
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
+msgstr ""
+"Ensisijainen sivupakki näkyy jokaisen sivun, julkaisun, arkiston ja "
+"hakumallin sisällön vieressä."
+
+#: functions.php:375
+msgid "Secondary Sidebar"
+msgstr "Toissijainen sivupalkki"
+
+#: functions.php:376
+msgid ""
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
+msgstr ""
+"Toissijainen sivupalkki näkyy vain, jos olet valinnut kolmesarakkeisen "
+"asettelun."
+
+#: functions.php:383
+msgid "Footer 1"
+msgstr "Alapalkki 1"
+
+#: functions.php:384
+msgid "This sidebar is the first column of the footer widget area."
+msgstr "Tämä sivupalkki on alapalkin vimpainalueen ensimmäinen sarake."
+
+#: functions.php:391
+msgid "Footer 2"
+msgstr "Alapalkki 2"
+
+#: functions.php:392
+msgid "This sidebar is the second column of the footer widget area."
+msgstr "Tämä sivupalkki on alapalkin vimpainalueen toinen sarake."
+
+#: functions.php:399
+msgid "Footer 3"
+msgstr "Alapalkki 3"
+
+#: functions.php:400
+msgid "This sidebar is the third column of the footer widget area."
+msgstr "Tämä sivupalkki on alapalkin vimpainalueen kolmas sarake."
+
+#: functions.php:408
+msgid "Hero widgets appear over the header image on the front page."
+msgstr "Hero-vimpaimet näkyvät etusivun otsikkokuvan päällä."
+
+#: header.php:42
+msgid "Skip to content"
+msgstr "Siirry sisältöön"
+
+#: inc/compat/woocommerce.php:391
+msgid "Featured Products"
+msgstr "Featured Products"
+
+#: inc/compat/woocommerce.php:401
+msgid "On Sale Now"
+msgstr "On Sale Now"
+
+#: inc/compat/woocommerce.php:415
+msgid "New In Store"
+msgstr "New In Store"
+
+#: inc/compat/woocommerce.php:567
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d item"
+msgstr[1] "%d items"
+
+#: inc/compat/wordpress.php:47
+msgid ""
+"Primer requires at least WordPress version %1$s. You are running version "
+"%2$s. Please upgrade and try again."
+msgstr ""
+"Primer edellyttää vähintään WordPress-version %1$s. Olet käyttämässä "
+"versiota %2$s. Päivitä ja yritä uudelleen."
+
+#: inc/customizer/colors.php:47
+msgid "Site Title Text"
+msgstr "Sivuston nimen teksti"
+
+#: inc/customizer/colors.php:63
+msgid "Tagline Text"
+msgstr "Tunnuslauseteksti"
+
+#: inc/customizer/colors.php:74
+msgid "Hero Text"
+msgstr "Hero-teksti"
+
+#: inc/customizer/colors.php:105 inc/customizer/colors.php:323
+msgid "Text"
+msgstr "Teksti"
+
+#: inc/customizer/colors.php:127
+msgid "Heading Text"
+msgstr "Otsikkoteksti"
+
+#: inc/customizer/colors.php:128
+msgid "Post titles, widget titles, form labels, table headers and buttons."
+msgstr ""
+"Artikkelien nimet, widget-nimet, lomakenimet, taulukkojen otsikot ja "
+"painikkeet."
+
+#: inc/customizer/colors.php:149
+msgid "Primary Text"
+msgstr "Ensisijainen teksti"
+
+#: inc/customizer/colors.php:150
+msgid "Paragraphs, lists, menu links, quotes and tables."
+msgstr "Kappaleet, luettelot, valikkolinkit, lainaukset ja taulukot."
+
+#: inc/customizer/colors.php:195
+msgid "Secondary Text"
+msgstr "Toissijainen teksti"
+
+#: inc/customizer/colors.php:196
+msgid "Post bylines, comment counts, post footers and quote footers."
+msgstr ""
+"Artikkelin tekijöiden nimet, kommenttimäärät, artikkelien alapalkit ja "
+"lainausten alapalkit."
+
+#: inc/customizer/colors.php:210
+msgid "Widget Heading Text"
+msgstr "Widget-otsikkoteksti"
+
+#: inc/customizer/colors.php:227
+msgid "Widget Text"
+msgstr "Widget-teksti"
+
+#: inc/customizer/colors.php:239
+msgid "Menu Text"
+msgstr "Valikkoteksti"
+
+#: inc/customizer/colors.php:261
+msgid "Copyright Text"
+msgstr "Copyright-teksti"
+
+#: inc/customizer/colors.php:275
+msgid "Link Text"
+msgstr "Linkkiteksti"
+
+#: inc/customizer/colors.php:297 inc/customizer/colors.php:379
+msgid "Background"
+msgstr "Tausta"
+
+#: inc/customizer/colors.php:340
+msgid "Page Background"
+msgstr "Sivun tausta"
+
+#: inc/customizer/colors.php:350
+msgid "Content Background"
+msgstr "Sisällön tausta"
+
+#: inc/customizer/colors.php:360
+msgid "Hero Background"
+msgstr "Hero-tausta"
+
+#: inc/customizer/colors.php:389
+msgid "Widgets Background"
+msgstr "Widget-tausta"
+
+#: inc/customizer/colors.php:400
+msgid "Widget Content Background"
+msgstr "Widget-sisällön tausta"
+
+#: inc/customizer/colors.php:411
+msgid "Footer Background"
+msgstr "Alapalkin tausta"
+
+#: inc/customizer/colors.php:449 inc/customizer/layouts.php:302
+msgid "Custom"
+msgstr "Mukautettu"
+
+#: inc/customizer/colors.php:466 inc/customizer/layouts.php:293
+msgid "Default"
+msgstr "Oletus"
+
+#: inc/customizer/colors.php:706
+msgid "Colors"
+msgstr "Värit"
+
+#: inc/customizer/colors.php:715
+msgid "Color Schemes"
+msgstr "Värit"
+
+#: inc/customizer/colors.php:723
+msgid "Header"
+msgstr "Otsikko"
+
+#: inc/customizer/colors.php:731
+msgid "Menu"
+msgstr "Valikko"
+
+#: inc/customizer/colors.php:739
+msgid "Buttons"
+msgstr "Painikkeet"
+
+#: inc/customizer/colors.php:747
+msgid "Content"
+msgstr "Sisältö"
+
+#: inc/customizer/colors.php:755
+msgid "Footer"
+msgstr "Alatunniste"
+
+#: inc/customizer/colors.php:965
+msgid "Base Color Scheme"
+msgstr "Perusväri"
+
+#: inc/customizer/colors.php:1274
+msgid "Hero Background Overlay"
+msgstr "Hero-taustan peitekerros"
+
+#: inc/customizer/colors.php:1275
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+"Hallitse värikerroksen läpinäkyvyyttä mukautettua otsikkokuvaa käytettäessä."
+
+#: inc/customizer/fonts.php:87
+msgid "Site Title"
+msgstr "Sivuston nimi"
+
+#: inc/customizer/fonts.php:88
+msgid "Site title text in the header."
+msgstr "Sivuston nimen teksti otsikossa."
+
+#: inc/customizer/fonts.php:97
+msgid "Navigation"
+msgstr "Navigointi"
+
+#: inc/customizer/fonts.php:98
+msgid "Primary menu links and button links."
+msgstr "Ensisijaiset valikkolinkit ja painikelinkit"
+
+#: inc/customizer/fonts.php:108
+msgid "Headings"
+msgstr "Otsikot"
+
+#: inc/customizer/fonts.php:109
+msgid "Post titles, widget titles, form labels, and table headers."
+msgstr "Artikkelien nimet, widget-nimet, lomakenimet ja taulukkojen otsikot."
+
+#: inc/customizer/fonts.php:124
+msgid "Primary"
+msgstr "Ensisijainen"
+
+#: inc/customizer/fonts.php:125
+msgid "Paragraphs, lists, links, quotes, and tables."
+msgstr "Kappaleet, luettelot, linkit, lainaukset ja taulukot."
+
+#: inc/customizer/fonts.php:139
+msgid "Secondary"
+msgstr "Toissijainen"
+
+#: inc/customizer/fonts.php:140
+msgid "Bylines, comment counts, reply links, post footers, and quote footers."
+msgstr ""
+"Tekijöiden nimet, kommenttimäärät, vastauslinkit, artikkelien alapalkit ja "
+"lainausten alapalkit."
+
+#: inc/customizer/fonts.php:188
+msgid "Fonts"
+msgstr "Fontit"
+
+#: inc/customizer/layouts.php:53
+msgid "One Column: Wide"
+msgstr "Yksi sarake: Leveä"
+
+#: inc/customizer/layouts.php:54
+msgid "One Column: Narrow"
+msgstr "Yksi sarake: Kapea"
+
+#: inc/customizer/layouts.php:55 inc/customizer/layouts.php:144
+msgid "Two Columns: Content | Sidebar"
+msgstr "Kaksi saraketta: Sisältö | Sivupalkki"
+
+#: inc/customizer/layouts.php:56 inc/customizer/layouts.php:143
+msgid "Two Columns: Sidebar | Content"
+msgstr "Kaksi saraketta: Sivupalkki | Sisältö"
+
+#: inc/customizer/layouts.php:57 inc/customizer/layouts.php:146
+msgid "Three Columns: Content | Sidebar | Sidebar"
+msgstr "Kolme saraketta: Sisältö | Sivupalkki | Sivupalkki"
+
+#: inc/customizer/layouts.php:58
+msgid "Three Columns: Sidebar | Content | Sidebar"
+msgstr "Kolme saraketta: Sivupalkki | Sisältö | Sivupalkki"
+
+#: inc/customizer/layouts.php:59 inc/customizer/layouts.php:145
+msgid "Three Columns: Sidebar | Sidebar | Content"
+msgstr "Kolme saraketta: Sivupalkki | Sivupalkki | Sisältö"
+
+#: inc/customizer/layouts.php:256 inc/customizer/layouts.php:434
+msgid "Layout"
+msgstr "Asettelu"
+
+#: inc/customizer/layouts.php:460
+msgid "Page Width"
+msgstr "Sivun leveys"
+
+#: inc/customizer/layouts.php:461
+msgid "Display your site differently on larger screens."
+msgstr "Näyttää sivustosi eri lailla suuremmissa näytöissä."
+
+#: inc/customizer/site-identity.php:72
+msgid "Display theme author credit"
+msgstr "Näytä teeman suunnittelijan tiedot"
+
+#: inc/customizer.php:176
+msgid "Use featured image"
+msgstr "Käytä pääkuvaa"
+
+#: inc/customizer.php:177
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr "Anna nykyisen artikkelin pääkuvan korvata hero-kuva."
+
+#: inc/helpers.php:52
+msgid "404 Page Not Found"
+msgstr "404 Sivua ei löytynyt"
+
+#: inc/template-tags.php:133
+msgid "Posts navigation"
+msgstr "Julkaisujen navigointi"
+
+#: inc/template-tags.php:139
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Vanhemmat julkaisut"
+
+#: inc/template-tags.php:145
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Uudemmat julkaisut <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:178
+msgid "Post navigation"
+msgstr "Julkaisunavigointi"
+
+#: inc/template-tags.php:279
+msgid "Blog"
+msgstr "Blogi"
+
+#: templates/parts/404-woocommerce.php:30
+msgid "Search"
+msgstr "Search"
+
+#: templates/parts/404-woocommerce.php:36
+msgid "Promoted Products"
+msgstr "Promoted Products"
+
+#: templates/parts/404-woocommerce.php:42
+#: templates/parts/404-woocommerce.php:44
+msgid "Popular Products"
+msgstr "Popular Products"
+
+#: templates/parts/loop/page-content.php:27
+#: templates/parts/loop/post-content.php:18
+msgid "Pages:"
+msgstr "Sivut:"
+
+#: templates/parts/loop/page-footer.php:9
+#: templates/parts/loop/post-footer.php:14
+#: templates/parts/loop/post-search-footer.php:46
+msgid "Edit"
+msgstr "Muokkaa"
+
+#: templates/parts/loop/post-content.php:14
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Lue lisää <span class=\"meta-nav\">&rarr;</span>"
+
+#: templates/parts/loop/post-meta.php:24
+#: templates/parts/loop/post-search-footer.php:42
+msgid "Leave a comment"
+msgstr "Jätä kommentti"
+
+#: templates/parts/loop/post-meta.php:24
+#: templates/parts/loop/post-search-footer.php:42
+msgid "1 Comment"
+msgstr "1 kommentti"
+
+#. Theme Name of the plugin/theme
+msgid "Primer"
+msgstr "Primer"
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/godaddy/wp-primer-theme"
+msgstr "https://github.com/godaddy/wp-primer-theme"
+
+#. Description of the plugin/theme
+msgid ""
+"Primer is a powerful theme that brings clarity to your content in a fresh "
+"design."
+msgstr ""
+"Primer on tehokas teema, joka tuo selkeyttä sisältöösi eloisalla tavalla."
+
+#. Author of the plugin/theme
+msgid "GoDaddy"
+msgstr "GoDaddy"
+
+#. Author URI of the plugin/theme
+msgid "https://www.godaddy.com/"
+msgstr "https://www.godaddy.com/"
+
+#: comments.php:34
+msgctxt "1. number of comments, 2. post title"
+msgid "One thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
+msgstr[0] "Yksi ajatus aiheesta %2$s"
+msgstr[1] "%1$d ajatusta aiheesta %2$s"
+
+#: comments.php:56
+msgctxt "left arrow (LTR) / right arrow (RTL)"
+msgid "%s Older Comments"
+msgstr "%s Vanhemmat kommentit"
+
+#: comments.php:58
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Newer Comments %s"
+msgstr "Uudemmat kommentit %s"
+
+#: templates/parts/loop/post-excerpt.php:14
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Continue Reading %s"
+msgstr "Jatka lukemista %s"
+
+#: content-none.php:27
+msgctxt "link to write a new post"
+msgid "Ready to publish your first post? %s."
+msgstr "Oletko valmis julkaisemaan ensimmäisen julkaisusi? %s."
+
+#: inc/customizer/colors.php:476
+msgctxt "color scheme name"
+msgid "Blush"
+msgstr "Blush-punainen"
+
+#: inc/customizer/colors.php:480
+msgctxt "color scheme name"
+msgid "Bronze"
+msgstr "Pronssi"
+
+#: inc/customizer/colors.php:484
+msgctxt "color scheme name"
+msgid "Canary"
+msgstr "Kanariankeltainen"
+
+#: inc/customizer/colors.php:488
+msgctxt "color scheme name"
+msgid "Cool"
+msgstr "Viileä"
+
+#: inc/customizer/colors.php:492
+msgctxt "color scheme name"
+msgid "Dark"
+msgstr "Tumma"
+
+#: inc/customizer/colors.php:496
+msgctxt "color scheme name"
+msgid "Iguana"
+msgstr "Leguaaninvihreä"
+
+#: inc/customizer/colors.php:500
+msgctxt "color scheme name"
+msgid "Muted"
+msgstr "Hillitty"
+
+#: inc/customizer/colors.php:504
+msgctxt "color scheme name"
+msgid "Plum"
+msgstr "Luumu"
+
+#: inc/customizer/colors.php:508
+msgctxt "color scheme name"
+msgid "Rose"
+msgstr "Ruusu"
+
+#: inc/customizer/colors.php:512
+msgctxt "color scheme name"
+msgid "Tangerine"
+msgstr "Mandariini"
+
+#: inc/customizer/colors.php:516
+msgctxt "color scheme name"
+msgid "Turquoise"
+msgstr "Turkoosi"
+
+#: inc/customizer/fonts.php:213
+msgctxt "font name"
+msgid "%s (Default)"
+msgstr "%s (Oletus)"
+
+#: inc/customizer/layouts.php:97
+msgctxt "fixed-width page layout"
+msgid "Fixed"
+msgstr "Kiinteä"
+
+#: inc/customizer/layouts.php:98
+msgctxt "fluid-width page layout"
+msgid "Fluid"
+msgstr "Joustava"
+
+#: inc/helpers.php:41
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr "Tulokset haulle: %s"
+
+#: inc/hooks.php:384
+msgctxt "page number"
+msgid "Page %d"
+msgstr "Sivu %d"
+
+#: templates/parts/credit.php:14
+msgctxt "1. copyright symbol, 2. year, 3. site title"
+msgid "Copyright %1$s %2$d %3$s"
+msgstr "Copyright %1$s %2$d %3$s"
+
+#: templates/parts/credit.php:34
+msgctxt "1. theme name link, 2. theme author link"
+msgid "%1$s WordPress theme by %2$s"
+msgstr "%1$s WordPress-teeman suunnittelija: %2$s"
+
+#: templates/parts/loop/post-footer.php:20
+#: templates/parts/loop/post-footer.php:32
+#: templates/parts/loop/post-search-footer.php:14
+#: templates/parts/loop/post-search-footer.php:26
+msgctxt "separator for items in a list"
+msgid ", "
+msgstr ", "
+
+#: templates/parts/loop/post-footer.php:26
+#: templates/parts/loop/post-search-footer.php:20
+msgctxt "category list"
+msgid "Posted in: %s"
+msgstr "Julkaistu luokassa: %s"
+
+#: templates/parts/loop/post-footer.php:38
+#: templates/parts/loop/post-search-footer.php:32
+msgctxt "tag list"
+msgid "Filed under: %s"
+msgstr "Tallennettu tunnistenimellä: %s"
+
+#: templates/parts/loop/post-meta.php:24
+#: templates/parts/loop/post-search-footer.php:42
+msgctxt "number of comments"
+msgid "% Comments"
+msgstr "% kommenttia"
