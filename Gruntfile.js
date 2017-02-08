@@ -205,7 +205,7 @@ module.exports = function( grunt ) {
 					},
 					{
 						from: /  $/gm,
-						to: ' <br />'
+						to: '<br />'
 					}
 				],
 				src: [ '.dev/docs/en/intro.md' ]
