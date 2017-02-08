@@ -331,28 +331,19 @@ module.exports = function( grunt ) {
 		wp_readme_to_markdown: {
 			options: {
 				post_convert: function( readme ) {
-					readme = addLinksToTags( readme );
+					var matches = readme.match( /\*\*Tags:\*\*(.*)\n/ ),
+					    tags    = matches[1].trim().split( ', ' ),
+					    section = matches[0];
 
-					var badges = {
-						david_dev: '[![devDependency Status](https://david-dm.org/' + pkg.repository + '/dev-status.svg)](https://david-dm.org/' + pkg.repository + '?type=dev)',
-						php: '[![Required PHP Version](https://img.shields.io/badge/php-' + pkg.engines.php + '-8892bf.svg)](https://secure.php.net/supported-versions.php)',
-						locales: '[![Supported Locales](https://img.shields.io/badge/locales-' + Object.keys( pkg.locales ).length + '-orange.svg)]()',
-						wordpress: '[![Required WordPress Version](https://img.shields.io/badge/wordpress-' + pkg.engines.wordpress + '-0073aa.svg)](https://wordpress.org/download/release-archive/)',
-						travis: '[![Build Status](https://travis-ci.org/' + pkg.repository + '.svg?branch=master)](https://travis-ci.org/' + pkg.repository + ')',
-						coveralls: '[![Coverage Status](https://coveralls.io/repos/' + pkg.repository + '/badge.svg?branch=master)](https://coveralls.io/github/' + pkg.repository + ')',
-						license: '[![License](https://img.shields.io/github/license/' + pkg.repository + '.svg)](https://github.com/' + pkg.repository + '/blob/master/license.txt)'
-					};
+					for ( var i = 0; i < tags.length; i++ ) {
+						section = section.replace( tags[i], '[' + tags[i] + '](https://wordpress.org/themes/tags/' + tags[i] + '/)' );
+					}
 
-					// Required
-					readme = readme.replace( '## Description ##', badges.david_dev + "  \n\n## Description ##" );
+					// Tag links
+					readme = readme.replace( matches[0], section );
 
-					// Extras
-					readme = ( pkg.engines.php )                       ? addBadge( readme, badges.php )       : readme;
-					readme = ( pkg.engines.wordpress )                 ? addBadge( readme, badges.wordpress ) : readme;
-					readme = ( Object.keys( pkg.locales ).length > 0 ) ? addBadge( readme, badges.locales )   : readme;
-					readme = grunt.file.exists( '.travis.yml' )        ? addBadge( readme, badges.travis )    : readme;
-					readme = grunt.file.exists( '.coveralls.yml' )     ? addBadge( readme, badges.coveralls ) : readme;
-					readme = grunt.file.exists( 'license.txt' )        ? addBadge( readme, badges.license )   : readme;
+					// Badges
+					readme = readme.replace( '## Description ##', grunt.template.process( pkg.badges.join( ' ' ) ) + "  \n\n## Description ##" );
 
 					return readme;
 				}
@@ -365,28 +356,6 @@ module.exports = function( grunt ) {
 		}
 
 	} );
-
-	function addLinksToTags( readme ) {
-
-		var matches = readme.match( /\*\*Tags:\*\*(.*)\n/ ),
-		    tags    = matches[1].trim().split( ', ' ),
-		    section = matches[0];
-
-		for ( var i = 0; i < tags.length; i++ ) {
-
-			section = section.replace( tags[i], '[' + tags[i] + '](https://wordpress.org/themes/tags/' + tags[i] + '/)' );
-
-		}
-
-		return readme.replace( matches[0], section );
-
-	}
-
-	function addBadge( readme, badge ) {
-
-		return readme.replace( " \n\n## Description ##", badge + "  \n\n## Description ##" );
-
-	}
 
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
