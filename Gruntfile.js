@@ -36,7 +36,7 @@ module.exports = function( grunt ) {
 				force: true
 			},
 			build: [ 'build/*' ],
-			docs: [ '.dev/docs/build/html/en/documentation/*' ]
+			docs: [ '.dev/docs/sphinx/src/documentation/*' ]
 		},
 
 		copy: {
@@ -57,15 +57,15 @@ module.exports = function( grunt ) {
 			},
 			docs: {
 				expand: true,
-				cwd: '.dev/docs/en/documentation/',
+				cwd: '.dev/docs/sphinx/src/documentation/',
 				src: [ '**/*' ],
-				dest: '.dev/docs/build/html/en/documentation/'
+				dest: '.dev/docs/build/html/documentation/'
 			},
 			readme: {
 				expand: true,
 				dot: true,
 				cwd: '.',
-				dest: '.dev/docs/en/',
+				dest: '.dev/docs/sphinx/src/',
 				src: [ 'readme.md' ],
 				rename: function( dest, src ) {
 					return dest + src.replace( 'readme', 'intro' );
@@ -275,17 +275,17 @@ module.exports = function( grunt ) {
 				'pip install -r .dev/docs/requirements.txt',
 				'cd .dev/docs',
 				'make clean',
-				'git clone -b gh-pages git@github.com:godaddy/wp-primer-theme.git build/html/en/',
+				'git clone -b gh-pages git@github.com:godaddy/wp-primer-theme.git build/html',
 				'make html'
 			].join( ' && ' ),
 			docs: [
-				'apigen generate -q',
+				'apigen generate --config .dev/docs/apigen/apigen.neon -q',
 				'cd .dev/docs/apigen',
 				'php contributor-list.php',
 				'php hook-docs.php'
 			].join( ' && ' ),
 			deploy_docs: [
-				'cd .dev/docs/build/html/en',
+				'cd .dev/docs/build/html',
 				'git add .',
 				'git commit -m "Update Documentation"',
 				'git push origin gh-pages --force'
@@ -365,7 +365,7 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'deploy',      [ 'build', 'wp_deploy', 'clean:build' ] );
 	grunt.registerTask( 'deploy-docs', [ 'update-docs', 'shell:deploy_docs' ] );
 	grunt.registerTask( 'readme',      [ 'wp_readme_to_markdown' ] );
-	grunt.registerTask( 'update-docs', [ 'readme', 'shell:sphinx', 'shell:docs', 'replace:docs', 'copy:readme', 'clean:docs', 'copy:docs', 'replace:intro' ] );
+	grunt.registerTask( 'update-docs', [ 'readme', 'clean:docs', 'shell:sphinx', 'shell:docs', 'replace:docs', 'copy:readme', 'copy:docs', 'replace:intro' ] );
 	grunt.registerTask( 'update-pot',  [ 'makepot' ] );
 	grunt.registerTask( 'update-mo',   [ 'potomo' ] );
 	grunt.registerTask( 'version',     [ 'replace', 'readme', 'build' ] );

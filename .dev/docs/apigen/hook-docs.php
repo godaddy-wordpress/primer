@@ -359,7 +359,7 @@ class Primer_Hook_Finder {
 
 		echo '</div><div id="footer">';
 
-		file_put_contents( '../en/documentation/hook-docs.html', ob_get_clean() );
+		file_put_contents( '../sphinx/src/documentation/hook-docs.html', ob_get_clean() );
 
 		echo "Primer Hook documentation successfully generated!\n";
 

@@ -5,7 +5,7 @@ title: Primer Theme
 source: .
 
 # documentation destination
-destination: .dev/docs/en/documentation/
+destination: .dev/docs/sphinx/src/documentation/
 
 ## excluded files
 exclude:

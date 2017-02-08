@@ -1,4 +1,3 @@
-.dev/docs/en/documentation/
 .DS_Store
 .sass-cache/
 .sublime-grunt.cache
@@ -9,4 +8,5 @@ svn-url
 svn-username
 tests/codeception/_output/*
 vendor/
-.dev/docs/apigen/theme-godaddy/
+.dev/docs/build/
+.dev/docs/sphinx/src/documentation/
