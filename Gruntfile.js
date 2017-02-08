@@ -200,7 +200,7 @@ module.exports = function( grunt ) {
 				overwrite: true,
 				replacements: [
 					{
-						from: /^\[!\[(.|\r?\n)*## Description ##/m, // Badges cause errors in the sphinx build process
+						from: /^\[!\[(.|\r|\n)*## Description ##/m, // Badges cause errors in the sphinx build process
 						to: '## Description ##'
 					},
 					{
