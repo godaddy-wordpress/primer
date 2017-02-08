@@ -200,7 +200,7 @@ module.exports = function( grunt ) {
 				overwrite: true,
 				replacements: [
 					{
-						from: /^\[!\[(.|\n)*## Description ##/m, // Badges cause errors in the sphinx build process
+						from: /^\[!\[(.|\r?\n)*## Description ##/m, // Badges cause errors in the sphinx build process
 						to: '## Description ##'
 					},
 					{
@@ -208,7 +208,7 @@ module.exports = function( grunt ) {
 						to: '<br />'
 					}
 				],
-				src: [ '.dev/docs/en/intro.md' ]
+				src: [ '.dev/docs/sphinx/src/intro.md' ]
 			},
 			php: {
 				overwrite: true,
