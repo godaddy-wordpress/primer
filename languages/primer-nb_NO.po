@@ -4,17 +4,16 @@ msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
 "POT-Creation-Date: 2017-02-07 23:43:35+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: 404.php:22 templates/parts/404-woocommerce.php:22
 msgid "Oops! That page can't be found."
@@ -22,10 +21,10 @@ msgstr "Ops! Fant ikke den siden."
 
 #: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
-"Det virker ikke som om noe ble funnet på denne plasseringen. Prøv å søke "
-"nedenfor:"
+"Det virker ikke som om noe ble funnet på denne plasseringen. Prøv å søke nedenfor:"
 
 #: comments.php:54 comments.php:79
 msgid "Comment navigation"
@@ -60,11 +59,8 @@ msgstr ""
 "noen andre søkeord."
 
 #: content-none.php:45
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr ""
-"Det virker ikke som om vi finner det du leter etter. Kanskje det kan hjelpe "
-"å søke."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Det virker ikke som om vi finner det du leter etter. Kanskje det kan hjelpe å søke."
 
 #: functions.php:159
 msgid "Featured"
@@ -104,11 +100,10 @@ msgstr "Sekundær sidestolpe"
 
 #: functions.php:376
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
-"Den sekundære sidestolpen vil kun vises når du har valgt en utforming med "
-"tre kolonner."
+"Den sekundære sidestolpen vil kun vises når du har valgt en utforming med tre kolonner."
 
 #: functions.php:383
 msgid "Footer 1"
@@ -116,9 +111,7 @@ msgstr "Bunntekst 1"
 
 #: functions.php:384
 msgid "This sidebar is the first column of the footer widget area."
-msgstr ""
-"Denne sidestolpen er den første kolonnen i bunntekstens "
-"kontrollprogramområde."
+msgstr "Denne sidestolpen er den første kolonnen i bunntekstens kontrollprogramområde."
 
 #: functions.php:391
 msgid "Footer 2"
@@ -126,8 +119,7 @@ msgstr "Bunntekst 2"
 
 #: functions.php:392
 msgid "This sidebar is the second column of the footer widget area."
-msgstr ""
-"Denne sidestolpen er den andre kolonnen i bunntekstens kontrollprogramområde."
+msgstr "Denne sidestolpen er den andre kolonnen i bunntekstens kontrollprogramområde."
 
 #: functions.php:399
 msgid "Footer 3"
@@ -135,9 +127,7 @@ msgstr "Bunntekst 3"
 
 #: functions.php:400
 msgid "This sidebar is the third column of the footer widget area."
-msgstr ""
-"Denne sidestolpen er den tredje kolonnen i bunntekstens "
-"kontrollprogramområde."
+msgstr "Denne sidestolpen er den tredje kolonnen i bunntekstens kontrollprogramområde."
 
 #: functions.php:408
 msgid "Hero widgets appear over the header image on the front page."
@@ -170,8 +160,8 @@ msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer krever minst WordPress-versjon %1$s. Du kjører versjon %2$s. "
-"Oppgrader og prøv på nytt."
+"Primer krever minst WordPress-versjon %1$s. Du kjører versjon %2$s. Oppgrader "
+"og prøv på nytt."
 
 #: inc/customizer/colors.php:47
 msgid "Site Title Text"
@@ -195,9 +185,7 @@ msgstr "Topptekst-tekst"
 
 #: inc/customizer/colors.php:128
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Post titler, kontrollprogram-titler, skjemaetiketter, tabelloverskrifter og "
-"knapper."
+msgstr "Post titler, kontrollprogram-titler, skjemaetiketter, tabelloverskrifter og knapper."
 
 #: inc/customizer/colors.php:149
 msgid "Primary Text"
@@ -308,11 +296,8 @@ msgid "Hero Background Overlay"
 msgstr "Hero-bakgrunnsoverlegg"
 
 #: inc/customizer/colors.php:1275
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Kontroller gjennomsiktigheten av fargevalg når du bruker et egendefinert "
-"topptekstbilde."
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Kontroller gjennomsiktigheten av fargevalg når du bruker et egendefinert topptekstbilde."
 
 #: inc/customizer/fonts.php:87
 msgid "Site Title"
@@ -336,8 +321,7 @@ msgstr "Overskrifter"
 
 #: inc/customizer/fonts.php:109
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr ""
-"Post titler, kontrollprogram-titler, skjemaetiketter og tabelloverskrifter."
+msgstr "Post titler, kontrollprogram-titler, skjemaetiketter og tabelloverskrifter."
 
 #: inc/customizer/fonts.php:124
 msgid "Primary"
@@ -353,9 +337,7 @@ msgstr "Sekundært"
 
 #: inc/customizer/fonts.php:140
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Bylines, antall kommentarer, svarkoblinger, post-bunntekster og sitat-"
-"bunntekster."
+msgstr "Bylines, antall kommentarer, svarkoblinger, post-bunntekster og sitat-bunntekster."
 
 #: inc/customizer/fonts.php:188
 msgid "Fonts"
@@ -410,10 +392,8 @@ msgid "Use featured image"
 msgstr "Bruk profilert bilde"
 
 #: inc/customizer.php:177
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr ""
-"La det profilerte bildet på den nåværende posten overstyre hero-bildet."
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "La det profilerte bildet på den nåværende posten overstyre hero-bildet."
 
 #: inc/helpers.php:52
 msgid "404 Page Not Found"
