@@ -9,7 +9,7 @@
 
 Primer is a powerful theme that brings clarity to your content in a fresh design.  This is the parent for all themes in the GoDaddy Primer theme family.
 
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](https://gruntjs.com) [![devDependency Status](https://david-dm.org/godaddy/wp-primer-theme/dev-status.svg)](https://david-dm.org/godaddy/wp-primer-theme?type=dev) [![Required PHP Version](https://img.shields.io/badge/php->= 5.2-8892bf.svg)](https://secure.php.net/supported-versions.php) [![Required WordPress Version](https://img.shields.io/badge/wordpress->= 4.4-0073aa.svg)](https://wordpress.org/download/release-archive/) [![Build Status](https://travis-ci.org/godaddy/wp-primer-theme.svg?branch=master)](https://travis-ci.org/godaddy/wp-primer-theme) [![License](https://img.shields.io/github/license/godaddy/wp-primer-theme.svg)](https://github.com/godaddy/wp-primer-theme/blob/master/license.txt)  
+[![devDependency Status](https://david-dm.org/godaddy/wp-primer-theme/dev-status.svg)](https://david-dm.org/godaddy/wp-primer-theme?type=dev) [![Required PHP Version](https://img.shields.io/badge/php->= 5.2-8892bf.svg)](https://secure.php.net/supported-versions.php) [![Required WordPress Version](https://img.shields.io/badge/wordpress->= 4.4-0073aa.svg)](https://wordpress.org/download/release-archive/) [![Supported Locales](https://img.shields.io/badge/locales-28-orange.svg)]() [![Build Status](https://travis-ci.org/godaddy/wp-primer-theme.svg?branch=master)](https://travis-ci.org/godaddy/wp-primer-theme) [![License](https://img.shields.io/github/license/godaddy/wp-primer-theme.svg)](https://github.com/godaddy/wp-primer-theme/blob/master/license.txt)  
 
 ## Description ##
 
