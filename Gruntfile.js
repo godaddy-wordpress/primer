@@ -331,7 +331,7 @@ module.exports = function( grunt ) {
 		wp_readme_to_markdown: {
 			options: {
 				post_convert: function( readme ) {
-					var matches = readme.match( /\*\*Tags:\*\*(.*)\r\n/ ),
+					var matches = readme.match( /\*\*Tags:\*\*(.*)\r?\n/ ),
 					    tags    = matches[1].trim().split( ', ' ),
 					    section = matches[0];
 
