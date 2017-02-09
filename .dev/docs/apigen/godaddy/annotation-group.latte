@@ -1,0 +1,122 @@
+{layout '@layout.latte'}
+{var $active = 'annotation-group-' . $annotation}
+
+{block title}{$annotation|firstUpper}{/block}
+
+{block content|strip}
+<div id="content">
+	<h1>{include title}</h1>
+
+	{if $hasElements}
+		<div class="summary" id="classes" n:if="$annotationClasses">
+			<h3>Classes summary</h3>
+			{include classes, items => $annotationClasses}
+		</div>
+
+		<div class="summary" id="interfaces" n:if="$annotationInterfaces">
+			<h3>Interfaces summary</h3>
+			{include classes, items => $annotationInterfaces}
+		</div>
+
+		<div class="summary" id="traits" n:if="$annotationTraits">
+			<h3>Traits summary</h3>
+			{include classes, items => $annotationTraits}
+		</div>
+
+		<div class="summary" id="exceptions" n:if="$annotationExceptions">
+			<h3>Exceptions summary</h3>
+			{include classes, items => $annotationExceptions}
+		</div>
+
+		<div class="summary" id="methods" n:if="$annotationMethods">
+			<h3>Methods summary</h3>
+			<ul class="summary-list">
+				<li n:foreach="$annotationMethods as $method">
+					<h5 class="name"><a href="{$method->declaringClassName|classUrl}">{$method->declaringClassName}</a>::<code><a href="{$method|methodUrl}">{$method->name}()</a></code></h5>
+					<p>
+						{if $method->hasAnnotation($annotation)}
+							{foreach $method->annotations[$annotation] as $description}
+								{if $description}
+									{$description|annotation:$annotation:$method|noescape}<br>
+								{/if}
+							{/foreach}
+						{/if}
+					</p>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="summary" id="constants" n:if="$annotationConstants">
+			<h3>Constants summary</h3>
+			<ul class="summary-list">
+				<li n:foreach="$annotationConstants as $constant">
+					{if $constant->declaringClassName}
+						<h5 class="name"><a href="{$constant->declaringClassName|classUrl}">{$constant->declaringClassName}</a>::<code><a href="{$constant|constantUrl}">{$constant->name}</a></code></h5>
+					{else}
+						<td class="name" n:if="$namespaces || $classes || $interfaces || $traits || $exceptions"><a n:if="$constant->namespaceName" href="{$constant->namespaceName|namespaceUrl}">{$constant->namespaceName}</a></td>
+						<td n:class="name"><code><a href="{$constant|constantUrl}"><b>{$constant->shortName}</b></a></code></td>
+					{/if}
+					<p>
+						{foreach $constant->annotations[$annotation] as $description}
+							{if $description}
+								{$description|annotation:$annotation:$constant|noescape}<br>
+							{/if}
+						{/foreach}
+					</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="summary" id="properties" n:if="$annotationProperties">
+			<h3>Properties summary</h3>
+			<ul class="summary-list">
+				<li n:foreach="$annotationProperties as $property">
+					<h5 class="name"><a href="{$property->declaringClassName|classUrl}">{$property->declaringClassName}</a>::<code><a href="{$property|propertyUrl}">${$property->name}</a></code></h5>
+					<p>
+						{foreach $property->annotations[$annotation] as $description}
+							{if $description}
+								{$description|annotation:$annotation:$property|noescape}<br>
+							{/if}
+						{/foreach}
+					</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="summary" id="functions" n:if="$annotationFunctions">
+			<h3>Functions summary</h3>
+			<ul class="summary-list">
+				<li n:foreach="$annotationFunctions as $function">
+					<h5 class="name" n:if="$namespaces"><a n:if="$function->namespaceName" href="{$function->namespaceName|namespaceUrl}">{$function->namespaceName}</a>::<code><a href="{$function|functionUrl}">{$function->shortName}</a></code></h5>
+					<p>
+						{foreach $function->annotations[$annotation] as $description}
+							{if $description}
+								{$description|annotation:$annotation:$function|noescape}<br>
+							{/if}
+						{/foreach}
+					</p>
+				</li>
+			</ul>
+		</div>
+
+	{else}
+		<p>No elements with <code>@{$annotation}</code> annotation found.</p>
+	{/if}
+</div>
+{/block}
+
+
+{define classes}
+	<ul class="summary-list">
+		<li n:foreach="$items as $class">
+			<h5 class="name"><a href="{$class|classUrl}">{$class->name}</a></h5>
+			<p>
+				{foreach $class->annotations[$annotation] as $description}
+					{if $description}
+						{$description|annotation:$annotation:$class|noescape}<br>
+					{/if}
+				{/foreach}
+			</p>
+		</li>
+	</ul>
+{/define}

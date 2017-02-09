@@ -2,8 +2,10 @@
 /**
  * Custom template tags for this theme.
  *
- * @package Primer
- * @since   1.0.0
+ * @package  Functions
+ * @category Core
+ * @author   GoDaddy
+ * @since    1.0.0
  */
 
 /**

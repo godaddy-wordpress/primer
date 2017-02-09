@@ -14,6 +14,14 @@
     "php": ">= 5.2",
     "wordpress": ">= 4.4"
   },
+  "badges": [
+    "[![Build Status](https://travis-ci.org/<%= pkg.repository %>.svg?branch=master)](https://travis-ci.org/<%= pkg.repository %>)",
+    "[![Coverage Status](https://coveralls.io/repos/<%= pkg.repository %>/badge.svg?branch=master)](https://coveralls.io/github/<%= pkg.repository %>)",
+    "[![devDependency Status](https://david-dm.org/<%= pkg.repository %>/dev-status.svg)](https://david-dm.org/<%= pkg.repository %>?type=dev)",
+    "[![Required PHP Version](https://img.shields.io/badge/php-<%= pkg.engines.php %>-8892bf.svg)](https://secure.php.net/supported-versions.php)",
+    "[![Required WordPress Version](https://img.shields.io/badge/wordpress-<%= pkg.engines.wordpress %>-0073aa.svg)](https://wordpress.org/download/release-archive/)",
+    "[![License](https://img.shields.io/badge/license-GPL--2.0-blue.svg)](https://github.com/<%= pkg.repository %>/blob/master/license.txt)"
+  ],
   "locales": {
     "da_DK": "Dansk",
     "de_DE": "Deutsch",
@@ -52,14 +60,16 @@
     "grunt-contrib-cssmin": "^1.0.2",
     "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-jshint": "^1.1.0",
-    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-uglify": "^2.1.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-cssjanus": "^0.3.2",
     "grunt-dev-update": "^2.0.0",
     "grunt-potomo": "^3.5.0",
     "grunt-sass": "^2.0.0",
+    "grunt-shell": "^2.1.0",
     "grunt-text-replace": "^0.4.0",
     "grunt-wp-i18n": "^1.0.0",
+    "grunt-wp-deploy": "^1.1.0",
     "grunt-wp-readme-to-markdown": "^2.0.1",
     "load-grunt-tasks": "^3.5.0",
     "matchdep": "^1.0.1",

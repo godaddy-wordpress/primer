@@ -35,7 +35,8 @@ module.exports = function( grunt ) {
 			options: {
 				force: true
 			},
-			build: [ 'build/*' ]
+			build: [ 'build/*' ],
+			docs: [ '.dev/docs/sphinx/src/documentation/*' ]
 		},
 
 		copy: {
@@ -53,6 +54,22 @@ module.exports = function( grunt ) {
 					'templates/**'
 				],
 				dest: 'build/'
+			},
+			docs: {
+				expand: true,
+				cwd: '.dev/docs/sphinx/src/documentation/',
+				src: [ '**/*' ],
+				dest: '.dev/docs/build/html/documentation/'
+			},
+			readme: {
+				expand: true,
+				dot: true,
+				cwd: '.',
+				dest: '.dev/docs/sphinx/src/',
+				src: [ 'readme.md' ],
+				rename: function( dest, src ) {
+					return dest + src.replace( 'readme', 'intro' );
+				}
 			}
 		},
 
@@ -166,6 +183,33 @@ module.exports = function( grunt ) {
 		},
 
 		replace: {
+			docs: {
+				overwrite: true,
+				replacements: [
+					{
+						from: /Primer Theme v[\w.+-]+/m,
+						to: 'Primer Theme v' + pkg.version
+					}
+				],
+				src: [
+					'.dev/docs/apigen/theme-godaddy/**/*.latte',
+					'.dev/docs/themes/godaddy/**/*.html'
+				]
+			},
+			intro: {
+				overwrite: true,
+				replacements: [
+					{
+						from: /^\[!\[(.|\r|\n)*## Description ##/m, // Badges cause errors in the sphinx build process
+						to: '## Description ##'
+					},
+					{
+						from: /  $/gm,
+						to: '<br />'
+					}
+				],
+				src: [ '.dev/docs/sphinx/src/intro.md' ]
+			},
 			php: {
 				overwrite: true,
 				replacements: [
@@ -225,6 +269,29 @@ module.exports = function( grunt ) {
 			}
 		},
 
+		shell: {
+			sphinx: [
+				'easy_install pip',
+				'pip install -r .dev/docs/requirements.txt',
+				'cd .dev/docs',
+				'make clean',
+				'git clone -b gh-pages git@github.com:godaddy/wp-primer-theme.git build/html',
+				'make html'
+			].join( ' && ' ),
+			docs: [
+				'apigen generate --config .dev/docs/apigen/apigen.neon -q',
+				'cd .dev/docs/apigen',
+				'php contributor-list.php',
+				'php hook-docs.php'
+			].join( ' && ' ),
+			deploy_docs: [
+				'cd .dev/docs/build/html',
+				'git add .',
+				'git commit -m "Update Documentation"',
+				'git push origin gh-pages --force'
+			].join( ' && ' )
+		},
+
 		uglify: {
 			options: {
 				ASCIIOnly: true
@@ -253,36 +320,35 @@ module.exports = function( grunt ) {
 			}
 		},
 
+		wp_deploy: {
+			options: {
+				build_dir: 'build/',
+				plugin_slug: pkg.name,
+				svn_user: grunt.file.exists( 'svn-username' ) ? grunt.file.read( 'svn-username' ).trim() : ''
+			}
+		},
+
 		wp_readme_to_markdown: {
 			options: {
 				post_convert: function( readme ) {
-					var badges = {
-						grunt: '[![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](https://gruntjs.com)',
-						david_dev: '[![devDependency Status](https://david-dm.org/' + pkg.repository + '/dev-status.svg)](https://david-dm.org/' + pkg.repository + '?type=dev)',
-						php: '[![Required PHP Version](https://img.shields.io/badge/php-' + pkg.engines.php + '-8892bf.svg)](https://secure.php.net/supported-versions.php)',
-						locales: '[![Supported Locales](https://img.shields.io/badge/locales-' + pkg.locales.length + '-orange.svg)]()',
-						wordpress: '[![Required WordPress Version](https://img.shields.io/badge/wordpress-' + pkg.engines.wordpress + '-0073aa.svg)](https://wordpress.org/download/release-archive/)',
-						travis: '[![Build Status](https://travis-ci.org/' + pkg.repository + '.svg?branch=master)](https://travis-ci.org/' + pkg.repository + ')',
-						coveralls: '[![Coverage Status](https://coveralls.io/repos/' + pkg.repository + '/badge.svg?branch=master)](https://coveralls.io/github/' + pkg.repository + ')',
-						license: '[![License](https://img.shields.io/github/license/' + pkg.repository + '.svg)](https://github.com/' + pkg.repository + '/blob/master/license.txt)'
-					};
+					var matches = readme.match( /\*\*Tags:\*\*(.*)\r?\n/ ),
+					    tags    = matches[1].trim().split( ', ' ),
+					    section = matches[0];
 
-					// Required
-					readme = readme.replace( '## Description ##', badges.grunt + "  \n\n## Description ##" );
-					readme = addBadge( readme, badges.david_dev );
+					for ( var i = 0; i < tags.length; i++ ) {
+						section = section.replace( tags[i], '[' + tags[i] + '](https://wordpress.org/themes/tags/' + tags[i] + '/)' );
+					}
 
-					// Extras
-					readme = ( pkg.engines.php )                   ? addBadge( readme, badges.php )       : readme;
-					readme = ( pkg.engines.wordpress )             ? addBadge( readme, badges.wordpress ) : readme;
-					readme = ( pkg.locales.length > 0 )            ? addBadge( readme, badges.locales )   : readme;
-					readme = grunt.file.exists( '.travis.yml' )    ? addBadge( readme, badges.travis )    : readme;
-					readme = grunt.file.exists( '.coveralls.yml' ) ? addBadge( readme, badges.coveralls ) : readme;
-					readme = grunt.file.exists( 'license.txt' )    ? addBadge( readme, badges.license )   : readme;
+					// Tag links
+					readme = readme.replace( matches[0], section );
+
+					// Badges
+					readme = readme.replace( '## Description ##', grunt.template.process( pkg.badges.join( ' ' ) ) + "  \r\n\r\n## Description ##" );
 
 					return readme;
 				}
 			},
-			all: {
+			main: {
 				files: {
 					'readme.md': 'readme.txt'
 				}
@@ -291,20 +357,17 @@ module.exports = function( grunt ) {
 
 	} );
 
-	function addBadge( readme, badge ) {
-
-		return readme.replace( " \n\n## Description ##", badge + "  \n\n## Description ##" );
-
-	}
-
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask( 'default',    [ 'sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify', 'imagemin' ] );
-	grunt.registerTask( 'build',      [ 'default', 'clean:build', 'copy:build' ] );
-	grunt.registerTask( 'check',      [ 'devUpdate' ] );
-	grunt.registerTask( 'readme',     [ 'wp_readme_to_markdown' ] );
-	grunt.registerTask( 'update-pot', [ 'makepot' ] );
-	grunt.registerTask( 'update-mo',  [ 'potomo' ] );
-	grunt.registerTask( 'version',    [ 'replace', 'readme', 'build' ] );
+	grunt.registerTask( 'default',     [ 'sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify', 'imagemin' ] );
+	grunt.registerTask( 'build',       [ 'default', 'clean:build', 'copy:build' ] );
+	grunt.registerTask( 'check',       [ 'devUpdate' ] );
+	grunt.registerTask( 'deploy',      [ 'build', 'wp_deploy', 'clean:build' ] );
+	grunt.registerTask( 'deploy-docs', [ 'update-docs', 'shell:deploy_docs' ] );
+	grunt.registerTask( 'readme',      [ 'wp_readme_to_markdown' ] );
+	grunt.registerTask( 'update-docs', [ 'readme', 'clean:docs', 'shell:sphinx', 'shell:docs', 'replace:docs', 'copy:readme', 'copy:docs', 'replace:intro' ] );
+	grunt.registerTask( 'update-pot',  [ 'makepot' ] );
+	grunt.registerTask( 'update-mo',   [ 'potomo' ] );
+	grunt.registerTask( 'version',     [ 'replace', 'readme', 'build' ] );
 
 };
