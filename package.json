@@ -12,8 +12,8 @@
   },
   "engines": {
     "node" : ">= 7.5.0",
-    "php": ">= 5.2.0",
-    "wordpress": ">= 4.4.0"
+    "php": ">= 5.2",
+    "wordpress": ">= 4.4"
   },
   "badges": [
     "[![Build Status](https://travis-ci.org/<%= pkg.repository %>.svg?branch=master)](https://travis-ci.org/<%= pkg.repository %>)",
