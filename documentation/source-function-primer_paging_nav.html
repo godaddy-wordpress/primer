@@ -638,37 +638,43 @@
 </span><span id="300" class="codeline"><a class="number" href="#300">300: </a>
 </span><span id="301" class="codeline"><a class="number" href="#301">301: </a>            <span class="php-var">$home</span> = get_post( get_option( <span class="php-quote">'page_on_front'</span> ) );
 </span><span id="302" class="codeline"><a class="number" href="#302">302: </a>
-</span><span id="303" class="codeline"><a class="number" href="#303">303: </a>            <span class="php-keyword1">for</span> ( <span class="php-var">$i</span> = <span class="php-keyword2">count</span>( <span class="php-var">$post</span>-&gt;ancestors )-<span class="php-num">1</span>; <span class="php-var">$i</span> &gt;= <span class="php-num">0</span>; <span class="php-var">$i</span>-- ) {
+</span><span id="303" class="codeline"><a class="number" href="#303">303: </a>            <span class="php-keyword1">for</span> ( <span class="php-var">$i</span> = <span class="php-keyword2">count</span>( <span class="php-var">$post</span>-&gt;ancestors ) - <span class="php-num">1</span>; <span class="php-var">$i</span> &gt;= <span class="php-num">0</span>; <span class="php-var">$i</span>-- ) {
 </span><span id="304" class="codeline"><a class="number" href="#304">304: </a>
-</span><span id="305" class="codeline"><a class="number" href="#305">305: </a>                <span class="php-keyword1">if</span> ( ( <span class="php-var">$home</span>-&gt;ID ) != ( <span class="php-var">$post</span>-&gt;ancestors[<span class="php-var">$i</span>] ) ) {
+</span><span id="305" class="codeline"><a class="number" href="#305">305: </a>                <span class="php-keyword1">if</span> ( <span class="php-var">$home</span>-&gt;ID !== <span class="php-var">$post</span>-&gt;ancestors[ <span class="php-var">$i</span> ] ) {
 </span><span id="306" class="codeline"><a class="number" href="#306">306: </a>
-</span><span id="307" class="codeline"><a class="number" href="#307">307: </a>                    <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;a href=&quot;'</span> . get_permalink( <span class="php-var">$post</span>-&gt;ancestors[<span class="php-var">$i</span>] ) . <span class="php-quote">'&quot;&gt;'</span> . get_the_title( <span class="php-var">$post</span>-&gt;ancestors[<span class="php-var">$i</span>] ) . <span class="php-quote">'&lt;/a&gt;'</span> . <span class="php-var">$separator</span>;
-</span><span id="308" class="codeline"><a class="number" href="#308">308: </a>
-</span><span id="309" class="codeline"><a class="number" href="#309">309: </a>                }
-</span><span id="310" class="codeline"><a class="number" href="#310">310: </a>            }
-</span><span id="311" class="codeline"><a class="number" href="#311">311: </a>
-</span><span id="312" class="codeline"><a class="number" href="#312">312: </a>            the_title();
+</span><span id="307" class="codeline"><a class="number" href="#307">307: </a>                    <span class="php-keyword2">printf</span>(
+</span><span id="308" class="codeline"><a class="number" href="#308">308: </a>                        <span class="php-quote">'&lt;a href=&quot;%s&quot;&gt;%s&lt;/a&gt;%s'</span>,
+</span><span id="309" class="codeline"><a class="number" href="#309">309: </a>                        esc_url( get_permalink( <span class="php-var">$post</span>-&gt;ancestors[ <span class="php-var">$i</span> ] ) ),
+</span><span id="310" class="codeline"><a class="number" href="#310">310: </a>                        esc_html( get_the_title( <span class="php-var">$post</span>-&gt;ancestors[ <span class="php-var">$i</span> ] ) ),
+</span><span id="311" class="codeline"><a class="number" href="#311">311: </a>                        <span class="php-var">$separator</span> <span class="php-comment">// xss ok</span>
+</span><span id="312" class="codeline"><a class="number" href="#312">312: </a>                    );
 </span><span id="313" class="codeline"><a class="number" href="#313">313: </a>
-</span><span id="314" class="codeline"><a class="number" href="#314">314: </a>        } <span class="php-keyword1">elseif</span> ( is_page() ) {
+</span><span id="314" class="codeline"><a class="number" href="#314">314: </a>                }
 </span><span id="315" class="codeline"><a class="number" href="#315">315: </a>
-</span><span id="316" class="codeline"><a class="number" href="#316">316: </a>            the_title();
+</span><span id="316" class="codeline"><a class="number" href="#316">316: </a>            }
 </span><span id="317" class="codeline"><a class="number" href="#317">317: </a>
-</span><span id="318" class="codeline"><a class="number" href="#318">318: </a>        } <span class="php-keyword1">elseif</span> ( is_404() ) {
+</span><span id="318" class="codeline"><a class="number" href="#318">318: </a>            the_title();
 </span><span id="319" class="codeline"><a class="number" href="#319">319: </a>
-</span><span id="320" class="codeline"><a class="number" href="#320">320: </a>            <span class="php-keyword1">echo</span> <span class="php-quote">'404'</span>;
+</span><span id="320" class="codeline"><a class="number" href="#320">320: </a>        } <span class="php-keyword1">elseif</span> ( is_page() ) {
 </span><span id="321" class="codeline"><a class="number" href="#321">321: </a>
-</span><span id="322" class="codeline"><a class="number" href="#322">322: </a>        }
+</span><span id="322" class="codeline"><a class="number" href="#322">322: </a>            the_title();
 </span><span id="323" class="codeline"><a class="number" href="#323">323: </a>
-</span><span id="324" class="codeline"><a class="number" href="#324">324: </a>    } <span class="php-keyword1">else</span> {
+</span><span id="324" class="codeline"><a class="number" href="#324">324: </a>        } <span class="php-keyword1">elseif</span> ( is_404() ) {
 </span><span id="325" class="codeline"><a class="number" href="#325">325: </a>
-</span><span id="326" class="codeline"><a class="number" href="#326">326: </a>        bloginfo( <span class="php-quote">'name'</span> );
+</span><span id="326" class="codeline"><a class="number" href="#326">326: </a>            <span class="php-keyword1">echo</span> <span class="php-quote">'404'</span>;
 </span><span id="327" class="codeline"><a class="number" href="#327">327: </a>
-</span><span id="328" class="codeline"><a class="number" href="#328">328: </a>    }
+</span><span id="328" class="codeline"><a class="number" href="#328">328: </a>        }
 </span><span id="329" class="codeline"><a class="number" href="#329">329: </a>
-</span><span id="330" class="codeline"><a class="number" href="#330">330: </a>    <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;/div&gt;'</span>;
+</span><span id="330" class="codeline"><a class="number" href="#330">330: </a>    } <span class="php-keyword1">else</span> {
 </span><span id="331" class="codeline"><a class="number" href="#331">331: </a>
-</span><span id="332" class="codeline"><a class="number" href="#332">332: </a>}
-</span><span id="333" class="codeline"><a class="number" href="#333">333: </a></span></code></pre>
+</span><span id="332" class="codeline"><a class="number" href="#332">332: </a>        bloginfo( <span class="php-quote">'name'</span> );
+</span><span id="333" class="codeline"><a class="number" href="#333">333: </a>
+</span><span id="334" class="codeline"><a class="number" href="#334">334: </a>    }
+</span><span id="335" class="codeline"><a class="number" href="#335">335: </a>
+</span><span id="336" class="codeline"><a class="number" href="#336">336: </a>    <span class="php-keyword1">echo</span> <span class="php-quote">'&lt;/div&gt;'</span>;
+</span><span id="337" class="codeline"><a class="number" href="#337">337: </a>
+</span><span id="338" class="codeline"><a class="number" href="#338">338: </a>}
+</span><span id="339" class="codeline"><a class="number" href="#339">339: </a></span></code></pre>
 			</div>
 		</div>
 

@@ -697,7 +697,7 @@
 </span><span id="359" class="codeline"><a class="number" href="#359">359: </a>                    &lt;li <span class="php-keyword1">class</span>=<span class="php-quote">&quot;&lt;?php echo esc_attr( </span><span class="php-var">$class</span><span class="php-quote"> ); ?&gt;&quot;</span>&gt;
 </span><span id="360" class="codeline"><a class="number" href="#360">360: </a>                        &lt;label <span class="php-keyword1">for</span>=<span class="php-quote">&quot;primer-layout-&lt;?php echo esc_attr( </span><span class="php-var">$layout</span><span class="php-quote"> ); ?&gt;&quot;</span>&gt;
 </span><span id="361" class="codeline"><a class="number" href="#361">361: </a>                            &lt;input type=<span class="php-quote">&quot;radio&quot;</span>
-</span><span id="362" class="codeline"><a class="number" href="#362">362: </a>                                   name=<span class="php-quote">&quot;&lt;?php echo </span><span class="php-var">$name</span><span class="php-quote">; // xss ok ?&gt;-layout&quot;</span>
+</span><span id="362" class="codeline"><a class="number" href="#362">362: </a>                                   name=<span class="php-quote">&quot;&lt;?php echo </span><span class="php-var">$name</span><span class="php-quote">; ?&gt;-layout&quot;</span>
 </span><span id="363" class="codeline"><a class="number" href="#363">363: </a>                                   data-customize-setting-<span class="php-keyword2">link</span>=<span class="php-quote">&quot;layout&quot;</span>
 </span><span id="364" class="codeline"><a class="number" href="#364">364: </a>                                   id=<span class="php-quote">&quot;primer-layout-&lt;?php echo esc_attr( </span><span class="php-var">$layout</span><span class="php-quote"> ); ?&gt;&quot;</span>
 </span><span id="365" class="codeline"><a class="number" href="#365">365: </a>                                   value=<span class="php-quote">&quot;&lt;?php echo esc_attr( </span><span class="php-var">$layout</span><span class="php-quote"> ); ?&gt;&quot;</span>
@@ -841,7 +841,7 @@
 </span></span><span id="503" class="codeline"><a class="number" href="#503">503: </a><span class="php-comment">     *
 </span></span><span id="504" class="codeline"><a class="number" href="#504">504: </a><span class="php-comment">     * @param  string $layout The layout name to check.
 </span></span><span id="505" class="codeline"><a class="number" href="#505">505: </a><span class="php-comment">     *
-</span></span><span id="506" class="codeline"><a class="number" href="#506">506: </a><span class="php-comment">     * @return boolean Returns true if the layout is set, otherwise false.
+</span></span><span id="506" class="codeline"><a class="number" href="#506">506: </a><span class="php-comment">     * @return bool Returns true if the layout is set, otherwise false.
 </span></span><span id="507" class="codeline"><a class="number" href="#507">507: </a><span class="php-comment">     */</span>
 </span><span id="508" class="codeline"><a class="number" href="#508">508: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> layout_exists( <span class="php-var">$layout</span> ) {
 </span><span id="509" class="codeline"><a class="number" href="#509">509: </a>
@@ -854,7 +854,7 @@
 </span></span><span id="516" class="codeline"><a class="number" href="#516">516: </a><span class="php-comment">     *
 </span></span><span id="517" class="codeline"><a class="number" href="#517">517: </a><span class="php-comment">     * @param  WP_Post|int $post (optional) The WP_Post object.
 </span></span><span id="518" class="codeline"><a class="number" href="#518">518: </a><span class="php-comment">     *
-</span></span><span id="519" class="codeline"><a class="number" href="#519">519: </a><span class="php-comment">     * @return integer Returns the post ID.
+</span></span><span id="519" class="codeline"><a class="number" href="#519">519: </a><span class="php-comment">     * @return int Returns the post ID.
 </span></span><span id="520" class="codeline"><a class="number" href="#520">520: </a><span class="php-comment">     */</span>
 </span><span id="521" class="codeline"><a class="number" href="#521">521: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> get_post_id( <span class="php-var">$post</span> = <span class="php-keyword1">null</span> ) {
 </span><span id="522" class="codeline"><a class="number" href="#522">522: </a>

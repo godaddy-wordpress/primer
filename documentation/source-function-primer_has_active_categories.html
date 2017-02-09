@@ -451,7 +451,7 @@
 </span></span><span id="113" class="codeline"><a class="number" href="#113">113: </a><span class="php-comment"> *
 </span></span><span id="114" class="codeline"><a class="number" href="#114">114: </a><span class="php-comment"> * @since 1.0.0
 </span></span><span id="115" class="codeline"><a class="number" href="#115">115: </a><span class="php-comment"> *
-</span></span><span id="116" class="codeline"><a class="number" href="#116">116: </a><span class="php-comment"> * @return boolean Returns true when `primer_get_page_width()` is set to fluid, otherwise returns false.
+</span></span><span id="116" class="codeline"><a class="number" href="#116">116: </a><span class="php-comment"> * @return bool Returns true when `primer_get_page_width()` is set to fluid, otherwise returns false.
 </span></span><span id="117" class="codeline"><a class="number" href="#117">117: </a><span class="php-comment"> */</span>
 </span><span id="118" class="codeline"><a class="number" href="#118">118: </a><span class="php-keyword1">function</span> primer_is_fluid_width() {
 </span><span id="119" class="codeline"><a class="number" href="#119">119: </a>
@@ -464,7 +464,7 @@
 </span></span><span id="126" class="codeline"><a class="number" href="#126">126: </a><span class="php-comment"> *
 </span></span><span id="127" class="codeline"><a class="number" href="#127">127: </a><span class="php-comment"> * @since 1.0.0
 </span></span><span id="128" class="codeline"><a class="number" href="#128">128: </a><span class="php-comment"> *
-</span></span><span id="129" class="codeline"><a class="number" href="#129">129: </a><span class="php-comment"> * @return boolean Returns true when `primer_get_page_width()` is set to 'fixed', otherwise returns false.
+</span></span><span id="129" class="codeline"><a class="number" href="#129">129: </a><span class="php-comment"> * @return bool Returns true when `primer_get_page_width()` is set to 'fixed', otherwise returns false.
 </span></span><span id="130" class="codeline"><a class="number" href="#130">130: </a><span class="php-comment"> */</span>
 </span><span id="131" class="codeline"><a class="number" href="#131">131: </a><span class="php-keyword1">function</span> primer_is_fixed_width() {
 </span><span id="132" class="codeline"><a class="number" href="#132">132: </a>
@@ -519,7 +519,7 @@
 </span></span><span id="181" class="codeline"><a class="number" href="#181">181: </a><span class="php-comment"> *
 </span></span><span id="182" class="codeline"><a class="number" href="#182">182: </a><span class="php-comment"> * @param  string $layout (optional)
 </span></span><span id="183" class="codeline"><a class="number" href="#183">183: </a><span class="php-comment"> *
-</span></span><span id="184" class="codeline"><a class="number" href="#184">184: </a><span class="php-comment"> * @return boolean Returns true when a sidebar is set on the given layout, otherwise returns false.
+</span></span><span id="184" class="codeline"><a class="number" href="#184">184: </a><span class="php-comment"> * @return bool Returns true when a sidebar is set on the given layout, otherwise returns false.
 </span></span><span id="185" class="codeline"><a class="number" href="#185">185: </a><span class="php-comment"> */</span>
 </span><span id="186" class="codeline"><a class="number" href="#186">186: </a><span class="php-keyword1">function</span> primer_layout_has_sidebar( <span class="php-var">$layout</span> = <span class="php-keyword1">null</span> ) {
 </span><span id="187" class="codeline"><a class="number" href="#187">187: </a>
@@ -546,7 +546,7 @@
 </span></span><span id="208" class="codeline"><a class="number" href="#208">208: </a><span class="php-comment"> *
 </span></span><span id="209" class="codeline"><a class="number" href="#209">209: </a><span class="php-comment"> * @uses   has_custom_logo
 </span></span><span id="210" class="codeline"><a class="number" href="#210">210: </a><span class="php-comment"> *
-</span></span><span id="211" class="codeline"><a class="number" href="#211">211: </a><span class="php-comment"> * @return boolean Returns true when a Primer logo is set.
+</span></span><span id="211" class="codeline"><a class="number" href="#211">211: </a><span class="php-comment"> * @return bool Returns true when a Primer logo is set.
 </span></span><span id="212" class="codeline"><a class="number" href="#212">212: </a><span class="php-comment"> */</span>
 </span><span id="213" class="codeline"><a class="number" href="#213">213: </a><span class="php-keyword1">function</span> primer_has_custom_logo() {
 </span><span id="214" class="codeline"><a class="number" href="#214">214: </a>
@@ -596,7 +596,7 @@
 </span></span><span id="258" class="codeline"><a class="number" href="#258">258: </a><span class="php-comment"> *
 </span></span><span id="259" class="codeline"><a class="number" href="#259">259: </a><span class="php-comment"> * @since 1.0.0
 </span></span><span id="260" class="codeline"><a class="number" href="#260">260: </a><span class="php-comment"> *
-</span></span><span id="261" class="codeline"><a class="number" href="#261">261: </a><span class="php-comment"> * @return boolean Returns true when the `use_featured_hero_image` theme mod is set, otherwise returns false.
+</span></span><span id="261" class="codeline"><a class="number" href="#261">261: </a><span class="php-comment"> * @return bool Returns true when the `use_featured_hero_image` theme mod is set, otherwise returns false.
 </span></span><span id="262" class="codeline"><a class="number" href="#262">262: </a><span class="php-comment"> */</span>
 </span><span id="263" class="codeline"><a class="number" href="#263">263: </a><span class="php-keyword1">function</span> primer_use_featured_hero_image() {
 </span><span id="264" class="codeline"><a class="number" href="#264">264: </a>
@@ -623,7 +623,7 @@
 </span></span><span id="285" class="codeline"><a class="number" href="#285">285: </a><span class="php-comment"> * @uses   [has_post_thumbnail](https://developer.wordpress.org/reference/functions/has_post_thumbnail/)
 </span></span><span id="286" class="codeline"><a class="number" href="#286">286: </a><span class="php-comment"> * @uses   [get_queried_object](https://codex.wordpress.org/Function_Reference/get_queried_object)
 </span></span><span id="287" class="codeline"><a class="number" href="#287">287: </a><span class="php-comment"> *
-</span></span><span id="288" class="codeline"><a class="number" href="#288">288: </a><span class="php-comment"> * @return boolean Returns true when a header image is set, or when the featured hero image setting is true and a featured image is set, otherwise return false.
+</span></span><span id="288" class="codeline"><a class="number" href="#288">288: </a><span class="php-comment"> * @return bool Returns true when a header image is set, or when the featured hero image setting is true and a featured image is set, otherwise return false.
 </span></span><span id="289" class="codeline"><a class="number" href="#289">289: </a><span class="php-comment"> */</span>
 </span><span id="290" class="codeline"><a class="number" href="#290">290: </a><span class="php-keyword1">function</span> primer_has_hero_image() {
 </span><span id="291" class="codeline"><a class="number" href="#291">291: </a>
@@ -786,7 +786,7 @@
 </span></span><span id="448" class="codeline"><a class="number" href="#448">448: </a><span class="php-comment"> *
 </span></span><span id="449" class="codeline"><a class="number" href="#449">449: </a><span class="php-comment"> * @uses   primer_get_active_footer_sidebars
 </span></span><span id="450" class="codeline"><a class="number" href="#450">450: </a><span class="php-comment"> *
-</span></span><span id="451" class="codeline"><a class="number" href="#451">451: </a><span class="php-comment"> * @return boolean Returns true when footer sidebars are set, otherwise returns false.
+</span></span><span id="451" class="codeline"><a class="number" href="#451">451: </a><span class="php-comment"> * @return bool Returns true when footer sidebars are set, otherwise returns false.
 </span></span><span id="452" class="codeline"><a class="number" href="#452">452: </a><span class="php-comment"> */</span>
 </span><span id="453" class="codeline"><a class="number" href="#453">453: </a><span class="php-keyword1">function</span> primer_has_active_footer_sidebars() {
 </span><span id="454" class="codeline"><a class="number" href="#454">454: </a>
@@ -822,7 +822,7 @@
 </span></span><span id="484" class="codeline"><a class="number" href="#484">484: </a><span class="php-comment"> * @uses [get_categories](https://developer.wordpress.org/reference/functions/get_categories/)
 </span></span><span id="485" class="codeline"><a class="number" href="#485">485: </a><span class="php-comment"> * @uses [set_transient](https://developer.wordpress.org/reference/functions/set_transient/)
 </span></span><span id="486" class="codeline"><a class="number" href="#486">486: </a><span class="php-comment"> *
-</span></span><span id="487" class="codeline"><a class="number" href="#487">487: </a><span class="php-comment"> * @return boolean Returns true when categories are found, otherwise returns false.
+</span></span><span id="487" class="codeline"><a class="number" href="#487">487: </a><span class="php-comment"> * @return bool Returns true when categories are found, otherwise returns false.
 </span></span><span id="488" class="codeline"><a class="number" href="#488">488: </a><span class="php-comment"> */</span>
 </span><span id="489" class="codeline"><a class="number" href="#489">489: </a><span class="php-keyword1">function</span> primer_has_active_categories() {
 </span><span id="490" class="codeline"><a class="number" href="#490">490: </a>
@@ -847,7 +847,7 @@
 </span></span><span id="509" class="codeline"><a class="number" href="#509">509: </a><span class="php-comment">     *
 </span></span><span id="510" class="codeline"><a class="number" href="#510">510: </a><span class="php-comment">     * @since 1.0.0
 </span></span><span id="511" class="codeline"><a class="number" href="#511">511: </a><span class="php-comment">     *
-</span></span><span id="512" class="codeline"><a class="number" href="#512">512: </a><span class="php-comment">     * @var boolean
+</span></span><span id="512" class="codeline"><a class="number" href="#512">512: </a><span class="php-comment">     * @var bool
 </span></span><span id="513" class="codeline"><a class="number" href="#513">513: </a><span class="php-comment">     */</span>
 </span><span id="514" class="codeline"><a class="number" href="#514">514: </a>    <span class="php-keyword1">return</span> (bool) apply_filters( <span class="php-quote">'primer_has_active_categories'</span>, ! <span class="php-keyword1">empty</span>( <span class="php-var">$has_active_categories</span> ) );
 </span><span id="515" class="codeline"><a class="number" href="#515">515: </a>
