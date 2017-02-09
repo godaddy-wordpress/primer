@@ -2,14 +2,18 @@
 /**
  * Custom helper functions for this theme.
  *
- * @package Primer
- * @since   1.0.0
+ * @package  Functions
+ * @category Core
+ * @author   GoDaddy
+ * @since    1.0.0
  */
 
 /**
  * Return a page title based on the current page.
  *
- * @return string
+ * @since 1.0.0
+ *
+ * @return string Returns the current page title.
  */
 function primer_get_the_page_title() {
 
@@ -94,7 +98,9 @@ function primer_get_the_page_title() {
 /**
  * Return the current page width setting.
  *
- * @return string
+ * @since 1.0.0
+ *
+ * @return string Returns the current `page_width` theme mod.
  */
 function primer_get_page_width() {
 
@@ -105,7 +111,9 @@ function primer_get_page_width() {
 /**
  * Check if pages are being displayed with fluid width.
  *
- * @return bool
+ * @since 1.0.0
+ *
+ * @return bool Returns true when `primer_get_page_width()` is set to fluid, otherwise returns false.
  */
 function primer_is_fluid_width() {
 
@@ -116,7 +124,9 @@ function primer_is_fluid_width() {
 /**
  * Check if pages are being displayed with fixed width.
  *
- * @return bool
+ * @since 1.0.0
+ *
+ * @return bool Returns true when `primer_get_page_width()` is set to 'fixed', otherwise returns false.
  */
 function primer_is_fixed_width() {
 
@@ -127,12 +137,14 @@ function primer_is_fixed_width() {
 /**
  * Return the current layout.
  *
- * @global Primer_Customizer_Layouts $primer_customizer_layouts
+ * @global $primer_customizer_layouts
  * @since  1.0.0
+ *
+ * @uses   get_current_layout
  *
  * @param  int $post_id (optional)
  *
- * @return string
+ * @return string Returns the current Primer theme layout.
  */
 function primer_get_layout( $post_id = null ) {
 
@@ -150,7 +162,9 @@ function primer_get_layout( $post_id = null ) {
  * @global Primer_Customizer_Layouts $primer_customizer_layouts
  * @since  1.0.0
  *
- * @return string
+ * @uses   get_global_layout
+ *
+ * @return string Returns the global layout.
  */
 function primer_get_global_layout() {
 
@@ -167,7 +181,7 @@ function primer_get_global_layout() {
  *
  * @param  string $layout (optional)
  *
- * @return bool
+ * @return bool Returns true when a sidebar is set on the given layout, otherwise returns false.
  */
 function primer_layout_has_sidebar( $layout = null ) {
 
@@ -190,13 +204,15 @@ function primer_layout_has_sidebar( $layout = null ) {
 /**
  * Check if the site has a custom logo.
  *
- * @since 1.0.0
+ * @since  1.0.0
  *
- * @return bool
+ * @uses   has_custom_logo
+ *
+ * @return bool Returns true when a Primer logo is set.
  */
 function primer_has_custom_logo() {
 
- 	/**
+	/**
 	 * For backwards compatibility prior to WordPress 4.5.
 	 *
 	 * @link  https://developer.wordpress.org/reference/functions/has_custom_logo/
@@ -220,7 +236,7 @@ function primer_has_custom_logo() {
  *
  * @since 1.0.0
  *
- * @return string
+ * @return string Returns the hero image selector.
  */
 function primer_get_hero_image_selector() {
 
@@ -242,7 +258,7 @@ function primer_get_hero_image_selector() {
  *
  * @since 1.0.0
  *
- * @return bool
+ * @return bool Returns true when the `use_featured_hero_image` theme mod is set, otherwise returns false.
  */
 function primer_use_featured_hero_image() {
 
@@ -264,7 +280,12 @@ function primer_use_featured_hero_image() {
  *
  * @since 1.0.0
  *
- * @return bool
+ * @uses   has_header_image
+ * @uses   primer_use_featured_hero_image
+ * @uses   [has_post_thumbnail](https://developer.wordpress.org/reference/functions/has_post_thumbnail/)
+ * @uses   [get_queried_object](https://codex.wordpress.org/Function_Reference/get_queried_object)
+ *
+ * @return bool Returns true when a header image is set, or when the featured hero image setting is true and a featured image is set, otherwise return false.
  */
 function primer_has_hero_image() {
 
@@ -277,7 +298,13 @@ function primer_has_hero_image() {
  *
  * @since 1.0.0
  *
- * @return string|null
+ * @uses  primer_use_featured_hero_image
+ * @uses  [get_queried_object](https://codex.wordpress.org/Function_Reference/get_queried_object)
+ * @uses  [has_post_thumbnail](https://developer.wordpress.org/reference/functions/has_post_thumbnail/)
+ * @uses  [wp_get_attachment_image_src](https://developer.wordpress.org/reference/functions/wp_get_attachment_image_src/)
+ * @uses  [get_post_thumbnail_id](https://developer.wordpress.org/reference/functions/get_post_thumbnail_id/)
+ *
+ * @return string|null Returns the featured image if one is set, otherwise null.
  */
 function primer_get_hero_image() {
 
@@ -333,7 +360,9 @@ function primer_get_hero_image() {
 /**
  * Return the size to use for featured images.
  *
- * @return string
+ * @since  1.0.0
+ *
+ * @return string Returns the feature image size.
  */
 function primer_get_featured_image_size() {
 
@@ -352,9 +381,12 @@ function primer_get_featured_image_size() {
  * In the event a custom homepage exists, we need
  * to find the posts page and return its URL.
  *
- * @since 1.0.0
+ * @uses   [get_option](https://developer.wordpress.org/reference/functions/get_option/)
+ * @uses   [get_permalink](https://developer.wordpress.org/reference/functions/get_permalink/)
  *
- * @return string
+ * @since  1.0.0
+ *
+ * @return string Return the post page URL.
  */
 function primer_get_posts_url() {
 
@@ -377,7 +409,7 @@ function primer_get_posts_url() {
  * @global array $wp_registered_sidebars
  * @since  1.0.0
  *
- * @return array
+ * @return array Returns the Primer theme sidebars array.
  */
 function primer_get_footer_sidebars() {
 
@@ -401,7 +433,7 @@ function primer_get_footer_sidebars() {
  *
  * @since 1.0.0
  *
- * @return array
+ * @return array Returns an array of active footer widget areas.
  */
 function primer_get_active_footer_sidebars() {
 
@@ -414,7 +446,9 @@ function primer_get_active_footer_sidebars() {
  *
  * @since 1.0.0
  *
- * @return bool
+ * @uses   primer_get_active_footer_sidebars
+ *
+ * @return bool Returns true when footer sidebars are set, otherwise returns false.
  */
 function primer_has_active_footer_sidebars() {
 
@@ -425,9 +459,11 @@ function primer_has_active_footer_sidebars() {
 /**
  * Check if a footer or social menu is assigned.
  *
- * @since 1.0.0
+ * @since  1.0.0
  *
- * @return bool
+ * @uses   [has_nav_menu](https://developer.wordpress.org/reference/functions/has_nav_menu/)
+ *
+ * @return bool Returns true when the 'footer' or 'social' navigation menu is set.
  */
 function primer_has_footer_menu() {
 
@@ -444,7 +480,11 @@ function primer_has_footer_menu() {
  * @see   primer_has_active_categories_reset()
  * @since 1.0.0
  *
- * @return bool
+ * @uses [get_transient](https://developer.wordpress.org/reference/functions/get_transient/)
+ * @uses [get_categories](https://developer.wordpress.org/reference/functions/get_categories/)
+ * @uses [set_transient](https://developer.wordpress.org/reference/functions/set_transient/)
+ *
+ * @return bool Returns true when categories are found, otherwise returns false.
  */
 function primer_has_active_categories() {
 
@@ -478,11 +518,11 @@ function primer_has_active_categories() {
 /**
  * Convert a 3- or 6-digit hexadecimal color to an associative RGB array.
  *
- * @since 1.0.0
+ * @since  1.0.0
  *
  * @param  string $color
  *
- * @return array
+ * @return array Returns an array of Red, Green and Blue values to use in CSS styles.
  */
 function primer_hex2rgb( $color ) {
 
@@ -492,9 +532,9 @@ function primer_hex2rgb( $color ) {
 
 		case 3 :
 
-			$r = hexdec( substr( $color, 0, 1 ).substr( $color, 0, 1 ) );
-			$g = hexdec( substr( $color, 1, 1 ).substr( $color, 1, 1 ) );
-			$b = hexdec( substr( $color, 2, 1 ).substr( $color, 2, 1 ) );
+			$r = hexdec( substr( $color, 0, 1 ) . substr( $color, 0, 1 ) );
+			$g = hexdec( substr( $color, 1, 1 ) . substr( $color, 1, 1 ) );
+			$b = hexdec( substr( $color, 2, 1 ) . substr( $color, 2, 1 ) );
 
 			break;
 
@@ -525,9 +565,8 @@ function primer_hex2rgb( $color ) {
  *
  * @param  array $array1
  * @param  array $array2
- * @param  array $...
  *
- * @return array
+ * @return array Returns a merged array.
  */
 function primer_array_replace_recursive( array $array1, array $array2 ) {
 

@@ -2,8 +2,10 @@
 /**
  * Custom template tags for this theme.
  *
- * @package Primer
- * @since   1.0.0
+ * @package  Functions
+ * @category Core
+ * @author   GoDaddy
+ * @since    1.0.0
  */
 
 /**
@@ -298,13 +300,19 @@ function primer_breadcrumbs() {
 
 			$home = get_post( get_option( 'page_on_front' ) );
 
-			for ( $i = count( $post->ancestors )-1; $i >= 0; $i-- ) {
+			for ( $i = count( $post->ancestors ) - 1; $i >= 0; $i-- ) {
 
-				if ( ( $home->ID ) != ( $post->ancestors[$i] ) ) {
+				if ( $home->ID !== $post->ancestors[ $i ] ) {
 
-					echo '<a href="' . get_permalink( $post->ancestors[$i] ) . '">' . get_the_title( $post->ancestors[$i] ) . '</a>' . $separator;
+					printf(
+						'<a href="%s">%s</a>%s',
+						esc_url( get_permalink( $post->ancestors[ $i ] ) ),
+						esc_html( get_the_title( $post->ancestors[ $i ] ) ),
+						$separator // xss ok
+					);
 
 				}
+
 			}
 
 			the_title();

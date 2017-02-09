@@ -9,7 +9,7 @@
 
 <footer class="entry-footer">
 
-	<?php if ( 'post' == get_post_type() ) : ?>
+	<?php if ( 'post' === get_post_type() ) : ?>
 
 		<?php $category_list = get_the_category_list( esc_html_x( ', ', 'separator for items in a list', 'primer' ) ); ?>
 

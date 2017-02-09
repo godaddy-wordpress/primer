@@ -2,10 +2,12 @@
 /**
  * Customizer Layouts functionality.
  *
- * @package Primer
- * @since   1.0.0
+ * @class    Primer_Customizer_Layouts
+ * @package  Classes/Customizer
+ * @category Class
+ * @author   GoDaddy
+ * @since    1.0.0
  */
-
 class Primer_Customizer_Layouts {
 
 	/**
@@ -121,6 +123,8 @@ class Primer_Customizer_Layouts {
 	 * Alter some registered layouts when in RTL mode.
 	 *
 	 * @action init
+	 * @uses   primer_layouts_rtl To filter the possible layouts.
+	 *
 	 * @since  1.0.0
 	 */
 	public function rtl_layouts() {
@@ -155,6 +159,8 @@ class Primer_Customizer_Layouts {
 	 * Add post type support.
 	 *
 	 * @action init
+	 * @uses [add_post_type_support](https://codex.wordpress.org/Function_Reference/add_post_type_support) To add layout support to specified post types.
+	 *
 	 * @since  1.0.0
 	 */
 	public function post_type_support() {
@@ -182,7 +188,7 @@ class Primer_Customizer_Layouts {
 	 * @action admin_enqueue_scripts
 	 * @since  1.0.0
 	 *
-	 * @param string $hook
+	 * @param string $hook The suffix of the current admin page.
 	 */
 	public function admin_enqueue_scripts( $hook ) {
 
@@ -216,6 +222,7 @@ class Primer_Customizer_Layouts {
 	 *
 	 * @action load-post.php
 	 * @action load-post-new.php
+	 *
 	 * @since  1.0.0
 	 * @uses   $this->add_meta_box()
 	 */
@@ -352,7 +359,7 @@ class Primer_Customizer_Layouts {
 					<li class="<?php echo esc_attr( $class ); ?>">
 						<label for="primer-layout-<?php echo esc_attr( $layout ); ?>">
 							<input type="radio"
-							       name="<?php echo $name; // xss ok ?>-layout"
+							       name="<?php echo $name; ?>-layout"
 							       data-customize-setting-link="layout"
 							       id="primer-layout-<?php echo esc_attr( $layout ); ?>"
 							       value="<?php echo esc_attr( $layout ); ?>"
@@ -422,9 +429,11 @@ class Primer_Customizer_Layouts {
 	 * Register custom layout settings.
 	 *
 	 * @action customize_register
+	 * @see    WP_Customize_Manager
+	 *
 	 * @since  1.0.0
 	 *
-	 * @param WP_Customize_Manager $wp_customize
+	 * @param WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
 	 */
 	public function customize_register( WP_Customize_Manager $wp_customize ) {
 
@@ -474,9 +483,9 @@ class Primer_Customizer_Layouts {
 	 * @filter body_class
 	 * @since  1.0.0
 	 *
-	 * @param  array $classes
+	 * @param  array $classes Array of body classes.
 	 *
-	 * @return array
+	 * @return array Returns the filtered array of body classes.
 	 */
 	public function body_class( array $classes ) {
 
@@ -492,9 +501,9 @@ class Primer_Customizer_Layouts {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $layout
+	 * @param  string $layout The layout name to check.
 	 *
-	 * @return bool
+	 * @return bool Returns true if the layout is set, otherwise false.
 	 */
 	protected function layout_exists( $layout ) {
 
@@ -505,9 +514,9 @@ class Primer_Customizer_Layouts {
 	/**
 	 * Return a post ID.
 	 *
-	 * @param  WP_Post|int $post (optional)
+	 * @param  WP_Post|int $post (optional) The WP_Post object.
 	 *
-	 * @return string
+	 * @return int Returns the post ID.
 	 */
 	protected function get_post_id( $post = null ) {
 
@@ -518,9 +527,9 @@ class Primer_Customizer_Layouts {
 	/**
 	 * Return the layout override for a post.
 	 *
-	 * @param  WP_Post|int $post (optional)
+	 * @param  WP_Post|int $post (optional) The WP_Post object.
 	 *
-	 * @return string
+	 * @return string Returns the post layout.
 	 */
 	protected function get_post_layout( $post = null ) {
 
@@ -531,7 +540,9 @@ class Primer_Customizer_Layouts {
 	/**
 	 * Return the global layout.
 	 *
-	 * @return string
+	 * @uses [get_theme_mod](https://codex.wordpress.org/Function_Reference/get_theme_mod) To retreive the layout mod.
+	 *
+	 * @return string Returns the layout theme modification.
 	 */
 	public function get_global_layout() {
 
@@ -542,9 +553,13 @@ class Primer_Customizer_Layouts {
 	/**
 	 * Return the current layout.
 	 *
-	 * @param  WP_Post|int $post (optional)
+	 * @uses   get_post_layout
+	 * @uses   get_global_layout
+	 * @uses   layout_exists
 	 *
-	 * @return string
+	 * @param  WP_Post|int $post (optional) The WP_Post object.
+	 *
+	 * @return string Returns the current layout which is set.
 	 */
 	public function get_current_layout( $post = null ) {
 
