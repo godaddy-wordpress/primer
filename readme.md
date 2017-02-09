@@ -41,7 +41,7 @@ You can fork and contribute back to Primer by visiting [our public repo on GitHu
 
 ## Copyright ##
 
-Primer WordPress theme, Copyright 2016 GoDaddy Operating Company, LLC.
+Primer WordPress theme, Copyright 2017 GoDaddy Operating Company, LLC.
 Primer is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify

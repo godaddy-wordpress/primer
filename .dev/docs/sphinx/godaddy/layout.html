@@ -289,13 +289,7 @@
             <div class="col-sm-12 col-md-3">
                 <div class="footer-widget t-footer">
                     <div class="col-md-12">
-                        <a href="https://www.openhub.net/p/wp-primer-theme">
-                            <img src="{{ pathto('_static/open-hub.png', 1) }}">
-                        </a>
-                    </div>
-										<br /><br />
-										<div class="col-md-12">
-                        <a href="https://www.godaddy.com">
+                        <a href="https://www.godaddy.com/">
                             <img src="{{ pathto('_static/godaddy-logo-white.png', 1) }}">
                         </a>
                     </div>
@@ -336,14 +330,14 @@
                         {%- if hasdoc('copyright') %}
                             {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
                         {%- else %}
-                            {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
+                            {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}{% endtrans %}
                         {%- endif %}
                     {%- endif %}
                     {%- if last_updated %}
                         {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
                     {%- endif %}
                     {%- if show_sphinx %}
-                        {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
+                        {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://www.sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
                     {%- endif %}
                 </p>
             </div>

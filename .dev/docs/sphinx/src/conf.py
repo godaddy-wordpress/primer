@@ -55,7 +55,7 @@ master_doc = 'contents'
 
 # General information about the project.
 project = u'Primer Theme Documentation'
-copyright = u'%d, GoDaddy, Inc' % datetime.datetime.now().year
+copyright = u'%d GoDaddy Operating Company, LLC. Primer is distributed under the terms of the GNU GPL.' % datetime.datetime.now().year
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
