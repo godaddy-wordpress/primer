@@ -177,9 +177,9 @@ add_filter( 'primer_the_page_title', 'primer_wc_shop_title' );
  *
  * @since  1.0.0
  *
- * @param  integer $columns $columns The default number of columns.
+ * @param  int $columns $columns The default number of columns.
  *
- * @return integer The number of columns to use.
+ * @return int The number of columns to use.
  */
 function primer_wc_shop_columns( $columns ) {
 

@@ -41,7 +41,7 @@ class Primer_Site_Identity_Options {
 	 * @filter primer_author_credit
 	 * @since  NEXT
 	 *
-	 * @return boolean Returns true when `show_author_credit` theme mod is set.
+	 * @return bool Returns true when `show_author_credit` theme mod is set.
 	 */
 	public function toggle_primer_author_credit() {
 

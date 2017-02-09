@@ -503,7 +503,7 @@ class Primer_Customizer_Layouts {
 	 *
 	 * @param  string $layout The layout name to check.
 	 *
-	 * @return boolean Returns true if the layout is set, otherwise false.
+	 * @return bool Returns true if the layout is set, otherwise false.
 	 */
 	protected function layout_exists( $layout ) {
 
@@ -516,7 +516,7 @@ class Primer_Customizer_Layouts {
 	 *
 	 * @param  WP_Post|int $post (optional) The WP_Post object.
 	 *
-	 * @return integer Returns the post ID.
+	 * @return int Returns the post ID.
 	 */
 	protected function get_post_id( $post = null ) {
 

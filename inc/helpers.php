@@ -113,7 +113,7 @@ function primer_get_page_width() {
  *
  * @since 1.0.0
  *
- * @return boolean Returns true when `primer_get_page_width()` is set to fluid, otherwise returns false.
+ * @return bool Returns true when `primer_get_page_width()` is set to fluid, otherwise returns false.
  */
 function primer_is_fluid_width() {
 
@@ -126,7 +126,7 @@ function primer_is_fluid_width() {
  *
  * @since 1.0.0
  *
- * @return boolean Returns true when `primer_get_page_width()` is set to 'fixed', otherwise returns false.
+ * @return bool Returns true when `primer_get_page_width()` is set to 'fixed', otherwise returns false.
  */
 function primer_is_fixed_width() {
 
@@ -181,7 +181,7 @@ function primer_get_global_layout() {
  *
  * @param  string $layout (optional)
  *
- * @return boolean Returns true when a sidebar is set on the given layout, otherwise returns false.
+ * @return bool Returns true when a sidebar is set on the given layout, otherwise returns false.
  */
 function primer_layout_has_sidebar( $layout = null ) {
 
@@ -208,7 +208,7 @@ function primer_layout_has_sidebar( $layout = null ) {
  *
  * @uses   has_custom_logo
  *
- * @return boolean Returns true when a Primer logo is set.
+ * @return bool Returns true when a Primer logo is set.
  */
 function primer_has_custom_logo() {
 
@@ -258,7 +258,7 @@ function primer_get_hero_image_selector() {
  *
  * @since 1.0.0
  *
- * @return boolean Returns true when the `use_featured_hero_image` theme mod is set, otherwise returns false.
+ * @return bool Returns true when the `use_featured_hero_image` theme mod is set, otherwise returns false.
  */
 function primer_use_featured_hero_image() {
 
@@ -285,7 +285,7 @@ function primer_use_featured_hero_image() {
  * @uses   [has_post_thumbnail](https://developer.wordpress.org/reference/functions/has_post_thumbnail/)
  * @uses   [get_queried_object](https://codex.wordpress.org/Function_Reference/get_queried_object)
  *
- * @return boolean Returns true when a header image is set, or when the featured hero image setting is true and a featured image is set, otherwise return false.
+ * @return bool Returns true when a header image is set, or when the featured hero image setting is true and a featured image is set, otherwise return false.
  */
 function primer_has_hero_image() {
 
@@ -448,7 +448,7 @@ function primer_get_active_footer_sidebars() {
  *
  * @uses   primer_get_active_footer_sidebars
  *
- * @return boolean Returns true when footer sidebars are set, otherwise returns false.
+ * @return bool Returns true when footer sidebars are set, otherwise returns false.
  */
 function primer_has_active_footer_sidebars() {
 
@@ -484,7 +484,7 @@ function primer_has_footer_menu() {
  * @uses [get_categories](https://developer.wordpress.org/reference/functions/get_categories/)
  * @uses [set_transient](https://developer.wordpress.org/reference/functions/set_transient/)
  *
- * @return boolean Returns true when categories are found, otherwise returns false.
+ * @return bool Returns true when categories are found, otherwise returns false.
  */
 function primer_has_active_categories() {
 
@@ -509,7 +509,7 @@ function primer_has_active_categories() {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @var boolean
+	 * @var bool
 	 */
 	return (bool) apply_filters( 'primer_has_active_categories', ! empty( $has_active_categories ) );
 

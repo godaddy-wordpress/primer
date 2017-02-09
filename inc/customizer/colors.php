@@ -1301,7 +1301,7 @@ class Primer_Customizer_Colors {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @return integer Returns the color overlay transparency value.
+	 * @return int Returns the color overlay transparency value.
 	 */
 	public function get_color_overlay_transparency_default_value() {
 
