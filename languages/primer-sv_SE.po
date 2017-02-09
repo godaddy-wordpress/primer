@@ -136,21 +136,21 @@ msgstr "Gå till innehåll"
 
 #: inc/compat/woocommerce.php:391
 msgid "Featured Products"
-msgstr "Featured Products"
+msgstr "Aktuella produkter"
 
 #: inc/compat/woocommerce.php:401
 msgid "On Sale Now"
-msgstr "On Sale Now"
+msgstr "På rea nu"
 
 #: inc/compat/woocommerce.php:415
 msgid "New In Store"
-msgstr "New In Store"
+msgstr "Nyheter"
 
 #: inc/compat/woocommerce.php:567
 msgid "%d item"
 msgid_plural "%d items"
-msgstr[0] "%d item"
-msgstr[1] "%d items"
+msgstr[0] "%d artikel"
+msgstr[1] "%d artiklar"
 
 #: inc/compat/wordpress.php:47
 msgid ""
@@ -418,16 +418,16 @@ msgstr "Blogg"
 
 #: templates/parts/404-woocommerce.php:30
 msgid "Search"
-msgstr "Search"
+msgstr "Sök"
 
 #: templates/parts/404-woocommerce.php:36
 msgid "Promoted Products"
-msgstr "Promoted Products"
+msgstr "Kampanjprodukter"
 
 #: templates/parts/404-woocommerce.php:42
 #: templates/parts/404-woocommerce.php:44
 msgid "Popular Products"
-msgstr "Popular Products"
+msgstr "Populära produkter"
 
 #: templates/parts/loop/page-content.php:27
 #: templates/parts/loop/post-content.php:18

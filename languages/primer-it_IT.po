@@ -138,21 +138,21 @@ msgstr "Passa al contenuto"
 
 #: inc/compat/woocommerce.php:391
 msgid "Featured Products"
-msgstr "Featured Products"
+msgstr "Prodotti in primo piano"
 
 #: inc/compat/woocommerce.php:401
 msgid "On Sale Now"
-msgstr "On Sale Now"
+msgstr "In sconto subito"
 
 #: inc/compat/woocommerce.php:415
 msgid "New In Store"
-msgstr "New In Store"
+msgstr "Nuovi arrivi"
 
 #: inc/compat/woocommerce.php:567
 msgid "%d item"
 msgid_plural "%d items"
-msgstr[0] "%d item"
-msgstr[1] "%d items"
+msgstr[0] "%d articolo"
+msgstr[1] "%d articoli"
 
 #: inc/compat/wordpress.php:47
 msgid ""
@@ -420,16 +420,16 @@ msgstr "Blog"
 
 #: templates/parts/404-woocommerce.php:30
 msgid "Search"
-msgstr "Search"
+msgstr "Cerca"
 
 #: templates/parts/404-woocommerce.php:36
 msgid "Promoted Products"
-msgstr "Promoted Products"
+msgstr "Prodotti in promozione"
 
 #: templates/parts/404-woocommerce.php:42
 #: templates/parts/404-woocommerce.php:44
 msgid "Popular Products"
-msgstr "Popular Products"
+msgstr "Prodotti popolari"
 
 #: templates/parts/loop/page-content.php:27
 #: templates/parts/loop/post-content.php:18
