@@ -470,7 +470,7 @@ class Primer_Customizer_Colors {
 					array_keys( $this->colors ),
 					wp_list_pluck( $this->colors, 'default' )
 				),
-			)
+			),
 		);
 
 		$color_schemes = array(

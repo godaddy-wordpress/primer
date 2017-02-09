@@ -359,7 +359,7 @@ class Primer_Customizer_Layouts {
 					<li class="<?php echo esc_attr( $class ); ?>">
 						<label for="primer-layout-<?php echo esc_attr( $layout ); ?>">
 							<input type="radio"
-							       name="<?php echo $name; // xss ok ?>-layout"
+							       name="<?php echo $name; ?>-layout"
 							       data-customize-setting-link="layout"
 							       id="primer-layout-<?php echo esc_attr( $layout ); ?>"
 							       value="<?php echo esc_attr( $layout ); ?>"
