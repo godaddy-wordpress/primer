@@ -10,12 +10,14 @@
 <div class="site-info-text">
 <?php
 
-printf(
+$copyright_text = apply_filters( 'primer_copyright_text', get_theme_mod( 'copyright_text', sprintf(
 	esc_html_x( 'Copyright %1$s %2$d %3$s', '1. copyright symbol, 2. year, 3. site title', 'primer' ),
 	'&copy;',
 	date( 'Y' ),
 	get_bloginfo( 'blogname' )
-);
+) ) );
+
+echo wp_kses_post( $copyright_text );
 
 /**
  * Filter the footer author credit display.
@@ -26,7 +28,12 @@ printf(
  */
 if ( (bool) apply_filters( 'primer_author_credit', true ) ) {
 
-	echo ' &mdash; ';
+
+	if ( ! empty( $copyright_text ) ) {
+
+		echo ' &mdash; ';
+
+	}
 
 	$theme = wp_get_theme();
 
