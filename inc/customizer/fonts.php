@@ -164,6 +164,7 @@ class Primer_Customizer_Fonts {
 
 		add_action( 'customize_register', array( $this, 'fonts' ), 11 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_google_fonts' ), 11 );
+		add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_google_fonts' ), 11 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_inline_css' ), 12 );
 
 	}
@@ -225,6 +226,7 @@ class Primer_Customizer_Fonts {
 					'priority'    => ! empty( $args['priority'] ) ? absint( $args['priority'] ) : null,
 					'type'        => ! empty( $args['type'] ) ? $args['type'] : 'select',
 					'choices'     => $fonts,
+					'class'       => 'select2',
 				)
 			);
 
@@ -362,6 +364,24 @@ class Primer_Customizer_Fonts {
 				'subset' => 'latin',
 			)
 		);
+
+		if ( is_admin() ) {
+
+			foreach ( $this->fonts as $font ) {
+
+				$query_args['family'] = $font;
+
+				wp_enqueue_style( $font, add_query_arg( $query_args, '//fonts.googleapis.com/css' ), false );
+
+			}
+
+			$suffix = SCRIPT_DEBUG ? '' : '.min';
+
+			wp_enqueue_script( 'font-controls', get_template_directory_uri() . "/assets/js/admin/font-controls{$suffix}.js", array( 'jquery' ), 'all', true );
+
+			return;
+
+		}
 
 		wp_enqueue_style( Primer_Customizer::$stylesheet . '-fonts', add_query_arg( $query_args, '//fonts.googleapis.com/css' ), false );
 
