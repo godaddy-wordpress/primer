@@ -163,42 +163,23 @@ function primer_paging_nav() {
  */
 function primer_post_nav() {
 
-	global $post;
+	/**
+	 * Filter the next/prev navigation text
+	 *
+	 * @since NEXT
+	 *
+	 * @var array
+	 */
+	$navigation_text = (array) apply_filters( 'primer_post_nav_text', [
+		'next_text' => '%title &rarr;',
+		'prev_text' => '&larr; %title',
+	] );
 
-	$previous = is_attachment() ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
-	$next     = get_adjacent_post( false, '', false );
-
-	if ( ! $next && ! $previous ) {
-
-		return;
-
-	}
-
-	?>
-	<nav class="navigation post-navigation">
-
-		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'primer' ); ?></h1>
-
-		<div class="nav-links">
-
-		<?php if ( is_rtl() ) : ?>
-
-			<div class="nav-next"><?php next_post_link( '%link &larr;' ); ?></div>
-
-			<div class="nav-previous"><?php previous_post_link( '&rarr; %link' ); ?></div>
-
-		<?php else : ?>
-
-			<div class="nav-previous"><?php previous_post_link( '&larr; %link' ); ?></div>
-
-			<div class="nav-next"><?php next_post_link( '%link &rarr;' ); ?></div>
-
-		<?php endif; ?>
-
-		</div><!-- .nav-links -->
-
-	</nav><!-- .navigation -->
-	<?php
+	echo wp_kses_post( get_the_post_navigation( array(
+		'next_text' => "<div class='nav-next'>{$navigation_text['next_text']}</div>",
+		'prev_text' => "<div class='nav-previous'>{$navigation_text['prev_text']}</div>",
+		'screen_reader_text' => esc_html__( 'Post navigation', 'primer' ),
+	) ) );
 
 }
 
