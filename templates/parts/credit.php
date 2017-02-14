@@ -10,7 +10,14 @@
 <div class="site-info-text">
 <?php
 
-$copyright_text = apply_filters( 'primer_copyright_text', get_theme_mod( 'copyright_text', sprintf(
+/**
+ * Filter the footer copyright text.
+ *
+ * @since NEXT
+ *
+ * @var string
+ */
+$copyright_text = (string) apply_filters( 'primer_copyright_text', get_theme_mod( 'copyright_text', sprintf(
 	esc_html_x( 'Copyright %1$s %2$d %3$s', '1. copyright symbol, 2. year, 3. site title', 'primer' ),
 	'&copy;',
 	date( 'Y' ),
