@@ -158,7 +158,9 @@ function primer_paging_nav() {
 /**
  * Display navigation to next/previous post when applicable.
  *
- * @global WP_Post $post
+ * @uses get_the_post_navigation
+ * @uses primer_post_nav_text
+ *
  * @since  1.0.0
  */
 function primer_post_nav() {
