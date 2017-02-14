@@ -72,7 +72,7 @@ class Primer_Site_Identity_Options {
 		);
 
 		$wp_customize->add_control(
-			'page_width',
+			'show_author_credit',
 			array(
 				'label'    => esc_html__( 'Display theme author credit', 'primer' ),
 				'section'  => 'title_tagline',
