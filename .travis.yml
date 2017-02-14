@@ -1,8 +1,15 @@
 sudo: false
 
-language:
-  - php
-  - node_js
+language: php
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+branches:
+  except:
+    - i18n
 
 php:
   - 5.2
@@ -24,7 +31,8 @@ install:
   - if [ ! -e "$DEV_LIB_PATH" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
   - if [ ! -e "$DEV_LIB_PATH" ]; then git clone https://github.com/xwp/wp-dev-lib.git $DEV_LIB_PATH; fi
   - source $DEV_LIB_PATH/travis.install.sh
-  - curl -s https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
+  - curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
+  - chmod +x /tmp/wp-cli.phar
 
 script:
   - source $DEV_LIB_PATH/travis.script.sh
