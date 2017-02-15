@@ -2225,43 +2225,43 @@ body.single-product span.onsale {
   top: 0;
   left: 0; }
 
-.primer-wc-cart-menu .cart-preview-count {
-  font-weight: 800;
-  margin-left: 8px; }
-
-.primer-wc-cart-menu a:hover {
-  cursor: pointer; }
-
-.primer-wc-cart-menu .widget_shopping_cart {
-  float: left;
-  margin: 0;
-  padding: 0 1em 1em 1em; }
-  .primer-wc-cart-menu .widget_shopping_cart p.buttons a:first-child {
-    margin-bottom: 5px; }
-  .primer-wc-cart-menu .widget_shopping_cart p.buttons {
+.primer-wc-cart-menu {
+  display: none; }
+  .main-navigation .primer-wc-cart-menu {
+    display: block; }
+  .primer-wc-cart-menu .cart-preview-count {
+    font-weight: 800;
+    margin-left: 8px; }
+  .primer-wc-cart-menu a:hover {
+    cursor: pointer; }
+  .primer-wc-cart-menu .widget_shopping_cart {
+    float: left;
+    margin: 0;
+    padding: 0 1em 1em 1em; }
+    .primer-wc-cart-menu .widget_shopping_cart p.buttons a:first-child {
+      margin-bottom: 5px; }
+    .primer-wc-cart-menu .widget_shopping_cart p.buttons {
+      float: left;
+      width: 100%;
+      margin: 0; }
+      .primer-wc-cart-menu .widget_shopping_cart p.buttons a {
+        text-align: center;
+        width: 100%;
+        background-color: #ff6663;
+        color: #ffffff; }
+  .primer-wc-cart-menu .widget_shopping_cart_content p.total {
     float: left;
     width: 100%;
-    margin: 0; }
-    .primer-wc-cart-menu .widget_shopping_cart p.buttons a {
-      text-align: center;
-      width: 100%;
-      background-color: #ff6663;
-      color: #ffffff; }
-
-.primer-wc-cart-menu .widget_shopping_cart_content p.total {
-  float: left;
-  width: 100%;
-  padding-top: 10px;
-  margin: 10px 0; }
-
-.primer-wc-cart-menu ul.cart_list.product_list_widget {
-  float: left;
-  display: inline-block;
-  background: inherit;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  max-height: 250px;
-  overflow-y: auto; }
+    padding-top: 10px;
+    margin: 10px 0; }
+  .primer-wc-cart-menu ul.cart_list.product_list_widget {
+    float: left;
+    display: inline-block;
+    background: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    max-height: 250px;
+    overflow-y: auto; }
 
 .main-navigation ul ul ul.cart_list {
   position: inherit; }

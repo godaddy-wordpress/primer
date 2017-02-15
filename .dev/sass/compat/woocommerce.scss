@@ -33,6 +33,12 @@ body.single-product {
 }
 
 .primer-wc-cart-menu {
+	display: none;
+
+	.main-navigation & {
+		display: block;
+	}
+
 	.cart-preview-count {
 		font-weight: 800;
 		margin-left: 8px;
