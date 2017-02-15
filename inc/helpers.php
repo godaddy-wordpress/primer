@@ -23,7 +23,16 @@ function primer_get_the_page_title() {
 
 		case is_front_page() :
 
-			$title = 'posts' === get_option( 'show_on_front' ) ? apply_filters( 'primer_latest_posts_title', __( 'Latest Posts', 'primer' ) ) : get_the_title( get_option( 'page_on_front' ) );
+			/**
+			 * Filter the latest posts page title
+			 *
+			 * @since NEXT
+			 *
+			 * @var string
+			 */
+			$latest_posts_title = (string) apply_filters( 'primer_latest_posts_title', __( 'Latest Posts', 'primer' ) );
+
+			$title = 'posts' === get_option( 'show_on_front' ) ? $latest_posts_title : get_the_title( get_option( 'page_on_front' ) );
 
 			break;
 
