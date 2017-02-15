@@ -2228,7 +2228,7 @@ body.single-product span.onsale {
 .primer-wc-cart-menu {
   display: none; }
   .main-navigation .primer-wc-cart-menu {
-    display: block; }
+    display: list-item; }
   .primer-wc-cart-menu .cart-preview-count {
     font-weight: 800;
     margin-left: 8px; }
