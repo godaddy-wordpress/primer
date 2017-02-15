@@ -2,12 +2,12 @@
 Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
 Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
-Tested up to:      4.6
+Tested up to:      4.7
 Stable tag:        1.4.1
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Primer is a powerful theme that brings clarity to your content in a fresh design.  This is the parent for all themes in the GoDaddy Primer theme family.
+Primer is a powerful theme that brings clarity to your content in a fresh design. This is the parent for all themes in the GoDaddy Primer theme family.
 
 == Description ==
 
@@ -39,7 +39,7 @@ You can fork and contribute back to Primer by visiting [our public repo on GitHu
 
 == Copyright ==
 
-Primer WordPress theme, Copyright 2016 GoDaddy Operating Company, LLC.
+Primer WordPress theme, Copyright 2017 GoDaddy Operating Company, LLC.
 Primer is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
@@ -60,10 +60,18 @@ Source: https://genericons.com/
 
 == Changelog ==
 
-= 1.4.0 - October 21st 2016 =
+= 1.4.2 =
+* Added word-wrap where text was overflowing @props [evanherman](https://github.com/EvanHerman)
+* Updated translations @props [jonathanbardo](https://github.com/jonathanbardo)
+* Added font-family support for WooCommerce buttons @props [fjarret](https://github.com/fjarrett)
+* Introduced 'Author Credit' toggle in the customizer @props [evanherman](https://github.com/EvanHerman)
+
+= 1.4.1 =
+* Fixed hero widget font sizes @props [jonathanbardo](https://github.com/jonathanbardo)
+
+= 1.4.0 =
 * Fixed comment meta template @props [wpexplorer](https://github.com/wpexplorer)
 * Expose color schemes array @props [evanherman](https://github.com/EvanHerman), [jonathanbardo](https://github.com/jonathanbardo)
 
-= 1.0.0 - September 2016 =
-
+= 1.3.0 =
 * Initial release.
