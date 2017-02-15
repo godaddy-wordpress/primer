@@ -58,7 +58,7 @@
 
 		$this.on( 'mouseleave', function() {
 
-			$( this ).children( '.sub-menu' ).first().attr( 'style', '' );
+			$( this ).children( '.sub-menu' ).first().removeAttr( 'style' );
 
 		} );
 
