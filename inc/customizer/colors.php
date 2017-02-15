@@ -181,7 +181,7 @@ class Primer_Customizer_Colors {
 							'background-color' => 'rgba(%1$s, 0.1)',
 							'border-color'     => 'rgba(%1$s, 0.1)',
 						),
-						'input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea' => array(
+						'input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea, .select2-container .select2-choice' => array(
 							'color'        => 'rgba(%1$s, 0.5)',
 							'border-color' => 'rgba(%1$s, 0.1)',
 						),
