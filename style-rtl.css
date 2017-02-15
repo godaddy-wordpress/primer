@@ -2226,9 +2226,9 @@ body.single-product span.onsale {
   right: 0; }
 
 .primer-wc-cart-menu {
-  display: none; }
+  display: none !important; }
   .main-navigation .primer-wc-cart-menu {
-    display: list-item; }
+    display: list-item !important; }
   .primer-wc-cart-menu .cart-preview-count {
     font-weight: 800;
     margin-right: 8px; }

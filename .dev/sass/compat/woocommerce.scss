@@ -33,10 +33,10 @@ body.single-product {
 }
 
 .primer-wc-cart-menu {
-	display: none;
+	display: none !important;
 
 	.main-navigation & {
-		display: list-item;
+		display: list-item !important;
 	}
 
 	.cart-preview-count {
