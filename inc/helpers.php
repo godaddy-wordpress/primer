@@ -23,18 +23,7 @@ function primer_get_the_page_title() {
 
 		case is_front_page() :
 
-			/**
-			 * Filter the page title when the front page is set to display latest posts.
-			 *
-			 * Settings > Reading > Front page displays > Your latest posts
-			 *
-			 * @since NEXT
-			 *
-			 * @var string
-			 */
-			$latest_posts_title = (string) apply_filters( 'primer_latest_posts_title', '' );
-
-			$title = ( 'posts' === get_option( 'show_on_front' ) ) ? $latest_posts_title : get_the_title( get_option( 'page_on_front' ) );
+			$title = ( 'posts' === get_option( 'show_on_front' ) ) ? get_theme_mod( 'front_page_title', '' ) : get_the_title( get_option( 'page_on_front' ) );
 
 			break;
 
