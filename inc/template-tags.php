@@ -166,20 +166,26 @@ function primer_paging_nav() {
 function primer_post_nav() {
 
 	/**
-	 * Filter the next/prev navigation text
+	 * Filter the next post navigation label
 	 *
 	 * @since NEXT
 	 *
-	 * @var array
+	 * @var string
 	 */
-	$navigation_text = (array) apply_filters( 'primer_post_nav_text', [
-		'next_text' => '%title &rarr;',
-		'prev_text' => '&larr; %title',
-	] );
+	$next_label = (string) apply_filters( 'primer_post_nav_label_next', '%title &rarr;' );
+
+	/**
+	 * Filter the prev post navigation label
+	 *
+	 * @since NEXT
+	 *
+	 * @var string
+	 */
+	$prev_label = (string) apply_filters( 'primer_post_nav_label_prev', '&larr; %title' );
 
 	the_post_navigation( array(
-		'next_text'          => "<div class='nav-next'>{$navigation_text['next_text']}</div>",
-		'prev_text'          => "<div class='nav-previous'>{$navigation_text['prev_text']}</div>",
+		'next_text'          => "<div class='nav-next'>{$next_label}</div>",
+		'prev_text'          => "<div class='nav-previous'>{$prev_label}</div>",
 		'screen_reader_text' => esc_html__( 'Post navigation', 'primer' ),
 	) );
 
