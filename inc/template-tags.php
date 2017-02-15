@@ -156,38 +156,30 @@ function primer_paging_nav() {
 }
 
 /**
- * Display navigation to next/previous post when applicable.
+ * Display navigation to next/previous post, when applicable.
  *
- * @uses the_post_navigation
- * @uses primer_post_nav_text
+ * @since 1.0.0
+ * @uses  the_post_navigation
  *
- * @since  1.0.0
+ * @param array $args (optional)
  */
-function primer_post_nav() {
+function primer_post_nav( $args = array() ) {
 
 	/**
-	 * Filter the next post navigation label
+	 * Filter the default post navigation args.
 	 *
 	 * @since NEXT
 	 *
-	 * @var string
+	 * @var array
 	 */
-	$next_label = (string) apply_filters( 'primer_post_nav_label_next', '%title &rarr;' );
-
-	/**
-	 * Filter the prev post navigation label
-	 *
-	 * @since NEXT
-	 *
-	 * @var string
-	 */
-	$prev_label = (string) apply_filters( 'primer_post_nav_label_prev', '&larr; %title' );
-
-	the_post_navigation( array(
-		'next_text'          => "<div class='nav-next'>{$next_label}</div>",
-		'prev_text'          => "<div class='nav-previous'>{$prev_label}</div>",
-		'screen_reader_text' => esc_html__( 'Post navigation', 'primer' ),
+	$defaults = (array) apply_filters( 'primer_post_nav_default_args', array(
+		'prev_text' => '&larr; %title',
+		'next_text' => '%title &rarr;',
 	) );
+
+	$args = wp_parse_args( $args, $defaults );
+
+	the_post_navigation( $args );
 
 }
 
