@@ -156,49 +156,30 @@ function primer_paging_nav() {
 }
 
 /**
- * Display navigation to next/previous post when applicable.
+ * Display navigation to next/previous post, when applicable.
  *
- * @global WP_Post $post
- * @since  1.0.0
+ * @since 1.0.0
+ * @uses  the_post_navigation
+ *
+ * @param array $args (optional)
  */
-function primer_post_nav() {
+function primer_post_nav( $args = array() ) {
 
-	global $post;
+	/**
+	 * Filter the default post navigation args.
+	 *
+	 * @since NEXT
+	 *
+	 * @var array
+	 */
+	$defaults = (array) apply_filters( 'primer_post_nav_default_args', array(
+		'prev_text' => '&larr; %title',
+		'next_text' => '%title &rarr;',
+	) );
 
-	$previous = is_attachment() ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
-	$next     = get_adjacent_post( false, '', false );
+	$args = wp_parse_args( $args, $defaults );
 
-	if ( ! $next && ! $previous ) {
-
-		return;
-
-	}
-
-	?>
-	<nav class="navigation post-navigation">
-
-		<h1 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'primer' ); ?></h1>
-
-		<div class="nav-links">
-
-		<?php if ( is_rtl() ) : ?>
-
-			<div class="nav-next"><?php next_post_link( '%link &larr;' ); ?></div>
-
-			<div class="nav-previous"><?php previous_post_link( '&rarr; %link' ); ?></div>
-
-		<?php else : ?>
-
-			<div class="nav-previous"><?php previous_post_link( '&larr; %link' ); ?></div>
-
-			<div class="nav-next"><?php next_post_link( '%link &rarr;' ); ?></div>
-
-		<?php endif; ?>
-
-		</div><!-- .nav-links -->
-
-	</nav><!-- .navigation -->
-	<?php
+	the_post_navigation( $args );
 
 }
 
