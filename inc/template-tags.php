@@ -158,7 +158,7 @@ function primer_paging_nav() {
 /**
  * Display navigation to next/previous post when applicable.
  *
- * @uses get_the_post_navigation
+ * @uses the_post_navigation
  * @uses primer_post_nav_text
  *
  * @since  1.0.0
@@ -177,11 +177,11 @@ function primer_post_nav() {
 		'prev_text' => '&larr; %title',
 	] );
 
-	echo wp_kses_post( get_the_post_navigation( array(
-		'next_text' => "<div class='nav-next'>{$navigation_text['next_text']}</div>",
-		'prev_text' => "<div class='nav-previous'>{$navigation_text['prev_text']}</div>",
+	the_post_navigation( array(
+		'next_text'          => "<div class='nav-next'>{$navigation_text['next_text']}</div>",
+		'prev_text'          => "<div class='nav-previous'>{$navigation_text['prev_text']}</div>",
 		'screen_reader_text' => esc_html__( 'Post navigation', 'primer' ),
-	) ) );
+	) );
 
 }
 
