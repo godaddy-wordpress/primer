@@ -57,6 +57,8 @@ class Primer_Static_Front_Page_Options {
 	/**
 	 * Check whether the front page is set to display the latest posts.
 	 *
+	 * @since NEXT
+	 *
 	 * @return bool
 	 */
 	public function latest_posts_on_front_page() {
