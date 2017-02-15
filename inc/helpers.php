@@ -23,7 +23,7 @@ function primer_get_the_page_title() {
 
 		case is_front_page() :
 
-			$title = get_the_title( get_option( 'page_on_front' ) );
+			$title = ( 'posts' === get_option( 'show_on_front' ) ) ? get_theme_mod( 'front_page_title', '' ) : get_the_title( get_option( 'page_on_front' ) );
 
 			break;
 
