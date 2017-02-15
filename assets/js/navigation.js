@@ -56,7 +56,11 @@
 
 		}
 
-		$this.off( 'hover', position );
+		$this.on( 'mouseleave', function() {
+
+			$( this ).children( '.sub-menu' ).first().attr( 'style', '' );
+
+		} );
 
 	}
 
