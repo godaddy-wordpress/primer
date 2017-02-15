@@ -7,7 +7,8 @@
 ( function( $ ) {
 
 	var $nav_menu    = false,
-	    $menu_toggle = false;
+	    $menu_toggle = false,
+	    $submenu     = false;
 
 	function toggle() {
 
@@ -58,7 +59,7 @@
 
 		$this.on( 'mouseleave', function() {
 
-			$( this ).children( '.sub-menu' ).first().removeAttr( 'style' );
+			$submenu.removeAttr( 'style' );
 
 		} );
 
