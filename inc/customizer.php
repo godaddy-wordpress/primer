@@ -2,10 +2,12 @@
 /**
  * Customizer bootstrap.
  *
- * @package Primer
- * @since   1.0.0
+ * @class    Primer_Customizer
+ * @package  Classes/Customizer
+ * @category Class
+ * @author   GoDaddy
+ * @since    1.0.0
  */
-
 class Primer_Customizer {
 
 	/**
@@ -61,6 +63,8 @@ class Primer_Customizer {
 	 * Add custom logo support.
 	 *
 	 * @action after_setup_theme
+	 * @uses   [add_theme_support](https://developer.wordpress.org/reference/functions/add_theme_support/)
+	 *
 	 * @since  1.0.0
 	 */
 	public function logo() {
@@ -91,10 +95,13 @@ class Primer_Customizer {
 	 *
 	 * @action customize_register
 	 * @since  1.0.0
+	 *
 	 * @uses   $this->blogname()
 	 * @uses   $this->blogdescription()
 	 *
-	 * @param WP_Customize_Manager $wp_customize
+	 * @see    WP_Customize_Manager
+	 *
+	 * @param WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
 	 */
 	public function selective_refresh( WP_Customize_Manager $wp_customize ) {
 
@@ -132,6 +139,7 @@ class Primer_Customizer {
 	 * Display the blog name.
 	 *
 	 * @since 1.0.0
+	 *
 	 * @see   $this->selective_refresh()
 	 */
 	public function blogname() {
@@ -156,9 +164,11 @@ class Primer_Customizer {
 	 * Add control to use featured images as the hero image.
 	 *
 	 * @action customize_register
+	 * @see    WP_Customize_Manager
+	 *
 	 * @since  1.0.0
 	 *
-	 * @param WP_Customize_Manager $wp_customize
+	 * @param WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
 	 */
 	public function use_featured_hero_image( WP_Customize_Manager $wp_customize ) {
 
@@ -187,6 +197,7 @@ class Primer_Customizer {
 	 * Enqueue preview JS.
 	 *
 	 * @action customize_preview_init
+	 *
 	 * @since 1.0.0
 	 */
 	public function customize_preview_js() {
@@ -204,9 +215,9 @@ class Primer_Customizer {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  array $rules
+	 * @param  array $rules Array of CSS rules to parse.
 	 *
-	 * @return string
+	 * @return string Return Parsed CSS rules ready for use.
 	 */
 	public static function parse_css_rules( array $rules ) {
 

@@ -1,0 +1,616 @@
+# Copyright (c) 2017 GoDaddy Operating Company, LLC. All Rights Reserved.
+msgid ""
+msgstr ""
+"Project-Id-Version: Primer 1.4.1\n"
+"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
+"POT-Creation-Date: 2017-02-07 23:43:35+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Generator: grunt-wp-i18n1.0.0\n"
+
+#: 404.php:22 templates/parts/404-woocommerce.php:22
+msgid "Oops! That page can't be found."
+msgstr "이런! 해당 페이지를 찾을 수 없습니다."
+
+#: 404.php:28 templates/parts/404-woocommerce.php:28
+msgid ""
+"It looks like nothing was found at this location. Please try searching "
+"below:"
+msgstr "이 곳에는 아무 것도 없는 것 같습니다. 아래에서 검색해 보십시오."
+
+#: comments.php:54 comments.php:79
+msgid "Comment navigation"
+msgstr "의견 탐색"
+
+#: comments.php:81
+msgid "&larr; Older Comments"
+msgstr "&larr; 이전 의견"
+
+#: comments.php:83
+msgid "Newer Comments &rarr;"
+msgstr "새 의견 &rarr;"
+
+#: comments.php:93
+msgid "Comments are closed."
+msgstr "의견 작성이 중지되었습니다."
+
+#: content-none.php:16
+msgid "Nothing Found"
+msgstr "찾은 것 없음"
+
+#: content-none.php:31
+msgid "Get started here"
+msgstr "여기서부터 시작"
+
+#: content-none.php:39
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "죄송합니다, 검색 조건과 일치하는 것이 없습니다. 다른 키워드를 사용하여 다시 해보세요."
+
+#: content-none.php:45
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "귀하가 찾으시는 내용을 찾지 못한 것 같습니다. 검색이 도움될 수도 있습니다."
+
+#: functions.php:159
+msgid "Featured"
+msgstr "특성"
+
+#: functions.php:165 functions.php:407
+msgid "Hero"
+msgstr "Hero"
+
+#: functions.php:246
+msgid "Primary Menu"
+msgstr "주 메뉴"
+
+#: functions.php:247
+msgid "Social Menu"
+msgstr "소셜 메뉴"
+
+#: functions.php:248
+msgid "Footer Menu"
+msgstr "바닥글 메뉴"
+
+#: functions.php:367
+msgid "Sidebar"
+msgstr "사이드바"
+
+#: functions.php:368
+msgid ""
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
+msgstr "주 사이드바는 모든 페이지의 내용 게시물, 아카이브 및 검색 템플릿에서 표시됩니다."
+
+#: functions.php:375
+msgid "Secondary Sidebar"
+msgstr "보조 사이드바"
+
+#: functions.php:376
+msgid ""
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
+msgstr "보조 사이드바는 3열 레이아웃을 선택할 때 표시됩니다."
+
+#: functions.php:383
+msgid "Footer 1"
+msgstr "바닥글 1"
+
+#: functions.php:384
+msgid "This sidebar is the first column of the footer widget area."
+msgstr "이 사이드바는 바닥글 위젯 영역의 첫 번째 열에 표시됩니다."
+
+#: functions.php:391
+msgid "Footer 2"
+msgstr "바닥글 2"
+
+#: functions.php:392
+msgid "This sidebar is the second column of the footer widget area."
+msgstr "이 사이드바는 바닥글 위젯 영역의 두 번째 열에 표시됩니다."
+
+#: functions.php:399
+msgid "Footer 3"
+msgstr "바닥글 3"
+
+#: functions.php:400
+msgid "This sidebar is the third column of the footer widget area."
+msgstr "이 사이드바는 바닥글 위젯 영역의 세 번째 열에 표시됩니다."
+
+#: functions.php:408
+msgid "Hero widgets appear over the header image on the front page."
+msgstr "Hero 위젯은 첫 페이지의 머리글 이미지 위에 나타납니다."
+
+#: header.php:42
+msgid "Skip to content"
+msgstr "컨텐츠로 건너뛰기"
+
+#: inc/compat/woocommerce.php:391
+msgid "Featured Products"
+msgstr "Featured Products"
+
+#: inc/compat/woocommerce.php:401
+msgid "On Sale Now"
+msgstr "On Sale Now"
+
+#: inc/compat/woocommerce.php:415
+msgid "New In Store"
+msgstr "New In Store"
+
+#: inc/compat/woocommerce.php:567
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d item"
+msgstr[1] "%d items"
+
+#: inc/compat/wordpress.php:47
+msgid ""
+"Primer requires at least WordPress version %1$s. You are running version "
+"%2$s. Please upgrade and try again."
+msgstr ""
+"Primer는 워드프레스 버전 %1$s 이상을 요구합니다. 귀하는 %2$s 버전을 실행 중입니다. 업그레이드하고 다시 시도하세요."
+
+#: inc/customizer/colors.php:47
+msgid "Site Title Text"
+msgstr "사이트 제목 텍스트"
+
+#: inc/customizer/colors.php:63
+msgid "Tagline Text"
+msgstr "태그라인 텍스트"
+
+#: inc/customizer/colors.php:74
+msgid "Hero Text"
+msgstr "Hero 텍스트"
+
+#: inc/customizer/colors.php:105 inc/customizer/colors.php:323
+msgid "Text"
+msgstr "Text"
+
+#: inc/customizer/colors.php:127
+msgid "Heading Text"
+msgstr "제목 텍스트"
+
+#: inc/customizer/colors.php:128
+msgid "Post titles, widget titles, form labels, table headers and buttons."
+msgstr "게시물 제목, 위젯 제목, 형식 레이블, 표 머리글 및 버튼."
+
+#: inc/customizer/colors.php:149
+msgid "Primary Text"
+msgstr "기본 텍스트"
+
+#: inc/customizer/colors.php:150
+msgid "Paragraphs, lists, menu links, quotes and tables."
+msgstr "단락, 목록, 메뉴 링크, 인용문 및 표."
+
+#: inc/customizer/colors.php:195
+msgid "Secondary Text"
+msgstr "보조 텍스트"
+
+#: inc/customizer/colors.php:196
+msgid "Post bylines, comment counts, post footers and quote footers."
+msgstr "게시물 평행선, 댓글 수, 게시물 바닥글 및 인용문 바닥글."
+
+#: inc/customizer/colors.php:210
+msgid "Widget Heading Text"
+msgstr "위젯 제목 텍스트"
+
+#: inc/customizer/colors.php:227
+msgid "Widget Text"
+msgstr "위젯 텍스트"
+
+#: inc/customizer/colors.php:239
+msgid "Menu Text"
+msgstr "메뉴 텍스트"
+
+#: inc/customizer/colors.php:261
+msgid "Copyright Text"
+msgstr "저작권 텍스트"
+
+#: inc/customizer/colors.php:275
+msgid "Link Text"
+msgstr "링크 텍스트"
+
+#: inc/customizer/colors.php:297 inc/customizer/colors.php:379
+msgid "Background"
+msgstr "배경"
+
+#: inc/customizer/colors.php:340
+msgid "Page Background"
+msgstr "페이지 배경"
+
+#: inc/customizer/colors.php:350
+msgid "Content Background"
+msgstr "콘텐츠 배경"
+
+#: inc/customizer/colors.php:360
+msgid "Hero Background"
+msgstr "Hero 배경"
+
+#: inc/customizer/colors.php:389
+msgid "Widgets Background"
+msgstr "위젯 배경"
+
+#: inc/customizer/colors.php:400
+msgid "Widget Content Background"
+msgstr "위젯 콘텐츠 배경"
+
+#: inc/customizer/colors.php:411
+msgid "Footer Background"
+msgstr "바닥글 배경"
+
+#: inc/customizer/colors.php:449 inc/customizer/layouts.php:302
+msgid "Custom"
+msgstr "사용자 정의"
+
+#: inc/customizer/colors.php:466 inc/customizer/layouts.php:293
+msgid "Default"
+msgstr "기본"
+
+#: inc/customizer/colors.php:706
+msgid "Colors"
+msgstr "색상"
+
+#: inc/customizer/colors.php:715
+msgid "Color Schemes"
+msgstr "색 구성표"
+
+#: inc/customizer/colors.php:723
+msgid "Header"
+msgstr "머리글"
+
+#: inc/customizer/colors.php:731
+msgid "Menu"
+msgstr "메뉴"
+
+#: inc/customizer/colors.php:739
+msgid "Buttons"
+msgstr "버튼"
+
+#: inc/customizer/colors.php:747
+msgid "Content"
+msgstr "컨텐트"
+
+#: inc/customizer/colors.php:755
+msgid "Footer"
+msgstr "바닥글"
+
+#: inc/customizer/colors.php:965
+msgid "Base Color Scheme"
+msgstr "기본 색상표"
+
+#: inc/customizer/colors.php:1274
+msgid "Hero Background Overlay"
+msgstr "Hero 배경 오버레이"
+
+#: inc/customizer/colors.php:1275
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "사용자 지정 머리글 이미지를 사용할 때 색 오버레이 투명도를 제어합니다."
+
+#: inc/customizer/fonts.php:87
+msgid "Site Title"
+msgstr "사이트 제목"
+
+#: inc/customizer/fonts.php:88
+msgid "Site title text in the header."
+msgstr "머리글의 사이트 제목 텍스트."
+
+#: inc/customizer/fonts.php:97
+msgid "Navigation"
+msgstr "네비게이션"
+
+#: inc/customizer/fonts.php:98
+msgid "Primary menu links and button links."
+msgstr "기본 메뉴 링크 및 버튼 링크."
+
+#: inc/customizer/fonts.php:108
+msgid "Headings"
+msgstr "제목"
+
+#: inc/customizer/fonts.php:109
+msgid "Post titles, widget titles, form labels, and table headers."
+msgstr "게시물 제목, 위젯 제목, 형식 레이블 및 표 머리글."
+
+#: inc/customizer/fonts.php:124
+msgid "Primary"
+msgstr "주도메인"
+
+#: inc/customizer/fonts.php:125
+msgid "Paragraphs, lists, links, quotes, and tables."
+msgstr "단락, 목록, 링크, 인용문 및 표."
+
+#: inc/customizer/fonts.php:139
+msgid "Secondary"
+msgstr "2차(보조) 도메인"
+
+#: inc/customizer/fonts.php:140
+msgid "Bylines, comment counts, reply links, post footers, and quote footers."
+msgstr "평행선, 댓글 수, 답변 링크, 게시물 바닥글 및 인용문 바닥글."
+
+#: inc/customizer/fonts.php:188
+msgid "Fonts"
+msgstr "글꼴"
+
+#: inc/customizer/layouts.php:53
+msgid "One Column: Wide"
+msgstr "열 1개: 넓게"
+
+#: inc/customizer/layouts.php:54
+msgid "One Column: Narrow"
+msgstr "열 1개: 좁게"
+
+#: inc/customizer/layouts.php:55 inc/customizer/layouts.php:144
+msgid "Two Columns: Content | Sidebar"
+msgstr "열 2개: 콘텐츠 | 사이드바"
+
+#: inc/customizer/layouts.php:56 inc/customizer/layouts.php:143
+msgid "Two Columns: Sidebar | Content"
+msgstr "열 2개: 사이드바 | 콘텐츠"
+
+#: inc/customizer/layouts.php:57 inc/customizer/layouts.php:146
+msgid "Three Columns: Content | Sidebar | Sidebar"
+msgstr "열 3개: 콘텐츠 | 사이드바 | 사이드바"
+
+#: inc/customizer/layouts.php:58
+msgid "Three Columns: Sidebar | Content | Sidebar"
+msgstr "열 3개: 사이드바 | 콘텐츠 | 사이드바"
+
+#: inc/customizer/layouts.php:59 inc/customizer/layouts.php:145
+msgid "Three Columns: Sidebar | Sidebar | Content"
+msgstr "열 3개: 사이드바 | 사이드바 | 콘텐츠"
+
+#: inc/customizer/layouts.php:256 inc/customizer/layouts.php:434
+msgid "Layout"
+msgstr "레이아웃"
+
+#: inc/customizer/layouts.php:460
+msgid "Page Width"
+msgstr "페이지 너비"
+
+#: inc/customizer/layouts.php:461
+msgid "Display your site differently on larger screens."
+msgstr "큰 화면에서는 사이트가 다르게 표시됩니다."
+
+#: inc/customizer/site-identity.php:72
+msgid "Display theme author credit"
+msgstr "테마 작성자 크레드트 표시"
+
+#: inc/customizer.php:176
+msgid "Use featured image"
+msgstr "추천 이미지 사용"
+
+#: inc/customizer.php:177
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "Hero 이미지를 재정의하려면 현재 게시물에 추천 이미지를 허용하세요."
+
+#: inc/helpers.php:52
+msgid "404 Page Not Found"
+msgstr "404 페이지를 찾을 수 없음"
+
+#: inc/template-tags.php:133
+msgid "Posts navigation"
+msgstr "게시물 탐색"
+
+#: inc/template-tags.php:139
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> 이전 게시물"
+
+#: inc/template-tags.php:145
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "새 게시물 <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:178
+msgid "Post navigation"
+msgstr "게시물 탐색"
+
+#: inc/template-tags.php:279
+msgid "Blog"
+msgstr "블로그"
+
+#: templates/parts/404-woocommerce.php:30
+msgid "Search"
+msgstr "Search"
+
+#: templates/parts/404-woocommerce.php:36
+msgid "Promoted Products"
+msgstr "Promoted Products"
+
+#: templates/parts/404-woocommerce.php:42
+#: templates/parts/404-woocommerce.php:44
+msgid "Popular Products"
+msgstr "Popular Products"
+
+#: templates/parts/loop/page-content.php:27
+#: templates/parts/loop/post-content.php:18
+msgid "Pages:"
+msgstr "페이지:"
+
+#: templates/parts/loop/page-footer.php:9
+#: templates/parts/loop/post-footer.php:14
+#: templates/parts/loop/post-search-footer.php:46
+msgid "Edit"
+msgstr "편집"
+
+#: templates/parts/loop/post-content.php:14
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr "더 읽기 <span class=\"meta-nav\">&rarr;</span>"
+
+#: templates/parts/loop/post-meta.php:24
+#: templates/parts/loop/post-search-footer.php:42
+msgid "Leave a comment"
+msgstr "의견 작성하기"
+
+#: templates/parts/loop/post-meta.php:24
+#: templates/parts/loop/post-search-footer.php:42
+msgid "1 Comment"
+msgstr "1 의견"
+
+#. Theme Name of the plugin/theme
+msgid "Primer"
+msgstr "Primer"
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/godaddy/wp-primer-theme"
+msgstr "https://github.com/godaddy/wp-primer-theme"
+
+#. Description of the plugin/theme
+msgid ""
+"Primer is a powerful theme that brings clarity to your content in a fresh "
+"design."
+msgstr "Primer는 신선한 디자인의 컨텐트에 명료함을 불어 넣는 강력한 테마입니다."
+
+#. Author of the plugin/theme
+msgid "GoDaddy"
+msgstr "GoDaddy"
+
+#. Author URI of the plugin/theme
+msgid "https://www.godaddy.com/"
+msgstr "https://www.godaddy.com/"
+
+#: comments.php:34
+msgctxt "1. number of comments, 2. post title"
+msgid "One thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
+msgstr[0] "%2$s에 관한 1개의 댓글"
+msgstr[1] "%2$s에 관한 %1$d개의 댓글"
+
+#: comments.php:56
+msgctxt "left arrow (LTR) / right arrow (RTL)"
+msgid "%s Older Comments"
+msgstr "%s개의 이전 댓글"
+
+#: comments.php:58
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Newer Comments %s"
+msgstr "새 댓글 %s"
+
+#: templates/parts/loop/post-excerpt.php:14
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Continue Reading %s"
+msgstr "%s 계속 읽기"
+
+#: content-none.php:27
+msgctxt "link to write a new post"
+msgid "Ready to publish your first post? %s."
+msgstr "첫 번째 게시물을 게시할 준비가 되었나요? %s."
+
+#: inc/customizer/colors.php:476
+msgctxt "color scheme name"
+msgid "Blush"
+msgstr "블러시"
+
+#: inc/customizer/colors.php:480
+msgctxt "color scheme name"
+msgid "Bronze"
+msgstr "브론즈"
+
+#: inc/customizer/colors.php:484
+msgctxt "color scheme name"
+msgid "Canary"
+msgstr "카나리아"
+
+#: inc/customizer/colors.php:488
+msgctxt "color scheme name"
+msgid "Cool"
+msgstr "멋진"
+
+#: inc/customizer/colors.php:492
+msgctxt "color scheme name"
+msgid "Dark"
+msgstr "어두움"
+
+#: inc/customizer/colors.php:496
+msgctxt "color scheme name"
+msgid "Iguana"
+msgstr "이구아나"
+
+#: inc/customizer/colors.php:500
+msgctxt "color scheme name"
+msgid "Muted"
+msgstr "뮤트"
+
+#: inc/customizer/colors.php:504
+msgctxt "color scheme name"
+msgid "Plum"
+msgstr "진한 보라"
+
+#: inc/customizer/colors.php:508
+msgctxt "color scheme name"
+msgid "Rose"
+msgstr "로즈"
+
+#: inc/customizer/colors.php:512
+msgctxt "color scheme name"
+msgid "Tangerine"
+msgstr "오렌지"
+
+#: inc/customizer/colors.php:516
+msgctxt "color scheme name"
+msgid "Turquoise"
+msgstr "옥색"
+
+#: inc/customizer/fonts.php:213
+msgctxt "font name"
+msgid "%s (Default)"
+msgstr "%s(기본값)"
+
+#: inc/customizer/layouts.php:97
+msgctxt "fixed-width page layout"
+msgid "Fixed"
+msgstr "고정됨"
+
+#: inc/customizer/layouts.php:98
+msgctxt "fluid-width page layout"
+msgid "Fluid"
+msgstr "유동"
+
+#: inc/helpers.php:41
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr "검색 결과: %s"
+
+#: inc/hooks.php:384
+msgctxt "page number"
+msgid "Page %d"
+msgstr "페이지 %d"
+
+#: templates/parts/credit.php:14
+msgctxt "1. copyright symbol, 2. year, 3. site title"
+msgid "Copyright %1$s %2$d %3$s"
+msgstr "Copyright %1$s %2$d %3$s"
+
+#: templates/parts/credit.php:34
+msgctxt "1. theme name link, 2. theme author link"
+msgid "%1$s WordPress theme by %2$s"
+msgstr "%1$s 워드프레스 테마 작성자 %2$s"
+
+#: templates/parts/loop/post-footer.php:20
+#: templates/parts/loop/post-footer.php:32
+#: templates/parts/loop/post-search-footer.php:14
+#: templates/parts/loop/post-search-footer.php:26
+msgctxt "separator for items in a list"
+msgid ", "
+msgstr ", "
+
+#: templates/parts/loop/post-footer.php:26
+#: templates/parts/loop/post-search-footer.php:20
+msgctxt "category list"
+msgid "Posted in: %s"
+msgstr "게시 범주: %s"
+
+#: templates/parts/loop/post-footer.php:38
+#: templates/parts/loop/post-search-footer.php:32
+msgctxt "tag list"
+msgid "Filed under: %s"
+msgstr "접수 태그: %s"
+
+#: templates/parts/loop/post-meta.php:24
+#: templates/parts/loop/post-search-footer.php:42
+msgctxt "number of comments"
+msgid "% Comments"
+msgstr "% 의견"

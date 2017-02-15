@@ -3,9 +3,14 @@
 /**
  * Custom class that adds some markup before the nav menu.
  *
- * @package Primer
- * @since   1.0.0
- * @see     primer_add_primary_menu()
+ * @class      Primer_Walker_Nav_Menu
+ * @package    Classes
+ * @subpackage Navigation
+ * @category   Class
+ * @author     GoDaddy
+ * @since      1.0.0
+ * @extends    Walker_Nav_Menu
+ * @see        primer_add_primary_menu()
  */
 class Primer_Walker_Nav_Menu extends Walker_Nav_Menu {
 

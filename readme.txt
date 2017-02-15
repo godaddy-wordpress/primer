@@ -7,7 +7,7 @@ Stable tag:        1.4.1
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Primer is a powerful theme that brings clarity to your content in a fresh design.  This is the parent for all themes in the GoDaddy Primer theme family.
+Primer is a powerful theme that brings clarity to your content in a fresh design. This is the parent for all themes in the GoDaddy Primer theme family.
 
 == Description ==
 
@@ -39,7 +39,7 @@ You can fork and contribute back to Primer by visiting [our public repo on GitHu
 
 == Copyright ==
 
-Primer WordPress theme, Copyright 2016 GoDaddy Operating Company, LLC.
+Primer WordPress theme, Copyright 2017 GoDaddy Operating Company, LLC.
 Primer is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify

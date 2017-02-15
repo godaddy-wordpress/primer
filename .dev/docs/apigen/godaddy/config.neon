@@ -1,0 +1,5 @@
+name: "GoDaddy"
+
+options:
+	versions: [1.4.1]
+	activeVersion: '1.4.1'

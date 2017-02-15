@@ -1,0 +1,625 @@
+# Copyright (c) 2017 GoDaddy Operating Company, LLC. All Rights Reserved.
+msgid ""
+msgstr ""
+"Project-Id-Version: Primer 1.4.1\n"
+"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
+"POT-Creation-Date: 2017-02-07 23:43:35+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Generator: grunt-wp-i18n1.0.0\n"
+
+#: 404.php:22 templates/parts/404-woocommerce.php:22
+msgid "Oops! That page can't be found."
+msgstr "Oops! Halaman ini tidak dapat ditemui."
+
+#: 404.php:28 templates/parts/404-woocommerce.php:28
+msgid ""
+"It looks like nothing was found at this location. Please try searching "
+"below:"
+msgstr ""
+"Nampaknya tiada apa yang boleh ditemui di lokasi ini. Sila cuba cari di bawah:"
+
+#: comments.php:54 comments.php:79
+msgid "Comment navigation"
+msgstr "Navigasi ulasan"
+
+#: comments.php:81
+msgid "&larr; Older Comments"
+msgstr "&larr; Ulasan Lama"
+
+#: comments.php:83
+msgid "Newer Comments &rarr;"
+msgstr "Ulasan Baru &rarr;"
+
+#: comments.php:93
+msgid "Comments are closed."
+msgstr "Ulasan ditutup."
+
+#: content-none.php:16
+msgid "Nothing Found"
+msgstr "Tiada yang Ditemui"
+
+#: content-none.php:31
+msgid "Get started here"
+msgstr "Mulakan di sini"
+
+#: content-none.php:39
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Maaf, tiada yang sepadan dengan terma carian anda. Sila cuba semula dengan "
+"kata kunci yang lain."
+
+#: content-none.php:45
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Nampaknya kami tidak dapat temui apa yang anda cari. Mungkin carian boleh membantu."
+
+#: functions.php:159
+msgid "Featured"
+msgstr "Pilihan"
+
+#: functions.php:165 functions.php:407
+msgid "Hero"
+msgstr "Hero"
+
+#: functions.php:246
+msgid "Primary Menu"
+msgstr "Menu Utama"
+
+#: functions.php:247
+msgid "Social Menu"
+msgstr "Menu Sosial"
+
+#: functions.php:248
+msgid "Footer Menu"
+msgstr "Menu Pengaki"
+
+#: functions.php:367
+msgid "Sidebar"
+msgstr "Palang Sisi"
+
+#: functions.php:368
+msgid ""
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
+msgstr ""
+"Palang sisi utama muncul di sebelah kandungan setiap halaman, pos, arkib dan "
+"templat carian."
+
+#: functions.php:375
+msgid "Secondary Sidebar"
+msgstr "Palang Sisi Kedua"
+
+#: functions.php:376
+msgid ""
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
+msgstr ""
+"Palang sisi kedua hanya akan muncul apabila anda memilih susun atur tiga lajur."
+
+#: functions.php:383
+msgid "Footer 1"
+msgstr "Pengaki 1"
+
+#: functions.php:384
+msgid "This sidebar is the first column of the footer widget area."
+msgstr "Palang sisi ini adalah lajur pertama kawasan widget pengaki."
+
+#: functions.php:391
+msgid "Footer 2"
+msgstr "Pengaki 2"
+
+#: functions.php:392
+msgid "This sidebar is the second column of the footer widget area."
+msgstr "Palang sisi ini adalah lajur kedua kawasan widget pengaki."
+
+#: functions.php:399
+msgid "Footer 3"
+msgstr "Pengaki 3"
+
+#: functions.php:400
+msgid "This sidebar is the third column of the footer widget area."
+msgstr "Palang sisi ini adalah lajur ketiga kawasan widget pengaki."
+
+#: functions.php:408
+msgid "Hero widgets appear over the header image on the front page."
+msgstr "Widget hero muncul pada imej pengepala di halaman depan."
+
+#: header.php:42
+msgid "Skip to content"
+msgstr "Langkau ke kandungan"
+
+#: inc/compat/woocommerce.php:391
+msgid "Featured Products"
+msgstr "Featured Products"
+
+#: inc/compat/woocommerce.php:401
+msgid "On Sale Now"
+msgstr "On Sale Now"
+
+#: inc/compat/woocommerce.php:415
+msgid "New In Store"
+msgstr "New In Store"
+
+#: inc/compat/woocommerce.php:567
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d item"
+msgstr[1] "%d items"
+
+#: inc/compat/wordpress.php:47
+msgid ""
+"Primer requires at least WordPress version %1$s. You are running version "
+"%2$s. Please upgrade and try again."
+msgstr ""
+"Primer memerlukan sekurang-kurangnya versi WordPress %1$s. Anda menggunakan "
+"versi %2$s. Sila naik taraf dan cuba semula."
+
+#: inc/customizer/colors.php:47
+msgid "Site Title Text"
+msgstr "Teks Tajuk Laman"
+
+#: inc/customizer/colors.php:63
+msgid "Tagline Text"
+msgstr "Teks Cogan Kata"
+
+#: inc/customizer/colors.php:74
+msgid "Hero Text"
+msgstr "Teks Hero"
+
+#: inc/customizer/colors.php:105 inc/customizer/colors.php:323
+msgid "Text"
+msgstr "Teks"
+
+#: inc/customizer/colors.php:127
+msgid "Heading Text"
+msgstr "Teks Pengepala"
+
+#: inc/customizer/colors.php:128
+msgid "Post titles, widget titles, form labels, table headers and buttons."
+msgstr "Tajuk pos, tajuk widget, label borang, pengepala jadual dan butang."
+
+#: inc/customizer/colors.php:149
+msgid "Primary Text"
+msgstr "Teks Utama"
+
+#: inc/customizer/colors.php:150
+msgid "Paragraphs, lists, menu links, quotes and tables."
+msgstr "Perenggan, senarai, pautan menu, petikan dan jadual."
+
+#: inc/customizer/colors.php:195
+msgid "Secondary Text"
+msgstr "Teks Sekunder"
+
+#: inc/customizer/colors.php:196
+msgid "Post bylines, comment counts, post footers and quote footers."
+msgstr "Panji pengarang pos, bilangan ulasan, pengaki pos dan pengaki petikan."
+
+#: inc/customizer/colors.php:210
+msgid "Widget Heading Text"
+msgstr "Teks Pengepala Widget"
+
+#: inc/customizer/colors.php:227
+msgid "Widget Text"
+msgstr "Teks Widget"
+
+#: inc/customizer/colors.php:239
+msgid "Menu Text"
+msgstr "Teks Menu"
+
+#: inc/customizer/colors.php:261
+msgid "Copyright Text"
+msgstr "Teks Hak Cipta"
+
+#: inc/customizer/colors.php:275
+msgid "Link Text"
+msgstr "Teks Pautan"
+
+#: inc/customizer/colors.php:297 inc/customizer/colors.php:379
+msgid "Background"
+msgstr "Latar Belakang"
+
+#: inc/customizer/colors.php:340
+msgid "Page Background"
+msgstr "Latar Belakang Halaman"
+
+#: inc/customizer/colors.php:350
+msgid "Content Background"
+msgstr "Latar Belakang Kandungan"
+
+#: inc/customizer/colors.php:360
+msgid "Hero Background"
+msgstr "Latar Belakang Hero"
+
+#: inc/customizer/colors.php:389
+msgid "Widgets Background"
+msgstr "Latar Belakang Widget"
+
+#: inc/customizer/colors.php:400
+msgid "Widget Content Background"
+msgstr "Latar Belakang Kandungan Widget"
+
+#: inc/customizer/colors.php:411
+msgid "Footer Background"
+msgstr "Latar Belakang Pengaki"
+
+#: inc/customizer/colors.php:449 inc/customizer/layouts.php:302
+msgid "Custom"
+msgstr "Suai Langgan"
+
+#: inc/customizer/colors.php:466 inc/customizer/layouts.php:293
+msgid "Default"
+msgstr "Lalai"
+
+#: inc/customizer/colors.php:706
+msgid "Colors"
+msgstr "Warna"
+
+#: inc/customizer/colors.php:715
+msgid "Color Schemes"
+msgstr "Skim Warna"
+
+#: inc/customizer/colors.php:723
+msgid "Header"
+msgstr "Pengepala"
+
+#: inc/customizer/colors.php:731
+msgid "Menu"
+msgstr "Menu"
+
+#: inc/customizer/colors.php:739
+msgid "Buttons"
+msgstr "Butang"
+
+#: inc/customizer/colors.php:747
+msgid "Content"
+msgstr "Kandungan"
+
+#: inc/customizer/colors.php:755
+msgid "Footer"
+msgstr "Pengaki"
+
+#: inc/customizer/colors.php:965
+msgid "Base Color Scheme"
+msgstr "Skema Warna Asas"
+
+#: inc/customizer/colors.php:1274
+msgid "Hero Background Overlay"
+msgstr "Lapisan Latar Belakang Hero"
+
+#: inc/customizer/colors.php:1275
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Kawal warna kelutsinaran lapisan semasa menggunakan Imej Pengepala tersuai."
+
+#: inc/customizer/fonts.php:87
+msgid "Site Title"
+msgstr "Tajuk Laman"
+
+#: inc/customizer/fonts.php:88
+msgid "Site title text in the header."
+msgstr "Teks tajuk laman pada pengepala."
+
+#: inc/customizer/fonts.php:97
+msgid "Navigation"
+msgstr "Navigasi"
+
+#: inc/customizer/fonts.php:98
+msgid "Primary menu links and button links."
+msgstr "Pautan menu utama dan pautan butang."
+
+#: inc/customizer/fonts.php:108
+msgid "Headings"
+msgstr "Pengepala"
+
+#: inc/customizer/fonts.php:109
+msgid "Post titles, widget titles, form labels, and table headers."
+msgstr "Tajuk pos, tajuk widget, label borang dan pengepala jadual."
+
+#: inc/customizer/fonts.php:124
+msgid "Primary"
+msgstr "Utama"
+
+#: inc/customizer/fonts.php:125
+msgid "Paragraphs, lists, links, quotes, and tables."
+msgstr "Perenggan, senarai, pautan, petikan dan jadual."
+
+#: inc/customizer/fonts.php:139
+msgid "Secondary"
+msgstr "Kedua"
+
+#: inc/customizer/fonts.php:140
+msgid "Bylines, comment counts, reply links, post footers, and quote footers."
+msgstr "Panji pengarang, bilangan ulasan, pautan balasan, pengaki pos dan pengaki petikan."
+
+#: inc/customizer/fonts.php:188
+msgid "Fonts"
+msgstr "Fon"
+
+#: inc/customizer/layouts.php:53
+msgid "One Column: Wide"
+msgstr "Satu Lajur: Lebar"
+
+#: inc/customizer/layouts.php:54
+msgid "One Column: Narrow"
+msgstr "Satu Lajur: Sempit"
+
+#: inc/customizer/layouts.php:55 inc/customizer/layouts.php:144
+msgid "Two Columns: Content | Sidebar"
+msgstr "Dua Lajur: Kandungan | Palang Sisi"
+
+#: inc/customizer/layouts.php:56 inc/customizer/layouts.php:143
+msgid "Two Columns: Sidebar | Content"
+msgstr "Dua Lajur: Palang Sisi | Kandungan"
+
+#: inc/customizer/layouts.php:57 inc/customizer/layouts.php:146
+msgid "Three Columns: Content | Sidebar | Sidebar"
+msgstr "Tiga Lajur: Kandungan | Palang Sisi | Palang Sisi"
+
+#: inc/customizer/layouts.php:58
+msgid "Three Columns: Sidebar | Content | Sidebar"
+msgstr "Tiga Lajur: Palang Sisi | Kandungan | Palang Sisi"
+
+#: inc/customizer/layouts.php:59 inc/customizer/layouts.php:145
+msgid "Three Columns: Sidebar | Sidebar | Content"
+msgstr "Tiga Lajur: Palang Sisi | Palang Sisi | Kandungan"
+
+#: inc/customizer/layouts.php:256 inc/customizer/layouts.php:434
+msgid "Layout"
+msgstr "Reka Letak"
+
+#: inc/customizer/layouts.php:460
+msgid "Page Width"
+msgstr "Lebar Halaman"
+
+#: inc/customizer/layouts.php:461
+msgid "Display your site differently on larger screens."
+msgstr "Papar laman anda secara berbeza pada skrin lebih besar."
+
+#: inc/customizer/site-identity.php:72
+msgid "Display theme author credit"
+msgstr "Display theme author credit"
+
+#: inc/customizer.php:176
+msgid "Use featured image"
+msgstr "Guna imej dipaparkan"
+
+#: inc/customizer.php:177
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "Izinkan imej dipaparkan pada pos semasa mengatasi imej hero."
+
+#: inc/helpers.php:52
+msgid "404 Page Not Found"
+msgstr "404 Halaman Tidak Ditemui"
+
+#: inc/template-tags.php:133
+msgid "Posts navigation"
+msgstr "Pos navigasi"
+
+#: inc/template-tags.php:139
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Pos lama"
+
+#: inc/template-tags.php:145
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Pos baru <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:178
+msgid "Post navigation"
+msgstr "Pos navigasi"
+
+#: inc/template-tags.php:279
+msgid "Blog"
+msgstr "Blog"
+
+#: templates/parts/404-woocommerce.php:30
+msgid "Search"
+msgstr "Search"
+
+#: templates/parts/404-woocommerce.php:36
+msgid "Promoted Products"
+msgstr "Promoted Products"
+
+#: templates/parts/404-woocommerce.php:42
+#: templates/parts/404-woocommerce.php:44
+msgid "Popular Products"
+msgstr "Popular Products"
+
+#: templates/parts/loop/page-content.php:27
+#: templates/parts/loop/post-content.php:18
+msgid "Pages:"
+msgstr "Halaman:"
+
+#: templates/parts/loop/page-footer.php:9
+#: templates/parts/loop/post-footer.php:14
+#: templates/parts/loop/post-search-footer.php:46
+msgid "Edit"
+msgstr "Edit"
+
+#: templates/parts/loop/post-content.php:14
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Baca Lagi <span class=\"meta-nav\">&rarr;</span>"
+
+#: templates/parts/loop/post-meta.php:24
+#: templates/parts/loop/post-search-footer.php:42
+msgid "Leave a comment"
+msgstr "Tinggalkan ulasan"
+
+#: templates/parts/loop/post-meta.php:24
+#: templates/parts/loop/post-search-footer.php:42
+msgid "1 Comment"
+msgstr "1 Ulasan"
+
+#. Theme Name of the plugin/theme
+msgid "Primer"
+msgstr "Primer"
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/godaddy/wp-primer-theme"
+msgstr "https://github.com/godaddy/wp-primer-theme"
+
+#. Description of the plugin/theme
+msgid ""
+"Primer is a powerful theme that brings clarity to your content in a fresh "
+"design."
+msgstr ""
+"Primer adalah tema kukuh yang memberikan kejelasan pada kandungan anda dalam "
+"reka bentuk yang segar."
+
+#. Author of the plugin/theme
+msgid "GoDaddy"
+msgstr "GoDaddy"
+
+#. Author URI of the plugin/theme
+msgid "https://www.godaddy.com/"
+msgstr "https://www.godaddy.com/"
+
+#: comments.php:34
+msgctxt "1. number of comments, 2. post title"
+msgid "One thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
+msgstr[0] "Pendapat seseorang tentang %2$s"
+msgstr[1] "%1$d berpendapat tentang %2$s"
+
+#: comments.php:56
+msgctxt "left arrow (LTR) / right arrow (RTL)"
+msgid "%s Older Comments"
+msgstr "%sUlasan Lama"
+
+#: comments.php:58
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Newer Comments %s"
+msgstr "Ulasan Baru %s"
+
+#: templates/parts/loop/post-excerpt.php:14
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Continue Reading %s"
+msgstr "Teruskan Membaca %s"
+
+#: content-none.php:27
+msgctxt "link to write a new post"
+msgid "Ready to publish your first post? %s."
+msgstr "Sedia untuk siar pos anda yang pertama? %s."
+
+#: inc/customizer/colors.php:476
+msgctxt "color scheme name"
+msgid "Blush"
+msgstr "Kemerah-merahan"
+
+#: inc/customizer/colors.php:480
+msgctxt "color scheme name"
+msgid "Bronze"
+msgstr "Kuning Gangsa"
+
+#: inc/customizer/colors.php:484
+msgctxt "color scheme name"
+msgid "Canary"
+msgstr "Burung Kenari"
+
+#: inc/customizer/colors.php:488
+msgctxt "color scheme name"
+msgid "Cool"
+msgstr "Sejuk"
+
+#: inc/customizer/colors.php:492
+msgctxt "color scheme name"
+msgid "Dark"
+msgstr "Gelap"
+
+#: inc/customizer/colors.php:496
+msgctxt "color scheme name"
+msgid "Iguana"
+msgstr "Iguana"
+
+#: inc/customizer/colors.php:500
+msgctxt "color scheme name"
+msgid "Muted"
+msgstr "Perlahan"
+
+#: inc/customizer/colors.php:504
+msgctxt "color scheme name"
+msgid "Plum"
+msgstr "Plum"
+
+#: inc/customizer/colors.php:508
+msgctxt "color scheme name"
+msgid "Rose"
+msgstr "Ros"
+
+#: inc/customizer/colors.php:512
+msgctxt "color scheme name"
+msgid "Tangerine"
+msgstr "Tangerin"
+
+#: inc/customizer/colors.php:516
+msgctxt "color scheme name"
+msgid "Turquoise"
+msgstr "Turquoise"
+
+#: inc/customizer/fonts.php:213
+msgctxt "font name"
+msgid "%s (Default)"
+msgstr "%s (Lalai)"
+
+#: inc/customizer/layouts.php:97
+msgctxt "fixed-width page layout"
+msgid "Fixed"
+msgstr "Tetap"
+
+#: inc/customizer/layouts.php:98
+msgctxt "fluid-width page layout"
+msgid "Fluid"
+msgstr "Berubah-ubah"
+
+#: inc/helpers.php:41
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr "Keputusan Carian untuk: %s"
+
+#: inc/hooks.php:384
+msgctxt "page number"
+msgid "Page %d"
+msgstr "Halaman %d"
+
+#: templates/parts/credit.php:14
+msgctxt "1. copyright symbol, 2. year, 3. site title"
+msgid "Copyright %1$s %2$d %3$s"
+msgstr "Hak cipta %1$s%2$d %3$s"
+
+#: templates/parts/credit.php:34
+msgctxt "1. theme name link, 2. theme author link"
+msgid "%1$s WordPress theme by %2$s"
+msgstr "%1$s WordPress theme by %2$s"
+
+#: templates/parts/loop/post-footer.php:20
+#: templates/parts/loop/post-footer.php:32
+#: templates/parts/loop/post-search-footer.php:14
+#: templates/parts/loop/post-search-footer.php:26
+msgctxt "separator for items in a list"
+msgid ", "
+msgstr ", "
+
+#: templates/parts/loop/post-footer.php:26
+#: templates/parts/loop/post-search-footer.php:20
+msgctxt "category list"
+msgid "Posted in: %s"
+msgstr "Diposkan dalam: %s"
+
+#: templates/parts/loop/post-footer.php:38
+#: templates/parts/loop/post-search-footer.php:32
+msgctxt "tag list"
+msgid "Filed under: %s"
+msgstr "Difailkan bawah: %s"
+
+#: templates/parts/loop/post-meta.php:24
+#: templates/parts/loop/post-search-footer.php:42
+msgctxt "number of comments"
+msgid "% Comments"
+msgstr "% Ulasan"

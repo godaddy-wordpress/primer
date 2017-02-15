@@ -1,0 +1,138 @@
+{*
+ApiGen 3.0dev - API documentation generator for PHP 5.3+
+
+Copyright (c) 2010-2011 David Grudl (http://davidgrudl.com)
+Copyright (c) 2011-2012 Jaroslav Hanslík (https://github.com/kukulich)
+Copyright (c) 2011-2012 Ondřej Nešpor (https://github.com/Andrewsville)
+
+For the full copyright and license information, please view
+the file LICENSE.md that was distributed with this source code.
+*}
+{default $robots = true}
+{default $active = ''}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="noindex" n:if="!$robots">
+
+	<title>{include #title}{if 'overview' !== $active && $config->title} | {$config->title}{/if}</title>
+
+	{var favicon = 'resources/favicon.png'}
+	<link href="{$favicon|staticFile}" type="image/png" rel="icon" />
+	<link href="{$favicon|staticFile}" type="image/png" rel="shortcut icon" />
+	<link rel="stylesheet" type="text/css" href="{='resources/css/font-awesome.min.css'|staticFile}">
+	<link rel="stylesheet" type="text/css" href="{='resources/css/bootstrap.min.css'|staticFile}">
+	<link rel="stylesheet" type="text/css" href="{='resources/css/styles.css'|staticFile}">
+	<link rel="stylesheet" type="text/css" href="{='resources/css/responsive.css'|staticFile}">
+
+	{var combinedJs = 'resources/combined.js'}
+	<script type="text/javascript" src="{$combinedJs|staticFile}"></script>
+	{var elementListJs = 'elementlist.js'}
+	<script type="text/javascript" src="{$elementListJs|staticFile}"></script>
+
+
+	<link n:if="$config->googleCseId" rel="search" type="application/opensearchdescription+xml" title="{$config->title}" href="{$config->baseUrl}/opensearch.xml">
+
+	<script n:if="$config->googleAnalytics" type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', {$config->googleAnalytics}]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body>
+
+<div id="container">
+	{include 'header.latte', active => $active}
+
+	<div class="container page-container">
+		<div class="row">
+			<div id="class-nav" class="col-md-3 hidden-sm hidden-xs">
+				<div id="menu">
+					{define #group}
+						<ul class="nav-list">
+							{foreach $groups as $group}
+							{var $nextLevel = substr_count($iterator->nextValue, '\\') > substr_count($group, '\\')}
+							<li n:class="$actualGroup === $group || 0 === strpos($actualGroup, $group . '\\') ? active, $config->main && 0 === strpos($group, $config->main) ? main"><a href="{if $groupBy === 'package'}{$group|packageUrl}{else}{$group|namespaceUrl}{/if}">{$group|subgroupName}{if $nextLevel}<span></span>{/if}</a>
+								{if $nextLevel}
+									<ul>
+								{else}
+									</li>
+									{if substr_count($iterator->nextValue, '\\') < substr_count($group, '\\')}
+										{='</ul></li>'|repeat:substr_count($group, '\\') - substr_count($iterator->nextValue, '\\')|noescape}
+									{/if}
+								{/if}
+							{/foreach}
+						</ul>
+					{/define}
+
+					<div id="groups">
+						{if $namespaces}
+						<h3 class="nav-title">Namespaces</h3>
+						{include #group, groups => $namespaces, actualGroup => $namespace, groupBy => 'namespace'}
+						{elseif $packages}
+						<h3>Packages</h3>
+						{include #group, groups => $packages, actualGroup => $package, groupBy => 'package'}
+						{/if}
+					</div>
+
+					{define #elements}
+						<ul class="nav-list">
+							<li n:foreach="$elements as $element" n:class="$activeElement === $element ? active"><a title="{if $namespace}{$element->shortName}{else}{$element->name}{/if}" n:class="$element->deprecated ? deprecated, !$element->valid ? invalid" href="{$element|elementUrl}">{if $namespace}{$element->shortName}{else}{$element->name}{/if}</a></li>
+						</ul>
+					{/define}
+
+					<div id="elements">
+						{if $classes}
+						<h3 class="nav-title">Classes</h3>
+						{include #elements, elements => $classes, activeElement => $class}
+						{/if}
+
+						{if $interfaces}
+						<h3 class="nav-title">Interfaces</h3>
+						{include #elements, elements => $interfaces, activeElement => $class}
+						{/if}
+
+						{if $traits}
+						<h3 class="nav-title">Traits</h3>
+						{include #elements, elements => $traits, activeElement => $class}
+						{/if}
+
+						{if $exceptions}
+						<h3 class="nav-title">Exceptions</h3>
+						{include #elements, elements => $exceptions, activeElement => $class}
+						{/if}
+
+						{if $constants}
+						<h3 class="nav-title">Constants</h3>
+						{include #elements, elements => $constants, activeElement => $constant}
+						{/if}
+
+						{if $functions}
+						<h3 class="nav-title">Functions</h3>
+						{include #elements, elements => $functions, activeElement => $function}
+						{/if}
+					</div>
+				</div>
+			</div>
+
+			{* Document content *}
+			<div id="right" class="col-md-9">
+				{include #content}
+			</div>
+		</div>
+
+	</div>
+</div>
+
+{include 'footer.latte'}
+</body>
+</html>
