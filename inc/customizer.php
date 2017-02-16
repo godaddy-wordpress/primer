@@ -261,8 +261,8 @@ class Primer_Customizer {
 		 *
 		 * Default: `true`
 		 *
-		 * Note: When `SCRIPT_DEBUG` is enabled, CSS will never be
-		 * compacted regardless of this filter.
+		 * Note: When `SCRIPT_DEBUG` is enabled, inline CSS will never
+		 * be compacted regardless of this filter.
 		 *
 		 * @since NEXT
 		 *
