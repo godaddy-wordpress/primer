@@ -245,7 +245,7 @@ class Primer_Customizer {
 	}
 
 	/**
-	 * Compact CSS output.
+	 * Compact inline CSS output.
 	 *
 	 * @link  https://github.com/GaryJones/Simple-PHP-CSS-Minification
 	 * @since NEXT
@@ -255,6 +255,26 @@ class Primer_Customizer {
 	 * @return string
 	 */
 	public static function compact_css( $css ) {
+
+		/**
+		 * Filter whether inline CSS output should be compacted.
+		 *
+		 * Default: `true`
+		 *
+		 * Note: When `SCRIPT_DEBUG` is enabled, CSS will never be
+		 * compacted regardless of this filter.
+		 *
+		 * @since NEXT
+		 *
+		 * @var bool
+		 */
+		$enabled = (bool) apply_filters( 'primer_enable_compact_css', true );
+
+		if ( SCRIPT_DEBUG || ! $enabled ) {
+
+			return $css;
+
+		}
 
 		// Normalize whitespace
 		$css = preg_replace( '/\s+/', ' ', $css );

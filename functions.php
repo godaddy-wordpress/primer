@@ -456,7 +456,7 @@ function primer_scripts() {
 			esc_url( primer_get_hero_image() )
 		);
 
-		$css = SCRIPT_DEBUG ? $css : Primer_Customizer::compact_css( $css );
+		$css = Primer_Customizer::compact_css( $css );
 
 		wp_add_inline_style( $stylesheet, $css );
 
