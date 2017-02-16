@@ -388,9 +388,10 @@ class Primer_Customizer_Fonts {
 				$this->get_font( $name )
 			);
 
-			$css = Primer_Customizer::compact_css( $css );
-
-			wp_add_inline_style( Primer_Customizer::$stylesheet . '-fonts', $css );
+			wp_add_inline_style(
+				Primer_Customizer::$stylesheet . '-fonts',
+				Primer_Customizer::compact_css( $css )
+			);
 
 		}
 
