@@ -39,6 +39,40 @@ if ( ! defined( 'PRIMER_MIN_WP_VERSION' ) ) {
 }
 
 /**
+ * Define the Primer child theme version if undefined.
+ *
+ * @since NEXT
+ *
+ * @var string
+ */
+if ( ! defined( 'PRIMER_CHILD_VERSION' ) ) {
+
+	define( 'PRIMER_CHILD_VERSION', '' );
+
+}
+
+/**
+ * Compare against the current Primer child theme version.
+ *
+ * This function accepts the same `$version` and `$operator` formats as
+ * the native `version_compare()` function in PHP, and it will always
+ * return `false` if the `PRIMER_CHILD_VERSION` constant is empty.
+ *
+ * @link  https://secure.php.net/manual/en/function.version-compare.php
+ * @since NEXT
+ *
+ * @param  string $version
+ * @param  string $operator
+ *
+ * @return bool
+ */
+function primer_child_version_compare( $version, $operator ) {
+
+	return ( PRIMER_CHILD_VERSION && version_compare( PRIMER_CHILD_VERSION, $version, $operator ) );
+
+}
+
+/**
  * Load theme translations.
  *
  * Translations can be filed in the /languages/ directory. If you're
