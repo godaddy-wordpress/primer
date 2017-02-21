@@ -43,7 +43,7 @@ CSS_FILES = sphinx/godaddy/static/css/fonts.css \
   sphinx/godaddy/static/css/pygments.css \
   sphinx/godaddy/static/css/responsive.css
 
-build/html/_static/css/app.css: build/html/_static $(CSS_FILES)
+build/html/_static/css/app.css: build/html/_static/css $(CSS_FILES)
 	# echo all dependencies ($$^) into the output ($$@)
 	cat $(CSS_FILES) > $@
 
