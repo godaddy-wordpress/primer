@@ -13,6 +13,8 @@
 	/**
 	 * Fires inside the `<div class="main-navigation-container">` element.
 	 *
+	 * @hooked primer_add_mobile_menu - 10
+	 *
 	 * @since 1.0.0
 	 */
 	do_action( 'primer_before_site_navigation' );
@@ -23,6 +25,8 @@
 		<?php
 		/**
 		 * Fires inside the `<nav id="site-navigation" class="main-navigation">` element.
+		 *
+		 * @hooked primer_add_primary_menu - 10
 		 *
 		 * @since 1.0.0
 		 */

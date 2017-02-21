@@ -198,7 +198,8 @@ body,
 button,
 input,
 select,
-textarea {
+textarea,
+.select2-container .select2-choice {
   color: #252525;
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
@@ -210,7 +211,8 @@ textarea {
     button,
     input,
     select,
-    textarea {
+    textarea,
+    .select2-container .select2-choice {
       font-size: 14.4px;
       font-size: 0.9rem; } }
 
@@ -402,7 +404,8 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
+textarea,
+.select2-container .select2-choice {
   color: rgba(37, 37, 37, 0.5);
   border: 1px solid rgba(37, 37, 37, 0.1);
   -webkit-border-radius: 3px;
@@ -425,9 +428,19 @@ textarea {
   input[type="datetime"]:focus,
   input[type="datetime-local"]:focus,
   input[type="color"]:focus,
-  textarea:focus {
+  textarea:focus,
+  .select2-container .select2-choice:focus {
     color: #252525;
     background-color: rgba(255, 255, 255, 0.75); }
+
+.select2-container .select2-choice {
+  padding: 0.57rem 0.75rem; }
+
+.select2-drop-active,
+.select2-drop.select2-drop-above.select2-drop-active,
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+  border-color: rgba(37, 37, 37, 0.1); }
 
 input[type="checkbox"],
 input[type="radio"] {

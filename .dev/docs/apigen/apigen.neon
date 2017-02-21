@@ -1,0 +1,47 @@
+# documentation title
+title: Primer Theme
+
+# source files
+source: .
+
+# documentation destination
+destination: .dev/docs/sphinx/src/documentation/
+
+## excluded files
+exclude:
+	- .dev/
+	- apigen/
+	- assets/
+	- languages/
+	- node_modules/
+
+# choose ApiGen template theme
+templateTheme: default
+
+# template config location
+# templateConfig: .dev/docs/apigen/theme-godaddy/config.neon
+templateConfig: .dev/docs/apigen/godaddy/config.neon
+
+# list of scanned file extensions (e.g. php5, php...)
+extensions: [php]
+
+# Custom google search engine id (for search box).
+#googleCseId: {put it here!}
+
+# Google Analytics tracking code.
+#googleAnalytics: {put it here}
+
+# generate highlighted source code for elements
+sourceCode: true
+
+# generate tree view of classes, interfaces, traits and exceptions
+tree: true
+
+# generate documentation for deprecated elements
+# deprecated: true
+
+# generate list of tasks with @ todo annotation
+# todo: true
+
+# add link to ZIP archive of documentation
+download: false

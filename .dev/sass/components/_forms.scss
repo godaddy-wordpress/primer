@@ -13,7 +13,8 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
+textarea,
+.select2-container .select2-choice {
 	color: rgba($color__primary-text, 0.5);
 	border: 1px solid rgba($color__primary-text, 0.1);
 	border-radius: 3px;
@@ -25,6 +26,17 @@ textarea {
 		color: $color__primary-text;
 		background-color: rgba(255, 255, 255, 0.75);
 	}
+}
+
+.select2-container .select2-choice {
+	padding: 0.57rem 0.75rem;
+}
+
+.select2-drop-active,
+.select2-drop.select2-drop-above.select2-drop-active,
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+	border-color: rgba($color__primary-text, 0.1);
 }
 
 input[type="checkbox"],

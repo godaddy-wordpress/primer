@@ -2,12 +2,12 @@
 Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
 Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
-Tested up to:      4.6
-Stable tag:        1.4.2
+Tested up to:      4.7
+Stable tag:        1.4.1
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Primer is a powerful theme that brings clarity to your content in a fresh design.  This is the parent for all themes in the GoDaddy Primer theme family.
+Primer is a powerful theme that brings clarity to your content in a fresh design. This is the parent for all themes in the GoDaddy Primer theme family.
 
 == Description ==
 
@@ -39,7 +39,7 @@ You can fork and contribute back to Primer by visiting [our public repo on GitHu
 
 == Copyright ==
 
-Primer WordPress theme, Copyright 2016 GoDaddy Operating Company, LLC.
+Primer WordPress theme, Copyright 2017 GoDaddy Operating Company, LLC.
 Primer is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
@@ -58,12 +58,33 @@ Genericons icon font, Copyright 2013 Automattic, Inc.
 License: GPL-2.0 (or later)
 Source: https://genericons.com/
 
+Stock photography, Unsplash
+License: Creative Commons Zero
+Source: https://unsplash.com/photos/v4ZUGlrdVAA
+
 == Changelog ==
 
-= 1.4.0 - October 21st 2016 =
+= 1.5.0 =
+* New: Full compatibility with the WooCommerce plugin @props [evanherman](https://github.com/EvanHerman), [fjarrett](https://github.com/fjarrett)
+* New: Add Front Page Title setting to the Static Front Page section of the Customizer @props [evanherman](https://github.com/EvanHerman)
+* New: Added Footer Copyright Text setting to the Site Identity section of the Customizer @props [evanherman](https://github.com/EvanHerman)
+* New: Added Author Credit toggle to the Site Identity section of the Customizer @props [evanherman](https://github.com/EvanHerman)
+* New: [Developer documentation!](https://godaddy.github.io/wp-primer-theme/) @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Added `nofollow` attribute to theme author link in the footer @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Use core post navigation functions @props [evanherman](https://github.com/EvanHerman)
+* Fix: Display glitch when last main menu item is a submenu @props [evanherman](https://github.com/EvanHerman)
+
+= 1.4.2 =
+* Added word-wrap where text was overflowing @props [evanherman](https://github.com/EvanHerman)
+* Updated translations @props [jonathanbardo](https://github.com/jonathanbardo)
+* Added font-family support for WooCommerce buttons @props [fjarret](https://github.com/fjarrett)
+
+= 1.4.1 =
+* Fixed hero widget font sizes @props [jonathanbardo](https://github.com/jonathanbardo)
+
+= 1.4.0 =
 * Fixed comment meta template @props [wpexplorer](https://github.com/wpexplorer)
 * Expose color schemes array @props [evanherman](https://github.com/EvanHerman), [jonathanbardo](https://github.com/jonathanbardo)
 
-= 1.0.0 - September 2016 =
-
+= 1.3.0 =
 * Initial release.

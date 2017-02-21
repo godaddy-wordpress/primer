@@ -12,7 +12,7 @@
  * For more information on hooks, actions, and filters,
  * {@link https://codex.wordpress.org/Plugin_API}
  *
- * @package Primer
+ * @package Functions
  * @since   1.0.0
  */
 
@@ -35,6 +35,19 @@ define( 'PRIMER_VERSION', '1.4.2' );
 if ( ! defined( 'PRIMER_MIN_WP_VERSION' ) ) {
 
 	define( 'PRIMER_MIN_WP_VERSION', '4.4' );
+
+}
+
+/**
+ * Define the Primer child theme version if undefined.
+ *
+ * @since NEXT
+ *
+ * @var string
+ */
+if ( ! defined( 'PRIMER_CHILD_VERSION' ) ) {
+
+	define( 'PRIMER_CHILD_VERSION', '' );
 
 }
 

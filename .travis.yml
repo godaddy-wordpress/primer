@@ -1,13 +1,21 @@
 sudo: false
 
-language:
-  - php
-  - node_js
+language: php
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+branches:
+  only:
+    - master
+    - develop
 
 php:
   - 5.2
   - 5.6
-  - 7.0
+  - 7.1
 
 env:
   - WP_VERSION=4.4 WP_MULTISITE=0
@@ -15,8 +23,9 @@ env:
   - WP_VERSION=trunk WP_MULTISITE=0
 
 matrix:
+  fast_finish: true
   exclude:
-    - php: 7.0
+    - php: 7.1
       env: WP_VERSION=4.4 WP_MULTISITE=0
 
 install:
@@ -24,7 +33,8 @@ install:
   - if [ ! -e "$DEV_LIB_PATH" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
   - if [ ! -e "$DEV_LIB_PATH" ]; then git clone https://github.com/xwp/wp-dev-lib.git $DEV_LIB_PATH; fi
   - source $DEV_LIB_PATH/travis.install.sh
-  - curl -s https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
+  - curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
+  - chmod +x /tmp/wp-cli.phar
 
 script:
   - source $DEV_LIB_PATH/travis.script.sh
@@ -47,7 +57,7 @@ deploy:
   on:
     tags: true
     repo: godaddy/wp-primer-theme
-    php: '7.0'
+    php: '7.1'
     condition: "$WP_VERSION=trunk"
   skip_cleanup: true
   overwrite: true

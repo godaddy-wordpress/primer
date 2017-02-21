@@ -1,0 +1,685 @@
+# Copyright (c) 2017 GoDaddy Operating Company, LLC. All Rights Reserved.
+msgid ""
+msgstr ""
+"Project-Id-Version: Primer 1.4.1\n"
+"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
+"POT-Creation-Date: 2017-02-21 20:27:44+00:00\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
+"X-Generator: grunt-wp-i18n1.0.0\n"
+
+#: 404.php:22 build/404.php:22 build/templates/parts/404-woocommerce.php:22
+#: templates/parts/404-woocommerce.php:22
+msgid "Oops! That page can't be found."
+msgstr "Rất tiếc! Không thể tìm được trang đó."
+
+#: 404.php:28 build/404.php:28 build/templates/parts/404-woocommerce.php:28
+#: templates/parts/404-woocommerce.php:28
+msgid ""
+"It looks like nothing was found at this location. Please try searching below:"
+msgstr ""
+"Có vẻ như không tìm thấy thông tin gì tại địa điểm này. Hãy thử tìm kiếm bên "
+"dưới:"
+
+#: build/comments.php:54 build/comments.php:79 comments.php:54 comments.php:79
+msgid "Comment navigation"
+msgstr "Điều hướng nhận xét"
+
+#: build/comments.php:81 comments.php:81
+msgid "&larr; Older Comments"
+msgstr "&larr; Nhận xét trước đó"
+
+#: build/comments.php:83 comments.php:83
+msgid "Newer Comments &rarr;"
+msgstr "Nhận xét gần đây&rarr;"
+
+#: build/comments.php:93 comments.php:93
+msgid "Comments are closed."
+msgstr "Đã đóng nhận xét."
+
+#: build/content-none.php:16 content-none.php:16
+msgid "Nothing Found"
+msgstr "Không tìm thấy gì"
+
+#: build/content-none.php:31 content-none.php:31
+msgid "Get started here"
+msgstr "Bắt đầu tại đây"
+
+#: build/content-none.php:39 content-none.php:39
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Rất tiếc nhưng không có nội dung nào khớp với từ khóa tìm kiếm của bạn. Vui "
+"lòng thử lại với một vài từ khóa khác."
+
+#: build/content-none.php:45 content-none.php:45
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"Có vẻ như chúng tôi không thể tìm được nội dung bạn cần tìm. Có lẽ bạn nên "
+"thử tìm kiếm xem."
+
+#: build/functions.php:159 functions.php:172
+msgid "Featured"
+msgstr "Nổi bật"
+
+#: build/functions.php:165 build/functions.php:407 functions.php:178
+#: functions.php:420
+msgid "Hero"
+msgstr "Hero"
+
+#: build/functions.php:246 functions.php:259
+msgid "Primary Menu"
+msgstr "Menu chính"
+
+#: build/functions.php:247 functions.php:260
+msgid "Social Menu"
+msgstr "Menu xã hội"
+
+#: build/functions.php:248 functions.php:261
+msgid "Footer Menu"
+msgstr "Menu chân trang"
+
+#: build/functions.php:367 functions.php:380
+msgid "Sidebar"
+msgstr "Thanh bên"
+
+#: build/functions.php:368 functions.php:381
+msgid ""
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
+msgstr ""
+"Thanh bên chính sẽ xuất hiện cùng với nội dung của mỗi trang, bài đăng, mục "
+"lưu trữ và mẫu tìm kiếm."
+
+#: build/functions.php:375 functions.php:388
+msgid "Secondary Sidebar"
+msgstr "Thanh bên phụ"
+
+#: build/functions.php:376 functions.php:389
+msgid ""
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
+msgstr "Thanh bên phụ sẽ chỉ xuất hiện khi bạn chọn bố cục ba cột."
+
+#: build/functions.php:383 functions.php:396
+msgid "Footer 1"
+msgstr "Chân trang 1"
+
+#: build/functions.php:384 functions.php:397
+msgid "This sidebar is the first column of the footer widget area."
+msgstr "Thanh bên này sẽ là cột đầu tiên trong khu vực widget chân trang."
+
+#: build/functions.php:391 functions.php:404
+msgid "Footer 2"
+msgstr "Chân trang 2"
+
+#: build/functions.php:392 functions.php:405
+msgid "This sidebar is the second column of the footer widget area."
+msgstr "Thanh bên này sẽ là cột thứ hai trong khu vực widget chân trang."
+
+#: build/functions.php:399 functions.php:412
+msgid "Footer 3"
+msgstr "Chân trang 3"
+
+#: build/functions.php:400 functions.php:413
+msgid "This sidebar is the third column of the footer widget area."
+msgstr "Thanh bên này sẽ là cột thứ ba trong khu vực widget chân trang."
+
+#: build/functions.php:408 functions.php:421
+msgid "Hero widgets appear over the header image on the front page."
+msgstr "Widget xuất hiện phía trên ảnh tiêu đề trên trang chủ."
+
+#: build/header.php:42 header.php:42
+msgid "Skip to content"
+msgstr "Chuyển tới phần nội dung"
+
+#: build/inc/compat/woocommerce.php:419 inc/compat/woocommerce.php:419
+msgid "Featured Products"
+msgstr "Các sản phẩm nổi bật"
+
+#: build/inc/compat/woocommerce.php:429 inc/compat/woocommerce.php:429
+msgid "On Sale Now"
+msgstr "Đang giảm giá"
+
+#: build/inc/compat/woocommerce.php:443 inc/compat/woocommerce.php:443
+msgid "New In Store"
+msgstr "Mới trong cửa hàng"
+
+#: build/inc/compat/woocommerce.php:595 inc/compat/woocommerce.php:595
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d mục"
+msgstr[1] "%d mục"
+
+#: build/inc/compat/wordpress.php:55 inc/compat/wordpress.php:55
+msgid ""
+"Primer requires at least WordPress version %1$s. You are running version "
+"%2$s. Please upgrade and try again."
+msgstr ""
+"Primer yêu cầu tối thiểu WordPress phiên bản %1$s. Bạn đang chạy phiên bản "
+"%2$s. Vui lòng nâng cấp và thử lại."
+
+#: build/inc/customizer/colors.php:49 inc/customizer/colors.php:49
+msgid "Site Title Text"
+msgstr "Nội dung tiêu đề trang"
+
+#: build/inc/customizer/colors.php:65 inc/customizer/colors.php:65
+msgid "Tagline Text"
+msgstr "Nội dung câu khẩu hiệu"
+
+#: build/inc/customizer/colors.php:76 inc/customizer/colors.php:76
+msgid "Hero Text"
+msgstr "Nội dung Hero"
+
+#: build/inc/customizer/colors.php:107 build/inc/customizer/colors.php:325
+#: inc/customizer/colors.php:107 inc/customizer/colors.php:325
+msgid "Text"
+msgstr "Văn bản"
+
+#: build/inc/customizer/colors.php:129 inc/customizer/colors.php:129
+msgid "Heading Text"
+msgstr "Nội dung đầu trang"
+
+#: build/inc/customizer/colors.php:130 inc/customizer/colors.php:130
+msgid "Post titles, widget titles, form labels, table headers and buttons."
+msgstr "Tiêu đề bài đăng, tiêu đề widget, nhãn mẫu, tiêu đề bảng và nút."
+
+#: build/inc/customizer/colors.php:151 inc/customizer/colors.php:151
+msgid "Primary Text"
+msgstr "Nội dung chính"
+
+#: build/inc/customizer/colors.php:152 inc/customizer/colors.php:152
+msgid "Paragraphs, lists, menu links, quotes and tables."
+msgstr "Đoạn văn, danh sách, các liên kết menu, câu trích dẫn và bảng biểu."
+
+#: build/inc/customizer/colors.php:197 inc/customizer/colors.php:197
+msgid "Secondary Text"
+msgstr "Nội dung phụ"
+
+#: build/inc/customizer/colors.php:198 inc/customizer/colors.php:198
+msgid "Post bylines, comment counts, post footers and quote footers."
+msgstr ""
+"Dòng ghi tên tác giả bài đăng, số lượng nhận xét, chân trang bài đăng và "
+"chân trang trích dẫn."
+
+#: build/inc/customizer/colors.php:212 inc/customizer/colors.php:212
+msgid "Widget Heading Text"
+msgstr "Nội dung đầu trang widget"
+
+#: build/inc/customizer/colors.php:229 inc/customizer/colors.php:229
+msgid "Widget Text"
+msgstr "Nội dung widget"
+
+#: build/inc/customizer/colors.php:241 inc/customizer/colors.php:241
+msgid "Menu Text"
+msgstr "Nội dung menu"
+
+#: build/inc/customizer/colors.php:263 inc/customizer/colors.php:263
+msgid "Copyright Text"
+msgstr "Nội dung Bản quyền"
+
+#: build/inc/customizer/colors.php:277 inc/customizer/colors.php:277
+msgid "Link Text"
+msgstr "Nội dung liên kết"
+
+#: build/inc/customizer/colors.php:299 build/inc/customizer/colors.php:381
+#: inc/customizer/colors.php:299 inc/customizer/colors.php:381
+msgid "Background"
+msgstr "Nền"
+
+#: build/inc/customizer/colors.php:342 inc/customizer/colors.php:342
+msgid "Page Background"
+msgstr "Nền trang"
+
+#: build/inc/customizer/colors.php:352 inc/customizer/colors.php:352
+msgid "Content Background"
+msgstr "Nền nội dung"
+
+#: build/inc/customizer/colors.php:362 inc/customizer/colors.php:362
+msgid "Hero Background"
+msgstr "Nền Hero"
+
+#: build/inc/customizer/colors.php:391 inc/customizer/colors.php:391
+msgid "Widgets Background"
+msgstr "Nền widget"
+
+#: build/inc/customizer/colors.php:402 inc/customizer/colors.php:402
+msgid "Widget Content Background"
+msgstr "Nền nội dung widget"
+
+#: build/inc/customizer/colors.php:413 inc/customizer/colors.php:413
+msgid "Footer Background"
+msgstr "Nền chân trang"
+
+#: build/inc/customizer/colors.php:451 build/inc/customizer/layouts.php:309
+#: inc/customizer/colors.php:451 inc/customizer/layouts.php:309
+msgid "Custom"
+msgstr "Tùy chỉnh"
+
+#: build/inc/customizer/colors.php:468 build/inc/customizer/layouts.php:300
+#: inc/customizer/colors.php:468 inc/customizer/layouts.php:300
+msgid "Default"
+msgstr "Mặc định"
+
+#: build/inc/customizer/colors.php:710 inc/customizer/colors.php:710
+msgid "Colors"
+msgstr "Màu sắc"
+
+#: build/inc/customizer/colors.php:719 inc/customizer/colors.php:719
+msgid "Color Schemes"
+msgstr "Bảng màu"
+
+#: build/inc/customizer/colors.php:727 inc/customizer/colors.php:727
+msgid "Header"
+msgstr "Đầu trang"
+
+#: build/inc/customizer/colors.php:735 inc/customizer/colors.php:735
+msgid "Menu"
+msgstr "Danh mục"
+
+#: build/inc/customizer/colors.php:743 inc/customizer/colors.php:743
+msgid "Buttons"
+msgstr "Nút"
+
+#: build/inc/customizer/colors.php:751 inc/customizer/colors.php:751
+msgid "Content"
+msgstr "Nội dung"
+
+#: build/inc/customizer/colors.php:759 inc/customizer/colors.php:759
+msgid "Footer"
+msgstr "Chân trang"
+
+#: build/inc/customizer/colors.php:972 inc/customizer/colors.php:972
+msgid "Base Color Scheme"
+msgstr "Sơ đồ màu cơ bản"
+
+#: build/inc/customizer/colors.php:1283 inc/customizer/colors.php:1283
+msgid "Hero Background Overlay"
+msgstr "Lớp phủ nền hero"
+
+#: build/inc/customizer/colors.php:1284 inc/customizer/colors.php:1284
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+"Kiểm soát độ trong suốt của lớp phủ màu khi sử dụng ảnh tiêu đề tùy chỉnh."
+
+#: build/inc/customizer/fonts.php:89 inc/customizer/fonts.php:89
+msgid "Site Title"
+msgstr "Tiêu đề trang"
+
+#: build/inc/customizer/fonts.php:90 inc/customizer/fonts.php:90
+msgid "Site title text in the header."
+msgstr "Nội dung tiêu đề trang trong phần đầu trang."
+
+#: build/inc/customizer/fonts.php:99 inc/customizer/fonts.php:99
+msgid "Navigation"
+msgstr "Điều hướng"
+
+#: build/inc/customizer/fonts.php:100 inc/customizer/fonts.php:100
+msgid "Primary menu links and button links."
+msgstr "Các liên kết menu và nút chính."
+
+#: build/inc/customizer/fonts.php:110 inc/customizer/fonts.php:110
+msgid "Headings"
+msgstr "Đề mục"
+
+#: build/inc/customizer/fonts.php:111 inc/customizer/fonts.php:111
+msgid "Post titles, widget titles, form labels, and table headers."
+msgstr "Tiêu đề bài đăng, tiêu đề widget, nhãn mẫu và tiêu đề bảng."
+
+#: build/inc/customizer/fonts.php:126 inc/customizer/fonts.php:126
+msgid "Primary"
+msgstr "Chính"
+
+#: build/inc/customizer/fonts.php:127 inc/customizer/fonts.php:127
+msgid "Paragraphs, lists, links, quotes, and tables."
+msgstr "Đoạn văn, danh sách, liên kết, câu trích dẫn và bảng biểu."
+
+#: build/inc/customizer/fonts.php:141 inc/customizer/fonts.php:141
+msgid "Secondary"
+msgstr "Phụ"
+
+#: build/inc/customizer/fonts.php:142 inc/customizer/fonts.php:142
+msgid "Bylines, comment counts, reply links, post footers, and quote footers."
+msgstr ""
+"Dòng ghi tên tác giả, số lượng nhận xét, liên kết trả lời, chân trang bài "
+"đăng và chân trang trích dẫn."
+
+#: build/inc/customizer/fonts.php:192 inc/customizer/fonts.php:192
+msgid "Fonts"
+msgstr "Phông chữ"
+
+#: build/inc/customizer/layouts.php:55 inc/customizer/layouts.php:55
+msgid "One Column: Wide"
+msgstr "Một cột: Rộng"
+
+#: build/inc/customizer/layouts.php:56 inc/customizer/layouts.php:56
+msgid "One Column: Narrow"
+msgstr "Một cột: Hẹp"
+
+#: build/inc/customizer/layouts.php:57 build/inc/customizer/layouts.php:148
+#: inc/customizer/layouts.php:57 inc/customizer/layouts.php:148
+msgid "Two Columns: Content | Sidebar"
+msgstr "Hai cột: Nội dung | Thanh bên"
+
+#: build/inc/customizer/layouts.php:58 build/inc/customizer/layouts.php:147
+#: inc/customizer/layouts.php:58 inc/customizer/layouts.php:147
+msgid "Two Columns: Sidebar | Content"
+msgstr "Hai cột: Thanh bên | Nội dung"
+
+#: build/inc/customizer/layouts.php:59 build/inc/customizer/layouts.php:150
+#: inc/customizer/layouts.php:59 inc/customizer/layouts.php:150
+msgid "Three Columns: Content | Sidebar | Sidebar"
+msgstr "Ba cột: Nội dung | Thanh bên | Thanh bên"
+
+#: build/inc/customizer/layouts.php:60 inc/customizer/layouts.php:60
+msgid "Three Columns: Sidebar | Content | Sidebar"
+msgstr "Ba cột: Thanh bên | Nội dung | Thanh bên"
+
+#: build/inc/customizer/layouts.php:61 build/inc/customizer/layouts.php:149
+#: inc/customizer/layouts.php:61 inc/customizer/layouts.php:149
+msgid "Three Columns: Sidebar | Sidebar | Content"
+msgstr "Ba cột: Thanh bên | Thanh bên | Nội dung"
+
+#: build/inc/customizer/layouts.php:263 build/inc/customizer/layouts.php:443
+#: inc/customizer/layouts.php:263 inc/customizer/layouts.php:443
+msgid "Layout"
+msgstr "Bố cục"
+
+#: build/inc/customizer/layouts.php:469 inc/customizer/layouts.php:469
+msgid "Page Width"
+msgstr "Chiều rộng trang"
+
+#: build/inc/customizer/layouts.php:470 inc/customizer/layouts.php:470
+msgid "Display your site differently on larger screens."
+msgstr "Hiển thị trang của bạn theo các cách khác nhau trên màn hình lớn hơn"
+
+#: build/inc/customizer/site-identity.php:77
+#: inc/customizer/site-identity.php:102
+msgid "Display theme author credit"
+msgstr "Hiển thị tên tuổi tác giả của giao diện"
+
+#: build/inc/customizer.php:186 inc/customizer.php:193
+msgid "Use featured image"
+msgstr "Sử dụng hình ảnh nổi bật"
+
+#: build/inc/customizer.php:187 inc/customizer.php:194
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+"Cho phép hình ảnh nổi bật xuất hiện trong bài đăng hiện tại để ghi đè lên "
+"ảnh hero."
+
+#: build/inc/helpers.php:56 inc/helpers.php:77
+msgid "404 Page Not Found"
+msgstr "404 Không tìm thấy trang"
+
+#: build/inc/template-tags.php:135 inc/template-tags.php:135
+msgid "Posts navigation"
+msgstr "Điều hướng bài đăng"
+
+#: build/inc/template-tags.php:141 inc/template-tags.php:141
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Bài đăng trước đó"
+
+#: build/inc/template-tags.php:147 inc/template-tags.php:147
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Bài đăng gần đây <span class=\"meta-nav\">&rarr;</span>"
+
+#: build/inc/template-tags.php:180
+msgid "Post navigation"
+msgstr "Điều hướng bài đăng"
+
+#: build/inc/template-tags.php:281 inc/template-tags.php:262
+msgid "Blog"
+msgstr "Blog"
+
+#: build/templates/parts/404-woocommerce.php:30
+#: templates/parts/404-woocommerce.php:30
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: build/templates/parts/404-woocommerce.php:36
+#: templates/parts/404-woocommerce.php:36
+msgid "Promoted Products"
+msgstr "Các sản phẩm được khuyến mãi"
+
+#: build/templates/parts/404-woocommerce.php:42
+#: build/templates/parts/404-woocommerce.php:44
+#: templates/parts/404-woocommerce.php:42
+#: templates/parts/404-woocommerce.php:44
+msgid "Popular Products"
+msgstr "Các sản phẩm phổ biến"
+
+#: build/templates/parts/loop/page-content.php:27
+#: build/templates/parts/loop/post-content.php:18
+#: templates/parts/loop/page-content.php:27
+#: templates/parts/loop/post-content.php:18
+msgid "Pages:"
+msgstr "Trang:"
+
+#: build/templates/parts/loop/page-footer.php:9
+#: build/templates/parts/loop/post-footer.php:14
+#: build/templates/parts/loop/post-search-footer.php:46
+#: templates/parts/loop/page-footer.php:9
+#: templates/parts/loop/post-footer.php:14
+#: templates/parts/loop/post-search-footer.php:46
+msgid "Edit"
+msgstr "Sửa"
+
+#: build/templates/parts/loop/post-content.php:14
+#: templates/parts/loop/post-content.php:14
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Đọc thêm <span class=\"meta-nav\">&rarr;</span>"
+
+#: build/templates/parts/loop/post-meta.php:24
+#: build/templates/parts/loop/post-search-footer.php:42
+#: templates/parts/loop/post-meta.php:24
+#: templates/parts/loop/post-search-footer.php:42
+msgid "Leave a comment"
+msgstr "Đưa ra nhận xét"
+
+#: build/templates/parts/loop/post-meta.php:24
+#: build/templates/parts/loop/post-search-footer.php:42
+#: templates/parts/loop/post-meta.php:24
+#: templates/parts/loop/post-search-footer.php:42
+msgid "1 Comment"
+msgstr "1 nhận xét"
+
+#: inc/customizer/site-identity.php:83
+#, fuzzy
+msgid "Footer Copyright Text"
+msgstr "Nội dung Bản quyền"
+
+#: inc/customizer/static-front-page.php:47
+msgid "Front page title"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Primer"
+msgstr "Primer"
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/godaddy/wp-primer-theme"
+msgstr "https://github.com/godaddy/wp-primer-theme"
+
+#. Description of the plugin/theme
+msgid ""
+"Primer is a powerful theme that brings clarity to your content in a fresh "
+"design."
+msgstr ""
+"Primer là một giao diện mạnh mẽ sẽ mang lại tính rõ ràng cho nội dung của "
+"bạn trong một thiết kế tươi mới."
+
+#. Author of the plugin/theme
+msgid "GoDaddy"
+msgstr "GoDaddy"
+
+#. Author URI of the plugin/theme
+msgid "https://www.godaddy.com/"
+msgstr "https://www.godaddy.com/"
+
+#: build/comments.php:34 comments.php:34
+msgctxt "1. number of comments, 2. post title"
+msgid "One thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
+msgstr[0] "Một nhận xét về %2$s"
+msgstr[1] "%1$d nhận xét về %2$s"
+
+#: build/comments.php:56 comments.php:56
+msgctxt "left arrow (LTR) / right arrow (RTL)"
+msgid "%s Older Comments"
+msgstr "%s Nhận xét trước đó"
+
+#: build/comments.php:58 comments.php:58
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Newer Comments %s"
+msgstr "Nhận xét gần đây %s"
+
+#: build/templates/parts/loop/post-excerpt.php:14
+#: templates/parts/loop/post-excerpt.php:14
+msgctxt "right arrow (LTR) / left arrow (RTL)"
+msgid "Continue Reading %s"
+msgstr "Tiếp tục đọc %s"
+
+#: build/content-none.php:27 content-none.php:27
+msgctxt "link to write a new post"
+msgid "Ready to publish your first post? %s."
+msgstr "Đã sẵn sàng đăng tải bài đăng đầu tiên của bạn? %s."
+
+#: build/inc/customizer/colors.php:478 inc/customizer/colors.php:478
+msgctxt "color scheme name"
+msgid "Blush"
+msgstr "Màu phớt hồng"
+
+#: build/inc/customizer/colors.php:482 inc/customizer/colors.php:482
+msgctxt "color scheme name"
+msgid "Bronze"
+msgstr "Màu đồng"
+
+#: build/inc/customizer/colors.php:486 inc/customizer/colors.php:486
+msgctxt "color scheme name"
+msgid "Canary"
+msgstr "Màu vàng chim hoàng yến"
+
+#: build/inc/customizer/colors.php:490 inc/customizer/colors.php:490
+msgctxt "color scheme name"
+msgid "Cool"
+msgstr "Thú vị"
+
+#: build/inc/customizer/colors.php:494 inc/customizer/colors.php:494
+msgctxt "color scheme name"
+msgid "Dark"
+msgstr "Màu tối"
+
+#: build/inc/customizer/colors.php:498 inc/customizer/colors.php:498
+msgctxt "color scheme name"
+msgid "Iguana"
+msgstr "Màu xanh Iguana"
+
+#: build/inc/customizer/colors.php:502 inc/customizer/colors.php:502
+msgctxt "color scheme name"
+msgid "Muted"
+msgstr "Màu nhạt"
+
+#: build/inc/customizer/colors.php:506 inc/customizer/colors.php:506
+msgctxt "color scheme name"
+msgid "Plum"
+msgstr "Mận chín"
+
+#: build/inc/customizer/colors.php:510 inc/customizer/colors.php:510
+msgctxt "color scheme name"
+msgid "Rose"
+msgstr "Màu hồng"
+
+#: build/inc/customizer/colors.php:514 inc/customizer/colors.php:514
+msgctxt "color scheme name"
+msgid "Tangerine"
+msgstr "Màu hồng cam"
+
+#: build/inc/customizer/colors.php:518 inc/customizer/colors.php:518
+msgctxt "color scheme name"
+msgid "Turquoise"
+msgstr "Ngọc lam"
+
+#: build/inc/customizer/fonts.php:217 inc/customizer/fonts.php:217
+msgctxt "font name"
+msgid "%s (Default)"
+msgstr "%s (Mặc định)"
+
+#: build/inc/customizer/layouts.php:99 inc/customizer/layouts.php:99
+msgctxt "fixed-width page layout"
+msgid "Fixed"
+msgstr "Cố định"
+
+#: build/inc/customizer/layouts.php:100 inc/customizer/layouts.php:100
+msgctxt "fluid-width page layout"
+msgid "Fluid"
+msgstr "Bố cục lưu động"
+
+#: build/inc/helpers.php:45 inc/helpers.php:66
+msgctxt "search term"
+msgid "Search Results for: %s"
+msgstr "Kết quả tìm kiếm của: %s"
+
+#: build/inc/hooks.php:386 inc/hooks.php:386
+msgctxt "page number"
+msgid "Page %d"
+msgstr "Trang %d"
+
+#: build/templates/parts/credit.php:14 inc/customizer/site-identity.php:72
+#: templates/parts/credit.php:21
+msgctxt "1. copyright symbol, 2. year, 3. site title"
+msgid "Copyright %1$s %2$d %3$s"
+msgstr "Bản quyền %1$s %2$d %3$s"
+
+#: build/templates/parts/credit.php:34 templates/parts/credit.php:47
+msgctxt "1. theme name link, 2. theme author link"
+msgid "%1$s WordPress theme by %2$s"
+msgstr "%1$s Giao diện WordPress bởi %2$s"
+
+#: build/templates/parts/loop/post-footer.php:20
+#: build/templates/parts/loop/post-footer.php:32
+#: build/templates/parts/loop/post-search-footer.php:14
+#: build/templates/parts/loop/post-search-footer.php:26
+#: templates/parts/loop/post-footer.php:20
+#: templates/parts/loop/post-footer.php:32
+#: templates/parts/loop/post-search-footer.php:14
+#: templates/parts/loop/post-search-footer.php:26
+msgctxt "separator for items in a list"
+msgid ", "
+msgstr ", "
+
+#: build/templates/parts/loop/post-footer.php:26
+#: build/templates/parts/loop/post-search-footer.php:20
+#: templates/parts/loop/post-footer.php:26
+#: templates/parts/loop/post-search-footer.php:20
+msgctxt "category list"
+msgid "Posted in: %s"
+msgstr "Được đăng trong: %s"
+
+#: build/templates/parts/loop/post-footer.php:38
+#: build/templates/parts/loop/post-search-footer.php:32
+#: templates/parts/loop/post-footer.php:38
+#: templates/parts/loop/post-search-footer.php:32
+msgctxt "tag list"
+msgid "Filed under: %s"
+msgstr "Được sắp xếp bên dưới: %s"
+
+#: build/templates/parts/loop/post-meta.php:24
+#: build/templates/parts/loop/post-search-footer.php:42
+#: templates/parts/loop/post-meta.php:24
+#: templates/parts/loop/post-search-footer.php:42
+msgctxt "number of comments"
+msgid "% Comments"
+msgstr "% nhận xét"
