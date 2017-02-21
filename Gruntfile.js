@@ -256,7 +256,7 @@ module.exports = function( grunt ) {
 						to: ''
 					}
 				],
-				src: [ '*.css' ]
+				src: [ 'style*.css' ]
 			}
 		},
 
