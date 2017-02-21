@@ -9,6 +9,27 @@
  */
 
 /**
+ * Compare against the current Primer child theme version.
+ *
+ * This function accepts the same `$version` and `$operator` formats as
+ * the native `version_compare()` function in PHP and will always return
+ * `false` if the `PRIMER_CHILD_VERSION` constant is empty.
+ *
+ * @link  https://secure.php.net/manual/en/function.version-compare.php
+ * @since NEXT
+ *
+ * @param  string $version  Version number to compare against the Primer child version.
+ * @param  string $operator Test for a particular relationship. The possible operators are: `<`, `lt`, `<=`, `le`, `>`, `gt`, `>=`, `ge`, `==`, `=`, `eq`, `!=`, `<>`, `ne` respectively.
+ *
+ * @return bool Returns `true` if the provided version's relationship to the Primer child version is the one specified by the operator, otherwise `false`.
+ */
+function primer_child_version_compare( $version, $operator ) {
+
+	return ( PRIMER_CHILD_VERSION && version_compare( PRIMER_CHILD_VERSION, $version, $operator ) );
+
+}
+
+/**
  * Return a page title based on the current page.
  *
  * @since 1.0.0
