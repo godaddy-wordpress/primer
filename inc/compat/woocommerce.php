@@ -13,7 +13,7 @@
  * Enable support for WooCommerce.
  *
  * @action after_setup_theme
- * @uses   [add_theme_support](https://developer.wordpress.org/reference/functions/add_theme_support/) To enable WooCommerce support.
+ * @uses   [add_theme_support()](https://developer.wordpress.org/reference/functions/add_theme_support/) To enable WooCommerce support.
  *
  * @link   https://docs.woothemes.com/document/third-party-custom-theme-compatibility/
  * @since  1.0.0
@@ -75,7 +75,7 @@ add_action( 'woocommerce_after_main_content', 'primer_wc_wrapper_end' );
  * Add tertiary sidebar to WooCommerce templates.
  *
  * @action woocommerce_sidebar
- * @uses   [get_sidebar](https://developer.wordpress.org/reference/functions/get_sidebar/) To display the sidebar.
+ * @uses   [get_sidebar()](https://developer.wordpress.org/reference/functions/get_sidebar/) To display the sidebar.
  *
  * @since  1.0.0
  */
@@ -91,7 +91,7 @@ add_action( 'woocommerce_sidebar', 'primer_wc_sidebar' );
  *
  * @action primer_before_post_content
  * @action primer_before_page_content
- * @uses   [is_checkout](https://docs.woocommerce.com/wc-apidocs/function-is_checkout.html) To confirm user is not on the checkout page.
+ * @uses   [is_checkout()](https://docs.woocommerce.com/wc-apidocs/function-is_checkout.html) To confirm user is not on the checkout page.
  *
  * @since  1.0.0
  *
@@ -113,7 +113,7 @@ add_action( 'primer_before_page_content', 'primer_wc_shop_messages' );
  * Filter the layout for the WooCommerce shop page.
  *
  * @filter primer_current_layout
- * @uses   primer_get_layout     To retreive the page layout.
+ * @uses   primer_get_layout To retreive the page layout.
  *
  * @since  1.0.0
  *
@@ -140,7 +140,7 @@ add_filter( 'primer_current_layout', 'primer_wc_shop_layout' );
  * Filter the WooCommerce shop page title.
  *
  * @filter primer_the_page_title
- * @uses   [get_the_title](https://developer.wordpress.org/reference/functions/get_the_title/) To retreive the shop page title.
+ * @uses   [get_the_title()](https://developer.wordpress.org/reference/functions/get_the_title/) To retreive the shop page title.
  *
  * @since  1.0.0
  *
@@ -170,8 +170,8 @@ add_filter( 'primer_the_page_title', 'primer_wc_shop_title' );
  * @filter woocommerce_related_products_columns
  * @filter woocommerce_upsells_products_columns
  * @global WP_Post $post
- * @uses   [is_shop](https://docs.woocommerce.com/wc-apidocs/function-is_shop.html) To check the if on the WooCommerce shop page.
- * @uses   [wc_get_page_id](https://docs.woocommerce.com/wc-apidocs/function-wc_get_page_id.html) To retreive the WooCommerce page id.
+ * @uses   [is_shop()](https://docs.woocommerce.com/wc-apidocs/function-is_shop.html) To check the if on the WooCommerce shop page.
+ * @uses   [wc_get_page_id()](https://docs.woocommerce.com/wc-apidocs/function-wc_get_page_id.html) To retreive the WooCommerce page id.
  * @uses   primer_get_layout To check if the current page is three columns.
  * @since  1.0.0
  *
@@ -383,8 +383,8 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 	 * added products.
 	 *
 	 * @since NEXT
-	 * @uses  wc_get_featured_product_ids()
-	 * @uses  wc_get_product_ids_on_sale()
+	 * @uses  [wc_get_featured_product_ids()](https://docs.woocommerce.com/wc-apidocs/function-wc_get_featured_product_ids.html) To retreive the products that are featured.
+	 * @uses  [wc_get_product_ids_on_sale()](https://docs.woocommerce.com/wc-apidocs/function-wc_get_product_ids_on_sale.html) To retreive the products that are on sale.
 	 *
 	 * @param int  $per_page        (optional) Total number of promoted products to display. Defaults to `4`.
 	 * @param int  $columns         (optional) Number of columns to display promoted products in. Defaults to `4`.
@@ -416,7 +416,7 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 
 		if ( wc_get_featured_product_ids() ) {
 
-			echo '<h2>' . esc_html__( 'Featured Products', 'primer' ) . '</h2>';
+			echo '<h2>' . esc_html__( 'Featured Products', 'primer' ) . '</h2>'; // xss ok
 
 			echo do_shortcode( "[featured_products per_page='{$per_page}' columns='{$columns}']" ); // xss ok
 
@@ -426,7 +426,7 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 
 		if ( wc_get_product_ids_on_sale() ) {
 
-			echo '<h2>' . esc_html__( 'On Sale Now', 'primer' ) . '</h2>';
+			echo '<h2>' . esc_html__( 'On Sale Now', 'primer' ) . '</h2>'; // xss ok
 
 			echo do_shortcode( "[sale_products per_page='{$per_page}' columns='{$columns}']" ); // xss ok
 
@@ -440,7 +440,7 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 
 		}
 
-		echo '<h2>' . esc_html__( 'New In Store', 'primer' ) . '</h2>';
+		echo '<h2>' . esc_html__( 'New In Store', 'primer' ) . '</h2>'; // xss ok
 
 		echo do_shortcode( "[recent_products per_page='{$per_page}' columns='{$columns}']" ); // xss ok
 
@@ -605,6 +605,7 @@ function primer_wc_cart_menu( $items, $args ) {
  *
  * @filter woocommerce_cart_contents_total
  * @since  NEXT
+ * @uses   [wc_price()](https://docs.woocommerce.com/wc-apidocs/function-wc_price.html) To format the price with a currency symbol.
  *
  * @return string
  */
