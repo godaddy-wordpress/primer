@@ -4,16 +4,15 @@ msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
 "POT-Creation-Date: 2017-02-21 20:27:44+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: 404.php:22 build/404.php:22 build/templates/parts/404-woocommerce.php:22
@@ -24,10 +23,10 @@ msgstr "Ops! Fant ikke den siden."
 #: 404.php:28 build/404.php:28 build/templates/parts/404-woocommerce.php:28
 #: templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
-"Det virker ikke som om noe ble funnet på denne plasseringen. Prøv å søke "
-"nedenfor:"
+"Det virker ikke som om noe ble funnet på denne plasseringen. Prøv å søke nedenfor:"
 
 #: build/comments.php:54 build/comments.php:79 comments.php:54 comments.php:79
 msgid "Comment navigation"
@@ -62,11 +61,8 @@ msgstr ""
 "noen andre søkeord."
 
 #: build/content-none.php:45 content-none.php:45
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr ""
-"Det virker ikke som om vi finner det du leter etter. Kanskje det kan hjelpe "
-"å søke."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Det virker ikke som om vi finner det du leter etter. Kanskje det kan hjelpe å søke."
 
 #: build/functions.php:159 functions.php:172
 msgid "Featured"
@@ -107,11 +103,10 @@ msgstr "Sekundær sidestolpe"
 
 #: build/functions.php:376 functions.php:389
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
-"Den sekundære sidestolpen vil kun vises når du har valgt en utforming med "
-"tre kolonner."
+"Den sekundære sidestolpen vil kun vises når du har valgt en utforming med tre kolonner."
 
 #: build/functions.php:383 functions.php:396
 msgid "Footer 1"
@@ -119,9 +114,7 @@ msgstr "Bunntekst 1"
 
 #: build/functions.php:384 functions.php:397
 msgid "This sidebar is the first column of the footer widget area."
-msgstr ""
-"Denne sidestolpen er den første kolonnen i bunntekstens "
-"kontrollprogramområde."
+msgstr "Denne sidestolpen er den første kolonnen i bunntekstens kontrollprogramområde."
 
 #: build/functions.php:391 functions.php:404
 msgid "Footer 2"
@@ -129,8 +122,7 @@ msgstr "Bunntekst 2"
 
 #: build/functions.php:392 functions.php:405
 msgid "This sidebar is the second column of the footer widget area."
-msgstr ""
-"Denne sidestolpen er den andre kolonnen i bunntekstens kontrollprogramområde."
+msgstr "Denne sidestolpen er den andre kolonnen i bunntekstens kontrollprogramområde."
 
 #: build/functions.php:399 functions.php:412
 msgid "Footer 3"
@@ -138,9 +130,7 @@ msgstr "Bunntekst 3"
 
 #: build/functions.php:400 functions.php:413
 msgid "This sidebar is the third column of the footer widget area."
-msgstr ""
-"Denne sidestolpen er den tredje kolonnen i bunntekstens "
-"kontrollprogramområde."
+msgstr "Denne sidestolpen er den tredje kolonnen i bunntekstens kontrollprogramområde."
 
 #: build/functions.php:408 functions.php:421
 msgid "Hero widgets appear over the header image on the front page."
@@ -173,8 +163,8 @@ msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer krever minst WordPress-versjon %1$s. Du kjører versjon %2$s. "
-"Oppgrader og prøv på nytt."
+"Primer krever minst WordPress-versjon %1$s. Du kjører versjon %2$s. Oppgrader "
+"og prøv på nytt."
 
 #: build/inc/customizer/colors.php:49 inc/customizer/colors.php:49
 msgid "Site Title Text"
@@ -199,9 +189,7 @@ msgstr "Topptekst-tekst"
 
 #: build/inc/customizer/colors.php:130 inc/customizer/colors.php:130
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Post titler, kontrollprogram-titler, skjemaetiketter, tabelloverskrifter og "
-"knapper."
+msgstr "Post titler, kontrollprogram-titler, skjemaetiketter, tabelloverskrifter og knapper."
 
 #: build/inc/customizer/colors.php:151 inc/customizer/colors.php:151
 msgid "Primary Text"
@@ -315,11 +303,8 @@ msgid "Hero Background Overlay"
 msgstr "Hero-bakgrunnsoverlegg"
 
 #: build/inc/customizer/colors.php:1284 inc/customizer/colors.php:1284
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Kontroller gjennomsiktigheten av fargevalg når du bruker et egendefinert "
-"topptekstbilde."
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Kontroller gjennomsiktigheten av fargevalg når du bruker et egendefinert topptekstbilde."
 
 #: build/inc/customizer/fonts.php:89 inc/customizer/fonts.php:89
 msgid "Site Title"
@@ -343,8 +328,7 @@ msgstr "Overskrifter"
 
 #: build/inc/customizer/fonts.php:111 inc/customizer/fonts.php:111
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr ""
-"Post titler, kontrollprogram-titler, skjemaetiketter og tabelloverskrifter."
+msgstr "Post titler, kontrollprogram-titler, skjemaetiketter og tabelloverskrifter."
 
 #: build/inc/customizer/fonts.php:126 inc/customizer/fonts.php:126
 msgid "Primary"
@@ -360,9 +344,7 @@ msgstr "Sekundært"
 
 #: build/inc/customizer/fonts.php:142 inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Bylines, antall kommentarer, svarkoblinger, post-bunntekster og sitat-"
-"bunntekster."
+msgstr "Bylines, antall kommentarer, svarkoblinger, post-bunntekster og sitat-bunntekster."
 
 #: build/inc/customizer/fonts.php:192 inc/customizer/fonts.php:192
 msgid "Fonts"
@@ -423,10 +405,8 @@ msgid "Use featured image"
 msgstr "Bruk profilert bilde"
 
 #: build/inc/customizer.php:187 inc/customizer.php:194
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr ""
-"La det profilerte bildet på den nåværende posten overstyre hero-bildet."
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "La det profilerte bildet på den nåværende posten overstyre hero-bildet."
 
 #: build/inc/helpers.php:56 inc/helpers.php:77
 msgid "404 Page Not Found"
@@ -505,13 +485,12 @@ msgid "1 Comment"
 msgstr "1 kommentar"
 
 #: inc/customizer/site-identity.php:83
-#, fuzzy
 msgid "Footer Copyright Text"
-msgstr "Opphavsrett-tekst"
+msgstr "Footer Copyright Text"
 
 #: inc/customizer/static-front-page.php:47
 msgid "Front page title"
-msgstr ""
+msgstr "Front page title"
 
 #. Theme Name of the plugin/theme
 msgid "Primer"

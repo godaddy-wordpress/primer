@@ -4,16 +4,15 @@ msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
 "POT-Creation-Date: 2017-02-21 20:27:44+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: 404.php:22 build/404.php:22 build/templates/parts/404-woocommerce.php:22
@@ -24,7 +23,8 @@ msgstr "Hups! Sivua ei löydy."
 #: 404.php:28 build/404.php:28 build/templates/parts/404-woocommerce.php:28
 #: templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
 "Näyttää siltä, että mitään ei löytynyt tästä sijainnista. Yritä etsiä alla:"
 
@@ -57,15 +57,11 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Pahoittelemme – mikään ei vastannut hakutermejäsi. Yritä uudelleen eri "
-"avainsanoilla."
+"Pahoittelemme – mikään ei vastannut hakutermejäsi. Yritä uudelleen eri avainsanoilla."
 
 #: build/content-none.php:45 content-none.php:45
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr ""
-"Näyttää siltä, ettemme löydä sitä, mitä olet etsimässä. Ehkä haku voisi "
-"auttaa."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Näyttää siltä, ettemme löydä sitä, mitä olet etsimässä. Ehkä haku voisi auttaa."
 
 #: build/functions.php:159 functions.php:172
 msgid "Featured"
@@ -106,11 +102,10 @@ msgstr "Toissijainen sivupalkki"
 
 #: build/functions.php:376 functions.php:389
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
-"Toissijainen sivupalkki näkyy vain, jos olet valinnut kolmesarakkeisen "
-"asettelun."
+"Toissijainen sivupalkki näkyy vain, jos olet valinnut kolmesarakkeisen asettelun."
 
 #: build/functions.php:383 functions.php:396
 msgid "Footer 1"
@@ -167,8 +162,8 @@ msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer edellyttää vähintään WordPress-version %1$s. Olet käyttämässä "
-"versiota %2$s. Päivitä ja yritä uudelleen."
+"Primer edellyttää vähintään WordPress-version %1$s. Olet käyttämässä versiota "
+"%2$s. Päivitä ja yritä uudelleen."
 
 #: build/inc/customizer/colors.php:49 inc/customizer/colors.php:49
 msgid "Site Title Text"
@@ -193,9 +188,7 @@ msgstr "Otsikkoteksti"
 
 #: build/inc/customizer/colors.php:130 inc/customizer/colors.php:130
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Artikkelien nimet, widget-nimet, lomakenimet, taulukkojen otsikot ja "
-"painikkeet."
+msgstr "Artikkelien nimet, widget-nimet, lomakenimet, taulukkojen otsikot ja painikkeet."
 
 #: build/inc/customizer/colors.php:151 inc/customizer/colors.php:151
 msgid "Primary Text"
@@ -211,9 +204,7 @@ msgstr "Toissijainen teksti"
 
 #: build/inc/customizer/colors.php:198 inc/customizer/colors.php:198
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
-"Artikkelin tekijöiden nimet, kommenttimäärät, artikkelien alapalkit ja "
-"lainausten alapalkit."
+msgstr "Artikkelin tekijöiden nimet, kommenttimäärät, artikkelien alapalkit ja lainausten alapalkit."
 
 #: build/inc/customizer/colors.php:212 inc/customizer/colors.php:212
 msgid "Widget Heading Text"
@@ -311,10 +302,8 @@ msgid "Hero Background Overlay"
 msgstr "Hero-taustan peitekerros"
 
 #: build/inc/customizer/colors.php:1284 inc/customizer/colors.php:1284
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Hallitse värikerroksen läpinäkyvyyttä mukautettua otsikkokuvaa käytettäessä."
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Hallitse värikerroksen läpinäkyvyyttä mukautettua otsikkokuvaa käytettäessä."
 
 #: build/inc/customizer/fonts.php:89 inc/customizer/fonts.php:89
 msgid "Site Title"
@@ -354,9 +343,7 @@ msgstr "Toissijainen"
 
 #: build/inc/customizer/fonts.php:142 inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Tekijöiden nimet, kommenttimäärät, vastauslinkit, artikkelien alapalkit ja "
-"lainausten alapalkit."
+msgstr "Tekijöiden nimet, kommenttimäärät, vastauslinkit, artikkelien alapalkit ja lainausten alapalkit."
 
 #: build/inc/customizer/fonts.php:192 inc/customizer/fonts.php:192
 msgid "Fonts"
@@ -417,8 +404,7 @@ msgid "Use featured image"
 msgstr "Käytä pääkuvaa"
 
 #: build/inc/customizer.php:187 inc/customizer.php:194
-msgid ""
-"Allow the featured image on the current post to override the hero image."
+msgid "Allow the featured image on the current post to override the hero image."
 msgstr "Anna nykyisen artikkelin pääkuvan korvata hero-kuva."
 
 #: build/inc/helpers.php:56 inc/helpers.php:77
@@ -498,13 +484,12 @@ msgid "1 Comment"
 msgstr "1 kommentti"
 
 #: inc/customizer/site-identity.php:83
-#, fuzzy
 msgid "Footer Copyright Text"
-msgstr "Copyright-teksti"
+msgstr "Footer Copyright Text"
 
 #: inc/customizer/static-front-page.php:47
 msgid "Front page title"
-msgstr ""
+msgstr "Front page title"
 
 #. Theme Name of the plugin/theme
 msgid "Primer"

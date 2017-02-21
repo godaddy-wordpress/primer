@@ -4,16 +4,15 @@ msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
 "POT-Creation-Date: 2017-02-21 20:27:44+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: 404.php:22 build/404.php:22 build/templates/parts/404-woocommerce.php:22
@@ -24,10 +23,10 @@ msgstr "Rất tiếc! Không thể tìm được trang đó."
 #: 404.php:28 build/404.php:28 build/templates/parts/404-woocommerce.php:28
 #: templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
-"Có vẻ như không tìm thấy thông tin gì tại địa điểm này. Hãy thử tìm kiếm bên "
-"dưới:"
+"Có vẻ như không tìm thấy thông tin gì tại địa điểm này. Hãy thử tìm kiếm bên dưới:"
 
 #: build/comments.php:54 build/comments.php:79 comments.php:54 comments.php:79
 msgid "Comment navigation"
@@ -62,11 +61,8 @@ msgstr ""
 "lòng thử lại với một vài từ khóa khác."
 
 #: build/content-none.php:45 content-none.php:45
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr ""
-"Có vẻ như chúng tôi không thể tìm được nội dung bạn cần tìm. Có lẽ bạn nên "
-"thử tìm kiếm xem."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Có vẻ như chúng tôi không thể tìm được nội dung bạn cần tìm. Có lẽ bạn nên thử tìm kiếm xem."
 
 #: build/functions.php:159 functions.php:172
 msgid "Featured"
@@ -107,8 +103,8 @@ msgstr "Thanh bên phụ"
 
 #: build/functions.php:376 functions.php:389
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr "Thanh bên phụ sẽ chỉ xuất hiện khi bạn chọn bố cục ba cột."
 
 #: build/functions.php:383 functions.php:396
@@ -208,9 +204,7 @@ msgstr "Nội dung phụ"
 
 #: build/inc/customizer/colors.php:198 inc/customizer/colors.php:198
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
-"Dòng ghi tên tác giả bài đăng, số lượng nhận xét, chân trang bài đăng và "
-"chân trang trích dẫn."
+msgstr "Dòng ghi tên tác giả bài đăng, số lượng nhận xét, chân trang bài đăng và chân trang trích dẫn."
 
 #: build/inc/customizer/colors.php:212 inc/customizer/colors.php:212
 msgid "Widget Heading Text"
@@ -308,10 +302,8 @@ msgid "Hero Background Overlay"
 msgstr "Lớp phủ nền hero"
 
 #: build/inc/customizer/colors.php:1284 inc/customizer/colors.php:1284
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Kiểm soát độ trong suốt của lớp phủ màu khi sử dụng ảnh tiêu đề tùy chỉnh."
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Kiểm soát độ trong suốt của lớp phủ màu khi sử dụng ảnh tiêu đề tùy chỉnh."
 
 #: build/inc/customizer/fonts.php:89 inc/customizer/fonts.php:89
 msgid "Site Title"
@@ -351,9 +343,7 @@ msgstr "Phụ"
 
 #: build/inc/customizer/fonts.php:142 inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Dòng ghi tên tác giả, số lượng nhận xét, liên kết trả lời, chân trang bài "
-"đăng và chân trang trích dẫn."
+msgstr "Dòng ghi tên tác giả, số lượng nhận xét, liên kết trả lời, chân trang bài đăng và chân trang trích dẫn."
 
 #: build/inc/customizer/fonts.php:192 inc/customizer/fonts.php:192
 msgid "Fonts"
@@ -414,11 +404,8 @@ msgid "Use featured image"
 msgstr "Sử dụng hình ảnh nổi bật"
 
 #: build/inc/customizer.php:187 inc/customizer.php:194
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr ""
-"Cho phép hình ảnh nổi bật xuất hiện trong bài đăng hiện tại để ghi đè lên "
-"ảnh hero."
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "Cho phép hình ảnh nổi bật xuất hiện trong bài đăng hiện tại để ghi đè lên ảnh hero."
 
 #: build/inc/helpers.php:56 inc/helpers.php:77
 msgid "404 Page Not Found"
@@ -497,13 +484,12 @@ msgid "1 Comment"
 msgstr "1 nhận xét"
 
 #: inc/customizer/site-identity.php:83
-#, fuzzy
 msgid "Footer Copyright Text"
-msgstr "Nội dung Bản quyền"
+msgstr "Footer Copyright Text"
 
 #: inc/customizer/static-front-page.php:47
 msgid "Front page title"
-msgstr ""
+msgstr "Front page title"
 
 #. Theme Name of the plugin/theme
 msgid "Primer"
@@ -518,8 +504,8 @@ msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer là một giao diện mạnh mẽ sẽ mang lại tính rõ ràng cho nội dung của "
-"bạn trong một thiết kế tươi mới."
+"Primer là một giao diện mạnh mẽ sẽ mang lại tính rõ ràng cho nội dung của bạn "
+"trong một thiết kế tươi mới."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"

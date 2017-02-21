@@ -4,16 +4,15 @@ msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
 "POT-Creation-Date: 2017-02-21 20:27:44+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: 404.php:22 build/404.php:22 build/templates/parts/404-woocommerce.php:22
@@ -24,7 +23,8 @@ msgstr "哎呀！无法找到该页面。"
 #: 404.php:28 build/404.php:28 build/templates/parts/404-woocommerce.php:28
 #: templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr "似乎在这个地址没有找到任何东西。请尝试以下搜索："
 
 #: build/comments.php:54 build/comments.php:79 comments.php:54 comments.php:79
@@ -58,8 +58,7 @@ msgid ""
 msgstr "抱歉，没有符合搜索条件的内容。 请试试其他关键词。"
 
 #: build/content-none.php:45 content-none.php:45
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "看来我们不能找到您要找的东西。请尝试进行搜索。"
 
 #: build/functions.php:159 functions.php:172
@@ -99,8 +98,8 @@ msgstr "辅侧边栏"
 
 #: build/functions.php:376 functions.php:389
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr "辅侧边栏仅将在您选择三列布局时出现。"
 
 #: build/functions.php:383 functions.php:396
@@ -157,8 +156,7 @@ msgstr[1] "%d 个物品"
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
-msgstr ""
-"Primer 要求 WordPress 至少为 %1$s 版。您正在使用 %2$s 版。请升级并再次尝试。"
+msgstr "Primer 要求 WordPress 至少为 %1$s 版。您正在使用 %2$s 版。请升级并再次尝试。"
 
 #: build/inc/customizer/colors.php:49 inc/customizer/colors.php:49
 msgid "Site Title Text"
@@ -297,8 +295,7 @@ msgid "Hero Background Overlay"
 msgstr "英雄背景叠加"
 
 #: build/inc/customizer/colors.php:1284 inc/customizer/colors.php:1284
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
+msgid "Control the color overlay transparency when using a custom Header Image."
 msgstr "当使用自定义标题图片时，控制颜色叠加透明度。"
 
 #: build/inc/customizer/fonts.php:89 inc/customizer/fonts.php:89
@@ -400,8 +397,7 @@ msgid "Use featured image"
 msgstr "使用特色图片"
 
 #: build/inc/customizer.php:187 inc/customizer.php:194
-msgid ""
-"Allow the featured image on the current post to override the hero image."
+msgid "Allow the featured image on the current post to override the hero image."
 msgstr "让当前帖子的特色图片覆盖英雄图片。"
 
 #: build/inc/helpers.php:56 inc/helpers.php:77
@@ -481,13 +477,12 @@ msgid "1 Comment"
 msgstr "1 条评论"
 
 #: inc/customizer/site-identity.php:83
-#, fuzzy
 msgid "Footer Copyright Text"
-msgstr "版权文本"
+msgstr "Footer Copyright Text"
 
 #: inc/customizer/static-front-page.php:47
 msgid "Front page title"
-msgstr ""
+msgstr "Front page title"
 
 #. Theme Name of the plugin/theme
 msgid "Primer"

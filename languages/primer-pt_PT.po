@@ -4,16 +4,15 @@ msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
 "POT-Creation-Date: 2017-02-21 20:27:44+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: 404.php:22 build/404.php:22 build/templates/parts/404-woocommerce.php:22
@@ -24,10 +23,10 @@ msgstr "Ups! Não é possível encontrar essa página."
 #: 404.php:28 build/404.php:28 build/templates/parts/404-woocommerce.php:28
 #: templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
-"Não foi encontrado nenhum conteúdo nesta localização. Tente pesquisar em "
-"baixo:"
+"Não foi encontrado nenhum conteúdo nesta localização. Tente pesquisar em baixo:"
 
 #: build/comments.php:54 build/comments.php:79 comments.php:54 comments.php:79
 msgid "Comment navigation"
@@ -62,11 +61,8 @@ msgstr ""
 "termos de procura. Tente novamente com algumas palavras-chave diferentes."
 
 #: build/content-none.php:45 content-none.php:45
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr ""
-"Não nos é possível encontrar esse conteúdo. Utilize a funcionalidade de "
-"procura."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Não nos é possível encontrar esse conteúdo. Utilize a funcionalidade de procura."
 
 #: build/functions.php:159 functions.php:172
 msgid "Featured"
@@ -107,8 +103,8 @@ msgstr "Barra lateral secundária"
 
 #: build/functions.php:376 functions.php:389
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
 "A barra lateral secundária apenas será apresentada quando tiver selecionado "
 "um esquema com três colunas."
@@ -139,8 +135,7 @@ msgstr "Esta barra lateral é a terceira coluna da área de widgets do rodapé."
 
 #: build/functions.php:408 functions.php:421
 msgid "Hero widgets appear over the header image on the front page."
-msgstr ""
-"Os widgets de herói aparecem sobre a imagem de cabeçalho na página principal."
+msgstr "Os widgets de herói aparecem sobre a imagem de cabeçalho na página principal."
 
 #: build/header.php:42 header.php:42
 msgid "Skip to content"
@@ -195,9 +190,7 @@ msgstr "Texto do título"
 
 #: build/inc/customizer/colors.php:130 inc/customizer/colors.php:130
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Publique títulos, títulos de widget, etiquetas de forma, cabeçalhos de "
-"tabela e botões."
+msgstr "Publique títulos, títulos de widget, etiquetas de forma, cabeçalhos de tabela e botões."
 
 #: build/inc/customizer/colors.php:151 inc/customizer/colors.php:151
 msgid "Primary Text"
@@ -213,9 +206,7 @@ msgstr "Texto secundário"
 
 #: build/inc/customizer/colors.php:198 inc/customizer/colors.php:198
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
-"Autorias de publicação, contagem de comentários, rodapés de publicação e "
-"rodapés de proposta."
+msgstr "Autorias de publicação, contagem de comentários, rodapés de publicação e rodapés de proposta."
 
 #: build/inc/customizer/colors.php:212 inc/customizer/colors.php:212
 msgid "Widget Heading Text"
@@ -313,11 +304,8 @@ msgid "Hero Background Overlay"
 msgstr "Sobreposição do fundo de herói"
 
 #: build/inc/customizer/colors.php:1284 inc/customizer/colors.php:1284
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Controle a transparência da sobreposição de cor ao utilizar uma imagem do "
-"cabeçalho personalizada."
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Controle a transparência da sobreposição de cor ao utilizar uma imagem do cabeçalho personalizada."
 
 #: build/inc/customizer/fonts.php:89 inc/customizer/fonts.php:89
 msgid "Site Title"
@@ -341,9 +329,7 @@ msgstr "Títulos"
 
 #: build/inc/customizer/fonts.php:111 inc/customizer/fonts.php:111
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr ""
-"Publique títulos, títulos de widget, etiquetas de forma e cabeçalhos de "
-"tabela."
+msgstr "Publique títulos, títulos de widget, etiquetas de forma e cabeçalhos de tabela."
 
 #: build/inc/customizer/fonts.php:126 inc/customizer/fonts.php:126
 msgid "Primary"
@@ -359,9 +345,7 @@ msgstr "Secundário"
 
 #: build/inc/customizer/fonts.php:142 inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Autorias, contagem de comentários, hiperligações de resposta, rodapés de "
-"publicação e rodapés de proposta."
+msgstr "Autorias, contagem de comentários, hiperligações de resposta, rodapés de publicação e rodapés de proposta."
 
 #: build/inc/customizer/fonts.php:192 inc/customizer/fonts.php:192
 msgid "Fonts"
@@ -410,8 +394,7 @@ msgstr "Largura da página"
 
 #: build/inc/customizer/layouts.php:470 inc/customizer/layouts.php:470
 msgid "Display your site differently on larger screens."
-msgstr ""
-"Apresente o seu sítio de forma diferente em ecrãs de maiores dimensões."
+msgstr "Apresente o seu sítio de forma diferente em ecrãs de maiores dimensões."
 
 #: build/inc/customizer/site-identity.php:77
 #: inc/customizer/site-identity.php:102
@@ -423,11 +406,8 @@ msgid "Use featured image"
 msgstr "Utilizar imagem em destaque"
 
 #: build/inc/customizer.php:187 inc/customizer.php:194
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr ""
-"Permita que a imagem em destaque da publicação atual substitua a imagem de "
-"herói."
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "Permita que a imagem em destaque da publicação atual substitua a imagem de herói."
 
 #: build/inc/helpers.php:56 inc/helpers.php:77
 msgid "404 Page Not Found"
@@ -506,13 +486,12 @@ msgid "1 Comment"
 msgstr "1 comentário"
 
 #: inc/customizer/site-identity.php:83
-#, fuzzy
 msgid "Footer Copyright Text"
-msgstr "Texto do copyright"
+msgstr "Footer Copyright Text"
 
 #: inc/customizer/static-front-page.php:47
 msgid "Front page title"
-msgstr ""
+msgstr "Front page title"
 
 #. Theme Name of the plugin/theme
 msgid "Primer"

@@ -4,16 +4,15 @@ msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
 "POT-Creation-Date: 2017-02-21 20:27:44+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: 404.php:22 build/404.php:22 build/templates/parts/404-woocommerce.php:22
@@ -24,7 +23,8 @@ msgstr "Oeps! We kunnen die pagina niet vinden."
 #: 404.php:28 build/404.php:28 build/templates/parts/404-woocommerce.php:28
 #: templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
 "Er is helemaal niets gevonden op deze locatie. Probeer hieronder te zoeken:"
 
@@ -61,8 +61,7 @@ msgstr ""
 "opnieuw met andere trefwoorden."
 
 #: build/content-none.php:45 content-none.php:45
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "Wij kunnen niet vinden wat je zoekt. Probeer het met een zoekopdracht."
 
 #: build/functions.php:159 functions.php:172
@@ -104,8 +103,8 @@ msgstr "Secundaire zijbalk"
 
 #: build/functions.php:376 functions.php:389
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
 "De secundaire zijbalk wordt alleen weergegeven je een indeling met drie "
 "kolommen hebt geselecteerd."
@@ -165,8 +164,8 @@ msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Voor Primer is ten minste WordPress-versie %1$s vereist. Je voert versie "
-"%2$s uit. Upgrade en probeer het opnieuw."
+"Voor Primer is ten minste WordPress-versie %1$s vereist. Je voert versie %2$s "
+"uit. Upgrade en probeer het opnieuw."
 
 #: build/inc/customizer/colors.php:49 inc/customizer/colors.php:49
 msgid "Site Title Text"
@@ -191,8 +190,7 @@ msgstr "Koptekst"
 
 #: build/inc/customizer/colors.php:130 inc/customizer/colors.php:130
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Publiceer titels, widgettitels, formulierlabels, tabelkoppen en knoppen."
+msgstr "Publiceer titels, widgettitels, formulierlabels, tabelkoppen en knoppen."
 
 #: build/inc/customizer/colors.php:151 inc/customizer/colors.php:151
 msgid "Primary Text"
@@ -208,9 +206,7 @@ msgstr "Secundaire tekst"
 
 #: build/inc/customizer/colors.php:198 inc/customizer/colors.php:198
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
-"Publiceer naamregels, opmerkingaantallen, voetteksten bij berichten en "
-"voetteksten bij citaten."
+msgstr "Publiceer naamregels, opmerkingaantallen, voetteksten bij berichten en voetteksten bij citaten."
 
 #: build/inc/customizer/colors.php:212 inc/customizer/colors.php:212
 msgid "Widget Heading Text"
@@ -308,11 +304,8 @@ msgid "Hero Background Overlay"
 msgstr "Hero-achtergrondoverlay"
 
 #: build/inc/customizer/colors.php:1284 inc/customizer/colors.php:1284
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Stel de transparantie van de kleurenoverlay in wanneer je een aangepaste "
-"afbeelding voor de kop gebruikt."
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Stel de transparantie van de kleurenoverlay in wanneer je een aangepaste afbeelding voor de kop gebruikt."
 
 #: build/inc/customizer/fonts.php:89 inc/customizer/fonts.php:89
 msgid "Site Title"
@@ -352,9 +345,7 @@ msgstr "Secundair"
 
 #: build/inc/customizer/fonts.php:142 inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Naamregels, opmerkingaantallen, antwoordkoppelingen, voetteksten bij "
-"berichten en voetteksten bij citaten."
+msgstr "Naamregels, opmerkingaantallen, antwoordkoppelingen, voetteksten bij berichten en voetteksten bij citaten."
 
 #: build/inc/customizer/fonts.php:192 inc/customizer/fonts.php:192
 msgid "Fonts"
@@ -415,11 +406,8 @@ msgid "Use featured image"
 msgstr "Uitgelichte afbeelding gebruiken"
 
 #: build/inc/customizer.php:187 inc/customizer.php:194
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr ""
-"Sta toe dat de uitgelichte afbeelding van het huidige bericht de hero-"
-"afbeelding vervangt."
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "Sta toe dat de uitgelichte afbeelding van het huidige bericht de hero-afbeelding vervangt."
 
 #: build/inc/helpers.php:56 inc/helpers.php:77
 msgid "404 Page Not Found"
@@ -498,13 +486,12 @@ msgid "1 Comment"
 msgstr "1 opmerking"
 
 #: inc/customizer/site-identity.php:83
-#, fuzzy
 msgid "Footer Copyright Text"
-msgstr "Copyrighttekst"
+msgstr "Footer Copyright Text"
 
 #: inc/customizer/static-front-page.php:47
 msgid "Front page title"
-msgstr ""
+msgstr "Front page title"
 
 #. Theme Name of the plugin/theme
 msgid "Primer"
