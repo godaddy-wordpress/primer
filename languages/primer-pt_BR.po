@@ -138,21 +138,21 @@ msgstr "Ir direto para o conteúdo"
 
 #: inc/compat/woocommerce.php:391
 msgid "Featured Products"
-msgstr "Featured Products"
+msgstr "Produtos em destaque"
 
 #: inc/compat/woocommerce.php:401
 msgid "On Sale Now"
-msgstr "On Sale Now"
+msgstr "Em promoção agora"
 
 #: inc/compat/woocommerce.php:415
 msgid "New In Store"
-msgstr "New In Store"
+msgstr "Novos na loja"
 
 #: inc/compat/woocommerce.php:567
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d item"
-msgstr[1] "%d items"
+msgstr[1] "%d itens"
 
 #: inc/compat/wordpress.php:47
 msgid ""
@@ -420,16 +420,16 @@ msgstr "Blog"
 
 #: templates/parts/404-woocommerce.php:30
 msgid "Search"
-msgstr "Search"
+msgstr "Pesquisar"
 
 #: templates/parts/404-woocommerce.php:36
 msgid "Promoted Products"
-msgstr "Promoted Products"
+msgstr "Produtos em promoção"
 
 #: templates/parts/404-woocommerce.php:42
 #: templates/parts/404-woocommerce.php:44
 msgid "Popular Products"
-msgstr "Popular Products"
+msgstr "Produtos populares"
 
 #: templates/parts/loop/page-content.php:27
 #: templates/parts/loop/post-content.php:18
@@ -515,7 +515,7 @@ msgstr "Vermelho"
 #: inc/customizer/colors.php:480
 msgctxt "color scheme name"
 msgid "Bronze"
-msgstr "Bronze\n"
+msgstr "Bronze"
 
 #: inc/customizer/colors.php:484
 msgctxt "color scheme name"

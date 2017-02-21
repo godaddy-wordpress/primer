@@ -139,21 +139,21 @@ msgstr "Перейти к контенту"
 
 #: inc/compat/woocommerce.php:391
 msgid "Featured Products"
-msgstr "Featured Products"
+msgstr "Рекомендованные продукты"
 
 #: inc/compat/woocommerce.php:401
 msgid "On Sale Now"
-msgstr "On Sale Now"
+msgstr "Идет распродажа"
 
 #: inc/compat/woocommerce.php:415
 msgid "New In Store"
-msgstr "New In Store"
+msgstr "Новое в магазине"
 
 #: inc/compat/woocommerce.php:567
 msgid "%d item"
 msgid_plural "%d items"
-msgstr[0] "%d item"
-msgstr[1] "%d items"
+msgstr[0] "%d позиция"
+msgstr[1] "%d позиций"
 
 #: inc/compat/wordpress.php:47
 msgid ""
@@ -421,16 +421,16 @@ msgstr "Блог"
 
 #: templates/parts/404-woocommerce.php:30
 msgid "Search"
-msgstr "Search"
+msgstr "Поиск"
 
 #: templates/parts/404-woocommerce.php:36
 msgid "Promoted Products"
-msgstr "Promoted Products"
+msgstr "Рекламируемые продукты"
 
 #: templates/parts/404-woocommerce.php:42
 #: templates/parts/404-woocommerce.php:44
 msgid "Popular Products"
-msgstr "Popular Products"
+msgstr "Популярные продукты"
 
 #: templates/parts/loop/page-content.php:27
 #: templates/parts/loop/post-content.php:18

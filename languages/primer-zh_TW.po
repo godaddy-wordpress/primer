@@ -133,21 +133,21 @@ msgstr "略過內容"
 
 #: inc/compat/woocommerce.php:391
 msgid "Featured Products"
-msgstr "Featured Products"
+msgstr "特色產品"
 
 #: inc/compat/woocommerce.php:401
 msgid "On Sale Now"
-msgstr "On Sale Now"
+msgstr "現正特價促銷"
 
 #: inc/compat/woocommerce.php:415
 msgid "New In Store"
-msgstr "New In Store"
+msgstr "店內新貨"
 
 #: inc/compat/woocommerce.php:567
 msgid "%d item"
 msgid_plural "%d items"
-msgstr[0] "%d item"
-msgstr[1] "%d items"
+msgstr[0] "%d 個項目"
+msgstr[1] "%d 個項目"
 
 #: inc/compat/wordpress.php:47
 msgid ""
@@ -413,16 +413,16 @@ msgstr "部落格"
 
 #: templates/parts/404-woocommerce.php:30
 msgid "Search"
-msgstr "Search"
+msgstr "搜尋"
 
 #: templates/parts/404-woocommerce.php:36
 msgid "Promoted Products"
-msgstr "Promoted Products"
+msgstr "促銷產銷"
 
 #: templates/parts/404-woocommerce.php:42
 #: templates/parts/404-woocommerce.php:44
 msgid "Popular Products"
-msgstr "Popular Products"
+msgstr "熱門產品"
 
 #: templates/parts/loop/page-content.php:27
 #: templates/parts/loop/post-content.php:18
