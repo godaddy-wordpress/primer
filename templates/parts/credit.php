@@ -37,7 +37,7 @@ if ( (bool) apply_filters( 'primer_author_credit', true ) ) {
 
 	if ( $copyright_text ) {
 
-		echo ' &mdash; ';
+		echo ' &mdash; '; // xss ok
 
 	}
 
@@ -45,7 +45,7 @@ if ( (bool) apply_filters( 'primer_author_credit', true ) ) {
 
 	printf(
 		esc_html_x( '%1$s WordPress theme by %2$s', '1. theme name link, 2. theme author link', 'primer' ),
-		$theme->get( 'Name' ),
+		esc_html( $theme->get( 'Name' ) ),
 		sprintf(
 			'<a href="%s" rel="author nofollow">%s</a>',
 			esc_url( $theme->get( 'AuthorURI' ) ),
