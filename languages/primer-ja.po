@@ -3,452 +3,503 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-07 23:43:35+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-02-21 20:27:44+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
-#: 404.php:22 templates/parts/404-woocommerce.php:22
+#: 404.php:22 build/404.php:22 build/templates/parts/404-woocommerce.php:22
+#: templates/parts/404-woocommerce.php:22
 msgid "Oops! That page can't be found."
 msgstr "申し訳ありません。ページが見つかりません。"
 
-#: 404.php:28 templates/parts/404-woocommerce.php:28
+#: 404.php:28 build/404.php:28 build/templates/parts/404-woocommerce.php:28
+#: templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr "この場所には何も見つかりませんでした。下記を検索してみてください："
 
-#: comments.php:54 comments.php:79
+#: build/comments.php:54 build/comments.php:79 comments.php:54 comments.php:79
 msgid "Comment navigation"
 msgstr "コメントナビゲーション"
 
-#: comments.php:81
+#: build/comments.php:81 comments.php:81
 msgid "&larr; Older Comments"
 msgstr "&larr; 過去のコメント"
 
-#: comments.php:83
+#: build/comments.php:83 comments.php:83
 msgid "Newer Comments &rarr;"
 msgstr "新しいコメント &rarr;"
 
-#: comments.php:93
+#: build/comments.php:93 comments.php:93
 msgid "Comments are closed."
 msgstr "コメントは終了しました。"
 
-#: content-none.php:16
+#: build/content-none.php:16 content-none.php:16
 msgid "Nothing Found"
 msgstr "何も見つかりませんでした"
 
-#: content-none.php:31
+#: build/content-none.php:31 content-none.php:31
 msgid "Get started here"
 msgstr "ここから始めましょう"
 
-#: content-none.php:39
+#: build/content-none.php:39 content-none.php:39
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr "申し訳ありません。検索ワードに一致する結果がありませんでした。 別のキーワードでもう一度試してみてください。"
+msgstr ""
+"申し訳ありません。検索ワードに一致する結果がありませんでした。 別のキーワード"
+"でもう一度試してみてください。"
 
-#: content-none.php:45
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+#: build/content-none.php:45 content-none.php:45
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "お探しのものが見つかりませんでした。検索してみてください。"
 
-#: functions.php:159
+#: build/functions.php:159 functions.php:172
 msgid "Featured"
 msgstr "おすすめ"
 
-#: functions.php:165 functions.php:407
+#: build/functions.php:165 build/functions.php:407 functions.php:178
+#: functions.php:420
 msgid "Hero"
 msgstr "Hero"
 
-#: functions.php:246
+#: build/functions.php:246 functions.php:259
 msgid "Primary Menu"
 msgstr "メインメニュー"
 
-#: functions.php:247
+#: build/functions.php:247 functions.php:260
 msgid "Social Menu"
 msgstr "ソーシャルメニュー"
 
-#: functions.php:248
+#: build/functions.php:248 functions.php:261
 msgid "Footer Menu"
 msgstr "フッターメニュー"
 
-#: functions.php:367
+#: build/functions.php:367 functions.php:380
 msgid "Sidebar"
 msgstr "サイドバー"
 
-#: functions.php:368
+#: build/functions.php:368 functions.php:381
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
-msgstr "プライマリサイドバーはすべてのページ、投稿、アーカイブ、および検索テンプレートのコンテンツの横に表示されます。"
+msgstr ""
+"プライマリサイドバーはすべてのページ、投稿、アーカイブ、および検索テンプレー"
+"トのコンテンツの横に表示されます。"
 
-#: functions.php:375
+#: build/functions.php:375 functions.php:388
 msgid "Secondary Sidebar"
 msgstr "セカンダリサイドバー"
 
-#: functions.php:376
+#: build/functions.php:376 functions.php:389
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr "セカンダリサイドバーは3列レイアウトを選択した場合のみ表示されます。"
 
-#: functions.php:383
+#: build/functions.php:383 functions.php:396
 msgid "Footer 1"
 msgstr "フッター1"
 
-#: functions.php:384
+#: build/functions.php:384 functions.php:397
 msgid "This sidebar is the first column of the footer widget area."
 msgstr "このサイドバーは、フッターウィジェットエリアの最初の列に表示されます。"
 
-#: functions.php:391
+#: build/functions.php:391 functions.php:404
 msgid "Footer 2"
 msgstr "フッター2"
 
-#: functions.php:392
+#: build/functions.php:392 functions.php:405
 msgid "This sidebar is the second column of the footer widget area."
 msgstr "このサイドバーは、フッターウィジェットエリアの2列目に表示されます。"
 
-#: functions.php:399
+#: build/functions.php:399 functions.php:412
 msgid "Footer 3"
 msgstr "フッター3"
 
-#: functions.php:400
+#: build/functions.php:400 functions.php:413
 msgid "This sidebar is the third column of the footer widget area."
 msgstr "このサイドバーは、フッターウィジェットエリアの3列目に表示されます。"
 
-#: functions.php:408
+#: build/functions.php:408 functions.php:421
 msgid "Hero widgets appear over the header image on the front page."
 msgstr "Heroウィジェットはフロントページのヘッダーイメージ上に表示されます。"
 
-#: header.php:42
+#: build/header.php:42 header.php:42
 msgid "Skip to content"
 msgstr "コンテンツへ移動"
 
-#: inc/compat/woocommerce.php:391
+#: build/inc/compat/woocommerce.php:419 inc/compat/woocommerce.php:419
 msgid "Featured Products"
 msgstr "注目の製品"
 
-#: inc/compat/woocommerce.php:401
+#: build/inc/compat/woocommerce.php:429 inc/compat/woocommerce.php:429
 msgid "On Sale Now"
 msgstr "セール中です"
 
-#: inc/compat/woocommerce.php:415
+#: build/inc/compat/woocommerce.php:443 inc/compat/woocommerce.php:443
 msgid "New In Store"
 msgstr "ストアの新作"
 
-#: inc/compat/woocommerce.php:567
+#: build/inc/compat/woocommerce.php:595 inc/compat/woocommerce.php:595
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d アイテム"
 msgstr[1] "%d アイテム"
 
-#: inc/compat/wordpress.php:47
+#: build/inc/compat/wordpress.php:55 inc/compat/wordpress.php:55
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"PrimerにはWordPressのバージョン%1$s以上が必要です。お使いのバージョンは%2$sです。アップグレードしてからもう一度お試しください。"
+"PrimerにはWordPressのバージョン%1$s以上が必要です。お使いのバージョンは%2$sで"
+"す。アップグレードしてからもう一度お試しください。"
 
-#: inc/customizer/colors.php:47
+#: build/inc/customizer/colors.php:49 inc/customizer/colors.php:49
 msgid "Site Title Text"
 msgstr "サイト名テキスト"
 
-#: inc/customizer/colors.php:63
+#: build/inc/customizer/colors.php:65 inc/customizer/colors.php:65
 msgid "Tagline Text"
 msgstr "キャッチコピーテキスト"
 
-#: inc/customizer/colors.php:74
+#: build/inc/customizer/colors.php:76 inc/customizer/colors.php:76
 msgid "Hero Text"
 msgstr "Heroテキスト"
 
-#: inc/customizer/colors.php:105 inc/customizer/colors.php:323
+#: build/inc/customizer/colors.php:107 build/inc/customizer/colors.php:325
+#: inc/customizer/colors.php:107 inc/customizer/colors.php:325
 msgid "Text"
 msgstr "テキスト"
 
-#: inc/customizer/colors.php:127
+#: build/inc/customizer/colors.php:129 inc/customizer/colors.php:129
 msgid "Heading Text"
 msgstr "見出しテキスト"
 
-#: inc/customizer/colors.php:128
+#: build/inc/customizer/colors.php:130 inc/customizer/colors.php:130
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "投稿タイトル、ウィジェットタイトル、フォームラベル、テーブルヘッダーおよびボタン。"
+msgstr ""
+"投稿タイトル、ウィジェットタイトル、フォームラベル、テーブルヘッダーおよびボ"
+"タン。"
 
-#: inc/customizer/colors.php:149
+#: build/inc/customizer/colors.php:151 inc/customizer/colors.php:151
 msgid "Primary Text"
 msgstr "プライマリテキスト"
 
-#: inc/customizer/colors.php:150
+#: build/inc/customizer/colors.php:152 inc/customizer/colors.php:152
 msgid "Paragraphs, lists, menu links, quotes and tables."
 msgstr "段落、リスト、メニューリンク、引用およびテーブル。"
 
-#: inc/customizer/colors.php:195
+#: build/inc/customizer/colors.php:197 inc/customizer/colors.php:197
 msgid "Secondary Text"
 msgstr "セカンダリテキスト"
 
-#: inc/customizer/colors.php:196
+#: build/inc/customizer/colors.php:198 inc/customizer/colors.php:198
 msgid "Post bylines, comment counts, post footers and quote footers."
 msgstr "投稿署名欄、コメント数、投稿フッターおよび引用フッター。"
 
-#: inc/customizer/colors.php:210
+#: build/inc/customizer/colors.php:212 inc/customizer/colors.php:212
 msgid "Widget Heading Text"
 msgstr "ウィジェット見出しテキスト"
 
-#: inc/customizer/colors.php:227
+#: build/inc/customizer/colors.php:229 inc/customizer/colors.php:229
 msgid "Widget Text"
 msgstr "ウィジェットテキスト"
 
-#: inc/customizer/colors.php:239
+#: build/inc/customizer/colors.php:241 inc/customizer/colors.php:241
 msgid "Menu Text"
 msgstr "メニューテキスト"
 
-#: inc/customizer/colors.php:261
+#: build/inc/customizer/colors.php:263 inc/customizer/colors.php:263
 msgid "Copyright Text"
 msgstr "著作権テキスト"
 
-#: inc/customizer/colors.php:275
+#: build/inc/customizer/colors.php:277 inc/customizer/colors.php:277
 msgid "Link Text"
 msgstr "テキストをリンク"
 
-#: inc/customizer/colors.php:297 inc/customizer/colors.php:379
+#: build/inc/customizer/colors.php:299 build/inc/customizer/colors.php:381
+#: inc/customizer/colors.php:299 inc/customizer/colors.php:381
 msgid "Background"
 msgstr "背景"
 
-#: inc/customizer/colors.php:340
+#: build/inc/customizer/colors.php:342 inc/customizer/colors.php:342
 msgid "Page Background"
 msgstr "ページの背景"
 
-#: inc/customizer/colors.php:350
+#: build/inc/customizer/colors.php:352 inc/customizer/colors.php:352
 msgid "Content Background"
 msgstr "コンテンツ背景"
 
-#: inc/customizer/colors.php:360
+#: build/inc/customizer/colors.php:362 inc/customizer/colors.php:362
 msgid "Hero Background"
 msgstr "Hero背景"
 
-#: inc/customizer/colors.php:389
+#: build/inc/customizer/colors.php:391 inc/customizer/colors.php:391
 msgid "Widgets Background"
 msgstr "ウィジェット背景"
 
-#: inc/customizer/colors.php:400
+#: build/inc/customizer/colors.php:402 inc/customizer/colors.php:402
 msgid "Widget Content Background"
 msgstr "ウィジェットコンテンツ背景"
 
-#: inc/customizer/colors.php:411
+#: build/inc/customizer/colors.php:413 inc/customizer/colors.php:413
 msgid "Footer Background"
 msgstr "フッター背景"
 
-#: inc/customizer/colors.php:449 inc/customizer/layouts.php:302
+#: build/inc/customizer/colors.php:451 build/inc/customizer/layouts.php:309
+#: inc/customizer/colors.php:451 inc/customizer/layouts.php:309
 msgid "Custom"
 msgstr "カスタム"
 
-#: inc/customizer/colors.php:466 inc/customizer/layouts.php:293
+#: build/inc/customizer/colors.php:468 build/inc/customizer/layouts.php:300
+#: inc/customizer/colors.php:468 inc/customizer/layouts.php:300
 msgid "Default"
 msgstr "デフォルト"
 
-#: inc/customizer/colors.php:706
+#: build/inc/customizer/colors.php:710 inc/customizer/colors.php:710
 msgid "Colors"
 msgstr "カラー"
 
-#: inc/customizer/colors.php:715
+#: build/inc/customizer/colors.php:719 inc/customizer/colors.php:719
 msgid "Color Schemes"
 msgstr "カラースキーム"
 
-#: inc/customizer/colors.php:723
+#: build/inc/customizer/colors.php:727 inc/customizer/colors.php:727
 msgid "Header"
 msgstr "ヘッダー"
 
-#: inc/customizer/colors.php:731
+#: build/inc/customizer/colors.php:735 inc/customizer/colors.php:735
 msgid "Menu"
 msgstr "メニュー"
 
-#: inc/customizer/colors.php:739
+#: build/inc/customizer/colors.php:743 inc/customizer/colors.php:743
 msgid "Buttons"
 msgstr "ボタン"
 
-#: inc/customizer/colors.php:747
+#: build/inc/customizer/colors.php:751 inc/customizer/colors.php:751
 msgid "Content"
 msgstr "コンテンツ"
 
-#: inc/customizer/colors.php:755
+#: build/inc/customizer/colors.php:759 inc/customizer/colors.php:759
 msgid "Footer"
 msgstr "フッター"
 
-#: inc/customizer/colors.php:965
+#: build/inc/customizer/colors.php:972 inc/customizer/colors.php:972
 msgid "Base Color Scheme"
 msgstr "基調色の設計"
 
-#: inc/customizer/colors.php:1274
+#: build/inc/customizer/colors.php:1283 inc/customizer/colors.php:1283
 msgid "Hero Background Overlay"
 msgstr "Hero背景オーバーレイ"
 
-#: inc/customizer/colors.php:1275
-msgid "Control the color overlay transparency when using a custom Header Image."
-msgstr "カスタムヘッダーイメージを使用している場合、カラーオーバーレイの透明度をコントロールします。"
+#: build/inc/customizer/colors.php:1284 inc/customizer/colors.php:1284
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+"カスタムヘッダーイメージを使用している場合、カラーオーバーレイの透明度をコン"
+"トロールします。"
 
-#: inc/customizer/fonts.php:87
+#: build/inc/customizer/fonts.php:89 inc/customizer/fonts.php:89
 msgid "Site Title"
 msgstr "サイト名"
 
-#: inc/customizer/fonts.php:88
+#: build/inc/customizer/fonts.php:90 inc/customizer/fonts.php:90
 msgid "Site title text in the header."
 msgstr "ヘッダーのサイト名テキスト。"
 
-#: inc/customizer/fonts.php:97
+#: build/inc/customizer/fonts.php:99 inc/customizer/fonts.php:99
 msgid "Navigation"
 msgstr "ナビゲーション"
 
-#: inc/customizer/fonts.php:98
+#: build/inc/customizer/fonts.php:100 inc/customizer/fonts.php:100
 msgid "Primary menu links and button links."
 msgstr "プライマリメニューリンクとボタンリンク。"
 
-#: inc/customizer/fonts.php:108
+#: build/inc/customizer/fonts.php:110 inc/customizer/fonts.php:110
 msgid "Headings"
 msgstr "見出し"
 
-#: inc/customizer/fonts.php:109
+#: build/inc/customizer/fonts.php:111 inc/customizer/fonts.php:111
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr "投稿タイトル、ウィジェットタイトル、フォームラベル、およびテーブルヘッダー。"
+msgstr ""
+"投稿タイトル、ウィジェットタイトル、フォームラベル、およびテーブルヘッダー。"
 
-#: inc/customizer/fonts.php:124
+#: build/inc/customizer/fonts.php:126 inc/customizer/fonts.php:126
 msgid "Primary"
 msgstr "プライマリ"
 
-#: inc/customizer/fonts.php:125
+#: build/inc/customizer/fonts.php:127 inc/customizer/fonts.php:127
 msgid "Paragraphs, lists, links, quotes, and tables."
 msgstr "段落、リスト、リンク、引用およびテーブル。"
 
-#: inc/customizer/fonts.php:139
+#: build/inc/customizer/fonts.php:141 inc/customizer/fonts.php:141
 msgid "Secondary"
 msgstr "セカンダリ"
 
-#: inc/customizer/fonts.php:140
+#: build/inc/customizer/fonts.php:142 inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
 msgstr "署名欄、コメント数、返信リンク、投稿フッターおよび引用フッター。"
 
-#: inc/customizer/fonts.php:188
+#: build/inc/customizer/fonts.php:192 inc/customizer/fonts.php:192
 msgid "Fonts"
 msgstr "フォント"
 
-#: inc/customizer/layouts.php:53
+#: build/inc/customizer/layouts.php:55 inc/customizer/layouts.php:55
 msgid "One Column: Wide"
 msgstr "１列：広"
 
-#: inc/customizer/layouts.php:54
+#: build/inc/customizer/layouts.php:56 inc/customizer/layouts.php:56
 msgid "One Column: Narrow"
 msgstr "１列：狭"
 
-#: inc/customizer/layouts.php:55 inc/customizer/layouts.php:144
+#: build/inc/customizer/layouts.php:57 build/inc/customizer/layouts.php:148
+#: inc/customizer/layouts.php:57 inc/customizer/layouts.php:148
 msgid "Two Columns: Content | Sidebar"
 msgstr "2列：コンテンツ | サイドバー"
 
-#: inc/customizer/layouts.php:56 inc/customizer/layouts.php:143
+#: build/inc/customizer/layouts.php:58 build/inc/customizer/layouts.php:147
+#: inc/customizer/layouts.php:58 inc/customizer/layouts.php:147
 msgid "Two Columns: Sidebar | Content"
 msgstr "2列：サイドバー | コンテンツ"
 
-#: inc/customizer/layouts.php:57 inc/customizer/layouts.php:146
+#: build/inc/customizer/layouts.php:59 build/inc/customizer/layouts.php:150
+#: inc/customizer/layouts.php:59 inc/customizer/layouts.php:150
 msgid "Three Columns: Content | Sidebar | Sidebar"
 msgstr "3列：コンテンツ | サイドバー | サイドバー"
 
-#: inc/customizer/layouts.php:58
+#: build/inc/customizer/layouts.php:60 inc/customizer/layouts.php:60
 msgid "Three Columns: Sidebar | Content | Sidebar"
 msgstr "3列：サイドバー | コンテンツ | サイドバー"
 
-#: inc/customizer/layouts.php:59 inc/customizer/layouts.php:145
+#: build/inc/customizer/layouts.php:61 build/inc/customizer/layouts.php:149
+#: inc/customizer/layouts.php:61 inc/customizer/layouts.php:149
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "3列：サイドバー | サイドバー | コンテンツ"
 
-#: inc/customizer/layouts.php:256 inc/customizer/layouts.php:434
+#: build/inc/customizer/layouts.php:263 build/inc/customizer/layouts.php:443
+#: inc/customizer/layouts.php:263 inc/customizer/layouts.php:443
 msgid "Layout"
 msgstr "レイアウト"
 
-#: inc/customizer/layouts.php:460
+#: build/inc/customizer/layouts.php:469 inc/customizer/layouts.php:469
 msgid "Page Width"
 msgstr "ページ幅"
 
-#: inc/customizer/layouts.php:461
+#: build/inc/customizer/layouts.php:470 inc/customizer/layouts.php:470
 msgid "Display your site differently on larger screens."
 msgstr "大きい画面ではサイトを異なるように表示します。"
 
-#: inc/customizer/site-identity.php:72
+#: build/inc/customizer/site-identity.php:77
+#: inc/customizer/site-identity.php:102
 msgid "Display theme author credit"
 msgstr "テーマ作成者を表示"
 
-#: inc/customizer.php:176
+#: build/inc/customizer.php:186 inc/customizer.php:193
 msgid "Use featured image"
 msgstr "注目のイメージを使用"
 
-#: inc/customizer.php:177
-msgid "Allow the featured image on the current post to override the hero image."
-msgstr "現在の投稿への注目イメージの使用を許可して、Heroイメージにオーバーライドさせます。"
+#: build/inc/customizer.php:187 inc/customizer.php:194
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+"現在の投稿への注目イメージの使用を許可して、Heroイメージにオーバーライドさせ"
+"ます。"
 
-#: inc/helpers.php:52
+#: build/inc/helpers.php:56 inc/helpers.php:77
 msgid "404 Page Not Found"
 msgstr "404 ページが見つかりません"
 
-#: inc/template-tags.php:133
+#: build/inc/template-tags.php:135 inc/template-tags.php:135
 msgid "Posts navigation"
 msgstr "投稿ナビゲーション"
 
-#: inc/template-tags.php:139
+#: build/inc/template-tags.php:141 inc/template-tags.php:141
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> 過去の投稿"
 
-#: inc/template-tags.php:145
+#: build/inc/template-tags.php:147 inc/template-tags.php:147
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "新しい投稿 <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:178
+#: build/inc/template-tags.php:180
 msgid "Post navigation"
 msgstr "投稿ナビゲーション"
 
-#: inc/template-tags.php:279
+#: build/inc/template-tags.php:281 inc/template-tags.php:262
 msgid "Blog"
 msgstr "ブログ"
 
+#: build/templates/parts/404-woocommerce.php:30
 #: templates/parts/404-woocommerce.php:30
 msgid "Search"
 msgstr "検索"
 
+#: build/templates/parts/404-woocommerce.php:36
 #: templates/parts/404-woocommerce.php:36
 msgid "Promoted Products"
 msgstr "お奨め製品"
 
+#: build/templates/parts/404-woocommerce.php:42
+#: build/templates/parts/404-woocommerce.php:44
 #: templates/parts/404-woocommerce.php:42
 #: templates/parts/404-woocommerce.php:44
 msgid "Popular Products"
 msgstr "人気のある商品"
 
+#: build/templates/parts/loop/page-content.php:27
+#: build/templates/parts/loop/post-content.php:18
 #: templates/parts/loop/page-content.php:27
 #: templates/parts/loop/post-content.php:18
 msgid "Pages:"
 msgstr "ページ："
 
+#: build/templates/parts/loop/page-footer.php:9
+#: build/templates/parts/loop/post-footer.php:14
+#: build/templates/parts/loop/post-search-footer.php:46
 #: templates/parts/loop/page-footer.php:9
 #: templates/parts/loop/post-footer.php:14
 #: templates/parts/loop/post-search-footer.php:46
 msgid "Edit"
 msgstr "編集"
 
+#: build/templates/parts/loop/post-content.php:14
 #: templates/parts/loop/post-content.php:14
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "詳細を読む <span class=\"meta-nav\">&rarr;</span>"
 
+#: build/templates/parts/loop/post-meta.php:24
+#: build/templates/parts/loop/post-search-footer.php:42
 #: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgid "Leave a comment"
 msgstr "コメントを残す"
 
+#: build/templates/parts/loop/post-meta.php:24
+#: build/templates/parts/loop/post-search-footer.php:42
 #: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgid "1 Comment"
 msgstr "コメント1"
+
+#: inc/customizer/site-identity.php:83
+#, fuzzy
+msgid "Footer Copyright Text"
+msgstr "著作権テキスト"
+
+#: inc/customizer/static-front-page.php:47
+msgid "Front page title"
+msgstr ""
 
 #. Theme Name of the plugin/theme
 msgid "Primer"
@@ -462,7 +513,9 @@ msgstr "https://github.com/godaddy/wp-primer-theme"
 msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
-msgstr "Primerは、フレッシュなデザインであなたのコンテンツに明瞭さをもたらすパワフルなテーマです。"
+msgstr ""
+"Primerは、フレッシュなデザインであなたのコンテンツに明瞭さをもたらすパワフル"
+"なテーマです。"
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
@@ -472,123 +525,129 @@ msgstr "GoDaddy"
 msgid "https://www.godaddy.com/"
 msgstr "https://www.godaddy.com/"
 
-#: comments.php:34
+#: build/comments.php:34 comments.php:34
 msgctxt "1. number of comments, 2. post title"
 msgid "One thought on %2$s"
 msgid_plural "%1$d thoughts on %2$s"
 msgstr[0] "%2$sへのコメント1"
 msgstr[1] "%2$sへのコメント%1$d"
 
-#: comments.php:56
+#: build/comments.php:56 comments.php:56
 msgctxt "left arrow (LTR) / right arrow (RTL)"
 msgid "%s Older Comments"
 msgstr "%s過去のコメント"
 
-#: comments.php:58
+#: build/comments.php:58 comments.php:58
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Newer Comments %s"
 msgstr "新しいコメント%s"
 
+#: build/templates/parts/loop/post-excerpt.php:14
 #: templates/parts/loop/post-excerpt.php:14
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Continue Reading %s"
 msgstr "つづきを読む%s"
 
-#: content-none.php:27
+#: build/content-none.php:27 content-none.php:27
 msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
 msgstr "最初の投稿を公開しますか？%s。"
 
-#: inc/customizer/colors.php:476
+#: build/inc/customizer/colors.php:478 inc/customizer/colors.php:478
 msgctxt "color scheme name"
 msgid "Blush"
 msgstr "紅潮"
 
-#: inc/customizer/colors.php:480
+#: build/inc/customizer/colors.php:482 inc/customizer/colors.php:482
 msgctxt "color scheme name"
 msgid "Bronze"
 msgstr "ブロンズ"
 
-#: inc/customizer/colors.php:484
+#: build/inc/customizer/colors.php:486 inc/customizer/colors.php:486
 msgctxt "color scheme name"
 msgid "Canary"
 msgstr "カナリア"
 
-#: inc/customizer/colors.php:488
+#: build/inc/customizer/colors.php:490 inc/customizer/colors.php:490
 msgctxt "color scheme name"
 msgid "Cool"
 msgstr "クール"
 
-#: inc/customizer/colors.php:492
+#: build/inc/customizer/colors.php:494 inc/customizer/colors.php:494
 msgctxt "color scheme name"
 msgid "Dark"
 msgstr "Dark"
 
-#: inc/customizer/colors.php:496
+#: build/inc/customizer/colors.php:498 inc/customizer/colors.php:498
 msgctxt "color scheme name"
 msgid "Iguana"
 msgstr "イグアナ"
 
-#: inc/customizer/colors.php:500
+#: build/inc/customizer/colors.php:502 inc/customizer/colors.php:502
 msgctxt "color scheme name"
 msgid "Muted"
 msgstr "ミュート"
 
-#: inc/customizer/colors.php:504
+#: build/inc/customizer/colors.php:506 inc/customizer/colors.php:506
 msgctxt "color scheme name"
 msgid "Plum"
 msgstr "梅"
 
-#: inc/customizer/colors.php:508
+#: build/inc/customizer/colors.php:510 inc/customizer/colors.php:510
 msgctxt "color scheme name"
 msgid "Rose"
 msgstr "ローズ"
 
-#: inc/customizer/colors.php:512
+#: build/inc/customizer/colors.php:514 inc/customizer/colors.php:514
 msgctxt "color scheme name"
 msgid "Tangerine"
 msgstr "タンジェリン"
 
-#: inc/customizer/colors.php:516
+#: build/inc/customizer/colors.php:518 inc/customizer/colors.php:518
 msgctxt "color scheme name"
 msgid "Turquoise"
 msgstr "ターコイズ"
 
-#: inc/customizer/fonts.php:213
+#: build/inc/customizer/fonts.php:217 inc/customizer/fonts.php:217
 msgctxt "font name"
 msgid "%s (Default)"
 msgstr "%s（デフォルト）"
 
-#: inc/customizer/layouts.php:97
+#: build/inc/customizer/layouts.php:99 inc/customizer/layouts.php:99
 msgctxt "fixed-width page layout"
 msgid "Fixed"
 msgstr "固定"
 
-#: inc/customizer/layouts.php:98
+#: build/inc/customizer/layouts.php:100 inc/customizer/layouts.php:100
 msgctxt "fluid-width page layout"
 msgid "Fluid"
 msgstr "流動的"
 
-#: inc/helpers.php:41
+#: build/inc/helpers.php:45 inc/helpers.php:66
 msgctxt "search term"
 msgid "Search Results for: %s"
 msgstr "次の検索結果： %s"
 
-#: inc/hooks.php:384
+#: build/inc/hooks.php:386 inc/hooks.php:386
 msgctxt "page number"
 msgid "Page %d"
 msgstr "%d ページ目"
 
-#: templates/parts/credit.php:14
+#: build/templates/parts/credit.php:14 inc/customizer/site-identity.php:72
+#: templates/parts/credit.php:21
 msgctxt "1. copyright symbol, 2. year, 3. site title"
 msgid "Copyright %1$s %2$d %3$s"
 msgstr "Copyright %1$s %2$d %3$s"
 
-#: templates/parts/credit.php:34
+#: build/templates/parts/credit.php:34 templates/parts/credit.php:47
 msgctxt "1. theme name link, 2. theme author link"
 msgid "%1$s WordPress theme by %2$s"
 msgstr "%1$s WordPressテーマ by %2$s"
 
+#: build/templates/parts/loop/post-footer.php:20
+#: build/templates/parts/loop/post-footer.php:32
+#: build/templates/parts/loop/post-search-footer.php:14
+#: build/templates/parts/loop/post-search-footer.php:26
 #: templates/parts/loop/post-footer.php:20
 #: templates/parts/loop/post-footer.php:32
 #: templates/parts/loop/post-search-footer.php:14
@@ -597,18 +656,24 @@ msgctxt "separator for items in a list"
 msgid ", "
 msgstr ", "
 
+#: build/templates/parts/loop/post-footer.php:26
+#: build/templates/parts/loop/post-search-footer.php:20
 #: templates/parts/loop/post-footer.php:26
 #: templates/parts/loop/post-search-footer.php:20
 msgctxt "category list"
 msgid "Posted in: %s"
 msgstr "カテゴリ： %s"
 
+#: build/templates/parts/loop/post-footer.php:38
+#: build/templates/parts/loop/post-search-footer.php:32
 #: templates/parts/loop/post-footer.php:38
 #: templates/parts/loop/post-search-footer.php:32
 msgctxt "tag list"
 msgid "Filed under: %s"
 msgstr "タグ： %s"
 
+#: build/templates/parts/loop/post-meta.php:24
+#: build/templates/parts/loop/post-search-footer.php:42
 #: templates/parts/loop/post-meta.php:24
 #: templates/parts/loop/post-search-footer.php:42
 msgctxt "number of comments"
