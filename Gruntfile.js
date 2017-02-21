@@ -35,8 +35,8 @@ module.exports = function( grunt ) {
 			options: {
 				force: true
 			},
-			build: [ 'build/*' ],
-			docs: [ '.dev/docs/sphinx/src/documentation/*' ]
+			build: [ 'build/' ],
+			docs: [ '.dev/docs/sphinx/src/documentation/' ]
 		},
 
 		copy: {
