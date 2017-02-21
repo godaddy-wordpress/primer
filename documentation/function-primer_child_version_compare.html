@@ -240,18 +240,20 @@
 	<p>Compare against the current Primer child theme version.</p>
 
 <p>This function accepts the same <code>$version</code> and <code>$operator</code> formats as
-the native <code>version_compare()</code> function in PHP, and it will always
-return <code>false</code> if the <code>PRIMER_CHILD_VERSION</code> constant is empty.</p>
+the native <code>version_compare()</code> function in PHP and will always return
+<code>false</code> if the <code>PRIMER_CHILD_VERSION</code> constant is empty.</p>
 	</div>
 
 	<div class="info">
 		
 		<b>Package:</b> <a href="package-Functions.html">Functions</a><br>
+				<b>Author:</b>
+				GoDaddy<br>
 				<b>Since:</b>
 				NEXT<br>
 				<b>Link:</b>
 				<a href="https://secure.php.net/manual/en/function.version-compare.php">https://secure.php.net/manual/en/function.version-compare.php</a><br>
-		<b>Located at</b> <a href="source-function-primer_child_version_compare.html#54-73" title="Go to source code">functions.php</a><br>
+		<b>Located at</b> <a href="source-function-primer_child_version_compare.html#11-30" title="Go to source code">inc/helpers.php</a><br>
 	</div>
 
 	<p class="method-signature">
@@ -265,12 +267,12 @@ primer_child_version_compare( string <var>$version</var> string <var>$operator</
 		<tr id="$version">
 			<td class="name"><code>string</code></td>
 			<td class="value"><code><var>$version</var></code></td>
-			<td></td>
+			<td>Version number to compare against the Primer child version.</td>
 		</tr>
 		<tr id="$operator">
 			<td class="name"><code>string</code></td>
 			<td class="value"><code><var>$operator</var></code></td>
-			<td></td>
+			<td>Test for a particular relationship. The possible operators are: <code>&lt;</code>, <code>lt</code>, <code>&lt;=</code>, <code>le</code>, <code>&gt;</code>, <code>gt</code>, <code>&gt;=</code>, <code>ge</code>, <code>==</code>, <code>=</code>, <code>eq</code>, <code>!=</code>, <code>&lt;&gt;</code>, <code>ne</code> respectively.</td>
 		</tr>
 		</table>
 	</div>
@@ -283,7 +285,7 @@ primer_child_version_compare( string <var>$version</var> string <var>$operator</
 					boolean
 				</code></span>
 				<span>
-					bool
+					Returns <code>true</code> if the provided version's relationship to the Primer child version is the one specified by the operator, otherwise <code>false</code>.
 				</span>
 			</li>
 		</ul>
