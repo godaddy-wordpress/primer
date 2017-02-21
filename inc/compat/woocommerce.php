@@ -587,12 +587,13 @@ function primer_wc_cart_menu( $items, $args ) {
 				</span>
 				<span class="cart-preview-count">%s</span>
 			</a>
-			<a class="expand" href="#"></a>
+			%s
 			%s
 		</li>',
 		implode( ' ', array_map( 'esc_attr', $classes ) ), // xss ok
 		$woocommerce->cart->get_cart_total(), // xss ok
 		esc_html( sprintf( _n( '%d item', '%d items', $woocommerce->cart->get_cart_contents_count(), 'primer' ), $woocommerce->cart->get_cart_contents_count() ) ),
+		$woocommerce->cart->get_cart_contents_count() ? '<a class="expand" href="#"></a>' : '', // xss ok
 		$sub_menu // xss ok
 	);
 
