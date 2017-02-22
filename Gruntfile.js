@@ -183,6 +183,16 @@ module.exports = function( grunt ) {
 		},
 
 		replace: {
+			charset: {
+				overwrite: true,
+				replacements: [
+					{
+						from: /^@charset "UTF-8";\n/,
+						to: ''
+					}
+				],
+				src: [ 'style*.css' ]
+			},
 			docs: {
 				overwrite: true,
 				replacements: [
@@ -243,16 +253,6 @@ module.exports = function( grunt ) {
 					}
 				],
 				src: [ '.dev/sass/**/*.scss' ]
-			},
-			charset: {
-				overwrite: true,
-				replacements: [
-					{
-						from: /^@charset "UTF-8";\n/,
-						to: ''
-					}
-				],
-				src: [ 'style*.css' ]
 			}
 		},
 
