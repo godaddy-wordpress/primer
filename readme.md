@@ -66,6 +66,9 @@ Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 ## Changelog ##
 
+### 1.5.1 ###
+* Fix: Category and tag list display on posts @props [fjarrett](https://github.com/fjarrett)
+
 ### 1.5.0 ###
 * New: Full compatibility with the WooCommerce plugin @props [evanherman](https://github.com/EvanHerman), [fjarrett](https://github.com/fjarrett)
 * New: Add Front Page Title setting to the Static Front Page section of the Customizer @props [evanherman](https://github.com/EvanHerman)
