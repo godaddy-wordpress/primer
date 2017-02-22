@@ -353,7 +353,7 @@ class Primer_Customizer_Colors {
 					'default' => '#ffffff',
 					'section' => 'colors-content',
 					'css'     => array(
-						'.hentry, .widget, #page > .page-title-container' => array(
+						'.hentry, .comments-area, .widget, #page > .page-title-container' => array(
 							'background-color' => '%1$s',
 						),
 					),

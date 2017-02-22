@@ -42,7 +42,7 @@ function primer_the_custom_logo() {
 		'itemprop' => 'logo',
 	);
 
-	printf(
+	printf( // xss ok.
 		'<a href="%1$s" class="custom-logo-link" %2$s>%3$s</a>',
 		esc_url( home_url( '/' ) ),
 		$custom_logo_id ? 'rel="home" itemprop="url"' : 'style="display:none;"',
@@ -71,7 +71,7 @@ function primer_the_site_title() {
 	 *
 	 * @var string
 	 */
-	echo (string) apply_filters( 'primer_the_site_title', $html );
+	echo (string) apply_filters( 'primer_the_site_title', $html ); // xss ok.
 
 }
 
@@ -94,7 +94,7 @@ function primer_the_site_description() {
 	 *
 	 * @var string
 	 */
-	echo (string) apply_filters( 'primer_the_site_description', $html );
+	echo (string) apply_filters( 'primer_the_site_description', $html ); // xss ok.
 
 }
 
@@ -107,7 +107,7 @@ function primer_the_page_title() {
 
 	if ( $title = primer_get_the_page_title() ) {
 
-		echo $title; // xss ok
+		echo $title; // xss ok.
 
 	}
 
@@ -158,10 +158,11 @@ function primer_paging_nav() {
 /**
  * Display navigation to next/previous post, when applicable.
  *
+ * @link  https://developer.wordpress.org/reference/functions/get_the_post_navigation/
  * @since 1.0.0
  * @uses  the_post_navigation
  *
- * @param array $args (optional)
+ * @param array $args (optional) Post navigation arguments.
  */
 function primer_post_nav( $args = array() ) {
 
@@ -206,10 +207,10 @@ function primer_posted_on() {
 
 	}
 
-	printf(
+	printf( // xss ok.
 		'<span class="posted-on"><a href="%s" rel="bookmark">%s</a><span>',
 		get_permalink(),
-		$time // xss ok
+		$time
 	);
 
 }
@@ -247,20 +248,20 @@ function primer_breadcrumbs() {
 
 	if ( ! is_front_page() ) {
 
-		printf(
+		printf( // xss ok.
 			'<a href="%s">%s</a>%s',
 			esc_url( home_url( '/' ) ),
 			esc_html( get_bloginfo( 'name' ) ),
-			$separator // xss ok
+			$separator
 		);
 
 		if ( 'page' === get_option( 'show_on_front' ) ) {
 
-			printf(
+			printf( // xss ok.
 				'<a href="%s">%s</a>%s',
 				esc_url( primer_get_posts_url() ),
 				esc_html__( 'Blog', 'primer' ),
-				$separator // xss ok
+				$separator
 			);
 
 		}
@@ -271,7 +272,7 @@ function primer_breadcrumbs() {
 
 			if ( is_single() ) {
 
-				echo $separator; // xss ok
+				echo $separator; // xss ok.
 
 				the_title();
 
@@ -285,11 +286,11 @@ function primer_breadcrumbs() {
 
 				if ( $home->ID !== $post->ancestors[ $i ] ) {
 
-					printf(
+					printf( // xss ok.
 						'<a href="%s">%s</a>%s',
 						esc_url( get_permalink( $post->ancestors[ $i ] ) ),
 						esc_html( get_the_title( $post->ancestors[ $i ] ) ),
-						$separator // xss ok
+						$separator
 					);
 
 				}

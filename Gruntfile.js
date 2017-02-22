@@ -240,9 +240,23 @@ module.exports = function( grunt ) {
 					{
 						from: /Version:(\s*)[\w.+-]+/,
 						to: 'Version:$1<%= pkg.version %>'
+					},
+					{
+						from: /^@charset "UTF-8";\n/,
+						to: ''
 					}
 				],
 				src: [ '.dev/sass/**/*.scss' ]
+			},
+			charset: {
+				overwrite: true,
+				replacements: [
+					{
+						from: /^@charset "UTF-8";\n/,
+						to: ''
+					}
+				],
+				src: [ 'style*.css' ]
 			}
 		},
 
@@ -362,7 +376,7 @@ module.exports = function( grunt ) {
 
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask( 'default',     [ 'sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify', 'imagemin' ] );
+	grunt.registerTask( 'default',     [ 'sass', 'replace:charset', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify', 'imagemin' ] );
 	grunt.registerTask( 'build',       [ 'default', 'clean:build', 'copy:build' ] );
 	grunt.registerTask( 'check',       [ 'devUpdate' ] );
 	grunt.registerTask( 'deploy',      [ 'build', 'wp_deploy', 'clean:build' ] );

@@ -416,9 +416,9 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 
 		if ( wc_get_featured_product_ids() ) {
 
-			echo '<h2>' . esc_html__( 'Featured Products', 'primer' ) . '</h2>'; // xss ok
+			echo '<h2>' . esc_html__( 'Featured Products', 'primer' ) . '</h2>';
 
-			echo do_shortcode( "[featured_products per_page='{$per_page}' columns='{$columns}']" ); // xss ok
+			echo do_shortcode( "[featured_products per_page='{$per_page}' columns='{$columns}']" );
 
 			return;
 
@@ -426,9 +426,9 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 
 		if ( wc_get_product_ids_on_sale() ) {
 
-			echo '<h2>' . esc_html__( 'On Sale Now', 'primer' ) . '</h2>'; // xss ok
+			echo '<h2>' . esc_html__( 'On Sale Now', 'primer' ) . '</h2>';
 
-			echo do_shortcode( "[sale_products per_page='{$per_page}' columns='{$columns}']" ); // xss ok
+			echo do_shortcode( "[sale_products per_page='{$per_page}' columns='{$columns}']" );
 
 			return;
 
@@ -440,9 +440,9 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 
 		}
 
-		echo '<h2>' . esc_html__( 'New In Store', 'primer' ) . '</h2>'; // xss ok
+		echo '<h2>' . esc_html__( 'New In Store', 'primer' ) . '</h2>';
 
-		echo do_shortcode( "[recent_products per_page='{$per_page}' columns='{$columns}']" ); // xss ok
+		echo do_shortcode( "[recent_products per_page='{$per_page}' columns='{$columns}']" );
 
 	}
 
@@ -482,7 +482,7 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
 		 */
 		$columns  = absint( apply_filters( 'primer_wc_best_selling_products_columns', $columns ) );
 
-		echo do_shortcode( "[best_selling_products per_page='{$per_page}' columns='{$columns}']" ); // xss ok
+		echo do_shortcode( "[best_selling_products per_page='{$per_page}' columns='{$columns}']" );
 
 	}
 
@@ -572,7 +572,7 @@ function primer_wc_cart_menu( $items, $args ) {
 			'<ul class="sub-menu primer-wc-cart-sub-menu">
 				<li class="primer-wc-cart-sub-menu-item">%s</li>
 			</ul>',
-			primer_get_the_widget( 'WC_Widget_Cart' ) // xss ok
+			primer_get_the_widget( 'WC_Widget_Cart' )
 		);
 
 		$classes[] = 'menu-item-has-children';
@@ -587,13 +587,14 @@ function primer_wc_cart_menu( $items, $args ) {
 				</span>
 				<span class="cart-preview-count">%s</span>
 			</a>
-			<a class="expand" href="#"></a>
+			%s
 			%s
 		</li>',
-		implode( ' ', array_map( 'esc_attr', $classes ) ), // xss ok
-		$woocommerce->cart->get_cart_total(), // xss ok
+		implode( ' ', array_map( 'esc_attr', $classes ) ),
+		$woocommerce->cart->get_cart_total(),
 		esc_html( sprintf( _n( '%d item', '%d items', $woocommerce->cart->get_cart_contents_count(), 'primer' ), $woocommerce->cart->get_cart_contents_count() ) ),
-		$sub_menu // xss ok
+		$woocommerce->cart->get_cart_contents_count() ? '<a class="expand" href="#"></a>' : '',
+		$sub_menu
 	);
 
 	return $items . $cart_menu_item;

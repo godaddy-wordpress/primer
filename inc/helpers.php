@@ -163,7 +163,7 @@ function primer_is_fixed_width() {
  *
  * @uses   get_current_layout
  *
- * @param  int $post_id (optional)
+ * @param  int $post_id (optional) Post ID. Defaults to the current queried object.
  *
  * @return string Returns the current Primer theme layout.
  */
@@ -200,14 +200,14 @@ function primer_get_global_layout() {
  *
  * @since 1.0.0
  *
- * @param  string $layout (optional)
+ * @param  string $layout (optional) Layout slug name.
  *
  * @return bool Returns true when a sidebar is set on the given layout, otherwise returns false.
  */
 function primer_layout_has_sidebar( $layout = null ) {
 
 	$layout      = ( $layout ) ? $layout : primer_get_layout();
-	$has_sidebar = ! in_array( $layout, array( 'one-column-wide', 'one-column-narrow' ) );
+	$has_sidebar = ! in_array( $layout, array( 'one-column-wide', 'one-column-narrow' ), true );
 
 	/**
 	 * Filter if the current layout has a sidebar.
@@ -515,7 +515,7 @@ function primer_has_active_categories() {
 			array(
 				'fields'     => 'ids',
 				'hide_empty' => 1,
-				'number'     => 2, // We only care if more than 1 exists
+				'number'     => 2, // We only care if more than one exists.
 			)
 		);
 
@@ -541,7 +541,7 @@ function primer_has_active_categories() {
  *
  * @since  1.0.0
  *
- * @param  string $color
+ * @param  string $color Hex color, with or without a leading `#`.
  *
  * @return array Returns an array of Red, Green and Blue values to use in CSS styles.
  */
@@ -581,13 +581,14 @@ function primer_hex2rgb( $color ) {
  * Recursively replace elements from passed arrays into the first array (safe for PHP 5.2).
  *
  * @author Frankie Jarrett <fjarrett@gmail.com>
- * @link   http://php.net/manual/en/function.array-replace-recursive.php
+ * @link   https://secure.php.net/manual/en/function.array-replace-recursive.php
  * @since  1.0.0
  *
- * @param  array $array1
- * @param  array $array2
+ * @param  array $array1    The array in which elements are replaced.
+ * @param  array $array2    The array from which elements will be extracted.
+ * @param  array $array,... (optional) More arrays from which elements will be extracted.
  *
- * @return array Returns a merged array.
+ * @return array Returns an array with recursively replaced elements.
  */
 function primer_array_replace_recursive( array $array1, array $array2 ) {
 
@@ -633,24 +634,24 @@ function primer_array_replace_recursive( array $array1, array $array2 ) {
 
 }
 
-if ( ! function_exists( 'primer_get_the_widget' ) ) {
+/**
+ * Render a widget in the output buffer and return the markup.
+ *
+ * @since NEXT
+ * @uses  [the_widget](https://developer.wordpress.org/reference/functions/the_widget/) To render the widget.
+ *
+ * @param  string $widget   The widget's PHP class name.
+ * @param  array  $instance (optional) The widget's instance settings.
+ * @param  array  $args     (optional) Array of arguments to configure the display of the widget.
+ *
+ * @return string
+ */
+function primer_get_the_widget( $widget, $instance = array(), $args = array() ) {
 
-	/**
-	 * Render a widget and store it in an output buffer
-	 *
-	 * @param  string $widget   Class name of the widget to render.
-	 * @param  string $instance Instance
-	 * @param  array  $args     Array of arguments for the widget.
-	 *
-	 * @return mixed
-	 */
-	function primer_get_the_widget( $widget, $instance = '', $args = '' ) {
+	ob_start();
 
-		ob_start();
+	the_widget( $widget, $instance, $args );
 
-		the_widget( $widget, $instance, $args );
+	return ob_get_clean();
 
-		return ob_get_clean();
-
-	}
 }
