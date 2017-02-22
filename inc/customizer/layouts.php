@@ -192,7 +192,7 @@ class Primer_Customizer_Layouts {
 	 */
 	public function admin_enqueue_scripts( $hook ) {
 
-		if ( ! in_array( $hook, array( 'post.php', 'post-new.php' ) ) ) {
+		if ( ! in_array( $hook, array( 'post.php', 'post-new.php' ), true ) ) {
 
 			return;
 
@@ -239,8 +239,8 @@ class Primer_Customizer_Layouts {
 	 * @since 1.0.0
 	 * @uses  $this->render_meta_box()
 	 *
-	 * @param string  $post_type
-	 * @param WP_Post $post
+	 * @param string  $post_type Post type slug name.
+	 * @param WP_Post $post      Post object.
 	 */
 	public function add_meta_box( $post_type, WP_Post $post ) {
 
@@ -264,7 +264,8 @@ class Primer_Customizer_Layouts {
 			array( $this, 'render_meta_box' ),
 			$post_type,
 			'side',
-			'default'
+			'default',
+			null
 		);
 
 	}
@@ -275,109 +276,91 @@ class Primer_Customizer_Layouts {
 	 * @see   $this->add_meta_box()
 	 * @since 1.0.0
 	 *
-	 * @param WP_Post $post
-	 * @param string  $box
+	 * @param WP_Post $post Post object.
 	 */
-	public function render_meta_box( WP_Post $post, $box ) {
+	public function render_meta_box( WP_Post $post ) {
 
-		$cur_layout = $this->get_post_layout( $post->ID );
-		$has_custom = ! empty( $cur_layout );
+		$current_layout = $this->get_post_layout( $post->ID );
+		$has_custom = ! empty( $current_layout );
 
 		wp_nonce_field( basename( __FILE__ ), 'primer-layout-nonce' );
 
 		?>
-
 		<div class="primer-layout">
 
 			<p>
 				<label for="primer-layout-use-default">
-					<input type="radio"
-					       name="primer-layout-override"
-					       id="primer-layout-use-default"
-					       value="0"
-					       autocomplete="off"
-						<?php checked( ! $has_custom ); ?>>
-					<?php _e( 'Default', 'primer' ); ?>
+					<input type="radio" name="primer-layout-override" id="primer-layout-use-default" value="0" autocomplete="off" <?php checked( ! $has_custom ); ?>>
+					<?php esc_html_e( 'Default', 'primer' ); ?>
 				</label>
 				<label for="primer-layout-use-custom">
-					<input type="radio"
-					       name="primer-layout-override"
-					       id="primer-layout-use-custom"
-					       value="1"
-					       autocomplete="off"
-						<?php checked( $has_custom ); ?>>
-					<?php _e( 'Custom', 'primer' ); ?>
+					<input type="radio" name="primer-layout-override" id="primer-layout-use-custom" value="1" autocomplete="off" <?php checked( $has_custom ); ?>>
+					<?php esc_html_e( 'Custom', 'primer' ); ?>
 				</label>
 				<span class="clear"></span>
 			</p>
 
-			<?php $this->print_layout_choices( $this->layouts, $post->ID, $cur_layout, $has_custom ); ?>
+			<?php $this->print_layout_choices( $this->layouts, $post->ID, $current_layout, $has_custom ); ?>
 
 		</div>
-
 		<?php
 
 	}
 
 	/**
-	 * Print all layouts choices to meta-box or customizer
+	 * Print all layouts choices to a meta-box or the Customizer.
 	 *
-	 * @param      $layouts
-	 * @param null $post_id
-	 * @param null $cur_layout
-	 * @param bool $has_custom
+	 * @global WP_Customize_Manager $wp_customize
+	 * @since 1.0.0
+	 *
+	 * @param array  $layouts        Array of layouts.
+	 * @param int    $post_id        (optional) Post ID. Default is `null`.
+	 * @param string $current_layout (optional) Current layout slug name. Default is `null`.
+	 * @param bool   $has_custom     (optional) Whether the current layout is a custom one. Default is `true`.
 	 */
-	public function print_layout_choices( $layouts, $post_id = null, $cur_layout = null, $has_custom = true ) {
+	public function print_layout_choices( $layouts, $post_id = null, $current_layout = null, $has_custom = true ) {
 
 		global $wp_customize;
 
 		$global_layout = $this->get_global_layout();
 
-		if ( ! $cur_layout ) {
+		if ( ! $current_layout ) {
 
-			$cur_layout = $global_layout;
+			$current_layout = $global_layout;
 
 		}
 
 		$name = isset( $wp_customize ) ? '_customize-radio' : 'primer';
 
 		?>
-
 		<div class="primer-layout-wrap">
 
 			<ul>
+			<?php
 
+			foreach ( $layouts as $layout => $label ) :
+
+				$class = ( $has_custom ) ? 'active' : 'disabled';
+				$class .= ( $layout === $global_layout ) ? ' active global' : '';
+
+				?>
+				<li class="<?php echo esc_attr( $class ); ?>">
+					<label for="primer-layout-<?php echo esc_attr( $layout ); ?>">
+						<input type="radio" name="<?php echo esc_attr( $name ); ?>-layout" data-customize-setting-link="layout" id="primer-layout-<?php echo esc_attr( $layout ); ?>" value="<?php echo esc_attr( $layout ); ?>" <?php checked( $current_layout, $layout ); ?> <?php disabled( 'disabled' === $class ); ?>>
+						<img src="<?php echo esc_url( sprintf( '%s/assets/images/layouts/%s%s.svg', get_template_directory_uri(), $layout, is_rtl() ? '-rtl' : '' ) ); ?>"
+							alt="<?php echo esc_attr( $label ); ?>"
+							title="<?php echo esc_attr( $label ); ?>">
+						<span><?php echo esc_html( $label ); ?></span>
+					</label>
+				</li>
 				<?php
 
-				foreach ( $layouts as $layout => $label ) :
+			endforeach;
 
-					$class = ( $has_custom ) ? 'active' : 'disabled';
-					$class .= ( $layout === $global_layout ) ? ' active global' : '';
-
-					?>
-
-					<li class="<?php echo esc_attr( $class ); ?>">
-						<label for="primer-layout-<?php echo esc_attr( $layout ); ?>">
-							<input type="radio"
-							       name="<?php echo $name; ?>-layout"
-							       data-customize-setting-link="layout"
-							       id="primer-layout-<?php echo esc_attr( $layout ); ?>"
-							       value="<?php echo esc_attr( $layout ); ?>"
-								   <?php checked( $cur_layout, $layout ); ?>
-								   <?php disabled( 'disabled' === $class ); ?>>
-							<img src="<?php echo esc_url( sprintf( '%s/assets/images/layouts/%s%s.svg', get_template_directory_uri(), $layout, is_rtl() ? '-rtl' : '' ) ); ?>"
-							     alt="<?php echo esc_attr( $label ); ?>"
-							     title="<?php echo esc_attr( $label ); ?>">
-							<span><?php echo esc_html( $label ); ?></span>
-						</label>
-					</li>
-
-				<?php endforeach; ?>
-
+			?>
 			</ul>
 
 		</div>
-
 		<?php
 
 	}
@@ -388,21 +371,21 @@ class Primer_Customizer_Layouts {
 	 * @action save_post
 	 * @since  1.0.0
 	 *
-	 * @param int $post_id
+	 * @param int $post_id Post ID.
 	 */
 	public function save_post( $post_id ) {
 
 		if (
-			empty( $_POST['primer-layout-nonce'] )
+			empty( $_POST['primer-layout-nonce'] ) // input var ok.
 			||
-			! wp_verify_nonce( $_POST['primer-layout-nonce'], basename( __FILE__ ) )
+			! wp_verify_nonce( $_POST['primer-layout-nonce'], basename( __FILE__ ) ) // input var ok, sanitization ok.
 		) {
 
 			return;
 
 		}
 
-		$override = ! empty( $_POST['primer-layout-override'] );
+		$override = ! empty( $_POST['primer-layout-override'] ); // input var ok.
 		$current  = $this->get_post_layout( $post_id );
 
 		if ( ! $override && $current ) {
@@ -413,7 +396,7 @@ class Primer_Customizer_Layouts {
 
 		}
 
-		$layout = isset( $_POST['primer-layout'] ) ? sanitize_key( $_POST['primer-layout'] ) : null;
+		$layout = isset( $_POST['primer-layout'] ) ? sanitize_key( $_POST['primer-layout'] ) : null; // input var ok.
 
 		if ( ! $override || ! $this->layout_exists( $layout ) || $layout === $current ) {
 

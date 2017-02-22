@@ -7,6 +7,7 @@
  * @package Primer
  * @since   1.0.0
  */
+
 ?>
 
 <section class="no-results not-found">

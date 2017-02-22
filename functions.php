@@ -211,7 +211,7 @@ function primer_setup() {
 	/**
 	 * Enable support for Automatic Feed Links.
 	 *
-	 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Feed_Links
+	 * @link  https://developer.wordpress.org/reference/functions/add_theme_support/#feed-links
 	 * @since 1.0.0
 	 */
 	add_theme_support( 'automatic-feed-links' );
@@ -219,7 +219,7 @@ function primer_setup() {
 	/**
 	 * Enable support for plugins and themes to manage the document title tag.
 	 *
-	 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
+	 * @link  https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
 	 * @since 1.0.0
 	 */
 	add_theme_support( 'title-tag' );
@@ -227,15 +227,15 @@ function primer_setup() {
 	/**
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
-	 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 * @link  https://developer.wordpress.org/reference/functions/add_theme_support/#post-thumbnails
 	 * @since 1.0.0
 	 */
 	add_theme_support( 'post-thumbnails' );
 
 	/**
-	 * Enable support for customizer selective refresh
+	 * Enable support for customizer selective refresh.
 	 *
-	 * https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
+	 * @link  https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
 	 * @since 1.0.0
 	 */
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -243,7 +243,7 @@ function primer_setup() {
 	/**
 	 * Register custom Custom Navigation Menus.
 	 *
-	 * @link  https://codex.wordpress.org/Function_Reference/register_nav_menus
+	 * @link  https://developer.wordpress.org/reference/functions/register_nav_menus/
 	 * @since 1.0.0
 	 */
 	register_nav_menus(
@@ -306,11 +306,11 @@ add_action( 'after_setup_theme', 'primer_setup' );
  * @filter image_size_names_choose
  * @since  1.0.0
  *
- * @param  array $sizes
+ * @param  array $size_names Array of image sizes and their names.
  *
  * @return array
  */
-function primer_image_size_names_choose( $sizes ) {
+function primer_image_size_names_choose( $size_names ) {
 
 	global $primer_image_sizes;
 
@@ -319,7 +319,7 @@ function primer_image_size_names_choose( $sizes ) {
 		wp_list_pluck( $primer_image_sizes, 'label' )
 	);
 
-	return array_merge( $sizes, $labels );
+	return array_merge( $size_names, $labels );
 
 }
 
