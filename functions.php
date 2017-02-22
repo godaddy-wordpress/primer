@@ -483,8 +483,8 @@ add_action( 'wp_enqueue_scripts', 'primer_scripts' );
  * This provides backwards compatibility with
  * http://core.trac.wordpress.org/changeset/25574
  *
- * It removes the need to call the_post() and rewind_posts() in an author
- * template to print information about the author.
+ * It removes the need to call `the_post()` and `rewind_posts()`
+ * in an author template to print information about the author.
  *
  * @action wp
  * @global WP_Query $wp_query
@@ -497,7 +497,7 @@ function primer_setup_author() {
 
 	if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
 
-		$authordata = get_userdata( $wp_query->post->post_author );
+		$authordata = get_userdata( $wp_query->post->post_author ); // override ok.
 
 	}
 

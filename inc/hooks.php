@@ -103,7 +103,7 @@ function primer_add_primary_menu() {
 
 		wp_page_menu(
 			array(
-				'depth'     => 1, // Top-level only
+				'depth'     => 1, // Top-level only.
 				'show_home' => true,
 			)
 		);
@@ -244,16 +244,20 @@ add_action( 'primer_site_info', 'primer_add_credit' );
  * To override this in a child theme, remove the filter and add
  * your own function tied to the `excerpt_length` filter hook:
  *
+ * ```
  * remove_filter( 'excerpt_length', 'primer_excerpt_length' );
  * add_filter( 'excerpt_length', function() { return 30; } );
+ * ```
  *
  * @filter excerpt_length
  * @link   https://developer.wordpress.org/reference/hooks/excerpt_length/
  * @since  1.0.0
  *
- * @return int
+ * @param  int $number The number of words. Default is `55`.
+ *
+ * @return int Return the maximum number of words to use for excerpts.
  */
-function primer_excerpt_length( $length ) {
+function primer_excerpt_length( $number ) {
 
 	return 20;
 
@@ -266,18 +270,22 @@ add_filter( 'excerpt_length', 'primer_excerpt_length' );
  * To override this in a child theme, remove the filter and add
  * your own function tied to the `excerpt_more` filter hook:
  *
+ * ```
  * remove_filter( 'excerpt_more', 'primer_excerpt_more' );
  * add_filter( 'excerpt_more', function() { return '...and more'; } );
+ * ```
  *
  * @filter excerpt_more
  * @link   https://developer.wordpress.org/reference/hooks/excerpt_more/
  * @since  1.0.0
  *
- * @return string
+ * @param  string $more_string The string shown within the more link.
+ *
+ * @return string Returns the string in the “more” link displayed after a trimmed excerpt.
  */
-function primer_excerpt_more( $more ) {
+function primer_excerpt_more( $more_string ) {
 
-	return ! is_admin() ? '&hellip;' : $more;
+	return ! is_admin() ? '&hellip;' : $more_string;
 
 }
 add_filter( 'excerpt_more', 'primer_excerpt_more' );
@@ -296,10 +304,10 @@ add_filter( 'excerpt_more', 'primer_excerpt_more' );
  * @link   https://developer.wordpress.org/reference/hooks/script_loader_tag/
  * @since  1.0.0
  *
- * @param  string $tag
- * @param  string $handle
+ * @param  string $tag    The `<script>` tag for the enqueued script.
+ * @param  string $handle The script's registered handle.
  *
- * @return string
+ * @return string Returns the HTML script tag of an enqueued script.
  */
 function primer_conditional_jquery_tag( $tag, $handle ) {
 
@@ -309,14 +317,14 @@ function primer_conditional_jquery_tag( $tag, $handle ) {
 add_filter( 'script_loader_tag', 'primer_conditional_jquery_tag', 10, 2 );
 
 /**
- * Adds custom classes to the array of body classes.
+ * Add custom body classes.
  *
  * @filter body_class
  * @since  1.0.0
  *
- * @param  array $classes
+ * @param  array $classes An array of body classes.
  *
- * @return array
+ * @return array Returns an array of body classes.
  */
 function primer_body_class( array $classes ) {
 
@@ -338,17 +346,17 @@ function primer_body_class( array $classes ) {
 add_filter( 'body_class', 'primer_body_class' );
 
 /**
- * Filters wp_title to print a neat <title> tag based on what is being viewed.
+ * Alter the `<title>` tag based on what is being viewed.
  *
  * @filter wp_title
  * @global int $page
  * @global int $paged
  * @since  1.0.0
  *
- * @param  string $title
- * @param  string $sep
+ * @param  string $title Page title.
+ * @param  string $sep   Title separator.
  *
- * @return string
+ * @return string Return the page title.
  */
 function primer_wp_title( $title, $sep ) {
 
@@ -360,28 +368,28 @@ function primer_wp_title( $title, $sep ) {
 
 	global $page, $paged;
 
-	// Add the blog name
+	// Add the blog name.
 	$title .= get_bloginfo( 'name', 'display' );
 
-	// Add the blog description for the home/front page
+	// Add the blog description for the home/front page.
 	$site_description = get_bloginfo( 'description', 'display' );
 
 	if ( $site_description && ( is_home() || is_front_page() ) ) {
 
 		$title .= sprintf(
 			' %s %s',
-			$sep, // xss ok
-			$site_description // xss ok
+			$sep,
+			$site_description
 		);
 
 	}
 
-	// Add a page number if necessary:
+	// Add a page number if necessary.
 	if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
 
 		$title .= sprintf(
 			' %s %s',
-			$sep, // xss ok
+			$sep,
 			sprintf(
 				esc_html_x( 'Page %d', 'page number', 'primer' ),
 				max( $paged, $page )
