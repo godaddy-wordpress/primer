@@ -21,7 +21,8 @@
 
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<p><?php
+			<p>
+			<?php
 
 			printf(
 				esc_html_x( 'Ready to publish your first post? %s.', 'link to write a new post', 'primer' ),
@@ -32,7 +33,8 @@
 				)
 			);
 
-			?></p>
+			?>
+			</p>
 
 		<?php elseif ( is_search() ) : ?>
 

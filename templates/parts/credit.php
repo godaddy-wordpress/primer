@@ -37,7 +37,7 @@ if ( (bool) apply_filters( 'primer_author_credit', true ) ) {
 
 	if ( $copyright_text ) {
 
-		echo ' &mdash; '; // xss ok
+		echo ' &mdash; ';
 
 	}
 

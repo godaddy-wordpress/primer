@@ -232,14 +232,14 @@ class Primer_Customizer {
 
 		foreach ( $rules as $rule => $properties ) {
 
-			printf(
+			printf( // xss ok.
 				"%s {\n",
 				implode( ",\n", array_map( 'trim', explode( ',', $rule ) ) )
 			);
 
 			foreach ( $properties as $property => $value ) {
 
-				printf( "\t%s: %s;\n", $property, $value );
+				printf( "\t%s: %s;\n", $property, $value ); // xss ok.
 
 			}
 
