@@ -6,7 +6,7 @@
  * @package  Classes/Customizer
  * @category Class
  * @author   GoDaddy
- * @since    NEXT
+ * @since    1.5.0
  */
 class Primer_Static_Front_Page_Options {
 
@@ -25,7 +25,7 @@ class Primer_Static_Front_Page_Options {
 	 * @action customize_register
 	 * @see    WP_Customize_Manager
 	 *
-	 * @since  NEXT
+	 * @since  1.5.0
 	 *
 	 * @param  WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
 	 */
@@ -56,7 +56,7 @@ class Primer_Static_Front_Page_Options {
 	/**
 	 * Check whether the front page is set to display the latest posts.
 	 *
-	 * @since NEXT
+	 * @since 1.5.0
 	 *
 	 * @return bool
 	 */

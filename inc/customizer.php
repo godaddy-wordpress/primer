@@ -48,14 +48,14 @@ class Primer_Customizer {
 		/**
 		 * Load additional site identity options
 		 *
-		 * @since NEXT
+		 * @since 1.5.0
 		 */
 		require_once get_template_directory() . '/inc/customizer/site-identity.php';
 
 		/**
 		 * Load additional static front page options
 		 *
-		 * @since NEXT
+		 * @since 1.5.0
 		 */
 		require_once get_template_directory() . '/inc/customizer/static-front-page.php';
 

@@ -23,7 +23,7 @@
  *
  * @var string
  */
-define( 'PRIMER_VERSION', '1.4.1' );
+define( 'PRIMER_VERSION', '1.5.0' );
 
 /**
  * Minimum WordPress version required for Primer.
@@ -41,7 +41,7 @@ if ( ! defined( 'PRIMER_MIN_WP_VERSION' ) ) {
 /**
  * Define the Primer child theme version if undefined.
  *
- * @since NEXT
+ * @since 1.5.0
  *
  * @var string
  */

@@ -169,7 +169,7 @@ function primer_post_nav( $args = array() ) {
 	/**
 	 * Filter the default post navigation args.
 	 *
-	 * @since NEXT
+	 * @since 1.5.0
 	 *
 	 * @var array
 	 */

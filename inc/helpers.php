@@ -16,7 +16,7 @@
  * `false` if the `PRIMER_CHILD_VERSION` constant is empty.
  *
  * @link  https://secure.php.net/manual/en/function.version-compare.php
- * @since NEXT
+ * @since 1.5.0
  *
  * @param  string $version  Version number to compare against the Primer child version.
  * @param  string $operator Test for a particular relationship. The possible operators are: `<`, `lt`, `<=`, `le`, `>`, `gt`, `>=`, `ge`, `==`, `=`, `eq`, `!=`, `<>`, `ne` respectively.
@@ -637,7 +637,7 @@ function primer_array_replace_recursive( array $array1, array $array2 ) {
 /**
  * Render a widget in the output buffer and return the markup.
  *
- * @since NEXT
+ * @since 1.5.0
  * @uses  [the_widget](https://developer.wordpress.org/reference/functions/the_widget/) To render the widget.
  *
  * @param  string $widget   The widget's PHP class name.

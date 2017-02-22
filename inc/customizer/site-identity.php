@@ -6,7 +6,7 @@
  * @package  Classes/Customizer
  * @category Class
  * @author   GoDaddy
- * @since    NEXT
+ * @since    1.5.0
  */
 class Primer_Site_Identity_Options {
 
@@ -18,7 +18,7 @@ class Primer_Site_Identity_Options {
 		/**
 		 * Filter the site identity settings display.
 		 *
-		 * @since NEXT
+		 * @since 1.5.0
 		 *
 		 * @var bool
 		 */
@@ -38,7 +38,7 @@ class Primer_Site_Identity_Options {
 	 * Toggle the visibility of the site credits in the footer.
 	 *
 	 * @filter primer_author_credit
-	 * @since  NEXT
+	 * @since  1.5.0
 	 *
 	 * @return bool Returns true when `show_author_credit` theme mod is set.
 	 */
@@ -56,7 +56,7 @@ class Primer_Site_Identity_Options {
 	 * @action customize_register
 	 * @see    WP_Customize_Manager
 	 *
-	 * @since  NEXT
+	 * @since  1.5.0
 	 *
 	 * @param  WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
 	 */
