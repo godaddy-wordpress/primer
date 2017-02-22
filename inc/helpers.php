@@ -581,7 +581,7 @@ function primer_hex2rgb( $color ) {
  * Recursively replace elements from passed arrays into the first array (safe for PHP 5.2).
  *
  * @author Frankie Jarrett <fjarrett@gmail.com>
- * @link   http://php.net/manual/en/function.array-replace-recursive.php
+ * @link   https://secure.php.net/manual/en/function.array-replace-recursive.php
  * @since  1.0.0
  *
  * @param  array $array1
@@ -633,24 +633,24 @@ function primer_array_replace_recursive( array $array1, array $array2 ) {
 
 }
 
-if ( ! function_exists( 'primer_get_the_widget' ) ) {
+/**
+ * Render a widget in the output buffer and return the markup.
+ *
+ * @since NEXT
+ * @uses  [the_widget](https://developer.wordpress.org/reference/functions/the_widget/) To render the widget.
+ *
+ * @param  string $widget   The widget's PHP class name.
+ * @param  array  $instance (optional) The widget's instance settings.
+ * @param  array  $args     (optional) Array of arguments to configure the display of the widget.
+ *
+ * @return string
+ */
+function primer_get_the_widget( $widget, $instance = array(), $args = array() ) {
 
-	/**
-	 * Render a widget and store it in an output buffer
-	 *
-	 * @param  string $widget   Class name of the widget to render.
-	 * @param  string $instance Instance
-	 * @param  array  $args     Array of arguments for the widget.
-	 *
-	 * @return mixed
-	 */
-	function primer_get_the_widget( $widget, $instance = '', $args = '' ) {
+	ob_start();
 
-		ob_start();
+	the_widget( $widget, $instance, $args );
 
-		the_widget( $widget, $instance, $args );
+	return ob_get_clean();
 
-		return ob_get_clean();
-
-	}
 }
