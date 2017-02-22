@@ -240,10 +240,6 @@ module.exports = function( grunt ) {
 					{
 						from: /Version:(\s*)[\w.+-]+/,
 						to: 'Version:$1<%= pkg.version %>'
-					},
-					{
-						from: /^@charset "UTF-8";\n/,
-						to: ''
 					}
 				],
 				src: [ '.dev/sass/**/*.scss' ]
