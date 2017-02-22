@@ -5,6 +5,7 @@
  * @package Primer
  * @since   1.0.0
  */
+
 ?>
 
 <header class="entry-header">
@@ -14,12 +15,14 @@
 		<div class="entry-header-column">
 
 			<?php
+
 			/**
 			 * Fires before the post title element.
 			 *
 			 * @since 1.0.0
 			 */
 			do_action( 'primer_before_post_title' );
+
 			?>
 
 			<?php if ( is_singular() ) : ?>
@@ -33,12 +36,14 @@
 			<?php endif; ?>
 
 			<?php
+
 			/**
 			 * Fires after the post title element.
 			 *
 			 * @since 1.0.0
 			 */
 			do_action( 'primer_after_post_title' );
+
 			?>
 
 		</div><!-- .entry-header-column -->

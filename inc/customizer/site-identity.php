@@ -8,7 +8,6 @@
  * @author   GoDaddy
  * @since    NEXT
  */
-
 class Primer_Site_Identity_Options {
 
 	/**

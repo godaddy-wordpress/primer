@@ -5,6 +5,7 @@
  * @package Primer
  * @since   1.0.0
  */
+
 ?>
 
 <footer class="entry-footer">
@@ -23,7 +24,7 @@
 
 			<span class="cat-links">
 
-				<?php printf( esc_html_x( 'Posted in: %s', 'category list', 'primer' ), $category_list ); ?>
+				<?php printf( esc_html_x( 'Posted in: %s', 'category list', 'primer' ), esc_html( $category_list ) ); ?>
 
 			</span>
 
@@ -35,7 +36,7 @@
 
 			<span class="tags-links">
 
-				<?php printf( esc_html_x( 'Filed under: %s', 'tag list', 'primer' ), $tag_list ); ?>
+				<?php printf( esc_html_x( 'Filed under: %s', 'tag list', 'primer' ), esc_html( $tag_list ) ); ?>
 
 			</span>
 
