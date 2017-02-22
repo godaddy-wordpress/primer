@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-22 02:54:11+00:00\n"
+"POT-Creation-Date: 2017-02-22 04:50:19+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,15 +39,15 @@ msgstr "Nieuwere opmerkingen &rarr;"
 msgid "Comments are closed."
 msgstr "Opmerkingen gesloten."
 
-#: content-none.php:16
+#: content-none.php:17
 msgid "Nothing Found"
 msgstr "Niets gevonden"
 
-#: content-none.php:32
+#: content-none.php:33
 msgid "Get started here"
 msgstr "Nu aan de slag"
 
-#: content-none.php:41
+#: content-none.php:42
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -55,7 +55,7 @@ msgstr ""
 "Er is helaas niets gevonden dat met je zoekopdracht overeenkomt. Probeer het "
 "opnieuw met andere trefwoorden."
 
-#: content-none.php:47
+#: content-none.php:48
 msgid ""
 "It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "Wij kunnen niet vinden wat je zoekt. Probeer het met een zoekopdracht."
@@ -132,7 +132,7 @@ msgstr "De zijbalk is de derde kolom van het gebied voor de voettekstwidget."
 msgid "Hero widgets appear over the header image on the front page."
 msgstr "Hero-widgets worden weergegeven op de kopafbeelding van de voorpagina."
 
-#: header.php:42
+#: header.php:44
 msgid "Skip to content"
 msgstr "Naar inhoud gaan"
 
@@ -250,11 +250,11 @@ msgstr "Inhoudachtergrond widget"
 msgid "Footer Background"
 msgstr "Achtergrond voettekst"
 
-#: inc/customizer/colors.php:451 inc/customizer/layouts.php:309
+#: inc/customizer/colors.php:451 inc/customizer/layouts.php:298
 msgid "Custom"
 msgstr "Custom"
 
-#: inc/customizer/colors.php:468 inc/customizer/layouts.php:300
+#: inc/customizer/colors.php:468 inc/customizer/layouts.php:294
 msgid "Default"
 msgstr "Standaard"
 
@@ -286,15 +286,15 @@ msgstr "Inhoud"
 msgid "Footer"
 msgstr "Voettekst"
 
-#: inc/customizer/colors.php:972
+#: inc/customizer/colors.php:975
 msgid "Base Color Scheme"
 msgstr "Basiskleuren"
 
-#: inc/customizer/colors.php:1283
+#: inc/customizer/colors.php:1287
 msgid "Hero Background Overlay"
 msgstr "Hero-achtergrondoverlay"
 
-#: inc/customizer/colors.php:1284
+#: inc/customizer/colors.php:1288
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr ""
@@ -373,28 +373,28 @@ msgstr "Drie kolommen: Zijbalk | Inhoud | Zijbalk"
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "Drie kolommen: Zijbalk | Zijbalk | Inhoud"
 
-#: inc/customizer/layouts.php:263 inc/customizer/layouts.php:443
+#: inc/customizer/layouts.php:263 inc/customizer/layouts.php:426
 msgid "Layout"
 msgstr "Lay-out"
 
-#: inc/customizer/layouts.php:469
+#: inc/customizer/layouts.php:452
 msgid "Page Width"
 msgstr "Paginabreedte"
 
-#: inc/customizer/layouts.php:470
+#: inc/customizer/layouts.php:453
 msgid "Display your site differently on larger screens."
 msgstr "Geef je site anders weer op grotere schermen."
 
-#: inc/customizer/site-identity.php:83
+#: inc/customizer/site-identity.php:82
 #, fuzzy
 msgid "Footer Copyright Text"
 msgstr "Copyrighttekst"
 
-#: inc/customizer/site-identity.php:102
+#: inc/customizer/site-identity.php:101
 msgid "Display theme author credit"
 msgstr "Naam van maker van thema weergeven"
 
-#: inc/customizer/static-front-page.php:47
+#: inc/customizer/static-front-page.php:46
 msgid "Front page title"
 msgstr ""
 
@@ -442,28 +442,28 @@ msgstr "Gepromote producten"
 msgid "Popular Products"
 msgstr "Populaire producten"
 
-#: templates/parts/loop/page-content.php:27
-#: templates/parts/loop/post-content.php:18
+#: templates/parts/loop/page-content.php:28
+#: templates/parts/loop/post-content.php:19
 msgid "Pages:"
 msgstr "Pagina's:"
 
 #: templates/parts/loop/page-footer.php:9
-#: templates/parts/loop/post-footer.php:14
-#: templates/parts/loop/post-search-footer.php:46
+#: templates/parts/loop/post-footer.php:15
+#: templates/parts/loop/post-search-footer.php:47
 msgid "Edit"
 msgstr "Bewerken"
 
-#: templates/parts/loop/post-content.php:14
+#: templates/parts/loop/post-content.php:15
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Meer lezen <span class=\"meta-nav\">&rarr;</span>"
 
-#: templates/parts/loop/post-meta.php:24
-#: templates/parts/loop/post-search-footer.php:42
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:43
 msgid "Leave a comment"
 msgstr "Een opmerking achterlaten"
 
-#: templates/parts/loop/post-meta.php:24
-#: templates/parts/loop/post-search-footer.php:42
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:43
 msgid "1 Comment"
 msgstr "1 opmerking"
 
@@ -508,12 +508,12 @@ msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Newer Comments %s"
 msgstr "Nieuwere opmerkingen %s"
 
-#: templates/parts/loop/post-excerpt.php:14
+#: templates/parts/loop/post-excerpt.php:15
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Continue Reading %s"
 msgstr "Doorgaan met lezen van %s"
 
-#: content-none.php:28
+#: content-none.php:29
 msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
 msgstr "Klaar om je eerste bericht te publiceren? %s."
@@ -588,7 +588,7 @@ msgctxt "fluid-width page layout"
 msgid "Fluid"
 msgstr "Flexibel"
 
-#: inc/customizer/site-identity.php:72 templates/parts/credit.php:21
+#: inc/customizer/site-identity.php:71 templates/parts/credit.php:23
 msgctxt "1. copyright symbol, 2. year, 3. site title"
 msgid "Copyright %1$s %2$d %3$s"
 msgstr "Copyright %1$s %2$d %3$s"
@@ -603,33 +603,33 @@ msgctxt "page number"
 msgid "Page %d"
 msgstr "Pagina %d"
 
-#: templates/parts/credit.php:47
+#: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"
 msgid "%1$s WordPress theme by %2$s"
 msgstr "WordPress-thema ‘%1$s‘ gemaakt door %2$s"
 
-#: templates/parts/loop/post-footer.php:20
-#: templates/parts/loop/post-footer.php:32
-#: templates/parts/loop/post-search-footer.php:14
-#: templates/parts/loop/post-search-footer.php:26
+#: templates/parts/loop/post-footer.php:21
+#: templates/parts/loop/post-footer.php:33
+#: templates/parts/loop/post-search-footer.php:15
+#: templates/parts/loop/post-search-footer.php:27
 msgctxt "separator for items in a list"
 msgid ", "
 msgstr ", "
 
-#: templates/parts/loop/post-footer.php:26
-#: templates/parts/loop/post-search-footer.php:20
+#: templates/parts/loop/post-footer.php:27
+#: templates/parts/loop/post-search-footer.php:21
 msgctxt "category list"
 msgid "Posted in: %s"
 msgstr "Gepubliceerd in: %s"
 
-#: templates/parts/loop/post-footer.php:38
-#: templates/parts/loop/post-search-footer.php:32
+#: templates/parts/loop/post-footer.php:39
+#: templates/parts/loop/post-search-footer.php:33
 msgctxt "tag list"
 msgid "Filed under: %s"
 msgstr "Gearchiveerd onder: %s"
 
-#: templates/parts/loop/post-meta.php:24
-#: templates/parts/loop/post-search-footer.php:42
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:43
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% opmerkingen"

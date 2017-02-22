@@ -31,20 +31,20 @@ if ( post_password_required() ) {
 		<h2 class="comments-title">
 		<?php
 
-			printf( // xss ok.
-				_nx(
-					'%1$d thought on %2$s',
-					'%1$d thoughts on %2$s',
-					get_comments_number(),
-					'1. number of comments, 2. post title',
-					'primer'
-				),
-				number_format_i18n( get_comments_number() ),
-				sprintf(
-					'<span>&ldquo;%s&rdquo;</span>',
-					get_the_title()
-				)
-			);
+		printf( // xss ok.
+			_nx(
+				'%1$d thought on %2$s',
+				'%1$d thoughts on %2$s',
+				get_comments_number(),
+				'1. number of comments, 2. post title',
+				'primer'
+			),
+			number_format_i18n( get_comments_number() ),
+			sprintf(
+				'<span>&ldquo;%s&rdquo;</span>',
+				get_the_title()
+			)
+		);
 
 		?>
 		</h2>

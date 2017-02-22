@@ -113,7 +113,7 @@ class Primer_Customizer_Colors {
 						),
 						'.main-navigation .sub-menu .menu-item-has-children > a::after' => array(
 							'border-right-color' => '%1$s',
-							'border-left-color'  => '%1$s', // RTL support
+							'border-left-color'  => '%1$s', // RTL support.
 						),
 						'.menu-toggle div' => array(
 							'background-color' => '%1$s',
@@ -570,14 +570,14 @@ class Primer_Customizer_Colors {
 				),
 				'dark' => array(
 					'colors' => array(
-						// Text
+						// Text.
 						'tagline_text_color'               => '#999999',
 						'heading_text_color'               => '#ffffff',
 						'primary_text_color'               => '#e5e5e5',
 						'secondary_text_color'             => '#c1c1c1',
 						'footer_widget_heading_text_color' => '#ffffff',
 						'footer_widget_text_color'         => '#ffffff',
-						// Backgrounds
+						// Backgrounds.
 						'background_color'                       => '#222222',
 						'content_background_color'               => '#333333',
 						'hero_background_color'                  => '#282828',
@@ -598,7 +598,7 @@ class Primer_Customizer_Colors {
 				),
 				'muted' => array(
 					'colors' => array(
-						// Text
+						// Text.
 						'heading_text_color'               => '#4f5875',
 						'primary_text_color'               => '#4f5875',
 						'secondary_text_color'             => '#888c99',
@@ -606,10 +606,10 @@ class Primer_Customizer_Colors {
 						'footer_widget_text_color'         => '#4f5875',
 						'footer_menu_text_color'           => $color_schemes['muted']['base'],
 						'footer_text_color'                => '#4f5875',
-						// Links & Buttons
+						// Links & Buttons.
 						'link_color'   => $color_schemes['muted']['base'],
 						'button_color' => $color_schemes['muted']['base'],
-						// Backgrounds
+						// Backgrounds.
 						'background_color'               => '#d5d6e0',
 						'hero_background_color'          => '#5a6175',
 						'menu_background_color'          => '#5a6175',
@@ -668,7 +668,7 @@ class Primer_Customizer_Colors {
 		 */
 		$color_schemes = (array) apply_filters( 'primer_color_schemes', $color_schemes );
 
-		// Remove any invalid color schemes
+		// Remove any invalid color schemes.
 		$color_schemes = array_filter(
 			$color_schemes,
 			array( $this, 'is_valid_color_scheme_array' )
@@ -777,8 +777,8 @@ class Primer_Customizer_Colors {
 	 * @see   WP_Customize_Manager
 	 *
 	 * @param WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
-	 * @param string               $name
-	 * @param array                $args
+	 * @param string               $name Color key name.
+	 * @param array                $args Color args.
 	 */
 	public function register_color_setting( WP_Customize_Manager $wp_customize, $name, array $args ) {
 
@@ -838,8 +838,8 @@ class Primer_Customizer_Colors {
 	 * @see   $this->enqueue_colors_inline_css()
 	 * @since 1.0.0
 	 *
-	 * @param string $name
-	 * @param array  $args
+	 * @param string $name Color key name.
+	 * @param array  $args Color args.
 	 */
 	public function add_color_inline_css( $name, array $args ) {
 
@@ -869,9 +869,11 @@ class Primer_Customizer_Colors {
 	/**
 	 * Return the default HEX value for a color in a scheme.
 	 *
-	 * @param  string $color
-	 * @param  string $scheme (optional)
-	 * @param  bool   $hash   (optional)
+	 * @since  1.0.0
+	 *
+	 * @param  string $color  Color key name.
+	 * @param  string $scheme (optional) Color scheme name. Default is an empty string.
+	 * @param  bool   $hash   (optional) Whether to prepend color value output a `#` symbol. Default is `false`.
 	 *
 	 * @return string|null
 	 */
@@ -901,7 +903,7 @@ class Primer_Customizer_Colors {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $color
+	 * @param  string $color Color key name.
 	 *
 	 * @return array
 	 */
@@ -913,6 +915,8 @@ class Primer_Customizer_Colors {
 
 	/**
 	 * Return an array of CSS for colors supporting RGBA.
+	 *
+	 * @since  1.0.0
 	 *
 	 * @return array
 	 */
@@ -939,7 +943,6 @@ class Primer_Customizer_Colors {
 	 *
 	 * @action customize_register
 	 * @see    WP_Customize_Manager
-	 *
 	 * @since  1.0.0
 	 *
 	 * @param WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
@@ -999,29 +1002,30 @@ class Primer_Customizer_Colors {
 	 * Inline style for color scheme
 	 *
 	 * @action customize_controls_print_footer_scripts
+	 * @since  1.0.0
 	 */
 	public function colors_preview_css() {
 
 		?>
 		<script type="text/html" id="tmpl-primer-colors-css">
-			<?php
+		<?php
 
-			foreach ( $this->colors as $name => $args ) {
+		foreach ( $this->colors as $name => $args ) {
 
-				if ( empty( $name ) || empty( $args['css'] ) || ! is_array( $args['css'] ) ) {
+			if ( empty( $name ) || empty( $args['css'] ) || ! is_array( $args['css'] ) ) {
 
-					continue;
-
-				}
-
-				printf(
-					Primer_Customizer::parse_css_rules( $args['css'] ),
-					sprintf( '{{ data.%s }}', $name )
-				);
+				continue;
 
 			}
 
-			?>
+			printf( // xss ok.
+				Primer_Customizer::parse_css_rules( $args['css'] ),
+				sprintf( '{{ data.%s }}', $name )
+			);
+
+		}
+
+		?>
 		</script>
 		<?php
 
@@ -1029,25 +1033,25 @@ class Primer_Customizer_Colors {
 
 		if ( ! $rgba_colors ) {
 
-			// Required for themes without rgba css rules
+			// Required for themes without RGBA CSS rules.
 			echo '<script type="text/html" id="tmpl-primer-colors-css-rgba"></script>';
 
 		}
 
 		?>
 		<script type="text/html" id="tmpl-primer-colors-css-rgba">
-			<?php
+		<?php
 
-			foreach ( $rgba_colors as $name => $css ) {
+		foreach ( $rgba_colors as $name => $css ) {
 
-				printf(
-					Primer_Customizer::parse_css_rules( $css ),
-					sprintf( '{{ data.%s }}', $name )
-				);
+			printf( // xss ok.
+				Primer_Customizer::parse_css_rules( $css ),
+				sprintf( '{{ data.%s }}', $name )
+			);
 
-			}
+		}
 
-			?>
+		?>
 		</script>
 		<?php
 
@@ -1058,7 +1062,7 @@ class Primer_Customizer_Colors {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $scheme
+	 * @param  string $scheme Color scheme slug name.
 	 *
 	 * @return bool
 	 */
@@ -1073,7 +1077,7 @@ class Primer_Customizer_Colors {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  array $scheme
+	 * @param  array $scheme Color scheme array.
 	 *
 	 * @return bool
 	 */
@@ -1094,7 +1098,7 @@ class Primer_Customizer_Colors {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  string $scheme
+	 * @param  string $scheme Color scheme slug name.
 	 *
 	 * @return string
 	 */
@@ -1222,7 +1226,7 @@ class Primer_Customizer_Colors {
 
 		if ( $color && $css ) {
 
-			printf(
+			printf( // xss ok.
 				"<style type='text/css'>\n%s\n</style>",
 				sprintf( Primer_Customizer::parse_css_rules( $css ), $color )
 			);
@@ -1332,11 +1336,13 @@ class Primer_Customizer_Colors {
 	}
 
 	/**
-	 * Magic getter for colors and color_schemes property
+	 * Magic getter for `$colors` and `$color_schemes` properties.
 	 *
-	 * @param $name
+	 * @since  1.0.0
 	 *
-	 * @return string Return the specified property within the Primer_Customizer_Colors class.
+	 * @param  string $name Color key or color scheme slug name.
+	 *
+	 * @return string Return the specified property within the `Primer_Customizer_Colors` class.
 	 */
 	public function __get( $name ) {
 

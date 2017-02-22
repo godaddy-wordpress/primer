@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-22 02:54:11+00:00\n"
+"POT-Creation-Date: 2017-02-22 04:50:19+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,15 +39,15 @@ msgstr "नवीन टिप्पण्‍या &rarr;"
 msgid "Comments are closed."
 msgstr "टिप्पण्या बंद केल्या आहेत."
 
-#: content-none.php:16
+#: content-none.php:17
 msgid "Nothing Found"
 msgstr "काहीही सापडले नाही"
 
-#: content-none.php:32
+#: content-none.php:33
 msgid "Get started here"
 msgstr "येथे प्रारंभ करा"
 
-#: content-none.php:41
+#: content-none.php:42
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -55,7 +55,7 @@ msgstr ""
 "क्षमस्व, परंतु आपल्या शोध संज्ञांशी काहीही जुळले नाही. कृपया काही भिन्न "
 "कीवर्डसह पुन्हा प्रयत्न करा."
 
-#: content-none.php:47
+#: content-none.php:48
 msgid ""
 "It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "आपण शोधत असलेले आम्ही शोधू शकत नाही असे दिसते. कदाचित शोधण्याने मदत होऊ शकते."
@@ -130,7 +130,7 @@ msgstr "साइडबार तळटीप विजेट क्षेत्
 msgid "Hero widgets appear over the header image on the front page."
 msgstr "पहिल्या पृष्ठावरील शीर्षलेख प्रतिमेवर हिरो विजेट्स दिसून येतात."
 
-#: header.php:42
+#: header.php:44
 msgid "Skip to content"
 msgstr "सामग्रीवर जा"
 
@@ -248,11 +248,11 @@ msgstr "विजेट सामग्री पार्श्वभूमी"
 msgid "Footer Background"
 msgstr "तळटीप पार्श्वभूमी"
 
-#: inc/customizer/colors.php:451 inc/customizer/layouts.php:309
+#: inc/customizer/colors.php:451 inc/customizer/layouts.php:298
 msgid "Custom"
 msgstr "सानुकूल"
 
-#: inc/customizer/colors.php:468 inc/customizer/layouts.php:300
+#: inc/customizer/colors.php:468 inc/customizer/layouts.php:294
 msgid "Default"
 msgstr "डिफॉल्ट"
 
@@ -284,15 +284,15 @@ msgstr "सामग्री"
 msgid "Footer"
 msgstr "फूटर"
 
-#: inc/customizer/colors.php:972
+#: inc/customizer/colors.php:975
 msgid "Base Color Scheme"
 msgstr "पार्श्वभूमी रंग थीम"
 
-#: inc/customizer/colors.php:1283
+#: inc/customizer/colors.php:1287
 msgid "Hero Background Overlay"
 msgstr "हिरो पार्श्वभूमी आच्छादन"
 
-#: inc/customizer/colors.php:1284
+#: inc/customizer/colors.php:1288
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr "सानुकूल शीर्षलेख प्रतिमा वापरताना रंग आच्छादन पारदर्शकता नियंत्रित करा."
@@ -369,28 +369,28 @@ msgstr "तीन स्तंभः साइडबार / सामग्र�
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "तीन स्तंभः साइडबार / साइडबार / सामग्री"
 
-#: inc/customizer/layouts.php:263 inc/customizer/layouts.php:443
+#: inc/customizer/layouts.php:263 inc/customizer/layouts.php:426
 msgid "Layout"
 msgstr "लेआउट"
 
-#: inc/customizer/layouts.php:469
+#: inc/customizer/layouts.php:452
 msgid "Page Width"
 msgstr "पृष्ठ रुंदी"
 
-#: inc/customizer/layouts.php:470
+#: inc/customizer/layouts.php:453
 msgid "Display your site differently on larger screens."
 msgstr "मोठ्या स्क्रिनवर आपली साइट वेगळ्या पद्धतीने प्रदर्शित करा."
 
-#: inc/customizer/site-identity.php:83
+#: inc/customizer/site-identity.php:82
 #, fuzzy
 msgid "Footer Copyright Text"
 msgstr "सर्वहक्कस्वाधीन"
 
-#: inc/customizer/site-identity.php:102
+#: inc/customizer/site-identity.php:101
 msgid "Display theme author credit"
 msgstr "थीम लेखक क्रेडिट प्रदर्शित करा"
 
-#: inc/customizer/static-front-page.php:47
+#: inc/customizer/static-front-page.php:46
 msgid "Front page title"
 msgstr ""
 
@@ -437,28 +437,28 @@ msgstr "जाहिरात केलेली उत्पादने"
 msgid "Popular Products"
 msgstr "लोकप्रिय उत्पादने"
 
-#: templates/parts/loop/page-content.php:27
-#: templates/parts/loop/post-content.php:18
+#: templates/parts/loop/page-content.php:28
+#: templates/parts/loop/post-content.php:19
 msgid "Pages:"
 msgstr "पृष्‍ठे:"
 
 #: templates/parts/loop/page-footer.php:9
-#: templates/parts/loop/post-footer.php:14
-#: templates/parts/loop/post-search-footer.php:46
+#: templates/parts/loop/post-footer.php:15
+#: templates/parts/loop/post-search-footer.php:47
 msgid "Edit"
 msgstr "संपादित करा"
 
-#: templates/parts/loop/post-content.php:14
+#: templates/parts/loop/post-content.php:15
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "आणखी वाचा <span class=\"meta-nav\">&rarr;</span>"
 
-#: templates/parts/loop/post-meta.php:24
-#: templates/parts/loop/post-search-footer.php:42
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:43
 msgid "Leave a comment"
 msgstr "एक टिप्पणी द्या"
 
-#: templates/parts/loop/post-meta.php:24
-#: templates/parts/loop/post-search-footer.php:42
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:43
 msgid "1 Comment"
 msgstr "1 टिप्पणी"
 
@@ -502,12 +502,12 @@ msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Newer Comments %s"
 msgstr "नवीन टिप्पण्या %s"
 
-#: templates/parts/loop/post-excerpt.php:14
+#: templates/parts/loop/post-excerpt.php:15
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Continue Reading %s"
 msgstr "वाचन सुरू ठेवा %s"
 
-#: content-none.php:28
+#: content-none.php:29
 msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
 msgstr "आपण आपली पहिली पोस्ट प्रकाशित करण्यास तयार आहात? %s."
@@ -582,7 +582,7 @@ msgctxt "fluid-width page layout"
 msgid "Fluid"
 msgstr "प्रवाही"
 
-#: inc/customizer/site-identity.php:72 templates/parts/credit.php:21
+#: inc/customizer/site-identity.php:71 templates/parts/credit.php:23
 msgctxt "1. copyright symbol, 2. year, 3. site title"
 msgid "Copyright %1$s %2$d %3$s"
 msgstr "कॉपीराइट %1$s%2$d %3$s."
@@ -597,33 +597,33 @@ msgctxt "page number"
 msgid "Page %d"
 msgstr "पृष्ठ %d"
 
-#: templates/parts/credit.php:47
+#: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"
 msgid "%1$s WordPress theme by %2$s"
 msgstr "%1$s द्वारे वर्डप्रेस थीम %2$s"
 
-#: templates/parts/loop/post-footer.php:20
-#: templates/parts/loop/post-footer.php:32
-#: templates/parts/loop/post-search-footer.php:14
-#: templates/parts/loop/post-search-footer.php:26
+#: templates/parts/loop/post-footer.php:21
+#: templates/parts/loop/post-footer.php:33
+#: templates/parts/loop/post-search-footer.php:15
+#: templates/parts/loop/post-search-footer.php:27
 msgctxt "separator for items in a list"
 msgid ", "
 msgstr ", "
 
-#: templates/parts/loop/post-footer.php:26
-#: templates/parts/loop/post-search-footer.php:20
+#: templates/parts/loop/post-footer.php:27
+#: templates/parts/loop/post-search-footer.php:21
 msgctxt "category list"
 msgid "Posted in: %s"
 msgstr "यामध्ये पोस्ट केले: %s"
 
-#: templates/parts/loop/post-footer.php:38
-#: templates/parts/loop/post-search-footer.php:32
+#: templates/parts/loop/post-footer.php:39
+#: templates/parts/loop/post-search-footer.php:33
 msgctxt "tag list"
 msgid "Filed under: %s"
 msgstr "या अंतर्गत फाईल केले: %s"
 
-#: templates/parts/loop/post-meta.php:24
-#: templates/parts/loop/post-search-footer.php:42
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:43
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% टिप्पण्या"

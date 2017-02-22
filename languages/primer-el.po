@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-22 02:54:11+00:00\n"
+"POT-Creation-Date: 2017-02-22 04:50:19+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,15 +40,15 @@ msgstr "Νεότερα σχόλια &rarr;"
 msgid "Comments are closed."
 msgstr "Τα σχόλια είναι κλειστά."
 
-#: content-none.php:16
+#: content-none.php:17
 msgid "Nothing Found"
 msgstr "Δεν βρέθηκε τίποτα"
 
-#: content-none.php:32
+#: content-none.php:33
 msgid "Get started here"
 msgstr "Ξεκινήστε εδώ"
 
-#: content-none.php:41
+#: content-none.php:42
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -56,7 +56,7 @@ msgstr ""
 "Λυπούμαστε, αλλά τίποτα δεν ταιριάζει με τους όρους αναζήτησης. Δοκιμάστε "
 "ξανά με διαφορετικές λέξεις-κλειδιά."
 
-#: content-none.php:47
+#: content-none.php:48
 msgid ""
 "It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr ""
@@ -135,7 +135,7 @@ msgstr "Αυτή η πλευρική γραμμή εμφανίζεται στη�
 msgid "Hero widgets appear over the header image on the front page."
 msgstr "Οι μικροεφαρμογές Hero εμφανίζονται επάνω από την εικόνα κεφαλίδας στην πρώτη σελίδα."
 
-#: header.php:42
+#: header.php:44
 msgid "Skip to content"
 msgstr "Μετάβαση απευθείας στο περιεχόμενο"
 
@@ -253,11 +253,11 @@ msgstr "Φόντο περιεχομένου μικροεφαρμογών"
 msgid "Footer Background"
 msgstr "Φόντο υποσέλιδου"
 
-#: inc/customizer/colors.php:451 inc/customizer/layouts.php:309
+#: inc/customizer/colors.php:451 inc/customizer/layouts.php:298
 msgid "Custom"
 msgstr "Προσαρμογή"
 
-#: inc/customizer/colors.php:468 inc/customizer/layouts.php:300
+#: inc/customizer/colors.php:468 inc/customizer/layouts.php:294
 msgid "Default"
 msgstr "Προεπιλογή"
 
@@ -289,15 +289,15 @@ msgstr "Περιεχόμενο"
 msgid "Footer"
 msgstr "Υποσέλιδο"
 
-#: inc/customizer/colors.php:972
+#: inc/customizer/colors.php:975
 msgid "Base Color Scheme"
 msgstr "Βασικός συνδυασμός χρωμάτων"
 
-#: inc/customizer/colors.php:1283
+#: inc/customizer/colors.php:1287
 msgid "Hero Background Overlay"
 msgstr "Επικάλυψη φόντου Hero"
 
-#: inc/customizer/colors.php:1284
+#: inc/customizer/colors.php:1288
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr ""
@@ -376,28 +376,28 @@ msgstr "Τρίστηλο: Πλευρική στήλη | περιεχόμενο |
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr " Στήλη Πλευρική στήλη | πλευρική στήλη | περιεχόμενο"
 
-#: inc/customizer/layouts.php:263 inc/customizer/layouts.php:443
+#: inc/customizer/layouts.php:263 inc/customizer/layouts.php:426
 msgid "Layout"
 msgstr "Διάταξη"
 
-#: inc/customizer/layouts.php:469
+#: inc/customizer/layouts.php:452
 msgid "Page Width"
 msgstr "Πλάτος σελίδας"
 
-#: inc/customizer/layouts.php:470
+#: inc/customizer/layouts.php:453
 msgid "Display your site differently on larger screens."
 msgstr "Προβολή του ιστότοπού σας διαφορετικά σε μεγάλες οθόνες."
 
-#: inc/customizer/site-identity.php:83
+#: inc/customizer/site-identity.php:82
 #, fuzzy
 msgid "Footer Copyright Text"
 msgstr "Κείμενο copyright"
 
-#: inc/customizer/site-identity.php:102
+#: inc/customizer/site-identity.php:101
 msgid "Display theme author credit"
 msgstr "Εμφάνιση στοιχείων δημιουργού θέματος"
 
-#: inc/customizer/static-front-page.php:47
+#: inc/customizer/static-front-page.php:46
 msgid "Front page title"
 msgstr ""
 
@@ -445,28 +445,28 @@ msgstr "Προωθούμενα προϊόντα"
 msgid "Popular Products"
 msgstr "Δημοφιλή προϊόντα"
 
-#: templates/parts/loop/page-content.php:27
-#: templates/parts/loop/post-content.php:18
+#: templates/parts/loop/page-content.php:28
+#: templates/parts/loop/post-content.php:19
 msgid "Pages:"
 msgstr "Σελίδες:"
 
 #: templates/parts/loop/page-footer.php:9
-#: templates/parts/loop/post-footer.php:14
-#: templates/parts/loop/post-search-footer.php:46
+#: templates/parts/loop/post-footer.php:15
+#: templates/parts/loop/post-search-footer.php:47
 msgid "Edit"
 msgstr "Επεξεργασία"
 
-#: templates/parts/loop/post-content.php:14
+#: templates/parts/loop/post-content.php:15
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Διαβάστε περισσότερα <span class=\"meta-nav\">&rarr;</span>"
 
-#: templates/parts/loop/post-meta.php:24
-#: templates/parts/loop/post-search-footer.php:42
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:43
 msgid "Leave a comment"
 msgstr "Αφήστε σχόλιο"
 
-#: templates/parts/loop/post-meta.php:24
-#: templates/parts/loop/post-search-footer.php:42
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:43
 msgid "1 Comment"
 msgstr "1 σχόλιο"
 
@@ -511,12 +511,12 @@ msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Newer Comments %s"
 msgstr "Νεώτερα σχόλια %s"
 
-#: templates/parts/loop/post-excerpt.php:14
+#: templates/parts/loop/post-excerpt.php:15
 msgctxt "right arrow (LTR) / left arrow (RTL)"
 msgid "Continue Reading %s"
 msgstr "Συνεχίστε την ανάγνωση %s"
 
-#: content-none.php:28
+#: content-none.php:29
 msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
 msgstr "Είστε έτοιμοι για να δημοσιεύσετε την πρώτη σας ανάρτηση; %s."
@@ -591,7 +591,7 @@ msgctxt "fluid-width page layout"
 msgid "Fluid"
 msgstr "Ρέον"
 
-#: inc/customizer/site-identity.php:72 templates/parts/credit.php:21
+#: inc/customizer/site-identity.php:71 templates/parts/credit.php:23
 msgctxt "1. copyright symbol, 2. year, 3. site title"
 msgid "Copyright %1$s %2$d %3$s"
 msgstr "Copyright %1$s %2$d %3$s"
@@ -606,33 +606,33 @@ msgctxt "page number"
 msgid "Page %d"
 msgstr "Σελίδα %d"
 
-#: templates/parts/credit.php:47
+#: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"
 msgid "%1$s WordPress theme by %2$s"
 msgstr "Θέμα WordPress %1$s από την %2$s"
 
-#: templates/parts/loop/post-footer.php:20
-#: templates/parts/loop/post-footer.php:32
-#: templates/parts/loop/post-search-footer.php:14
-#: templates/parts/loop/post-search-footer.php:26
+#: templates/parts/loop/post-footer.php:21
+#: templates/parts/loop/post-footer.php:33
+#: templates/parts/loop/post-search-footer.php:15
+#: templates/parts/loop/post-search-footer.php:27
 msgctxt "separator for items in a list"
 msgid ", "
 msgstr ", "
 
-#: templates/parts/loop/post-footer.php:26
-#: templates/parts/loop/post-search-footer.php:20
+#: templates/parts/loop/post-footer.php:27
+#: templates/parts/loop/post-search-footer.php:21
 msgctxt "category list"
 msgid "Posted in: %s"
 msgstr "Ανάρτηση στην κατηγορία: %s"
 
-#: templates/parts/loop/post-footer.php:38
-#: templates/parts/loop/post-search-footer.php:32
+#: templates/parts/loop/post-footer.php:39
+#: templates/parts/loop/post-search-footer.php:33
 msgctxt "tag list"
 msgid "Filed under: %s"
 msgstr "Καταχωρήθηκε με ετικέτα: %s"
 
-#: templates/parts/loop/post-meta.php:24
-#: templates/parts/loop/post-search-footer.php:42
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:43
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% σχόλια"

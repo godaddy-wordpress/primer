@@ -9,17 +9,20 @@
  * @package Primer
  * @since   1.0.0
  */
+
 ?>
 
 		</div><!-- #content -->
 
 		<?php
+
 		/**
 		 * Fires before the `<footer>` element.
 		 *
 		 * @since 1.0.0
 		 */
 		do_action( 'primer_before_footer' );
+
 		?>
 
 		<footer id="colophon" class="site-footer">
@@ -27,6 +30,7 @@
 			<div class="site-footer-inner">
 
 				<?php
+
 				/**
 				 * Fires inside the `<footer>` element.
 				 *
@@ -35,6 +39,7 @@
 				 * @since 1.0.0
 				 */
 				do_action( 'primer_footer' );
+
 				?>
 
 			</div><!-- .site-footer-inner -->
@@ -42,6 +47,7 @@
 		</footer><!-- #colophon -->
 
 		<?php
+
 		/**
 		 * Fires after the `<footer>` element.
 		 *
@@ -50,6 +56,7 @@
 		 * @since 1.0.0
 		 */
 		do_action( 'primer_after_footer' );
+
 		?>
 
 	</div><!-- #page -->

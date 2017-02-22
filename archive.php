@@ -14,6 +14,7 @@
  * @package Primer
  * @since   1.0.0
  */
+
 get_header(); ?>
 
 <section id="primary" class="content-area">

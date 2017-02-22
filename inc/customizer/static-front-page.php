@@ -8,7 +8,6 @@
  * @author   GoDaddy
  * @since    NEXT
  */
-
 class Primer_Static_Front_Page_Options {
 
 	/**

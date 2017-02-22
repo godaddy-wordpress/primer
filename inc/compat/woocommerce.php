@@ -125,7 +125,7 @@ function primer_wc_shop_layout( $layout ) {
 
 	if ( is_shop() ) {
 
-		remove_filter( 'primer_current_layout', __FUNCTION__ ); // Prevent infinite loop
+		remove_filter( 'primer_current_layout', __FUNCTION__ ); // Prevent infinite loop.
 
 		$layout = primer_get_layout( wc_get_page_id( 'shop' ) );
 
@@ -218,10 +218,10 @@ function primer_wc_product_classes( $classes ) {
 
 	global $post, $woocommerce_loop;
 
-	// Check if we are on a single product page
+	// Check if we are on a single product page.
 	$is_product = ( is_shop() && 'product' === $post->post_type );
 
-	// Check if we are in an upsell or related product loop
+	// Check if we are in an upsell or related product loop.
 	$is_upsell_or_related = (
 		is_single()
 		&&
@@ -401,7 +401,7 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 		 *
 		 * @var int
 		 */
-		$per_page = (int) apply_filters( 'primer_wc_promoted_products_per_page', $per_page ); // Can be negative
+		$per_page = (int) apply_filters( 'primer_wc_promoted_products_per_page', $per_page ); // Can be negative.
 
 		/**
 		 * Filter the number of columns to display promoted products in.
@@ -469,7 +469,7 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
 		 *
 		 * @var int
 		 */
-		$per_page = (int) apply_filters( 'primer_wc_best_selling_products_per_page', $per_page ); // Can be negative
+		$per_page = (int) apply_filters( 'primer_wc_best_selling_products_per_page', $per_page ); // Can be negative.
 
 		/**
 		 * Filter the number of columns to display best-selling products in.
@@ -494,10 +494,10 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
  * @filter wp_get_nav_menu_items
  * @since  NEXT
  *
- * @param  array  $items
- * @param  object $menu
+ * @param  array  $items An array of menu item post objects.
+ * @param  object $menu  The menu object.
  *
- * @return array  $items
+ * @return array
  */
 function primer_wc_generate_cart_menu_item( $items, $menu ) {
 
