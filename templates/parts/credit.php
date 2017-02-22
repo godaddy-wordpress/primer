@@ -15,7 +15,7 @@
 	/**
 	 * Filter the footer copyright text.
 	 *
-	 * @since NEXT
+	 * @since 1.5.0
 	 *
 	 * @var string
 	 */

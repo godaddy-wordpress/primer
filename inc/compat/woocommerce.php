@@ -360,7 +360,7 @@ add_filter( 'primer_font_types', 'primer_wc_font_types' );
  * Load a custom template for WooCommerce 404 pages.
  *
  * @filter template_include
- * @since  NEXT
+ * @since  1.5.0
  *
  * @param  string $default The default 404 template.
  *
@@ -382,7 +382,7 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 	 * shortcode. If neither exist, the default fallback is to display recently
 	 * added products.
 	 *
-	 * @since NEXT
+	 * @since 1.5.0
 	 * @uses  [wc_get_featured_product_ids](https://docs.woocommerce.com/wc-apidocs/function-wc_get_featured_product_ids.html) To retreive the products that are featured.
 	 * @uses  [wc_get_product_ids_on_sale](https://docs.woocommerce.com/wc-apidocs/function-wc_get_product_ids_on_sale.html) To retreive the products that are on sale.
 	 *
@@ -397,7 +397,7 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 		 *
 		 * Default: `4`
 		 *
-		 * @since NEXT
+		 * @since 1.5.0
 		 *
 		 * @var int
 		 */
@@ -408,7 +408,7 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 		 *
 		 * Default: `4`
 		 *
-		 * @since NEXT
+		 * @since 1.5.0
 		 *
 		 * @var int
 		 */
@@ -453,7 +453,7 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
 	/**
 	 * Display best-selling products.
 	 *
-	 * @since NEXT
+	 * @since 1.5.0
 	 *
 	 * @param int $per_page (optional) Total number of best-selling products to display. Defaults to `4`.
 	 * @param int $columns  (optional) Number of columns to display best-selling products in. Defaults to `4`.
@@ -465,7 +465,7 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
 		 *
 		 * Default: `4`
 		 *
-		 * @since NEXT
+		 * @since 1.5.0
 		 *
 		 * @var int
 		 */
@@ -476,7 +476,7 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
 		 *
 		 * Default: `4`
 		 *
-		 * @since NEXT
+		 * @since 1.5.0
 		 *
 		 * @var int
 		 */
@@ -492,7 +492,7 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
  * Add a custom "Cart" menu item when WooCommerce is active.
  *
  * @filter wp_get_nav_menu_items
- * @since  NEXT
+ * @since  1.5.0
  *
  * @param  array  $items An array of menu item post objects.
  * @param  object $menu  The menu object.
@@ -529,7 +529,7 @@ add_filter( 'wp_get_nav_menu_items', 'primer_wc_generate_cart_menu_item', 20, 2 
  *
  * @filter wp_nav_menu_{$menu}_items
  * @global WooCommerce $woocommerce
- * @since  NEXT
+ * @since  1.5.0
  *
  * @param  string   $items The HTML list content for the menu items.
  * @param  stdClass $args  An object containing wp_nav_menu() arguments.
@@ -543,7 +543,7 @@ function primer_wc_cart_menu( $items, $args ) {
 	 *
 	 * Default: `true`
 	 *
-	 * @since NEXT
+	 * @since 1.5.0
 	 *
 	 * @var bool
 	*/
@@ -605,7 +605,7 @@ function primer_wc_cart_menu( $items, $args ) {
  * Empty the cart total during Customize preview.
  *
  * @filter woocommerce_cart_contents_total
- * @since  NEXT
+ * @since  1.5.0
  * @uses   [wc_price](https://docs.woocommerce.com/wc-apidocs/function-wc_price.html) To format the price with a currency symbol.
  *
  * @return string
