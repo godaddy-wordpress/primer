@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Coding Standards for Themes">
+	<description>Generally-applicable sniffs for WordPress themes</description>
+
+	<rule ref="WordPress-Extra">
+		<exclude name="WordPress.WhiteSpace.ControlStructureSpacing" />
+	</rule>
+
+	<exclude-pattern>*/.dev/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+</ruleset>
