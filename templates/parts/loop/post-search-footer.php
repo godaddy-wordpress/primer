@@ -18,7 +18,7 @@
 
 			<span class="cat-links">
 
-				<?php printf( esc_html_x( 'Posted in: %s', 'category list', 'primer' ), $category_list ); // xss ok.?>
+				<?php printf( esc_html_x( 'Posted in: %s', 'category list', 'primer' ), $category_list ); // xss ok. ?>
 
 			</span>
 
@@ -30,7 +30,7 @@
 
 			<span class="tags-links">
 
-				<?php printf( esc_html_x( 'Filed under: %s', 'tag list', 'primer' ), $tag_list ); // xss ok.?>
+				<?php printf( esc_html_x( 'Filed under: %s', 'tag list', 'primer' ), $tag_list ); // xss ok. ?>
 
 			</span>
 
