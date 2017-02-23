@@ -154,7 +154,7 @@ module.exports = function( grunt ) {
 				options: {
 					domainPath: 'languages/',
 					include: [ '.+\.php' ],
-					exclude: [ '.dev/', 'node_modules/' ],
+					exclude: [ '.dev/', 'build/', 'node_modules/', 'tests/', 'vendor/' ],
 					potComments: 'Copyright (c) {year} GoDaddy Operating Company, LLC. All Rights Reserved.',
 					potHeaders: {
 						'x-poedit-keywordslist': true

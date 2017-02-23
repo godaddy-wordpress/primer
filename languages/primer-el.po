@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-22 04:50:19+00:00\n"
+"POT-Creation-Date: 2017-02-23 23:21:03+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -188,7 +188,7 @@ msgstr "Κείμενο υπότιτλου"
 msgid "Hero Text"
 msgstr "Κείμενο Hero"
 
-#: inc/customizer/colors.php:107 inc/customizer/colors.php:325
+#: inc/customizer/colors.php:107 inc/customizer/colors.php:326
 msgid "Text"
 msgstr "Κείμενο"
 
@@ -210,109 +210,109 @@ msgstr "Κύριο κείμενο"
 msgid "Paragraphs, lists, menu links, quotes and tables."
 msgstr "Παράγραφοι, λίστες, σύνδεσμοι μενού, ρήσεις και πίνακες."
 
-#: inc/customizer/colors.php:197
+#: inc/customizer/colors.php:198
 msgid "Secondary Text"
 msgstr "Δευτερεύον κείμενο"
 
-#: inc/customizer/colors.php:198
+#: inc/customizer/colors.php:199
 msgid "Post bylines, comment counts, post footers and quote footers."
 msgstr ""
 "Γραμμές συντάκτη άρθρου, πλήθος σχολίων, υποσέλιδα άρθρων και υποσέλιδα "
 "ρήσεων."
 
-#: inc/customizer/colors.php:212
+#: inc/customizer/colors.php:213
 msgid "Widget Heading Text"
 msgstr "Κείμενο επικεφαλίδας μικροεφαρμογής"
 
-#: inc/customizer/colors.php:229
+#: inc/customizer/colors.php:230
 msgid "Widget Text"
 msgstr "Κείμενο μικροεφαρμογής"
 
-#: inc/customizer/colors.php:241
+#: inc/customizer/colors.php:242
 msgid "Menu Text"
 msgstr "Κείμενο μενού"
 
-#: inc/customizer/colors.php:263
+#: inc/customizer/colors.php:264
 msgid "Copyright Text"
 msgstr "Κείμενο copyright"
 
-#: inc/customizer/colors.php:277
+#: inc/customizer/colors.php:278
 msgid "Link Text"
 msgstr "Κείμενο συνδέσμου"
 
-#: inc/customizer/colors.php:299 inc/customizer/colors.php:381
+#: inc/customizer/colors.php:300 inc/customizer/colors.php:385
 msgid "Background"
 msgstr "Φόντο"
 
-#: inc/customizer/colors.php:342
+#: inc/customizer/colors.php:343
 msgid "Page Background"
 msgstr "Φόντο σελίδας"
 
-#: inc/customizer/colors.php:352
+#: inc/customizer/colors.php:353
 msgid "Content Background"
 msgstr "Φόντο περιεχομένου"
 
-#: inc/customizer/colors.php:362
+#: inc/customizer/colors.php:366
 msgid "Hero Background"
 msgstr "Φόντο Hero"
 
-#: inc/customizer/colors.php:391
+#: inc/customizer/colors.php:395
 msgid "Widgets Background"
 msgstr "Φόντο μικροεφαρμογών"
 
-#: inc/customizer/colors.php:402
+#: inc/customizer/colors.php:406
 msgid "Widget Content Background"
 msgstr "Φόντο περιεχομένου μικροεφαρμογών"
 
-#: inc/customizer/colors.php:413
+#: inc/customizer/colors.php:417
 msgid "Footer Background"
 msgstr "Φόντο υποσέλιδου"
 
-#: inc/customizer/colors.php:451 inc/customizer/layouts.php:298
+#: inc/customizer/colors.php:455 inc/customizer/layouts.php:298
 msgid "Custom"
 msgstr "Προσαρμογή"
 
-#: inc/customizer/colors.php:468 inc/customizer/layouts.php:294
+#: inc/customizer/colors.php:472 inc/customizer/layouts.php:294
 msgid "Default"
 msgstr "Προεπιλογή"
 
-#: inc/customizer/colors.php:710
+#: inc/customizer/colors.php:714
 msgid "Colors"
 msgstr "Χρώματα"
 
-#: inc/customizer/colors.php:719
+#: inc/customizer/colors.php:723
 msgid "Color Schemes"
 msgstr "Συνδυασμοί χρωμάτων"
 
-#: inc/customizer/colors.php:727
+#: inc/customizer/colors.php:731
 msgid "Header"
 msgstr "Κεφαλίδα"
 
-#: inc/customizer/colors.php:735
+#: inc/customizer/colors.php:739
 msgid "Menu"
 msgstr "Μενού"
 
-#: inc/customizer/colors.php:743
+#: inc/customizer/colors.php:747
 msgid "Buttons"
 msgstr "Κουμπιά"
 
-#: inc/customizer/colors.php:751
+#: inc/customizer/colors.php:755
 msgid "Content"
 msgstr "Περιεχόμενο"
 
-#: inc/customizer/colors.php:759
+#: inc/customizer/colors.php:763
 msgid "Footer"
 msgstr "Υποσέλιδο"
 
-#: inc/customizer/colors.php:975
+#: inc/customizer/colors.php:979
 msgid "Base Color Scheme"
 msgstr "Βασικός συνδυασμός χρωμάτων"
 
-#: inc/customizer/colors.php:1287
+#: inc/customizer/colors.php:1291
 msgid "Hero Background Overlay"
 msgstr "Επικάλυψη φόντου Hero"
 
-#: inc/customizer/colors.php:1288
+#: inc/customizer/colors.php:1292
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr ""
@@ -434,19 +434,28 @@ msgstr ""
 msgid "404 Page Not Found"
 msgstr "404 - Η σελίδα δεν βρέθηκε"
 
-#: inc/template-tags.php:135
+#: inc/template-tags.php:141
 msgid "Posts navigation"
 msgstr "Πλοήγηση στις αναρτήσεις"
 
-#: inc/template-tags.php:141
+#: inc/template-tags.php:147
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "  <span class=\"meta-nav\">&larr;</span> Παλιότερες αναρτήσεις"
 
-#: inc/template-tags.php:147
+#: inc/template-tags.php:153
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Νεότερες αναρτήσεις <span class=\"meta-nav\">&rarr;</span>  "
 
-#: inc/template-tags.php:263
+#: inc/template-tags.php:180
+msgid "&larr; Previous"
+msgstr ""
+
+#: inc/template-tags.php:181
+#, fuzzy
+msgid "Next &rarr;"
+msgstr "Νεότερα σχόλια &rarr;"
+
+#: inc/template-tags.php:295
 msgid "Blog"
 msgstr "Blog"
 
@@ -539,57 +548,57 @@ msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
 msgstr "Είστε έτοιμοι για να δημοσιεύσετε την πρώτη σας ανάρτηση; %s."
 
-#: inc/customizer/colors.php:478
+#: inc/customizer/colors.php:482
 msgctxt "color scheme name"
 msgid "Blush"
 msgstr "Φούξια"
 
-#: inc/customizer/colors.php:482
+#: inc/customizer/colors.php:486
 msgctxt "color scheme name"
 msgid "Bronze"
 msgstr "Χάλκινο"
 
-#: inc/customizer/colors.php:486
+#: inc/customizer/colors.php:490
 msgctxt "color scheme name"
 msgid "Canary"
 msgstr "Καναρινί"
 
-#: inc/customizer/colors.php:490
+#: inc/customizer/colors.php:494
 msgctxt "color scheme name"
 msgid "Cool"
 msgstr "Μοντέρνο"
 
-#: inc/customizer/colors.php:494
+#: inc/customizer/colors.php:498
 msgctxt "color scheme name"
 msgid "Dark"
 msgstr "Σκούρο"
 
-#: inc/customizer/colors.php:498
+#: inc/customizer/colors.php:502
 msgctxt "color scheme name"
 msgid "Iguana"
 msgstr "Ιγκουάνα"
 
-#: inc/customizer/colors.php:502
+#: inc/customizer/colors.php:506
 msgctxt "color scheme name"
 msgid "Muted"
 msgstr "Σιωπηρό"
 
-#: inc/customizer/colors.php:506
+#: inc/customizer/colors.php:510
 msgctxt "color scheme name"
 msgid "Plum"
 msgstr "Δαμασκηνί"
 
-#: inc/customizer/colors.php:510
+#: inc/customizer/colors.php:514
 msgctxt "color scheme name"
 msgid "Rose"
 msgstr "Τριανταφυλλί"
 
-#: inc/customizer/colors.php:514
+#: inc/customizer/colors.php:518
 msgctxt "color scheme name"
 msgid "Tangerine"
 msgstr "Μανταρινί"
 
-#: inc/customizer/colors.php:518
+#: inc/customizer/colors.php:522
 msgctxt "color scheme name"
 msgid "Turquoise"
 msgstr "Τυρκουάζ"
@@ -623,6 +632,11 @@ msgstr "Αποτελέσματα αναζήτησης για: %s"
 msgctxt "page number"
 msgid "Page %d"
 msgstr "Σελίδα %d"
+
+#: inc/template-tags.php:182
+msgctxt "1. current page number, 2. total number of pages"
+msgid "Page %1$d of %2$d"
+msgstr ""
 
 #: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"
