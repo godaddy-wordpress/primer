@@ -832,20 +832,53 @@ body.no-max-width .main-navigation {
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg); }
 
+.navigation.pagination {
+  clear: both;
+  margin: 0 0 1.5em; }
+  .navigation.pagination .nav-links {
+    text-align: center; }
+    .navigation.pagination .nav-links .page-numbers {
+      display: inline-block;
+      border: none;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      background-color: #ffffff;
+      line-height: 1;
+      margin: 0 0.25em;
+      padding: 0.5em 0.75em;
+      white-space: nowrap; }
+      .navigation.pagination .nav-links .page-numbers.dots {
+        background: none; }
+      .navigation.pagination .nav-links .page-numbers.current {
+        color: #ffffff;
+        background-color: #ff6663; }
+  @media only screen and (max-width: 40.063em) {
+    .navigation.pagination .screen-reader-text {
+      display: inline-block;
+      clip: auto;
+      position: relative !important;
+      height: auto;
+      width: auto;
+      overflow: visible;
+      font-size: 0.9rem;
+      font-weight: normal;
+      color: #252525; }
+    .navigation.pagination .nav-links {
+      float: left; }
+      .navigation.pagination .nav-links .page-numbers:not(.prev):not(.next) {
+        display: none; } }
+
 .site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden; }
 
 .comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: right;
   width: 50%; }
 
 .comment-navigation .nav-next,
-.posts-navigation .nav-next,
 .post-navigation .nav-next {
   float: left;
   text-align: left;
@@ -2109,10 +2142,6 @@ body.no-max-width .site-info-wrapper .site-info {
   .entry-footer .cat-links,
   .entry-footer .tag-links {
     display: block; }
-
-.paging-navigation {
-  clear: both;
-  margin: 0 0 1.5em; }
 
 /*--------------------------------------------------------------
 # Comments

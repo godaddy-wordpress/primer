@@ -118,49 +118,81 @@ function primer_the_page_title() {
  *
  * @global WP_Query $wp_query
  * @since  1.0.0
+ * @uses  [the_posts_pagination](https://developer.wordpress.org/reference/functions/the_posts_pagination/)
+ *
+ * @param array $args (optional) Post pagination arguments.
  */
-function primer_paging_nav() {
+function primer_paging_nav( $args = array() ) {
 
 	global $wp_query;
 
-	if ( ! isset( $wp_query->max_num_pages ) || $wp_query->max_num_pages < 2 ) {
+	if ( empty( $wp_query->max_num_pages ) || (int) $wp_query->max_num_pages < 2 ) {
 
 		return;
 
 	}
 
-	?>
-	<nav class="navigation paging-navigation">
+	// Backward compat for older child themes that don't have styles for `the_posts_pagination()` markup.
+	if ( primer_child_version_compare( '1.1.0', '<=' ) ) {
 
-		<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'primer' ); ?></h2>
+		?>
+		<nav class="navigation paging-navigation">
 
-		<div class="nav-links">
+			<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'primer' ); ?></h2>
 
-		<?php if ( get_next_posts_link() ) : ?>
+			<div class="nav-links">
 
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'primer' ) ); ?></div>
+			<?php if ( get_next_posts_link() ) : ?>
 
-		<?php endif; ?>
+				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'primer' ) ); ?></div>
 
-		<?php if ( get_previous_posts_link() ) : ?>
+			<?php endif; ?>
 
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'primer' ) ); ?></div>
+			<?php if ( get_previous_posts_link() ) : ?>
 
-		<?php endif; ?>
+				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'primer' ) ); ?></div>
 
-		</div><!-- .nav-links -->
+			<?php endif; ?>
 
-	</nav><!-- .navigation -->
-	<?php
+			</div><!-- .nav-links -->
+
+		</nav><!-- .navigation -->
+		<?php
+
+		return; // End backward compat.
+
+	}
+
+	$current = ! empty( $wp_query->query_vars['paged'] ) ? (int) $wp_query->query_vars['paged'] : 1;
+	$total   = (int) $wp_query->max_num_pages;
+
+	/**
+	 * Filter the default post pagination args.
+	 *
+	 * @since NEXT
+	 *
+	 * @param int $current The current page number.
+	 * @param int $total   The total number of pages.
+	 *
+	 * @var array
+	 */
+	$defaults = (array) apply_filters( 'primer_paging_nav_default_args', array(
+		'prev_text'          => __( '&larr; Previous', 'primer' ),
+		'next_text'          => __( 'Next &rarr;', 'primer' ),
+		'screen_reader_text' => sprintf( esc_html_x( 'Page %1$d of %2$d', '1. current page number, 2. total number of pages', 'primer' ), $current, $total ),
+	), $current, $total );
+
+	$args = wp_parse_args( $args, $defaults );
+
+	the_posts_pagination( $args );
 
 }
 
 /**
  * Display navigation to next/previous post, when applicable.
  *
- * @link  https://developer.wordpress.org/reference/functions/get_the_post_navigation/
  * @since 1.0.0
- * @uses  the_post_navigation
+ * @uses  [the_post_navigation](https://developer.wordpress.org/reference/functions/the_post_navigation/)
  *
  * @param array $args (optional) Post navigation arguments.
  */

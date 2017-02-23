@@ -304,8 +304,61 @@ body.no-max-width .main-navigation {
 	}
 }
 
+.navigation.pagination {
+	clear: both;
+	margin: 0 0 1.5em;
+
+	.nav-links {
+		text-align: center;
+
+		.page-numbers {
+			display: inline-block;
+			border: none;
+			border-radius: 3px;
+			background-color: $color__content-bg;
+			line-height: 1;
+			margin: 0 0.25em;
+			padding: 0.5em 0.75em;
+			white-space: nowrap;
+
+			&.dots {
+				background: none;
+			}
+
+			&.current {
+				color: $color__content-bg;
+				background-color: $color__link;
+			}
+		}
+	}
+
+	@media #{$small-only} {
+
+		.screen-reader-text {
+			display: inline-block;
+			clip: auto;
+			position: relative !important;
+			height: auto;
+			width: auto;
+			overflow: visible;
+			font-size: 0.9rem;
+			font-weight: normal;
+			color: $color__primary-text;
+		}
+
+		.nav-links {
+			float: right;
+
+			.page-numbers {
+				&:not(.prev, .next) {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
 .comment-navigation,
-.posts-navigation,
 .post-navigation {
 	.site-main & {
 		margin: 0 0 1.5em;
