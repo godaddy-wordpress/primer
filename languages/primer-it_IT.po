@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-23 23:21:03+00:00\n"
+"POT-Creation-Date: 2017-02-24 20:29:00+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,11 +16,11 @@ msgstr ""
 "esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
-#: 404.php:22 templates/parts/404-woocommerce.php:22
+#: 404.php:22 templates/woocommerce/404.php:22
 msgid "Oops! That page can't be found."
 msgstr "Errore. Impossibile trovare la pagina."
 
-#: 404.php:28 templates/parts/404-woocommerce.php:28
+#: 404.php:28 templates/woocommerce/404.php:28
 msgid ""
 "It looks like nothing was found at this location. Please try searching below:"
 msgstr "Non è stato trovato nulla in questa posizione. Prova a cercare:"
@@ -147,23 +147,23 @@ msgstr ""
 msgid "Skip to content"
 msgstr "Passa al contenuto"
 
-#: inc/compat/woocommerce.php:419
-msgid "Featured Products"
-msgstr "Prodotti in primo piano"
-
-#: inc/compat/woocommerce.php:429
-msgid "On Sale Now"
-msgstr "In sconto subito"
-
-#: inc/compat/woocommerce.php:443
-msgid "New In Store"
-msgstr "Nuovi arrivi"
-
-#: inc/compat/woocommerce.php:595
+#: inc/compat/woocommerce.php:494
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d articolo"
 msgstr[1] "%d articoli"
+
+#: inc/compat/woocommerce.php:561
+msgid "Featured Products"
+msgstr "Prodotti in primo piano"
+
+#: inc/compat/woocommerce.php:571
+msgid "On Sale Now"
+msgstr "In sconto subito"
+
+#: inc/compat/woocommerce.php:585
+msgid "New In Store"
+msgstr "Nuovi arrivi"
 
 #: inc/compat/wordpress.php:55
 msgid ""
@@ -443,11 +443,11 @@ msgstr "<span class=\"meta-nav\">&larr;</span> Post più vecchi"
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Post più recenti <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:180
+#: inc/template-tags.php:180 templates/woocommerce/loop/pagination.php:33
 msgid "&larr; Previous"
 msgstr ""
 
-#: inc/template-tags.php:181
+#: inc/template-tags.php:181 templates/woocommerce/loop/pagination.php:34
 #, fuzzy
 msgid "Next &rarr;"
 msgstr "Commenti più recenti &rarr;"
@@ -455,19 +455,6 @@ msgstr "Commenti più recenti &rarr;"
 #: inc/template-tags.php:295
 msgid "Blog"
 msgstr "Blog"
-
-#: templates/parts/404-woocommerce.php:30
-msgid "Search"
-msgstr "Cerca"
-
-#: templates/parts/404-woocommerce.php:36
-msgid "Promoted Products"
-msgstr "Prodotti in promozione"
-
-#: templates/parts/404-woocommerce.php:42
-#: templates/parts/404-woocommerce.php:44
-msgid "Popular Products"
-msgstr "Prodotti popolari"
 
 #: templates/parts/loop/page-content.php:28
 #: templates/parts/loop/post-content.php:19
@@ -493,6 +480,18 @@ msgstr "Lascia un commento"
 #: templates/parts/loop/post-search-footer.php:43
 msgid "1 Comment"
 msgstr "Un commento"
+
+#: templates/woocommerce/404.php:30
+msgid "Search"
+msgstr "Cerca"
+
+#: templates/woocommerce/404.php:36
+msgid "Promoted Products"
+msgstr "Prodotti in promozione"
+
+#: templates/woocommerce/404.php:42 templates/woocommerce/404.php:44
+msgid "Popular Products"
+msgstr "Prodotti popolari"
 
 #. Theme Name of the plugin/theme
 msgid "Primer"
@@ -630,7 +629,7 @@ msgctxt "page number"
 msgid "Page %d"
 msgstr "Pagina %d"
 
-#: inc/template-tags.php:182
+#: inc/template-tags.php:182 templates/woocommerce/loop/pagination.php:41
 msgctxt "1. current page number, 2. total number of pages"
 msgid "Page %1$d of %2$d"
 msgstr ""

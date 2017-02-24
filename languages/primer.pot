@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.5.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-23 23:21:03+00:00\n"
+"POT-Creation-Date: 2017-02-24 20:29:00+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,11 +15,11 @@ msgstr ""
 "attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
-#: 404.php:22 templates/parts/404-woocommerce.php:22
+#: 404.php:22 templates/woocommerce/404.php:22
 msgid "Oops! That page can't be found."
 msgstr ""
 
-#: 404.php:28 templates/parts/404-woocommerce.php:28
+#: 404.php:28 templates/woocommerce/404.php:28
 msgid ""
 "It looks like nothing was found at this location. Please try searching "
 "below:"
@@ -131,23 +131,23 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/compat/woocommerce.php:419
-msgid "Featured Products"
-msgstr ""
-
-#: inc/compat/woocommerce.php:429
-msgid "On Sale Now"
-msgstr ""
-
-#: inc/compat/woocommerce.php:443
-msgid "New In Store"
-msgstr ""
-
-#: inc/compat/woocommerce.php:595
+#: inc/compat/woocommerce.php:494
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] ""
 msgstr[1] ""
+
+#: inc/compat/woocommerce.php:561
+msgid "Featured Products"
+msgstr ""
+
+#: inc/compat/woocommerce.php:571
+msgid "On Sale Now"
+msgstr ""
+
+#: inc/compat/woocommerce.php:585
+msgid "New In Store"
+msgstr ""
 
 #: inc/compat/wordpress.php:55
 msgid ""
@@ -411,29 +411,16 @@ msgstr ""
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/template-tags.php:180
+#: inc/template-tags.php:180 templates/woocommerce/loop/pagination.php:33
 msgid "&larr; Previous"
 msgstr ""
 
-#: inc/template-tags.php:181
+#: inc/template-tags.php:181 templates/woocommerce/loop/pagination.php:34
 msgid "Next &rarr;"
 msgstr ""
 
 #: inc/template-tags.php:295
 msgid "Blog"
-msgstr ""
-
-#: templates/parts/404-woocommerce.php:30
-msgid "Search"
-msgstr ""
-
-#: templates/parts/404-woocommerce.php:36
-msgid "Promoted Products"
-msgstr ""
-
-#: templates/parts/404-woocommerce.php:42
-#: templates/parts/404-woocommerce.php:44
-msgid "Popular Products"
 msgstr ""
 
 #: templates/parts/loop/page-content.php:28
@@ -459,6 +446,18 @@ msgstr ""
 #: templates/parts/loop/post-meta.php:25
 #: templates/parts/loop/post-search-footer.php:43
 msgid "1 Comment"
+msgstr ""
+
+#: templates/woocommerce/404.php:30
+msgid "Search"
+msgstr ""
+
+#: templates/woocommerce/404.php:36
+msgid "Promoted Products"
+msgstr ""
+
+#: templates/woocommerce/404.php:42 templates/woocommerce/404.php:44
+msgid "Popular Products"
 msgstr ""
 
 #. Theme Name of the plugin/theme
@@ -595,7 +594,7 @@ msgctxt "page number"
 msgid "Page %d"
 msgstr ""
 
-#: inc/template-tags.php:182
+#: inc/template-tags.php:182 templates/woocommerce/loop/pagination.php:41
 msgctxt "1. current page number, 2. total number of pages"
 msgid "Page %1$d of %2$d"
 msgstr ""
