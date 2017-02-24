@@ -163,8 +163,8 @@ function primer_paging_nav( $args = array() ) {
 
 	}
 
-	$current = ! empty( $wp_query->query_vars['paged'] ) ? (int) $wp_query->query_vars['paged'] : 1;
-	$total   = (int) $wp_query->max_num_pages;
+	$current = max( 1, get_query_var( 'paged' ) );
+	$total   = absint( $wp_query->max_num_pages );
 
 	/**
 	 * Filter the default post pagination args.

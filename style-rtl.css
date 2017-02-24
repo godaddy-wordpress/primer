@@ -2235,6 +2235,12 @@ body.no-max-width .site-info-wrapper .site-info {
   .woocommerce-page .primer-woocommerce .cart .qty {
     padding: 0.18em; }
 
+.woocommerce nav.woocommerce-pagination {
+  margin-bottom: 0;
+  text-align: right; }
+  .woocommerce nav.woocommerce-pagination .nav-links .page-numbers {
+    padding: 0.3em 0.6em; }
+
 body.post-type-archive,
 body.single-product {
   /* On Sale Badge */ }
