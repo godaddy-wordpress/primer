@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-24 20:31:21+00:00\n"
+"POT-Creation-Date: 2017-02-24 20:39:52+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -422,11 +422,11 @@ msgstr "<span class=\"meta-nav\">&larr;</span> जुने पोस्ट"
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "नवीन पोस्ट <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:180 templates/woocommerce/loop/pagination.php:33
+#: inc/template-tags.php:180 templates/woocommerce/loop/pagination.php:30
 msgid "&larr; Previous"
 msgstr ""
 
-#: inc/template-tags.php:181 templates/woocommerce/loop/pagination.php:34
+#: inc/template-tags.php:181 templates/woocommerce/loop/pagination.php:31
 #, fuzzy
 msgid "Next &rarr;"
 msgstr "नवीन टिप्पण्‍या &rarr;"
@@ -607,7 +607,7 @@ msgctxt "page number"
 msgid "Page %d"
 msgstr "पृष्ठ %d"
 
-#: inc/template-tags.php:182 templates/woocommerce/loop/pagination.php:41
+#: inc/template-tags.php:182 templates/woocommerce/loop/pagination.php:38
 msgctxt "1. current page number, 2. total number of pages"
 msgid "Page %1$d of %2$d"
 msgstr ""
