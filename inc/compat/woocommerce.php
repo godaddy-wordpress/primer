@@ -359,7 +359,8 @@ add_filter( 'primer_font_types', 'primer_wc_font_types' );
 /**
  * Change the theme overrides path for WooCommerce templates.
  *
- * @since NEXT
+ * @filter woocommerce_template_path
+ * @since  NEXT
  *
  * @return string
  */
