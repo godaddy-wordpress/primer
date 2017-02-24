@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-24 20:29:00+00:00\n"
+"POT-Creation-Date: 2017-02-24 20:31:21+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -137,21 +137,21 @@ msgstr "Hero 위젯은 첫 페이지의 머리글 이미지 위에 나타납니�
 msgid "Skip to content"
 msgstr "컨텐츠로 건너뛰기"
 
-#: inc/compat/woocommerce.php:494
+#: inc/compat/woocommerce.php:495
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d 항목"
 msgstr[1] "%d개의 항목"
 
-#: inc/compat/woocommerce.php:561
+#: inc/compat/woocommerce.php:562
 msgid "Featured Products"
 msgstr "추천 제품"
 
-#: inc/compat/woocommerce.php:571
+#: inc/compat/woocommerce.php:572
 msgid "On Sale Now"
 msgstr "현재 할인 중"
 
-#: inc/compat/woocommerce.php:585
+#: inc/compat/woocommerce.php:586
 msgid "New In Store"
 msgstr "상점의 신상품"
 

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-24 20:29:00+00:00\n"
+"POT-Creation-Date: 2017-02-24 20:31:21+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -136,21 +136,21 @@ msgstr "पहिल्या पृष्ठावरील शीर्षल�
 msgid "Skip to content"
 msgstr "सामग्रीवर जा"
 
-#: inc/compat/woocommerce.php:494
+#: inc/compat/woocommerce.php:495
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%dआयटम"
 msgstr[1] "%dआयटम्स"
 
-#: inc/compat/woocommerce.php:561
+#: inc/compat/woocommerce.php:562
 msgid "Featured Products"
 msgstr "वैशिष्ट्यीकृत उत्पादने"
 
-#: inc/compat/woocommerce.php:571
+#: inc/compat/woocommerce.php:572
 msgid "On Sale Now"
 msgstr "आता विक्रीसाठी आहेत"
 
-#: inc/compat/woocommerce.php:585
+#: inc/compat/woocommerce.php:586
 msgid "New In Store"
 msgstr "स्टोअरमध्ये नवीन"
 

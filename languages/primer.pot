@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.5.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-24 20:29:00+00:00\n"
+"POT-Creation-Date: 2017-02-24 20:31:21+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -131,21 +131,21 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/compat/woocommerce.php:494
+#: inc/compat/woocommerce.php:495
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/compat/woocommerce.php:561
+#: inc/compat/woocommerce.php:562
 msgid "Featured Products"
 msgstr ""
 
-#: inc/compat/woocommerce.php:571
+#: inc/compat/woocommerce.php:572
 msgid "On Sale Now"
 msgstr ""
 
-#: inc/compat/woocommerce.php:585
+#: inc/compat/woocommerce.php:586
 msgid "New In Store"
 msgstr ""
 

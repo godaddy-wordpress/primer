@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-24 20:29:00+00:00\n"
+"POT-Creation-Date: 2017-02-24 20:31:21+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -136,21 +136,21 @@ msgstr "Herowidgets visas ovanför rubrikbilden på framsidan."
 msgid "Skip to content"
 msgstr "Gå till innehåll"
 
-#: inc/compat/woocommerce.php:494
+#: inc/compat/woocommerce.php:495
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d artikel"
 msgstr[1] "%d artiklar"
 
-#: inc/compat/woocommerce.php:561
+#: inc/compat/woocommerce.php:562
 msgid "Featured Products"
 msgstr "Aktuella produkter"
 
-#: inc/compat/woocommerce.php:571
+#: inc/compat/woocommerce.php:572
 msgid "On Sale Now"
 msgstr "På rea nu"
 
-#: inc/compat/woocommerce.php:585
+#: inc/compat/woocommerce.php:586
 msgid "New In Store"
 msgstr "Nyheter"
 
