@@ -128,9 +128,9 @@
 			// Returns a jQuery object containing the menu element.
 			.autocomplete( 'widget' )
 			.css(
-					{
-						'z-index': 9999999
-					}
+				{
+					'z-index': 9999999
+				}
 			)
 			.attr( 'role', 'listbox' )
 			.removeAttr( 'tabindex' ) // Remove the `tabindex=0` attribute added by jQuery UI.
@@ -141,7 +141,7 @@
 			 */
 			.on( 'menufocus', function( event, ui ) {
 
-			  ui.item.attr( 'aria-selected', 'true' );
+				ui.item.attr( 'aria-selected', 'true' );
 
 			})
 			.on( 'menublur', function() {
