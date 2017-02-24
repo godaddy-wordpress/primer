@@ -16,9 +16,6 @@ if ( empty( $wp_query->max_num_pages ) || (int) $wp_query->max_num_pages < 2 ) {
 
 }
 
-$current = max( 1, get_query_var( 'paged' ) );
-$total   = absint( $wp_query->max_num_pages );
-
 /**
  * Filter the WooCommerce product pagination args.
  *
@@ -38,7 +35,7 @@ $args = (array) apply_filters( 'primer_wc_pagination_args', array(
 
 <nav class="navigation pagination woocommerce-pagination">
 
-	<h2 class="screen-reader-text"><?php printf( esc_html_x( 'Page %1$d of %2$d', '1. current page number, 2. total number of pages', 'primer' ), $current, $total ); // xss ok. ?></h2>
+	<h2 class="screen-reader-text"><?php printf( esc_html_x( 'Page %1$d of %2$d', '1. current page number, 2. total number of pages', 'primer' ), max( 1, get_query_var( 'paged' ) ), $wp_query->max_num_pages ); // xss ok. ?></h2>
 
 	<div class="nav-links">
 
