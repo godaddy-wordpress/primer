@@ -10,6 +10,13 @@
 	}
 }
 
+@media #{$large-up} {
+
+	body.primer-woocommerce-l10n.woocommerce ul.products li.product .button {
+		font-size: 0.75rem;
+	}
+}
+
 body.post-type-archive,
 body.single-product {
 	/* On Sale Badge */
