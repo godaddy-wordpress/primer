@@ -148,16 +148,16 @@ final class Primer_Hero extends Primer_Base_Widget {
 	 *
 	 * @return array
 	 */
-	protected function get_fields( array $instance, array $fields = [], $ordered = false ) {
+	protected function get_fields( array $instance, array $fields = array(), $ordered = false ) {
 
-		$fields = [
-			'title'   => [
+		$fields = array(
+			'title'   => array(
 				'label'       => __( 'Title:', 'primer' ),
 				'description' => __( 'The title of widget. Leave empty for no title.', 'primer' ),
 				'value'       => ! empty( $instance['title'] ) ? $instance['title'] : '',
 				'sortable'    => false,
-			],
-			'message' => [
+			),
+			'message' => array(
 				'label'         => __( 'Message:', 'primer' ),
 				'type'          => 'textarea',
 				'sanitizer'     => function( $value ) {
@@ -168,13 +168,13 @@ final class Primer_Hero extends Primer_Base_Widget {
 				},
 				'form_callback' => 'render_form_textarea',
 				'sortable'      => false,
-			],
-			'button_text' => [
+			),
+			'button_text' => array(
 				'label'          => __( 'Button Text:', 'primer' ),
 				'type'           => 'text',
 				'sortable'       => false,
-			],
-			'button_link'   => [
+			),
+			'button_link'   => array(
 				'label'          => __( 'Button Link URL:', 'primer' ),
 				'placeholder'    => __( 'Paste URL or type to search', 'primer' ),
 				'type'           => 'text',
@@ -183,8 +183,8 @@ final class Primer_Hero extends Primer_Base_Widget {
 				'escaper'        => 'esc_url',
 				'sortable'       => false,
 				'show_front_end' => false,
-			],
-		];
+			),
+		);
 
 		/**
 		 * Register custom fields for the hero widgets
@@ -218,15 +218,15 @@ final class Primer_Hero extends Primer_Base_Widget {
 
 		wp_enqueue_script( 'jquery-ui-autocomplete' );
 
-		wp_enqueue_script( 'primer-widgets-hero-admin', get_template_directory_uri() . "/assets/js/widgets/hero-admin{$suffix}.js", [ 'jquery', 'jquery-ui-autocomplete' ], PRIMER_VERSION, true );
+		wp_enqueue_script( 'primer-widgets-hero-admin', get_template_directory_uri() . "/assets/js/widgets/hero-admin{$suffix}.js", array( 'jquery', 'jquery-ui-autocomplete' ), PRIMER_VERSION, true );
 
 		// We need the internal linking token
 		wp_localize_script(
 			'primer-widgets-hero-admin',
 			'primer_widgets_hero_admin',
-			[
+			array(
 				'_ajax_linking_nonce' => wp_create_nonce( 'internal-linking' ),
-			]
+			)
 		);
 
 	}

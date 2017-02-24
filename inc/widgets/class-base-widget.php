@@ -13,7 +13,7 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	 *
 	 * @var array
 	 */
-	protected $field_defaults = [
+	protected $field_defaults = array(
 		'key'            => '',
 		'icon'           => '',
 		'class'          => 'widefat',
@@ -33,8 +33,8 @@ abstract class Primer_Base_Widget extends WP_Widget {
 		'atts'           => '', // Input attributes
 		'show_front_end' => true, // Are we showing this field on the front end?
 		'show_empty'     => false, // Show the field even if value is empty
-		'select_options' => [], // Only used if type=select & form_callback=render_form_select
-	];
+		'select_options' => array(), // Only used if type=select & form_callback=render_form_select
+	);
 
 	/**
 	 * Widget base constructor
@@ -58,8 +58,8 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	 */
 	public function form( $instance ) {
 
-		add_action( 'admin_footer',                            [ $this, 'enqueue_scripts' ] );
-		add_action( 'customize_controls_print_footer_scripts', [ $this, 'print_customizer_scripts' ] );
+		add_action( 'admin_footer',                            array( $this, 'enqueue_scripts' ) );
+		add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_customizer_scripts' ) );
 
 		?>
 		<script>
@@ -131,27 +131,27 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	 *
 	 * @return array
 	 */
-	protected function get_fields( array $instance, array $fields = [], $ordered = true ) {
+	protected function get_fields( array $instance, array $fields = array(), $ordered = true ) {
 
 		$order = 0;
 
 		foreach ( $fields as $key => &$field ) {
 
-			$common_properties = [
+			$common_properties = array(
 				'key'   => $key,
 				'icon'  => $key,
 				'order' => ! empty( $instance[ $key ]['order'] ) ? absint( $instance[ $key ]['order'] ) : $order,
 				'id'    => $this->get_field_id( $key ),
 				'name'  => $this->get_field_name( $key ) . '[value]',
 				'value' => ! empty( $instance[ $key ]['value'] ) ? $instance[ $key ]['value'] : '',
-			];
+			);
 
 			$common_properties = wp_parse_args( $common_properties, $this->field_defaults );
 			$field             = wp_parse_args( $field, $common_properties );
 
 			$default_closure = function( $value ) { return $value; };
 
-			foreach ( [ 'escaper', 'sanitizer' ] as $key ) {
+			foreach ( array( 'escaper', 'sanitizer' ) as $key ) {
 
 				$field[ $key ] = ! is_callable( $field[ $key ] ) ? $default_closure : $field[ $key ];
 
@@ -257,7 +257,7 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	 */
 	protected function before_form_field( array $field ) {
 
-		$classes = [ $field['type'], $field['key'] ];
+		$classes = array( $field['type'], $field['key'] );
 
 		if ( ! $field['sortable'] ) {
 
