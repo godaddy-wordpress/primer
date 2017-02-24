@@ -115,6 +115,8 @@ final class Primer_Hero extends Primer_Base_Widget {
 				 * @filter primer_widget_hero_link_class
 				 *
 				 * @since NEXT
+				 *
+				 * @var array
 				 */
 				$class = apply_filters( 'primer_widget_hero_link_class', [ 'button' ] );
 
@@ -191,8 +193,7 @@ final class Primer_Hero extends Primer_Base_Widget {
 		 *
 		 * @since NEXT
 		 *
-		 * @var array $fields
-		 * @var object $instance
+		 * @var array
 		 */
 		$fields = apply_filters( 'primer_widget_hero_custom_fields', $fields, $instance );
 		$fields = parent::get_fields( $instance, $fields, $ordered );
@@ -202,8 +203,7 @@ final class Primer_Hero extends Primer_Base_Widget {
 		 *
 		 * @since NEXT
 		 *
-		 * @var array $fields
-		 * @var object $instance
+		 * @var array
 		 */
 		return (array) apply_filters( 'primer_widget_hero_fields', $fields, $instance );
 
