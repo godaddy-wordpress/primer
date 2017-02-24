@@ -91,7 +91,7 @@ abstract class Primer_Base_Widget extends WP_Widget {
 
 			if ( 'checkbox' === $field['type'] && ! isset( $new_instance[ $key ]['value'] ) ) {
 
-				$new_instance[ $key ] = [ 'value' => 'no' ];
+				$new_instance[ $key ] = array( 'value' => 'no' );
 
 			}
 

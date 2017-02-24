@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Coding Standards for Plugins">
+    <description>Generally-applicable sniffs for WordPress plugins</description>
+
+    <rule ref="WordPress-Docs" />
+    <rule ref="WordPress-Core">
+        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.BlankLineAfterEnd"></exclude>
+    </rule>
+
+    <exclude-pattern>*/dev/*</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+</ruleset>

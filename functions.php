@@ -460,7 +460,7 @@ function primer_register_widgets() {
 	 */
 	$widgets = apply_filters( 'primer_widgets',
 		array(
-			'Primer_Hero' => get_template_directory() . '/inc/widgets/class-hero.php'
+			'Primer_Hero' => get_template_directory() . '/inc/widgets/class-hero.php',
 		)
 	);
 
@@ -475,7 +475,6 @@ function primer_register_widgets() {
 		}
 
 	}
-
 
 }
 add_action( 'widgets_init', 'primer_register_widgets' );
