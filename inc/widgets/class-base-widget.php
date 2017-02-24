@@ -6,6 +6,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 }
 
+/**
+ * Widget base class.
+ *
+ * @class      Primer_Base_Widget
+ * @package    Classes
+ * @subpackage Widgets
+ * @category   Class
+ * @author     GoDaddy
+ * @since      NEXT
+ * @extends    WP_Widget
+ */
 abstract class Primer_Base_Widget extends WP_Widget {
 
 	/**
@@ -26,14 +37,14 @@ abstract class Primer_Base_Widget extends WP_Widget {
 		'sanitizer'      => 'sanitize_text_field',
 		'escaper'        => 'esc_html',
 		'form_callback'  => 'render_form_input',
-		'default'        => '', // If you need a default value
+		'default'        => '', // If you need a default value.
 		'value'          => '',
 		'placeholder'    => '',
 		'sortable'       => true,
-		'atts'           => '', // Input attributes
+		'atts'           => '', // Input attributes.
 		'show_front_end' => true, // Are we showing this field on the front end?
-		'show_empty'     => false, // Show the field even if value is empty
-		'select_options' => array(), // Only used if type=select & form_callback=render_form_select
+		'show_empty'     => false, // Show the field even if value is empty.
+		'select_options' => array(), // Only used if type=select & form_callback=render_form_select.
 	);
 
 	/**
@@ -44,24 +55,9 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	private $fields;
 
 	/**
-	 * Widget base constructor
+	 * Add common ressources needed for the form,
 	 *
-	 * @param string $id_base
-	 * @param string $name
-	 * @param array  $widget_options
-	 */
-	public function __construct( $id_base, $name, array $widget_options ) {
-
-		parent::__construct( $id_base, $name, $widget_options );
-
-	}
-
-	/**
-	 * Add common ressources needed for the form
-	 *
-	 * @param array $instance
-	 *
-	 * @return string|void
+	 * @param array $instance Widget instance.
 	 */
 	public function form( $instance ) {
 
@@ -72,7 +68,7 @@ abstract class Primer_Base_Widget extends WP_Widget {
 		<script>
 			( function ( $ ) {
 
-				// This let us know that we appended a new widget to reset sortables
+				// This let us know that we appended a new widget to reset sortables.
 				$( document ).trigger( 'primer.widgets.change' );
 
 			} )( jQuery );
@@ -82,7 +78,7 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	}
 
 	/**
-	 * Sanitize widget form values as they are saved
+	 * Sanitize widget form values as they are saved.
 	 *
 	 * @param  array $new_instance Values just sent to be saved.
 	 * @param  array $old_instance Previously saved values from database.
@@ -93,7 +89,7 @@ abstract class Primer_Base_Widget extends WP_Widget {
 
 		$fields = $this->get_fields( $old_instance );
 
-		// Force value for checkbox since they are not posted
+		// Force value for checkbox since they are not posted.
 		foreach ( $fields as $key => $field ) {
 
 			if ( 'checkbox' === $field['type'] && ! isset( $new_instance[ $key ]['value'] ) ) {
@@ -104,14 +100,14 @@ abstract class Primer_Base_Widget extends WP_Widget {
 
 		}
 
-		// Starting at 1 since title order is 0
+		// Starting at 1 since title order is 0.
 		$order = 1;
 
 		foreach ( $new_instance as $key => &$instance ) {
 
 			$sanitizer_callback = $fields[ $key ]['sanitizer'];
 
-			// Title can't be an array
+			// Title can't be an array.
 			if ( 'title' === $key ) {
 
 				$instance = $sanitizer_callback( $instance['value'] );
@@ -130,11 +126,11 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	}
 
 	/**
-	 * Initialize fields for use on front-end of forms
+	 * Initialize fields for use on front-end of forms.
 	 *
-	 * @param  array $instance
-	 * @param  array $fields (optional)
-	 * @param  bool  $ordered (optional)
+	 * @param  array $instance Widget instance.
+	 * @param  array $fields (optional) Widget fields.
+	 * @param  bool  $ordered (optional) Whether fields are ordered or not.
 	 *
 	 * @return array
 	 */
@@ -180,15 +176,15 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	}
 
 	/**
-	 * Order array by field order
+	 * Order array by field order.
 	 *
-	 * @param  array $fields
+	 * @param array $fields Widgets fields.
 	 *
 	 * @return array
 	 */
 	protected function order_field( array $fields ) {
 
-	    $this->fields = $fields;
+		$this->fields = $fields;
 
 		uksort( $fields, array( $this, 'sort_order' ) );
 
@@ -199,14 +195,14 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	/**
 	 * PHP 5.2 compatible uksort helper function.
 	 *
-	 * @param $a
-	 * @param $b
+	 * @param string $a First array key.
+	 * @param string $b Second array key.
 	 *
-	 * @return int
+	 * @return int New position.
 	 */
 	private function sort_order( $a, $b ) {
 
-		// We want title first and order of non sortable fields doesn't matter
+		// We want title first and order of non sortable fields doesn't matter.
 		if ( ! $this->fields[ $a ]['sortable'] && 'title' !== $a ) {
 
 			return 1;
@@ -218,9 +214,9 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	}
 
 	/**
-	 * Check if all the fields we show on the front-end are empty
+	 * Check if all the fields we show on the front-end are empty.
 	 *
-	 * @param  array $fields
+	 * @param array $fields Widget fields.
 	 *
 	 * @return bool
 	 */
@@ -256,9 +252,9 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	}
 
 	/**
-	 * Print current label
+	 * Print current label.
 	 *
-	 * @param array $field
+	 * @param array $field Widget field.
 	 */
 	protected function print_label( array $field ) {
 
@@ -274,7 +270,7 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	/**
 	 * Print label and wrapper
 	 *
-	 * @param array $field
+	 * @param array $field Widget field.
 	 */
 	protected function before_form_field( array $field ) {
 
@@ -292,10 +288,12 @@ abstract class Primer_Base_Widget extends WP_Widget {
 
 		}
 
+		// @codingStandardsIgnoreStart
 		printf(
 			'<p class="%s">',
 			implode( ' ', $classes )
 		);
+		// @codingStandardsIgnoreEnd
 
 		if ( ! $field['label_after'] ) {
 
@@ -312,9 +310,9 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	}
 
 	/**
-	 * Render input field for admin form
+	 * Render input field for admin form.
 	 *
-	 * @param array $field
+	 * @param array $field Widget field.
 	 */
 	protected function render_form_input( array $field ) {
 
@@ -344,7 +342,7 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	/**
 	 * Render select field
 	 *
-	 * @param array $field
+	 * @param array $field Widget field.
 	 */
 	protected function render_form_select( array $field ) {
 
@@ -359,12 +357,14 @@ abstract class Primer_Base_Widget extends WP_Widget {
 
 		foreach ( $field['select_options'] as $value => $name ) {
 
+			// @codingStandardsIgnoreStart
 			printf(
 				'<option value="%s" %s>%s</option>',
 				$value,
 				$field['value'] === $value ? 'selected' : '',
 				$name
 			);
+			// @codingStandardsIgnoreEnd
 
 		}
 
@@ -381,9 +381,9 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	}
 
 	/**
-	 * Render textarea field for admin widget form
+	 * Render textarea field for admin widget form.
 	 *
-	 * @param array $field
+	 * @param array $field Widget field.
 	 */
 	protected function render_form_textarea( array $field ) {
 
@@ -403,9 +403,9 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	}
 
 	/**
-	 * Close wrapper of form field
+	 * Close wrapper of form field.
 	 *
-	 * @param array $field
+	 * @param array $field Widget field.
 	 */
 	protected function after_form_field( array $field ) {
 
@@ -420,16 +420,16 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	}
 
 	/**
-	 * Print beginning of front-end display
+	 * Print beginning of front-end display.
 	 *
-	 * @param array $args
-	 * @param array $fields
+	 * @param array $args Widget args.
+	 * @param array $fields Widget fields.
 	 */
 	protected function before_widget( array $args, array &$fields ) {
 
 		$title = array_shift( $fields );
 
-		echo $args['before_widget'];
+		echo $args['before_widget']; // xss ok.
 
 		if ( ! empty( $title['value'] ) ) {
 
@@ -442,32 +442,32 @@ abstract class Primer_Base_Widget extends WP_Widget {
 			 */
 			$title = (string) apply_filters( 'widget_title', $title['value'] );
 
-			echo $args['before_title'] . $title . $args['after_title'];
+			echo $args['before_title'] . $title . $args['after_title']; // xss ok.
 
 		}
 
 	}
 
 	/**
-	 * Print end of front-end display
+	 * Print end of front-end display.
 	 *
-	 * @param array $args
-	 * @param array $fields
+	 * @param array $args Widget args.
+	 * @param array $fields Widget fields.
 	 */
 	protected function after_widget( array $args, array &$fields ) {
 
-		echo $args['after_widget'];
+		echo $args['after_widget']; // xss ok.
 
 	}
 
 	/**
 	 * Helper to output only 'checked' and not checked='checked'
-	 * IE 9 & 10 don't support the latter
+	 * IE 9 & 10 don't support the latter.
 	 *
-	 * @param mixed $helper  One of the values to compare
-	 * @param mixed $current (true) The other value to compare if not just true
-	 * @param bool  $echo    Whether to echo or just return the string
-	 * @return string html attribute or empty string
+	 * @param mixed $helper  One of the values to compare.
+	 * @param mixed $current (true) The other value to compare if not just true.
+	 * @param bool  $echo    Whether to echo or just return the string.
+	 * @return string html attribute or empty string.
 	 */
 	public function checked( $helper, $current, $echo = false ) {
 
@@ -475,7 +475,7 @@ abstract class Primer_Base_Widget extends WP_Widget {
 
 		if ( $echo ) {
 
-			echo $result;
+			echo $result; // xss ok.
 
 		}
 
