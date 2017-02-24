@@ -37,6 +37,13 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	);
 
 	/**
+	 * Holds fields array for other function to access.
+	 *
+	 * @var array
+	 */
+	private $fields;
+
+	/**
 	 * Widget base constructor
 	 *
 	 * @param string $id_base
@@ -149,7 +156,8 @@ abstract class Primer_Base_Widget extends WP_Widget {
 			$common_properties = wp_parse_args( $common_properties, $this->field_defaults );
 			$field             = wp_parse_args( $field, $common_properties );
 
-			$default_closure = function( $value ) { return $value; };
+			$default_closure = function( $value ) { return $value;
+			};
 
 			foreach ( array( 'escaper', 'sanitizer' ) as $key ) {
 
@@ -180,20 +188,32 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	 */
 	protected function order_field( array $fields ) {
 
-		uksort( $fields, function( $a, $b ) use ( $fields ) {
+	    $this->fields = $fields;
 
-			// We want title first and order of non sortable fields doesn't matter
-			if ( ! $fields[ $a ]['sortable'] && 'title' !== $a ) {
-
-				return 1;
-
-			}
-
-			return ( $fields[ $a ]['order'] < $fields[ $b ]['order'] ) ? -1 : 1;
-
-		} );
+		uksort( $fields, array( $this, 'sort_order' ) );
 
 		return $fields;
+
+	}
+
+	/**
+	 * PHP 5.2 compatible uksort helper function.
+	 *
+	 * @param $a
+	 * @param $b
+	 *
+	 * @return int
+	 */
+	private function sort_order( $a, $b ) {
+
+		// We want title first and order of non sortable fields doesn't matter
+		if ( ! $this->fields[ $a ]['sortable'] && 'title' !== $a ) {
+
+			return 1;
+
+		}
+
+		return ( $this->fields[ $a ]['order'] < $this->fields[ $b ]['order'] ) ? -1 : 1;
 
 	}
 
@@ -253,6 +273,7 @@ abstract class Primer_Base_Widget extends WP_Widget {
 
 	/**
 	 * Print label and wrapper
+	 *
 	 * @param array $field
 	 */
 	protected function before_form_field( array $field ) {
@@ -443,9 +464,9 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	 * Helper to output only 'checked' and not checked='checked'
 	 * IE 9 & 10 don't support the latter
 	 *
-	 * @param mixed  $helper  One of the values to compare
-	 * @param mixed  $current (true) The other value to compare if not just true
-	 * @param bool   $echo    Whether to echo or just return the string
+	 * @param mixed $helper  One of the values to compare
+	 * @param mixed $current (true) The other value to compare if not just true
+	 * @param bool  $echo    Whether to echo or just return the string
 	 * @return string html attribute or empty string
 	 */
 	public function checked( $helper, $current, $echo = false ) {
