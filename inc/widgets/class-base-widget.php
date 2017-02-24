@@ -152,12 +152,9 @@ abstract class Primer_Base_Widget extends WP_Widget {
 			$common_properties = wp_parse_args( $common_properties, $this->field_defaults );
 			$field             = wp_parse_args( $field, $common_properties );
 
-			$default_closure = function( $value ) { return $value;
-			};
-
 			foreach ( array( 'escaper', 'sanitizer' ) as $key ) {
 
-				$field[ $key ] = ! is_callable( $field[ $key ] ) ? $default_closure : $field[ $key ];
+				$field[ $key ] = ! is_callable( $field[ $key ] ) ? array( $this, 'return_same_value' ) : $field[ $key ];
 
 			}
 
@@ -172,6 +169,17 @@ abstract class Primer_Base_Widget extends WP_Widget {
 		}
 
 		return $fields;
+
+	}
+
+	/**
+	 * Default escaper and sanitizer
+	 *
+	 * @param mixed Value to return.
+	 */
+	public function return_same_value( $value ) {
+
+		return $value;
 
 	}
 
