@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * Custom template tags for this theme.
+ *
+ * @author   GoDaddy
+ * @since    NEXT
+ */
+
+
 if ( ! defined( 'ABSPATH' ) ) {
 
 	exit;

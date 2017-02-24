@@ -2,9 +2,9 @@
 <ruleset name="WordPress Coding Standards for Plugins">
     <description>Generally-applicable sniffs for WordPress plugins</description>
 
-    <rule ref="WordPress-Docs" />
-    <rule ref="WordPress-Core">
-        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.BlankLineAfterEnd"></exclude>
+    <rule ref="WordPress">
+        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing"></exclude>
+        <exclude name="Squiz.Commenting.FileComment"></exclude>
     </rule>
 
     <exclude-pattern>*/dev/*</exclude-pattern>
