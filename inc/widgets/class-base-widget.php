@@ -105,18 +105,16 @@ abstract class Primer_Base_Widget extends WP_Widget {
 
 		foreach ( $new_instance as $key => &$instance ) {
 
-			$sanitizer_callback = $fields[ $key ]['sanitizer'];
-
 			// Title can't be an array.
 			if ( 'title' === $key ) {
 
-				$instance = $sanitizer_callback( $instance['value'] );
+				$instance = call_user_func( $fields[ $key ]['sanitizer'], $instance['value'] );
 
 				continue;
 
 			}
 
-			$instance['value'] = $sanitizer_callback( $instance['value'] );
+			$instance['value'] = call_user_func( $fields[ $key ]['sanitizer'], $instance['value'] );
 			$instance['order'] = $order++;
 
 		}
@@ -173,9 +171,9 @@ abstract class Primer_Base_Widget extends WP_Widget {
 	}
 
 	/**
-	 * Default escaper and sanitizer
+	 * Default escaper and sanitizer.
 	 *
-	 * @param mixed Value to return.
+	 * @param mixed $value Value to return.
 	 */
 	public function return_same_value( $value ) {
 

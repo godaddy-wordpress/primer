@@ -123,7 +123,7 @@ final class Primer_Hero extends Primer_Base_Widget {
 				 *
 				 * @var array
 				 */
-				$class = apply_filters( 'primer_widget_hero_link_class', [ 'button' ] );
+				$class = apply_filters( 'primer_widget_hero_link_class', array( 'button' ) );
 
 				// @codingStandardsIgnoreStart
 				printf(
