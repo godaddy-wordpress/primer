@@ -402,3 +402,40 @@ function primer_wp_title( $title, $sep ) {
 
 }
 add_filter( 'wp_title', 'primer_wp_title', 10, 2 );
+
+/**
+ * Customize the default pagination links template.
+ *
+ * @filter navigation_markup_template
+ * @since  NEXT
+ *
+ * @param  string $template The navigation template.
+ * @param  string $class    The class passed by the calling function.
+ *
+ * @return string
+ */
+function primer_paging_nav_template( $template, $class ) {
+
+	if ( 'pagination' !== $class ) {
+
+		return $template;
+
+	}
+
+	global $wp_query;
+
+	$search  = '<div class="nav-links">';
+	$replace = sprintf(
+		'<div class="paging-nav-text">%s</div>%s',
+		sprintf(
+			esc_html_x( 'Page %1$d of %2$d', '1. current page number, 2. total number of pages', 'primer' ),
+			max( 1, get_query_var( 'paged' ) ),
+			absint( $wp_query->max_num_pages )
+		),
+		$search
+	);
+
+	return str_replace( $search, $replace, $template );
+
+}
+add_filter( 'navigation_markup_template', 'primer_paging_nav_template', 10, 2 );
