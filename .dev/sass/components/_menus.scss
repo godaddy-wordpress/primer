@@ -332,15 +332,14 @@ body.no-max-width .main-navigation {
 		}
 	}
 
+	.paging-nav-text {
+		display: none;
+	}
+
 	@media #{$small-only} {
 
-		.screen-reader-text {
+		.paging-nav-text {
 			display: inline-block;
-			clip: auto;
-			position: relative !important;
-			height: auto;
-			width: auto;
-			overflow: visible;
 			font-size: 0.9rem;
 			font-weight: normal;
 			color: $color__primary-text;

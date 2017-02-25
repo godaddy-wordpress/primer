@@ -16,6 +16,19 @@
 
 	.nav-links .page-numbers {
 		padding: 0.3em 0.6em;
+
+		&:last-child {
+			margin-right: 0;
+			padding-right: 0;
+		}
+
+		@media #{$small-only} {
+
+			&:first-child {
+				margin-left: 0;
+				padding-left: 0;
+			}
+		}
 	}
 }
 

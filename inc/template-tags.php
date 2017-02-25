@@ -163,8 +163,10 @@ function primer_paging_nav( $args = array() ) {
 
 	}
 
-	$current = max( 1, get_query_var( 'paged' ) );
-	$total   = absint( $wp_query->max_num_pages );
+	global $post;
+
+	$post_type_labels = get_post_type_labels( get_post_type_object( $post->post_type ) );
+	$post_type_label  = isset( $post_type_labels->singular_name ) ? $post_type_labels->singular_name : $post->post_type;
 
 	/**
 	 * Filter the default post pagination args.
@@ -179,14 +181,51 @@ function primer_paging_nav( $args = array() ) {
 	$defaults = (array) apply_filters( 'primer_paging_nav_default_args', array(
 		'prev_text'          => __( '&larr; Previous', 'primer' ),
 		'next_text'          => __( 'Next &rarr;', 'primer' ),
-		'screen_reader_text' => sprintf( esc_html_x( 'Page %1$d of %2$d', '1. current page number, 2. total number of pages', 'primer' ), $current, $total ),
-	), $current, $total );
+		'screen_reader_text' => sprintf( esc_html_x( '%1$s navigation', 'post type singular label', 'primer' ), esc_html( $post_type_label ) ),
+	), max( 1, get_query_var( 'paged' ) ), absint( $wp_query->max_num_pages ) );
 
 	$args = wp_parse_args( $args, $defaults );
 
 	the_posts_pagination( $args );
 
 }
+
+/**
+ * Customize the default pagination links template.
+ *
+ * @filter navigation_markup_template
+ * @since  NEXT
+ *
+ * @param  string $template The navigation template.
+ * @param  string $class    The class passed by the calling function.
+ *
+ * @return string
+ */
+function primer_paging_nav_template( $template, $class ) {
+
+	if ( 'pagination' !== $class ) {
+
+		return $template;
+
+	}
+
+	global $wp_query;
+
+	$search  = '<div class="nav-links">';
+	$replace = sprintf(
+		'<div class="paging-nav-text">%s</div>%s',
+		sprintf(
+			esc_html_x( 'Page %1$d of %2$d', '1. current page number, 2. total number of pages', 'primer' ),
+			max( 1, get_query_var( 'paged' ) ),
+			absint( $wp_query->max_num_pages )
+		),
+		$search
+	);
+
+	return str_replace( $search, $replace, $template );
+
+}
+add_filter( 'navigation_markup_template', 'primer_paging_nav_template', 10, 2 );
 
 /**
  * Display navigation to next/previous post, when applicable.
