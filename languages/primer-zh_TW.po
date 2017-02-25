@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-24 20:39:52+00:00\n"
+"POT-Creation-Date: 2017-02-22 04:50:19+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,11 +16,11 @@ msgstr ""
 "esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
-#: 404.php:22 templates/woocommerce/404.php:22
+#: 404.php:22 templates/parts/404-woocommerce.php:22
 msgid "Oops! That page can't be found."
 msgstr "糟糕了！找不到該頁面。"
 
-#: 404.php:28 templates/woocommerce/404.php:28
+#: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
 "It looks like nothing was found at this location. Please try searching below:"
 msgstr "在此位置中找不到。請嘗試搜尋下列項目："
@@ -132,23 +132,23 @@ msgstr "Hero 小工具會出現在首頁的標題圖片上。"
 msgid "Skip to content"
 msgstr "略過內容"
 
-#: inc/compat/woocommerce.php:495
+#: inc/compat/woocommerce.php:419
+msgid "Featured Products"
+msgstr "特色產品"
+
+#: inc/compat/woocommerce.php:429
+msgid "On Sale Now"
+msgstr "現正特價促銷"
+
+#: inc/compat/woocommerce.php:443
+msgid "New In Store"
+msgstr "店內新貨"
+
+#: inc/compat/woocommerce.php:595
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d 個項目"
 msgstr[1] "%d 個項目"
-
-#: inc/compat/woocommerce.php:562
-msgid "Featured Products"
-msgstr "特色產品"
-
-#: inc/compat/woocommerce.php:572
-msgid "On Sale Now"
-msgstr "現正特價促銷"
-
-#: inc/compat/woocommerce.php:586
-msgid "New In Store"
-msgstr "店內新貨"
 
 #: inc/compat/wordpress.php:55
 msgid ""
@@ -170,7 +170,7 @@ msgstr "標語文字"
 msgid "Hero Text"
 msgstr "Hero 文字"
 
-#: inc/customizer/colors.php:107 inc/customizer/colors.php:326
+#: inc/customizer/colors.php:107 inc/customizer/colors.php:325
 msgid "Text"
 msgstr "文字"
 
@@ -190,107 +190,107 @@ msgstr "主要文字"
 msgid "Paragraphs, lists, menu links, quotes and tables."
 msgstr "段落、清單、功能表連結、引文和表格。"
 
-#: inc/customizer/colors.php:198
+#: inc/customizer/colors.php:197
 msgid "Secondary Text"
 msgstr "次要文字"
 
-#: inc/customizer/colors.php:199
+#: inc/customizer/colors.php:198
 msgid "Post bylines, comment counts, post footers and quote footers."
 msgstr "貼文署名、評論次數、貼文結尾及引文結尾。"
 
-#: inc/customizer/colors.php:213
+#: inc/customizer/colors.php:212
 msgid "Widget Heading Text"
 msgstr "小工具標題文字"
 
-#: inc/customizer/colors.php:230
+#: inc/customizer/colors.php:229
 msgid "Widget Text"
 msgstr "小工具文字"
 
-#: inc/customizer/colors.php:242
+#: inc/customizer/colors.php:241
 msgid "Menu Text"
 msgstr "功能表文字"
 
-#: inc/customizer/colors.php:264
+#: inc/customizer/colors.php:263
 msgid "Copyright Text"
 msgstr "著作權文字"
 
-#: inc/customizer/colors.php:278
+#: inc/customizer/colors.php:277
 msgid "Link Text"
 msgstr "連結文字"
 
-#: inc/customizer/colors.php:300 inc/customizer/colors.php:385
+#: inc/customizer/colors.php:299 inc/customizer/colors.php:381
 msgid "Background"
 msgstr "背景"
 
-#: inc/customizer/colors.php:343
+#: inc/customizer/colors.php:342
 msgid "Page Background"
 msgstr "網頁背景"
 
-#: inc/customizer/colors.php:353
+#: inc/customizer/colors.php:352
 msgid "Content Background"
 msgstr "內容背景"
 
-#: inc/customizer/colors.php:366
+#: inc/customizer/colors.php:362
 msgid "Hero Background"
 msgstr "Hero 背景"
 
-#: inc/customizer/colors.php:395
+#: inc/customizer/colors.php:391
 msgid "Widgets Background"
 msgstr "小工具背景"
 
-#: inc/customizer/colors.php:406
+#: inc/customizer/colors.php:402
 msgid "Widget Content Background"
 msgstr "小工具內容背景"
 
-#: inc/customizer/colors.php:417
+#: inc/customizer/colors.php:413
 msgid "Footer Background"
 msgstr "結尾背景"
 
-#: inc/customizer/colors.php:455 inc/customizer/layouts.php:298
+#: inc/customizer/colors.php:451 inc/customizer/layouts.php:298
 msgid "Custom"
 msgstr "自訂"
 
-#: inc/customizer/colors.php:472 inc/customizer/layouts.php:294
+#: inc/customizer/colors.php:468 inc/customizer/layouts.php:294
 msgid "Default"
 msgstr "預設"
 
-#: inc/customizer/colors.php:714
+#: inc/customizer/colors.php:710
 msgid "Colors"
 msgstr "顏色"
 
-#: inc/customizer/colors.php:723
+#: inc/customizer/colors.php:719
 msgid "Color Schemes"
 msgstr "色彩配置"
 
-#: inc/customizer/colors.php:731
+#: inc/customizer/colors.php:727
 msgid "Header"
 msgstr "標題"
 
-#: inc/customizer/colors.php:739
+#: inc/customizer/colors.php:735
 msgid "Menu"
 msgstr "功能表"
 
-#: inc/customizer/colors.php:747
+#: inc/customizer/colors.php:743
 msgid "Buttons"
 msgstr "按鈕"
 
-#: inc/customizer/colors.php:755
+#: inc/customizer/colors.php:751
 msgid "Content"
 msgstr "內容"
 
-#: inc/customizer/colors.php:763
+#: inc/customizer/colors.php:759
 msgid "Footer"
 msgstr "頁尾"
 
-#: inc/customizer/colors.php:979
+#: inc/customizer/colors.php:975
 msgid "Base Color Scheme"
 msgstr "基本色彩配置"
 
-#: inc/customizer/colors.php:1291
+#: inc/customizer/colors.php:1287
 msgid "Hero Background Overlay"
 msgstr "Hero 背景重疊"
 
-#: inc/customizer/colors.php:1292
+#: inc/customizer/colors.php:1288
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr "使用自訂標頭圖片時控制色彩重疊透明度。"
@@ -405,30 +405,34 @@ msgstr "允許特色圖片出現在目前貼文中並取代 Hero 圖片。"
 msgid "404 Page Not Found"
 msgstr "404 找不到頁面"
 
-#: inc/template-tags.php:141
+#: inc/template-tags.php:135
 msgid "Posts navigation"
 msgstr "貼文瀏覽"
 
-#: inc/template-tags.php:147
+#: inc/template-tags.php:141
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> 較舊的貼文"
 
-#: inc/template-tags.php:153
+#: inc/template-tags.php:147
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "較新的貼文 <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:180 templates/woocommerce/loop/pagination.php:30
-msgid "&larr; Previous"
-msgstr ""
-
-#: inc/template-tags.php:181 templates/woocommerce/loop/pagination.php:31
-#, fuzzy
-msgid "Next &rarr;"
-msgstr "較新的評論 &rarr;"
-
-#: inc/template-tags.php:295
+#: inc/template-tags.php:263
 msgid "Blog"
 msgstr "部落格"
+
+#: templates/parts/404-woocommerce.php:30
+msgid "Search"
+msgstr "搜尋"
+
+#: templates/parts/404-woocommerce.php:36
+msgid "Promoted Products"
+msgstr "促銷產銷"
+
+#: templates/parts/404-woocommerce.php:42
+#: templates/parts/404-woocommerce.php:44
+msgid "Popular Products"
+msgstr "熱門產品"
 
 #: templates/parts/loop/page-content.php:28
 #: templates/parts/loop/post-content.php:19
@@ -454,18 +458,6 @@ msgstr "留下評論"
 #: templates/parts/loop/post-search-footer.php:43
 msgid "1 Comment"
 msgstr "1 則評論"
-
-#: templates/woocommerce/404.php:30
-msgid "Search"
-msgstr "搜尋"
-
-#: templates/woocommerce/404.php:36
-msgid "Promoted Products"
-msgstr "促銷產銷"
-
-#: templates/woocommerce/404.php:42 templates/woocommerce/404.php:44
-msgid "Popular Products"
-msgstr "熱門產品"
 
 #. Theme Name of the plugin/theme
 msgid "Primer"
@@ -516,57 +508,57 @@ msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
 msgstr "準備好發佈第一則貼文嗎？%s"
 
-#: inc/customizer/colors.php:482
+#: inc/customizer/colors.php:478
 msgctxt "color scheme name"
 msgid "Blush"
 msgstr "筆刷"
 
-#: inc/customizer/colors.php:486
+#: inc/customizer/colors.php:482
 msgctxt "color scheme name"
 msgid "Bronze"
 msgstr "銅牌"
 
-#: inc/customizer/colors.php:490
+#: inc/customizer/colors.php:486
 msgctxt "color scheme name"
 msgid "Canary"
 msgstr "金絲雀"
 
-#: inc/customizer/colors.php:494
+#: inc/customizer/colors.php:490
 msgctxt "color scheme name"
 msgid "Cool"
 msgstr "很棒的"
 
-#: inc/customizer/colors.php:498
+#: inc/customizer/colors.php:494
 msgctxt "color scheme name"
 msgid "Dark"
 msgstr "暗"
 
-#: inc/customizer/colors.php:502
+#: inc/customizer/colors.php:498
 msgctxt "color scheme name"
 msgid "Iguana"
 msgstr "鬣蜥蜴"
 
-#: inc/customizer/colors.php:506
+#: inc/customizer/colors.php:502
 msgctxt "color scheme name"
 msgid "Muted"
 msgstr "靜音"
 
-#: inc/customizer/colors.php:510
+#: inc/customizer/colors.php:506
 msgctxt "color scheme name"
 msgid "Plum"
 msgstr "梅紅"
 
-#: inc/customizer/colors.php:514
+#: inc/customizer/colors.php:510
 msgctxt "color scheme name"
 msgid "Rose"
 msgstr "玫瑰"
 
-#: inc/customizer/colors.php:518
+#: inc/customizer/colors.php:514
 msgctxt "color scheme name"
 msgid "Tangerine"
 msgstr "橘子"
 
-#: inc/customizer/colors.php:522
+#: inc/customizer/colors.php:518
 msgctxt "color scheme name"
 msgid "Turquoise"
 msgstr "綠寶"
@@ -600,11 +592,6 @@ msgstr "搜尋以下項目的結果： %s"
 msgctxt "page number"
 msgid "Page %d"
 msgstr "第 %d 頁"
-
-#: inc/template-tags.php:182 templates/woocommerce/loop/pagination.php:38
-msgctxt "1. current page number, 2. total number of pages"
-msgid "Page %1$d of %2$d"
-msgstr ""
 
 #: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"

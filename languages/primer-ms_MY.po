@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-24 20:39:52+00:00\n"
+"POT-Creation-Date: 2017-02-22 04:50:19+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,11 +16,11 @@ msgstr ""
 "esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
-#: 404.php:22 templates/woocommerce/404.php:22
+#: 404.php:22 templates/parts/404-woocommerce.php:22
 msgid "Oops! That page can't be found."
 msgstr "Oops! Halaman ini tidak dapat ditemui."
 
-#: 404.php:28 templates/woocommerce/404.php:28
+#: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
 "It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
@@ -142,23 +142,23 @@ msgstr "Widget hero muncul pada imej pengepala di halaman depan."
 msgid "Skip to content"
 msgstr "Langkau ke kandungan"
 
-#: inc/compat/woocommerce.php:495
+#: inc/compat/woocommerce.php:419
+msgid "Featured Products"
+msgstr "Featured Products"
+
+#: inc/compat/woocommerce.php:429
+msgid "On Sale Now"
+msgstr "On Sale Now"
+
+#: inc/compat/woocommerce.php:443
+msgid "New In Store"
+msgstr "New In Store"
+
+#: inc/compat/woocommerce.php:595
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d item"
 msgstr[1] "%d items"
-
-#: inc/compat/woocommerce.php:562
-msgid "Featured Products"
-msgstr "Featured Products"
-
-#: inc/compat/woocommerce.php:572
-msgid "On Sale Now"
-msgstr "On Sale Now"
-
-#: inc/compat/woocommerce.php:586
-msgid "New In Store"
-msgstr "New In Store"
 
 #: inc/compat/wordpress.php:55
 msgid ""
@@ -180,7 +180,7 @@ msgstr "Teks Cogan Kata"
 msgid "Hero Text"
 msgstr "Teks Hero"
 
-#: inc/customizer/colors.php:107 inc/customizer/colors.php:326
+#: inc/customizer/colors.php:107 inc/customizer/colors.php:325
 msgid "Text"
 msgstr "Teks"
 
@@ -200,107 +200,107 @@ msgstr "Teks Utama"
 msgid "Paragraphs, lists, menu links, quotes and tables."
 msgstr "Perenggan, senarai, pautan menu, petikan dan jadual."
 
-#: inc/customizer/colors.php:198
+#: inc/customizer/colors.php:197
 msgid "Secondary Text"
 msgstr "Teks Sekunder"
 
-#: inc/customizer/colors.php:199
+#: inc/customizer/colors.php:198
 msgid "Post bylines, comment counts, post footers and quote footers."
 msgstr "Panji pengarang pos, bilangan ulasan, pengaki pos dan pengaki petikan."
 
-#: inc/customizer/colors.php:213
+#: inc/customizer/colors.php:212
 msgid "Widget Heading Text"
 msgstr "Teks Pengepala Widget"
 
-#: inc/customizer/colors.php:230
+#: inc/customizer/colors.php:229
 msgid "Widget Text"
 msgstr "Teks Widget"
 
-#: inc/customizer/colors.php:242
+#: inc/customizer/colors.php:241
 msgid "Menu Text"
 msgstr "Teks Menu"
 
-#: inc/customizer/colors.php:264
+#: inc/customizer/colors.php:263
 msgid "Copyright Text"
 msgstr "Teks Hak Cipta"
 
-#: inc/customizer/colors.php:278
+#: inc/customizer/colors.php:277
 msgid "Link Text"
 msgstr "Teks Pautan"
 
-#: inc/customizer/colors.php:300 inc/customizer/colors.php:385
+#: inc/customizer/colors.php:299 inc/customizer/colors.php:381
 msgid "Background"
 msgstr "Latar Belakang"
 
-#: inc/customizer/colors.php:343
+#: inc/customizer/colors.php:342
 msgid "Page Background"
 msgstr "Latar Belakang Halaman"
 
-#: inc/customizer/colors.php:353
+#: inc/customizer/colors.php:352
 msgid "Content Background"
 msgstr "Latar Belakang Kandungan"
 
-#: inc/customizer/colors.php:366
+#: inc/customizer/colors.php:362
 msgid "Hero Background"
 msgstr "Latar Belakang Hero"
 
-#: inc/customizer/colors.php:395
+#: inc/customizer/colors.php:391
 msgid "Widgets Background"
 msgstr "Latar Belakang Widget"
 
-#: inc/customizer/colors.php:406
+#: inc/customizer/colors.php:402
 msgid "Widget Content Background"
 msgstr "Latar Belakang Kandungan Widget"
 
-#: inc/customizer/colors.php:417
+#: inc/customizer/colors.php:413
 msgid "Footer Background"
 msgstr "Latar Belakang Pengaki"
 
-#: inc/customizer/colors.php:455 inc/customizer/layouts.php:298
+#: inc/customizer/colors.php:451 inc/customizer/layouts.php:298
 msgid "Custom"
 msgstr "Suai Langgan"
 
-#: inc/customizer/colors.php:472 inc/customizer/layouts.php:294
+#: inc/customizer/colors.php:468 inc/customizer/layouts.php:294
 msgid "Default"
 msgstr "Lalai"
 
-#: inc/customizer/colors.php:714
+#: inc/customizer/colors.php:710
 msgid "Colors"
 msgstr "Warna"
 
-#: inc/customizer/colors.php:723
+#: inc/customizer/colors.php:719
 msgid "Color Schemes"
 msgstr "Skim Warna"
 
-#: inc/customizer/colors.php:731
+#: inc/customizer/colors.php:727
 msgid "Header"
 msgstr "Pengepala"
 
-#: inc/customizer/colors.php:739
+#: inc/customizer/colors.php:735
 msgid "Menu"
 msgstr "Menu"
 
-#: inc/customizer/colors.php:747
+#: inc/customizer/colors.php:743
 msgid "Buttons"
 msgstr "Butang"
 
-#: inc/customizer/colors.php:755
+#: inc/customizer/colors.php:751
 msgid "Content"
 msgstr "Kandungan"
 
-#: inc/customizer/colors.php:763
+#: inc/customizer/colors.php:759
 msgid "Footer"
 msgstr "Pengaki"
 
-#: inc/customizer/colors.php:979
+#: inc/customizer/colors.php:975
 msgid "Base Color Scheme"
 msgstr "Skema Warna Asas"
 
-#: inc/customizer/colors.php:1291
+#: inc/customizer/colors.php:1287
 msgid "Hero Background Overlay"
 msgstr "Lapisan Latar Belakang Hero"
 
-#: inc/customizer/colors.php:1292
+#: inc/customizer/colors.php:1288
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr ""
@@ -418,30 +418,34 @@ msgstr "Izinkan imej dipaparkan pada pos semasa mengatasi imej hero."
 msgid "404 Page Not Found"
 msgstr "404 Halaman Tidak Ditemui"
 
-#: inc/template-tags.php:141
+#: inc/template-tags.php:135
 msgid "Posts navigation"
 msgstr "Pos navigasi"
 
-#: inc/template-tags.php:147
+#: inc/template-tags.php:141
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Pos lama"
 
-#: inc/template-tags.php:153
+#: inc/template-tags.php:147
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Pos baru <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:180 templates/woocommerce/loop/pagination.php:30
-msgid "&larr; Previous"
-msgstr ""
-
-#: inc/template-tags.php:181 templates/woocommerce/loop/pagination.php:31
-#, fuzzy
-msgid "Next &rarr;"
-msgstr "Ulasan Baru &rarr;"
-
-#: inc/template-tags.php:295
+#: inc/template-tags.php:263
 msgid "Blog"
 msgstr "Blog"
+
+#: templates/parts/404-woocommerce.php:30
+msgid "Search"
+msgstr "Search"
+
+#: templates/parts/404-woocommerce.php:36
+msgid "Promoted Products"
+msgstr "Promoted Products"
+
+#: templates/parts/404-woocommerce.php:42
+#: templates/parts/404-woocommerce.php:44
+msgid "Popular Products"
+msgstr "Popular Products"
 
 #: templates/parts/loop/page-content.php:28
 #: templates/parts/loop/post-content.php:19
@@ -467,18 +471,6 @@ msgstr "Tinggalkan ulasan"
 #: templates/parts/loop/post-search-footer.php:43
 msgid "1 Comment"
 msgstr "1 Ulasan"
-
-#: templates/woocommerce/404.php:30
-msgid "Search"
-msgstr "Search"
-
-#: templates/woocommerce/404.php:36
-msgid "Promoted Products"
-msgstr "Promoted Products"
-
-#: templates/woocommerce/404.php:42 templates/woocommerce/404.php:44
-msgid "Popular Products"
-msgstr "Popular Products"
 
 #. Theme Name of the plugin/theme
 msgid "Primer"
@@ -532,57 +524,57 @@ msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
 msgstr "Sedia untuk siar pos anda yang pertama? %s."
 
-#: inc/customizer/colors.php:482
+#: inc/customizer/colors.php:478
 msgctxt "color scheme name"
 msgid "Blush"
 msgstr "Kemerah-merahan"
 
-#: inc/customizer/colors.php:486
+#: inc/customizer/colors.php:482
 msgctxt "color scheme name"
 msgid "Bronze"
 msgstr "Kuning Gangsa"
 
-#: inc/customizer/colors.php:490
+#: inc/customizer/colors.php:486
 msgctxt "color scheme name"
 msgid "Canary"
 msgstr "Burung Kenari"
 
-#: inc/customizer/colors.php:494
+#: inc/customizer/colors.php:490
 msgctxt "color scheme name"
 msgid "Cool"
 msgstr "Sejuk"
 
-#: inc/customizer/colors.php:498
+#: inc/customizer/colors.php:494
 msgctxt "color scheme name"
 msgid "Dark"
 msgstr "Gelap"
 
-#: inc/customizer/colors.php:502
+#: inc/customizer/colors.php:498
 msgctxt "color scheme name"
 msgid "Iguana"
 msgstr "Iguana"
 
-#: inc/customizer/colors.php:506
+#: inc/customizer/colors.php:502
 msgctxt "color scheme name"
 msgid "Muted"
 msgstr "Perlahan"
 
-#: inc/customizer/colors.php:510
+#: inc/customizer/colors.php:506
 msgctxt "color scheme name"
 msgid "Plum"
 msgstr "Plum"
 
-#: inc/customizer/colors.php:514
+#: inc/customizer/colors.php:510
 msgctxt "color scheme name"
 msgid "Rose"
 msgstr "Ros"
 
-#: inc/customizer/colors.php:518
+#: inc/customizer/colors.php:514
 msgctxt "color scheme name"
 msgid "Tangerine"
 msgstr "Tangerin"
 
-#: inc/customizer/colors.php:522
+#: inc/customizer/colors.php:518
 msgctxt "color scheme name"
 msgid "Turquoise"
 msgstr "Turquoise"
@@ -616,11 +608,6 @@ msgstr "Keputusan Carian untuk: %s"
 msgctxt "page number"
 msgid "Page %d"
 msgstr "Halaman %d"
-
-#: inc/template-tags.php:182 templates/woocommerce/loop/pagination.php:38
-msgctxt "1. current page number, 2. total number of pages"
-msgid "Page %1$d of %2$d"
-msgstr ""
 
 #: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"

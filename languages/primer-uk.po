@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-24 20:39:52+00:00\n"
+"POT-Creation-Date: 2017-02-22 04:50:19+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,11 +16,11 @@ msgstr ""
 "esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
-#: 404.php:22 templates/woocommerce/404.php:22
+#: 404.php:22 templates/parts/404-woocommerce.php:22
 msgid "Oops! That page can't be found."
 msgstr "Ой! Не вдалося знайти сторінку."
 
-#: 404.php:28 templates/woocommerce/404.php:28
+#: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
 "It looks like nothing was found at this location. Please try searching below:"
 msgstr "Здається, у цьому місці нічого не знайдено. Спробуйте пошукати нижче:"
@@ -143,23 +143,23 @@ msgstr ""
 msgid "Skip to content"
 msgstr "Перейти до вмісту"
 
-#: inc/compat/woocommerce.php:495
+#: inc/compat/woocommerce.php:419
+msgid "Featured Products"
+msgstr "Рекомендовані продукти»"
+
+#: inc/compat/woocommerce.php:429
+msgid "On Sale Now"
+msgstr "Зараз у продажу"
+
+#: inc/compat/woocommerce.php:443
+msgid "New In Store"
+msgstr "Нове у крамниці"
+
+#: inc/compat/woocommerce.php:595
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d позиція"
 msgstr[1] "%d позицій"
-
-#: inc/compat/woocommerce.php:562
-msgid "Featured Products"
-msgstr "Рекомендовані продукти»"
-
-#: inc/compat/woocommerce.php:572
-msgid "On Sale Now"
-msgstr "Зараз у продажу"
-
-#: inc/compat/woocommerce.php:586
-msgid "New In Store"
-msgstr "Нове у крамниці"
 
 #: inc/compat/wordpress.php:55
 msgid ""
@@ -181,7 +181,7 @@ msgstr "Текст гасла"
 msgid "Hero Text"
 msgstr "Текст Hero"
 
-#: inc/customizer/colors.php:107 inc/customizer/colors.php:326
+#: inc/customizer/colors.php:107 inc/customizer/colors.php:325
 msgid "Text"
 msgstr "Текст"
 
@@ -201,108 +201,108 @@ msgstr "Основний текст"
 msgid "Paragraphs, lists, menu links, quotes and tables."
 msgstr "Абзаци, списки, посилання меню, цитати й таблиці."
 
-#: inc/customizer/colors.php:198
+#: inc/customizer/colors.php:197
 msgid "Secondary Text"
 msgstr "Допоміжний текст"
 
-#: inc/customizer/colors.php:199
+#: inc/customizer/colors.php:198
 msgid "Post bylines, comment counts, post footers and quote footers."
 msgstr ""
 "Автори дописів, кількість коментарів, нижні колонтитули дописів і цитат."
 
-#: inc/customizer/colors.php:213
+#: inc/customizer/colors.php:212
 msgid "Widget Heading Text"
 msgstr "Текст заголовка віджета"
 
-#: inc/customizer/colors.php:230
+#: inc/customizer/colors.php:229
 msgid "Widget Text"
 msgstr "Текст віджета"
 
-#: inc/customizer/colors.php:242
+#: inc/customizer/colors.php:241
 msgid "Menu Text"
 msgstr "Текст меню"
 
-#: inc/customizer/colors.php:264
+#: inc/customizer/colors.php:263
 msgid "Copyright Text"
 msgstr "Текст повідомлення про авторське право"
 
-#: inc/customizer/colors.php:278
+#: inc/customizer/colors.php:277
 msgid "Link Text"
 msgstr "Текст посилання"
 
-#: inc/customizer/colors.php:300 inc/customizer/colors.php:385
+#: inc/customizer/colors.php:299 inc/customizer/colors.php:381
 msgid "Background"
 msgstr "Тло"
 
-#: inc/customizer/colors.php:343
+#: inc/customizer/colors.php:342
 msgid "Page Background"
 msgstr "Тло сторінки"
 
-#: inc/customizer/colors.php:353
+#: inc/customizer/colors.php:352
 msgid "Content Background"
 msgstr "Фон вмісту"
 
-#: inc/customizer/colors.php:366
+#: inc/customizer/colors.php:362
 msgid "Hero Background"
 msgstr "Фон Hero"
 
-#: inc/customizer/colors.php:395
+#: inc/customizer/colors.php:391
 msgid "Widgets Background"
 msgstr "Фон віджетів"
 
-#: inc/customizer/colors.php:406
+#: inc/customizer/colors.php:402
 msgid "Widget Content Background"
 msgstr "Фон вмісту віджетів"
 
-#: inc/customizer/colors.php:417
+#: inc/customizer/colors.php:413
 msgid "Footer Background"
 msgstr "Фон нижнього колонтитула"
 
-#: inc/customizer/colors.php:455 inc/customizer/layouts.php:298
+#: inc/customizer/colors.php:451 inc/customizer/layouts.php:298
 msgid "Custom"
 msgstr "Користувацький"
 
-#: inc/customizer/colors.php:472 inc/customizer/layouts.php:294
+#: inc/customizer/colors.php:468 inc/customizer/layouts.php:294
 msgid "Default"
 msgstr "За умовчанням"
 
-#: inc/customizer/colors.php:714
+#: inc/customizer/colors.php:710
 msgid "Colors"
 msgstr "Кольори"
 
-#: inc/customizer/colors.php:723
+#: inc/customizer/colors.php:719
 msgid "Color Schemes"
 msgstr "Колірні схеми"
 
-#: inc/customizer/colors.php:731
+#: inc/customizer/colors.php:727
 msgid "Header"
 msgstr "Верхній колонтитул"
 
-#: inc/customizer/colors.php:739
+#: inc/customizer/colors.php:735
 msgid "Menu"
 msgstr "Меню"
 
-#: inc/customizer/colors.php:747
+#: inc/customizer/colors.php:743
 msgid "Buttons"
 msgstr "Кнопки"
 
-#: inc/customizer/colors.php:755
+#: inc/customizer/colors.php:751
 msgid "Content"
 msgstr "Вміст"
 
-#: inc/customizer/colors.php:763
+#: inc/customizer/colors.php:759
 msgid "Footer"
 msgstr "Нижній колонтитул"
 
-#: inc/customizer/colors.php:979
+#: inc/customizer/colors.php:975
 msgid "Base Color Scheme"
 msgstr "Базова колірна схема"
 
-#: inc/customizer/colors.php:1291
+#: inc/customizer/colors.php:1287
 msgid "Hero Background Overlay"
 msgstr "Перекриття фону Hero"
 
-#: inc/customizer/colors.php:1292
+#: inc/customizer/colors.php:1288
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr ""
@@ -421,30 +421,34 @@ msgstr ""
 msgid "404 Page Not Found"
 msgstr "404 — сторінку не знайдено"
 
-#: inc/template-tags.php:141
+#: inc/template-tags.php:135
 msgid "Posts navigation"
 msgstr "Навігація серед публікацій"
 
-#: inc/template-tags.php:147
+#: inc/template-tags.php:141
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Старіші коментарі"
 
-#: inc/template-tags.php:153
+#: inc/template-tags.php:147
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Новіші коментарі <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:180 templates/woocommerce/loop/pagination.php:30
-msgid "&larr; Previous"
-msgstr ""
-
-#: inc/template-tags.php:181 templates/woocommerce/loop/pagination.php:31
-#, fuzzy
-msgid "Next &rarr;"
-msgstr "Новіші коментарі &rarr;"
-
-#: inc/template-tags.php:295
+#: inc/template-tags.php:263
 msgid "Blog"
 msgstr "Блог"
+
+#: templates/parts/404-woocommerce.php:30
+msgid "Search"
+msgstr "Пошук"
+
+#: templates/parts/404-woocommerce.php:36
+msgid "Promoted Products"
+msgstr "Рекламовані продукти"
+
+#: templates/parts/404-woocommerce.php:42
+#: templates/parts/404-woocommerce.php:44
+msgid "Popular Products"
+msgstr "Популярні продукти"
 
 #: templates/parts/loop/page-content.php:28
 #: templates/parts/loop/post-content.php:19
@@ -470,18 +474,6 @@ msgstr "Залишити коментар"
 #: templates/parts/loop/post-search-footer.php:43
 msgid "1 Comment"
 msgstr "1 коментар"
-
-#: templates/woocommerce/404.php:30
-msgid "Search"
-msgstr "Пошук"
-
-#: templates/woocommerce/404.php:36
-msgid "Promoted Products"
-msgstr "Рекламовані продукти"
-
-#: templates/woocommerce/404.php:42 templates/woocommerce/404.php:44
-msgid "Popular Products"
-msgstr "Популярні продукти"
 
 #. Theme Name of the plugin/theme
 msgid "Primer"
@@ -534,57 +526,57 @@ msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
 msgstr "Готові опублікувати перший допис? %s."
 
-#: inc/customizer/colors.php:482
+#: inc/customizer/colors.php:478
 msgctxt "color scheme name"
 msgid "Blush"
 msgstr "Рум'янець"
 
-#: inc/customizer/colors.php:486
+#: inc/customizer/colors.php:482
 msgctxt "color scheme name"
 msgid "Bronze"
 msgstr "Бронза"
 
-#: inc/customizer/colors.php:490
+#: inc/customizer/colors.php:486
 msgctxt "color scheme name"
 msgid "Canary"
 msgstr "Канарка"
 
-#: inc/customizer/colors.php:494
+#: inc/customizer/colors.php:490
 msgctxt "color scheme name"
 msgid "Cool"
 msgstr "Круто"
 
-#: inc/customizer/colors.php:498
+#: inc/customizer/colors.php:494
 msgctxt "color scheme name"
 msgid "Dark"
 msgstr "Темна"
 
-#: inc/customizer/colors.php:502
+#: inc/customizer/colors.php:498
 msgctxt "color scheme name"
 msgid "Iguana"
 msgstr "Ігуана"
 
-#: inc/customizer/colors.php:506
+#: inc/customizer/colors.php:502
 msgctxt "color scheme name"
 msgid "Muted"
 msgstr "Тьмяна"
 
-#: inc/customizer/colors.php:510
+#: inc/customizer/colors.php:506
 msgctxt "color scheme name"
 msgid "Plum"
 msgstr "Слива"
 
-#: inc/customizer/colors.php:514
+#: inc/customizer/colors.php:510
 msgctxt "color scheme name"
 msgid "Rose"
 msgstr "Троянда"
 
-#: inc/customizer/colors.php:518
+#: inc/customizer/colors.php:514
 msgctxt "color scheme name"
 msgid "Tangerine"
 msgstr "Мандарин"
 
-#: inc/customizer/colors.php:522
+#: inc/customizer/colors.php:518
 msgctxt "color scheme name"
 msgid "Turquoise"
 msgstr "Бірюзовий"
@@ -618,11 +610,6 @@ msgstr "Результати пошуку для: %s"
 msgctxt "page number"
 msgid "Page %d"
 msgstr "Сторінка %d"
-
-#: inc/template-tags.php:182 templates/woocommerce/loop/pagination.php:38
-msgctxt "1. current page number, 2. total number of pages"
-msgid "Page %1$d of %2$d"
-msgstr ""
 
 #: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"

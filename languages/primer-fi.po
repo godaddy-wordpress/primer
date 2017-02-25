@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-24 20:39:52+00:00\n"
+"POT-Creation-Date: 2017-02-22 04:50:19+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,11 +16,11 @@ msgstr ""
 "esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
-#: 404.php:22 templates/woocommerce/404.php:22
+#: 404.php:22 templates/parts/404-woocommerce.php:22
 msgid "Oops! That page can't be found."
 msgstr "Hups! Sivua ei löydy."
 
-#: 404.php:28 templates/woocommerce/404.php:28
+#: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
 "It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
@@ -141,23 +141,23 @@ msgstr "Hero-vimpaimet näkyvät etusivun otsikkokuvan päällä."
 msgid "Skip to content"
 msgstr "Siirry sisältöön"
 
-#: inc/compat/woocommerce.php:495
+#: inc/compat/woocommerce.php:419
+msgid "Featured Products"
+msgstr "Esittelyssä olevat tuotteet"
+
+#: inc/compat/woocommerce.php:429
+msgid "On Sale Now"
+msgstr "Tarjouksessa nyt"
+
+#: inc/compat/woocommerce.php:443
+msgid "New In Store"
+msgstr "Uutta kaupassa"
+
+#: inc/compat/woocommerce.php:595
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d tuote"
 msgstr[1] "%d tuotetta"
-
-#: inc/compat/woocommerce.php:562
-msgid "Featured Products"
-msgstr "Esittelyssä olevat tuotteet"
-
-#: inc/compat/woocommerce.php:572
-msgid "On Sale Now"
-msgstr "Tarjouksessa nyt"
-
-#: inc/compat/woocommerce.php:586
-msgid "New In Store"
-msgstr "Uutta kaupassa"
 
 #: inc/compat/wordpress.php:55
 msgid ""
@@ -179,7 +179,7 @@ msgstr "Tunnuslauseteksti"
 msgid "Hero Text"
 msgstr "Hero-teksti"
 
-#: inc/customizer/colors.php:107 inc/customizer/colors.php:326
+#: inc/customizer/colors.php:107 inc/customizer/colors.php:325
 msgid "Text"
 msgstr "Teksti"
 
@@ -201,109 +201,109 @@ msgstr "Ensisijainen teksti"
 msgid "Paragraphs, lists, menu links, quotes and tables."
 msgstr "Kappaleet, luettelot, valikkolinkit, lainaukset ja taulukot."
 
-#: inc/customizer/colors.php:198
+#: inc/customizer/colors.php:197
 msgid "Secondary Text"
 msgstr "Toissijainen teksti"
 
-#: inc/customizer/colors.php:199
+#: inc/customizer/colors.php:198
 msgid "Post bylines, comment counts, post footers and quote footers."
 msgstr ""
 "Artikkelin tekijöiden nimet, kommenttimäärät, artikkelien alapalkit ja "
 "lainausten alapalkit."
 
-#: inc/customizer/colors.php:213
+#: inc/customizer/colors.php:212
 msgid "Widget Heading Text"
 msgstr "Widget-otsikkoteksti"
 
-#: inc/customizer/colors.php:230
+#: inc/customizer/colors.php:229
 msgid "Widget Text"
 msgstr "Widget-teksti"
 
-#: inc/customizer/colors.php:242
+#: inc/customizer/colors.php:241
 msgid "Menu Text"
 msgstr "Valikkoteksti"
 
-#: inc/customizer/colors.php:264
+#: inc/customizer/colors.php:263
 msgid "Copyright Text"
 msgstr "Copyright-teksti"
 
-#: inc/customizer/colors.php:278
+#: inc/customizer/colors.php:277
 msgid "Link Text"
 msgstr "Linkkiteksti"
 
-#: inc/customizer/colors.php:300 inc/customizer/colors.php:385
+#: inc/customizer/colors.php:299 inc/customizer/colors.php:381
 msgid "Background"
 msgstr "Tausta"
 
-#: inc/customizer/colors.php:343
+#: inc/customizer/colors.php:342
 msgid "Page Background"
 msgstr "Sivun tausta"
 
-#: inc/customizer/colors.php:353
+#: inc/customizer/colors.php:352
 msgid "Content Background"
 msgstr "Sisällön tausta"
 
-#: inc/customizer/colors.php:366
+#: inc/customizer/colors.php:362
 msgid "Hero Background"
 msgstr "Hero-tausta"
 
-#: inc/customizer/colors.php:395
+#: inc/customizer/colors.php:391
 msgid "Widgets Background"
 msgstr "Widget-tausta"
 
-#: inc/customizer/colors.php:406
+#: inc/customizer/colors.php:402
 msgid "Widget Content Background"
 msgstr "Widget-sisällön tausta"
 
-#: inc/customizer/colors.php:417
+#: inc/customizer/colors.php:413
 msgid "Footer Background"
 msgstr "Alapalkin tausta"
 
-#: inc/customizer/colors.php:455 inc/customizer/layouts.php:298
+#: inc/customizer/colors.php:451 inc/customizer/layouts.php:298
 msgid "Custom"
 msgstr "Mukautettu"
 
-#: inc/customizer/colors.php:472 inc/customizer/layouts.php:294
+#: inc/customizer/colors.php:468 inc/customizer/layouts.php:294
 msgid "Default"
 msgstr "Oletus"
 
-#: inc/customizer/colors.php:714
+#: inc/customizer/colors.php:710
 msgid "Colors"
 msgstr "Värit"
 
-#: inc/customizer/colors.php:723
+#: inc/customizer/colors.php:719
 msgid "Color Schemes"
 msgstr "Värit"
 
-#: inc/customizer/colors.php:731
+#: inc/customizer/colors.php:727
 msgid "Header"
 msgstr "Otsikko"
 
-#: inc/customizer/colors.php:739
+#: inc/customizer/colors.php:735
 msgid "Menu"
 msgstr "Valikko"
 
-#: inc/customizer/colors.php:747
+#: inc/customizer/colors.php:743
 msgid "Buttons"
 msgstr "Painikkeet"
 
-#: inc/customizer/colors.php:755
+#: inc/customizer/colors.php:751
 msgid "Content"
 msgstr "Sisältö"
 
-#: inc/customizer/colors.php:763
+#: inc/customizer/colors.php:759
 msgid "Footer"
 msgstr "Alatunniste"
 
-#: inc/customizer/colors.php:979
+#: inc/customizer/colors.php:975
 msgid "Base Color Scheme"
 msgstr "Perusväri"
 
-#: inc/customizer/colors.php:1291
+#: inc/customizer/colors.php:1287
 msgid "Hero Background Overlay"
 msgstr "Hero-taustan peitekerros"
 
-#: inc/customizer/colors.php:1292
+#: inc/customizer/colors.php:1288
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr ""
@@ -421,30 +421,34 @@ msgstr "Anna nykyisen artikkelin pääkuvan korvata hero-kuva."
 msgid "404 Page Not Found"
 msgstr "404 Sivua ei löytynyt"
 
-#: inc/template-tags.php:141
+#: inc/template-tags.php:135
 msgid "Posts navigation"
 msgstr "Julkaisujen navigointi"
 
-#: inc/template-tags.php:147
+#: inc/template-tags.php:141
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Vanhemmat julkaisut"
 
-#: inc/template-tags.php:153
+#: inc/template-tags.php:147
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Uudemmat julkaisut <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/template-tags.php:180 templates/woocommerce/loop/pagination.php:30
-msgid "&larr; Previous"
-msgstr ""
-
-#: inc/template-tags.php:181 templates/woocommerce/loop/pagination.php:31
-#, fuzzy
-msgid "Next &rarr;"
-msgstr "Uudemmat kommentit &rarr;"
-
-#: inc/template-tags.php:295
+#: inc/template-tags.php:263
 msgid "Blog"
 msgstr "Blogi"
+
+#: templates/parts/404-woocommerce.php:30
+msgid "Search"
+msgstr "Etsi"
+
+#: templates/parts/404-woocommerce.php:36
+msgid "Promoted Products"
+msgstr "Mainostetut tuotteet"
+
+#: templates/parts/404-woocommerce.php:42
+#: templates/parts/404-woocommerce.php:44
+msgid "Popular Products"
+msgstr "Suositut tuotteet"
 
 #: templates/parts/loop/page-content.php:28
 #: templates/parts/loop/post-content.php:19
@@ -470,18 +474,6 @@ msgstr "Jätä kommentti"
 #: templates/parts/loop/post-search-footer.php:43
 msgid "1 Comment"
 msgstr "1 kommentti"
-
-#: templates/woocommerce/404.php:30
-msgid "Search"
-msgstr "Etsi"
-
-#: templates/woocommerce/404.php:36
-msgid "Promoted Products"
-msgstr "Mainostetut tuotteet"
-
-#: templates/woocommerce/404.php:42 templates/woocommerce/404.php:44
-msgid "Popular Products"
-msgstr "Suositut tuotteet"
 
 #. Theme Name of the plugin/theme
 msgid "Primer"
@@ -533,57 +525,57 @@ msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
 msgstr "Oletko valmis julkaisemaan ensimmäisen julkaisusi? %s."
 
-#: inc/customizer/colors.php:482
+#: inc/customizer/colors.php:478
 msgctxt "color scheme name"
 msgid "Blush"
 msgstr "Blush-punainen"
 
-#: inc/customizer/colors.php:486
+#: inc/customizer/colors.php:482
 msgctxt "color scheme name"
 msgid "Bronze"
 msgstr "Pronssi"
 
-#: inc/customizer/colors.php:490
+#: inc/customizer/colors.php:486
 msgctxt "color scheme name"
 msgid "Canary"
 msgstr "Kanariankeltainen"
 
-#: inc/customizer/colors.php:494
+#: inc/customizer/colors.php:490
 msgctxt "color scheme name"
 msgid "Cool"
 msgstr "Viileä"
 
-#: inc/customizer/colors.php:498
+#: inc/customizer/colors.php:494
 msgctxt "color scheme name"
 msgid "Dark"
 msgstr "Tumma"
 
-#: inc/customizer/colors.php:502
+#: inc/customizer/colors.php:498
 msgctxt "color scheme name"
 msgid "Iguana"
 msgstr "Leguaaninvihreä"
 
-#: inc/customizer/colors.php:506
+#: inc/customizer/colors.php:502
 msgctxt "color scheme name"
 msgid "Muted"
 msgstr "Hillitty"
 
-#: inc/customizer/colors.php:510
+#: inc/customizer/colors.php:506
 msgctxt "color scheme name"
 msgid "Plum"
 msgstr "Luumu"
 
-#: inc/customizer/colors.php:514
+#: inc/customizer/colors.php:510
 msgctxt "color scheme name"
 msgid "Rose"
 msgstr "Ruusu"
 
-#: inc/customizer/colors.php:518
+#: inc/customizer/colors.php:514
 msgctxt "color scheme name"
 msgid "Tangerine"
 msgstr "Mandariini"
 
-#: inc/customizer/colors.php:522
+#: inc/customizer/colors.php:518
 msgctxt "color scheme name"
 msgid "Turquoise"
 msgstr "Turkoosi"
@@ -617,11 +609,6 @@ msgstr "Tulokset haulle: %s"
 msgctxt "page number"
 msgid "Page %d"
 msgstr "Sivu %d"
-
-#: inc/template-tags.php:182 templates/woocommerce/loop/pagination.php:38
-msgctxt "1. current page number, 2. total number of pages"
-msgid "Page %1$d of %2$d"
-msgstr ""
 
 #: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"
