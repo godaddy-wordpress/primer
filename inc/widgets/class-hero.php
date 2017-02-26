@@ -37,7 +37,7 @@ final class Primer_Hero extends WP_Widget {
 	 *
 	 * @param array $instance The widget instance values.
 	 *
-	 * @return string|void
+	 * @return string
 	 */
 	public function form( $instance ) {
 
@@ -121,14 +121,13 @@ final class Primer_Hero extends WP_Widget {
 		$this->before_form_field( $field );
 
 		printf(
-			'<input class="%s" id="%s" name="%s" type="%s" value="%s" placeholder="%s" autocomplete="off" %s>',
+			'<input class="%s" id="%s" name="%s" type="%s" value="%s" placeholder="%s" autocomplete="off">',
 			esc_attr( $field['class'] ),
 			esc_attr( $field['id'] ),
 			esc_attr( $field['name'] ),
 			esc_attr( $field['type'] ),
 			esc_attr( $field['value'] ),
-			esc_attr( $field['placeholder'] ),
-			esc_attr( $field['atts'] )
+			esc_attr( $field['placeholder'] )
 		);
 
 		$this->after_form_field();
@@ -373,7 +372,7 @@ final class Primer_Hero extends WP_Widget {
 	private function add_common_field_properties( array $instance, array $fields = array() ) {
 
 		/**
-		 * Default fields properties
+		 * Default fields properties.
 		 *
 		 * @var array
 		 */
@@ -389,12 +388,9 @@ final class Primer_Hero extends WP_Widget {
 			'sanitizer'      => 'sanitize_text_field',
 			'escaper'        => 'esc_html',
 			'form_callback'  => 'render_form_input',
-			'default'        => '', // If you need a default value.
 			'value'          => '',
 			'placeholder'    => '',
-			'atts'           => '', // Input attributes.
 			'show_front_end' => true, // Are we showing this field on the front end?
-			'show_empty'     => false, // Show the field even if the value is empty.
 		);
 
 		foreach ( $fields as $key => &$field ) {
