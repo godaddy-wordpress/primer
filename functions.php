@@ -103,13 +103,6 @@ require_once get_template_directory() . '/inc/walker-nav-menu.php';
 require_once get_template_directory() . '/inc/hooks.php';
 
 /**
- * Load Primer widget base class
- *
- * @since NEXT
- */
-require_once get_template_directory() . '/inc/widgets/class-base-widget.php';
-
-/**
  * Load Beaver Builder compatibility file.
  *
  * @since 1.0.0
@@ -444,37 +437,16 @@ function primer_register_sidebars() {
 add_action( 'widgets_init', 'primer_register_sidebars' );
 
 /**
- * Register custom Primer widgets.
+ * Register Primer hero widget.
  *
  * @link  http://codex.wordpress.org/Function_Reference/register_widget
  * @since NEXT
  */
 function primer_register_widgets() {
 
-	/**
-	 * Filter registered custom widgets class name and their path.
-	 *
-	 * @since NEXT
-	 *
-	 * @var array
-	 */
-	$widgets = apply_filters( 'primer_widgets',
-		array(
-			'Primer_Hero' => get_template_directory() . '/inc/widgets/class-hero.php',
-		)
-	);
+	require_once get_template_directory() . '/inc/widgets/class-hero.php';
 
-	foreach ( $widgets as $widget_class => $filepath ) {
-
-		if ( file_exists( $filepath ) ) {
-
-			require_once $filepath;
-
-			register_widget( $widget_class );
-
-		}
-
-	}
+	register_widget( 'Primer_Hero' );
 
 }
 add_action( 'widgets_init', 'primer_register_widgets' );
