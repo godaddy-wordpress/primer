@@ -116,50 +116,31 @@ function primer_the_page_title() {
 /**
  * Display navigation to next/previous set of posts when applicable.
  *
+ * @deprecated NEXT No longer supported as the pagination funciton. See primer_pagination().
+ */
+function primer_paging_nav( $args = array() ) {
+
+	return _doing_it_wrong( 'primer_paging_nav()', __( 'Please use primer_pagination() instead.', 'primer' ), 'NEXT' );
+
+}
+
+/**
+ * Display navigation to next/previous set of posts when applicable.
+ *
  * @global WP_Query $wp_query
- * @since  1.0.0
+ * @since  NEXT
  * @uses  [the_posts_pagination](https://developer.wordpress.org/reference/functions/the_posts_pagination/)
  *
  * @param array $args (optional) Post pagination arguments.
+ *
  */
-function primer_paging_nav( $args = array() ) {
+function primer_pagination( $args = array() ) {
 
 	global $wp_query;
 
 	if ( empty( $wp_query->max_num_pages ) || (int) $wp_query->max_num_pages < 2 ) {
 
 		return;
-
-	}
-
-	// Backward compat for older child themes that don't have styles for `the_posts_pagination()` markup.
-	if ( primer_child_version_compare( '1.1.0', '<=' ) ) {
-
-		?>
-		<nav class="navigation paging-navigation">
-
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'primer' ); ?></h2>
-
-			<div class="nav-links">
-
-			<?php if ( get_next_posts_link() ) : ?>
-
-				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'primer' ) ); ?></div>
-
-			<?php endif; ?>
-
-			<?php if ( get_previous_posts_link() ) : ?>
-
-				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'primer' ) ); ?></div>
-
-			<?php endif; ?>
-
-			</div><!-- .nav-links -->
-
-		</nav><!-- .navigation -->
-		<?php
-
-		return; // End backward compat.
 
 	}
 
@@ -178,7 +159,7 @@ function primer_paging_nav( $args = array() ) {
 	 *
 	 * @var array
 	 */
-	$defaults = (array) apply_filters( 'primer_paging_nav_default_args', array(
+	$defaults = (array) apply_filters( 'primer_pagination_default_args', array(
 		'prev_text'          => __( '&larr; Previous', 'primer' ),
 		'next_text'          => __( 'Next &rarr;', 'primer' ),
 		'screen_reader_text' => sprintf( esc_html_x( '%1$s navigation', 'post type singular label', 'primer' ), esc_html( $post_type_label ) ),
