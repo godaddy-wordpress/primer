@@ -414,7 +414,7 @@ add_filter( 'wp_title', 'primer_wp_title', 10, 2 );
  *
  * @return string
  */
-function primer_paging_nav_template( $template, $class ) {
+function primer_pagination_template( $template, $class ) {
 
 	if ( 'pagination' !== $class ) {
 
@@ -438,4 +438,4 @@ function primer_paging_nav_template( $template, $class ) {
 	return str_replace( $search, $replace, $template );
 
 }
-add_filter( 'navigation_markup_template', 'primer_paging_nav_template', 10, 2 );
+add_filter( 'navigation_markup_template', 'primer_pagination_template', 10, 2 );
