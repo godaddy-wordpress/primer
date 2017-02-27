@@ -120,6 +120,12 @@ function primer_the_page_title() {
  */
 function primer_paging_nav( $args = array() ) {
 
+	if ( ! current_user_can( 'edit_themes' ) ) {
+
+		return;
+
+	}
+
 	trigger_error( __( 'primer_paging_nav() has been deprecated since NEXT. Use primer_pagination() instead.', 'primer' ) );
 
 }
