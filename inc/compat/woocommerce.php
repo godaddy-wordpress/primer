@@ -623,7 +623,7 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
 		 *
 		 * @var int
 		 */
-		$columns  = absint( apply_filters( 'primer_wc_best_selling_products_columns', $columns ) );
+		$columns = absint( apply_filters( 'primer_wc_best_selling_products_columns', $columns ) );
 
 		echo do_shortcode( "[best_selling_products per_page='{$per_page}' columns='{$columns}']" );
 
