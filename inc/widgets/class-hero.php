@@ -37,7 +37,7 @@ final class Primer_Hero extends WP_Widget {
 	 *
 	 * @param array $instance The widget instance values.
 	 *
-	 * @return string
+	 * @return void
 	 */
 	public function form( $instance ) {
 
@@ -364,7 +364,7 @@ final class Primer_Hero extends WP_Widget {
 	/**
 	 * Takes an array of fields and add common properties to it.
 	 *
-	 * @param array $instance Widget instance
+	 * @param array $instance Widget instance.
 	 * @param array $fields Widget fields.
 	 *
 	 * @return array All the fields with comment properties.
