@@ -173,7 +173,7 @@ class Primer_Customizer_Colors {
 						input[type="datetime-local"]:focus,
 						input[type="color"]:focus,
 						textarea:focus,
-						.navigation.pagination .screen-reader-text' => array(
+						.navigation.pagination .paging-nav-text' => array(
 							'color' => '%1$s',
 						),
 					),
