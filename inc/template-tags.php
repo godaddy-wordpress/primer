@@ -120,7 +120,7 @@ function primer_the_page_title() {
  */
 function primer_paging_nav( $args = array() ) {
 
-	return _doing_it_wrong( 'primer_paging_nav()', __( 'Please use primer_pagination() instead.', 'primer' ), 'NEXT' );
+	trigger_error( __( 'primer_paging_nav() has been deprecated since NEXT. Use primer_pagination() instead.', 'primer' ) );
 
 }
 
