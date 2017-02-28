@@ -10,9 +10,24 @@
 	}
 }
 
+body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
+.woocommerce a.added_to_cart {
+	max-width: 100%;
+	white-space: normal;
+	text-align: center;
+	display: block;
+
+	@media #{$large-up} {
+		font-size: 0.75rem;
+	}
+}
+
+.woocommerce a.added_to_cart {
+	text-align: left;
+}
+
 body.post-type-archive,
 body.single-product {
-	/* On Sale Badge */
 	span.onsale,
 	ul.products li.product .onsale {
 		padding: 2px 8px;
