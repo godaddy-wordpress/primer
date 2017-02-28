@@ -14,6 +14,9 @@
 
 	body.primer-woocommerce-l10n.woocommerce ul.products li.product .button {
 		font-size: 0.75rem;
+		max-width: 100%;
+		white-space: normal;
+		text-align: center;
 	}
 }
 

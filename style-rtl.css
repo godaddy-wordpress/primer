@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Theme Name: Primer
  * Theme URI: https://github.com/godaddy/wp-primer-theme
@@ -2208,7 +2209,10 @@ body.no-max-width .site-info-wrapper .site-info {
 
 @media only screen and (min-width: 61.063em) {
   body.primer-woocommerce-l10n.woocommerce ul.products li.product .button {
-    font-size: 0.75rem; } }
+    font-size: 0.75rem;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center; } }
 
 body.post-type-archive,
 body.single-product {
