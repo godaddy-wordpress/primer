@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Theme Name: Primer
  * Theme URI: https://github.com/godaddy/wp-primer-theme
@@ -2206,14 +2207,16 @@ body.no-max-width .site-info-wrapper .site-info {
   .woocommerce-page .primer-woocommerce .cart .qty {
     padding: 0.18em; }
 
-@media only screen and (min-width: 61.063em) {
-  body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
-  .woocommerce a.added_to_cart {
-    font-size: 0.75rem;
-    max-width: 100%;
-    white-space: normal;
-    text-align: center;
-    display: block; } }
+body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
+.woocommerce a.added_to_cart {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  display: block; }
+  @media only screen and (min-width: 61.063em) {
+    body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
+    .woocommerce a.added_to_cart {
+      font-size: 0.75rem; } }
 
 body.post-type-archive,
 body.single-product {

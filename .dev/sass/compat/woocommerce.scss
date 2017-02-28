@@ -10,21 +10,21 @@
 	}
 }
 
-@media #{$large-up} {
+body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
+.woocommerce a.added_to_cart {
+	max-width: 100%;
+	white-space: normal;
+	text-align: center;
+	display: block;
 
-	body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
-	.woocommerce a.added_to_cart {
+	@media #{$large-up} {
 		font-size: 0.75rem;
-		max-width: 100%;
-		white-space: normal;
-		text-align: center;
-		display: block;
 	}
+
 }
 
 body.post-type-archive,
 body.single-product {
-	/* On Sale Badge */
 	span.onsale,
 	ul.products li.product .onsale {
 		padding: 2px 8px;
