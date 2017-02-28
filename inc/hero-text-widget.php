@@ -26,7 +26,7 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 			),
 		);
 
-		parent::__construct( 'primer-hero-text', esc_html__( 'Hero Text', 'primer' ), $widget_options );
+		parent::__construct( 'primer-hero-text', esc_html_x( 'Hero Text', 'the widget title', 'primer' ), $widget_options );
 
 		add_action( 'admin_init', array( $this, 'register_scripts' ) );
 
