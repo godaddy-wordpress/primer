@@ -2217,6 +2217,9 @@ body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
     .woocommerce a.added_to_cart {
       font-size: 0.75rem; } }
 
+.woocommerce a.added_to_cart {
+  text-align: left; }
+
 body.post-type-archive span.onsale,
 body.post-type-archive ul.products li.product .onsale,
 body.single-product span.onsale,
