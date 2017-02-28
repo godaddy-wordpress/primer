@@ -13,6 +13,12 @@
  *
  * This function is to be used in every Primer function that is deprecated.
  *
+ * Note: This function's access is marked private. This means it is not
+ * intended to be used by plugin or theme developers, and should only be
+ * used by other Primer functions. This function could be changed or even
+ * removed in the future without concern for backward compatiblity and is
+ * only documented here for completeness.
+ *
  * @access private
  * @link   https://developer.wordpress.org/reference/functions/_deprecated_function/
  * @since  NEXT
@@ -44,6 +50,12 @@ function _primer_deprecated_function( $name, $version, $alt_name = null, $theme 
  * Mark a hook as deprecated.
  *
  * This function is to be used in every Primer hook that is deprecated.
+ *
+ * Note: This function's access is marked private. This means it is not
+ * intended to be used by plugin or theme developers, and should only be
+ * used by other Primer functions. This function could be changed or even
+ * removed in the future without concern for backward compatiblity and is
+ * only documented here for completeness.
  *
  * @access private
  * @link   https://developer.wordpress.org/reference/functions/_deprecated_hook/
@@ -77,6 +89,12 @@ function _primer_deprecated_hook( $name, $version, $alt_name = null, $theme = nu
  * Marks a function or hook as deprecated and throws a notice.
  *
  * The default behavior is to trigger a user error when `WP_DEBUG` is `true`.
+ *
+ * Note: This function's access is marked private. This means it is not
+ * intended to be used by plugin or theme developers, and should only be
+ * used by other Primer functions. This function could be changed or even
+ * removed in the future without concern for backward compatiblity and is
+ * only documented here for completeness.
  *
  * @access private
  * @since  NEXT

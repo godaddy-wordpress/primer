@@ -79,7 +79,7 @@ if ( version_compare( get_bloginfo( 'version' ), PRIMER_MIN_WP_VERSION, '<' ) ) 
  *
  * @since NEXT
  */
-require_once get_template_directory() . '/inc/deprecated.php';
+require_once get_template_directory() . '/inc/compat/deprecated.php';
 
 /**
  * Load custom helper functions for this theme.
