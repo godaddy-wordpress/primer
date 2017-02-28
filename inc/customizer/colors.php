@@ -172,7 +172,8 @@ class Primer_Customizer_Colors {
 						input[type="datetime"]:focus,
 						input[type="datetime-local"]:focus,
 						input[type="color"]:focus,
-						textarea:focus' => array(
+						textarea:focus,
+						.navigation.pagination .paging-nav-text' => array(
 							'color' => '%1$s',
 						),
 					),
@@ -282,7 +283,7 @@ class Primer_Customizer_Colors {
 						.entry-title a:hover, .entry-title a:visited:hover' => array(
 							'color' => '%1$s',
 						),
-						'.social-menu a:hover' => array(
+						'.navigation.pagination .nav-links .page-numbers.current, .social-menu a:hover' => array(
 							'background-color' => '%1$s',
 						),
 					),
@@ -353,8 +354,11 @@ class Primer_Customizer_Colors {
 					'default' => '#ffffff',
 					'section' => 'colors-content',
 					'css'     => array(
-						'.hentry, .comments-area, .widget, #page > .page-title-container' => array(
+						'.hentry, .comments-area, .widget, #page > .page-title-container, .navigation.pagination .nav-links .page-numbers' => array(
 							'background-color' => '%1$s',
+						),
+						'.navigation.pagination .nav-links .page-numbers.current' => array(
+							'color' => '%1$s',
 						),
 					),
 				),
