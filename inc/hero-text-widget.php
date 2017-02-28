@@ -28,8 +28,7 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 
 		parent::__construct( 'primer-hero-text', esc_html__( 'Hero Text', 'primer' ), $widget_options );
 
-		add_action( 'admin_enqueue_scripts',              array( $this, 'enqueue_scripts' ) );
-		add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		add_action( 'admin_init', array( $this, 'register_scripts' ) );
 
 	}
 
@@ -118,6 +117,9 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 	 */
 	public function form( $instance ) {
 
+		add_action( 'admin_print_footer_scripts',              array( $this, 'print_scripts' ) );
+		add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_scripts' ) );
+
 		$title       = isset( $instance['title'] )       ? $instance['title']       : null;
 		$text        = isset( $instance['text'] )        ? $instance['text']        : null;
 		$button_text = isset( $instance['button_text'] ) ? $instance['button_text'] : null;
@@ -187,27 +189,16 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 	}
 
 	/**
-	 * Enqueue widget admin scripts.
+	 * Register widget admin scripts.
 	 *
-	 * @action admin_enqueue_scripts
-	 * @action customize_controls_enqueue_scripts
+	 * @action admin_init
 	 * @since  NEXT
-	 *
-	 * @param string $hook_suffix The current admin page.
 	 */
-	public function enqueue_scripts( $hook_suffix ) {
-
-		if ( 'admin_enqueue_scripts' === current_action() && 'widgets.php' !== $hook_suffix ) {
-
-			return;
-
-		}
+	public function register_scripts() {
 
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-		wp_enqueue_script( 'jquery-ui-autocomplete' );
-
-		wp_enqueue_script(
+		wp_register_script(
 			'primer-admin-hero-text-widget',
 			get_template_directory_uri() . "/assets/js/admin/hero-text-widget{$suffix}.js",
 			array( 'jquery', 'jquery-ui-autocomplete' ),
@@ -223,6 +214,19 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 				'_ajax_linking_nonce' => wp_create_nonce( 'internal-linking' ),
 			)
 		);
+
+	}
+
+	/**
+	 * Print widget admin scripts.
+	 *
+	 * @action admin_print_footer_scripts
+	 * @action customize_controls_print_footer_scripts
+	 * @since  NEXT
+	 */
+	public function print_scripts() {
+
+		wp_print_scripts( 'primer-admin-hero-text-widget' );
 
 	}
 
