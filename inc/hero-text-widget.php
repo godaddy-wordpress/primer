@@ -126,14 +126,20 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 		$button_link = isset( $instance['button_link'] ) ? $instance['button_link'] : null;
 
 		?>
-		<script>
-			( function ( $ ) {
+		<script type="text/javascript">
+		( function ( $ ) {
 
-				// Let our script know a widget has been added to make its URL search input work.
-				$( document ).trigger( 'primer.widgets.change' );
+			// Let our script know a widget has been added to make its URL search input work.
+			$( document ).trigger( 'primer.widgets.change' );
 
-			} )( jQuery );
+		} )( jQuery );
 		</script>
+
+		<style type="text/css">
+		input[type="text"].link.ui-autocomplete-loading {
+			background-position: right 3px center;
+		}
+		</style>
 
 		<div class="primer-widgets primer-hero-text-widget">
 
@@ -154,7 +160,7 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 
 			<p>
 				<label for="<?php echo esc_attr( $this->get_field_id( 'button_link' ) ); ?>"><?php esc_html_e( 'Button Link URL:', 'primer' ); ?></label>
-				<input type="url" class="widefat link-autocomplete" id="<?php echo esc_attr( $this->get_field_id( 'button_link' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'button_link' ) ); ?>" value="<?php echo esc_attr( $button_link ); ?>" placeholder="<?php esc_attr_e( 'Paste URL or type to search', 'primer' ); ?>" autocomplete="off">
+				<input type="text" class="widefat link" id="<?php echo esc_attr( $this->get_field_id( 'button_link' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'button_link' ) ); ?>" value="<?php echo esc_attr( $button_link ); ?>" placeholder="<?php esc_attr_e( 'Paste URL or type to search', 'primer' ); ?>" autocomplete="off">
 			</p>
 
 		</div>

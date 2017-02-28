@@ -127,11 +127,6 @@
 			} )
 			// Returns a jQuery object containing the menu element.
 			.autocomplete( 'widget' )
-			.css(
-				{
-					'z-index': 9999999
-				}
-			)
 			.attr( 'role', 'listbox' )
 			.removeAttr( 'tabindex' ) // Remove the `tabindex=0` attribute added by jQuery UI.
 			/*
@@ -160,7 +155,7 @@
 
 	function addAutocomplete() {
 
-		$( '.primer-hero-text-widget input.link-autocomplete' ).each( function() {
+		$( '.primer-hero-text-widget input.link' ).each( function() {
 
 			link.init( this );
 
