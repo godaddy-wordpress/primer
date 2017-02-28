@@ -87,7 +87,7 @@ class Primer_Contributor_List {
 
 		}
 
-		file_put_contents( '../en/contributors.md', ob_get_clean() );
+		file_put_contents( '../sphinx/src/contributors.md', ob_get_clean() );
 
 	}
 
@@ -108,7 +108,7 @@ class Primer_Contributor_List {
 
 		echo $explode[1];
 
-		file_put_contents( '../en/changelog.md', ob_get_clean() );
+		file_put_contents( '../sphinx/src/changelog.md', ob_get_clean() );
 
 	}
 

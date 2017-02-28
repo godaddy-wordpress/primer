@@ -23,7 +23,7 @@
  *
  * @var string
  */
-define( 'PRIMER_VERSION', '1.4.1' );
+define( 'PRIMER_VERSION', '1.5.1' );
 
 /**
  * Minimum WordPress version required for Primer.
@@ -35,6 +35,19 @@ define( 'PRIMER_VERSION', '1.4.1' );
 if ( ! defined( 'PRIMER_MIN_WP_VERSION' ) ) {
 
 	define( 'PRIMER_MIN_WP_VERSION', '4.4' );
+
+}
+
+/**
+ * Define the Primer child theme version if undefined.
+ *
+ * @since 1.5.0
+ *
+ * @var string
+ */
+if ( ! defined( 'PRIMER_CHILD_VERSION' ) ) {
+
+	define( 'PRIMER_CHILD_VERSION', '' );
 
 }
 
@@ -198,7 +211,7 @@ function primer_setup() {
 	/**
 	 * Enable support for Automatic Feed Links.
 	 *
-	 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Feed_Links
+	 * @link  https://developer.wordpress.org/reference/functions/add_theme_support/#feed-links
 	 * @since 1.0.0
 	 */
 	add_theme_support( 'automatic-feed-links' );
@@ -206,7 +219,7 @@ function primer_setup() {
 	/**
 	 * Enable support for plugins and themes to manage the document title tag.
 	 *
-	 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
+	 * @link  https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
 	 * @since 1.0.0
 	 */
 	add_theme_support( 'title-tag' );
@@ -214,15 +227,15 @@ function primer_setup() {
 	/**
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
-	 * @link  https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 * @link  https://developer.wordpress.org/reference/functions/add_theme_support/#post-thumbnails
 	 * @since 1.0.0
 	 */
 	add_theme_support( 'post-thumbnails' );
 
 	/**
-	 * Enable support for customizer selective refresh
+	 * Enable support for customizer selective refresh.
 	 *
-	 * https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
+	 * @link  https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
 	 * @since 1.0.0
 	 */
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -230,7 +243,7 @@ function primer_setup() {
 	/**
 	 * Register custom Custom Navigation Menus.
 	 *
-	 * @link  https://codex.wordpress.org/Function_Reference/register_nav_menus
+	 * @link  https://developer.wordpress.org/reference/functions/register_nav_menus/
 	 * @since 1.0.0
 	 */
 	register_nav_menus(
@@ -293,11 +306,11 @@ add_action( 'after_setup_theme', 'primer_setup' );
  * @filter image_size_names_choose
  * @since  1.0.0
  *
- * @param  array $sizes
+ * @param  array $size_names Array of image sizes and their names.
  *
  * @return array
  */
-function primer_image_size_names_choose( $sizes ) {
+function primer_image_size_names_choose( $size_names ) {
 
 	global $primer_image_sizes;
 
@@ -306,7 +319,7 @@ function primer_image_size_names_choose( $sizes ) {
 		wp_list_pluck( $primer_image_sizes, 'label' )
 	);
 
-	return array_merge( $sizes, $labels );
+	return array_merge( $size_names, $labels );
 
 }
 
@@ -469,8 +482,8 @@ add_action( 'wp_enqueue_scripts', 'primer_scripts' );
  * This provides backwards compatibility with
  * http://core.trac.wordpress.org/changeset/25574
  *
- * It removes the need to call the_post() and rewind_posts() in an author
- * template to print information about the author.
+ * It removes the need to call `the_post()` and `rewind_posts()`
+ * in an author template to print information about the author.
  *
  * @action wp
  * @global WP_Query $wp_query
@@ -483,7 +496,7 @@ function primer_setup_author() {
 
 	if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
 
-		$authordata = get_userdata( $wp_query->post->post_author );
+		$authordata = get_userdata( $wp_query->post->post_author ); // override ok.
 
 	}
 

@@ -5,19 +5,21 @@
  * @package Primer
  * @since   1.0.0
  */
-?>
 
-<?php if ( has_post_thumbnail() ) : ?>
+if ( has_post_thumbnail() ) :
 
+	?>
 	<div class="featured-image">
 
 	<?php
+
 	/**
 	 * Fires before the post thumbnail element.
 	 *
 	 * @since 1.0.0
 	 */
 	do_action( 'primer_before_post_thumbnail' );
+
 	?>
 
 	<?php if ( ! is_single() ) : ?>
@@ -31,14 +33,17 @@
 	<?php endif; ?>
 
 	<?php
+
 	/**
 	 * Fires after the post thumbnail element.
 	 *
 	 * @since 1.0.0
 	 */
 	do_action( 'primer_after_post_thumbnail' );
+
 	?>
 
 	</div><!-- .featured-image -->
+	<?php
 
-<?php endif; ?>
+endif;

@@ -113,7 +113,7 @@ add_action( 'primer_before_page_content', 'primer_wc_shop_messages' );
  * Filter the layout for the WooCommerce shop page.
  *
  * @filter primer_current_layout
- * @uses   primer_get_layout     To retreive the page layout.
+ * @uses   primer_get_layout To retreive the page layout.
  *
  * @since  1.0.0
  *
@@ -125,7 +125,7 @@ function primer_wc_shop_layout( $layout ) {
 
 	if ( is_shop() ) {
 
-		remove_filter( 'primer_current_layout', __FUNCTION__ ); // Prevent infinite loop
+		remove_filter( 'primer_current_layout', __FUNCTION__ ); // Prevent infinite loop.
 
 		$layout = primer_get_layout( wc_get_page_id( 'shop' ) );
 
@@ -218,10 +218,10 @@ function primer_wc_product_classes( $classes ) {
 
 	global $post, $woocommerce_loop;
 
-	// Check if we are on a single product page
+	// Check if we are on a single product page.
 	$is_product = ( is_shop() && 'product' === $post->post_type );
 
-	// Check if we are in an upsell or related product loop
+	// Check if we are in an upsell or related product loop.
 	$is_upsell_or_related = (
 		is_single()
 		&&
@@ -360,7 +360,7 @@ add_filter( 'primer_font_types', 'primer_wc_font_types' );
  * Load a custom template for WooCommerce 404 pages.
  *
  * @filter template_include
- * @since  NEXT
+ * @since  1.5.0
  *
  * @param  string $default The default 404 template.
  *
@@ -382,9 +382,9 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 	 * shortcode. If neither exist, the default fallback is to display recently
 	 * added products.
 	 *
-	 * @since NEXT
-	 * @uses  wc_get_featured_product_ids()
-	 * @uses  wc_get_product_ids_on_sale()
+	 * @since 1.5.0
+	 * @uses  [wc_get_featured_product_ids](https://docs.woocommerce.com/wc-apidocs/function-wc_get_featured_product_ids.html) To retreive the products that are featured.
+	 * @uses  [wc_get_product_ids_on_sale](https://docs.woocommerce.com/wc-apidocs/function-wc_get_product_ids_on_sale.html) To retreive the products that are on sale.
 	 *
 	 * @param int  $per_page        (optional) Total number of promoted products to display. Defaults to `4`.
 	 * @param int  $columns         (optional) Number of columns to display promoted products in. Defaults to `4`.
@@ -397,18 +397,18 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 		 *
 		 * Default: `4`
 		 *
-		 * @since NEXT
+		 * @since 1.5.0
 		 *
 		 * @var int
 		 */
-		$per_page = (int) apply_filters( 'primer_wc_promoted_products_per_page', $per_page ); // Can be negative
+		$per_page = (int) apply_filters( 'primer_wc_promoted_products_per_page', $per_page ); // Can be negative.
 
 		/**
 		 * Filter the number of columns to display promoted products in.
 		 *
 		 * Default: `4`
 		 *
-		 * @since NEXT
+		 * @since 1.5.0
 		 *
 		 * @var int
 		 */
@@ -418,7 +418,7 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 
 			echo '<h2>' . esc_html__( 'Featured Products', 'primer' ) . '</h2>';
 
-			echo do_shortcode( "[featured_products per_page='{$per_page}' columns='{$columns}']" ); // xss ok
+			echo do_shortcode( "[featured_products per_page='{$per_page}' columns='{$columns}']" );
 
 			return;
 
@@ -428,7 +428,7 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 
 			echo '<h2>' . esc_html__( 'On Sale Now', 'primer' ) . '</h2>';
 
-			echo do_shortcode( "[sale_products per_page='{$per_page}' columns='{$columns}']" ); // xss ok
+			echo do_shortcode( "[sale_products per_page='{$per_page}' columns='{$columns}']" );
 
 			return;
 
@@ -442,7 +442,7 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 
 		echo '<h2>' . esc_html__( 'New In Store', 'primer' ) . '</h2>';
 
-		echo do_shortcode( "[recent_products per_page='{$per_page}' columns='{$columns}']" ); // xss ok
+		echo do_shortcode( "[recent_products per_page='{$per_page}' columns='{$columns}']" );
 
 	}
 
@@ -453,7 +453,7 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
 	/**
 	 * Display best-selling products.
 	 *
-	 * @since NEXT
+	 * @since 1.5.0
 	 *
 	 * @param int $per_page (optional) Total number of best-selling products to display. Defaults to `4`.
 	 * @param int $columns  (optional) Number of columns to display best-selling products in. Defaults to `4`.
@@ -465,24 +465,24 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
 		 *
 		 * Default: `4`
 		 *
-		 * @since NEXT
+		 * @since 1.5.0
 		 *
 		 * @var int
 		 */
-		$per_page = (int) apply_filters( 'primer_wc_best_selling_products_per_page', $per_page ); // Can be negative
+		$per_page = (int) apply_filters( 'primer_wc_best_selling_products_per_page', $per_page ); // Can be negative.
 
 		/**
 		 * Filter the number of columns to display best-selling products in.
 		 *
 		 * Default: `4`
 		 *
-		 * @since NEXT
+		 * @since 1.5.0
 		 *
 		 * @var int
 		 */
 		$columns  = absint( apply_filters( 'primer_wc_best_selling_products_columns', $columns ) );
 
-		echo do_shortcode( "[best_selling_products per_page='{$per_page}' columns='{$columns}']" ); // xss ok
+		echo do_shortcode( "[best_selling_products per_page='{$per_page}' columns='{$columns}']" );
 
 	}
 
@@ -492,12 +492,12 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
  * Add a custom "Cart" menu item when WooCommerce is active.
  *
  * @filter wp_get_nav_menu_items
- * @since  NEXT
+ * @since  1.5.0
  *
- * @param  array  $items
- * @param  object $menu
+ * @param  array  $items An array of menu item post objects.
+ * @param  object $menu  The menu object.
  *
- * @return array  $items
+ * @return array
  */
 function primer_wc_generate_cart_menu_item( $items, $menu ) {
 
@@ -529,7 +529,7 @@ add_filter( 'wp_get_nav_menu_items', 'primer_wc_generate_cart_menu_item', 20, 2 
  *
  * @filter wp_nav_menu_{$menu}_items
  * @global WooCommerce $woocommerce
- * @since  NEXT
+ * @since  1.5.0
  *
  * @param  string   $items The HTML list content for the menu items.
  * @param  stdClass $args  An object containing wp_nav_menu() arguments.
@@ -543,7 +543,7 @@ function primer_wc_cart_menu( $items, $args ) {
 	 *
 	 * Default: `true`
 	 *
-	 * @since NEXT
+	 * @since 1.5.0
 	 *
 	 * @var bool
 	*/
@@ -572,7 +572,7 @@ function primer_wc_cart_menu( $items, $args ) {
 			'<ul class="sub-menu primer-wc-cart-sub-menu">
 				<li class="primer-wc-cart-sub-menu-item">%s</li>
 			</ul>',
-			primer_get_the_widget( 'WC_Widget_Cart' ) // xss ok
+			primer_get_the_widget( 'WC_Widget_Cart' )
 		);
 
 		$classes[] = 'menu-item-has-children';
@@ -587,13 +587,14 @@ function primer_wc_cart_menu( $items, $args ) {
 				</span>
 				<span class="cart-preview-count">%s</span>
 			</a>
-			<a class="expand" href="#"></a>
+			%s
 			%s
 		</li>',
-		implode( ' ', array_map( 'esc_attr', $classes ) ), // xss ok
-		$woocommerce->cart->get_cart_total(), // xss ok
+		implode( ' ', array_map( 'esc_attr', $classes ) ),
+		$woocommerce->cart->get_cart_total(),
 		esc_html( sprintf( _n( '%d item', '%d items', $woocommerce->cart->get_cart_contents_count(), 'primer' ), $woocommerce->cart->get_cart_contents_count() ) ),
-		$sub_menu // xss ok
+		$woocommerce->cart->get_cart_contents_count() ? '<a class="expand" href="#"></a>' : '',
+		$sub_menu
 	);
 
 	return $items . $cart_menu_item;
@@ -604,7 +605,8 @@ function primer_wc_cart_menu( $items, $args ) {
  * Empty the cart total during Customize preview.
  *
  * @filter woocommerce_cart_contents_total
- * @since  NEXT
+ * @since  1.5.0
+ * @uses   [wc_price](https://docs.woocommerce.com/wc-apidocs/function-wc_price.html) To format the price with a currency symbol.
  *
  * @return string
  */

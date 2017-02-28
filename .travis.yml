@@ -9,6 +9,7 @@ notifications:
 
 branches:
   only:
+    - /^v\d.*$/
     - master
     - develop
 

@@ -35,8 +35,8 @@ module.exports = function( grunt ) {
 			options: {
 				force: true
 			},
-			build: [ 'build/*' ],
-			docs: [ '.dev/docs/sphinx/src/documentation/*' ]
+			build: [ 'build/' ],
+			docs: [ '.dev/docs/sphinx/src/documentation/' ]
 		},
 
 		copy: {
@@ -154,7 +154,7 @@ module.exports = function( grunt ) {
 				options: {
 					domainPath: 'languages/',
 					include: [ '.+\.php' ],
-					exclude: [ '.dev/', 'node_modules/' ],
+					exclude: [ '.dev/', 'build/', 'node_modules/', 'tests/', 'vendor/' ],
 					potComments: 'Copyright (c) {year} GoDaddy Operating Company, LLC. All Rights Reserved.',
 					potHeaders: {
 						'x-poedit-keywordslist': true
@@ -183,6 +183,16 @@ module.exports = function( grunt ) {
 		},
 
 		replace: {
+			charset: {
+				overwrite: true,
+				replacements: [
+					{
+						from: /^@charset "UTF-8";\n/,
+						to: ''
+					}
+				],
+				src: [ 'style*.css' ]
+			},
 			docs: {
 				overwrite: true,
 				replacements: [
@@ -345,6 +355,9 @@ module.exports = function( grunt ) {
 					// Badges
 					readme = readme.replace( '## Description ##', grunt.template.process( pkg.badges.join( ' ' ) ) + "  \r\n\r\n## Description ##" );
 
+					// YouTube
+					readme = readme.replace( /\[youtube\s+(?:https?:\/\/www\.youtube\.com\/watch\?v=|https?:\/\/youtu\.be\/)(.+?)\]/g, '[![Play video on YouTube](https://img.youtube.com/vi/$1/maxresdefault.jpg)](https://www.youtube.com/watch?v=$1)' );
+
 					return readme;
 				}
 			},
@@ -359,7 +372,7 @@ module.exports = function( grunt ) {
 
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask( 'default',     [ 'sass', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify', 'imagemin' ] );
+	grunt.registerTask( 'default',     [ 'sass', 'replace:charset', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify', 'imagemin' ] );
 	grunt.registerTask( 'build',       [ 'default', 'clean:build', 'copy:build' ] );
 	grunt.registerTask( 'check',       [ 'devUpdate' ] );
 	grunt.registerTask( 'deploy',      [ 'build', 'wp_deploy', 'clean:build' ] );

@@ -1,4 +1,4 @@
-/* global colorSchemes */
+/* global colorSchemes, jQuery, wp */
 /**
  * Add a listener to the Color Scheme control to update other color controls to new values/defaults.
  * Also trigger an update of the Color Scheme CSS when a color is changed.

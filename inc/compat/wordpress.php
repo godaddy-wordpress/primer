@@ -14,19 +14,19 @@
  */
 
 /**
-* Switch to the default theme immediately.
-*
-* @action admin_notices
-* @action after_setup_theme
-* @uses   [switch_theme](https://codex.wordpress.org/Function_Reference/switch_theme) To switch WordPress themes.
-*
-* @since  1.0.0
-*/
+ * Switch to the default theme immediately.
+ *
+ * @action admin_notices
+ * @action after_setup_theme
+ * @uses   [switch_theme](https://codex.wordpress.org/Function_Reference/switch_theme) To switch WordPress themes.
+ *
+ * @since  1.0.0
+ */
 function primer_switch_theme() {
 
 	switch_theme( WP_DEFAULT_THEME, WP_DEFAULT_THEME );
 
-	unset( $_GET['activated'] );
+	unset( $_GET['activated'] ); // input var ok.
 
 	add_action( 'admin_notices', 'primer_upgrade_notice' );
 
@@ -52,7 +52,7 @@ function primer_get_wp_upgrade_message() {
 	 */
 	return (string) apply_filters( 'primer_required_wp_version_message',
 		sprintf(
-			__( 'Primer requires at least WordPress version %1$s. You are running version %2$s. Please upgrade and try again.', 'primer' ),
+			esc_html__( 'Primer requires at least WordPress version %1$s. You are running version %2$s. Please upgrade and try again.', 'primer' ),
 			PRIMER_MIN_WP_VERSION,
 			get_bloginfo( 'version' )
 		)
@@ -70,7 +70,7 @@ function primer_get_wp_upgrade_message() {
  */
 function primer_upgrade_notice() {
 
-	printf( '<div class="error"><p>%s</p></div>', primer_get_wp_upgrade_message() );
+	printf( '<div class="error"><p>%s</p></div>', esc_html( primer_get_wp_upgrade_message() ) );
 
 }
 
@@ -82,7 +82,7 @@ function primer_upgrade_notice() {
  */
 function primer_customize() {
 
-	wp_die( primer_get_wp_upgrade_message(), '', array( 'back_link' => true ) );
+	wp_die( esc_html( primer_get_wp_upgrade_message() ), '', array( 'back_link' => true ) );
 
 }
 add_action( 'load-customize.php', 'primer_customize' );
@@ -95,9 +95,9 @@ add_action( 'load-customize.php', 'primer_customize' );
  */
 function primer_preview() {
 
-	if ( isset( $_GET['preview'] ) ) {
+	if ( isset( $_GET['preview'] ) ) { // input var ok.
 
-		wp_die( primer_get_wp_upgrade_message() );
+		wp_die( esc_html( primer_get_wp_upgrade_message() ) );
 
 	}
 

@@ -29,12 +29,14 @@
 <body <?php body_class(); ?>>
 
 	<?php
+
 	/**
 	 * Fires inside the `<body>` element.
 	 *
 	 * @since 1.0.0
 	 */
 	do_action( 'primer_body' );
+
 	?>
 
 	<div id="page" class="hfeed site">
@@ -42,12 +44,14 @@
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'primer' ); ?></a>
 
 		<?php
+
 		/**
 		 * Fires before the `<header>` element.
 		 *
 		 * @since 1.0.0
 		 */
 		do_action( 'primer_before_header' );
+
 		?>
 
 		<header id="masthead" class="site-header" role="banner">
@@ -55,6 +59,7 @@
 			<div class="site-header-wrapper">
 
 				<?php
+
 				/**
 				 * Fires inside the `<header>` element.
 				 *
@@ -64,22 +69,26 @@
 				 * @since 1.0.0
 				 */
 				do_action( 'primer_header' );
+
 				?>
 
 			</div><!-- .site-header-wrapper -->
 
 			<?php
+
 			/**
 			 * Fires inside the `<div class="site-header-wrapper">` element.
 			 *
 			 * @since 1.0.0
 			 */
 			do_action( 'primer_after_site_header_wrapper' );
+
 			?>
 
 		</header><!-- #masthead -->
 
 		<?php
+
 		/**
 		 * Fires after the `<header>` element.
 		 *
@@ -89,6 +98,7 @@
 		 * @since 1.0.0
 		 */
 		do_action( 'primer_after_header' );
+
 		?>
 
 		<div id="content" class="site-content">

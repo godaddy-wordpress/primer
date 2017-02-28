@@ -2,7 +2,7 @@
   "name": "primer",
   "title": "Primer",
   "description": "Primer is a powerful theme that brings clarity to your content in a fresh design. This is the parent for all themes in the GoDaddy Primer theme family.",
-  "version": "1.4.1",
+  "version": "1.5.1",
   "author": "GoDaddy",
   "license": "GPL-2.0",
   "repository": "godaddy/wp-primer-theme",
@@ -58,7 +58,7 @@
     "grunt-autoprefixer": "^3.0.4",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-cssmin": "^2.0.0",
     "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-uglify": "^2.1.0",
@@ -77,7 +77,7 @@
     "susy": "^2.2.12"
   },
   "scripts": {
-    "version": "grunt version && grunt && git add -A .",
+    "version": "grunt version && git add -A .",
     "postversion": "git push && git push --tags"
   }
 }

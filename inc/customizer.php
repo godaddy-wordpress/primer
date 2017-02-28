@@ -48,9 +48,16 @@ class Primer_Customizer {
 		/**
 		 * Load additional site identity options
 		 *
-		 * @since NEXT
+		 * @since 1.5.0
 		 */
 		require_once get_template_directory() . '/inc/customizer/site-identity.php';
+
+		/**
+		 * Load additional static front page options
+		 *
+		 * @since 1.5.0
+		 */
+		require_once get_template_directory() . '/inc/customizer/static-front-page.php';
 
 		add_action( 'after_setup_theme',      array( $this, 'logo' ) );
 		add_action( 'customize_register',     array( $this, 'selective_refresh' ), 11 );
@@ -225,14 +232,14 @@ class Primer_Customizer {
 
 		foreach ( $rules as $rule => $properties ) {
 
-			printf(
+			printf( // xss ok.
 				"%s {\n",
 				implode( ",\n", array_map( 'trim', explode( ',', $rule ) ) )
 			);
 
 			foreach ( $properties as $property => $value ) {
 
-				printf( "\t%s: %s;\n", $property, $value );
+				printf( "\t%s: %s;\n", $property, $value ); // xss ok.
 
 			}
 

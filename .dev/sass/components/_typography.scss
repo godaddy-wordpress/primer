@@ -7,7 +7,8 @@ body,
 button,
 input,
 select,
-textarea {
+textarea,
+.select2-container .select2-choice {
 	color: $color__primary-text;
 	font-family: $font__main;
 	font-weight: normal;

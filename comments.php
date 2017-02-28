@@ -28,24 +28,26 @@ if ( post_password_required() ) {
 
 	<?php if ( have_comments() ) : ?>
 
-		<h2 class="comments-title"><?php
+		<h2 class="comments-title">
+		<?php
 
-			printf(
-				_nx(
-					'One thought on %2$s',
-					'%1$d thoughts on %2$s',
-					get_comments_number(),
-					'1. number of comments, 2. post title',
-					'primer'
-				),
-				number_format_i18n( get_comments_number() ),
-				sprintf(
-					'<span>&ldquo;%s&rdquo;</span>',
-					get_the_title()
-				)
-			);
+		printf( // xss ok.
+			_nx(
+				'%1$d thought on %2$s',
+				'%1$d thoughts on %2$s',
+				get_comments_number(),
+				'1. number of comments, 2. post title',
+				'primer'
+			),
+			number_format_i18n( get_comments_number() ),
+			sprintf(
+				'<span>&ldquo;%s&rdquo;</span>',
+				get_the_title()
+			)
+		);
 
-		?></h2>
+		?>
+		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 
@@ -61,16 +63,18 @@ if ( post_password_required() ) {
 
 		<?php endif; ?>
 
-		<ol class="comment-list"><?php
+		<ol class="comment-list">
+		<?php
 
-			wp_list_comments(
-				array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				)
-			);
+		wp_list_comments(
+			array(
+				'style'      => 'ol',
+				'short_ping' => true,
+			)
+		);
 
-		?></ol><!-- .comment-list -->
+		?>
+		</ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 

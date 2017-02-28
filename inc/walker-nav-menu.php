@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Custom class that adds some markup before the nav menu.
  *
