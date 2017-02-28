@@ -127,7 +127,7 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 		<script>
 			( function ( $ ) {
 
-				// This let us know that we appended a new widget to reset sortables.
+				// Let our script know a widget has been added to make its URL search input work.
 				$( document ).trigger( 'primer.widgets.change' );
 
 			} )( jQuery );
