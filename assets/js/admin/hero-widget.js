@@ -1,6 +1,6 @@
-/* global jQuery, primer_widgets_hero_admin */
+/* global jQuery, primer_admin_hero_widget */
 
-(function( $ ) {
+( function( $ ) {
 
 	var link = {
 
@@ -44,7 +44,7 @@
 							action: 'wp-link-ajax',
 							page: 1,
 							search: request.term,
-							_ajax_linking_nonce: primer_widgets_hero_admin._ajax_linking_nonce
+							_ajax_linking_nonce: primer_admin_hero_widget._ajax_linking_nonce
 						},
 						function( data ) {
 
@@ -73,7 +73,7 @@
 
 					$input.val( ui.item.permalink );
 
-					// This is for the customizer
+					// This is for the customizer.
 					$input.trigger( 'change' );
 
 					return false;
@@ -143,7 +143,7 @@
 
 				ui.item.attr( 'aria-selected', 'true' );
 
-			})
+			} )
 			.on( 'menublur', function() {
 
 				/*
@@ -152,15 +152,15 @@
 				 */
 				$( this ).find( '[aria-selected="true"]' ).removeAttr( 'aria-selected' );
 
-			});
+			} );
 
-		} // end init
+		} // end init.
 
 	};
 
 	function addAutocomplete() {
 
-		$( '.primer-widget-hero input.link' ).each( function() {
+		$( '.primer-hero-widget input.link-autocomplete' ).each( function() {
 
 			link.init( this );
 
@@ -171,4 +171,4 @@
 	$( document ).ready( addAutocomplete );
 	$( document ).on( 'primer.widgets.change', addAutocomplete );
 
-})( jQuery );
+} )( jQuery );

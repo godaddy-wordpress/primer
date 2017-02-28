@@ -437,16 +437,16 @@ function primer_register_sidebars() {
 add_action( 'widgets_init', 'primer_register_sidebars' );
 
 /**
- * Register Primer hero widget.
+ * Register Primer widgets.
  *
  * @link  http://codex.wordpress.org/Function_Reference/register_widget
  * @since NEXT
  */
 function primer_register_widgets() {
 
-	require_once get_template_directory() . '/inc/widgets/class-hero.php';
+	require_once get_template_directory() . '/inc/hero-widget.php';
 
-	register_widget( 'Primer_Hero' );
+	register_widget( 'Primer_Hero_Widget' );
 
 }
 add_action( 'widgets_init', 'primer_register_widgets' );
