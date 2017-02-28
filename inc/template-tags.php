@@ -116,29 +116,11 @@ function primer_the_page_title() {
 /**
  * Display navigation to next/previous set of posts when applicable.
  *
- * @deprecated NEXT No longer supported as the pagination funciton. See primer_pagination().
- */
-function primer_paging_nav( $args = array() ) {
-
-	if ( ! current_user_can( 'edit_themes' ) ) {
-
-		return;
-
-	}
-
-	trigger_error( __( 'primer_paging_nav() has been deprecated since NEXT. Use primer_pagination() instead.', 'primer' ) );
-
-}
-
-/**
- * Display navigation to next/previous set of posts when applicable.
- *
  * @global WP_Query $wp_query
  * @since  NEXT
  * @uses  [the_posts_pagination](https://developer.wordpress.org/reference/functions/the_posts_pagination/)
  *
  * @param array $args (optional) Post pagination arguments.
- *
  */
 function primer_pagination( $args = array() ) {
 
