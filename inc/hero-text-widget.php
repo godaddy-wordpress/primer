@@ -1,8 +1,8 @@
 <?php
 /**
- * Hero Widget.
+ * Hero Text Widget.
  *
- * @class      Primer_Hero_Widget
+ * @class      Primer_Hero_Text_Widget
  * @package    Classes
  * @subpackage Widgets
  * @category   Class
@@ -10,7 +10,7 @@
  * @since      NEXT
  * @extends    WP_Widget
  */
-class Primer_Hero_Widget extends WP_Widget {
+class Primer_Hero_Text_Widget extends WP_Widget {
 
 	/**
 	 * Widget constructor.
@@ -19,7 +19,7 @@ class Primer_Hero_Widget extends WP_Widget {
 
 		$widget_options = array(
 			'customize_selective_refresh' => true,
-			'classname'                   => 'widget_text primer-widgets primer-hero-widget',
+			'classname'                   => 'widget_text primer-widgets primer-hero-text-widget',
 			'description'                 => sprintf(
 				esc_html_x( "A %s theme widget designed for the Hero area on your site's front page.", 'theme name', 'primer' ),
 				esc_html( $this->get_current_theme_name() )
@@ -46,21 +46,28 @@ class Primer_Hero_Widget extends WP_Widget {
 		/**
 		 * Filter the widget title.
 		 *
-		 * @link  [widget_title](https://codex.wordpress.org/Plugin_API/Filter_Reference/widget_title)
+		 * @link  https://developer.wordpress.org/reference/hooks/widget_title/
 		 * @since NEXT
+		 *
+		 * @param array  $instance An array of the widget's settings.
+		 * @param string $id_base  The widget ID.
 		 *
 		 * @var string
 		 */
-		$title = ! empty( $instance['title'] ) ? (string) apply_filters( 'widget_title', $instance['title'], $instance, 'primer-hero' ) : null;
+		$title = ! empty( $instance['title'] ) ? (string) apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base ) : null;
 
 		/**
 		 * Filter the widget text.
 		 *
+		 * @link  https://developer.wordpress.org/reference/hooks/widget_text/
 		 * @since NEXT
+		 *
+		 * @param array                   $instance    Array of settings for the current widget.
+		 * @param Primer_Hero_Text_Widget $this        Current Hero Text widget instance.
 		 *
 		 * @var string
 		 */
-		$text = ! empty( $instance['text'] ) ? (string) apply_filters( 'widget_text', $instance['text'] ) : null;
+		$text = ! empty( $instance['text'] ) ? (string) apply_filters( 'widget_text', $instance['text'], $instance, $this ) : null;
 
 		$button_text = ! empty( $instance['button_text'] ) ? $instance['button_text'] : null;
 		$button_link = ! empty( $instance['button_link'] ) ? $instance['button_link'] : null;
@@ -75,7 +82,7 @@ class Primer_Hero_Widget extends WP_Widget {
 		echo $args['before_widget']; // xss ok.
 
 		?>
-		<div class="textwidget primer-widgets primer-hero-widget">
+		<div class="textwidget primer-widgets primer-hero-text-widget">
 
 			<?php if ( $title ) : ?>
 
@@ -126,7 +133,7 @@ class Primer_Hero_Widget extends WP_Widget {
 			} )( jQuery );
 		</script>
 
-		<div class="primer-widgets primer-hero-widget">
+		<div class="primer-widgets primer-hero-text-widget">
 
 			<p>
 				<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" title="<?php esc_attr_e( 'The title of widget. Leave empty for no title.', 'primer' ); ?>"><?php esc_html_e( 'Title:', 'primer' ); ?></label>
@@ -201,8 +208,8 @@ class Primer_Hero_Widget extends WP_Widget {
 		wp_enqueue_script( 'jquery-ui-autocomplete' );
 
 		wp_enqueue_script(
-			'primer-admin-hero-widget',
-			get_template_directory_uri() . "/assets/js/admin/hero-widget{$suffix}.js",
+			'primer-admin-hero-text-widget',
+			get_template_directory_uri() . "/assets/js/admin/hero-text-widget{$suffix}.js",
 			array( 'jquery', 'jquery-ui-autocomplete' ),
 			PRIMER_VERSION,
 			true
@@ -210,8 +217,8 @@ class Primer_Hero_Widget extends WP_Widget {
 
 		// We need the internal linking token.
 		wp_localize_script(
-			'primer-admin-hero-widget',
-			'primer_admin_hero_widget',
+			'primer-admin-hero-text-widget',
+			'primer_hero_text_widget',
 			array(
 				'_ajax_linking_nonce' => wp_create_nonce( 'internal-linking' ),
 			)

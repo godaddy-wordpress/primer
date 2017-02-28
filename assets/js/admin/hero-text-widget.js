@@ -1,4 +1,4 @@
-/* global jQuery, primer_admin_hero_widget */
+/* global jQuery, primer_hero_text_widget */
 
 ( function( $ ) {
 
@@ -44,7 +44,7 @@
 							action: 'wp-link-ajax',
 							page: 1,
 							search: request.term,
-							_ajax_linking_nonce: primer_admin_hero_widget._ajax_linking_nonce
+							_ajax_linking_nonce: primer_hero_text_widget._ajax_linking_nonce
 						},
 						function( data ) {
 
@@ -160,7 +160,7 @@
 
 	function addAutocomplete() {
 
-		$( '.primer-hero-widget input.link-autocomplete' ).each( function() {
+		$( '.primer-hero-text-widget input.link-autocomplete' ).each( function() {
 
 			link.init( this );
 

@@ -444,9 +444,9 @@ add_action( 'widgets_init', 'primer_register_sidebars' );
  */
 function primer_register_widgets() {
 
-	require_once get_template_directory() . '/inc/hero-widget.php';
+	require_once get_template_directory() . '/inc/hero-text-widget.php';
 
-	register_widget( 'Primer_Hero_Widget' );
+	register_widget( 'Primer_Hero_Text_Widget' );
 
 }
 add_action( 'widgets_init', 'primer_register_widgets' );
