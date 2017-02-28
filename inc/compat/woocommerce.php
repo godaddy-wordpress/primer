@@ -26,6 +26,31 @@ function primer_wc_setup() {
 add_action( 'after_setup_theme', 'primer_wc_setup' );
 
 /**
+ * Add body class to indicate when WooCommerce is localized.
+ *
+ * @filter body_class
+ * @since  NEXT
+ *
+ * @param  array $classes Array of body classes.
+ *
+ * @return array
+ */
+function primer_wc_l10n_body_class( array $classes ) {
+
+	global $l10n;
+
+	if ( ! empty( $l10n['woocommerce'] ) ) {
+
+		$classes[] = 'primer-woocommerce-l10n';
+
+	}
+
+	return $classes;
+
+}
+add_filter( 'body_class', 'primer_wc_l10n_body_class' );
+
+/**
  * Remove the default WooCommerce page wrapper.
  *
  * @since 1.0.0

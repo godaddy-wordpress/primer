@@ -1711,6 +1711,8 @@ body.no-max-width .page-title-container .page-header {
       padding-left: 0; }
       .hero .widget ul li, .hero .widget ol li {
         list-style: none; }
+    .hero .widget b, .hero .widget strong {
+      font-weight: 600; }
   .hero label, .hero input, .hero select, .hero textarea {
     display: inline;
     width: auto; }
@@ -2232,6 +2234,20 @@ body.no-max-width .site-info-wrapper .site-info {
   .woocommerce-page .primer-woocommerce .cart .qty {
     padding: 0.18em; }
 
+body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
+.woocommerce a.added_to_cart {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  display: block; }
+  @media only screen and (min-width: 61.063em) {
+    body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
+    .woocommerce a.added_to_cart {
+      font-size: 0.75rem; } }
+
+.woocommerce a.added_to_cart {
+  text-align: left; }
+
 .woocommerce nav.woocommerce-pagination {
   margin-bottom: 0;
   text-align: left; }
@@ -2245,20 +2261,17 @@ body.no-max-width .site-info-wrapper .site-info {
         margin-left: 0;
         padding-left: 0; } }
 
-body.post-type-archive,
-body.single-product {
-  /* On Sale Badge */ }
-  body.post-type-archive span.onsale,
-  body.post-type-archive ul.products li.product .onsale,
-  body.single-product span.onsale,
-  body.single-product ul.products li.product .onsale {
-    padding: 2px 8px;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    margin: 0;
-    min-height: auto;
-    min-width: auto;
-    line-height: inherit; }
+body.post-type-archive span.onsale,
+body.post-type-archive ul.products li.product .onsale,
+body.single-product span.onsale,
+body.single-product ul.products li.product .onsale {
+  padding: 2px 8px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  margin: 0;
+  min-height: auto;
+  min-width: auto;
+  line-height: inherit; }
 
 body.single-product span.onsale {
   padding: 3px 18px;
