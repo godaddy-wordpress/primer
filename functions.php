@@ -437,6 +437,21 @@ function primer_register_sidebars() {
 add_action( 'widgets_init', 'primer_register_sidebars' );
 
 /**
+ * Register Primer widgets.
+ *
+ * @link  http://codex.wordpress.org/Function_Reference/register_widget
+ * @since NEXT
+ */
+function primer_register_widgets() {
+
+	require_once get_template_directory() . '/inc/hero-text-widget.php';
+
+	register_widget( 'Primer_Hero_Text_Widget' );
+
+}
+add_action( 'widgets_init', 'primer_register_widgets' );
+
+/**
  * Enqueue theme scripts and styles.
  *
  * @link  https://codex.wordpress.org/Function_Reference/wp_enqueue_style

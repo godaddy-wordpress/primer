@@ -1681,6 +1681,8 @@ body.no-max-width .page-title-container .page-header {
       padding-right: 0; }
       .hero .widget ul li, .hero .widget ol li {
         list-style: none; }
+    .hero .widget b, .hero .widget strong {
+      font-weight: 600; }
   .hero label, .hero input, .hero select, .hero textarea {
     display: inline;
     width: auto; }
