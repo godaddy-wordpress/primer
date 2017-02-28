@@ -12,11 +12,13 @@
 
 @media #{$large-up} {
 
-	body.primer-woocommerce-l10n.woocommerce ul.products li.product .button {
+	body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
+	.woocommerce a.added_to_cart {
 		font-size: 0.75rem;
 		max-width: 100%;
 		white-space: normal;
 		text-align: center;
+		display: block;
 	}
 }
 

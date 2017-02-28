@@ -2208,11 +2208,13 @@ body.no-max-width .site-info-wrapper .site-info {
     padding: 0.18em; }
 
 @media only screen and (min-width: 61.063em) {
-  body.primer-woocommerce-l10n.woocommerce ul.products li.product .button {
+  body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
+  .woocommerce a.added_to_cart {
     font-size: 0.75rem;
     max-width: 100%;
     white-space: normal;
-    text-align: center; } }
+    text-align: center;
+    display: block; } }
 
 body.post-type-archive,
 body.single-product {
