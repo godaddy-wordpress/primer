@@ -3,23 +3,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-02-22 04:50:19+00:00\n"
+"POT-Creation-Date: 2017-03-01 23:51:05+00:00\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
-#: 404.php:22 templates/parts/404-woocommerce.php:22
+#: 404.php:22 templates/woocommerce/404.php:22
 msgid "Oops! That page can't be found."
 msgstr "Hoppsan! Den sidan finns inte."
 
-#: 404.php:28 templates/parts/404-woocommerce.php:28
+#: 404.php:28 templates/woocommerce/404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr "Det fanns ingenting här. Försök söka nedan:"
 
 #: comments.php:56 comments.php:83
@@ -57,31 +60,31 @@ msgid ""
 "It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "Vi hittar inte vad du söker. Prova med att söka."
 
-#: functions.php:172
+#: functions.php:186
 msgid "Featured"
 msgstr "Utvald"
 
-#: functions.php:178 functions.php:420
+#: functions.php:192 functions.php:434
 msgid "Hero"
 msgstr "Hero"
 
-#: functions.php:259
+#: functions.php:273
 msgid "Primary Menu"
 msgstr "Primär meny"
 
-#: functions.php:260
+#: functions.php:274
 msgid "Social Menu"
 msgstr "Social meny"
 
-#: functions.php:261
+#: functions.php:275
 msgid "Footer Menu"
 msgstr "Sidfotsmeny"
 
-#: functions.php:380
+#: functions.php:394
 msgid "Sidebar"
 msgstr "Sidofält"
 
-#: functions.php:381
+#: functions.php:395
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
@@ -89,42 +92,43 @@ msgstr ""
 "Det primära sidofältet visas bredvid innehållet på varje sida, inlägg, arkiv "
 "och sökmall."
 
-#: functions.php:388
+#: functions.php:402
 msgid "Secondary Sidebar"
 msgstr "Sekundärt sidofält"
 
-#: functions.php:389
+#: functions.php:403
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr ""
-"Det sekundära sidofältet visas enbart när du har valt en layout med tre kolumner."
+"Det sekundära sidofältet visas enbart när du har valt en layout med tre "
+"kolumner."
 
-#: functions.php:396
+#: functions.php:410
 msgid "Footer 1"
 msgstr "Sidfot 1"
 
-#: functions.php:397
+#: functions.php:411
 msgid "This sidebar is the first column of the footer widget area."
 msgstr "Detta sidofält är den första kolumnen på sidfotens widgetområde."
 
-#: functions.php:404
+#: functions.php:418
 msgid "Footer 2"
 msgstr "Sidfot 2"
 
-#: functions.php:405
+#: functions.php:419
 msgid "This sidebar is the second column of the footer widget area."
 msgstr "Detta sidofält är den andra kolumnen på sidfotens widgetområde."
 
-#: functions.php:412
+#: functions.php:426
 msgid "Footer 3"
 msgstr "Sidfot 3"
 
-#: functions.php:413
+#: functions.php:427
 msgid "This sidebar is the third column of the footer widget area."
 msgstr "Detta sidofält är den tredje kolumnen på sidfotens widgetområde."
 
-#: functions.php:421
+#: functions.php:435
 msgid "Hero widgets appear over the header image on the front page."
 msgstr "Herowidgets visas ovanför rubrikbilden på framsidan."
 
@@ -132,23 +136,39 @@ msgstr "Herowidgets visas ovanför rubrikbilden på framsidan."
 msgid "Skip to content"
 msgstr "Gå till innehåll"
 
-#: inc/compat/woocommerce.php:419
-msgid "Featured Products"
-msgstr "Aktuella produkter"
+#. Theme Name of the plugin/theme
+msgid "Primer"
+msgstr "Primer"
 
-#: inc/compat/woocommerce.php:429
-msgid "On Sale Now"
-msgstr "På rea nu"
+#: inc/compat/deprecated.php:152
+msgid "Posts navigation"
+msgstr "Navigera inlägg"
 
-#: inc/compat/woocommerce.php:443
-msgid "New In Store"
-msgstr "Nyheter"
+#: inc/compat/deprecated.php:158
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Äldre inlägg"
 
-#: inc/compat/woocommerce.php:595
+#: inc/compat/deprecated.php:164
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nyare inlägg <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/compat/woocommerce.php:526
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d artikel"
 msgstr[1] "%d artiklar"
+
+#: inc/compat/woocommerce.php:593
+msgid "Featured Products"
+msgstr "Aktuella produkter"
+
+#: inc/compat/woocommerce.php:603
+msgid "On Sale Now"
+msgstr "På rea nu"
+
+#: inc/compat/woocommerce.php:617
+msgid "New In Store"
+msgstr "Nyheter"
 
 #: inc/compat/wordpress.php:55
 msgid ""
@@ -170,7 +190,7 @@ msgstr "Mottotext"
 msgid "Hero Text"
 msgstr "Herotext"
 
-#: inc/customizer/colors.php:107 inc/customizer/colors.php:325
+#: inc/customizer/colors.php:107 inc/customizer/colors.php:326
 msgid "Text"
 msgstr "Text"
 
@@ -180,7 +200,8 @@ msgstr "Rubriktext"
 
 #: inc/customizer/colors.php:130
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "Uppläggstitlar, widgettitlar, formuläretiketter, tabellrubriker och knappar."
+msgstr ""
+"Uppläggstitlar, widgettitlar, formuläretiketter, tabellrubriker och knappar."
 
 #: inc/customizer/colors.php:151
 msgid "Primary Text"
@@ -190,107 +211,108 @@ msgstr "Primär text"
 msgid "Paragraphs, lists, menu links, quotes and tables."
 msgstr "Paragrafer, listor, menylänkar, citat och tabeller."
 
-#: inc/customizer/colors.php:197
+#: inc/customizer/colors.php:198
 msgid "Secondary Text"
 msgstr "Sekundärtext"
 
-#: inc/customizer/colors.php:198
+#: inc/customizer/colors.php:199
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr "Bylines, antal kommentarer, upplägg med sidfötter och citat med sidfötter."
+msgstr ""
+"Bylines, antal kommentarer, upplägg med sidfötter och citat med sidfötter."
 
-#: inc/customizer/colors.php:212
+#: inc/customizer/colors.php:213
 msgid "Widget Heading Text"
 msgstr "Widget rubriktext"
 
-#: inc/customizer/colors.php:229
+#: inc/customizer/colors.php:230
 msgid "Widget Text"
 msgstr "Widgettext"
 
-#: inc/customizer/colors.php:241
+#: inc/customizer/colors.php:242
 msgid "Menu Text"
 msgstr "Menytext"
 
-#: inc/customizer/colors.php:263
+#: inc/customizer/colors.php:264
 msgid "Copyright Text"
 msgstr "Copyrighttext"
 
-#: inc/customizer/colors.php:277
+#: inc/customizer/colors.php:278
 msgid "Link Text"
 msgstr "Länktext"
 
-#: inc/customizer/colors.php:299 inc/customizer/colors.php:381
+#: inc/customizer/colors.php:300 inc/customizer/colors.php:385
 msgid "Background"
 msgstr "Bakgrund"
 
-#: inc/customizer/colors.php:342
+#: inc/customizer/colors.php:343
 msgid "Page Background"
 msgstr "Sidbakgrund"
 
-#: inc/customizer/colors.php:352
+#: inc/customizer/colors.php:356
 msgid "Content Background"
 msgstr "Innehållsbakgrund"
 
-#: inc/customizer/colors.php:362
+#: inc/customizer/colors.php:366
 msgid "Hero Background"
 msgstr "Herobakgrund"
 
-#: inc/customizer/colors.php:391
+#: inc/customizer/colors.php:395
 msgid "Widgets Background"
 msgstr "Widgetbakgrund"
 
-#: inc/customizer/colors.php:402
+#: inc/customizer/colors.php:406
 msgid "Widget Content Background"
 msgstr "Widget innehållsbakgrund"
 
-#: inc/customizer/colors.php:413
+#: inc/customizer/colors.php:417
 msgid "Footer Background"
 msgstr "Sidfotsbakgrund"
 
-#: inc/customizer/colors.php:451 inc/customizer/layouts.php:298
+#: inc/customizer/colors.php:455 inc/customizer/layouts.php:298
 msgid "Custom"
 msgstr "Custom"
 
-#: inc/customizer/colors.php:468 inc/customizer/layouts.php:294
+#: inc/customizer/colors.php:472 inc/customizer/layouts.php:294
 msgid "Default"
 msgstr "Standard"
 
-#: inc/customizer/colors.php:710
+#: inc/customizer/colors.php:714
 msgid "Colors"
 msgstr "Färger"
 
-#: inc/customizer/colors.php:719
+#: inc/customizer/colors.php:723
 msgid "Color Schemes"
 msgstr "Färgschema"
 
-#: inc/customizer/colors.php:727
+#: inc/customizer/colors.php:731
 msgid "Header"
 msgstr "Rubrik"
 
-#: inc/customizer/colors.php:735
+#: inc/customizer/colors.php:739
 msgid "Menu"
 msgstr "Meny"
 
-#: inc/customizer/colors.php:743
+#: inc/customizer/colors.php:747
 msgid "Buttons"
 msgstr "Knappar"
 
-#: inc/customizer/colors.php:751
+#: inc/customizer/colors.php:755
 msgid "Content"
 msgstr "Innehåll"
 
-#: inc/customizer/colors.php:759
+#: inc/customizer/colors.php:763
 msgid "Footer"
 msgstr "Sidfot"
 
-#: inc/customizer/colors.php:975
+#: inc/customizer/colors.php:979
 msgid "Base Color Scheme"
 msgstr "Grundfärgpalett"
 
-#: inc/customizer/colors.php:1287
+#: inc/customizer/colors.php:1291
 msgid "Hero Background Overlay"
 msgstr "Herobakgrundoverlay"
 
-#: inc/customizer/colors.php:1288
+#: inc/customizer/colors.php:1292
 msgid ""
 "Control the color overlay transparency when using a custom Header Image."
 msgstr ""
@@ -334,7 +356,9 @@ msgstr "Sekundär"
 
 #: inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr "Bylines, antal kommentarer, svarslänkar, upplägg med sidfötter och citat med sidfötter."
+msgstr ""
+"Bylines, antal kommentarer, svarslänkar, upplägg med sidfötter och citat med "
+"sidfötter."
 
 #: inc/customizer/fonts.php:192
 msgid "Fonts"
@@ -402,38 +426,49 @@ msgid ""
 "Allow the featured image on the current post to override the hero image."
 msgstr "Tillåt aktuell bild på aktuellt upplägg att åsidosätta herobilden."
 
-#: inc/helpers.php:77
+#: inc/helpers.php:56
 msgid "404 Page Not Found"
 msgstr "404 Sidan kunde inte hittas"
 
-#: inc/template-tags.php:135
-msgid "Posts navigation"
-msgstr "Navigera inlägg"
+#: inc/hero-text-widget.php:147
+msgid "The title of widget. Leave empty for no title."
+msgstr ""
 
-#: inc/template-tags.php:141
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> Äldre inlägg"
+#: inc/hero-text-widget.php:147
+#, fuzzy
+msgid "Title:"
+msgstr "Webbplatsens namn"
 
-#: inc/template-tags.php:147
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Nyare inlägg <span class=\"meta-nav\">&rarr;</span>"
+#: inc/hero-text-widget.php:152
+#, fuzzy
+msgid "Text:"
+msgstr "Text"
 
-#: inc/template-tags.php:263
+#: inc/hero-text-widget.php:157
+#, fuzzy
+msgid "Button Text:"
+msgstr "Knappar"
+
+#: inc/hero-text-widget.php:162
+msgid "Button Link URL:"
+msgstr ""
+
+#: inc/hero-text-widget.php:163
+msgid "Paste URL or type to search"
+msgstr ""
+
+#: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
+msgid "&larr; Previous"
+msgstr ""
+
+#: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
+#, fuzzy
+msgid "Next &rarr;"
+msgstr "Nyare kommentarer &rarr;"
+
+#: inc/template-tags.php:266
 msgid "Blog"
 msgstr "Blogg"
-
-#: templates/parts/404-woocommerce.php:30
-msgid "Search"
-msgstr "Sök"
-
-#: templates/parts/404-woocommerce.php:36
-msgid "Promoted Products"
-msgstr "Kampanjprodukter"
-
-#: templates/parts/404-woocommerce.php:42
-#: templates/parts/404-woocommerce.php:44
-msgid "Popular Products"
-msgstr "Populära produkter"
 
 #: templates/parts/loop/page-content.php:28
 #: templates/parts/loop/post-content.php:19
@@ -460,9 +495,17 @@ msgstr "Lämna en kommentar"
 msgid "1 Comment"
 msgstr "1 kommentar"
 
-#. Theme Name of the plugin/theme
-msgid "Primer"
-msgstr "Primer"
+#: templates/woocommerce/404.php:30
+msgid "Search"
+msgstr "Sök"
+
+#: templates/woocommerce/404.php:36
+msgid "Promoted Products"
+msgstr "Kampanjprodukter"
+
+#: templates/woocommerce/404.php:42 templates/woocommerce/404.php:44
+msgid "Popular Products"
+msgstr "Populära produkter"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -473,7 +516,8 @@ msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer är ett kraftfullt tema som förtydligar ditt innehåll i en fräsch design."
+"Primer är ett kraftfullt tema som förtydligar ditt innehåll i en fräsch "
+"design."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
@@ -510,57 +554,73 @@ msgctxt "link to write a new post"
 msgid "Ready to publish your first post? %s."
 msgstr "Redo att publicera ditt första inlägg? %s."
 
-#: inc/customizer/colors.php:478
+#: inc/compat/deprecated.php:117
+msgctxt ""
+"1. PHP function name, 2. theme name, 3. version number, 4. alternative "
+"function name"
+msgid ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
+"instead."
+msgstr ""
+
+#: inc/compat/deprecated.php:118
+msgctxt "1. PHP function name, 2. theme name, 3. version number"
+msgid ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
+"alternative available."
+msgstr ""
+
+#: inc/customizer/colors.php:482
 msgctxt "color scheme name"
 msgid "Blush"
 msgstr "Blush"
 
-#: inc/customizer/colors.php:482
+#: inc/customizer/colors.php:486
 msgctxt "color scheme name"
 msgid "Bronze"
 msgstr "Brons"
 
-#: inc/customizer/colors.php:486
+#: inc/customizer/colors.php:490
 msgctxt "color scheme name"
 msgid "Canary"
 msgstr "Canary"
 
-#: inc/customizer/colors.php:490
+#: inc/customizer/colors.php:494
 msgctxt "color scheme name"
 msgid "Cool"
 msgstr "Häftigt"
 
-#: inc/customizer/colors.php:494
+#: inc/customizer/colors.php:498
 msgctxt "color scheme name"
 msgid "Dark"
 msgstr "Mörkt"
 
-#: inc/customizer/colors.php:498
+#: inc/customizer/colors.php:502
 msgctxt "color scheme name"
 msgid "Iguana"
 msgstr "Iguana"
 
-#: inc/customizer/colors.php:502
+#: inc/customizer/colors.php:506
 msgctxt "color scheme name"
 msgid "Muted"
 msgstr "Dämpad"
 
-#: inc/customizer/colors.php:506
+#: inc/customizer/colors.php:510
 msgctxt "color scheme name"
 msgid "Plum"
 msgstr "Plum"
 
-#: inc/customizer/colors.php:510
+#: inc/customizer/colors.php:514
 msgctxt "color scheme name"
 msgid "Rose"
 msgstr "Ros"
 
-#: inc/customizer/colors.php:514
+#: inc/customizer/colors.php:518
 msgctxt "color scheme name"
 msgid "Tangerine"
 msgstr "Mandarin"
 
-#: inc/customizer/colors.php:518
+#: inc/customizer/colors.php:522
 msgctxt "color scheme name"
 msgid "Turquoise"
 msgstr "Turquoise"
@@ -585,15 +645,44 @@ msgctxt "1. copyright symbol, 2. year, 3. site title"
 msgid "Copyright %1$s %2$d %3$s"
 msgstr "Copyright %1$s %2$d %3$s"
 
-#: inc/helpers.php:66
+#: inc/helpers.php:45
 msgctxt "search term"
 msgid "Search Results for: %s"
 msgstr "Sökresultat för: %s"
+
+#: inc/hero-text-widget.php:24
+#, fuzzy
+msgctxt "theme name"
+msgid "A %s theme widget designed for the Hero area on your site's front page."
+msgstr "Herowidgets visas ovanför rubrikbilden på framsidan."
+
+#: inc/hero-text-widget.php:29
+#, fuzzy
+msgctxt "the widget title"
+msgid "Hero Text"
+msgstr "Herotext"
 
 #: inc/hooks.php:394
 msgctxt "page number"
 msgid "Page %d"
 msgstr "Sida %d"
+
+#: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
+msgctxt "1. current page number, 2. total number of pages"
+msgid "Page %1$d of %2$d"
+msgstr ""
+
+#: inc/template-tags.php:153
+#, fuzzy
+msgctxt "post type singular label"
+msgid "%1$s navigation"
+msgstr "Navigera inlägg"
+
+#: templates/woocommerce/loop/pagination.php:43
+#, fuzzy
+msgctxt "post type singular label"
+msgid "%s navigation"
+msgstr "Navigera inlägg"
 
 #: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"
@@ -625,6 +714,3 @@ msgstr "Arkiverat under: %s"
 msgctxt "number of comments"
 msgid "% Comments"
 msgstr "% kommentarer"
-
-#~ msgid "Post navigation"
-#~ msgstr "Navigera inlägg"
