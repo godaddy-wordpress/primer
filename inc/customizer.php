@@ -218,106 +218,50 @@ class Primer_Customizer {
 	}
 
 	/**
-	 * Return an array of CSS rules as plain CSS.
+	 * Return an array of CSS rules as compacted CSS.
+	 *
+	 * Note: When `SCRIPT_DEBUG` is enabled, the returned CSS
+	 * will be expanded instead of compacted.
 	 *
 	 * @since 1.0.0
 	 *
 	 * @param  array $rules Array of CSS rules to parse.
 	 *
-	 * @return string Return Parsed CSS rules ready for use.
+	 * @return string Returns parsed rules ready to be printed as inline CSS.
 	 */
 	public static function parse_css_rules( array $rules ) {
+
+		$open_format  = SCRIPT_DEBUG ? "%s {\n"      : '%s{';
+		$rule_format  = SCRIPT_DEBUG ? "\t%s: %s;\n" : '%s:%s;';
+		$close_format = SCRIPT_DEBUG ? "}\n"         : '}';
 
 		ob_start();
 
 		foreach ( $rules as $rule => $properties ) {
 
-			printf( // xss ok.
-				"%s {\n",
-				implode( ",\n", array_map( 'trim', explode( ',', $rule ) ) )
+			// @codingStandardsIgnoreStart
+			printf(
+				$open_format,
+				implode(
+					SCRIPT_DEBUG ? ",\n" : ',',
+					array_map( 'trim', explode( ',', $rule ) )
+				)
 			);
+			// @codingStandardsIgnoreEnd
 
 			foreach ( $properties as $property => $value ) {
 
-				printf( "\t%s: %s;\n", $property, $value ); // xss ok.
+				// @codingStandardsIgnoreStart
+				printf( $rule_format, $property, $value );
+				// @codingStandardsIgnoreEnd
 
 			}
 
-			echo "}\n";
+			echo $close_format; // xss ok.
 
 		}
 
 		return ob_get_clean();
-
-	}
-
-	/**
-	 * Compact inline CSS output.
-	 *
-	 * @link  https://github.com/GaryJones/Simple-PHP-CSS-Minification
-	 * @since NEXT
-	 *
-	 * @param  string $css
-	 *
-	 * @return string
-	 */
-	public static function compact_css( $css ) {
-
-		/**
-		 * Filter whether inline CSS output should be compacted.
-		 *
-		 * Default: `true`
-		 *
-		 * Note: When `SCRIPT_DEBUG` is enabled, inline CSS will never
-		 * be compacted regardless of this filter.
-		 *
-		 * @since NEXT
-		 *
-		 * @var bool
-		 */
-		$enabled = (bool) apply_filters( 'primer_enable_compact_css', true );
-
-		if ( SCRIPT_DEBUG || ! $enabled ) {
-
-			return $css;
-
-		}
-
-		// Normalize whitespace
-		$css = preg_replace( '/\s+/', ' ', $css );
-
-		// Remove spaces before and after comment
-		$css = preg_replace( '/(\s+)(\/\*(.*?)\*\/)(\s+)/', '$2', $css );
-
-		// Remove comment blocks, everything between /* and */, unless
-		// preserved with /*! ... */ or /** ... */
-		$css = preg_replace( '~/\*(?![\!|\*])(.*?)\*/~', '', $css );
-
-		// Remove ; before }
-		$css = preg_replace( '/;(?=\s*})/', '', $css );
-
-		// Remove space after , : ; { } */ >
-		$css = preg_replace( '/(,|:|;|\{|}|\*\/|>) /', '$1', $css );
-
-		// Remove space before (
-		$css = preg_replace( '/(?<!@media|not|only|and) (\()/', '$1', $css );
-
-		// Remove space before , ; { } ) >
-		$css = preg_replace( '/ (,|;|\{|}|\)|>)/', '$1', $css );
-
-		// Strips leading 0 on decimal values (converts 0.5px into .5px)
-		$css = preg_replace( '/(:| )0\.([0-9]+)(%|em|ex|px|in|cm|mm|pt|pc)/i', '${1}.${2}${3}', $css );
-
-		// Strips units if value is 0 (converts 0px to 0)
-		$css = preg_replace( '/(:| )(\.?)0(%|em|ex|px|in|cm|mm|pt|pc)/i', '${1}0', $css );
-
-		// Converts all zeros value into short-hand
-		$css = preg_replace( '/0 0 0 0/', '0', $css );
-
-		// Shortern 6-character hex color codes to 3-character where possible
-		$css = preg_replace( '/#([a-f0-9])\\1([a-f0-9])\\2([a-f0-9])\\3/i', '#\1\2\3', $css );
-
-		return trim( $css );
 
 	}
 

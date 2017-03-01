@@ -464,12 +464,13 @@ function primer_scripts() {
 	if ( primer_has_hero_image() ) {
 
 		$css = sprintf(
-			'%s { background-image: url(%s); }',
+			'%1$s%2$s{%2$sbackground-image:%2$surl(%3$s);%2$s}',
 			primer_get_hero_image_selector(),
+			SCRIPT_DEBUG ? ' ' : '',
 			esc_url( primer_get_hero_image() )
 		);
 
-		wp_add_inline_style( $stylesheet, Primer_Customizer::compact_css( $css ) );
+		wp_add_inline_style( $stylesheet, $css );
 
 	}
 
