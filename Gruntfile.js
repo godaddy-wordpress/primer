@@ -224,8 +224,16 @@ module.exports = function( grunt ) {
 				overwrite: true,
 				replacements: [
 					{
+						from: /@deprecated(\s+)NEXT/g,
+						to: '@deprecated$1<%= pkg.version %>'
+					},
+					{
 						from: /@since(\s+)NEXT/g,
 						to: '@since$1<%= pkg.version %>'
+					},
+					{
+						from: /@NEXT/g,
+						to: '<%= pkg.version %>'
 					},
 					{
 						from: /'PRIMER_VERSION',(\s*)'[\w.+-]+'/,

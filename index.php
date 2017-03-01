@@ -27,7 +27,7 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-		<?php primer_paging_nav(); ?>
+		<?php primer_pagination(); ?>
 
 	<?php else : ?>
 
