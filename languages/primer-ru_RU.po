@@ -7,13 +7,9 @@ msgstr ""
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: 404.php:22 templates/parts/404-woocommerce.php:22
@@ -22,7 +18,8 @@ msgstr "Проблема! Не удалось найти страницу."
 
 #: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr "Похоже, ничего не найдено в этом месте. Попробуйте поискать ниже:"
 
 #: comments.php:56 comments.php:83
@@ -102,8 +99,8 @@ msgstr "Вспомогательная боковая панель"
 
 #: functions.php:389
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
 "Вспомогательная боковая панель отображается только тогда, когда выбран макет "
 "с тремя колонками."
@@ -114,8 +111,7 @@ msgstr "Нижний колонтитул 1"
 
 #: functions.php:397
 msgid "This sidebar is the first column of the footer widget area."
-msgstr ""
-"Эта боковая панель — первый столбец области виджета нижнего колонтитула."
+msgstr "Эта боковая панель — первый столбец области виджета нижнего колонтитула."
 
 #: functions.php:404
 msgid "Footer 2"
@@ -123,8 +119,7 @@ msgstr "Нижний колонтитул 2"
 
 #: functions.php:405
 msgid "This sidebar is the second column of the footer widget area."
-msgstr ""
-"Эта боковая панель — второй столбец области виджета нижнего колонтитула."
+msgstr "Эта боковая панель — второй столбец области виджета нижнего колонтитула."
 
 #: functions.php:412
 msgid "Footer 3"
@@ -132,14 +127,11 @@ msgstr "Нижний колонтитул 3"
 
 #: functions.php:413
 msgid "This sidebar is the third column of the footer widget area."
-msgstr ""
-"Эта боковая панель — третий столбец области виджета нижнего колонтитула."
+msgstr "Эта боковая панель — третий столбец области виджета нижнего колонтитула."
 
 #: functions.php:421
 msgid "Hero widgets appear over the header image on the front page."
-msgstr ""
-"Виджеты Hero отражаются поверх изображения верхнего колонтитула на первой "
-"странице."
+msgstr "Виджеты Hero отражаются поверх изображения верхнего колонтитула на первой странице."
 
 #: header.php:44
 msgid "Skip to content"
@@ -209,9 +201,7 @@ msgstr "Вспомогательный текст"
 
 #: inc/customizer/colors.php:198
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
-"Авторы публикаций, количество комментариев, нижние колонтитулы сообщений и "
-"цитат."
+msgstr "Авторы публикаций, количество комментариев, нижние колонтитулы сообщений и цитат."
 
 #: inc/customizer/colors.php:212
 msgid "Widget Heading Text"
@@ -350,8 +340,7 @@ msgstr "Вторично"
 
 #: inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Авторы, количество комментариев, нижние колонтитулы публикаций и цитат."
+msgstr "Авторы, количество комментариев, нижние колонтитулы публикаций и цитат."
 
 #: inc/customizer/fonts.php:192
 msgid "Fonts"
@@ -492,8 +481,7 @@ msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer — это яркая тема, которая придает вашему контенту ясность и свежий "
-"облик."
+"Primer — это яркая тема, которая придает вашему контенту ясность и свежий облик."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"

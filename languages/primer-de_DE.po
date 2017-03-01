@@ -7,13 +7,9 @@ msgstr ""
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: 404.php:22 templates/parts/404-woocommerce.php:22
@@ -22,10 +18,11 @@ msgstr "Ups! Diese Seite kann nicht gefunden werden."
 
 #: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
-"Es sieht so aus, als ob an dieser Stelle nichts gefunden wurde. Versuchen "
-"Sie im Folgenden zu suchen:"
+"Es sieht so aus, als ob an dieser Stelle nichts gefunden wurde. Versuchen Sie "
+"im Folgenden zu suchen:"
 
 #: comments.php:56 comments.php:83
 msgid "Comment navigation"
@@ -95,8 +92,8 @@ msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr ""
-"Die primäre Seitenleiste erscheint neben dem Inhalt jeder Seite, Post, "
-"Archiv und Suchvorlage."
+"Die primäre Seitenleiste erscheint neben dem Inhalt jeder Seite, Post, Archiv "
+"und Suchvorlage."
 
 #: functions.php:388
 msgid "Secondary Sidebar"
@@ -104,8 +101,8 @@ msgstr "Sekundäre Seitenleiste"
 
 #: functions.php:389
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
 "Die sekundäre Seitenleiste erscheint nur, wenn sie ein dreispaltiges Layout "
 "gewählt haben."
@@ -136,8 +133,7 @@ msgstr "Diese Seitenleiste ist die dritte Spalte des Footer-Widget-Bereichs."
 
 #: functions.php:421
 msgid "Hero widgets appear over the header image on the front page."
-msgstr ""
-"Hero-Widgets werden über dem Header-Bild auf der ersten Seite angezeigt."
+msgstr "Hero-Widgets werden über dem Header-Bild auf der ersten Seite angezeigt."
 
 #: header.php:44
 msgid "Skip to content"
@@ -167,8 +163,7 @@ msgid ""
 "%2$s. Please upgrade and try again."
 msgstr ""
 "Für Primer benötigen Sie WordPress Version %1$s oder höher. Sie führen "
-"Version %2$s aus. Bitte führen Sie ein Upgrade durch und versuchen Sie es "
-"erneut."
+"Version %2$s aus. Bitte führen Sie ein Upgrade durch und versuchen Sie es erneut."
 
 #: inc/customizer/colors.php:49
 msgid "Site Title Text"
@@ -192,9 +187,7 @@ msgstr "Überschrifttext"
 
 #: inc/customizer/colors.php:130
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Posttitel, Widget-Titel, Formularbeschriftungen, Tabellenüberschriften und "
-"Schaltflächen."
+msgstr "Posttitel, Widget-Titel, Formularbeschriftungen, Tabellenüberschriften und Schaltflächen."
 
 #: inc/customizer/colors.php:151
 msgid "Primary Text"
@@ -210,8 +203,7 @@ msgstr "Sekundärer Text"
 
 #: inc/customizer/colors.php:198
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
-"Verfasserzeilen von Posts, Kommentarzähler, Post-Footer und Zitat-Footer."
+msgstr "Verfasserzeilen von Posts, Kommentarzähler, Post-Footer und Zitat-Footer."
 
 #: inc/customizer/colors.php:212
 msgid "Widget Heading Text"
@@ -334,8 +326,7 @@ msgstr "Überschriften"
 
 #: inc/customizer/fonts.php:111
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr ""
-"Posttitel, Widget-Titel, Formularbeschriftungen und Tabellenüberschriften."
+msgstr "Posttitel, Widget-Titel, Formularbeschriftungen und Tabellenüberschriften."
 
 #: inc/customizer/fonts.php:126
 msgid "Primary"
@@ -351,9 +342,7 @@ msgstr "Neben"
 
 #: inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Verfasserzeilen, Kommentarzähler, Antwort-Links, Post-Footer und Zitat-"
-"Footer."
+msgstr "Verfasserzeilen, Kommentarzähler, Antwort-Links, Post-Footer und Zitat-Footer."
 
 #: inc/customizer/fonts.php:192
 msgid "Fonts"

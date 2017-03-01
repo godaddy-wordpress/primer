@@ -7,13 +7,9 @@ msgstr ""
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: 404.php:22 templates/parts/404-woocommerce.php:22
@@ -22,8 +18,10 @@ msgstr "‌‌अरेरे! ते पृष्ठ आढळू शकत न
 
 #: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
-msgstr "या स्थानावर काहीही सापडले नाही असे दिसते. कृपया खाली शोधण्याचा प्रयत्न कराः"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
+msgstr ""
+"या स्थानावर काहीही सापडले नाही असे दिसते. कृपया खाली शोधण्याचा प्रयत्न कराः"
 
 #: comments.php:56 comments.php:83
 msgid "Comment navigation"
@@ -54,8 +52,8 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"क्षमस्व, परंतु आपल्या शोध संज्ञांशी काहीही जुळले नाही. कृपया काही भिन्न कीवर्डसह पुन्हा "
-"प्रयत्न करा."
+"क्षमस्व, परंतु आपल्या शोध संज्ञांशी काहीही जुळले नाही. कृपया काही भिन्न "
+"कीवर्डसह पुन्हा प्रयत्न करा."
 
 #: content-none.php:48
 msgid ""
@@ -91,8 +89,8 @@ msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr ""
-"प्रत्येक पृष्‍ठ, पोस्ट, संग्रहण आणि शोध टेम्पलेटच्या सामग्रीच्या बाजूस प्राथमिक साइडबार "
-"दिसतो. "
+"प्रत्येक पृष्‍ठ, पोस्ट, संग्रहण आणि शोध टेम्पलेटच्या सामग्रीच्या बाजूस "
+"प्राथमिक साइडबार दिसतो. "
 
 #: functions.php:388
 msgid "Secondary Sidebar"
@@ -100,8 +98,8 @@ msgstr "दुय्यम साइडबार"
 
 #: functions.php:389
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr "आपण एक तृतीय-स्तंभ लेआउट निवडता केवळ तेव्हाच दुय्यम साइडबार दिसेल. "
 
 #: functions.php:396
@@ -159,8 +157,8 @@ msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer ला किमान WordPress आवृत्तीची आवश्यकता आहे %1$s. आपण %2$s आवृत्ती रन करीत "
-"आहात. कृपया श्रेणीसुधारित करा आणि पुन्हा प्रयत्न करा."
+"Primer ला किमान WordPress आवृत्तीची आवश्यकता आहे %1$s. आपण %2$s आवृत्ती रन "
+"करीत आहात. कृपया श्रेणीसुधारित करा आणि पुन्हा प्रयत्न करा."
 
 #: inc/customizer/colors.php:49
 msgid "Site Title Text"

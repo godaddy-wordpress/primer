@@ -7,13 +7,9 @@ msgstr ""
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: 404.php:22 templates/parts/404-woocommerce.php:22
@@ -22,10 +18,10 @@ msgstr "Ops! Fant ikke den siden."
 
 #: 404.php:28 templates/parts/404-woocommerce.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
-"Det virker ikke som om noe ble funnet på denne plasseringen. Prøv å søke "
-"nedenfor:"
+"Det virker ikke som om noe ble funnet på denne plasseringen. Prøv å søke nedenfor:"
 
 #: comments.php:56 comments.php:83
 msgid "Comment navigation"
@@ -104,11 +100,10 @@ msgstr "Sekundær sidestolpe"
 
 #: functions.php:389
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
-"Den sekundære sidestolpen vil kun vises når du har valgt en utforming med "
-"tre kolonner."
+"Den sekundære sidestolpen vil kun vises når du har valgt en utforming med tre kolonner."
 
 #: functions.php:396
 msgid "Footer 1"
@@ -116,9 +111,7 @@ msgstr "Bunntekst 1"
 
 #: functions.php:397
 msgid "This sidebar is the first column of the footer widget area."
-msgstr ""
-"Denne sidestolpen er den første kolonnen i bunntekstens "
-"kontrollprogramområde."
+msgstr "Denne sidestolpen er den første kolonnen i bunntekstens kontrollprogramområde."
 
 #: functions.php:404
 msgid "Footer 2"
@@ -126,8 +119,7 @@ msgstr "Bunntekst 2"
 
 #: functions.php:405
 msgid "This sidebar is the second column of the footer widget area."
-msgstr ""
-"Denne sidestolpen er den andre kolonnen i bunntekstens kontrollprogramområde."
+msgstr "Denne sidestolpen er den andre kolonnen i bunntekstens kontrollprogramområde."
 
 #: functions.php:412
 msgid "Footer 3"
@@ -135,9 +127,7 @@ msgstr "Bunntekst 3"
 
 #: functions.php:413
 msgid "This sidebar is the third column of the footer widget area."
-msgstr ""
-"Denne sidestolpen er den tredje kolonnen i bunntekstens "
-"kontrollprogramområde."
+msgstr "Denne sidestolpen er den tredje kolonnen i bunntekstens kontrollprogramområde."
 
 #: functions.php:421
 msgid "Hero widgets appear over the header image on the front page."
@@ -170,8 +160,8 @@ msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer krever minst WordPress-versjon %1$s. Du kjører versjon %2$s. "
-"Oppgrader og prøv på nytt."
+"Primer krever minst WordPress-versjon %1$s. Du kjører versjon %2$s. Oppgrader "
+"og prøv på nytt."
 
 #: inc/customizer/colors.php:49
 msgid "Site Title Text"
@@ -195,9 +185,7 @@ msgstr "Topptekst-tekst"
 
 #: inc/customizer/colors.php:130
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Post titler, kontrollprogram-titler, skjemaetiketter, tabelloverskrifter og "
-"knapper."
+msgstr "Post titler, kontrollprogram-titler, skjemaetiketter, tabelloverskrifter og knapper."
 
 #: inc/customizer/colors.php:151
 msgid "Primary Text"
@@ -336,8 +324,7 @@ msgstr "Overskrifter"
 
 #: inc/customizer/fonts.php:111
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr ""
-"Post titler, kontrollprogram-titler, skjemaetiketter og tabelloverskrifter."
+msgstr "Post titler, kontrollprogram-titler, skjemaetiketter og tabelloverskrifter."
 
 #: inc/customizer/fonts.php:126
 msgid "Primary"
@@ -353,9 +340,7 @@ msgstr "Sekundært"
 
 #: inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Bylines, antall kommentarer, svarkoblinger, post-bunntekster og sitat-"
-"bunntekster."
+msgstr "Bylines, antall kommentarer, svarkoblinger, post-bunntekster og sitat-bunntekster."
 
 #: inc/customizer/fonts.php:192
 msgid "Fonts"
