@@ -1003,7 +1003,7 @@ class Primer_Customizer_Colors {
 	}
 
 	/**
-	 * Inline style for color scheme
+	 * Inline style for color scheme.
 	 *
 	 * @action customize_controls_print_footer_scripts
 	 * @since  1.0.0
