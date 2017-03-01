@@ -75,6 +75,7 @@ function _primer_child_compat( $key, $value ) {
 				'header__add_hero'                     => 10,
 				'after_header__add_primary_navigation' => 10,
 				'after_header__add_page_title'         => 10,
+				'wc__cart_menu_item'                   => false,
 			),
 		),
 		'ascension' => array(
@@ -83,6 +84,7 @@ function _primer_child_compat( $key, $value ) {
 				'header__add_hero'                     => 10,
 				'after_header__add_primary_navigation' => 10,
 				'after_header__add_page_title'         => 10,
+				'wc__cart_menu_item'                   => false,
 			),
 		),
 		'escapade' => array(
@@ -91,6 +93,7 @@ function _primer_child_compat( $key, $value ) {
 				'header__add_hero'                     => 10,
 				'after_header__add_primary_navigation' => 10,
 				'after_header__add_page_title'         => 10,
+				'wc__cart_menu_item'                   => false,
 			),
 		),
 		'lyrical' => array(
@@ -99,6 +102,7 @@ function _primer_child_compat( $key, $value ) {
 				'header__add_hero'                     => 10,
 				'after_header__add_primary_navigation' => 10,
 				'after_header__add_page_title'         => 10,
+				'wc__cart_menu_item'                   => false,
 			),
 		),
 		'mins' => array(
@@ -107,6 +111,7 @@ function _primer_child_compat( $key, $value ) {
 				'header__add_hero'                     => 10,
 				'after_header__add_primary_navigation' => 10,
 				'after_header__add_page_title'         => 10,
+				'wc__cart_menu_item'                   => false,
 			),
 		),
 		'scribbles' => array(
@@ -115,6 +120,7 @@ function _primer_child_compat( $key, $value ) {
 				'header__add_hero'                     => 10,
 				'after_header__add_primary_navigation' => 10,
 				'after_header__add_page_title'         => 10,
+				'wc__cart_menu_item'                   => false,
 			),
 		),
 		'stout' => array(
@@ -123,6 +129,7 @@ function _primer_child_compat( $key, $value ) {
 				'header__add_hero'                     => 10,
 				'after_header__add_primary_navigation' => 10,
 				'after_header__add_page_title'         => 10,
+				'wc__cart_menu_item'                   => false,
 			),
 		),
 		'uptown-style' => array(
@@ -131,6 +138,7 @@ function _primer_child_compat( $key, $value ) {
 				'header__add_hero'                     => 10,
 				'after_header__add_primary_navigation' => 10,
 				'after_header__add_page_title'         => 10,
+				'wc__cart_menu_item'                   => false,
 			),
 		),
 		'velux' => array(
@@ -139,6 +147,7 @@ function _primer_child_compat( $key, $value ) {
 				'header__add_hero'                     => 10,
 				'after_header__add_primary_navigation' => 10,
 				'after_header__add_page_title'         => 10,
+				'wc__cart_menu_item'                   => false,
 			),
 		),
 	);

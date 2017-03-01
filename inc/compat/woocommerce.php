@@ -426,6 +426,12 @@ add_filter( 'template_include', 'primer_wc_404_template' );
  */
 function primer_wc_generate_cart_menu_item( $items, $menu ) {
 
+	if ( ! _primer_child_compat( 'wc__cart_menu_item', true ) ) {
+
+		return $items;
+
+	}
+
 	$theme_locations = get_nav_menu_locations();
 
 	if ( empty( $theme_locations['primary'] ) ) {
