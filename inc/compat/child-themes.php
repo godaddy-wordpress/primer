@@ -60,7 +60,7 @@ function primer_child_version_compare( $version, $operator ) {
  *
  * @return mixed
  */
-function _primer_child_compat( $key, $value ) {
+function primer_child_compat( $key, $value ) {
 
 	if ( ! is_child_theme() || ! PRIMER_CHILD_VERSION ) {
 
