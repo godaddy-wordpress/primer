@@ -82,6 +82,13 @@ if ( version_compare( get_bloginfo( 'version' ), PRIMER_MIN_WP_VERSION, '<' ) ) 
 require_once get_template_directory() . '/inc/compat/deprecated.php';
 
 /**
+ * Load functions for handling special child theme compatibility conditions.
+ *
+ * @since NEXT
+ */
+require_once get_template_directory() . '/inc/compat/child-themes.php';
+
+/**
  * Load custom helper functions for this theme.
  *
  * @since 1.0.0
