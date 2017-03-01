@@ -354,7 +354,7 @@ add_filter( 'primer_colors', 'primer_wc_colors' );
  * Add font type targets for WooCommerce elements.
  *
  * @filter primer_font_types
- * @uses   primer_array_replace_recursive To replace items in the colors array with new values.
+ * @uses   primer_array_replace_recursive To replace items in the font types array with new values.
  *
  * @since  1.0.0
  *
