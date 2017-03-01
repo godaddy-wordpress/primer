@@ -486,9 +486,8 @@ function primer_scripts() {
 	if ( primer_has_hero_image() ) {
 
 		$css = sprintf(
-			'%1$s%2$s{%2$sbackground-image:%2$surl(%3$s);%2$s}',
+			SCRIPT_DEBUG ? '%s { background-image: url(%s); }' : '%s{background-image:url(%s);}',
 			primer_get_hero_image_selector(),
-			SCRIPT_DEBUG ? ' ' : '',
 			esc_url( primer_get_hero_image() )
 		);
 
