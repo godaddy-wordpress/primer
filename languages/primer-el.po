@@ -1,19 +1,18 @@
 # Copyright (c) 2017 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 1.4.1\n"
+"Project-Id-Version: Primer 1.5.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
 "POT-Creation-Date: 2017-03-01 23:51:05+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: 404.php:22 templates/woocommerce/404.php:22
@@ -22,7 +21,8 @@ msgstr "Ωχ! Δεν είναι δυνατή η εύρεση αυτής της �
 
 #: 404.php:28 templates/woocommerce/404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
 "Μάλλον δεν βρέθηκε τίποτα σε αυτή την τοποθεσία. Δοκιμάστε να κάνετε "
 "αναζήτηση παρακάτω:"
@@ -60,11 +60,8 @@ msgstr ""
 "ξανά με διαφορετικές λέξεις-κλειδιά."
 
 #: content-none.php:48
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr ""
-"Μάλλον δεν μπορούμε να βρούμε αυτό που ψάχνετε. Ίσως μπορεί να σας βοηθήσει "
-"η αναζήτηση."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Μάλλον δεν μπορούμε να βρούμε αυτό που ψάχνετε. Ίσως μπορεί να σας βοηθήσει η αναζήτηση."
 
 #: functions.php:186
 msgid "Featured"
@@ -104,8 +101,8 @@ msgstr "Δευτερεύουσα πλευρική γραμμή"
 
 #: functions.php:403
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
 "Η δευτερεύουσα πλευρική γραμμή θα εμφανίζεται μόνο όταν έχετε επιλέξει "
 "διάταξη τριών στηλών."
@@ -116,9 +113,7 @@ msgstr "Υποσέλιδο 1"
 
 #: functions.php:411
 msgid "This sidebar is the first column of the footer widget area."
-msgstr ""
-"Αυτή η πλευρική γραμμή εμφανίζεται στην πρώτη στήλη της περιοχής "
-"μικροεφαρμογής στο υποσέλιδο."
+msgstr "Αυτή η πλευρική γραμμή εμφανίζεται στην πρώτη στήλη της περιοχής μικροεφαρμογής στο υποσέλιδο."
 
 #: functions.php:418
 msgid "Footer 2"
@@ -126,9 +121,7 @@ msgstr "Υποσέλιδο 2"
 
 #: functions.php:419
 msgid "This sidebar is the second column of the footer widget area."
-msgstr ""
-"Αυτή η πλευρική γραμμή εμφανίζεται στη δεύτερη στήλη της περιοχής "
-"μικροεφαρμογής στο υποσέλιδο."
+msgstr "Αυτή η πλευρική γραμμή εμφανίζεται στη δεύτερη στήλη της περιοχής μικροεφαρμογής στο υποσέλιδο."
 
 #: functions.php:426
 msgid "Footer 3"
@@ -136,15 +129,11 @@ msgstr "Υποσέλιδο 3"
 
 #: functions.php:427
 msgid "This sidebar is the third column of the footer widget area."
-msgstr ""
-"Αυτή η πλευρική γραμμή εμφανίζεται στην τρίτη στήλη της περιοχής "
-"μικροεφαρμογής στο υποσέλιδο."
+msgstr "Αυτή η πλευρική γραμμή εμφανίζεται στην τρίτη στήλη της περιοχής μικροεφαρμογής στο υποσέλιδο."
 
 #: functions.php:435
 msgid "Hero widgets appear over the header image on the front page."
-msgstr ""
-"Οι μικροεφαρμογές Hero εμφανίζονται επάνω από την εικόνα κεφαλίδας στην "
-"πρώτη σελίδα."
+msgstr "Οι μικροεφαρμογές Hero εμφανίζονται επάνω από την εικόνα κεφαλίδας στην πρώτη σελίδα."
 
 #: header.php:44
 msgid "Skip to content"
@@ -214,9 +203,7 @@ msgstr "Κείμενο επικεφαλίδας"
 
 #: inc/customizer/colors.php:130
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Τίτλοι άρθρων, τίτλοι μικροεφαρμογών, ετικέτες φορμών, κεφαλίδες πινάκων και "
-"κουμπιά."
+msgstr "Τίτλοι άρθρων, τίτλοι μικροεφαρμογών, ετικέτες φορμών, κεφαλίδες πινάκων και κουμπιά."
 
 #: inc/customizer/colors.php:151
 msgid "Primary Text"
@@ -232,9 +219,7 @@ msgstr "Δευτερεύον κείμενο"
 
 #: inc/customizer/colors.php:199
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
-"Γραμμές συντάκτη άρθρου, πλήθος σχολίων, υποσέλιδα άρθρων και υποσέλιδα "
-"ρήσεων."
+msgstr "Γραμμές συντάκτη άρθρου, πλήθος σχολίων, υποσέλιδα άρθρων και υποσέλιδα ρήσεων."
 
 #: inc/customizer/colors.php:213
 msgid "Widget Heading Text"
@@ -329,11 +314,8 @@ msgid "Hero Background Overlay"
 msgstr "Επικάλυψη φόντου Hero"
 
 #: inc/customizer/colors.php:1292
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Ελέγξτε τη διαφάνεια της επικάλυψης φόντου όταν χρησιμοποιείτε μια "
-"προσαρμοσμένη εικόνα κεφαλίδας."
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Ελέγξτε τη διαφάνεια της επικάλυψης φόντου όταν χρησιμοποιείτε μια προσαρμοσμένη εικόνα κεφαλίδας."
 
 #: inc/customizer/fonts.php:89
 msgid "Site Title"
@@ -357,8 +339,7 @@ msgstr "Κεφαλίδες"
 
 #: inc/customizer/fonts.php:111
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr ""
-"Τίτλοι άρθρων, τίτλοι μικροεφαρμογών, ετικέτες φορμών και κεφαλίδες πινάκων."
+msgstr "Τίτλοι άρθρων, τίτλοι μικροεφαρμογών, ετικέτες φορμών και κεφαλίδες πινάκων."
 
 #: inc/customizer/fonts.php:126
 msgid "Primary"
@@ -374,9 +355,7 @@ msgstr "Δευτερεύων"
 
 #: inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Γραμμές συντάκτη, πλήθος σχολίων, σύνδεσμοι απαντήσεων, υποσέλιδα άρθρων και "
-"υποσέλιδα ρήσεων."
+msgstr "Γραμμές συντάκτη, πλήθος σχολίων, σύνδεσμοι απαντήσεων, υποσέλιδα άρθρων και υποσέλιδα ρήσεων."
 
 #: inc/customizer/fonts.php:192
 msgid "Fonts"
@@ -423,9 +402,8 @@ msgid "Display your site differently on larger screens."
 msgstr "Προβολή του ιστότοπού σας διαφορετικά σε μεγάλες οθόνες."
 
 #: inc/customizer/site-identity.php:82
-#, fuzzy
 msgid "Footer Copyright Text"
-msgstr "Κείμενο copyright"
+msgstr "Κείμενο copyright υποσέλιδου"
 
 #: inc/customizer/site-identity.php:101
 msgid "Display theme author credit"
@@ -433,18 +411,15 @@ msgstr "Εμφάνιση στοιχείων δημιουργού θέματος"
 
 #: inc/customizer/static-front-page.php:46
 msgid "Front page title"
-msgstr ""
+msgstr "Τίτλος αρχικής σελίδας"
 
 #: inc/customizer.php:193
 msgid "Use featured image"
 msgstr "Χρήση επιλεγμένης εικόνας"
 
 #: inc/customizer.php:194
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr ""
-"Να επιτρέπεται στην επιλεγμένη εικόνα της τρέχουσας ανάρτησης να "
-"υπερσκελίζει την εικόνα hero."
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "Να επιτρέπεται στην επιλεγμένη εικόνα της τρέχουσας ανάρτησης να υπερσκελίζει την εικόνα hero."
 
 #: inc/helpers.php:56
 msgid "404 Page Not Found"
@@ -452,39 +427,35 @@ msgstr "404 - Η σελίδα δεν βρέθηκε"
 
 #: inc/hero-text-widget.php:147
 msgid "The title of widget. Leave empty for no title."
-msgstr ""
+msgstr "The title of widget. Leave empty for no title."
 
 #: inc/hero-text-widget.php:147
-#, fuzzy
 msgid "Title:"
-msgstr "Τίτλος ιστότοπου"
+msgstr "Title:"
 
 #: inc/hero-text-widget.php:152
-#, fuzzy
 msgid "Text:"
-msgstr "Κείμενο"
+msgstr "Text:"
 
 #: inc/hero-text-widget.php:157
-#, fuzzy
 msgid "Button Text:"
-msgstr "Κουμπιά"
+msgstr "Button Text:"
 
 #: inc/hero-text-widget.php:162
 msgid "Button Link URL:"
-msgstr ""
+msgstr "Button Link URL:"
 
 #: inc/hero-text-widget.php:163
 msgid "Paste URL or type to search"
-msgstr ""
+msgstr "Paste URL or type to search"
 
 #: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
 msgid "&larr; Previous"
-msgstr ""
+msgstr "&larr; Previous"
 
 #: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
-#, fuzzy
 msgid "Next &rarr;"
-msgstr "Νεότερα σχόλια &rarr;"
+msgstr "Next &rarr;"
 
 #: inc/template-tags.php:266
 msgid "Blog"
@@ -536,8 +507,8 @@ msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Το Primer είναι ένα ισχυρό θέμα που προσθέτει σαφήνεια στο περιεχόμενό σας "
-"με μοντέρνα σχεδίαση."
+"Το Primer είναι ένα ισχυρό θέμα που προσθέτει σαφήνεια στο περιεχόμενό σας με "
+"μοντέρνα σχεδίαση."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
@@ -582,6 +553,7 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
 "instead."
 msgstr ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead."
 
 #: inc/compat/deprecated.php:118
 msgctxt "1. PHP function name, 2. theme name, 3. version number"
@@ -589,6 +561,8 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
 "alternative available."
 msgstr ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
+"alternative available."
 
 #: inc/customizer/colors.php:482
 msgctxt "color scheme name"
@@ -671,18 +645,14 @@ msgid "Search Results for: %s"
 msgstr "Αποτελέσματα αναζήτησης για: %s"
 
 #: inc/hero-text-widget.php:24
-#, fuzzy
 msgctxt "theme name"
 msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr ""
-"Οι μικροεφαρμογές Hero εμφανίζονται επάνω από την εικόνα κεφαλίδας στην "
-"πρώτη σελίδα."
+msgstr "A %s theme widget designed for the Hero area on your site's front page."
 
 #: inc/hero-text-widget.php:29
-#, fuzzy
 msgctxt "the widget title"
 msgid "Hero Text"
-msgstr "Κείμενο Hero"
+msgstr "Hero Text"
 
 #: inc/hooks.php:394
 msgctxt "page number"
@@ -692,19 +662,17 @@ msgstr "Σελίδα %d"
 #: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
 msgctxt "1. current page number, 2. total number of pages"
 msgid "Page %1$d of %2$d"
-msgstr ""
+msgstr "Page %1$d of %2$d"
 
 #: inc/template-tags.php:153
-#, fuzzy
 msgctxt "post type singular label"
 msgid "%1$s navigation"
-msgstr "Πλοήγηση στις αναρτήσεις"
+msgstr "%1$s navigation"
 
 #: templates/woocommerce/loop/pagination.php:43
-#, fuzzy
 msgctxt "post type singular label"
 msgid "%s navigation"
-msgstr "Πλοήγηση στις αναρτήσεις"
+msgstr "%s navigation"
 
 #: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"

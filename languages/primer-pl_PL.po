@@ -1,19 +1,18 @@
 # Copyright (c) 2017 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 1.4.1\n"
+"Project-Id-Version: Primer 1.5.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
 "POT-Creation-Date: 2017-03-01 23:51:05+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: 404.php:22 templates/woocommerce/404.php:22
@@ -22,7 +21,8 @@ msgstr "Ups! Tej strony nie można znaleźć."
 
 #: 404.php:28 templates/woocommerce/404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
 "Wygląda na to, że w tej lokalizacji niczego nie znaleziono. Spróbuj "
 "wyszukiwania poniżej:"
@@ -60,11 +60,8 @@ msgstr ""
 "innych słów kluczowych."
 
 #: content-none.php:48
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr ""
-"Wygląda na to, że nie możemy znaleźć tego, czego szukasz. Może wyszukiwanie "
-"pomoże."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Wygląda na to, że nie możemy znaleźć tego, czego szukasz. Może wyszukiwanie pomoże."
 
 #: functions.php:186
 msgid "Featured"
@@ -104,8 +101,8 @@ msgstr "Dodatkowy pasek wyszukiwania"
 
 #: functions.php:403
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
 "Dodatkowy pasek wyszukiwania jest wyświetlany tylko po wybraniu układu z "
 "trzema kolumnami."
@@ -206,9 +203,7 @@ msgstr "Tekst nagłówka"
 
 #: inc/customizer/colors.php:130
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Tytuły wpisów, tytuły widżetów, etykiety formularzy, nagłówki tabel i "
-"przyciski."
+msgstr "Tytuły wpisów, tytuły widżetów, etykiety formularzy, nagłówki tabel i przyciski."
 
 #: inc/customizer/colors.php:151
 msgid "Primary Text"
@@ -319,11 +314,8 @@ msgid "Hero Background Overlay"
 msgstr "Nakładka tła Hero"
 
 #: inc/customizer/colors.php:1292
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Określ przezroczystość koloru nakładki w przypadku niestandardowego obrazu "
-"nagłówka."
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Określ przezroczystość koloru nakładki w przypadku niestandardowego obrazu nagłówka."
 
 #: inc/customizer/fonts.php:89
 msgid "Site Title"
@@ -363,9 +355,7 @@ msgstr "Dodatkowe"
 
 #: inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Notki o autorze wpisu, liczby komentarzy, łącza odpowiedzi, stopki wpisów i "
-"cytatów."
+msgstr "Notki o autorze wpisu, liczby komentarzy, łącza odpowiedzi, stopki wpisów i cytatów."
 
 #: inc/customizer/fonts.php:192
 msgid "Fonts"
@@ -412,9 +402,8 @@ msgid "Display your site differently on larger screens."
 msgstr "Wyświetlaj stronę inaczej na większych ekranach."
 
 #: inc/customizer/site-identity.php:82
-#, fuzzy
 msgid "Footer Copyright Text"
-msgstr "Tekst informacji o prawach autorskich"
+msgstr "Tekst informacji o prawach autorskich w stopce"
 
 #: inc/customizer/site-identity.php:101
 msgid "Display theme author credit"
@@ -422,18 +411,15 @@ msgstr "Wyświetl informacje o autorze motywu"
 
 #: inc/customizer/static-front-page.php:46
 msgid "Front page title"
-msgstr ""
+msgstr "Tytuł strony początkowej"
 
 #: inc/customizer.php:193
 msgid "Use featured image"
 msgstr "Użyj wyróżnionego obrazu"
 
 #: inc/customizer.php:194
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr ""
-"Zezwól na zastąpienie w aktualnym wpisie obrazu frontalnego przez wyróżniony "
-"obraz."
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "Zezwól na zastąpienie w aktualnym wpisie obrazu frontalnego przez wyróżniony obraz."
 
 #: inc/helpers.php:56
 msgid "404 Page Not Found"
@@ -441,39 +427,35 @@ msgstr "404. Nie znaleziono strony"
 
 #: inc/hero-text-widget.php:147
 msgid "The title of widget. Leave empty for no title."
-msgstr ""
+msgstr "The title of widget. Leave empty for no title."
 
 #: inc/hero-text-widget.php:147
-#, fuzzy
 msgid "Title:"
-msgstr "Tytuł witryny"
+msgstr "Title:"
 
 #: inc/hero-text-widget.php:152
-#, fuzzy
 msgid "Text:"
-msgstr "Tekst"
+msgstr "Text:"
 
 #: inc/hero-text-widget.php:157
-#, fuzzy
 msgid "Button Text:"
-msgstr "Przyciski"
+msgstr "Button Text:"
 
 #: inc/hero-text-widget.php:162
 msgid "Button Link URL:"
-msgstr ""
+msgstr "Button Link URL:"
 
 #: inc/hero-text-widget.php:163
 msgid "Paste URL or type to search"
-msgstr ""
+msgstr "Paste URL or type to search"
 
 #: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
 msgid "&larr; Previous"
-msgstr ""
+msgstr "&larr; Previous"
 
 #: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
-#, fuzzy
 msgid "Next &rarr;"
-msgstr "Nowsze komentarze &rarr;"
+msgstr "Next &rarr;"
 
 #: inc/template-tags.php:266
 msgid "Blog"
@@ -570,6 +552,7 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
 "instead."
 msgstr ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead."
 
 #: inc/compat/deprecated.php:118
 msgctxt "1. PHP function name, 2. theme name, 3. version number"
@@ -577,6 +560,8 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
 "alternative available."
 msgstr ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
+"alternative available."
 
 #: inc/customizer/colors.php:482
 msgctxt "color scheme name"
@@ -659,16 +644,14 @@ msgid "Search Results for: %s"
 msgstr "Wyniki wyszukiwania dla: %s"
 
 #: inc/hero-text-widget.php:24
-#, fuzzy
 msgctxt "theme name"
 msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr "Widżety Hero są wyświetlane nad nagłówkiem na stronie frontalnej."
+msgstr "A %s theme widget designed for the Hero area on your site's front page."
 
 #: inc/hero-text-widget.php:29
-#, fuzzy
 msgctxt "the widget title"
 msgid "Hero Text"
-msgstr "Tekst Hero"
+msgstr "Hero Text"
 
 #: inc/hooks.php:394
 msgctxt "page number"
@@ -678,19 +661,17 @@ msgstr "Strona %d"
 #: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
 msgctxt "1. current page number, 2. total number of pages"
 msgid "Page %1$d of %2$d"
-msgstr ""
+msgstr "Page %1$d of %2$d"
 
 #: inc/template-tags.php:153
-#, fuzzy
 msgctxt "post type singular label"
 msgid "%1$s navigation"
-msgstr "Nawigacja po wpisie"
+msgstr "%1$s navigation"
 
 #: templates/woocommerce/loop/pagination.php:43
-#, fuzzy
 msgctxt "post type singular label"
 msgid "%s navigation"
-msgstr "Nawigacja po wpisie"
+msgstr "%s navigation"
 
 #: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"

@@ -1,19 +1,18 @@
 # Copyright (c) 2017 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 1.4.1\n"
+"Project-Id-Version: Primer 1.5.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
 "POT-Creation-Date: 2017-03-01 23:51:05+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: 404.php:22 templates/woocommerce/404.php:22
@@ -22,7 +21,8 @@ msgstr "Erreur ! Cette page est introuvable."
 
 #: 404.php:28 templates/woocommerce/404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
 "On dirait qu'il n'y a rien à cet emplacement. Essayez d’effectuer une "
 "recherche ci-dessous :"
@@ -56,15 +56,11 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Vos termes de recherche n'ont rien renvoyé. Réessayez avec d'autres mots-"
-"clés."
+"Vos termes de recherche n'ont rien renvoyé. Réessayez avec d'autres mots-clés."
 
 #: content-none.php:48
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr ""
-"Nous n'arrivons pas à trouver ce que vous recherchez. Une recherche pourrait "
-"vous aider."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Nous n'arrivons pas à trouver ce que vous recherchez. Une recherche pourrait vous aider."
 
 #: functions.php:186
 msgid "Featured"
@@ -104,8 +100,8 @@ msgstr "Barre latérale secondaire"
 
 #: functions.php:403
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
 "La barre latérale secondaire n'apparaît que si vous avez sélectionné une "
 "présentation en 3 colonnes."
@@ -116,9 +112,7 @@ msgstr "Pied de page 1"
 
 #: functions.php:411
 msgid "This sidebar is the first column of the footer widget area."
-msgstr ""
-"Cette barre latérale est la première colonne de la zone de widget du pied de "
-"page."
+msgstr "Cette barre latérale est la première colonne de la zone de widget du pied de page."
 
 #: functions.php:418
 msgid "Footer 2"
@@ -126,9 +120,7 @@ msgstr "Pied de page 2"
 
 #: functions.php:419
 msgid "This sidebar is the second column of the footer widget area."
-msgstr ""
-"Cette barre latérale est la deuxième colonne de la zone de widget du pied de "
-"page."
+msgstr "Cette barre latérale est la deuxième colonne de la zone de widget du pied de page."
 
 #: functions.php:426
 msgid "Footer 3"
@@ -136,14 +128,11 @@ msgstr "Pied de page 3"
 
 #: functions.php:427
 msgid "This sidebar is the third column of the footer widget area."
-msgstr ""
-"Cette barre latérale est la troisième colonne de la zone de widget du pied "
-"de page."
+msgstr "Cette barre latérale est la troisième colonne de la zone de widget du pied de page."
 
 #: functions.php:435
 msgid "Hero widgets appear over the header image on the front page."
-msgstr ""
-"Les widgets Hero apparaissent sur l’image d’en-tête de la première page."
+msgstr "Les widgets Hero apparaissent sur l’image d’en-tête de la première page."
 
 #: header.php:44
 msgid "Skip to content"
@@ -189,8 +178,7 @@ msgid ""
 "%2$s. Please upgrade and try again."
 msgstr ""
 "Primer nécessite au moins la version WordPress %1$s. Vous disposez de la "
-"version %2$s. Veuillez installer la dernière version de WordPress et "
-"réessayer."
+"version %2$s. Veuillez installer la dernière version de WordPress et réessayer."
 
 #: inc/customizer/colors.php:49
 msgid "Site Title Text"
@@ -214,9 +202,7 @@ msgstr "Texte du titre"
 
 #: inc/customizer/colors.php:130
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Titres de publication, titres de widget, étiquettes de formulaire, en-têtes "
-"de tableau et boutons."
+msgstr "Titres de publication, titres de widget, étiquettes de formulaire, en-têtes de tableau et boutons."
 
 #: inc/customizer/colors.php:151
 msgid "Primary Text"
@@ -232,9 +218,7 @@ msgstr "Texte secondaire"
 
 #: inc/customizer/colors.php:199
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr ""
-"Légendes de publication, nombre de commentaires, pieds de page de "
-"publication et pieds de page de citation."
+msgstr "Légendes de publication, nombre de commentaires, pieds de page de publication et pieds de page de citation."
 
 #: inc/customizer/colors.php:213
 msgid "Widget Heading Text"
@@ -329,11 +313,8 @@ msgid "Hero Background Overlay"
 msgstr "Couche de fond Hero"
 
 #: inc/customizer/colors.php:1292
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Contrôlez la transparence de la couche de fond lorsque vous utilisez une "
-"image d’en-tête personnalisée."
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Contrôlez la transparence de la couche de fond lorsque vous utilisez une image d’en-tête personnalisée."
 
 #: inc/customizer/fonts.php:89
 msgid "Site Title"
@@ -357,9 +338,7 @@ msgstr "Titres"
 
 #: inc/customizer/fonts.php:111
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr ""
-"Titres de publication, titres de widget, étiquettes de formulaire et en-"
-"têtes de tableau."
+msgstr "Titres de publication, titres de widget, étiquettes de formulaire et en-têtes de tableau."
 
 #: inc/customizer/fonts.php:126
 msgid "Primary"
@@ -375,9 +354,7 @@ msgstr "Secondaire"
 
 #: inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Légendes, nombre de commentaires, liens de réponse, pieds de page de "
-"publication et pieds de page de citation."
+msgstr "Légendes, nombre de commentaires, liens de réponse, pieds de page de publication et pieds de page de citation."
 
 #: inc/customizer/fonts.php:192
 msgid "Fonts"
@@ -424,9 +401,8 @@ msgid "Display your site differently on larger screens."
 msgstr "Affichez votre site différemment sur les grands écrans."
 
 #: inc/customizer/site-identity.php:82
-#, fuzzy
 msgid "Footer Copyright Text"
-msgstr "Texte de copyright"
+msgstr "Texte de copyright de pied de page"
 
 #: inc/customizer/site-identity.php:101
 msgid "Display theme author credit"
@@ -434,18 +410,15 @@ msgstr "Afficher les crédits d’auteur du thème"
 
 #: inc/customizer/static-front-page.php:46
 msgid "Front page title"
-msgstr ""
+msgstr "Titre de page principale"
 
 #: inc/customizer.php:193
 msgid "Use featured image"
 msgstr "Utiliser l’image en vedette"
 
 #: inc/customizer.php:194
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr ""
-"Autorisez l’image en vedette sur la publication actuelle à remplacer l’image "
-"hero."
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "Autorisez l’image en vedette sur la publication actuelle à remplacer l’image hero."
 
 #: inc/helpers.php:56
 msgid "404 Page Not Found"
@@ -453,39 +426,35 @@ msgstr "404 Page introuvable"
 
 #: inc/hero-text-widget.php:147
 msgid "The title of widget. Leave empty for no title."
-msgstr ""
+msgstr "The title of widget. Leave empty for no title."
 
 #: inc/hero-text-widget.php:147
-#, fuzzy
 msgid "Title:"
-msgstr "Titre du site Web"
+msgstr "Title:"
 
 #: inc/hero-text-widget.php:152
-#, fuzzy
 msgid "Text:"
-msgstr "Texte"
+msgstr "Text:"
 
 #: inc/hero-text-widget.php:157
-#, fuzzy
 msgid "Button Text:"
-msgstr "Boutons"
+msgstr "Button Text:"
 
 #: inc/hero-text-widget.php:162
 msgid "Button Link URL:"
-msgstr ""
+msgstr "Button Link URL:"
 
 #: inc/hero-text-widget.php:163
 msgid "Paste URL or type to search"
-msgstr ""
+msgstr "Paste URL or type to search"
 
 #: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
 msgid "&larr; Previous"
-msgstr ""
+msgstr "&larr; Previous"
 
 #: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
-#, fuzzy
 msgid "Next &rarr;"
-msgstr "Nouveaux commentaires &rarr;"
+msgstr "Next &rarr;"
 
 #: inc/template-tags.php:266
 msgid "Blog"
@@ -537,8 +506,8 @@ msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer est un thème puissant qui apporte de la clarté à votre contenu grâce "
-"à un nouveau design."
+"Primer est un thème puissant qui apporte de la clarté à votre contenu grâce à "
+"un nouveau design."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
@@ -552,7 +521,7 @@ msgstr "https://www.godaddy.com/"
 msgctxt "1. number of comments, 2. post title"
 msgid "%1$d thought on %2$s"
 msgid_plural "%1$d thoughts on %2$s"
-msgstr[0] "%1$d commentaire sur %2$s"
+msgstr[0] "%1$d a commenté sur %2$s"
 msgstr[1] "%1$d commentaires sur %2$s"
 
 #: comments.php:58
@@ -583,6 +552,7 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
 "instead."
 msgstr ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead."
 
 #: inc/compat/deprecated.php:118
 msgctxt "1. PHP function name, 2. theme name, 3. version number"
@@ -590,6 +560,8 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
 "alternative available."
 msgstr ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
+"alternative available."
 
 #: inc/customizer/colors.php:482
 msgctxt "color scheme name"
@@ -672,17 +644,14 @@ msgid "Search Results for: %s"
 msgstr "Résultats de recherche pour : %s"
 
 #: inc/hero-text-widget.php:24
-#, fuzzy
 msgctxt "theme name"
 msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr ""
-"Les widgets Hero apparaissent sur l’image d’en-tête de la première page."
+msgstr "A %s theme widget designed for the Hero area on your site's front page."
 
 #: inc/hero-text-widget.php:29
-#, fuzzy
 msgctxt "the widget title"
 msgid "Hero Text"
-msgstr "Texte du Hero"
+msgstr "Hero Text"
 
 #: inc/hooks.php:394
 msgctxt "page number"
@@ -692,19 +661,17 @@ msgstr "Page %d"
 #: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
 msgctxt "1. current page number, 2. total number of pages"
 msgid "Page %1$d of %2$d"
-msgstr ""
+msgstr "Page %1$d of %2$d"
 
 #: inc/template-tags.php:153
-#, fuzzy
 msgctxt "post type singular label"
 msgid "%1$s navigation"
-msgstr "Navigation des publications"
+msgstr "%1$s navigation"
 
 #: templates/woocommerce/loop/pagination.php:43
-#, fuzzy
 msgctxt "post type singular label"
 msgid "%s navigation"
-msgstr "Navigation des publications"
+msgstr "%s navigation"
 
 #: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"
