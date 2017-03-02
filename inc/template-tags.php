@@ -117,7 +117,7 @@ function primer_the_page_title() {
  * Display navigation to next/previous set of posts when applicable.
  *
  * @global WP_Query $wp_query
- * @since  NEXT
+ * @since  1.6.0
  * @uses  [the_posts_pagination](https://developer.wordpress.org/reference/functions/the_posts_pagination/)
  *
  * @param array $args (optional) Post pagination arguments.
@@ -140,7 +140,7 @@ function primer_pagination( $args = array() ) {
 	/**
 	 * Filter the default post pagination args.
 	 *
-	 * @since NEXT
+	 * @since 1.6.0
 	 *
 	 * @param int $current The current page number.
 	 * @param int $total   The total number of pages.

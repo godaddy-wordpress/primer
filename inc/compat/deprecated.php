@@ -21,7 +21,7 @@
  *
  * @access private
  * @link   https://developer.wordpress.org/reference/functions/_deprecated_function/
- * @since  NEXT
+ * @since  1.6.0
  *
  * @param string $name     The function that was called.
  * @param string $version  The theme version that deprecated the function.
@@ -34,7 +34,7 @@ function primer_deprecated_function( $name, $version, $alt_name = null, $theme =
 	 * Filters whether to trigger an error for deprecated functions.
 	 *
 	 * @link  https://developer.wordpress.org/reference/hooks/deprecated_function_trigger_error/
-	 * @since NEXT
+	 * @since 1.6.0
 	 *
 	 * @var bool Default is `true`.
 	 */
@@ -59,7 +59,7 @@ function primer_deprecated_function( $name, $version, $alt_name = null, $theme =
  *
  * @access private
  * @link   https://developer.wordpress.org/reference/functions/_deprecated_hook/
- * @since  NEXT
+ * @since  1.6.0
  *
  * @param string $name     The hook that was called.
  * @param string $version  The theme version that deprecated the hook.
@@ -73,7 +73,7 @@ function primer_deprecated_hook( $name, $version, $alt_name = null, $theme = nul
 	 * Filters whether to trigger an error for deprecated hooks.
 	 *
 	 * @link  https://developer.wordpress.org/reference/hooks/deprecated_hook_trigger_error/
-	 * @since NEXT
+	 * @since 1.6.0
 	 *
 	 * @var bool Default is `true`.
 	 */
@@ -97,7 +97,7 @@ function primer_deprecated_hook( $name, $version, $alt_name = null, $theme = nul
  * only documented here for completeness.
  *
  * @access private
- * @since  NEXT
+ * @since  1.6.0
  *
  * @param string $name     The item that was called.
  * @param string $version  The theme version that deprecated the item.
@@ -130,13 +130,13 @@ function primer_deprecated( $name, $version, $alt_name = null, $theme = null, $m
 /**
  * Display navigation to next/previous set of posts when applicable.
  *
- * @deprecated NEXT No longer supported as the pagination function. Use `primer_pagination()` instead.
+ * @deprecated 1.6.0 No longer supported as the pagination function. Use `primer_pagination()` instead.
  * @global     WP_Query $wp_query
  * @since      1.0.0
  */
 function primer_paging_nav() {
 
-	primer_deprecated_function( __FUNCTION__ . '()', '@NEXT', 'primer_pagination()' );
+	primer_deprecated_function( __FUNCTION__ . '()', '1.6.0', 'primer_pagination()' );
 
 	global $wp_query;
 
