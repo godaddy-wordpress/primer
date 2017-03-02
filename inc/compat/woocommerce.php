@@ -26,6 +26,31 @@ function primer_wc_setup() {
 add_action( 'after_setup_theme', 'primer_wc_setup' );
 
 /**
+ * Add body class to indicate when WooCommerce is localized.
+ *
+ * @filter body_class
+ * @since  NEXT
+ *
+ * @param  array $classes Array of body classes.
+ *
+ * @return array
+ */
+function primer_wc_l10n_body_class( array $classes ) {
+
+	global $l10n;
+
+	if ( ! empty( $l10n['woocommerce'] ) ) {
+
+		$classes[] = 'primer-woocommerce-l10n';
+
+	}
+
+	return $classes;
+
+}
+add_filter( 'body_class', 'primer_wc_l10n_body_class' );
+
+/**
  * Remove the default WooCommerce page wrapper.
  *
  * @since 1.0.0
@@ -329,7 +354,7 @@ add_filter( 'primer_colors', 'primer_wc_colors' );
  * Add font type targets for WooCommerce elements.
  *
  * @filter primer_font_types
- * @uses   primer_array_replace_recursive To replace items in the colors array with new values.
+ * @uses   primer_array_replace_recursive To replace items in the font types array with new values.
  *
  * @since  1.0.0
  *
@@ -357,136 +382,36 @@ function primer_wc_font_types( $font_types ) {
 add_filter( 'primer_font_types', 'primer_wc_font_types' );
 
 /**
+ * Change the theme overrides path for WooCommerce templates.
+ *
+ * @filter woocommerce_template_path
+ * @since  NEXT
+ *
+ * @return string
+ */
+function primer_wc_template_path() {
+
+	return 'templates/woocommerce/';
+
+}
+add_filter( 'woocommerce_template_path', 'primer_wc_template_path' );
+
+/**
  * Load a custom template for WooCommerce 404 pages.
  *
  * @filter template_include
  * @since  1.5.0
  *
- * @param  string $default The default 404 template.
+ * @param  string $template The path of the template to include.
  *
  * @return string
  */
-function primer_wc_404_template( $default ) {
+function primer_wc_404_template( $template ) {
 
-	return ( is_404() && locate_template( 'templates/parts/404-woocommerce.php' ) ) ? get_template_part( 'templates/parts/404', 'woocommerce' ) : $default;
+	return ( is_404() && locate_template( 'templates/woocommerce/404.php' ) ) ? get_template_part( 'templates/woocommerce/404' ) : $template;
 
 }
 add_filter( 'template_include', 'primer_wc_404_template' );
-
-if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
-
-	/**
-	 * Display promoted products.
-	 *
-	 * Check for featured products then on-sale products and use the appropiate
-	 * shortcode. If neither exist, the default fallback is to display recently
-	 * added products.
-	 *
-	 * @since 1.5.0
-	 * @uses  [wc_get_featured_product_ids](https://docs.woocommerce.com/wc-apidocs/function-wc_get_featured_product_ids.html) To retreive the products that are featured.
-	 * @uses  [wc_get_product_ids_on_sale](https://docs.woocommerce.com/wc-apidocs/function-wc_get_product_ids_on_sale.html) To retreive the products that are on sale.
-	 *
-	 * @param int  $per_page        (optional) Total number of promoted products to display. Defaults to `4`.
-	 * @param int  $columns         (optional) Number of columns to display promoted products in. Defaults to `4`.
-	 * @param bool $recent_fallback (optional) Whether to display recent products as a fallback when there are no featured or on-sale products. Defaults to `true`.
-	 */
-	function primer_wc_promoted_products( $per_page = 4, $columns = 4, $recent_fallback = true ) {
-
-		/**
-		 * Filter the total number of promoted products to display.
-		 *
-		 * Default: `4`
-		 *
-		 * @since 1.5.0
-		 *
-		 * @var int
-		 */
-		$per_page = (int) apply_filters( 'primer_wc_promoted_products_per_page', $per_page ); // Can be negative.
-
-		/**
-		 * Filter the number of columns to display promoted products in.
-		 *
-		 * Default: `4`
-		 *
-		 * @since 1.5.0
-		 *
-		 * @var int
-		 */
-		$columns = absint( apply_filters( 'primer_wc_promoted_products_columns', $columns ) );
-
-		if ( wc_get_featured_product_ids() ) {
-
-			echo '<h2>' . esc_html__( 'Featured Products', 'primer' ) . '</h2>';
-
-			echo do_shortcode( "[featured_products per_page='{$per_page}' columns='{$columns}']" );
-
-			return;
-
-		}
-
-		if ( wc_get_product_ids_on_sale() ) {
-
-			echo '<h2>' . esc_html__( 'On Sale Now', 'primer' ) . '</h2>';
-
-			echo do_shortcode( "[sale_products per_page='{$per_page}' columns='{$columns}']" );
-
-			return;
-
-		}
-
-		if ( ! $recent_fallback ) {
-
-			return;
-
-		}
-
-		echo '<h2>' . esc_html__( 'New In Store', 'primer' ) . '</h2>';
-
-		echo do_shortcode( "[recent_products per_page='{$per_page}' columns='{$columns}']" );
-
-	}
-
-}
-
-if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
-
-	/**
-	 * Display best-selling products.
-	 *
-	 * @since 1.5.0
-	 *
-	 * @param int $per_page (optional) Total number of best-selling products to display. Defaults to `4`.
-	 * @param int $columns  (optional) Number of columns to display best-selling products in. Defaults to `4`.
-	 */
-	function primer_wc_best_selling_products( $per_page = 4, $columns = 4 ) {
-
-		/**
-		 * Filter the total number of best-selling products to display.
-		 *
-		 * Default: `4`
-		 *
-		 * @since 1.5.0
-		 *
-		 * @var int
-		 */
-		$per_page = (int) apply_filters( 'primer_wc_best_selling_products_per_page', $per_page ); // Can be negative.
-
-		/**
-		 * Filter the number of columns to display best-selling products in.
-		 *
-		 * Default: `4`
-		 *
-		 * @since 1.5.0
-		 *
-		 * @var int
-		 */
-		$columns  = absint( apply_filters( 'primer_wc_best_selling_products_columns', $columns ) );
-
-		echo do_shortcode( "[best_selling_products per_page='{$per_page}' columns='{$columns}']" );
-
-	}
-
-}
 
 /**
  * Add a custom "Cart" menu item when WooCommerce is active.
@@ -500,6 +425,12 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
  * @return array
  */
 function primer_wc_generate_cart_menu_item( $items, $menu ) {
+
+	if ( ! primer_child_compat( 'wc__cart_menu_item', true ) ) {
+
+		return $items;
+
+	}
 
 	$theme_locations = get_nav_menu_locations();
 
@@ -613,5 +544,120 @@ function primer_wc_cart_menu( $items, $args ) {
 function primer_wc_customize_preview_cart_contents_total() {
 
 	return wc_price( 0 );
+
+}
+
+if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
+
+	/**
+	 * Display promoted products.
+	 *
+	 * Check for featured products then on-sale products and use the appropiate
+	 * shortcode. If neither exist, the default fallback is to display recently
+	 * added products.
+	 *
+	 * @since 1.5.0
+	 * @uses  [wc_get_featured_product_ids](https://docs.woocommerce.com/wc-apidocs/function-wc_get_featured_product_ids.html) To retreive the products that are featured.
+	 * @uses  [wc_get_product_ids_on_sale](https://docs.woocommerce.com/wc-apidocs/function-wc_get_product_ids_on_sale.html) To retreive the products that are on sale.
+	 *
+	 * @param int  $per_page        (optional) Total number of promoted products to display. Defaults to `4`.
+	 * @param int  $columns         (optional) Number of columns to display promoted products in. Defaults to `4`.
+	 * @param bool $recent_fallback (optional) Whether to display recent products as a fallback when there are no featured or on-sale products. Defaults to `true`.
+	 */
+	function primer_wc_promoted_products( $per_page = 4, $columns = 4, $recent_fallback = true ) {
+
+		/**
+		 * Filter the total number of promoted products to display.
+		 *
+		 * Default: `4`
+		 *
+		 * @since 1.5.0
+		 *
+		 * @var int
+		 */
+		$per_page = (int) apply_filters( 'primer_wc_promoted_products_per_page', $per_page ); // Can be negative.
+
+		/**
+		 * Filter the number of columns to display promoted products in.
+		 *
+		 * Default: `4`
+		 *
+		 * @since 1.5.0
+		 *
+		 * @var int
+		 */
+		$columns = absint( apply_filters( 'primer_wc_promoted_products_columns', $columns ) );
+
+		if ( wc_get_featured_product_ids() ) {
+
+			echo '<h2>' . esc_html__( 'Featured Products', 'primer' ) . '</h2>';
+
+			echo do_shortcode( "[featured_products per_page='{$per_page}' columns='{$columns}']" );
+
+			return;
+
+		}
+
+		if ( wc_get_product_ids_on_sale() ) {
+
+			echo '<h2>' . esc_html__( 'On Sale Now', 'primer' ) . '</h2>';
+
+			echo do_shortcode( "[sale_products per_page='{$per_page}' columns='{$columns}']" );
+
+			return;
+
+		}
+
+		if ( ! $recent_fallback ) {
+
+			return;
+
+		}
+
+		echo '<h2>' . esc_html__( 'New In Store', 'primer' ) . '</h2>';
+
+		echo do_shortcode( "[recent_products per_page='{$per_page}' columns='{$columns}']" );
+
+	}
+
+}
+
+if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
+
+	/**
+	 * Display best-selling products.
+	 *
+	 * @since 1.5.0
+	 *
+	 * @param int $per_page (optional) Total number of best-selling products to display. Defaults to `4`.
+	 * @param int $columns  (optional) Number of columns to display best-selling products in. Defaults to `4`.
+	 */
+	function primer_wc_best_selling_products( $per_page = 4, $columns = 4 ) {
+
+		/**
+		 * Filter the total number of best-selling products to display.
+		 *
+		 * Default: `4`
+		 *
+		 * @since 1.5.0
+		 *
+		 * @var int
+		 */
+		$per_page = (int) apply_filters( 'primer_wc_best_selling_products_per_page', $per_page ); // Can be negative.
+
+		/**
+		 * Filter the number of columns to display best-selling products in.
+		 *
+		 * Default: `4`
+		 *
+		 * @since 1.5.0
+		 *
+		 * @var int
+		 */
+		$columns = absint( apply_filters( 'primer_wc_best_selling_products_columns', $columns ) );
+
+		echo do_shortcode( "[best_selling_products per_page='{$per_page}' columns='{$columns}']" );
+
+	}
 
 }

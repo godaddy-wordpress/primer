@@ -218,32 +218,46 @@ class Primer_Customizer {
 	}
 
 	/**
-	 * Return an array of CSS rules as plain CSS.
+	 * Return an array of CSS rules as compacted CSS.
+	 *
+	 * Note: When `SCRIPT_DEBUG` is enabled, the returned CSS
+	 * will be expanded instead of compacted.
 	 *
 	 * @since 1.0.0
 	 *
 	 * @param  array $rules Array of CSS rules to parse.
 	 *
-	 * @return string Return Parsed CSS rules ready for use.
+	 * @return string Returns parsed rules ready to be printed as inline CSS.
 	 */
 	public static function parse_css_rules( array $rules ) {
+
+		$open_format  = SCRIPT_DEBUG ? "%s {\n"      : '%s{';
+		$rule_format  = SCRIPT_DEBUG ? "\t%s: %s;\n" : '%s:%s;';
+		$close_format = SCRIPT_DEBUG ? "}\n"         : '}';
 
 		ob_start();
 
 		foreach ( $rules as $rule => $properties ) {
 
-			printf( // xss ok.
-				"%s {\n",
-				implode( ",\n", array_map( 'trim', explode( ',', $rule ) ) )
+			// @codingStandardsIgnoreStart
+			printf(
+				$open_format,
+				implode(
+					SCRIPT_DEBUG ? ",\n" : ',',
+					array_map( 'trim', explode( ',', $rule ) )
+				)
 			);
+			// @codingStandardsIgnoreEnd
 
 			foreach ( $properties as $property => $value ) {
 
-				printf( "\t%s: %s;\n", $property, $value ); // xss ok.
+				// @codingStandardsIgnoreStart
+				printf( $rule_format, $property, $value );
+				// @codingStandardsIgnoreEnd
 
 			}
 
-			echo "}\n";
+			echo $close_format; // xss ok.
 
 		}
 

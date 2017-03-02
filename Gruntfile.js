@@ -154,7 +154,7 @@ module.exports = function( grunt ) {
 				options: {
 					domainPath: 'languages/',
 					include: [ '.+\.php' ],
-					exclude: [ '.dev/', 'node_modules/' ],
+					exclude: [ '.dev/', 'build/', 'node_modules/', 'tests/', 'vendor/' ],
 					potComments: 'Copyright (c) {year} GoDaddy Operating Company, LLC. All Rights Reserved.',
 					potHeaders: {
 						'x-poedit-keywordslist': true
@@ -224,8 +224,16 @@ module.exports = function( grunt ) {
 				overwrite: true,
 				replacements: [
 					{
+						from: /@deprecated(\s+)NEXT/g,
+						to: '@deprecated$1<%= pkg.version %>'
+					},
+					{
 						from: /@since(\s+)NEXT/g,
 						to: '@since$1<%= pkg.version %>'
+					},
+					{
+						from: /@NEXT/g,
+						to: '<%= pkg.version %>'
 					},
 					{
 						from: /'PRIMER_VERSION',(\s*)'[\w.+-]+'/,

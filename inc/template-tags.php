@@ -117,50 +117,53 @@ function primer_the_page_title() {
  * Display navigation to next/previous set of posts when applicable.
  *
  * @global WP_Query $wp_query
- * @since  1.0.0
+ * @since  NEXT
+ * @uses  [the_posts_pagination](https://developer.wordpress.org/reference/functions/the_posts_pagination/)
+ *
+ * @param array $args (optional) Post pagination arguments.
  */
-function primer_paging_nav() {
+function primer_pagination( $args = array() ) {
 
 	global $wp_query;
 
-	if ( ! isset( $wp_query->max_num_pages ) || $wp_query->max_num_pages < 2 ) {
+	if ( empty( $wp_query->max_num_pages ) || (int) $wp_query->max_num_pages < 2 ) {
 
 		return;
 
 	}
 
-	?>
-	<nav class="navigation paging-navigation">
+	global $post;
 
-		<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'primer' ); ?></h2>
+	$post_type_labels = get_post_type_labels( get_post_type_object( $post->post_type ) );
+	$post_type_label  = isset( $post_type_labels->singular_name ) ? $post_type_labels->singular_name : $post->post_type;
 
-		<div class="nav-links">
+	/**
+	 * Filter the default post pagination args.
+	 *
+	 * @since NEXT
+	 *
+	 * @param int $current The current page number.
+	 * @param int $total   The total number of pages.
+	 *
+	 * @var array
+	 */
+	$defaults = (array) apply_filters( 'primer_pagination_default_args', array(
+		'prev_text'          => __( '&larr; Previous', 'primer' ),
+		'next_text'          => __( 'Next &rarr;', 'primer' ),
+		'screen_reader_text' => sprintf( esc_html_x( '%1$s navigation', 'post type singular label', 'primer' ), esc_html( $post_type_label ) ),
+	), max( 1, get_query_var( 'paged' ) ), absint( $wp_query->max_num_pages ) );
 
-		<?php if ( get_next_posts_link() ) : ?>
+	$args = wp_parse_args( $args, $defaults );
 
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'primer' ) ); ?></div>
-
-		<?php endif; ?>
-
-		<?php if ( get_previous_posts_link() ) : ?>
-
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'primer' ) ); ?></div>
-
-		<?php endif; ?>
-
-		</div><!-- .nav-links -->
-
-	</nav><!-- .navigation -->
-	<?php
+	the_posts_pagination( $args );
 
 }
 
 /**
  * Display navigation to next/previous post, when applicable.
  *
- * @link  https://developer.wordpress.org/reference/functions/get_the_post_navigation/
  * @since 1.0.0
- * @uses  the_post_navigation
+ * @uses  [the_post_navigation](https://developer.wordpress.org/reference/functions/the_post_navigation/)
  *
  * @param array $args (optional) Post navigation arguments.
  */

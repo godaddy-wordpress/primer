@@ -24,7 +24,7 @@ function primer_elements() {
 
 	if ( ( is_front_page() && (bool) get_post_meta( get_queried_object_id(), '_fl_builder_enabled', true ) ) || is_home() ) {
 
-		remove_action( 'primer_after_header', 'primer_add_page_title' );
+		remove_action( 'primer_after_header', 'primer_add_page_title', 12 );
 
 	}
 
@@ -42,7 +42,7 @@ function primer_add_site_title() {
 	get_template_part( 'templates/parts/site-title' );
 
 }
-add_action( 'primer_header', 'primer_add_site_title', primer_child_version_compare( '1.1.0', '<' ) ? 10 : 5 );
+add_action( 'primer_header', 'primer_add_site_title', primer_child_compat( 'header__add_site_title', 5 ) );
 
 /**
  * Display hero element in the header.
@@ -59,7 +59,7 @@ function primer_add_hero() {
 	}
 
 }
-add_action( 'primer_header', 'primer_add_hero', primer_child_version_compare( '1.1.0', '<' ) ? 10 : 7 );
+add_action( 'primer_header', 'primer_add_hero', primer_child_compat( 'header__add_hero', 7 ) );
 
 /**
  * Display content in the hero element.
@@ -133,7 +133,7 @@ function primer_add_primary_navigation() {
 	get_template_part( 'templates/parts/primary-navigation' );
 
 }
-add_action( 'primer_after_header', 'primer_add_primary_navigation', primer_child_version_compare( '1.1.0', '<' ) ? 10 : 11 );
+add_action( 'primer_after_header', 'primer_add_primary_navigation', primer_child_compat( 'after_header__add_primary_navigation', 11 ) );
 
 /**
  * Display page titles after the header.
@@ -150,7 +150,7 @@ function primer_add_page_title() {
 	}
 
 }
-add_action( 'primer_after_header', 'primer_add_page_title', primer_child_version_compare( '1.1.0', '<' ) ? 10 : 12 );
+add_action( 'primer_after_header', 'primer_add_page_title', primer_child_compat( 'after_header__add_page_title', 12 ) );
 
 /**
  * Display post meta template.
@@ -402,3 +402,40 @@ function primer_wp_title( $title, $sep ) {
 
 }
 add_filter( 'wp_title', 'primer_wp_title', 10, 2 );
+
+/**
+ * Customize the default pagination links template.
+ *
+ * @filter navigation_markup_template
+ * @since  NEXT
+ *
+ * @param  string $template The navigation template.
+ * @param  string $class    The class passed by the calling function.
+ *
+ * @return string
+ */
+function primer_pagination_template( $template, $class ) {
+
+	if ( 'pagination' !== $class ) {
+
+		return $template;
+
+	}
+
+	global $wp_query;
+
+	$search  = '<div class="nav-links">';
+	$replace = sprintf(
+		'<div class="paging-nav-text">%s</div>%s',
+		sprintf(
+			esc_html_x( 'Page %1$d of %2$d', '1. current page number, 2. total number of pages', 'primer' ),
+			max( 1, get_query_var( 'paged' ) ),
+			absint( $wp_query->max_num_pages )
+		),
+		$search
+	);
+
+	return str_replace( $search, $replace, $template );
+
+}
+add_filter( 'navigation_markup_template', 'primer_pagination_template', 10, 2 );

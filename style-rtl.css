@@ -832,20 +832,49 @@ body.no-max-width .main-navigation {
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg); }
 
+.navigation.pagination {
+  clear: both;
+  margin: 0 0 1.5em; }
+  .navigation.pagination .nav-links {
+    text-align: center; }
+    .navigation.pagination .nav-links .page-numbers {
+      display: inline-block;
+      border: none;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      line-height: 1;
+      margin: 0 0.25em;
+      padding: 0.5em 0.75em;
+      white-space: nowrap; }
+      .navigation.pagination .nav-links .page-numbers.dots {
+        background: none; }
+      .navigation.pagination .nav-links .page-numbers.current {
+        color: #f5f5f5;
+        background-color: #ff6663; }
+  .navigation.pagination .paging-nav-text {
+    display: none; }
+  @media only screen and (max-width: 40.063em) {
+    .navigation.pagination .paging-nav-text {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: normal;
+      color: #252525; }
+    .navigation.pagination .nav-links {
+      float: left; }
+      .navigation.pagination .nav-links .page-numbers:not(.prev):not(.next) {
+        display: none; } }
+
 .site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden; }
 
 .comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: right;
   width: 50%; }
 
 .comment-navigation .nav-next,
-.posts-navigation .nav-next,
 .post-navigation .nav-next {
   float: left;
   text-align: left;
@@ -1681,6 +1710,8 @@ body.no-max-width .page-title-container .page-header {
       padding-right: 0; }
       .hero .widget ul li, .hero .widget ol li {
         list-style: none; }
+    .hero .widget b, .hero .widget strong {
+      font-weight: 600; }
   .hero label, .hero input, .hero select, .hero textarea {
     display: inline;
     width: auto; }
@@ -2110,10 +2141,6 @@ body.no-max-width .site-info-wrapper .site-info {
   .entry-footer .tag-links {
     display: block; }
 
-.paging-navigation {
-  clear: both;
-  margin: 0 0 1.5em; }
-
 /*--------------------------------------------------------------
 # Comments
 --------------------------------------------------------------*/
@@ -2206,20 +2233,44 @@ body.no-max-width .site-info-wrapper .site-info {
   .woocommerce-page .primer-woocommerce .cart .qty {
     padding: 0.18em; }
 
-body.post-type-archive,
-body.single-product {
-  /* On Sale Badge */ }
-  body.post-type-archive span.onsale,
-  body.post-type-archive ul.products li.product .onsale,
-  body.single-product span.onsale,
-  body.single-product ul.products li.product .onsale {
-    padding: 2px 8px;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    margin: 0;
-    min-height: auto;
-    min-width: auto;
-    line-height: inherit; }
+body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
+.woocommerce a.added_to_cart {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  display: block; }
+  @media only screen and (min-width: 61.063em) {
+    body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
+    .woocommerce a.added_to_cart {
+      font-size: 0.75rem; } }
+
+.woocommerce a.added_to_cart {
+  text-align: right; }
+
+.woocommerce nav.woocommerce-pagination {
+  margin-bottom: 0;
+  text-align: right; }
+  .woocommerce nav.woocommerce-pagination .nav-links .page-numbers {
+    padding: 0.3em 0.6em; }
+    .woocommerce nav.woocommerce-pagination .nav-links .page-numbers:last-child {
+      margin-left: 0;
+      padding-left: 0; }
+    @media only screen and (max-width: 40.063em) {
+      .woocommerce nav.woocommerce-pagination .nav-links .page-numbers:first-child {
+        margin-right: 0;
+        padding-right: 0; } }
+
+body.post-type-archive span.onsale,
+body.post-type-archive ul.products li.product .onsale,
+body.single-product span.onsale,
+body.single-product ul.products li.product .onsale {
+  padding: 2px 8px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  margin: 0;
+  min-height: auto;
+  min-width: auto;
+  line-height: inherit; }
 
 body.single-product span.onsale {
   padding: 3px 18px;
