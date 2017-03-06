@@ -420,35 +420,35 @@ msgstr "404 ไม่พบหน้าที่ต้องการ"
 
 #: inc/hero-text-widget.php:147
 msgid "The title of widget. Leave empty for no title."
-msgstr "The title of widget. Leave empty for no title."
+msgstr "ชื่อวิดเจ็ท เว้นว่างไว้สำหรับวิดเจ็ตที่ไม่มีชื่อ"
 
 #: inc/hero-text-widget.php:147
 msgid "Title:"
-msgstr "Title:"
+msgstr "ชื่อเรื่อง:"
 
 #: inc/hero-text-widget.php:152
 msgid "Text:"
-msgstr "Text:"
+msgstr "ข้อความ:"
 
 #: inc/hero-text-widget.php:157
 msgid "Button Text:"
-msgstr "Button Text:"
+msgstr "ข้อความบนปุ่ม:"
 
 #: inc/hero-text-widget.php:162
 msgid "Button Link URL:"
-msgstr "Button Link URL:"
+msgstr "ลิงค์ปุ่ม URL:"
 
 #: inc/hero-text-widget.php:163
 msgid "Paste URL or type to search"
-msgstr "Paste URL or type to search"
+msgstr "วาง URL หรือพิมพ์เพื่อค้นหา"
 
 #: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
 msgid "&larr; Previous"
-msgstr "&larr; Previous"
+msgstr "&larr; ก่อนหน้านี้"
 
 #: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
 msgid "Next &rarr;"
-msgstr "Next &rarr;"
+msgstr "ถัดไป &rarr;"
 
 #: inc/template-tags.php:266
 msgid "Blog"
@@ -545,7 +545,8 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
 "instead."
 msgstr ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead."
+"%1$s ได้ถูก <strong>เลิกใช้</strong> ตั้งแต่เวอร์ชัน %2$s แล้ว %3$s! ลองใช้ "
+"%4$s แทน"
 
 #: inc/compat/deprecated.php:118
 msgctxt "1. PHP function name, 2. theme name, 3. version number"
@@ -553,8 +554,7 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
 "alternative available."
 msgstr ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
-"alternative available."
+"%1$s ได้ถูก <strong>เลิกใช้</strong> ตั้งแต่เวอร์ชัน %2$s แล้ว %3$s โดยไม่มีตัวเลือกอื่นให้ใช้"
 
 #: inc/customizer/colors.php:482
 msgctxt "color scheme name"
@@ -639,12 +639,12 @@ msgstr "ผลลัพธ์การค้นหาสำหรับ: %s"
 #: inc/hero-text-widget.php:24
 msgctxt "theme name"
 msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr "A %s theme widget designed for the Hero area on your site's front page."
+msgstr "วิดเจ็ตธีม %s ได้รับการออกแบบมาสำหรับพื้นที่ที่ดึงดูดผู้ชมมากที่สุดบนหน้าเพจแรกของเว็บไซต์ของคุณ"
 
 #: inc/hero-text-widget.php:29
 msgctxt "the widget title"
 msgid "Hero Text"
-msgstr "Hero Text"
+msgstr "ตัวอักษรฮีโร่"
 
 #: inc/hooks.php:394
 msgctxt "page number"
@@ -654,17 +654,17 @@ msgstr "หน้า %d"
 #: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
 msgctxt "1. current page number, 2. total number of pages"
 msgid "Page %1$d of %2$d"
-msgstr "Page %1$d of %2$d"
+msgstr "หน้า %1$d จาก %2$d"
 
 #: inc/template-tags.php:153
 msgctxt "post type singular label"
 msgid "%1$s navigation"
-msgstr "%1$s navigation"
+msgstr "%1$s การนำทาง"
 
 #: templates/woocommerce/loop/pagination.php:43
 msgctxt "post type singular label"
 msgid "%s navigation"
-msgstr "%s navigation"
+msgstr "%s การนำทาง"
 
 #: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"

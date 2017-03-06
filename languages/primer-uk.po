@@ -424,35 +424,35 @@ msgstr "404 — сторінку не знайдено"
 
 #: inc/hero-text-widget.php:147
 msgid "The title of widget. Leave empty for no title."
-msgstr "The title of widget. Leave empty for no title."
+msgstr "Заголовок віджету. Щоб заголовка не було, залиште порожнім."
 
 #: inc/hero-text-widget.php:147
 msgid "Title:"
-msgstr "Title:"
+msgstr "Заголовок:"
 
 #: inc/hero-text-widget.php:152
 msgid "Text:"
-msgstr "Text:"
+msgstr "Текст:"
 
 #: inc/hero-text-widget.php:157
 msgid "Button Text:"
-msgstr "Button Text:"
+msgstr "Текст кнопки:"
 
 #: inc/hero-text-widget.php:162
 msgid "Button Link URL:"
-msgstr "Button Link URL:"
+msgstr "URL посилання кнопки:"
 
 #: inc/hero-text-widget.php:163
 msgid "Paste URL or type to search"
-msgstr "Paste URL or type to search"
+msgstr "Вставте URL або введіть текст для пошуку"
 
 #: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
 msgid "&larr; Previous"
-msgstr "&larr; Previous"
+msgstr "&larr; Назад"
 
 #: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
 msgid "Next &rarr;"
-msgstr "Next &rarr;"
+msgstr "Далі &rarr;"
 
 #: inc/template-tags.php:266
 msgid "Blog"
@@ -549,7 +549,8 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
 "instead."
 msgstr ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead."
+"%1$s <strong>не підтримується</strong> починаючи з %2$s версії %3$s! "
+"Натомість використовуйте %4$s."
 
 #: inc/compat/deprecated.php:118
 msgctxt "1. PHP function name, 2. theme name, 3. version number"
@@ -557,8 +558,8 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
 "alternative available."
 msgstr ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
-"alternative available."
+"%1$s <strong>не підтримується</strong> починаючи з %2$s версії %3$s, але "
+"альтернативи немає."
 
 #: inc/customizer/colors.php:482
 msgctxt "color scheme name"
@@ -643,12 +644,12 @@ msgstr "Результати пошуку для: %s"
 #: inc/hero-text-widget.php:24
 msgctxt "theme name"
 msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr "A %s theme widget designed for the Hero area on your site's front page."
+msgstr "Розроблено віджет теми %s для області Hero на головній сторінці вашого сайту."
 
 #: inc/hero-text-widget.php:29
 msgctxt "the widget title"
 msgid "Hero Text"
-msgstr "Hero Text"
+msgstr "Текст Hero"
 
 #: inc/hooks.php:394
 msgctxt "page number"
@@ -658,17 +659,17 @@ msgstr "Сторінка %d"
 #: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
 msgctxt "1. current page number, 2. total number of pages"
 msgid "Page %1$d of %2$d"
-msgstr "Page %1$d of %2$d"
+msgstr "Стор. %1$d з %2$d"
 
 #: inc/template-tags.php:153
 msgctxt "post type singular label"
 msgid "%1$s navigation"
-msgstr "%1$s navigation"
+msgstr "Навігація %1$s"
 
 #: templates/woocommerce/loop/pagination.php:43
 msgctxt "post type singular label"
 msgid "%s navigation"
-msgstr "%s navigation"
+msgstr "Навігація %s"
 
 #: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"

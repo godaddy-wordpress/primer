@@ -422,11 +422,11 @@ msgstr "404 Sidan kunde inte hittas"
 
 #: inc/hero-text-widget.php:147
 msgid "The title of widget. Leave empty for no title."
-msgstr "The title of widget. Leave empty for no title."
+msgstr "Widgetens namn. Lämna tomt om den ska vara namnlös."
 
 #: inc/hero-text-widget.php:147
 msgid "Title:"
-msgstr "Title:"
+msgstr "Titel:"
 
 #: inc/hero-text-widget.php:152
 msgid "Text:"
@@ -434,23 +434,23 @@ msgstr "Text:"
 
 #: inc/hero-text-widget.php:157
 msgid "Button Text:"
-msgstr "Button Text:"
+msgstr "Knapptext:"
 
 #: inc/hero-text-widget.php:162
 msgid "Button Link URL:"
-msgstr "Button Link URL:"
+msgstr "Webbadress för knapplänk:"
 
 #: inc/hero-text-widget.php:163
 msgid "Paste URL or type to search"
-msgstr "Paste URL or type to search"
+msgstr "Klistra in webbadress eller skriv för att söka efter den"
 
 #: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
 msgid "&larr; Previous"
-msgstr "&larr; Previous"
+msgstr "&larr; Föregående"
 
 #: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
 msgid "Next &rarr;"
-msgstr "Next &rarr;"
+msgstr "Nästa &rarr;"
 
 #: inc/template-tags.php:266
 msgid "Blog"
@@ -547,7 +547,8 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
 "instead."
 msgstr ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead."
+"%1$s <strong>används inte längre</strong> sedan %2$sversion %3$s. Använd %4$s "
+"i stället."
 
 #: inc/compat/deprecated.php:118
 msgctxt "1. PHP function name, 2. theme name, 3. version number"
@@ -555,8 +556,8 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
 "alternative available."
 msgstr ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
-"alternative available."
+"%1$s <strong>används inte längre</strong> sedan %2$s version %3$s och det "
+"finns inget tillgängligt alternativ."
 
 #: inc/customizer/colors.php:482
 msgctxt "color scheme name"
@@ -641,12 +642,12 @@ msgstr "Sökresultat för: %s"
 #: inc/hero-text-widget.php:24
 msgctxt "theme name"
 msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr "A %s theme widget designed for the Hero area on your site's front page."
+msgstr "En widget med %s-tema som designats för Hero-området på webbplatsens startsida."
 
 #: inc/hero-text-widget.php:29
 msgctxt "the widget title"
 msgid "Hero Text"
-msgstr "Hero Text"
+msgstr "Herotext"
 
 #: inc/hooks.php:394
 msgctxt "page number"
@@ -656,17 +657,17 @@ msgstr "Sida %d"
 #: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
 msgctxt "1. current page number, 2. total number of pages"
 msgid "Page %1$d of %2$d"
-msgstr "Page %1$d of %2$d"
+msgstr "Sida %1$d av %2$d"
 
 #: inc/template-tags.php:153
 msgctxt "post type singular label"
 msgid "%1$s navigation"
-msgstr "%1$s navigation"
+msgstr "%1$s-navigering"
 
 #: templates/woocommerce/loop/pagination.php:43
 msgctxt "post type singular label"
 msgid "%s navigation"
-msgstr "%s navigation"
+msgstr "%s-navigering"
 
 #: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"

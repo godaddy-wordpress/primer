@@ -427,35 +427,35 @@ msgstr "404 - Η σελίδα δεν βρέθηκε"
 
 #: inc/hero-text-widget.php:147
 msgid "The title of widget. Leave empty for no title."
-msgstr "The title of widget. Leave empty for no title."
+msgstr "Ο τίτλος του widget. Να παραμείνει κενό αν δεν υπάρχει τίτλος "
 
 #: inc/hero-text-widget.php:147
 msgid "Title:"
-msgstr "Title:"
+msgstr "Τίτλος:"
 
 #: inc/hero-text-widget.php:152
 msgid "Text:"
-msgstr "Text:"
+msgstr "Κείμενο:"
 
 #: inc/hero-text-widget.php:157
 msgid "Button Text:"
-msgstr "Button Text:"
+msgstr "Κείμενο κουμπιού:"
 
 #: inc/hero-text-widget.php:162
 msgid "Button Link URL:"
-msgstr "Button Link URL:"
+msgstr "URL σύνδεσης κουμπιού:"
 
 #: inc/hero-text-widget.php:163
 msgid "Paste URL or type to search"
-msgstr "Paste URL or type to search"
+msgstr "Επικολλήστε το URL ή πληκτρολογήστε για να γίνει αναζήτηση"
 
 #: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
 msgid "&larr; Previous"
-msgstr "&larr; Previous"
+msgstr "&larr; Προηγούμενο"
 
 #: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
 msgid "Next &rarr;"
-msgstr "Next &rarr;"
+msgstr "Επόμενο &rarr;"
 
 #: inc/template-tags.php:266
 msgid "Blog"
@@ -553,7 +553,8 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
 "instead."
 msgstr ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead."
+"Η συνάρτηση %1$s είναι <strong>ξεπερασμένη</strong> από το %2$s έκδοσης %3$s "
+"και μετά! Στη θέση της, χρησιμοποιήστε τη συνάρτηση %4$s."
 
 #: inc/compat/deprecated.php:118
 msgctxt "1. PHP function name, 2. theme name, 3. version number"
@@ -561,8 +562,8 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
 "alternative available."
 msgstr ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
-"alternative available."
+"Η συνάρτηση %1$s είναι <strong>ξεπερασμένη</strong> από το %2$s έκδοσης %3$s "
+"και μετά, χωρίς να υπάρχει διαθέσιμη εναλλακτική συνάρτηση."
 
 #: inc/customizer/colors.php:482
 msgctxt "color scheme name"
@@ -647,12 +648,12 @@ msgstr "Αποτελέσματα αναζήτησης για: %s"
 #: inc/hero-text-widget.php:24
 msgctxt "theme name"
 msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr "A %s theme widget designed for the Hero area on your site's front page."
+msgstr "Μια μικροεφαρμογή για το θέμα %s, σχεδιασμένη για την περιοχή Hero στην αρχική σελίδα του ιστότοπού σας."
 
 #: inc/hero-text-widget.php:29
 msgctxt "the widget title"
 msgid "Hero Text"
-msgstr "Hero Text"
+msgstr "Κείμενο Hero"
 
 #: inc/hooks.php:394
 msgctxt "page number"
@@ -662,17 +663,17 @@ msgstr "Σελίδα %d"
 #: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
 msgctxt "1. current page number, 2. total number of pages"
 msgid "Page %1$d of %2$d"
-msgstr "Page %1$d of %2$d"
+msgstr "Σελίδα %1$d από %2$d"
 
 #: inc/template-tags.php:153
 msgctxt "post type singular label"
 msgid "%1$s navigation"
-msgstr "%1$s navigation"
+msgstr "Πλοήγηση για %1$s"
 
 #: templates/woocommerce/loop/pagination.php:43
 msgctxt "post type singular label"
 msgid "%s navigation"
-msgstr "%s navigation"
+msgstr "Πλοήγηση για %s"
 
 #: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"

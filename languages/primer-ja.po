@@ -418,35 +418,35 @@ msgstr "404 ページが見つかりません"
 
 #: inc/hero-text-widget.php:147
 msgid "The title of widget. Leave empty for no title."
-msgstr "The title of widget. Leave empty for no title."
+msgstr "ウィジェットのタイトル。 無題の場合は空欄にしてください。"
 
 #: inc/hero-text-widget.php:147
 msgid "Title:"
-msgstr "Title:"
+msgstr "タイトル："
 
 #: inc/hero-text-widget.php:152
 msgid "Text:"
-msgstr "Text:"
+msgstr "テキスト ："
 
 #: inc/hero-text-widget.php:157
 msgid "Button Text:"
-msgstr "Button Text:"
+msgstr "ボタンテキスト："
 
 #: inc/hero-text-widget.php:162
 msgid "Button Link URL:"
-msgstr "Button Link URL:"
+msgstr "ボタンリンクURL："
 
 #: inc/hero-text-widget.php:163
 msgid "Paste URL or type to search"
-msgstr "Paste URL or type to search"
+msgstr "URLを貼り付ける、または入力して検索"
 
 #: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
 msgid "&larr; Previous"
-msgstr "&larr; Previous"
+msgstr "&larr; 前へ"
 
 #: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
 msgid "Next &rarr;"
-msgstr "Next &rarr;"
+msgstr "次へ &rarr;"
 
 #: inc/template-tags.php:266
 msgid "Blog"
@@ -541,17 +541,14 @@ msgctxt ""
 msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
 "instead."
-msgstr ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead."
+msgstr "%1$sは、バージョン%2$sの%3$sから<strong>非推奨</strong>となりました。代わりに%4$sを使用してください。"
 
 #: inc/compat/deprecated.php:118
 msgctxt "1. PHP function name, 2. theme name, 3. version number"
 msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
 "alternative available."
-msgstr ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
-"alternative available."
+msgstr "%1$sは、バージョン%2$sの%3$sから<strong>非推奨</strong>となりました。代わりに推奨される機能はありません。"
 
 #: inc/customizer/colors.php:482
 msgctxt "color scheme name"
@@ -636,12 +633,12 @@ msgstr "次の検索結果： %s"
 #: inc/hero-text-widget.php:24
 msgctxt "theme name"
 msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr "A %s theme widget designed for the Hero area on your site's front page."
+msgstr "サイトトップページのHeroエリア用にデザインされた%sテーマウィジェット。"
 
 #: inc/hero-text-widget.php:29
 msgctxt "the widget title"
 msgid "Hero Text"
-msgstr "Hero Text"
+msgstr "Heroテキスト"
 
 #: inc/hooks.php:394
 msgctxt "page number"
@@ -651,17 +648,17 @@ msgstr "%d ページ目"
 #: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
 msgctxt "1. current page number, 2. total number of pages"
 msgid "Page %1$d of %2$d"
-msgstr "Page %1$d of %2$d"
+msgstr "ページ%1$d／ %2$d"
 
 #: inc/template-tags.php:153
 msgctxt "post type singular label"
 msgid "%1$s navigation"
-msgstr "%1$s navigation"
+msgstr "%1$sナビゲーション"
 
 #: templates/woocommerce/loop/pagination.php:43
 msgctxt "post type singular label"
 msgid "%s navigation"
-msgstr "%s navigation"
+msgstr "%sナビゲーション"
 
 #: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"

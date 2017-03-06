@@ -424,35 +424,35 @@ msgstr "404 Không tìm thấy trang"
 
 #: inc/hero-text-widget.php:147
 msgid "The title of widget. Leave empty for no title."
-msgstr "The title of widget. Leave empty for no title."
+msgstr "Tiêu đề widget. Để trống nếu không có tiêu đề."
 
 #: inc/hero-text-widget.php:147
 msgid "Title:"
-msgstr "Title:"
+msgstr "Tiêu đề:"
 
 #: inc/hero-text-widget.php:152
 msgid "Text:"
-msgstr "Text:"
+msgstr "Văn bản:"
 
 #: inc/hero-text-widget.php:157
 msgid "Button Text:"
-msgstr "Button Text:"
+msgstr "Chữ trên nút:"
 
 #: inc/hero-text-widget.php:162
 msgid "Button Link URL:"
-msgstr "Button Link URL:"
+msgstr "URL của Chữ trên nút:"
 
 #: inc/hero-text-widget.php:163
 msgid "Paste URL or type to search"
-msgstr "Paste URL or type to search"
+msgstr "Dán URL hoặc gõ để tìm kiếm"
 
 #: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
 msgid "&larr; Previous"
-msgstr "&larr; Previous"
+msgstr "&larr; Trước"
 
 #: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
 msgid "Next &rarr;"
-msgstr "Next &rarr;"
+msgstr "Tiếp theo &rarr;"
 
 #: inc/template-tags.php:266
 msgid "Blog"
@@ -550,7 +550,8 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
 "instead."
 msgstr ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead."
+"%1$s bị <strong>mất giá trị</strong> kể từ%2$s phiên bản%3$s! Sử dụng %4$s "
+"thay vào đó."
 
 #: inc/compat/deprecated.php:118
 msgctxt "1. PHP function name, 2. theme name, 3. version number"
@@ -558,8 +559,8 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
 "alternative available."
 msgstr ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
-"alternative available."
+"%1$s bị<strong>mất giá trị</strong> kể từ%2$s phiên bản%3$s và không có phiên "
+"bản thay thế nào khả dụng."
 
 #: inc/customizer/colors.php:482
 msgctxt "color scheme name"
@@ -644,12 +645,12 @@ msgstr "Kết quả tìm kiếm của: %s"
 #: inc/hero-text-widget.php:24
 msgctxt "theme name"
 msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr "A %s theme widget designed for the Hero area on your site's front page."
+msgstr "Một %s widget giao diện được thiết kế cho vùng Hero trên trang trước của trang."
 
 #: inc/hero-text-widget.php:29
 msgctxt "the widget title"
 msgid "Hero Text"
-msgstr "Hero Text"
+msgstr "Nội dung Hero"
 
 #: inc/hooks.php:394
 msgctxt "page number"
@@ -659,17 +660,17 @@ msgstr "Trang %d"
 #: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
 msgctxt "1. current page number, 2. total number of pages"
 msgid "Page %1$d of %2$d"
-msgstr "Page %1$d of %2$d"
+msgstr "Trang %1$d trên %2$d"
 
 #: inc/template-tags.php:153
 msgctxt "post type singular label"
 msgid "%1$s navigation"
-msgstr "%1$s navigation"
+msgstr "điều hướng %1$s"
 
 #: templates/woocommerce/loop/pagination.php:43
 msgctxt "post type singular label"
 msgid "%s navigation"
-msgstr "%s navigation"
+msgstr "điều hướng %s"
 
 #: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"
