@@ -183,6 +183,14 @@ function primer_wc_shop_title( $title ) {
 
 	}
 
+	if ( is_product() ) {
+
+		$object = get_post_type_object( 'product' );
+
+		$title = $object->labels->singular_name;
+
+	}
+
 	return $title;
 
 }
