@@ -32,6 +32,25 @@ function primer_elements() {
 add_action( 'template_redirect', 'primer_elements' );
 
 /**
+ * Display video header
+ *
+ * @action primer_before_header_wrapper
+ * @since  NEXT
+ */
+function primer_video_header() {
+
+	if ( ! has_header_video() ) {
+
+		return;
+
+	}
+
+	the_custom_header_markup();
+
+}
+add_action( 'primer_before_header_wrapper', 'primer_video_header', 5 );
+
+/**
  * Display site title in the header.
  *
  * @action primer_header

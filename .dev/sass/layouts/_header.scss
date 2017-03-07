@@ -4,10 +4,23 @@
 	background-size: cover;
 	background-position: bottom center;
 	background-repeat: no-repeat;
+	overflow: hidden;
 }
+
+#wp-custom-header {
+	position: absolute;
+	height: 100%;
+	overflow: hidden;
+	z-index: 0;
+}
+
+	iframe#wp-custom-header-video {
+		height: 100%;
+	}
 
 .site-header-wrapper {
 	@include container($container-size);
+	position: relative;
 }
 
 body.no-max-width .site-header-wrapper {
