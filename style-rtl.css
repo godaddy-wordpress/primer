@@ -1618,9 +1618,15 @@ body.no-max-width .site-content {
 
 #wp-custom-header {
   position: absolute;
-  height: 100%;
+  height: 200%;
+  margin-top: -webkit-calc( -10% - 20px);
+  margin-top: calc( -10% - 20px);
   overflow: hidden;
   z-index: 0; }
+  @media only screen and (max-width: 61.063em) {
+    #wp-custom-header {
+      height: 100%;
+      margin-top: 0; } }
 
 iframe#wp-custom-header-video {
   height: 100%; }
