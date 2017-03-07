@@ -1,5 +1,3 @@
-@import "../compat/ninja_forms";
-
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -70,5 +68,10 @@ legend {
 }
 
 form label {
+	font-weight: bold;
+}
+
+.nf-response-msg {
+	font-style: italic;
 	font-weight: bold;
 }
