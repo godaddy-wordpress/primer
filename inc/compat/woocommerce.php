@@ -29,7 +29,7 @@ add_action( 'after_setup_theme', 'primer_wc_setup' );
  * Add body class to indicate when WooCommerce is localized.
  *
  * @filter body_class
- * @since  NEXT
+ * @since  1.6.0
  *
  * @param  array $classes Array of body classes.
  *
@@ -385,7 +385,7 @@ add_filter( 'primer_font_types', 'primer_wc_font_types' );
  * Change the theme overrides path for WooCommerce templates.
  *
  * @filter woocommerce_template_path
- * @since  NEXT
+ * @since  1.6.0
  *
  * @return string
  */

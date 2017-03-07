@@ -5,7 +5,7 @@
  * @link https://docs.woocommerce.com/document/template-structure/
  *
  * @package Primer
- * @since   NEXT
+ * @since   1.6.0
  */
 
 global $wp_query;
@@ -19,7 +19,7 @@ if ( empty( $wp_query->max_num_pages ) || (int) $wp_query->max_num_pages < 2 ) {
 /**
  * Filter the WooCommerce product pagination args.
  *
- * @since NEXT
+ * @since 1.6.0
  *
  * @var array
  */
