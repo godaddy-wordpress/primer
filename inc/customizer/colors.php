@@ -1161,6 +1161,7 @@ class Primer_Customizer_Colors {
 				'height'             => 1300,
 				'flex-height'        => true,
 				'wp-head-callback'   => array( $this, 'header_css' ),
+				'video'              => true,
 			)
 		);
 
