@@ -389,6 +389,10 @@ table {
 .widget table td {
   text-align: center; }
 
+.nf-response-msg {
+  font-style: italic;
+  font-weight: bold; }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],

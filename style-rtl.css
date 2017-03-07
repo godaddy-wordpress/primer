@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Theme Name: Primer
  * Theme URI: https://github.com/godaddy/wp-primer-theme
@@ -447,6 +448,10 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+.nf-response-msg {
+  font-style: italic;
+  font-weight: bold; }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
