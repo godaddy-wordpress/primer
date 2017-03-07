@@ -202,10 +202,14 @@
 									</li>
 							<li><a href="package-Classes.Navigation.html">Navigation</a>
 									</li>
+							<li><a href="package-Classes.Widgets.html">Widgets</a>
+									</li>
 										</ul></li>
 							<li><a href="package-Compatibility.html">Compatibility<span></span></a>
 									<ul>
 							<li><a href="package-Compatibility.BeaverBuilder.html">BeaverBuilder</a>
+									</li>
+							<li><a href="package-Compatibility.ChildThemes.html">ChildThemes</a>
 									</li>
 							<li><a href="package-Compatibility.Jetpack.html">Jetpack</a>
 									</li>
@@ -214,6 +218,8 @@
 							<li><a href="package-Compatibility.WordPress.html">WordPress</a>
 									</li>
 										</ul></li>
+							<li><a href="package-Deprecated.html">Deprecated</a>
+									</li>
 							<li><a href="package-Functions.html">Functions</a>
 									</li>
 							<li><a href="package-Hooks.html">Hooks</a>
@@ -272,7 +278,7 @@
 				1.0.0<br>
 				<b>Class:</b>
 				Primer_Customizer<br>
-		<b>Location:</b> <a href="source-class-Primer_Customizer.html#2-254" title="Go to source code">inc/customizer.php</a><br>
+		<b>Location:</b> <a href="source-class-Primer_Customizer.html#2-268" title="Go to source code">inc/customizer.php</a><br>
 	</div>
 
 
@@ -381,7 +387,7 @@
 		<span class="label">static</span>
 			</h3>
 			<div class="description detailed">
-				Return an array of CSS rules as plain CSS.
+				Return an array of CSS rules as compacted CSS.
 			</div>
 		</li>
 		<li class="clearfix">
@@ -580,7 +586,7 @@ logo( )
 				<a id="_parse_css_rules"></a>
 		<a id="method-Primer_Customizerparse_css_rules"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer.html#220-252" title="Go to source code">parse_css_rules()</a>
+<a href="source-class-Primer_Customizer.html#220-266" title="Go to source code">parse_css_rules()</a>
 
 		<span class="label">public</span>
 
@@ -592,7 +598,10 @@ parse_css_rules( array <var>$rules</var> )
 		</p>
 
 		<div class="description detailed">
-			<p>Return an array of CSS rules as plain CSS.</p>
+			<p>Return an array of CSS rules as compacted CSS.</p>
+
+<p>Note: When <code>SCRIPT_DEBUG</code> is enabled, the returned CSS
+will be expanded instead of compacted.</p>
 
 
 				<h6>Parameters</h6>
@@ -609,7 +618,7 @@ parse_css_rules( array <var>$rules</var> )
 
 				<h6>Returns</h6>
 				<div class="list">
-					string<br>Return Parsed CSS rules ready for use.<br>
+					string<br>Returns parsed rules ready to be printed as inline CSS.<br>
 				</div>
 
 
