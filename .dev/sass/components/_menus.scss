@@ -315,7 +315,6 @@ body.no-max-width .main-navigation {
 			display: inline-block;
 			border: none;
 			border-radius: 3px;
-			background-color: $color__content-bg;
 			line-height: 1;
 			margin: 0 0.25em;
 			padding: 0.5em 0.75em;
@@ -326,7 +325,7 @@ body.no-max-width .main-navigation {
 			}
 
 			&.current {
-				color: $color__content-bg;
+				color: $color__bg;
 				background-color: $color__link;
 			}
 		}

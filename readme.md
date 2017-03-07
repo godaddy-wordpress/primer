@@ -9,7 +9,7 @@
 
 Primer is a powerful theme that brings clarity to your content in a fresh design. This is the parent for all themes in the GoDaddy Primer theme family.
 
-[![Build Status](https://travis-ci.org/godaddy/wp-primer-theme.svg?branch=master)](https://travis-ci.org/godaddy/wp-primer-theme) [![StyleCI Status](https://styleci.io/repos/61159576/shield?branch=master&style=flat)](https://styleci.io/repos/61159576) [![devDependencies Status](https://david-dm.org/godaddy/wp-primer-theme/master/dev-status.svg)](https://david-dm.org/godaddy/wp-primer-theme/master?type=dev) [![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/godaddy/wp-primer-theme/blob/master/license.txt) [![PHP >= 5.2](https://img.shields.io/badge/php->= 5.2-8892bf.svg)](https://secure.php.net/supported-versions.php) [![WordPress >= 4.4](https://img.shields.io/badge/wordpress->= 4.4-blue.svg)](https://wordpress.org/download/release-archive/)  
+[![Build Status](https://travis-ci.org/godaddy/wp-primer-theme.svg?branch=master)](https://travis-ci.org/godaddy/wp-primer-theme) [![devDependencies Status](https://david-dm.org/godaddy/wp-primer-theme/master/dev-status.svg)](https://david-dm.org/godaddy/wp-primer-theme/master?type=dev) [![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/godaddy/wp-primer-theme/blob/master/license.txt) [![PHP >= 5.2](https://img.shields.io/badge/php->= 5.2-8892bf.svg)](https://secure.php.net/supported-versions.php) [![WordPress >= 4.4](https://img.shields.io/badge/wordpress->= 4.4-blue.svg)](https://wordpress.org/download/release-archive/)  
 
 ## Description ##
 
@@ -66,6 +66,14 @@ Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 ## Changelog ##
 
+### 1.6.0 ###
+* New: Hero Text widget designed for your site's front page @props [jonathanbardo](https://github.com/jonathanbardo), [fjarrett](https://github.com/fjarrett)
+* Tweak: Improved posts pagination design based on core pagination @props [fjarrett](https://github.com/fjarrett), [evanherman](https://github.com/EvanHerman)
+* Tweak: The `primer_paging_nav()` function has been deprecated in favor of `primer_pagination()` @props [fjarrett](https://github.com/fjarrett), [evanherman](https://github.com/EvanHerman)
+* Tweak: The WooCommerce template overrides directory has been moved to `templates/woocommerce/` @props [fjarrett](https://github.com/fjarrett)
+* Fix: Text overlap on WooCommerce Add to Cart buttons in certain languages @props [fjarrett](https://github.com/fjarrett), [evanherman](https://github.com/EvanHerman)
+* Fix: WooCommerce menu item appearing on older child themes without styles to support it @props [fjarrett](https://github.com/fjarrett)
+
 ### 1.5.1 ###
 * Fix: Category and tag list display on posts @props [fjarrett](https://github.com/fjarrett)
 
@@ -76,7 +84,7 @@ Source: https://unsplash.com/photos/v4ZUGlrdVAA
 * New: Added Author Credit toggle to the Site Identity section of the Customizer @props [evanherman](https://github.com/EvanHerman)
 * New: [Developer documentation!](https://godaddy.github.io/wp-primer-theme/) @props [evanherman](https://github.com/EvanHerman)
 * Tweak: Added `nofollow` attribute to theme author link in the footer @props [evanherman](https://github.com/EvanHerman)
-* Tweak: Use core post navigation functions @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Use core post navigation function @props [evanherman](https://github.com/EvanHerman)
 * Fix: Display glitch when last main menu item is a submenu @props [evanherman](https://github.com/EvanHerman)
 
 ### 1.4.2 ###

@@ -28,7 +28,7 @@
  * @param string $alt_name (optional) The function that should be called instead. Default is `null`.
  * @param string $theme    (optional) The theme that deprecated the function. Default is `null` which defaults to 'Primer'.
  */
-function _primer_deprecated_function( $name, $version, $alt_name = null, $theme = null ) {
+function primer_deprecated_function( $name, $version, $alt_name = null, $theme = null ) {
 
 	/**
 	 * Filters whether to trigger an error for deprecated functions.
@@ -40,7 +40,7 @@ function _primer_deprecated_function( $name, $version, $alt_name = null, $theme 
 	 */
 	if ( (bool) apply_filters( 'deprecated_function_trigger_error', true ) ) {
 
-		_primer_deprecated( $name, $version, $alt_name, $theme );
+		primer_deprecated( $name, $version, $alt_name, $theme );
 
 	}
 
@@ -67,7 +67,7 @@ function _primer_deprecated_function( $name, $version, $alt_name = null, $theme 
  * @param string $theme    (optional) The theme that deprecated the hook. Default is `null` which defaults to 'Primer'.
  * @param string $message  (optional) A message regarding the change. Default is `null`.
  */
-function _primer_deprecated_hook( $name, $version, $alt_name = null, $theme = null, $message = null ) {
+function primer_deprecated_hook( $name, $version, $alt_name = null, $theme = null, $message = null ) {
 
 	/**
 	 * Filters whether to trigger an error for deprecated hooks.
@@ -79,7 +79,7 @@ function _primer_deprecated_hook( $name, $version, $alt_name = null, $theme = nu
 	 */
 	if ( (bool) apply_filters( 'deprecated_hook_trigger_error', true ) ) {
 
-		_primer_deprecated( $name, $version, $alt_name, $theme, $message );
+		primer_deprecated( $name, $version, $alt_name, $theme, $message );
 
 	}
 
@@ -105,7 +105,7 @@ function _primer_deprecated_hook( $name, $version, $alt_name = null, $theme = nu
  * @param string $theme    (optional) The theme that deprecated the item. Default is `null` which defaults to 'Primer'.
  * @param string $message  (optional) A message regarding the change. Default is `null`.
  */
-function _primer_deprecated( $name, $version, $alt_name = null, $theme = null, $message = null ) {
+function primer_deprecated( $name, $version, $alt_name = null, $theme = null, $message = null ) {
 
 	if ( ! WP_DEBUG ) {
 
@@ -113,15 +113,9 @@ function _primer_deprecated( $name, $version, $alt_name = null, $theme = null, $
 
 	}
 
-	// @codingStandardsIgnoreStart
-	$with_alt = '%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead.';
-	$with_alt = function_exists( '_x' ) ? _x( $with_alt, '1. PHP function name, 2. theme name, 3. version number, 4. alternative function name', 'primer' ) : $with_alt;
-	// @codingStandardsIgnoreEnd
-
-	// @codingStandardsIgnoreStart
-	$without_alt = '%1$s is <strong>deprecated</strong> since %2$s version %3$s with no alternative available.';
-	$without_alt = function_exists( '_x' ) ? _x( $without_alt, '1. PHP function name, 2. theme name, 3. version number', 'primer' ) : $without_alt;
-	// @codingStandardsIgnoreEnd
+	// Note: Translation text must be a string or the themecheck will flag it.
+	$with_alt    = function_exists( '_x' ) ? _x( '%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead.', '1. PHP function name, 2. theme name, 3. version number, 4. alternative function name', 'primer' ) : '%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead.';
+	$without_alt = function_exists( '_x' ) ? _x( '%1$s is <strong>deprecated</strong> since %2$s version %3$s with no alternative available.', '1. PHP function name, 2. theme name, 3. version number', 'primer' ) : '%1$s is <strong>deprecated</strong> since %2$s version %3$s with no alternative available.';
 
 	$string  = ( $alt_name ) ? $with_alt : $without_alt;
 	$theme   = ! empty( $theme ) ? $theme : esc_html__( 'Primer', 'primer' );
@@ -142,7 +136,7 @@ function _primer_deprecated( $name, $version, $alt_name = null, $theme = null, $
  */
 function primer_paging_nav() {
 
-	_primer_deprecated_function( __FUNCTION__ . '()', '@NEXT', 'primer_pagination()' );
+	primer_deprecated_function( __FUNCTION__ . '()', '@NEXT', 'primer_pagination()' );
 
 	global $wp_query;
 

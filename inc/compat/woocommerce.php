@@ -354,7 +354,7 @@ add_filter( 'primer_colors', 'primer_wc_colors' );
  * Add font type targets for WooCommerce elements.
  *
  * @filter primer_font_types
- * @uses   primer_array_replace_recursive To replace items in the colors array with new values.
+ * @uses   primer_array_replace_recursive To replace items in the font types array with new values.
  *
  * @since  1.0.0
  *
@@ -425,6 +425,12 @@ add_filter( 'template_include', 'primer_wc_404_template' );
  * @return array
  */
 function primer_wc_generate_cart_menu_item( $items, $menu ) {
+
+	if ( ! primer_child_compat( 'wc__cart_menu_item', true ) ) {
+
+		return $items;
+
+	}
 
 	$theme_locations = get_nav_menu_locations();
 

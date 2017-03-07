@@ -347,6 +347,9 @@ class Primer_Customizer_Colors {
 						'body' => array(
 							'background-color' => '%1$s',
 						),
+						'.navigation.pagination .nav-links .page-numbers.current' => array(
+							'color' => '%1$s',
+						),
 					),
 				),
 				'content_background_color' => array(
@@ -354,11 +357,8 @@ class Primer_Customizer_Colors {
 					'default' => '#ffffff',
 					'section' => 'colors-content',
 					'css'     => array(
-						'.hentry, .comments-area, .widget, #page > .page-title-container, .navigation.pagination .nav-links .page-numbers' => array(
+						'.hentry, .comments-area, .widget, #page > .page-title-container' => array(
 							'background-color' => '%1$s',
-						),
-						'.navigation.pagination .nav-links .page-numbers.current' => array(
-							'color' => '%1$s',
 						),
 					),
 				),
@@ -1003,7 +1003,7 @@ class Primer_Customizer_Colors {
 	}
 
 	/**
-	 * Inline style for color scheme
+	 * Inline style for color scheme.
 	 *
 	 * @action customize_controls_print_footer_scripts
 	 * @since  1.0.0
