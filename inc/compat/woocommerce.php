@@ -185,9 +185,9 @@ function primer_wc_shop_title( $title ) {
 
 	if ( is_product() ) {
 
-		$object = get_post_type_object( 'product' );
+		$labels = get_post_type_labels( get_post_type_object( 'product' ) );
 
-		$title = $object->labels->singular_name;
+		$title  = ! empty( $labels->singular_name ) ? $labels->singular_name : $title;
 
 	}
 
