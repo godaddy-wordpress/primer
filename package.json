@@ -2,7 +2,7 @@
   "name": "primer",
   "title": "Primer",
   "description": "Primer is a powerful theme that brings clarity to your content in a fresh design. This is the parent for all themes in the GoDaddy Primer theme family.",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "author": "GoDaddy",
   "license": "GPL-2.0",
   "repository": "godaddy/wp-primer-theme",
@@ -11,7 +11,7 @@
     "url": "https://github.com/godaddy/wp-primer-theme/issues"
   },
   "engines": {
-    "node" : ">= 7.5.0",
+    "node": ">= 7.5.0",
     "php": ">= 5.2",
     "wordpress": ">= 4.4"
   },

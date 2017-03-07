@@ -7,7 +7,7 @@
  * @subpackage Widgets
  * @category   Class
  * @author     GoDaddy
- * @since      NEXT
+ * @since      1.6.0
  * @extends    WP_Widget
  */
 class Primer_Hero_Text_Widget extends WP_Widget {
@@ -35,7 +35,7 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 	/**
 	 * Display the widget on the front-end.
 	 *
-	 * @since NEXT
+	 * @since 1.6.0
 	 *
 	 * @param array $args     Display arguments including `before_title`, `after_title`, `before_widget`, and `after_widget`.
 	 * @param array $instance The settings for the particular instance of the widget.
@@ -46,7 +46,7 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 		 * Filter the widget title.
 		 *
 		 * @link  https://developer.wordpress.org/reference/hooks/widget_title/
-		 * @since NEXT
+		 * @since 1.6.0
 		 *
 		 * @param array  $instance An array of the widget's settings.
 		 * @param string $id_base  The widget ID.
@@ -59,7 +59,7 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 		 * Filter the widget text.
 		 *
 		 * @link  https://developer.wordpress.org/reference/hooks/widget_text/
-		 * @since NEXT
+		 * @since 1.6.0
 		 *
 		 * @param array                   $instance    Array of settings for the current widget.
 		 * @param Primer_Hero_Text_Widget $this        Current Hero Text widget instance.
@@ -111,7 +111,7 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 	/**
 	 * Display the widget form fields.
 	 *
-	 * @since NEXT
+	 * @since 1.6.0
 	 *
 	 * @param array $instance The widget instance values.
 	 */
@@ -171,7 +171,7 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 	/**
 	 * Update a widget instance.
 	 *
-	 * @since NEXT
+	 * @since 1.6.0
 	 *
 	 * @param  array $new_instance New settings for this instance as input by the user via `WP_Widget::form()`.
 	 * @param  array $old_instance Old settings for this instance.
@@ -198,7 +198,7 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 	 * Register widget admin scripts.
 	 *
 	 * @action admin_init
-	 * @since  NEXT
+	 * @since  1.6.0
 	 */
 	public function register_scripts() {
 
@@ -228,7 +228,7 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 	 *
 	 * @action admin_print_footer_scripts
 	 * @action customize_controls_print_footer_scripts
-	 * @since  NEXT
+	 * @since  1.6.0
 	 */
 	public function print_scripts() {
 
@@ -242,7 +242,7 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 	 * Looks for the `current_theme` option first, and if not
 	 * present will fetch it using `wp_get_theme()`.
 	 *
-	 * @since NEXT
+	 * @since 1.6.0
 	 *
 	 * @return string
 	 */
