@@ -634,3 +634,44 @@ function primer_get_the_widget( $widget, $instance = array(), $args = array() ) 
 	return ob_get_clean();
 
 }
+
+/**
+ * Check if the current theme is Primer or a direct primer child
+ *
+ * @since NEXT
+ * @uses  [wp_get_theme](https://developer.wordpress.org/reference/functions/wp_get_theme/) To retreive the current theme data.
+ *
+ * @return boolean True if not a child theme, or current theme is not in $excluded_themes
+ */
+function primer_theme_overrides() {
+
+	if ( ! is_child_theme() ) {
+
+		return true;
+
+	}
+
+	$theme = wp_get_theme();
+
+	/**
+	 * Filter the list of excluded themes
+	 *
+	 * @since NEXT
+	 *
+	 * @var array
+	 */
+	$excluded_themes = (array) apply_filters( 'primer_override_excluded_themes', [
+		'Activation',
+		'Ascension',
+		'Escapade',
+		'Mins',
+		'Scribbles',
+		'Stout',
+		'Lyrical',
+		'Uptown Style',
+		'Velux',
+	] );
+
+	return ! in_array( $theme->get( 'Name' ), $excluded_themes, true );
+
+}

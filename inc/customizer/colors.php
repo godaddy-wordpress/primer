@@ -533,7 +533,7 @@ class Primer_Customizer_Colors {
 
 		}
 
-		if ( ! is_child_theme() ) {
+		if ( primer_theme_overrides() ) {
 
 			$overrides = array(
 				'blush' => array(
