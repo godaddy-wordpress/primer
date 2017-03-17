@@ -660,7 +660,7 @@ function primer_theme_overrides() {
 	 *
 	 * @var array
 	 */
-	$excluded_themes = (array) apply_filters( 'primer_override_excluded_themes', [
+	$excluded_themes = (array) apply_filters( 'primer_override_excluded_themes', array(
 		'Activation',
 		'Ascension',
 		'Escapade',
@@ -670,7 +670,7 @@ function primer_theme_overrides() {
 		'Lyrical',
 		'Uptown Style',
 		'Velux',
-	] );
+	) );
 
 	return ! in_array( $theme->get( 'Name' ), $excluded_themes, true );
 
