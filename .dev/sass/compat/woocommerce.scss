@@ -53,6 +53,20 @@
 
 	}
 
+	table.cart {
+
+		img {
+			width: 100%;
+			max-width: 75px;
+			margin-bottom: 0;
+		}
+
+		td.actions .input-text {
+			padding: 7px !important;
+		}
+
+	}
+
 }
 
 body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
