@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Theme Name: Primer
  * Theme URI: https://github.com/godaddy/wp-primer-theme
@@ -2366,6 +2367,12 @@ ul.cart_list li.mini_cart_item a:nth-child(2) {
 
 li.primer-wc-cart-menu .primer-wc-cart-sub-menu {
   background-color: #ffffff; }
+
+body.woocommerce-page div.product .woocommerce-product-gallery figure.woocommerce-product-gallery__wrapper {
+  margin: 0; }
+
+body.woocommerce-page div.product div.summary {
+  margin-top: 0; }
 
 @media only screen and (min-width: 61.063em) {
   li.primer-wc-cart-menu .primer-wc-cart-sub-menu {

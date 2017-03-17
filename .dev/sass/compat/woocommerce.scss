@@ -190,6 +190,26 @@ li.primer-wc-cart-menu .primer-wc-cart-sub-menu {
 	background-color: $color__content-bg;
 }
 
+body.woocommerce-page {
+
+	div.product {
+
+		.woocommerce-product-gallery {
+
+			figure.woocommerce-product-gallery__wrapper {
+				margin: 0;
+			}
+
+		}
+
+		div.summary {
+			margin-top: 0;
+		}
+
+	}
+
+}
+
 @media #{$large-up} {
 
 	li.primer-wc-cart-menu .primer-wc-cart-sub-menu {
