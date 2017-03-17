@@ -44,6 +44,15 @@
 
 	}
 
+	form.woocommerce-cart-form {
+
+		table.cart td.actions #coupon_code {
+			width: 55%;
+			margin-right: 0;
+		}
+
+	}
+
 }
 
 body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,

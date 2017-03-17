@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Theme Name: Primer
  * Theme URI: https://github.com/godaddy/wp-primer-theme
@@ -2248,6 +2249,10 @@ body.no-max-width .site-info-wrapper .site-info {
 
 .woocommerce-page #reviews #comments ol.commentlist li .comment-text {
   margin: 0 0 0 80px; }
+
+.woocommerce-page form.woocommerce-cart-form table.cart td.actions #coupon_code {
+  width: 55%;
+  margin-right: 0; }
 
 body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
 .woocommerce a.added_to_cart {
