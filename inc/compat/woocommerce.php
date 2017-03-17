@@ -16,6 +16,7 @@
  * @uses   [add_theme_support](https://developer.wordpress.org/reference/functions/add_theme_support/) To enable WooCommerce support.
  *
  * @link   https://docs.woothemes.com/document/third-party-custom-theme-compatibility/
+ *
  * @since  1.0.0
  */
 function primer_wc_setup() {
@@ -29,6 +30,7 @@ add_action( 'after_setup_theme', 'primer_wc_setup' );
  * Add body class to indicate when WooCommerce is localized.
  *
  * @filter body_class
+ *
  * @since  1.6.0
  *
  * @param  array $classes Array of body classes.
@@ -62,6 +64,7 @@ remove_action( 'woocommerce_after_main_content',  'woocommerce_output_content_wr
  * Markup for page wrapper start.
  *
  * @action woocommerce_before_main_content
+ *
  * @since  1.0.0
  *
  * @return mixed Returns the opening WooCommerce content wrappers.
@@ -83,6 +86,7 @@ add_action( 'woocommerce_before_main_content', 'primer_wc_wrapper_start' );
  * Markup for page wrapper end.
  *
  * @action woocommerce_after_main_content
+ *
  * @since  1.0.0
  *
  * @return mixed Returns the closing WooCommerce content wrappers.
@@ -194,11 +198,12 @@ add_filter( 'primer_the_page_title', 'primer_wc_shop_title' );
  * @filter loop_shop_columns
  * @filter woocommerce_related_products_columns
  * @filter woocommerce_upsells_products_columns
+ *
  * @global WP_Post $post
+ *
  * @uses   [is_shop](https://docs.woocommerce.com/wc-apidocs/function-is_shop.html) To check the if on the WooCommerce shop page.
  * @uses   [wc_get_page_id](https://docs.woocommerce.com/wc-apidocs/function-wc_get_page_id.html) To retreive the WooCommerce page id.
  * @uses   primer_get_layout To check if the current page is three columns.
- * @since  1.0.0
  *
  * @since  1.0.0
  *
@@ -231,8 +236,10 @@ add_filter( 'woocommerce_upsells_products_columns', 'primer_wc_shop_columns' );
  * Add post class to support 2-column product layouts in Primer.
  *
  * @filter post_class
+ *
  * @global WP_Post $post
  * @global array   $woocommerce_loop
+ *
  * @since  1.0.0
  *
  * @param  array $classes Array of body classes.
@@ -392,6 +399,7 @@ add_filter( 'primer_font_types', 'primer_wc_font_types' );
  * Change the theme overrides path for WooCommerce templates.
  *
  * @filter woocommerce_template_path
+ *
  * @since  1.6.0
  *
  * @return string
@@ -407,6 +415,7 @@ add_filter( 'woocommerce_template_path', 'primer_wc_template_path' );
  * Load a custom template for WooCommerce 404 pages.
  *
  * @filter template_include
+ *
  * @since  1.5.0
  *
  * @param  string $template The path of the template to include.
@@ -424,6 +433,7 @@ add_filter( 'template_include', 'primer_wc_404_template' );
  * Add a custom "Cart" menu item when WooCommerce is active.
  *
  * @filter wp_get_nav_menu_items
+ *
  * @since  1.5.0
  *
  * @param  array  $items An array of menu item post objects.
@@ -466,7 +476,9 @@ add_filter( 'wp_get_nav_menu_items', 'primer_wc_generate_cart_menu_item', 20, 2 
  * Append a WooCommerce cart item to a navigation menu.
  *
  * @filter wp_nav_menu_{$menu}_items
+ *
  * @global WooCommerce $woocommerce
+ *
  * @since  1.5.0
  *
  * @param  string   $items The HTML list content for the menu items.
@@ -543,8 +555,9 @@ function primer_wc_cart_menu( $items, $args ) {
  * Empty the cart total during Customize preview.
  *
  * @filter woocommerce_cart_contents_total
- * @since  1.5.0
  * @uses   [wc_price](https://docs.woocommerce.com/wc-apidocs/function-wc_price.html) To format the price with a currency symbol.
+ *
+ * @since  1.5.0
  *
  * @return string
  */
@@ -564,6 +577,7 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 	 * added products.
 	 *
 	 * @since 1.5.0
+	 *
 	 * @uses  [wc_get_featured_product_ids](https://docs.woocommerce.com/wc-apidocs/function-wc_get_featured_product_ids.html) To retreive the products that are featured.
 	 * @uses  [wc_get_product_ids_on_sale](https://docs.woocommerce.com/wc-apidocs/function-wc_get_product_ids_on_sale.html) To retreive the products that are on sale.
 	 *
