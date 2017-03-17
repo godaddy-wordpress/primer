@@ -301,6 +301,13 @@ function primer_wc_colors( $colors ) {
 				),
 			),
 		),
+		'link_color' => array(
+			'css' => array(
+				'.woocommerce .star-rating' => array(
+					'color' => '%1$s',
+				),
+			),
+		),
 		'button_color' => array(
 			'css' => array(
 				'.woocommerce button.button.alt,
