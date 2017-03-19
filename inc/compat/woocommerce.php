@@ -314,6 +314,8 @@ function primer_wc_colors( $colors ) {
 				.woocommerce input.button.alt,
 				.woocommerce a.button,
 				.woocommerce a.button.alt,
+				.woocommerce button.button.alt.disabled,
+				.woocommerce button.button.alt.disabled:hover,
 				.woocommerce #respond input#submit,
 				.woocommerce .product span.onsale,
 				.primer-wc-cart-menu .widget_shopping_cart p.buttons a,
