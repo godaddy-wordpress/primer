@@ -1616,11 +1616,15 @@ body.no-max-width .site-content {
   overflow: hidden; }
   .site-header #wp-custom-header {
     position: absolute;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0; }
+    height: 100%; }
     .site-header #wp-custom-header img {
       display: none; }
+  .site-header #wp-custom-header-video-button {
+    position: absolute;
+    top: 0.5em;
+    right: 1em;
+    opacity: 0.5;
+    z-index: 11; }
   .site-header iframe#wp-custom-header-video {
     height: 100%; }
 
