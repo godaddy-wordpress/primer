@@ -5,24 +5,28 @@
 	background-position: bottom center;
 	background-repeat: no-repeat;
 	overflow: hidden;
-}
 
-#wp-custom-header {
-	position: absolute;
-	height: 200%;
-	margin-top: calc( -10% - 20px );
-	overflow: hidden;
-	z-index: 0;
-
-	@media #{$medium-down} {
+	#wp-custom-header {
+		position: absolute;
 		height: 100%;
-		margin-top: 0;
+		overflow: hidden;
+		z-index: 0;
+
+		img {
+			display: none;
+		}
 	}
-}
 
 	iframe#wp-custom-header-video {
 		height: 100%;
 	}
+}
+
+body.admin-bar {
+	.site-header.video {
+		height: calc( 100vh - 32px );
+	}
+}
 
 .site-header-wrapper {
 	@include container($container-size);
