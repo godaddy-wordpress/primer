@@ -1614,21 +1614,25 @@ body.no-max-width .site-content {
   background-position: bottom center;
   background-repeat: no-repeat;
   overflow: hidden; }
+  .site-header.video-header {
+    height: 100vh; }
+    .site-header.video-header .hero {
+      margin-top: 10vh; }
+    .site-header.video-header #wp-custom-header-video-button {
+      position: absolute;
+      top: 0.5em;
+      right: 1em;
+      opacity: 0.5;
+      z-index: 11; }
+    .site-header.video-header iframe#wp-custom-header-video {
+      height: 100%; }
   .site-header #wp-custom-header {
     position: absolute;
     height: 100%; }
     .site-header #wp-custom-header img {
       display: none; }
-  .site-header #wp-custom-header-video-button {
-    position: absolute;
-    top: 0.5em;
-    right: 1em;
-    opacity: 0.5;
-    z-index: 11; }
-  .site-header iframe#wp-custom-header-video {
-    height: 100%; }
 
-body.admin-bar .site-header.video {
+body.admin-bar .video-header {
   height: -webkit-calc( 100vh - 32px);
   height: calc( 100vh - 32px); }
 
