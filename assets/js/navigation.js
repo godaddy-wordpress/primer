@@ -87,7 +87,11 @@
 
 		$navMenu.find( '.expand' ).on( 'click', expand );
 
-		$( document ).on( 'wp-custom-header-video-loaded', $( '.site-header' ).addClass( 'video-header' ) );
+		$( document ).on( 'wp-custom-header-video-loaded', function() {
+
+			$( '.site-header' ).addClass( 'video-header' );
+
+		} );
 
 	} );
 

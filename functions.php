@@ -481,7 +481,9 @@ function primer_scripts() {
 
 	wp_style_add_data( $stylesheet, 'rtl', 'replace' );
 
-	wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", array( 'jquery', 'wp-custom-header' ), PRIMER_VERSION, true );
+	$nav_dependencies = ( is_front_page() && has_header_video() ) ? array( 'jquery', 'wp-custom-header' ) : array( 'jquery' );
+
+	wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", $nav_dependencies, PRIMER_VERSION, true );
 	wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), PRIMER_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
