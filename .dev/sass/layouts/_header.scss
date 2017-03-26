@@ -7,18 +7,14 @@
 	overflow: hidden;
 
 	&.video-header {
-		height: 100vh;
-
-		.hero {
-			margin-top: 10vh;
-		}
+		background-color: #000;
+		color: #000;
 
 		#wp-custom-header-video-button {
 			position: absolute;
 			top: 0.5em;
 			right: 1em;
 			opacity: 0.5;
-			z-index: 11;
 		}
 
 		iframe#wp-custom-header-video {
@@ -33,12 +29,6 @@
 		img {
 			display: none;
 		}
-	}
-}
-
-body.admin-bar {
-	.video-header {
-		height: calc( 100vh - 32px );
 	}
 }
 
