@@ -1609,15 +1609,15 @@ body.no-max-width .site-content {
 .site-header.video-header {
   background-color: #000;
   color: #000; }
+  .site-header.video-header #wp-custom-header {
+    position: absolute;
+    height: 100%; }
   .site-header.video-header #wp-custom-header-video-button {
     position: absolute;
     top: 0.5em;
     right: 1em;
     opacity: 0.5; }
   .site-header.video-header iframe#wp-custom-header-video {
-    height: 100%; }
-  .site-header.video-header #wp-custom-header {
-    position: absolute;
     height: 100%; }
 
 .site-header {

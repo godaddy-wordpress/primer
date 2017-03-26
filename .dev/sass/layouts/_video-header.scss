@@ -2,6 +2,11 @@
 	background-color: #000;
 	color: #000;
 
+	#wp-custom-header {
+		position: absolute;
+		height: 100%;
+	}
+
 	#wp-custom-header-video-button {
 		position: absolute;
 		top: 0.5em;
@@ -10,11 +15,6 @@
 	}
 
 	iframe#wp-custom-header-video {
-		height: 100%;
-	}
-
-	#wp-custom-header {
-		position: absolute;
 		height: 100%;
 	}
 }
