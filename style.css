@@ -1607,16 +1607,23 @@ body.no-max-width .site-content {
 # Header
 --------------------------------------------------------------*/
 .site-header.video-header {
+  overflow: hidden;
   background-color: #000;
   color: #000; }
   .site-header.video-header #wp-custom-header {
     position: absolute;
-    height: 100%; }
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
   .site-header.video-header #wp-custom-header-video-button {
     position: absolute;
-    top: 0.5em;
+    top: 20vh;
     right: 1em;
-    opacity: 0.5; }
+    opacity: 0.5;
+    padding: 0.5em .75em; }
   .site-header.video-header iframe#wp-custom-header-video {
     height: 100%; }
 
@@ -1628,6 +1635,8 @@ body.no-max-width .site-content {
   background-position: bottom center;
   background-repeat: no-repeat;
   overflow: hidden; }
+  .site-header #wp-custom-header img {
+    display: none; }
 
 .site-header-wrapper {
   max-width: 1100px;
