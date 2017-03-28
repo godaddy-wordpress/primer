@@ -426,7 +426,7 @@ add_filter( 'wp_title', 'primer_wp_title', 10, 2 );
  * Customize the default pagination links template.
  *
  * @filter navigation_markup_template
- * @since  NEXT
+ * @since  1.6.0
  *
  * @param  string $template The navigation template.
  * @param  string $class    The class passed by the calling function.

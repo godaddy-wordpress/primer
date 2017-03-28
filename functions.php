@@ -23,7 +23,7 @@
  *
  * @var string
  */
-define( 'PRIMER_VERSION', '1.5.1' );
+define( 'PRIMER_VERSION', '1.6.0' );
 
 /**
  * Minimum WordPress version required for Primer.
@@ -77,14 +77,14 @@ if ( version_compare( get_bloginfo( 'version' ), PRIMER_MIN_WP_VERSION, '<' ) ) 
 /**
  * Load deprecated hooks and functions for this theme.
  *
- * @since NEXT
+ * @since 1.6.0
  */
 require_once get_template_directory() . '/inc/compat/deprecated.php';
 
 /**
  * Load functions for handling special child theme compatibility conditions.
  *
- * @since NEXT
+ * @since 1.6.0
  */
 require_once get_template_directory() . '/inc/compat/child-themes.php';
 
@@ -454,7 +454,7 @@ add_action( 'widgets_init', 'primer_register_sidebars' );
  * Register Primer widgets.
  *
  * @link  http://codex.wordpress.org/Function_Reference/register_widget
- * @since NEXT
+ * @since 1.6.0
  */
 function primer_register_widgets() {
 

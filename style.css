@@ -4,7 +4,7 @@
  * Author: GoDaddy
  * Author URI: https://www.godaddy.com/
  * Description: Primer is a powerful theme that brings clarity to your content in a fresh design.
- * Version: 1.5.1
+ * Version: 1.6.0
  * License: GPL-2.0
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: primer
@@ -447,6 +447,14 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+.nf-response-msg,
+.widget-area .nf-response-msg {
+  font-weight: bold; }
+  .nf-response-msg p:first-child,
+  .widget-area .nf-response-msg p:first-child {
+    font-style: italic;
+    font-weight: normal; }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -2250,13 +2258,51 @@ body.no-max-width .site-info-wrapper .site-info {
 /*--------------------------------------------------------------
 # Compatibility
 --------------------------------------------------------------*/
-.woocommerce-page {
-  /* 2 Column Layout */
-  /* Quantity field */ }
-  .woocommerce-page ul.products li.product.primer-2-column-product {
-    width: 48.05%; }
-  .woocommerce-page .primer-woocommerce .cart .qty {
-    padding: 0.18em; }
+.woocommerce-page div.product .woocommerce-product-gallery figure.woocommerce-product-gallery__wrapper {
+  margin: 0; }
+
+.woocommerce-page div.product .summary {
+  margin-top: 0; }
+
+.woocommerce-page div.product .commentlist {
+  padding-left: 0; }
+
+.woocommerce-page.woocommerce div.product form.cart {
+  margin: 1em 0; }
+
+.woocommerce-page ul.products li.product.primer-2-column-product {
+  width: 48.05%; }
+
+.woocommerce-page .primer-woocommerce .cart .qty {
+  padding: 0.18em; }
+
+.woocommerce-page span.onsale,
+.woocommerce-page ul.products li.product .onsale {
+  padding: 2px 8px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  margin: 0;
+  min-height: auto;
+  min-width: auto;
+  line-height: inherit; }
+
+.woocommerce-page #reviews #comments ol.commentlist li img.avatar {
+  width: 60px; }
+
+.woocommerce-page #reviews #comments ol.commentlist li .comment-text {
+  margin: 0 0 0 80px; }
+
+.woocommerce-page form.woocommerce-cart-form table.cart td.actions #coupon_code {
+  width: 55%;
+  margin-right: 0; }
+
+.woocommerce-page table.cart img {
+  width: 100%;
+  max-width: 75px;
+  margin-bottom: 0; }
+
+.woocommerce-page table.cart td.actions .input-text {
+  padding: 7px !important; }
 
 body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
 .woocommerce a.added_to_cart {
@@ -2284,18 +2330,6 @@ body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
       .woocommerce nav.woocommerce-pagination .nav-links .page-numbers:first-child {
         margin-left: 0;
         padding-left: 0; } }
-
-body.post-type-archive span.onsale,
-body.post-type-archive ul.products li.product .onsale,
-body.single-product span.onsale,
-body.single-product ul.products li.product .onsale {
-  padding: 2px 8px;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  margin: 0;
-  min-height: auto;
-  min-width: auto;
-  line-height: inherit; }
 
 body.single-product span.onsale {
   padding: 3px 18px;

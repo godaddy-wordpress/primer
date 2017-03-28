@@ -53,7 +53,7 @@ function primer_child_version_compare( $version, $operator ) {
  * (2nd parameter) is always returned.
  *
  * @access private
- * @since  NEXT
+ * @since  1.6.0
  *
  * @param  string $key   The compatibility key.
  * @param  mixed  $value Default value to always return when no special compatibility condition exists.
@@ -155,7 +155,7 @@ function primer_child_compat( $key, $value ) {
 	/**
 	 * Filter the child theme compatibility array.
 	 *
-	 * @since NEXT
+	 * @since 1.6.0
 	 *
 	 * @var array
 	 */
