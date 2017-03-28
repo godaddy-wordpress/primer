@@ -526,12 +526,13 @@ legend {
 form label {
   font-weight: bold; }
 
-.nf-response-msg {
-  font-style: italic;
+.nf-response-msg,
+.widget-area .nf-response-msg {
   font-weight: bold; }
-
-.widget-area .nf-response-msg p:first-child {
-  margin-top: 0; }
+  .nf-response-msg p:first-child,
+  .widget-area .nf-response-msg p:first-child {
+    font-style: italic;
+    font-weight: normal; }
 
 /*--------------------------------------------------------------
 # Buttons
