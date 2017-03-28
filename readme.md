@@ -68,6 +68,7 @@ Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 ### 1.7.0 ###
 * New: Enabled video headers and introduced styles to accommodate full width video headers. @props [evanherman](https://github.com/EvanHerman)
+* New: Introduced new `primer_pre_hero` action. @props [evanherman](https://github.com/EvanHerman)
 * Tweak: Improved WooCommerce styles. @props [evanherman](https://github.com/EvanHerman)
 * Tweak: Introduced Ninja Form response message styles. @props [evanherman](https://github.com/EvanHerman)
 * Fix: Ensure color schemes work with custom Primer child themes. @props [evanherman](https://github.com/EvanHerman)
