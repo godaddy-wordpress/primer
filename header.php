@@ -56,6 +56,19 @@
 
 		<header id="masthead" class="site-header" role="banner">
 
+			<?php
+
+			/**
+			 * Render the video header element
+			 *
+			 * @hooked primer_video_header - 5
+			 *
+			 * @since NEXT
+			 */
+			do_action( 'primer_before_header_wrapper' );
+
+			?>
+
 			<div class="site-header-wrapper">
 
 				<?php
