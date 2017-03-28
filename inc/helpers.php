@@ -636,14 +636,14 @@ function primer_get_the_widget( $widget, $instance = array(), $args = array() ) 
 }
 
 /**
- * Check if the current theme is Primer or a direct primer child
+ * Check if the current theme is Primer or a direct Primer child
  *
  * @since NEXT
  * @uses  [wp_get_theme](https://developer.wordpress.org/reference/functions/wp_get_theme/) To retreive the current theme data.
  *
- * @return boolean True if not a child theme, or current theme is not in $excluded_themes
+ * @return boolean True if Primer or custom Primer child theme, otherwise false
  */
-function primer_theme_overrides() {
+function is_custom_primer_child() {
 
 	if ( ! is_child_theme() ) {
 
@@ -653,14 +653,7 @@ function primer_theme_overrides() {
 
 	$theme = wp_get_theme();
 
-	/**
-	 * Filter the list of excluded themes
-	 *
-	 * @since NEXT
-	 *
-	 * @var array
-	 */
-	$excluded_themes = (array) apply_filters( 'primer_override_excluded_themes', array(
+	return ! in_array( $theme->get( 'Name' ), array(
 		'Activation',
 		'Ascension',
 		'Escapade',
@@ -670,8 +663,6 @@ function primer_theme_overrides() {
 		'Lyrical',
 		'Uptown Style',
 		'Velux',
-	) );
-
-	return ! in_array( $theme->get( 'Name' ), $excluded_themes, true );
+	), true );
 
 }
