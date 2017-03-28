@@ -645,15 +645,9 @@ function primer_get_the_widget( $widget, $instance = array(), $args = array() ) 
  */
 function is_custom_primer_child() {
 
-	if ( ! is_child_theme() ) {
-
-		return true;
-
-	}
-
 	$theme = wp_get_theme();
 
-	return ! in_array( $theme->get( 'Name' ), array(
+	return ( ! is_child_theme() || ! in_array( $theme->get( 'Name' ), array(
 		'Activation',
 		'Ascension',
 		'Escapade',
@@ -663,6 +657,6 @@ function is_custom_primer_child() {
 		'Lyrical',
 		'Uptown Style',
 		'Velux',
-	), true );
+	), true ) );
 
 }
