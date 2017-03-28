@@ -636,7 +636,7 @@ function primer_get_the_widget( $widget, $instance = array(), $args = array() ) 
 }
 
 /**
- * Check if the current theme is Primer or a direct Primer child
+ * Check if the current theme is Primer or direct Primer child theme
  *
  * @since NEXT
  * @uses  [wp_get_theme](https://developer.wordpress.org/reference/functions/wp_get_theme/) To retreive the current theme data.
