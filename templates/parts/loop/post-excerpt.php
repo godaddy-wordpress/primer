@@ -12,6 +12,8 @@
 
 	<?php the_excerpt(); ?>
 
-	<p><a class="button" href="<?php the_permalink(); ?>"><?php printf( esc_html_x( 'Continue Reading %s', 'right arrow (LTR) / left arrow (RTL)', 'primer' ), is_rtl() ? '&larr;' : '&rarr;' ); ?></a></p>
+	<p>
+		<a class="button" href="<?php the_permalink(); ?>" aria-label="<?php /* translators: %s: Post title */ printf( esc_attr__( 'Continue reading %1$s', 'primer' ), get_the_title() ); ?>"><?php /* translators: %s: Left/Right arrow */ printf( esc_html__( 'Continue Reading %s', 'primer' ), is_rtl() ? '&larr;' : '&rarr;' ); ?></a>
+	</p>
 
 </div><!-- .entry-summary -->
