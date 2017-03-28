@@ -13,9 +13,7 @@
 	<?php the_excerpt(); ?>
 
 	<p>
-		<a class="button" href="<?php the_permalink(); ?>" aria-label="<?php printf( esc_html_x( 'Continue reading %s', 'post title', 'primer' ), get_the_title() ); ?>">
-			<?php printf( esc_html_x( 'Continue Reading %s', 'right arrow (LTR) / left arrow (RTL)', 'primer' ), is_rtl() ? '&larr;' : '&rarr;' ); ?>
-		</a>
+		<a class="button" href="<?php the_permalink(); ?>"><?php printf( esc_html_x( 'Continue Reading %s', 'right arrow (LTR) / left arrow (RTL)', 'primer' ), is_rtl() ? '&larr;' : '&rarr;' ); ?></a>
 	</p>
 
 </div><!-- .entry-summary -->
