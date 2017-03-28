@@ -478,6 +478,7 @@ function primer_has_footer_menu() {
  * can be called frequently without any performance concern.
  *
  * @see   primer_has_active_categories_reset()
+ *
  * @since 1.0.0
  *
  * @uses [get_transient](https://developer.wordpress.org/reference/functions/get_transient/)
@@ -561,6 +562,7 @@ function primer_hex2rgb( $color ) {
  *
  * @author Frankie Jarrett <fjarrett@gmail.com>
  * @link   https://secure.php.net/manual/en/function.array-replace-recursive.php
+ *
  * @since  1.0.0
  *
  * @param  array $array1    The array in which elements are replaced.
@@ -617,6 +619,7 @@ function primer_array_replace_recursive( array $array1, array $array2 ) {
  * Render a widget in the output buffer and return the markup.
  *
  * @since 1.5.0
+ *
  * @uses  [the_widget](https://developer.wordpress.org/reference/functions/the_widget/) To render the widget.
  *
  * @param  string $widget   The widget's PHP class name.
@@ -639,6 +642,7 @@ function primer_get_the_widget( $widget, $instance = array(), $args = array() ) 
  * Check if the current theme is Primer or direct Primer child theme
  *
  * @since NEXT
+ *
  * @uses  [wp_get_theme](https://developer.wordpress.org/reference/functions/wp_get_theme/) To retreive the current theme data.
  *
  * @return boolean True if Primer or custom Primer child theme, otherwise false
