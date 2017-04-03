@@ -410,7 +410,8 @@ function primer_wp_title( $title, $sep ) {
 			' %s %s',
 			$sep,
 			sprintf(
-				esc_html_x( 'Page %d', 'page number', 'primer' ),
+				/* translators: page number */
+				esc_html__( 'Page %d', 'primer' ),
 				max( $paged, $page )
 			)
 		);
@@ -447,7 +448,8 @@ function primer_pagination_template( $template, $class ) {
 	$replace = sprintf(
 		'<div class="paging-nav-text">%s</div>%s',
 		sprintf(
-			esc_html_x( 'Page %1$d of %2$d', '1. current page number, 2. total number of pages', 'primer' ),
+			/* translators: 1. current page number, 2. total number of pages */
+			esc_html__( 'Page %1$d of %2$d', 'primer' ),
 			max( 1, get_query_var( 'paged' ) ),
 			absint( $wp_query->max_num_pages )
 		),
