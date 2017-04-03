@@ -69,7 +69,9 @@ Source: https://unsplash.com/photos/v4ZUGlrdVAA
 ### 1.7.0 ###
 * New: Enabled video headers and introduced styles to accommodate full width video headers. @props [evanherman](https://github.com/EvanHerman)
 * New: Introduced new `primer_pre_hero` action. @props [evanherman](https://github.com/EvanHerman)
+* New: Added aria labels on the 'Continue Reading' links for `a11y` improvements. @props [evanherman](https://github.com/EvanHerman)
 * Tweak: Improved WooCommerce styles. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Tweak i18n functions, added translator comments. @props [evanherman](https://github.com/EvanHerman)
 * Tweak: Introduced Ninja Form response message styles. @props [evanherman](https://github.com/EvanHerman)
 * Fix: Ensure color schemes work with custom Primer child themes. @props [evanherman](https://github.com/EvanHerman)
 * Fix: Tweaked the WooCommerce product template title. @props [evanherman](https://github.com/EvanHerman)
