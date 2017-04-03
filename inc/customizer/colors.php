@@ -479,47 +479,47 @@ class Primer_Customizer_Colors {
 
 		$color_schemes = array(
 			'blush' => array(
-				'label' => esc_html_x( 'Blush', 'color scheme name', 'primer' ),
+				'label' => /* translators: color scheme name */ esc_html__( 'Blush', 'primer' ),
 				'base'  => '#cc494f',
 			),
 			'bronze' => array(
-				'label' => esc_html_x( 'Bronze', 'color scheme name', 'primer' ),
+				'label' => /* translators: color scheme name */ esc_html__( 'Bronze', 'primer' ),
 				'base'  => '#b1a18b',
 			),
 			'canary' => array(
-				'label' => esc_html_x( 'Canary', 'color scheme name', 'primer' ),
+				'label' => /* translators: color scheme name */ esc_html__( 'Canary', 'primer' ),
 				'base'  => '#e9c46a',
 			),
 			'cool' => array(
-				'label' => esc_html_x( 'Cool', 'color scheme name', 'primer' ),
+				'label' => /* translators: color scheme name */ esc_html__( 'Cool', 'primer' ),
 				'base'  => '#78c3fb',
 			),
 			'dark' => array(
-				'label' => esc_html_x( 'Dark', 'color scheme name', 'primer' ),
+				'label' => /* translators: color scheme name */ esc_html__( 'Dark', 'primer' ),
 				'base'  => '#222222',
 			),
 			'iguana' => array(
-				'label' => esc_html_x( 'Iguana', 'color scheme name', 'primer' ),
+				'label' => /* translators: color scheme name */ esc_html__( 'Iguana', 'primer' ),
 				'base'  => '#62bf7c',
 			),
 			'muted' => array(
-				'label' => esc_html_x( 'Muted', 'color scheme name', 'primer' ),
+				'label' => /* translators: color scheme name */ esc_html__( 'Muted', 'primer' ),
 				'base'  => '#3e4c75',
 			),
 			'plum' => array(
-				'label' => esc_html_x( 'Plum', 'color scheme name', 'primer' ),
+				'label' => /* translators: color scheme name */ esc_html__( 'Plum', 'primer' ),
 				'base'  => '#5d5179',
 			),
 			'rose' => array(
-				'label' => esc_html_x( 'Rose', 'color scheme name', 'primer' ),
+				'label' => /* translators: color scheme name */ esc_html__( 'Rose', 'primer' ),
 				'base'  => '#f49390',
 			),
 			'tangerine' => array(
-				'label' => esc_html_x( 'Tangerine', 'color scheme name', 'primer' ),
+				'label' => /* translators: color scheme name */ esc_html__( 'Tangerine', 'primer' ),
 				'base'  => '#fc9e4f',
 			),
 			'turquoise' => array(
-				'label' => esc_html_x( 'Turquoise', 'color scheme name', 'primer' ),
+				'label' => /* translators: color scheme name */ esc_html__( 'Turquoise', 'primer' ),
 				'base'  => '#48e5c2',
 			),
 		);

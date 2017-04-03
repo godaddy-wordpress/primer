@@ -150,7 +150,7 @@ function primer_pagination( $args = array() ) {
 	$defaults = (array) apply_filters( 'primer_pagination_default_args', array(
 		'prev_text'          => __( '&larr; Previous', 'primer' ),
 		'next_text'          => __( 'Next &rarr;', 'primer' ),
-		'screen_reader_text' => sprintf( esc_html_x( '%1$s navigation', 'post type singular label', 'primer' ), esc_html( $post_type_label ) ),
+		'screen_reader_text' => sprintf( /* translators: post type singular label */ esc_html__( '%1$s navigation', 'primer' ), esc_html( $post_type_label ) ),
 	), max( 1, get_query_var( 'paged' ) ), absint( $wp_query->max_num_pages ) );
 
 	$args = wp_parse_args( $args, $defaults );

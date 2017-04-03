@@ -96,8 +96,8 @@ class Primer_Customizer_Layouts {
 		 */
 		$this->page_widths = (array) apply_filters( 'primer_page_widths',
 			array(
-				'fixed' => esc_html_x( 'Fixed', 'fixed-width page layout', 'primer' ),
-				'fluid' => esc_html_x( 'Fluid', 'fluid-width page layout', 'primer' ),
+				'fixed' => /* translators: fixed-width page layout */ esc_html__( 'Fixed', 'primer' ),
+				'fluid' => /* translators: fluid-width page layout */ esc_html__( 'Fluid', 'primer' ),
 			)
 		);
 

@@ -25,8 +25,9 @@
 			<p>
 			<?php
 
+			/* translators: link to write a new post */
 			printf(
-				esc_html_x( 'Ready to publish your first post? %s.', 'link to write a new post', 'primer' ),
+				esc_html__( 'Ready to publish your first post? %s.', 'primer' ),
 				sprintf(
 					'<a href="%s">%s</a>',
 					esc_url( admin_url( 'post-new.php' ) ),

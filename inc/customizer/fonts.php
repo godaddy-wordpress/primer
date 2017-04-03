@@ -214,7 +214,7 @@ class Primer_Customizer_Fonts {
 
 			$fonts             = array_combine( $this->fonts, $this->fonts );
 			$default           = $this->get_default_font( $name );
-			$fonts[ $default ] = sprintf( esc_html_x( '%s (Default)', 'font name', 'primer' ), $default );
+			$fonts[ $default ] = /* translators: font name */ sprintf( esc_html__( '%s (Default)', 'primer' ), $default );
 
 			$wp_customize->add_control(
 				$name,

@@ -42,7 +42,8 @@ function primer_get_the_page_title() {
 		case is_search() :
 
 			$title = sprintf(
-				esc_html_x( 'Search Results for: %s', 'search term', 'primer' ),
+				/* translators: search term */
+				esc_html__( 'Search Results for: %s', 'primer' ),
 				sprintf(
 					'<span>%s</span>',
 					get_search_query()
