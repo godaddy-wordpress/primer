@@ -32,6 +32,25 @@ function primer_elements() {
 add_action( 'template_redirect', 'primer_elements' );
 
 /**
+ * Display video header
+ *
+ * @action primer_before_header_wrapper
+ * @since  NEXT
+ */
+function primer_video_header() {
+
+	if ( ! is_front_page() || ! has_header_video() ) {
+
+		return;
+
+	}
+
+	the_custom_header_markup();
+
+}
+add_action( 'primer_before_header_wrapper', 'primer_video_header', 5 );
+
+/**
  * Display site title in the header.
  *
  * @action primer_header
@@ -391,7 +410,8 @@ function primer_wp_title( $title, $sep ) {
 			' %s %s',
 			$sep,
 			sprintf(
-				esc_html_x( 'Page %d', 'page number', 'primer' ),
+				/* translators: page number */
+				esc_html__( 'Page %d', 'primer' ),
 				max( $paged, $page )
 			)
 		);
@@ -428,7 +448,8 @@ function primer_pagination_template( $template, $class ) {
 	$replace = sprintf(
 		'<div class="paging-nav-text">%s</div>%s',
 		sprintf(
-			esc_html_x( 'Page %1$d of %2$d', '1. current page number, 2. total number of pages', 'primer' ),
+			/* translators: 1. current page number, 2. total number of pages */
+			esc_html__( 'Page %1$d of %2$d', 'primer' ),
 			max( 1, get_query_var( 'paged' ) ),
 			absint( $wp_query->max_num_pages )
 		),

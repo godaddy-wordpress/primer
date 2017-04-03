@@ -114,8 +114,8 @@ function primer_deprecated( $name, $version, $alt_name = null, $theme = null, $m
 	}
 
 	// Note: Translation text must be a string or the themecheck will flag it.
-	$with_alt    = function_exists( '_x' ) ? _x( '%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead.', '1. PHP function name, 2. theme name, 3. version number, 4. alternative function name', 'primer' ) : '%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead.';
-	$without_alt = function_exists( '_x' ) ? _x( '%1$s is <strong>deprecated</strong> since %2$s version %3$s with no alternative available.', '1. PHP function name, 2. theme name, 3. version number', 'primer' ) : '%1$s is <strong>deprecated</strong> since %2$s version %3$s with no alternative available.';
+	$with_alt    = function_exists( '__' ) ? /* translators: 1. PHP function name, 2. theme name, 3. version number, 4. alternative function name */ __( '%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead.', 'primer' ) : '%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead.';
+	$without_alt = function_exists( '__' ) ? /* translators: 1. PHP function name, 2. theme name, 3. version number */ __( '%1$s is <strong>deprecated</strong> since %2$s version %3$s with no alternative available.', 'primer' ) : '%1$s is <strong>deprecated</strong> since %2$s version %3$s with no alternative available.';
 
 	$string  = ( $alt_name ) ? $with_alt : $without_alt;
 	$theme   = ! empty( $theme ) ? $theme : esc_html__( 'Primer', 'primer' );

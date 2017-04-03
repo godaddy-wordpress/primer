@@ -447,6 +447,14 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+.nf-response-msg,
+.widget-area .nf-response-msg {
+  font-weight: bold; }
+  .nf-response-msg p:first-child,
+  .widget-area .nf-response-msg p:first-child {
+    font-style: italic;
+    font-weight: normal; }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -1606,18 +1614,43 @@ body.no-max-width .site-content {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+.site-header.video-header {
+  overflow: hidden;
+  background-color: #000;
+  color: #000; }
+  .site-header.video-header #wp-custom-header {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+  .site-header.video-header #wp-custom-header-video-button {
+    position: absolute;
+    top: 20vh;
+    right: 1em;
+    opacity: 0.5;
+    padding: 0.5em .75em; }
+  .site-header.video-header iframe#wp-custom-header-video {
+    height: 100%; }
+
 .site-header {
   position: relative;
   background-color: #0b3954;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: bottom center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  overflow: hidden; }
+  .site-header #wp-custom-header img {
+    display: none; }
 
 .site-header-wrapper {
   max-width: 1100px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  position: relative; }
   .site-header-wrapper:after {
     content: " ";
     display: block;
@@ -2225,13 +2258,51 @@ body.no-max-width .site-info-wrapper .site-info {
 /*--------------------------------------------------------------
 # Compatibility
 --------------------------------------------------------------*/
-.woocommerce-page {
-  /* 2 Column Layout */
-  /* Quantity field */ }
-  .woocommerce-page ul.products li.product.primer-2-column-product {
-    width: 48.05%; }
-  .woocommerce-page .primer-woocommerce .cart .qty {
-    padding: 0.18em; }
+.woocommerce-page div.product .woocommerce-product-gallery figure.woocommerce-product-gallery__wrapper {
+  margin: 0; }
+
+.woocommerce-page div.product .summary {
+  margin-top: 0; }
+
+.woocommerce-page div.product .commentlist {
+  padding-left: 0; }
+
+.woocommerce-page.woocommerce div.product form.cart {
+  margin: 1em 0; }
+
+.woocommerce-page ul.products li.product.primer-2-column-product {
+  width: 48.05%; }
+
+.woocommerce-page .primer-woocommerce .cart .qty {
+  padding: 0.18em; }
+
+.woocommerce-page span.onsale,
+.woocommerce-page ul.products li.product .onsale {
+  padding: 2px 8px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  margin: 0;
+  min-height: auto;
+  min-width: auto;
+  line-height: inherit; }
+
+.woocommerce-page #reviews #comments ol.commentlist li img.avatar {
+  width: 60px; }
+
+.woocommerce-page #reviews #comments ol.commentlist li .comment-text {
+  margin: 0 0 0 80px; }
+
+.woocommerce-page form.woocommerce-cart-form table.cart td.actions #coupon_code {
+  width: 55%;
+  margin-right: 0; }
+
+.woocommerce-page table.cart img {
+  width: 100%;
+  max-width: 75px;
+  margin-bottom: 0; }
+
+.woocommerce-page table.cart td.actions .input-text {
+  padding: 7px !important; }
 
 body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
 .woocommerce a.added_to_cart {
@@ -2259,18 +2330,6 @@ body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
       .woocommerce nav.woocommerce-pagination .nav-links .page-numbers:first-child {
         margin-left: 0;
         padding-left: 0; } }
-
-body.post-type-archive span.onsale,
-body.post-type-archive ul.products li.product .onsale,
-body.single-product span.onsale,
-body.single-product ul.products li.product .onsale {
-  padding: 2px 8px;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  margin: 0;
-  min-height: auto;
-  min-width: auto;
-  line-height: inherit; }
 
 body.single-product span.onsale {
   padding: 3px 18px;

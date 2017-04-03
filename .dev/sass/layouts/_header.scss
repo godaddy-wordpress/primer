@@ -1,13 +1,21 @@
+@import "video-header";
+
 .site-header {
 	position: relative;
 	background-color: $color__hero-bg;
 	background-size: cover;
 	background-position: bottom center;
 	background-repeat: no-repeat;
+	overflow: hidden;
+
+	#wp-custom-header img {
+		display: none;
+	}
 }
 
 .site-header-wrapper {
 	@include container($container-size);
+	position: relative;
 }
 
 body.no-max-width .site-header-wrapper {
