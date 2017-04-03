@@ -40,7 +40,7 @@
 
 	<?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
 
-		<span class="comments-link"><?php comments_popup_link( esc_html__( 'Leave a comment', 'primer' ), esc_html__( '1 Comment', 'primer' ), /* translators: number of comments */ esc_html__( '%s Comments', 'primer' ) ); ?></span>
+		<span class="comments-link"><?php comments_popup_link( esc_html__( 'Leave a comment', 'primer' ), esc_html__( '1 Comment', 'primer' ), /* translators: number of comments */ esc_html__( '%d Comments', 'primer' ) ); ?></span>
 
 	<?php endif; ?>
 
