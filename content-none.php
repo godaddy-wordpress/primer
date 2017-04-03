@@ -25,8 +25,8 @@
 			<p>
 			<?php
 
-			/* translators: link to write a new post */
 			printf(
+				/* translators: link to write a new post */
 				esc_html__( 'Ready to publish your first post? %s.', 'primer' ),
 				sprintf(
 					'<a href="%s">%s</a>',

@@ -31,8 +31,8 @@ if ( post_password_required() ) {
 		<h2 class="comments-title">
 		<?php
 
-		/* translators: 1. number of comments, 2. post title */
 		printf( // xss ok.
+			/* translators: 1. number of comments, 2. post title */
 			_n(
 				'%1$d thought on %2$s',
 				'%1$d thoughts on %2$s',
@@ -55,9 +55,9 @@ if ( post_password_required() ) {
 
 				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'primer' ); ?></h1>
 
-				<div class="nav-previous"><?php /* translators: left arrow (LTR) / right arrow (RTL) */ previous_comments_link( sprintf( esc_html__( '%s Older Comments', 'primer' ), is_rtl() ? '&rarr;' : '&larr;' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( sprintf( /* translators: left arrow (LTR) / right arrow (RTL) */ esc_html__( '%s Older Comments', 'primer' ), is_rtl() ? '&rarr;' : '&larr;' ) ); ?></div>
 
-				<div class="nav-next"><?php /* translators: right arrow (LTR) / left arrow (RTL) */ next_comments_link( sprintf( esc_html__( 'Newer Comments %s', 'primer' ), is_rtl() ? '&larr;' : '&rarr;' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( sprintf( /* translators: right arrow (LTR) / left arrow (RTL) */ esc_html__( 'Newer Comments %s', 'primer' ), is_rtl() ? '&larr;' : '&rarr;' ) ); ?></div>
 
 			</nav><!-- #comment-nav-above -->
 
