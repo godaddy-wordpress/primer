@@ -59,6 +59,13 @@ class Primer_Customizer {
 		 */
 		require_once get_template_directory() . '/inc/customizer/static-front-page.php';
 
+		/**
+		 * Load additional header media options
+		 *
+		 * @since NEXT
+		 */
+		require_once get_template_directory() . '/inc/customizer/header-media.php';
+
 		add_action( 'after_setup_theme',      array( $this, 'logo' ) );
 		add_action( 'customize_register',     array( $this, 'selective_refresh' ), 11 );
 		add_action( 'customize_register',     array( $this, 'use_featured_hero_image' ) );
