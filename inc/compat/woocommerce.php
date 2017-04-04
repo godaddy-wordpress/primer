@@ -700,7 +700,7 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
  *
  * @since NEXT
  */
-function disable_woo_product_header_image() {
+function primer_wc_product_header_image() {
 
 	/**
 	 * Filter whether the WooCommerce product should be used as the header image
@@ -712,4 +712,4 @@ function disable_woo_product_header_image() {
 	return apply_filters( 'primer_wc_product_header_image', ! is_product() );
 
 }
-add_filter( 'primer_use_featured_hero_image', 'disable_woo_product_header_image' );
+add_filter( 'primer_use_featured_hero_image', 'primer_wc_product_header_image' );
