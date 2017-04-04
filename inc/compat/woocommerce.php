@@ -707,7 +707,7 @@ function primer_wc_product_header_image() {
 	 *
 	 * @since NEXT
 	 *
-	 * @var boolean
+	 * @return boolean False when WooCommerce product, else true
 	 */
 	return apply_filters( 'primer_wc_product_header_image', ! is_product() );
 
