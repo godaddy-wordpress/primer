@@ -706,8 +706,6 @@ function primer_wc_product_header_image() {
 	 * Filter whether the WooCommerce product should be used as the header image
 	 *
 	 * @since NEXT
-	 *
-	 * @return boolean False when WooCommerce product, else true
 	 */
 	return apply_filters( 'primer_wc_product_header_image', ! is_product() );
 
