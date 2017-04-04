@@ -694,7 +694,7 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
 }
 
 /**
- * Prevent Woocommerce product image from loading in the header image
+ * Prevent WooCommerce product image from loading in the header image
  *
  * @return boolean False if a WooCommerce product, else true
  *
@@ -703,9 +703,7 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
 function disable_woo_product_header_image() {
 
 	/**
-	 * Filter whether the Woocommerce product should be used as the header image
-	 *
-	 * Default: false
+	 * Filter whether the WooCommerce product should be used as the header image
 	 *
 	 * @since NEXT
 	 *
