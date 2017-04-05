@@ -338,14 +338,6 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		wp_deploy: {
-			options: {
-				build_dir: 'build/',
-				plugin_slug: pkg.name,
-				svn_user: grunt.file.exists( 'svn-username' ) ? grunt.file.read( 'svn-username' ).trim() : ''
-			}
-		},
-
 		wp_readme_to_markdown: {
 			options: {
 				post_convert: function( readme ) {
@@ -383,7 +375,6 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'default',     [ 'sass', 'replace:charset', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify', 'imagemin' ] );
 	grunt.registerTask( 'build',       [ 'default', 'clean:build', 'copy:build' ] );
 	grunt.registerTask( 'check',       [ 'devUpdate' ] );
-	grunt.registerTask( 'deploy',      [ 'build', 'wp_deploy', 'clean:build' ] );
 	grunt.registerTask( 'deploy-docs', [ 'update-docs', 'shell:deploy_docs' ] );
 	grunt.registerTask( 'readme',      [ 'wp_readme_to_markdown' ] );
 	grunt.registerTask( 'update-docs', [ 'readme', 'clean:docs', 'shell:sphinx', 'shell:docs', 'replace:docs', 'copy:readme', 'copy:docs', 'replace:intro' ] );
