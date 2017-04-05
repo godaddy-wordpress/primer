@@ -63,7 +63,7 @@
 			 *
 			 * @hooked primer_video_header - 5
 			 *
-			 * @since NEXT
+			 * @since 1.7.0
 			 */
 			do_action( 'primer_before_header_wrapper' );
 

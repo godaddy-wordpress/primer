@@ -35,7 +35,7 @@ add_action( 'template_redirect', 'primer_elements' );
  * Display video header
  *
  * @action primer_before_header_wrapper
- * @since  NEXT
+ * @since  1.7.0
  */
 function primer_video_header() {
 

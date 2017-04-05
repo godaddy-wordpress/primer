@@ -698,14 +698,14 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
  *
  * @return boolean False if a WooCommerce product, else true
  *
- * @since NEXT
+ * @since 1.7.0
  */
 function primer_wc_product_header_image() {
 
 	/**
 	 * Filter whether the WooCommerce product should be used as the header image
 	 *
-	 * @since NEXT
+	 * @since 1.7.0
 	 */
 	return apply_filters( 'primer_wc_product_header_image', ! is_product() );
 

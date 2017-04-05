@@ -15,7 +15,7 @@
 	/**
 	 * Fires inside the `.hero` element but before the `.hero-inner` element.
 	 *
-	 * @since NEXT
+	 * @since 1.7.0
 	 */
 	do_action( 'primer_pre_hero' );
 
