@@ -1,19 +1,18 @@
 # Copyright (c) 2017 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 1.4.1\n"
+"Project-Id-Version: Primer 1.5.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
 "POT-Creation-Date: 2017-03-01 23:51:05+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: 404.php:22 templates/woocommerce/404.php:22
@@ -22,7 +21,8 @@ msgstr "ओह! यह पृष्ठ नहीं मिल सकता ह�
 
 #: 404.php:28 templates/woocommerce/404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr "ऐसा लग रहा है इस स्थान पर कुछ नहीं मिला था. कृपया नीचे खोजकर आज़माएं:"
 
 #: comments.php:56 comments.php:83
@@ -54,15 +54,12 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"क्षमा करें, लेकिन आपके खोज शब्दों से मेल खाने का कुछ नहीं. कृपया कुछ भिन्न कीवर्ड्स से पुनः "
-"प्रयास करें."
+"क्षमा करें, लेकिन आपके खोज शब्दों से मेल खाने का कुछ नहीं. कृपया कुछ भिन्न "
+"कीवर्ड्स से पुनः प्रयास करें."
 
 #: content-none.php:48
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr ""
-"ऐसा लग रहा है, हमें आपके द्वारा खोजी जा रही चीज नहीं मिल सकती है. शायद खोजने से मदद "
-"मिल सकती है."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "ऐसा लग रहा है, हमें आपके द्वारा खोजी जा रही चीज नहीं मिल सकती है. शायद खोजने से मदद मिल सकती है."
 
 #: functions.php:186
 msgid "Featured"
@@ -93,8 +90,8 @@ msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
 msgstr ""
-"प्राथमिक साइडबार प्रत्येक पृष्ठ, पोस्ट, संकलन और खोज टेम्पलेट की सामग्री के साथ प्रकट होता "
-"है."
+"प्राथमिक साइडबार प्रत्येक पृष्ठ, पोस्ट, संकलन और खोज टेम्पलेट की सामग्री के "
+"साथ प्रकट होता है."
 
 #: functions.php:402
 msgid "Secondary Sidebar"
@@ -102,9 +99,10 @@ msgstr "द्धितीयक साइडबार"
 
 #: functions.php:403
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
-msgstr "द्धितीयक साइडबार आपके द्वारा तीन-स्तंभ वाला लेआउट चुनने पर ही प्रकट होगा."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
+msgstr ""
+"द्धितीयक साइडबार आपके द्वारा तीन-स्तंभ वाला लेआउट चुनने पर ही प्रकट होगा."
 
 #: functions.php:410
 msgid "Footer 1"
@@ -177,8 +175,8 @@ msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer के लिए कम से कम WordPress संस्करण %1$s आवश्यक. आप संस्करण %2$s चला रहे हैं. "
-"कृपया अपग्रेड करें और पुनः आज़माएं."
+"Primer के लिए कम से कम WordPress संस्करण %1$s आवश्यक. आप संस्करण %2$s चला रहे "
+"हैं. कृपया अपग्रेड करें और पुनः आज़माएं."
 
 #: inc/customizer/colors.php:49
 msgid "Site Title Text"
@@ -313,8 +311,7 @@ msgid "Hero Background Overlay"
 msgstr "मुख्य पृष्ठभूमि ओवरले"
 
 #: inc/customizer/colors.php:1292
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
+msgid "Control the color overlay transparency when using a custom Header Image."
 msgstr "कस्टम शीर्षलेख छवि उपयोग करते समय रंग ओवरले पारदर्शिता नियंत्रित करें."
 
 #: inc/customizer/fonts.php:89
@@ -402,9 +399,8 @@ msgid "Display your site differently on larger screens."
 msgstr "अपनी साइट बड़ी स्कीनों पर अलग-अलग प्रदर्शित करें."
 
 #: inc/customizer/site-identity.php:82
-#, fuzzy
 msgid "Footer Copyright Text"
-msgstr "कॉपीराइट पाठ"
+msgstr "पादलेख कॉपीराइट पाठ"
 
 #: inc/customizer/site-identity.php:101
 msgid "Display theme author credit"
@@ -412,15 +408,14 @@ msgstr "थीम लेखक क्रेडिट प्रदर्शित
 
 #: inc/customizer/static-front-page.php:46
 msgid "Front page title"
-msgstr ""
+msgstr "आगे के पृष्ठ का शीर्षक"
 
 #: inc/customizer.php:193
 msgid "Use featured image"
 msgstr "प्रदर्शित छवि उपयोग करें"
 
 #: inc/customizer.php:194
-msgid ""
-"Allow the featured image on the current post to override the hero image."
+msgid "Allow the featured image on the current post to override the hero image."
 msgstr "मुख्य छवि ओवरराइड करने के लिए वर्तमान पोस्ट पर प्रदर्शित छवि की अनुमति दें."
 
 #: inc/helpers.php:56
@@ -429,39 +424,35 @@ msgstr "404 पृष्ठ नहीं मिला"
 
 #: inc/hero-text-widget.php:147
 msgid "The title of widget. Leave empty for no title."
-msgstr ""
+msgstr "विजेट का शीर्षक. शीर्षक नहीं के लिए खाली छोड़ें."
 
 #: inc/hero-text-widget.php:147
-#, fuzzy
 msgid "Title:"
-msgstr "साइट शीर्षक"
+msgstr "शीर्षक:"
 
 #: inc/hero-text-widget.php:152
-#, fuzzy
 msgid "Text:"
-msgstr "टेक्स्ट"
+msgstr "टेक्स्ट:"
 
 #: inc/hero-text-widget.php:157
-#, fuzzy
 msgid "Button Text:"
-msgstr "बटन"
+msgstr "बटन टेक्स्ट:"
 
 #: inc/hero-text-widget.php:162
 msgid "Button Link URL:"
-msgstr ""
+msgstr "बटन लिंक URL:"
 
 #: inc/hero-text-widget.php:163
 msgid "Paste URL or type to search"
-msgstr ""
+msgstr "URL पेस्ट करें या खोजने के लिए टाइप करें"
 
 #: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
 msgid "&larr; Previous"
-msgstr ""
+msgstr "&larr; पिछला"
 
 #: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
-#, fuzzy
 msgid "Next &rarr;"
-msgstr "नई टिप्पणियां &rarr;"
+msgstr "अगला &rarr;"
 
 #: inc/template-tags.php:266
 msgid "Blog"
@@ -512,7 +503,8 @@ msgstr "https://github.com/godaddy/wp-primer-theme"
 msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
-msgstr "Primer एक शक्तिशाली थीम है, जो नए डिज़ाइन में आपकी सामग्री पर स्पष्टता लाती है."
+msgstr ""
+"Primer एक शक्तिशाली थीम है, जो नए डिज़ाइन में आपकी सामग्री पर स्पष्टता लाती है."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
@@ -557,6 +549,8 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
 "instead."
 msgstr ""
+"%2$s संस्करण %3$s के आने से %1$s <strong>का दर्जा घटा </strong>! इसके बजाय "
+"%4$s का उपयोग करें."
 
 #: inc/compat/deprecated.php:118
 msgctxt "1. PHP function name, 2. theme name, 3. version number"
@@ -564,6 +558,8 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
 "alternative available."
 msgstr ""
+"कोई विकल्प उपलब्ध न होने के साथ %2$s संस्करण %3$s के आने से %1$s <strong>का "
+"दर्जा घटा</strong>."
 
 #: inc/customizer/colors.php:482
 msgctxt "color scheme name"
@@ -646,13 +642,11 @@ msgid "Search Results for: %s"
 msgstr "इनके खोज परिणाम: %s"
 
 #: inc/hero-text-widget.php:24
-#, fuzzy
 msgctxt "theme name"
 msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr "हीरो विजेट्स फ़्रंट पेज के शीर्षलेख छवि पर प्रकट होते हैं."
+msgstr "आपकी साइट के मुुख्य पृष्ठ पर मुख्य क्षेत्र के लिए %s थीम विजेट डिज़ाइन किया गया."
 
 #: inc/hero-text-widget.php:29
-#, fuzzy
 msgctxt "the widget title"
 msgid "Hero Text"
 msgstr "मुख्य पाठ"
@@ -665,19 +659,17 @@ msgstr "पृष्ठ %d"
 #: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
 msgctxt "1. current page number, 2. total number of pages"
 msgid "Page %1$d of %2$d"
-msgstr ""
+msgstr "%1$d का पृष्ठ %2$d"
 
 #: inc/template-tags.php:153
-#, fuzzy
 msgctxt "post type singular label"
 msgid "%1$s navigation"
-msgstr "पोस्ट नेविगेशन"
+msgstr "%1$s नेविगेशन"
 
 #: templates/woocommerce/loop/pagination.php:43
-#, fuzzy
 msgctxt "post type singular label"
 msgid "%s navigation"
-msgstr "पोस्ट नेविगेशन"
+msgstr "%s नेविगेशन"
 
 #: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"

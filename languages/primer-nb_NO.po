@@ -1,19 +1,18 @@
 # Copyright (c) 2017 GoDaddy Operating Company, LLC. All Rights Reserved.
 msgid ""
 msgstr ""
-"Project-Id-Version: Primer 1.4.1\n"
+"Project-Id-Version: Primer 1.5.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
 "POT-Creation-Date: 2017-03-01 23:51:05+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
-"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: 404.php:22 templates/woocommerce/404.php:22
@@ -22,10 +21,10 @@ msgstr "Ops! Fant ikke den siden."
 
 #: 404.php:28 templates/woocommerce/404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching below:"
+"It looks like nothing was found at this location. Please try searching "
+"below:"
 msgstr ""
-"Det virker ikke som om noe ble funnet på denne plasseringen. Prøv å søke "
-"nedenfor:"
+"Det virker ikke som om noe ble funnet på denne plasseringen. Prøv å søke nedenfor:"
 
 #: comments.php:56 comments.php:83
 msgid "Comment navigation"
@@ -60,11 +59,8 @@ msgstr ""
 "noen andre søkeord."
 
 #: content-none.php:48
-msgid ""
-"It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr ""
-"Det virker ikke som om vi finner det du leter etter. Kanskje det kan hjelpe "
-"å søke."
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Det virker ikke som om vi finner det du leter etter. Kanskje det kan hjelpe å søke."
 
 #: functions.php:186
 msgid "Featured"
@@ -104,11 +100,10 @@ msgstr "Sekundær sidestolpe"
 
 #: functions.php:403
 msgid ""
-"The secondary sidebar will only appear when you have selected a three-column "
-"layout."
+"The secondary sidebar will only appear when you have selected a "
+"three-column layout."
 msgstr ""
-"Den sekundære sidestolpen vil kun vises når du har valgt en utforming med "
-"tre kolonner."
+"Den sekundære sidestolpen vil kun vises når du har valgt en utforming med tre kolonner."
 
 #: functions.php:410
 msgid "Footer 1"
@@ -116,9 +111,7 @@ msgstr "Bunntekst 1"
 
 #: functions.php:411
 msgid "This sidebar is the first column of the footer widget area."
-msgstr ""
-"Denne sidestolpen er den første kolonnen i bunntekstens "
-"kontrollprogramområde."
+msgstr "Denne sidestolpen er den første kolonnen i bunntekstens kontrollprogramområde."
 
 #: functions.php:418
 msgid "Footer 2"
@@ -126,8 +119,7 @@ msgstr "Bunntekst 2"
 
 #: functions.php:419
 msgid "This sidebar is the second column of the footer widget area."
-msgstr ""
-"Denne sidestolpen er den andre kolonnen i bunntekstens kontrollprogramområde."
+msgstr "Denne sidestolpen er den andre kolonnen i bunntekstens kontrollprogramområde."
 
 #: functions.php:426
 msgid "Footer 3"
@@ -135,9 +127,7 @@ msgstr "Bunntekst 3"
 
 #: functions.php:427
 msgid "This sidebar is the third column of the footer widget area."
-msgstr ""
-"Denne sidestolpen er den tredje kolonnen i bunntekstens "
-"kontrollprogramområde."
+msgstr "Denne sidestolpen er den tredje kolonnen i bunntekstens kontrollprogramområde."
 
 #: functions.php:435
 msgid "Hero widgets appear over the header image on the front page."
@@ -186,8 +176,8 @@ msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer krever minst WordPress-versjon %1$s. Du kjører versjon %2$s. "
-"Oppgrader og prøv på nytt."
+"Primer krever minst WordPress-versjon %1$s. Du kjører versjon %2$s. Oppgrader "
+"og prøv på nytt."
 
 #: inc/customizer/colors.php:49
 msgid "Site Title Text"
@@ -211,9 +201,7 @@ msgstr "Topptekst-tekst"
 
 #: inc/customizer/colors.php:130
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr ""
-"Post titler, kontrollprogram-titler, skjemaetiketter, tabelloverskrifter og "
-"knapper."
+msgstr "Post titler, kontrollprogram-titler, skjemaetiketter, tabelloverskrifter og knapper."
 
 #: inc/customizer/colors.php:151
 msgid "Primary Text"
@@ -324,11 +312,8 @@ msgid "Hero Background Overlay"
 msgstr "Hero-bakgrunnsoverlegg"
 
 #: inc/customizer/colors.php:1292
-msgid ""
-"Control the color overlay transparency when using a custom Header Image."
-msgstr ""
-"Kontroller gjennomsiktigheten av fargevalg når du bruker et egendefinert "
-"topptekstbilde."
+msgid "Control the color overlay transparency when using a custom Header Image."
+msgstr "Kontroller gjennomsiktigheten av fargevalg når du bruker et egendefinert topptekstbilde."
 
 #: inc/customizer/fonts.php:89
 msgid "Site Title"
@@ -352,8 +337,7 @@ msgstr "Overskrifter"
 
 #: inc/customizer/fonts.php:111
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr ""
-"Post titler, kontrollprogram-titler, skjemaetiketter og tabelloverskrifter."
+msgstr "Post titler, kontrollprogram-titler, skjemaetiketter og tabelloverskrifter."
 
 #: inc/customizer/fonts.php:126
 msgid "Primary"
@@ -369,9 +353,7 @@ msgstr "Sekundært"
 
 #: inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr ""
-"Bylines, antall kommentarer, svarkoblinger, post-bunntekster og sitat-"
-"bunntekster."
+msgstr "Bylines, antall kommentarer, svarkoblinger, post-bunntekster og sitat-bunntekster."
 
 #: inc/customizer/fonts.php:192
 msgid "Fonts"
@@ -418,9 +400,8 @@ msgid "Display your site differently on larger screens."
 msgstr "Vis nettstedet forskjellig på større skjermer."
 
 #: inc/customizer/site-identity.php:82
-#, fuzzy
 msgid "Footer Copyright Text"
-msgstr "Opphavsrett-tekst"
+msgstr "Opphavsrett-tekst for bunntekst"
 
 #: inc/customizer/site-identity.php:101
 msgid "Display theme author credit"
@@ -428,17 +409,15 @@ msgstr "Vis temaforfatter-kreditt"
 
 #: inc/customizer/static-front-page.php:46
 msgid "Front page title"
-msgstr ""
+msgstr "Forsidetittel"
 
 #: inc/customizer.php:193
 msgid "Use featured image"
 msgstr "Bruk profilert bilde"
 
 #: inc/customizer.php:194
-msgid ""
-"Allow the featured image on the current post to override the hero image."
-msgstr ""
-"La det profilerte bildet på den nåværende posten overstyre hero-bildet."
+msgid "Allow the featured image on the current post to override the hero image."
+msgstr "La det profilerte bildet på den nåværende posten overstyre hero-bildet."
 
 #: inc/helpers.php:56
 msgid "404 Page Not Found"
@@ -446,39 +425,35 @@ msgstr "404 Side ikke funnet"
 
 #: inc/hero-text-widget.php:147
 msgid "The title of widget. Leave empty for no title."
-msgstr ""
+msgstr "Navnet på kontrollprogrammet. La stå tomt hvis navn ikke finnes."
 
 #: inc/hero-text-widget.php:147
-#, fuzzy
 msgid "Title:"
-msgstr "Nettstedstittel"
+msgstr "Tittel:"
 
 #: inc/hero-text-widget.php:152
-#, fuzzy
 msgid "Text:"
-msgstr "Tekst"
+msgstr "Tekst:"
 
 #: inc/hero-text-widget.php:157
-#, fuzzy
 msgid "Button Text:"
-msgstr "Knapper"
+msgstr "Knappetekst:"
 
 #: inc/hero-text-widget.php:162
 msgid "Button Link URL:"
-msgstr ""
+msgstr "URL-knappekobling"
 
 #: inc/hero-text-widget.php:163
 msgid "Paste URL or type to search"
-msgstr ""
+msgstr "Lim inn URL eller skriv inn for å søke"
 
 #: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
 msgid "&larr; Previous"
-msgstr ""
+msgstr "&larr; Forrige"
 
 #: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
-#, fuzzy
 msgid "Next &rarr;"
-msgstr "Nyere kommentarer &rarr;"
+msgstr "Neste &rarr;"
 
 #: inc/template-tags.php:266
 msgid "Blog"
@@ -544,7 +519,7 @@ msgstr "https://www.godaddy.com/"
 msgctxt "1. number of comments, 2. post title"
 msgid "%1$d thought on %2$s"
 msgid_plural "%1$d thoughts on %2$s"
-msgstr[0] "%1$d tanke om %2$s"
+msgstr[0] "%1$d en tanke om %2$s"
 msgstr[1] "%1$d tanker om %2$s"
 
 #: comments.php:58
@@ -575,6 +550,7 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
 "instead."
 msgstr ""
+"%1$s er <strong>avskrevet</strong> siden %2$s versjon %3$s! Bruk %4$s isteden."
 
 #: inc/compat/deprecated.php:118
 msgctxt "1. PHP function name, 2. theme name, 3. version number"
@@ -582,6 +558,8 @@ msgid ""
 "%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
 "alternative available."
 msgstr ""
+"%1$s er <strong>avskrevet</strong> siden %2$s versjon %3$s uten annet "
+"tilgjengelig alternativ."
 
 #: inc/customizer/colors.php:482
 msgctxt "color scheme name"
@@ -664,13 +642,11 @@ msgid "Search Results for: %s"
 msgstr "Søkeresultater for: %s"
 
 #: inc/hero-text-widget.php:24
-#, fuzzy
 msgctxt "theme name"
 msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr "Hero-kontrollprogrammer vises over topptekst-bildet på forsiden."
+msgstr "Et %s-temakontrollprogram designet for Hero-området på forsiden til nettstedet ditt."
 
 #: inc/hero-text-widget.php:29
-#, fuzzy
 msgctxt "the widget title"
 msgid "Hero Text"
 msgstr "Hero-tekst"
@@ -683,19 +659,17 @@ msgstr "Side %d"
 #: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
 msgctxt "1. current page number, 2. total number of pages"
 msgid "Page %1$d of %2$d"
-msgstr ""
+msgstr "Side %1$d av %2$d"
 
 #: inc/template-tags.php:153
-#, fuzzy
 msgctxt "post type singular label"
 msgid "%1$s navigation"
-msgstr "Post-navigering"
+msgstr "%1$s-navigering"
 
 #: templates/woocommerce/loop/pagination.php:43
-#, fuzzy
 msgctxt "post type singular label"
 msgid "%s navigation"
-msgstr "Post-navigering"
+msgstr "%s-navigering"
 
 #: templates/parts/credit.php:49
 msgctxt "1. theme name link, 2. theme author link"
