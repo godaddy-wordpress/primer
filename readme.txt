@@ -64,6 +64,18 @@ Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 == Changelog ==
 
+= 1.7.0 =
+* New: Enabled video headers and introduced styles to accommodate full width video headers. @props [evanherman](https://github.com/EvanHerman)
+* New: Introduced new `primer_pre_hero` action. @props [evanherman](https://github.com/EvanHerman)
+* New: Added aria labels on the 'Continue Reading' links for `a11y` improvements. @props [evanherman](https://github.com/EvanHerman)
+* New: Introduced `primer_wc_product_header_image` filter. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Improved WooCommerce styles. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Tweak i18n functions, added translator comments. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Introduced Ninja Form response message styles. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Ensure color schemes work with custom Primer child themes. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Tweaked the WooCommerce product template title. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Prevent WooCommerce single product images from hijacking the header image. @props [evanherman](https://github.com/EvanHerman)
+
 = 1.6.0 =
 * New: Hero Text widget designed for your site's front page @props [jonathanbardo](https://github.com/jonathanbardo), [fjarrett](https://github.com/fjarrett)
 * Tweak: Improved posts pagination design based on core pagination @props [fjarrett](https://github.com/fjarrett), [evanherman](https://github.com/EvanHerman)

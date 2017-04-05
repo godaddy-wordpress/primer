@@ -68,7 +68,8 @@ class Primer_Site_Identity_Options {
 				'sanitize_callback'    => 'wp_kses_post',
 				'sanitize_js_callback' => 'wp_kses_post',
 				'default'              => sprintf(
-					esc_html_x( 'Copyright %1$s %2$d %3$s', '1. copyright symbol, 2. year, 3. site title', 'primer' ),
+					/* translators: 1. copyright symbol, 2. year, 3. site title */
+					esc_html__( 'Copyright %1$s %2$d %3$s', 'primer' ),
 					'&copy;',
 					date( 'Y' ),
 					get_bloginfo( 'blogname' )

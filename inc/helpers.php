@@ -42,7 +42,8 @@ function primer_get_the_page_title() {
 		case is_search() :
 
 			$title = sprintf(
-				esc_html_x( 'Search Results for: %s', 'search term', 'primer' ),
+				/* translators: search term */
+				esc_html__( 'Search Results for: %s', 'primer' ),
 				sprintf(
 					'<span>%s</span>',
 					get_search_query()
@@ -478,6 +479,7 @@ function primer_has_footer_menu() {
  * can be called frequently without any performance concern.
  *
  * @see   primer_has_active_categories_reset()
+ *
  * @since 1.0.0
  *
  * @uses [get_transient](https://developer.wordpress.org/reference/functions/get_transient/)
@@ -561,6 +563,7 @@ function primer_hex2rgb( $color ) {
  *
  * @author Frankie Jarrett <fjarrett@gmail.com>
  * @link   https://secure.php.net/manual/en/function.array-replace-recursive.php
+ *
  * @since  1.0.0
  *
  * @param  array $array1    The array in which elements are replaced.
@@ -617,6 +620,7 @@ function primer_array_replace_recursive( array $array1, array $array2 ) {
  * Render a widget in the output buffer and return the markup.
  *
  * @since 1.5.0
+ *
  * @uses  [the_widget](https://developer.wordpress.org/reference/functions/the_widget/) To render the widget.
  *
  * @param  string $widget   The widget's PHP class name.
@@ -632,5 +636,32 @@ function primer_get_the_widget( $widget, $instance = array(), $args = array() ) 
 	the_widget( $widget, $instance, $args );
 
 	return ob_get_clean();
+
+}
+
+/**
+ * Check if the current theme is Primer or direct Primer child theme
+ *
+ * @since NEXT
+ *
+ * @uses  [wp_get_theme](https://developer.wordpress.org/reference/functions/wp_get_theme/) To retreive the current theme data.
+ *
+ * @return boolean True if Primer or custom Primer child theme, otherwise false
+ */
+function is_custom_primer_child() {
+
+	$theme = wp_get_theme();
+
+	return ( ! is_child_theme() || ! in_array( $theme->get( 'Name' ), array(
+		'Activation',
+		'Ascension',
+		'Escapade',
+		'Mins',
+		'Scribbles',
+		'Stout',
+		'Lyrical',
+		'Uptown Style',
+		'Velux',
+	), true ) );
 
 }

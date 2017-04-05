@@ -9,7 +9,7 @@
 
 Primer is a powerful theme that brings clarity to your content in a fresh design. This is the parent for all themes in the GoDaddy Primer theme family.
 
-[![Build Status](https://travis-ci.org/godaddy/wp-primer-theme.svg?branch=master)](https://travis-ci.org/godaddy/wp-primer-theme) [![devDependencies Status](https://david-dm.org/godaddy/wp-primer-theme/master/dev-status.svg)](https://david-dm.org/godaddy/wp-primer-theme/master?type=dev) [![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/godaddy/wp-primer-theme/blob/master/license.txt) [![PHP >= 5.2](https://img.shields.io/badge/php->= 5.2-8892bf.svg)](https://secure.php.net/supported-versions.php) [![WordPress >= 4.4](https://img.shields.io/badge/wordpress->= 4.4-blue.svg)](https://wordpress.org/download/release-archive/)  
+[![Build Status](https://travis-ci.org/godaddy/wp-primer-theme.svg?branch=master)](https://travis-ci.org/godaddy/wp-primer-theme) [![devDependencies Status](https://david-dm.org/godaddy/wp-primer-theme/master/dev-status.svg)](https://david-dm.org/godaddy/wp-primer-theme/master?type=dev) [![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/godaddy/wp-primer-theme/blob/master/license.txt) [![PHP >= 5.2](https://img.shields.io/badge/php-%3E=%205.2-8892bf.svg)](https://secure.php.net/supported-versions.php) [![WordPress >= 4.4](https://img.shields.io/badge/wordpress-%3E=%204.4-blue.svg)](https://wordpress.org/download/release-archive/)  
 
 ## Description ##
 
@@ -65,6 +65,18 @@ License: Creative Commons Zero
 Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 ## Changelog ##
+
+### 1.7.0 ###
+* New: Enabled video headers and introduced styles to accommodate full width video headers. @props [evanherman](https://github.com/EvanHerman)
+* New: Introduced new `primer_pre_hero` action. @props [evanherman](https://github.com/EvanHerman)
+* New: Added aria labels on the 'Continue Reading' links for `a11y` improvements. @props [evanherman](https://github.com/EvanHerman)
+* New: Introduced `primer_wc_product_header_image` filter. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Improved WooCommerce styles. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Tweak i18n functions, added translator comments. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Introduced Ninja Form response message styles. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Ensure color schemes work with custom Primer child themes. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Tweaked the WooCommerce product template title. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Prevent WooCommerce single product images from hijacking the header image. @props [evanherman](https://github.com/EvanHerman)
 
 ### 1.6.0 ###
 * New: Hero Text widget designed for your site's front page @props [jonathanbardo](https://github.com/jonathanbardo), [fjarrett](https://github.com/fjarrett)
