@@ -1,5 +1,4 @@
 name: "GoDaddy"
 
 options:
-	versions: [1.4.1, 1.7.0]
 	activeVersion: '1.7.0'
