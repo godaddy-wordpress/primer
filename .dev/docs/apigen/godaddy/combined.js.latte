@@ -13,7 +13,7 @@ var ApiGen = ApiGen || {};
 ApiGen.config = {$config->template};
 
 {var $scripts = ['jquery.min.js', 'jquery.cookie.js', 'jquery.sprintf.js',
-                 'jquery.autocomplete.js', 'vendor.js', 'main.js']}
+                 'jquery.autocomplete.js', 'vendor.js', 'main.js', 'prism.js']}
 
 {foreach $scripts as $script}
 {file_get_contents("$basePath/js/$script")|noescape}

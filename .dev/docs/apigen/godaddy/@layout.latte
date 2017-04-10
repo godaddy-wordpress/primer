@@ -25,13 +25,13 @@ the file LICENSE.md that was distributed with this source code.
 	<link rel="stylesheet" type="text/css" href="{='resources/css/font-awesome.min.css'|staticFile}">
 	<link rel="stylesheet" type="text/css" href="{='resources/css/bootstrap.min.css'|staticFile}">
 	<link rel="stylesheet" type="text/css" href="{='resources/css/styles.css'|staticFile}">
+	<link rel="stylesheet" type="text/css" href="{='resources/css/prism.css'|staticFile}">
 	<link rel="stylesheet" type="text/css" href="{='resources/css/responsive.css'|staticFile}">
 
 	{var combinedJs = 'resources/combined.js'}
 	<script type="text/javascript" src="{$combinedJs|staticFile}"></script>
 	{var elementListJs = 'elementlist.js'}
 	<script type="text/javascript" src="{$elementListJs|staticFile}"></script>
-
 
 	<link n:if="$config->googleCseId" rel="search" type="application/opensearchdescription+xml" title="{$config->title}" href="{$config->baseUrl}/opensearch.xml">
 </head>
