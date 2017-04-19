@@ -15,7 +15,7 @@ class Primer_Customizer_Layouts {
 	 *
 	 * @var array
 	 */
-	public $layouts = array();
+	protected $layouts = array();
 
 	/**
 	 * Default layout key.
