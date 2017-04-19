@@ -443,7 +443,14 @@ function primer_register_sidebars() {
 
 	foreach ( $sidebars as $id => $args ) {
 
-		register_sidebar( array_merge( array( 'id' => $id ), $args ) );
+		register_sidebar(
+			array_merge(
+				array(
+					'id' => $id,
+				),
+				$args
+			)
+		);
 
 	}
 
@@ -481,7 +488,7 @@ function primer_scripts() {
 
 	wp_style_add_data( $stylesheet, 'rtl', 'replace' );
 
-	$nav_dependencies = ( is_front_page() && has_header_video() ) ? array( 'jquery', 'wp-custom-header' ) : array( 'jquery' );
+	$nav_dependencies = ( is_front_page() && ( function_exists( 'has_header_video' ) && has_header_video() ) ) ? array( 'jquery', 'wp-custom-header' ) : array( 'jquery' );
 
 	wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", $nav_dependencies, PRIMER_VERSION, true );
 	wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), PRIMER_VERSION, true );
