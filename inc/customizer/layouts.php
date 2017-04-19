@@ -15,7 +15,7 @@ class Primer_Customizer_Layouts {
 	 *
 	 * @var array
 	 */
-	protected $layouts = array();
+	public $layouts = array();
 
 	/**
 	 * Default layout key.
@@ -172,7 +172,9 @@ class Primer_Customizer_Layouts {
 		 *
 		 * @var array
 		 */
-		$post_types = (array) apply_filters( 'primer_layouts_post_types', get_post_types( array( 'public' => true ) ) );
+		$post_types = (array) apply_filters( 'primer_layouts_post_types', get_post_types( array(
+			'public' => true,
+		) ) );
 
 		foreach ( $post_types as $post_type ) {
 
@@ -561,6 +563,27 @@ class Primer_Customizer_Layouts {
 		$layout = (string) apply_filters( 'primer_current_layout', $layout, $post );
 
 		return $this->layout_exists( $layout ) ? $layout : $this->default;
+
+	}
+
+	/**
+	 * Magic getter for `$colors` and `$color_schemes` properties.
+	 *
+	 * @since  1.0.0
+	 *
+	 * @param  string $name Color key or color scheme slug name.
+	 *
+	 * @return string Return the specified property within the `Primer_Customizer_Colors` class.
+	 */
+	public function __get( $name ) {
+
+		if ( ! in_array( $name, array( 'layouts', 'default', 'meta_box', 'page_widths' ), true ) ) {
+
+			return false;
+
+		}
+
+		return $this->$name;
 
 	}
 
