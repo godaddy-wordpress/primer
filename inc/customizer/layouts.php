@@ -573,7 +573,7 @@ class Primer_Customizer_Layouts {
 	 *
 	 * @param  string $name Name of private property to retreive.
 	 *
-	 * @return string Return the specified property within the `Primer_Customizer_Colors` class.
+	 * @return string Return the specified property within the `Primer_Customizer_Layouts` class.
 	 */
 	public function __get( $name ) {
 
