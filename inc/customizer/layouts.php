@@ -569,21 +569,17 @@ class Primer_Customizer_Layouts {
 	/**
 	 * Magic getter for `$colors` and `$color_schemes` properties.
 	 *
-	 * @since  1.0.0
+	 * @since  NEXT
 	 *
-	 * @param  string $name Color key or color scheme slug name.
+	 * @param  string $name Name of private property to retreive.
 	 *
 	 * @return string Return the specified property within the `Primer_Customizer_Colors` class.
 	 */
 	public function __get( $name ) {
 
-		if ( ! in_array( $name, array( 'layouts', 'default', 'meta_box', 'page_widths' ), true ) ) {
+		$properties = array( 'layouts', 'default', 'meta_box', 'page_widths' );
 
-			return false;
-
-		}
-
-		return $this->$name;
+		return in_array( $name, $properties, true ) ? $this->name : false;
 
 	}
 
