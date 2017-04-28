@@ -59,7 +59,8 @@ function primer_the_custom_logo() {
 function primer_the_site_title() {
 
 	$html = sprintf(
-		'<h1 class="site-title"><a href="%s" rel="home">%s</a></h1>',
+		'<%1$s class="site-title"><a href="%2$s" rel="home">%3$s</a></%1$s>',
+		(string) apply_filters( 'primer_site_title_wrap', 'div' ),
 		esc_url( home_url( '/' ) ),
 		get_bloginfo( 'name' )
 	);

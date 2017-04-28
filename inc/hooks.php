@@ -24,6 +24,19 @@ function primer_elements() {
 
 	if ( ( is_front_page() && (bool) get_post_meta( get_queried_object_id(), '_fl_builder_enabled', true ) ) || is_home() ) {
 
+		/**
+		 * Wrap the site title in <h1> tags
+		 *
+		 * @since  NEXT
+		 *
+		 * @return string Site title wrap element.
+		 */
+		add_filter( 'primer_site_title_wrap', function( $wrap ) {
+
+			return 'h1';
+
+		}, PHP_INT_MAX );
+
 		remove_action( 'primer_after_header', 'primer_add_page_title', 12 );
 
 	}
