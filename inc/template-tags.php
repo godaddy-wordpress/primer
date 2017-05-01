@@ -102,13 +102,22 @@ function primer_the_site_description() {
 /**
  * Display a page title.
  *
+ * @param string $wrap The element to wrap the title with.
+ *
  * @since 1.0.0
  */
-function primer_the_page_title() {
+function primer_the_page_title( $wrap = 'h1' ) {
 
-	if ( $title = primer_get_the_page_title() ) {
+	$title = primer_get_the_page_title();
 
-		echo $title; // xss ok.
+	if ( $title ) {
+
+		printf(
+			'<%1$s class="page-title">%2$s</%3$s>',
+			esc_attr( $wrap ),
+			esc_html( $title ),
+			esc_attr( $wrap )
+		); // xss ok.
 
 	}
 

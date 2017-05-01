@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Theme Name: Primer
  * Theme URI: https://github.com/godaddy/wp-primer-theme
@@ -1700,7 +1701,7 @@ body.no-max-width .site-header-wrapper {
       content: " ";
       display: block;
       clear: both; }
-    .page-title-container .page-header h1 {
+    .page-title-container .page-header .page-title {
       width: 97.22222%;
       float: right;
       margin-right: 1.38889%;
