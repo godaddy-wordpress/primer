@@ -60,7 +60,7 @@ function primer_the_site_title() {
 
 	$html = sprintf(
 		'<%1$s class="site-title"><a href="%2$s" rel="home">%3$s</a></%1$s>',
-		(string) apply_filters( 'primer_site_title_wrap', 'div' ),
+		(string) apply_filters( 'primer_site_title_wrapper', 'div' ),
 		esc_url( home_url( '/' ) ),
 		get_bloginfo( 'name' )
 	);
@@ -102,13 +102,20 @@ function primer_the_site_description() {
 /**
  * Display a page title.
  *
- * @param string $wrap The element to wrap the title with.
- *
  * @since 1.0.0
  */
-function primer_the_page_title( $wrap = 'h1' ) {
+function primer_the_page_title() {
 
 	$title = primer_get_the_page_title();
+
+	/**
+	 * The page title element wrap.
+	 *
+	 * @var   string
+	 *
+	 * @since NEXT
+	 */
+	$wrap  = (string) apply_filters( 'primer_page_title_wrapper', 'h1' );
 
 	if ( $title ) {
 

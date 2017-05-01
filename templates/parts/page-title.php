@@ -21,7 +21,7 @@
 		 */
 		do_action( 'primer_before_page_title' );
 
-		primer_the_page_title( 'h2' );
+		primer_the_page_title();
 
 		/**
 		 * Fires after the page title element.
