@@ -194,15 +194,15 @@
 
 			hex = value.replace( '#', '' );
 
-			var r   = parseInt( hex.substring( 0, 2 ), 16 ),
-			    g   = parseInt( hex.substring( 2, 4 ), 16 ),
-			    b   = parseInt( hex.substring( 4, 6 ), 16 );
+			var r = parseInt( hex.substring( 0, 2 ), 16 ),
+			    g = parseInt( hex.substring( 2, 4 ), 16 ),
+			    b = parseInt( hex.substring( 4, 6 ), 16 );
 
 			return r + ', ' + g + ', ' + b;
 
 		}
 
-		var rgb   = value.match( /^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i );
+		var rgb = value.match( /^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i );
 
 		return ( rgb && rgb.length === 4 ) ? '#' +
 		        ( '0' + parseInt( rgb[1], 10 ).toString( 16 ) ).slice( -2 ) +
