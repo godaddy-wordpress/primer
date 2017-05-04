@@ -19,6 +19,35 @@
 
 	} );
 
+	/**
+	 * Pull primary color from the selected image
+	 * and  set it as the 'hero_background_color'.
+	 *
+	 * @uses  ColorThief
+	 *
+	 * @since NEXT
+	 */
+	function dynamicHeroBackgroundColor() {
+
+		var $targetimage = $( '.current' ).find( 'img' ),
+		    colorThief   = new ColorThief(),
+		    rbgArr       = colorThief.getColor( $targetimage[0] ),
+		    color        = convertColor( 'hex', 'rgb( ' + rbgArr[0] + ', ' + rbgArr[1] + ', ' + rbgArr[2] + ' )' );
+
+		api( 'hero_background_color' ).set( color );
+
+		wp.media.frame.off( 'cropped',     dynamicHeroBackgroundColor );
+		wp.media.frame.off( 'skippedcrop', dynamicHeroBackgroundColor );
+
+	}
+
+	$( document ).on( 'click', '#header_image-button', function() {
+
+		wp.media.frame.on( 'cropped',      dynamicHeroBackgroundColor );
+		wp.media.frame.on( 'skippedcrop',  dynamicHeroBackgroundColor );
+
+	} );
+
 	api.HeaderTool.CurrentView = api.HeaderTool.CurrentView.extend( {
 
 		setPlaceholder: function() {
@@ -29,12 +58,7 @@
 
 			}
 
-			var $targetimage = $( '.current' ).find( 'img' ),
-			    colorThief   = new ColorThief(),
-			    rbgArr       = colorThief.getColor( $targetimage[0] ),
-			    color        = convertColor( 'hex', 'rgb( ' + rbgArr[0] + ', ' + rbgArr[1] + ', ' + rbgArr[2] + ' )' );
-
-			api( 'hero_background_color' ).set( color );
+			dynamicHeroBackgroundColor( wp.customize );
 
 		}
 
