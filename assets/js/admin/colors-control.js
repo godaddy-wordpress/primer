@@ -19,6 +19,27 @@
 
 	} );
 
+	api.HeaderTool.CurrentView = api.HeaderTool.CurrentView.extend( {
+
+		setPlaceholder: function() {
+
+			if ( ! $( '.current' ).find( 'img' ).length || 0 === $( '.current' ).find( 'img' ).width() ) {
+
+				return;
+
+			}
+
+			var $targetimage = $( '.current' ).find( 'img' ),
+			    colorThief   = new ColorThief(),
+			    rbgArr       = colorThief.getColor( $targetimage[0] ),
+			    color        = convertColor( 'hex', 'rgb( ' + rbgArr[0] + ', ' + rbgArr[1] + ', ' + rbgArr[2] + ' )' );
+
+			api( 'hero_background_color' ).set( color );
+
+		}
+
+	} );
+
 	api.controlConstructor.select = api.Control.extend( {
 
 		ready: function() {
@@ -119,7 +140,7 @@
 			hex = hex();
 
 			colors[ setting ]     = hex;
-			rgbaColors[ setting ] = hex2rgb( hex );
+			rgbaColors[ setting ] = convertColor( 'rgb', hex );
 
 		} );
 
@@ -134,16 +155,27 @@
 
 	}
 
-	// Convert a HEX color to RGB.
-	function hex2rgb( hex ) {
+	// Convert a hex/rgb value to rgb/hex
+	function convertColor( return_type, value ) {
 
-		hex = hex.replace( '#', '' );
+		if ( 'rgb' === return_type ) {
 
-		var r   = parseInt( hex.substring( 0, 2 ), 16 ),
-		    g   = parseInt( hex.substring( 2, 4 ), 16 ),
-		    b   = parseInt( hex.substring( 4, 6 ), 16 );
+			hex = value.replace( '#', '' );
 
-		return r + ', ' + g + ', ' + b;
+			var r   = parseInt( hex.substring( 0, 2 ), 16 ),
+			    g   = parseInt( hex.substring( 2, 4 ), 16 ),
+			    b   = parseInt( hex.substring( 4, 6 ), 16 );
+
+			return r + ', ' + g + ', ' + b;
+
+		}
+
+		var rgb   = value.match( /^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i );
+
+		return ( rgb && rgb.length === 4 ) ? '#' +
+		        ( '0' + parseInt( rgb[1], 10 ).toString( 16 ) ).slice( -2 ) +
+		        ( '0' + parseInt( rgb[2], 10 ).toString( 16 ) ).slice( -2 ) +
+		        ( '0' + parseInt( rgb[3], 10 ).toString( 16 ) ).slice( -2 ) : false;
 
 	}
 

@@ -102,8 +102,6 @@ figure {
   margin: 1em 40px; }
 
 hr {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
   overflow: visible; }
@@ -151,8 +149,6 @@ fieldset {
   padding: 0.35em 0.625em 0.75em; }
 
 legend {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: inherit;
   display: table;
@@ -165,8 +161,6 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0; }
 
@@ -273,7 +267,6 @@ pre {
   overflow: auto;
   padding: 1em;
   border: 1px solid rgba(37, 37, 37, 0.1);
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
 
 code, kbd, tt, var {
@@ -285,7 +278,6 @@ code {
   padding: 0.125rem 0.25rem;
   background-color: rgba(225, 225, 225, 0.5);
   border: 1px solid rgba(37, 37, 37, 0.1);
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
 
 pre code {
@@ -305,16 +297,12 @@ big {
   font-size: 125%; }
 
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 *,
 *:before,
 *:after {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
 body {
@@ -416,7 +404,6 @@ textarea,
 .select2-container .select2-choice {
   color: rgba(37, 37, 37, 0.5);
   border: 1px solid rgba(37, 37, 37, 0.1);
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 0.75rem;
   resize: none;
@@ -484,7 +471,6 @@ input[type="reset"],
 input[type="submit"] {
   display: inline-block;
   border: none;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   background-color: #ff6663;
   color: #ffffff;

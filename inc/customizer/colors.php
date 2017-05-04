@@ -996,7 +996,9 @@ class Primer_Customizer_Colors {
 
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-		wp_enqueue_script( 'primer-colors-control', get_template_directory_uri() . "/assets/js/admin/colors-control{$suffix}.js", array( 'customize-controls', 'iris', 'underscore', 'wp-util' ), PRIMER_VERSION, true );
+		wp_enqueue_script( 'color-thief', get_template_directory_uri() . "/assets/js/admin/color-thief{$suffix}.js", array(), '2.0', true );
+
+		wp_enqueue_script( 'primer-colors-control', get_template_directory_uri() . "/assets/js/admin/colors-control{$suffix}.js", array( 'customize-controls', 'iris', 'underscore', 'wp-util', 'color-thief' ), PRIMER_VERSION, true );
 
 		wp_localize_script( 'primer-colors-control', 'colorSchemes', $this->color_schemes );
 
