@@ -155,10 +155,18 @@
 
 	}
 
-	// Convert a hex/rgb value to rgb/hex
-	function convertColor( return_type, value ) {
 
-		if ( 'rgb' === return_type ) {
+	/**
+	 * Convert an rgb to hex, or hex to rgb
+	 *
+	 * @param  string returnType The type to return. rgb|hex.
+	 * @param  string value      The value to convert. #123456|rbg(0,0,0)
+	 *
+	 * @return string            The converted hex/rgb value.
+	 */
+	function convertColor( returnType, value ) {
+
+		if ( 'rgb' === returnType ) {
 
 			hex = value.replace( '#', '' );
 
