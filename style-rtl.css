@@ -2448,16 +2448,27 @@ li.primer-wc-cart-menu .primer-wc-cart-sub-menu {
 #bbpress-forums #bbp-search-form #bbp_search {
   padding: 0.3em; }
 
-#bbp-search-form {
-  margin-bottom: 10px; }
-
 #bbpress-forums p.bbp-topic-meta img.avatar,
 #bbpress-forums div.bbp-template-notice img.avatar {
   margin-bottom: -3px; }
+
+#bbpress-forums div.wp-editor-container {
+  border: 1px solid whitesmoke; }
+
+#bbp-search-form {
+  margin-bottom: 10px; }
+  #bbp-search-form #bbp_search {
+    width: -webkit-calc(100% - 87.63px);
+    width: calc(100% - 87.63px);
+    padding: 0.32em; }
 
 .subscription-toggle {
   float: left;
   margin: 12px 0 10px 0; }
 
-#bbpress-forums div.wp-editor-container {
-  border: 1px solid whitesmoke; }
+.bbp-login-form label,
+.bbp-login-form .bbp-username input,
+.bbp-login-form .bbp-email input,
+.bbp-login-form .bbp-password input {
+  display: block;
+  width: 100%; }
