@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Theme Name: Primer
  * Theme URI: https://github.com/godaddy/wp-primer-theme
@@ -2443,3 +2444,20 @@ li.primer-wc-cart-menu .primer-wc-cart-sub-menu {
     width: 100%; }
   ul.cart_list li.mini_cart_item a:nth-child(2) {
     padding-bottom: 0; } }
+
+#bbpress-forums #bbp-search-form #bbp_search {
+  padding: 0.3em; }
+
+#bbp-search-form {
+  margin-bottom: 10px; }
+
+#bbpress-forums p.bbp-topic-meta img.avatar,
+#bbpress-forums div.bbp-template-notice img.avatar {
+  margin-bottom: -3px; }
+
+.subscription-toggle {
+  float: right;
+  margin: 12px 0 10px 0; }
+
+#bbpress-forums div.wp-editor-container {
+  border: 1px solid whitesmoke; }
