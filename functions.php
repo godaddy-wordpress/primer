@@ -443,14 +443,7 @@ function primer_register_sidebars() {
 
 	foreach ( $sidebars as $id => $args ) {
 
-		register_sidebar(
-			array_merge(
-				array(
-					'id' => $id,
-				),
-				$args
-			)
-		);
+		register_sidebar( array_merge( array( 'id' => $id ), $args ) );
 
 	}
 
