@@ -172,9 +172,7 @@ class Primer_Customizer_Layouts {
 		 *
 		 * @var array
 		 */
-		$post_types = (array) apply_filters( 'primer_layouts_post_types', get_post_types( array(
-			'public' => true,
-		) ) );
+		$post_types = (array) apply_filters( 'primer_layouts_post_types', get_post_types( array( 'public' => true ) ) );
 
 		foreach ( $post_types as $post_type ) {
 
