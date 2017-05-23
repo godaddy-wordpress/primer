@@ -576,7 +576,9 @@ function primer_array_replace_recursive( array $array1, array $array2 ) {
 
 	if ( function_exists( 'array_replace_recursive' ) ) {
 
-		return call_user_func_array( 'array_replace_recursive', func_get_args() );
+		$args = func_get_args();
+
+		return call_user_func_array( 'array_replace_recursive', $args );
 
 	}
 
