@@ -59,7 +59,8 @@ function primer_the_custom_logo() {
 function primer_the_site_title() {
 
 	$html = sprintf(
-		'<h1 class="site-title"><a href="%s" rel="home">%s</a></h1>',
+		'<%1$s class="site-title"><a href="%2$s" rel="home">%3$s</a></%1$s>',
+		(string) apply_filters( 'primer_site_title_wrapper', 'div' ),
 		esc_url( home_url( '/' ) ),
 		get_bloginfo( 'name' )
 	);
@@ -105,9 +106,25 @@ function primer_the_site_description() {
  */
 function primer_the_page_title() {
 
-	if ( $title = primer_get_the_page_title() ) {
+	$title = primer_get_the_page_title();
 
-		echo $title; // xss ok.
+	/**
+	 * The page title element wrap.
+	 *
+	 * @var   string
+	 *
+	 * @since NEXT
+	 */
+	$wrap  = (string) apply_filters( 'primer_page_title_wrapper', 'h1' );
+
+	if ( $title ) {
+
+		printf(
+			'<%1$s class="page-title">%2$s</%3$s>',
+			esc_attr( $wrap ),
+			esc_html( $title ),
+			esc_attr( $wrap )
+		); // xss ok.
 
 	}
 

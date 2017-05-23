@@ -83,7 +83,7 @@ function primer_get_the_page_title() {
 
 			break;
 
-	}
+	} // End switch().
 
 	/**
 	 * Filter the page title.

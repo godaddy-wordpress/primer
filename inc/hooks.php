@@ -424,6 +424,48 @@ function primer_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'primer_wp_title', 10, 2 );
 
 /**
+ * Filter the site title HTML wrapper.
+ *
+ * @filter  primer_site_title_wrapper
+ *
+ * @since  NEXT
+ *
+ * @param  string $element HTML element to wrap the site title with.
+ *
+ * @return string          The site title wrapper.
+ */
+function primer_site_title_wrapper( $element ) {
+
+	if ( ( is_front_page() && (bool) get_post_meta( get_queried_object_id(), '_fl_builder_enabled', true ) ) || is_home() ) {
+
+		return 'h1';
+
+	}
+
+	return $element;
+
+}
+add_filter( 'primer_site_title_wrapper', 'primer_site_title_wrapper' );
+
+/**
+ * Filter the page title HTML wrapper.
+ *
+ * @filter  primer_page_title_wrapper
+ *
+ * @since  NEXT
+ *
+ * @param  string $element HTML element to wrap the page title with.
+ *
+ * @return string          The page title wrapper.
+ */
+function primer_page_title_wrapper( $element ) {
+
+	return ! is_single() ? $element : 'h2';
+
+}
+add_filter( 'primer_page_title_wrapper', 'primer_page_title_wrapper' );
+
+/**
  * Customize the default pagination links template.
  *
  * @filter navigation_markup_template

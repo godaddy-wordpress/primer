@@ -201,6 +201,24 @@ function primer_wc_shop_title( $title ) {
 add_filter( 'primer_the_page_title', 'primer_wc_shop_title' );
 
 /**
+ * Filter the WooCommerce shop page title element.
+ *
+ * @filter primer_page_title_wrapper
+ *
+ * @since  NEXT
+ *
+ * @param  string $element  The html element to wrap the page title with.
+ *
+ * @return string           Returns the page title wrap
+ */
+function primer_wc_product_page_title_wrapper( $element ) {
+
+	return is_product() ? 'h2' : $element;
+
+}
+add_filter( 'primer_page_title_wrapper', 'primer_wc_product_page_title_wrapper' );
+
+/**
  * Change the number of shop columns based on the Primer layout.
  *
  * @filter loop_shop_columns
