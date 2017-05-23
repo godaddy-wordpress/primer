@@ -39,7 +39,7 @@ add_action( 'template_redirect', 'primer_elements' );
  */
 function primer_video_header() {
 
-	if ( ! is_front_page() || ! has_header_video() ) {
+	if ( ! is_front_page() || ! function_exists( 'has_header_video' ) || ! has_header_video() ) {
 
 		return;
 
