@@ -1669,6 +1669,7 @@ body.no-max-width .site-header-wrapper {
   padding: 6% 1rem; }
   @media only screen and (max-width: 40.063em) {
     .site-title-wrapper {
+      max-width: 87.22222%;
       padding-left: 0.75rem;
       padding-right: 0.75rem; } }
 
