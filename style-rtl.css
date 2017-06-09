@@ -770,7 +770,6 @@ a {
       width: 100%;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
     .main-navigation .search-form input[type="submit"] {
-      background: transparent url("assets/images/search-icon.svg") no-repeat center bottom;
       -webkit-background-size: 17px 17px;
       background-size: 17px;
       display: block;
@@ -1669,6 +1668,7 @@ body.no-max-width .site-header-wrapper {
   padding: 6% 1rem; }
   @media only screen and (max-width: 40.063em) {
     .site-title-wrapper {
+      max-width: 87.22222%;
       padding-right: 0.75rem;
       padding-left: 0.75rem; } }
 
