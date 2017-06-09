@@ -770,7 +770,6 @@ a {
       width: 100%;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
     .main-navigation .search-form input[type="submit"] {
-      background: transparent url("assets/images/search-icon.svg") no-repeat center bottom;
       -webkit-background-size: 17px 17px;
       background-size: 17px;
       display: block;
