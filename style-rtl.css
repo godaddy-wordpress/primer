@@ -1700,6 +1700,7 @@ body.no-max-width .site-header-wrapper {
       content: " ";
       display: block;
       clear: both; }
+    .page-title-container .page-header h1,
     .page-title-container .page-header .page-title {
       width: 97.22222%;
       float: right;
