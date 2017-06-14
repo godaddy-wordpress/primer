@@ -37,10 +37,17 @@ function primer_the_custom_logo() {
 
 	}
 
-	$args = array(
+	/**
+	 * Filter the custom logo display args.
+	 *
+	 * @since NEXT
+	 *
+	 * @var array
+	 */
+	$args = (array) apply_filters( 'primer_the_custom_logo_args', array(
 		'class'    => 'custom-logo',
 		'itemprop' => 'logo',
-	);
+	) );
 
 	printf( // xss ok.
 		'<a href="%1$s" class="custom-logo-link" %2$s>%3$s</a>',
@@ -59,29 +66,61 @@ function primer_the_custom_logo() {
 function primer_the_site_title() {
 
 	/**
-	 * The site title HTML element.
+	 * Filter the site title display args.
 	 *
 	 * @since NEXT
 	 *
-	 * @var   string
+	 * @var array
 	 */
-	$wrap = (string) apply_filters( 'primer_site_title_wrapper', 'div' );
+	$args = (array) apply_filters( 'primer_the_site_title_args', array(
+		'wrapper'   => 'div',
+		'atts'      => array( 'class' => 'site-title' ),
+		'url'       => home_url( '/' ),
+		'link_atts' => array( 'rel' => 'home' ),
+		'title'     => get_bloginfo( 'name' ),
+	) );
+
+	if ( empty( $args['title'] ) ) {
+
+		return;
+
+	}
+
+	$args['atts'] = empty( $args['atts'] ) ? array() : (array) $args['atts'];
+
+	foreach ( $args['atts'] as $key => &$value ) {
+
+		$value = sprintf( '%s="%s"', sanitize_key( $key ), esc_html( $value ) );
+
+	}
+
+	$args['link_atts'] = empty( $args['link_atts'] ) ? array() : (array) $args['link_atts'];
+
+	foreach ( $args['link_atts'] as $key => &$value ) {
+
+		$value = sprintf( '%s="%s"', sanitize_key( $key ), esc_html( $value ) );
+
+	}
 
 	$html = sprintf(
-		'<%1$s class="site-title"><a href="%2$s" rel="home">%3$s</a></%1$s>',
-		$wrap,
-		esc_url( home_url( '/' ) ),
-		get_bloginfo( 'name' )
+		'<a href="%s" %s>%s</a>',
+		esc_url( $args['url'] ),
+		implode( ' ', $args['link_atts'] ),
+		$args['title']
 	);
 
-	/**
-	 * Filter the site title HTML.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @var string
-	 */
-	echo (string) apply_filters( 'primer_the_site_title', $html ); // xss ok.
+	if ( ! empty( $args['wrapper'] ) ) {
+
+		$html = sprintf(
+			'<%1$s %2$s>%3$s</%1$s>',
+			sanitize_key( $args['wrapper'] ),
+			implode( ' ', $args['atts'] ),
+			$html
+		);
+
+	}
+
+	echo $html; // xss ok.
 
 }
 
@@ -92,50 +131,98 @@ function primer_the_site_title() {
  */
 function primer_the_site_description() {
 
-	$html = sprintf(
-		'<div class="site-description">%s</div>',
-		get_bloginfo( 'description' )
-	);
-
 	/**
-	 * Filter the site description HTML.
+	 * Filter the site description display args.
 	 *
-	 * @since 1.0.0
+	 * @since NEXT
 	 *
-	 * @var string
+	 * @var array
 	 */
-	echo (string) apply_filters( 'primer_the_site_description', $html ); // xss ok.
+	$args = (array) apply_filters( 'primer_the_site_description_args', array(
+		'wrapper'     => 'div',
+		'atts'        => array( 'class' => 'site-description' ),
+		'description' => get_bloginfo( 'description' ),
+	) );
+
+	if ( empty( $args['description'] ) ) {
+
+		return;
+
+	}
+
+	$args['atts'] = empty( $args['atts'] ) ? array() : (array) $args['atts'];
+
+	foreach ( $args['atts'] as $key => &$value ) {
+
+		$value = sprintf( '%s="%s"', sanitize_key( $key ), esc_html( $value ) );
+
+	}
+
+	$html = $args['description'];
+
+	if ( ! empty( $args['wrapper'] ) ) {
+
+		$html = sprintf(
+			'<%1$s %2$s>%3$s</%1$s>',
+			sanitize_key( $args['wrapper'] ),
+			implode( ' ', $args['atts'] ),
+			$html
+		);
+
+	}
+
+	echo $html; // xss ok.
 
 }
 
 /**
- * Display a page title.
+ * Display the page title.
  *
  * @since 1.0.0
  */
 function primer_the_page_title() {
 
-	$title = primer_get_the_page_title();
-
 	/**
-	 * The page title element wrap.
-	 *
-	 * @var   string
+	 * Filter the page title display args.
 	 *
 	 * @since NEXT
+	 *
+	 * @var array
 	 */
-	$wrap  = (string) apply_filters( 'primer_page_title_wrapper', 'h1' );
+	$args = (array) apply_filters( 'primer_the_page_title_args', array(
+		'wrapper' => 'h1',
+		'atts'    => array( 'class' => 'page-title' ),
+		'title'   => primer_get_the_page_title(),
+	) );
 
-	if ( $title ) {
+	if ( empty( $args['title'] ) ) {
 
-		printf(
-			'<%1$s class="page-title">%2$s</%3$s>',
-			esc_attr( $wrap ),
-			esc_html( $title ),
-			esc_attr( $wrap )
-		); // xss ok.
+		return;
 
 	}
+
+	$args['atts'] = empty( $args['atts'] ) ? array() : (array) $args['atts'];
+
+	foreach ( $args['atts'] as $key => &$value ) {
+
+		$value = sprintf( '%s="%s"', sanitize_key( $key ), esc_html( $value ) );
+
+	}
+
+	$html = esc_html( $args['title'] );
+
+	if ( ! empty( $args['wrapper'] ) ) {
+
+		$html = sprintf(
+			'<%1$s %2$s>%3$s</%1$s>',
+			sanitize_key( $args['wrapper'] ),
+			implode( ' ', $args['atts'] ),
+			$html
+		);
+
+	}
+
+	echo $html; // xss ok.
 
 }
 

@@ -426,44 +426,48 @@ add_filter( 'wp_title', 'primer_wp_title', 10, 2 );
 /**
  * Filter the site title HTML wrapper.
  *
- * @filter  primer_site_title_wrapper
- *
+ * @filter primer_the_site_title_args
  * @since  NEXT
  *
- * @param  string $element HTML element to wrap the site title with.
+ * @param  array args
  *
- * @return string          The site title wrapper.
+ * @return array
  */
-function primer_site_title_wrapper( $element ) {
+function primer_the_site_title_wrapper( $args ) {
 
-	if ( ( is_front_page() && (bool) get_post_meta( get_queried_object_id(), '_fl_builder_enabled', true ) ) || is_home() ) {
+	if ( is_home() || ( is_front_page() && (bool) get_post_meta( get_queried_object_id(), '_fl_builder_enabled', true ) ) ) {
 
-		return 'h1';
+		$args['wrapper'] = 'h1';
 
 	}
 
-	return $element;
+	return $args;
 
 }
-add_filter( 'primer_site_title_wrapper', 'primer_site_title_wrapper' );
+add_filter( 'primer_the_site_title_args', 'primer_the_site_title_wrapper' );
 
 /**
  * Filter the page title HTML wrapper.
  *
- * @filter  primer_page_title_wrapper
- *
+ * @filter primer_the_page_title_args
  * @since  NEXT
  *
- * @param  string $element HTML element to wrap the page title with.
+ * @param  array $args
  *
- * @return string          The page title wrapper.
+ * @return array
  */
-function primer_page_title_wrapper( $element ) {
+function primer_page_title_wrapper( $args ) {
 
-	return ! is_single() ? $element : 'h2';
+	if ( is_single() ) {
+
+		$args['wrapper'] = 'h2';
+
+	}
+
+	return $args;
 
 }
-add_filter( 'primer_page_title_wrapper', 'primer_page_title_wrapper' );
+add_filter( 'primer_the_page_title_args', 'primer_the_page_title_wrapper' );
 
 /**
  * Customize the default pagination links template.
