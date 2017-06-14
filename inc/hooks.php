@@ -456,7 +456,7 @@ add_filter( 'primer_the_site_title_args', 'primer_the_site_title_wrapper' );
  *
  * @return array
  */
-function primer_page_title_wrapper( $args ) {
+function primer_the_page_title_wrapper( $args ) {
 
 	if ( is_single() ) {
 
