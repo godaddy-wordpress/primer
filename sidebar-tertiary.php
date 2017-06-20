@@ -8,7 +8,7 @@
  * @since   1.0.0
  */
 
-if ( ! primer_layout_has_sidebar() || ! is_active_sidebar( 'sidebar-2' ) || 0 === strpos( primer_get_layout(), 'three-column-' ) ) {
+if ( ! primer_layout_has_sidebar() || ! is_active_sidebar( 'sidebar-2' ) || 0 !== strpos( primer_get_layout(), 'three-column' ) ) {
 
 	return;
 
