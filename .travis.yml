@@ -36,6 +36,7 @@ install:
   - source $DEV_LIB_PATH/travis.install.sh
   - curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
   - chmod +x /tmp/wp-cli.phar
+  - phpcs --version
 
 script:
   - source $DEV_LIB_PATH/travis.script.sh
