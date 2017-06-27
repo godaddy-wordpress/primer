@@ -207,7 +207,7 @@ add_filter( 'primer_the_page_title', 'primer_wc_shop_title' );
  *
  * @since  NEXT
  *
- * @param  array $args
+ * @param  array $args The page title args.
  *
  * @return array
  */

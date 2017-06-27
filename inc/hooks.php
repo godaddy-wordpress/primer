@@ -32,7 +32,7 @@ function primer_elements() {
 add_action( 'template_redirect', 'primer_elements' );
 
 /**
- * Display video header
+ * Display the video header.
  *
  * @action primer_before_header_wrapper
  * @since  1.7.0
@@ -429,7 +429,7 @@ add_filter( 'wp_title', 'primer_wp_title', 10, 2 );
  * @filter primer_the_site_title_args
  * @since  NEXT
  *
- * @param  array args
+ * @param  array args The site title args.
  *
  * @return array
  */
@@ -452,7 +452,7 @@ add_filter( 'primer_the_site_title_args', 'primer_the_site_title_wrapper' );
  * @filter primer_the_page_title_args
  * @since  NEXT
  *
- * @param  array $args
+ * @param  array $args The page title args.
  *
  * @return array
  */
