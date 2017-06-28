@@ -119,9 +119,9 @@ add_filter( 'primer_colors', 'primer_bb_colors' );
  * Display some elements conditionally on the Beaver Builder front page (Primer only).
  *
  * @action template_redirect
- * @since  1.0.0
+ * @since  NEXT
  */
-function primer_elements() {
+function primer_bb_elements() {
 
 	if ( is_front_page() && (bool) get_post_meta( get_queried_object_id(), '_fl_builder_enabled', true ) ) {
 
