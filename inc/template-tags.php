@@ -90,7 +90,7 @@ function primer_the_site_title() {
 
 	foreach ( $args['atts'] as $key => &$value ) {
 
-		$value = sprintf( '%s="%s"', sanitize_key( $key ), esc_html( $value ) );
+		$value = sprintf( '%s="%s"', sanitize_key( $key ), esc_attr( $value ) );
 
 	}
 
@@ -98,7 +98,7 @@ function primer_the_site_title() {
 
 	foreach ( $args['link_atts'] as $key => &$value ) {
 
-		$value = sprintf( '%s="%s"', sanitize_key( $key ), esc_html( $value ) );
+		$value = sprintf( '%s="%s"', sanitize_key( $key ), esc_attr( $value ) );
 
 	}
 
@@ -161,7 +161,7 @@ function primer_the_site_description() {
 
 	foreach ( $args['atts'] as $key => &$value ) {
 
-		$value = sprintf( '%s="%s"', sanitize_key( $key ), esc_html( $value ) );
+		$value = sprintf( '%s="%s"', sanitize_key( $key ), esc_attr( $value ) );
 
 	}
 
@@ -219,7 +219,7 @@ function primer_the_page_title() {
 
 	foreach ( $args['atts'] as $key => &$value ) {
 
-		$value = sprintf( '%s="%s"', sanitize_key( $key ), esc_html( $value ) );
+		$value = sprintf( '%s="%s"', sanitize_key( $key ), esc_attr( $value ) );
 
 	}
 
