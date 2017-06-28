@@ -120,7 +120,14 @@ function primer_the_site_title() {
 
 	}
 
-	echo $html; // xss ok.
+	/**
+	 * Filter the site title HTML.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var string
+	 */
+	echo (string) apply_filters( 'primer_the_site_title', $html ); // xss ok.
 
 }
 
@@ -171,7 +178,14 @@ function primer_the_site_description() {
 
 	}
 
-	echo $html; // xss ok.
+	/**
+	 * Filter the site description HTML.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @var string
+	 */
+	echo (string) apply_filters( 'primer_the_site_description', $html ); // xss ok.
 
 }
 
