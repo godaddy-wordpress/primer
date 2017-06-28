@@ -22,7 +22,7 @@ function primer_elements() {
 
 	}
 
-	if ( is_home() || ( is_front_page() && (bool) get_post_meta( get_queried_object_id(), '_fl_builder_enabled', true ) ) ) {
+	if ( is_home() ) {
 
 		remove_action( 'primer_after_header', 'primer_add_page_title', 12 );
 
@@ -435,7 +435,7 @@ add_filter( 'wp_title', 'primer_wp_title', 10, 2 );
  */
 function primer_the_site_title_wrapper( $args ) {
 
-	if ( is_home() || ( is_front_page() && (bool) get_post_meta( get_queried_object_id(), '_fl_builder_enabled', true ) ) ) {
+	if ( is_home() ) {
 
 		$args['wrapper'] = 'h1';
 
