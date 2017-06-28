@@ -41,7 +41,7 @@ function primer_deprecated( $name, $version, $replacement = null, $theme = null,
 	$without_replacement = function_exists( '__' ) ? /* translators: 1. PHP function name, 2. theme name, 3. version number */ __( '%1$s is <strong>deprecated</strong> since %2$s version %3$s with no alternative available.', 'primer' ) : '%1$s is <strong>deprecated</strong> since %2$s version %3$s with no alternative available.';
 
 	$string  = ( $replacement ) ? $with_replacement : $without_replacement;
-	$theme   = ! empty( $theme ) ? $theme : esc_html__( 'Primer', 'primer' )
+	$theme   = ! empty( $theme ) ? $theme : esc_html__( 'Primer', 'primer' );
 	$message = ! empty( $message ) ? ' ' . $message : null;
 
 	// @codingStandardsIgnoreStart
