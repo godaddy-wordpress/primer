@@ -138,7 +138,7 @@ add_action( 'template_redirect', 'primer_bb_elements' );
  * @filter primer_the_site_title_args
  * @since  NEXT
  *
- * @param  array args The site title args.
+ * @param  array $args The site title args.
  *
  * @return array
  */

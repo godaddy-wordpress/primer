@@ -429,7 +429,7 @@ add_filter( 'wp_title', 'primer_wp_title', 10, 2 );
  * @filter primer_the_site_title_args
  * @since  NEXT
  *
- * @param  array args The site title args.
+ * @param  array $args The site title args.
  *
  * @return array
  */
