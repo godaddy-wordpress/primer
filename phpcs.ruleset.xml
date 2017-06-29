@@ -4,6 +4,8 @@
 
     <rule ref="WordPress">
         <exclude name="Squiz.Commenting.FileComment"></exclude>
+        <exclude name="WordPress.Files.FileName.InvalidClassFileName"></exclude>
+        <exclude name="WordPress.Arrays.ArrayDeclarationSpacing"></exclude>
         <exclude name="WordPress.WhiteSpace.ControlStructureSpacing"></exclude>
     </rule>
 

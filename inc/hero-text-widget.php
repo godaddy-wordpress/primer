@@ -249,7 +249,9 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 	 */
 	protected function get_current_theme_name() {
 
-		if ( $current_theme = get_option( 'current_theme' ) ) {
+		$current_theme = get_option( 'current_theme' );
+
+		if ( $current_theme ) {
 
 			return $current_theme;
 

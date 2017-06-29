@@ -201,6 +201,30 @@ function primer_wc_shop_title( $title ) {
 add_filter( 'primer_the_page_title', 'primer_wc_shop_title' );
 
 /**
+ * Filter the WooCommerce shop page title element.
+ *
+ * @filter primer_the_page_title_args
+ *
+ * @since  NEXT
+ *
+ * @param  array $args The page title args.
+ *
+ * @return array
+ */
+function primer_wc_product_page_title_wrapper( $args ) {
+
+	if ( is_product() ) {
+
+		$args['wrapper'] = 'h2';
+
+	}
+
+	return $args;
+
+}
+add_filter( 'primer_the_page_title_args', 'primer_wc_product_page_title_wrapper' );
+
+/**
  * Change the number of shop columns based on the Primer layout.
  *
  * @filter loop_shop_columns
@@ -552,7 +576,11 @@ function primer_wc_cart_menu( $items, $args ) {
 		</li>',
 		implode( ' ', array_map( 'esc_attr', $classes ) ),
 		$woocommerce->cart->get_cart_total(),
-		esc_html( sprintf( _n( '%d item', '%d items', $woocommerce->cart->get_cart_contents_count(), 'primer' ), $woocommerce->cart->get_cart_contents_count() ) ),
+		esc_html( sprintf(
+			/* translators: WooCommerce shopping cart item count. */
+			_n( '%d item', '%d items', $woocommerce->cart->get_cart_contents_count(), 'primer' ),
+			$woocommerce->cart->get_cart_contents_count()
+		) ),
 		$woocommerce->cart->get_cart_contents_count() ? '<a class="expand" href="#"></a>' : '',
 		$sub_menu
 	);
@@ -651,7 +679,7 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 
 	}
 
-}
+} // End if().
 
 if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
 
@@ -691,7 +719,7 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
 
 	}
 
-}
+} // End if().
 
 /**
  * Prevent WooCommerce product image from loading as the header image
