@@ -52,6 +52,7 @@ function primer_get_wp_upgrade_message() {
 	 */
 	return (string) apply_filters( 'primer_required_wp_version_message',
 		sprintf(
+			/* translators: 1. Primer minimum WordPress version. 2. Current WordPress version. */
 			esc_html__( 'Primer requires at least WordPress version %1$s. You are running version %2$s. Please upgrade and try again.', 'primer' ),
 			PRIMER_MIN_WP_VERSION,
 			get_bloginfo( 'version' )
@@ -95,7 +96,7 @@ add_action( 'load-customize.php', 'primer_customize' );
  */
 function primer_preview() {
 
-	if ( isset( $_GET['preview'] ) ) { // input var ok.
+	if ( isset( $_GET['preview'] ) ) { // @codingStandardsIgnoreLine
 
 		wp_die( esc_html( primer_get_wp_upgrade_message() ) );
 

@@ -576,7 +576,11 @@ function primer_wc_cart_menu( $items, $args ) {
 		</li>',
 		implode( ' ', array_map( 'esc_attr', $classes ) ),
 		$woocommerce->cart->get_cart_total(),
-		esc_html( sprintf( _n( '%d item', '%d items', $woocommerce->cart->get_cart_contents_count(), 'primer' ), $woocommerce->cart->get_cart_contents_count() ) ),
+		esc_html( sprintf(
+			/* translators: WooCommerce shopping cart item count. */
+			_n( '%d item', '%d items', $woocommerce->cart->get_cart_contents_count(), 'primer' ),
+			$woocommerce->cart->get_cart_contents_count()
+		) ),
 		$woocommerce->cart->get_cart_contents_count() ? '<a class="expand" href="#"></a>' : '',
 		$sub_menu
 	);
@@ -675,7 +679,7 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 
 	}
 
-}
+} // End if().
 
 if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
 
@@ -715,7 +719,7 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
 
 	}
 
-}
+} // End if().
 
 /**
  * Prevent WooCommerce product image from loading as the header image

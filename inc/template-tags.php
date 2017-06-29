@@ -437,13 +437,13 @@ function primer_breadcrumbs() {
 
 			echo '404';
 
-		}
+		} // End if().
 
 	} else {
 
 		bloginfo( 'name' );
 
-	}
+	} // End if().
 
 	echo '</div>';
 
