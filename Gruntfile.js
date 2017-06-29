@@ -315,10 +315,11 @@ module.exports = function( grunt ) {
 				'make html'
 			].join( ' && ' ),
 			docs: [
-				'apigen generate --config .dev/docs/apigen/apigen.neon',
 				'cd .dev/docs/apigen',
 				'php contributor-list.php',
-				'php hook-docs.php'
+				'php hook-docs.php',
+				'cd ../../../',
+				'apigen generate --config .dev/docs/apigen/apigen.neon',
 			].join( ' && ' ),
 			deploy_docs: [
 				'cd .dev/docs/build/html',
