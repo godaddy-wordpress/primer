@@ -262,7 +262,7 @@ textarea,
       font-size: 14.4px;
       font-size: 0.9rem; } }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .site-title, .page-title {
   clear: both;
   margin-top: 0.2rem;
   margin-bottom: 0.8rem;
@@ -271,7 +271,8 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
   color: #353535; }
 
-h1 {
+h1,
+.page-title {
   font-size: 2.5em; }
 
 h2 {
@@ -1700,7 +1701,8 @@ body.no-max-width .site-header-wrapper {
       content: " ";
       display: block;
       clear: both; }
-    .page-title-container .page-header h1 {
+    .page-title-container .page-header h1,
+    .page-title-container .page-header .page-title {
       width: 97.22222%;
       float: right;
       margin-right: 1.38889%;

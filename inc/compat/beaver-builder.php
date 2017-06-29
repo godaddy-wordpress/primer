@@ -114,3 +114,43 @@ function primer_bb_colors( $colors ) {
 
 }
 add_filter( 'primer_colors', 'primer_bb_colors' );
+
+/**
+ * Display some elements conditionally on the Beaver Builder front page (Primer only).
+ *
+ * @action template_redirect
+ * @since  NEXT
+ */
+function primer_bb_elements() {
+
+	if ( is_front_page() && (bool) get_post_meta( get_queried_object_id(), '_fl_builder_enabled', true ) ) {
+
+		remove_action( 'primer_after_header', 'primer_add_page_title', 12 );
+
+	}
+
+}
+add_action( 'template_redirect', 'primer_bb_elements' );
+
+/**
+ * Filter the site title HTML wrapper on the Beaver Builder front page.
+ *
+ * @filter primer_the_site_title_args
+ * @since  NEXT
+ *
+ * @param  array $args The site title args.
+ *
+ * @return array
+ */
+function primer_bb_the_site_title_wrapper( $args ) {
+
+	if ( is_front_page() && (bool) get_post_meta( get_queried_object_id(), '_fl_builder_enabled', true ) ) {
+
+		$args['wrapper'] = 'h1';
+
+	}
+
+	return $args;
+
+}
+add_filter( 'primer_the_site_title_args', 'primer_bb_the_site_title_wrapper' );

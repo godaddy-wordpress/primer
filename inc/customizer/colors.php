@@ -661,7 +661,7 @@ class Primer_Customizer_Colors {
 
 			$color_schemes = primer_array_replace_recursive( $color_schemes, $overrides );
 
-		}
+		} // End if().
 
 		/**
 		 * Filter the available color schemes.

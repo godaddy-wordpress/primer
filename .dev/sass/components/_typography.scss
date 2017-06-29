@@ -22,7 +22,7 @@ textarea,
 	}
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .site-title, .page-title {
 	clear: both;
 	margin-top: 0.2rem;
 	margin-bottom: 0.8rem;
@@ -32,7 +32,8 @@ h1, h2, h3, h4, h5, h6 {
 	color: $color__heading-text;
 }
 
-h1 {
+h1,
+.page-title {
 	font-size: 2.5em;
 }
 
