@@ -21,11 +21,7 @@
 		 */
 		do_action( 'primer_before_page_title' );
 
-		?>
-
-		<h1 class="page-title"><?php primer_the_page_title(); ?></h1>
-
-		<?php
+		primer_the_page_title();
 
 		/**
 		 * Fires after the page title element.
