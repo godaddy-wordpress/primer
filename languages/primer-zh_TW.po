@@ -65,7 +65,7 @@ msgstr "特色"
 
 #: functions.php:192 functions.php:434
 msgid "Hero"
-msgstr "Hero"
+msgstr "首頁"
 
 #: functions.php:273
 msgid "Primary Menu"
@@ -125,7 +125,7 @@ msgstr "此側邊欄會出現在結尾小工具區域的第三欄中。"
 
 #: functions.php:435
 msgid "Hero widgets appear over the header image on the front page."
-msgstr "Hero 小工具會出現在首頁的標題圖片上。"
+msgstr "首頁小工具會出現在首頁的標題圖片上。"
 
 #: header.php:44
 msgid "Skip to content"
@@ -181,7 +181,7 @@ msgstr "標語文字"
 
 #: inc/customizer/colors.php:76
 msgid "Hero Text"
-msgstr "Hero 文字"
+msgstr "首頁文字"
 
 #: inc/customizer/colors.php:107 inc/customizer/colors.php:326
 msgid "Text"
@@ -245,7 +245,7 @@ msgstr "內容背景"
 
 #: inc/customizer/colors.php:366
 msgid "Hero Background"
-msgstr "Hero 背景"
+msgstr "首頁背景"
 
 #: inc/customizer/colors.php:395
 msgid "Widgets Background"
@@ -301,7 +301,7 @@ msgstr "基本色彩配置"
 
 #: inc/customizer/colors.php:1291
 msgid "Hero Background Overlay"
-msgstr "Hero 背景重疊"
+msgstr "首頁背景重疊"
 
 #: inc/customizer/colors.php:1292
 msgid "Control the color overlay transparency when using a custom Header Image."
@@ -409,7 +409,7 @@ msgstr "使用特色圖片"
 
 #: inc/customizer.php:194
 msgid "Allow the featured image on the current post to override the hero image."
-msgstr "允許特色圖片出現在目前貼文中並取代 Hero 圖片。"
+msgstr "允許特色圖片出現在目前貼文中並取代首頁圖片。"
 
 #: inc/helpers.php:56
 msgid "404 Page Not Found"
@@ -632,12 +632,12 @@ msgstr "搜尋以下項目的結果： %s"
 #: inc/hero-text-widget.php:24
 msgctxt "theme name"
 msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr "為您網站首頁中 Hero 區域專門設計的 %s 主題小工具。"
+msgstr "為您網站首頁中首頁區域專門設計的 %s 主題小工具。"
 
 #: inc/hero-text-widget.php:29
 msgctxt "the widget title"
 msgid "Hero Text"
-msgstr "Hero 文字"
+msgstr "首頁文字"
 
 #: inc/hooks.php:394
 msgctxt "page number"
