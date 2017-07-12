@@ -66,14 +66,13 @@ Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 = 1.8.0 =
 * New: Conditionally wrap site titles to improve SEO. @props [evanherman](https://github.com/EvanHerman), [fjarrett](https://github.com/fjarrett)
-* Enhancement: Remove reference to the missing search.svg icon.  @props [evanherman](https://github.com/EvanHerman)
-* Enhancement: Tweak the site title width to prevent overlapping with the mobile menu button.  @props [evanherman](https://github.com/EvanHerman)
-* Enhancement: Conditionally load video header functionality on WordPress 4.7 or later.  @props [evanherman](https://github.com/EvanHerman), [fjarrett](https://github.com/fjarrett)
-* Enhancement: Fix backwards compatibility with PHP 5.3 and [Beaver Builder](https://wordpress.org/plugins/beaver-builder-lite-version/).  @props [evanherman](https://github.com/EvanHerman), [fjarrett](https://github.com/fjarrett)
-* Enhancement: Added a missing `@version` docblock to the WooCommerce pagination template, to prevent out of date template notices.  @props [evanherman](https://github.com/EvanHerman)
-* Enhancement: Introduced Serbian (sr_RS) translations. @props [lukapaunovic](https://github.com/lukapaunovic)
-* Enhancement: Update the documentation build order. @props [evanherman](https://github.com/EvanHerman)
-* Fix: Fixed the tertiary sidebar visibility.  @props [evanherman](https://github.com/EvanHerman), [fjarrett](https://github.com/fjarrett)
+* New: Added `sr_RS` (Serbian) translation. @props [lukapaunovic](https://github.com/lukapaunovic)
+* Fix: Remove reference to a missing `search.svg` icon. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Adjust site title width to prevent overlapping with the mobile menu button. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Conditionally load video header for WordPress 4.7 or later. @props [evanherman](https://github.com/EvanHerman), [fjarrett](https://github.com/fjarrett)
+* Fix: Added a missing `@version` docblock to the WooCommerce pagination template to prevent out of date template notices. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Backward compatibility issue when using [Beaver Builder](https://wordpress.org/plugins/beaver-builder-lite-version/) on PHP 5.3. @props [evanherman](https://github.com/EvanHerman), [fjarrett](https://github.com/fjarrett)
+* Fix: Fixed the tertiary sidebar visibility. @props [evanherman](https://github.com/EvanHerman), [fjarrett](https://github.com/fjarrett)
 
 = 1.7.0 =
 * New: Enabled video headers and introduced styles to accommodate full width video headers. @props [evanherman](https://github.com/EvanHerman)
