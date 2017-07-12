@@ -119,7 +119,7 @@ add_filter( 'primer_colors', 'primer_bb_colors' );
  * Display some elements conditionally on the Beaver Builder front page (Primer only).
  *
  * @action template_redirect
- * @since  NEXT
+ * @since  1.8.0
  */
 function primer_bb_elements() {
 
@@ -136,7 +136,7 @@ add_action( 'template_redirect', 'primer_bb_elements' );
  * Filter the site title HTML wrapper on the Beaver Builder front page.
  *
  * @filter primer_the_site_title_args
- * @since  NEXT
+ * @since  1.8.0
  *
  * @param  array $args The site title args.
  *

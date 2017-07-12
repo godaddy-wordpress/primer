@@ -567,7 +567,7 @@ class Primer_Customizer_Layouts {
 	/**
 	 * Magic getter for `$colors` and `$color_schemes` properties.
 	 *
-	 * @since  NEXT
+	 * @since  1.8.0
 	 *
 	 * @param  string $name Name of private property to retreive.
 	 *

@@ -40,7 +40,7 @@ function primer_the_custom_logo() {
 	/**
 	 * Filter the custom logo display args.
 	 *
-	 * @since NEXT
+	 * @since 1.8.0
 	 *
 	 * @var array
 	 */
@@ -68,7 +68,7 @@ function primer_the_site_title() {
 	/**
 	 * Filter the site title display args.
 	 *
-	 * @since NEXT
+	 * @since 1.8.0
 	 *
 	 * @var array
 	 */
@@ -141,7 +141,7 @@ function primer_the_site_description() {
 	/**
 	 * Filter the site description display args.
 	 *
-	 * @since NEXT
+	 * @since 1.8.0
 	 *
 	 * @var array
 	 */
@@ -199,7 +199,7 @@ function primer_the_page_title() {
 	/**
 	 * Filter the page title display args.
 	 *
-	 * @since NEXT
+	 * @since 1.8.0
 	 *
 	 * @var array
 	 */

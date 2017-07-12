@@ -95,7 +95,7 @@ function primer_deprecated_function( $function, $version, $replacement = null, $
  *
  * @access private
  * @link   https://developer.wordpress.org/reference/functions/apply_filters_deprecated/
- * @since  NEXT
+ * @since  1.8.0
  *
  * @param string $tag         The name of the filter hook.
  * @param array  $args        Array of additional function arguments to be passed to `apply_filters()`.
@@ -138,7 +138,7 @@ function primer_apply_filters_deprecated( $tag, $args, $version, $replacement = 
  *
  * @access private
  * @link   https://developer.wordpress.org/reference/functions/do_action_deprecated/
- * @since  NEXT
+ * @since  1.8.0
  *
  * @param string $tag         The name of the action hook.
  * @param array  $args        Array of additional function arguments to be passed to `do_action()`.

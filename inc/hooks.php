@@ -427,7 +427,7 @@ add_filter( 'wp_title', 'primer_wp_title', 10, 2 );
  * Filter the site title HTML wrapper.
  *
  * @filter primer_the_site_title_args
- * @since  NEXT
+ * @since  1.8.0
  *
  * @param  array $args The site title args.
  *
@@ -450,7 +450,7 @@ add_filter( 'primer_the_site_title_args', 'primer_the_site_title_wrapper' );
  * Filter the page title HTML wrapper.
  *
  * @filter primer_the_page_title_args
- * @since  NEXT
+ * @since  1.8.0
  *
  * @param  array $args The page title args.
  *
