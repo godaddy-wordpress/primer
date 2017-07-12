@@ -36,8 +36,11 @@ install:
   - source $DEV_LIB_PATH/travis.install.sh
   - curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
   - chmod +x /tmp/wp-cli.phar
+  - php /tmp/wp-cli.phar plugin install theme-check --activate
+  - php /tmp/wp-cli.phar package install anhskohbo/wp-cli-themecheck
 
 script:
+  - php /tmp/wp-cli.phar themecheck --theme=primer
   - source $DEV_LIB_PATH/travis.script.sh
 
 after_script:
