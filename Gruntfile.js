@@ -55,11 +55,17 @@ module.exports = function( grunt ) {
 				],
 				dest: 'build/'
 			},
-			docs: {
+			docs_html: {
 				expand: true,
 				cwd: '.dev/docs/sphinx/src/documentation/',
 				src: [ '**/*' ],
 				dest: '.dev/docs/build/html/documentation/'
+			},
+			docs_landing: {
+				expand: true,
+				cwd: '.dev/docs/sphinx/src/build/html/',
+				src: [ '**/*.html' ],
+				dest: '.dev/docs/build/html/'
 			},
 			readme: {
 				expand: true,
@@ -202,8 +208,20 @@ module.exports = function( grunt ) {
 					}
 				],
 				src: [
-					'.dev/docs/apigen/theme-godaddy/**/*.latte',
-					'.dev/docs/themes/godaddy/**/*.html'
+					'.dev/docs/apigen/godaddy/**/*.latte',
+					'.dev/docs/sphinx/godaddy/**/*.html'
+				]
+			},
+			docs_version: {
+				overwrite: true,
+				replacements: [
+					{
+						from: /activeVersion: \'[\w.+-]+\'/m,
+						to: 'activeVersion: \'' + pkg.version + '\''
+					}
+				],
+				src: [
+					'.dev/docs/apigen/godaddy/config.neon'
 				]
 			},
 			intro: {
@@ -297,10 +315,11 @@ module.exports = function( grunt ) {
 				'make html'
 			].join( ' && ' ),
 			docs: [
-				'apigen generate --config .dev/docs/apigen/apigen.neon -q',
 				'cd .dev/docs/apigen',
 				'php contributor-list.php',
-				'php hook-docs.php'
+				'php hook-docs.php',
+				'cd ../../../',
+				'apigen generate --config .dev/docs/apigen/apigen.neon',
 			].join( ' && ' ),
 			deploy_docs: [
 				'cd .dev/docs/build/html',
@@ -377,7 +396,7 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'check',       [ 'devUpdate' ] );
 	grunt.registerTask( 'deploy-docs', [ 'update-docs', 'shell:deploy_docs' ] );
 	grunt.registerTask( 'readme',      [ 'wp_readme_to_markdown' ] );
-	grunt.registerTask( 'update-docs', [ 'readme', 'clean:docs', 'shell:sphinx', 'shell:docs', 'replace:docs', 'copy:readme', 'copy:docs', 'replace:intro' ] );
+	grunt.registerTask( 'update-docs', [ 'readme', 'clean:docs', 'replace:docs_version', 'replace:docs', 'shell:sphinx', 'shell:docs', 'copy:readme', 'copy:docs_html', 'copy:docs_landing', 'replace:intro' ] );
 	grunt.registerTask( 'update-pot',  [ 'makepot' ] );
 	grunt.registerTask( 'update-mo',   [ 'potomo' ] );
 	grunt.registerTask( 'version',     [ 'replace', 'readme', 'build' ] );

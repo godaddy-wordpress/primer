@@ -30,6 +30,7 @@ body.no-max-width .site-header-wrapper {
 	padding: 6% 1rem;
 
 	@media #{$small-only} {
+		max-width: 87.22222%;
 		padding-left: 0.75rem;
 		padding-right: 0.75rem;
 	}
@@ -68,7 +69,8 @@ body.no-max-width .site-header-wrapper {
 		position: relative;
 		clear: both;
 
-		h1 {
+		h1,
+		.page-title {
 			@include span(12);
 
 			padding: 3% 1rem;

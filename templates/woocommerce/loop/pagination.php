@@ -6,6 +6,8 @@
  *
  * @package Primer
  * @since   1.6.0
+ *
+ * @version 2.2.2
  */
 
 global $wp_query;

@@ -564,6 +564,23 @@ class Primer_Customizer_Layouts {
 
 	}
 
+	/**
+	 * Magic getter for `$colors` and `$color_schemes` properties.
+	 *
+	 * @since  NEXT
+	 *
+	 * @param  string $name Name of private property to retreive.
+	 *
+	 * @return string Return the specified property within the `Primer_Customizer_Layouts` class.
+	 */
+	public function __get( $name ) {
+
+		$properties = array( 'layouts', 'default', 'meta_box', 'page_widths' );
+
+		return in_array( $name, $properties, true ) ? $this->name : false;
+
+	}
+
 }
 
 $GLOBALS['primer_customizer_layouts'] = new Primer_Customizer_Layouts;

@@ -3,7 +3,7 @@
 **Tags:**              [custom-background](https://wordpress.org/themes/tags/custom-background/), [custom-colors](https://wordpress.org/themes/tags/custom-colors/), [custom-header](https://wordpress.org/themes/tags/custom-header/), [custom-menu](https://wordpress.org/themes/tags/custom-menu/), [editor-style](https://wordpress.org/themes/tags/editor-style/), [featured-images](https://wordpress.org/themes/tags/featured-images/), [flexible-header](https://wordpress.org/themes/tags/flexible-header/), [left-sidebar](https://wordpress.org/themes/tags/left-sidebar/), [one-column](https://wordpress.org/themes/tags/one-column/), [right-sidebar](https://wordpress.org/themes/tags/right-sidebar/), [rtl-language-support](https://wordpress.org/themes/tags/rtl-language-support/), [sticky-post](https://wordpress.org/themes/tags/sticky-post/), [threaded-comments](https://wordpress.org/themes/tags/threaded-comments/), [three-columns](https://wordpress.org/themes/tags/three-columns/), [translation-ready](https://wordpress.org/themes/tags/translation-ready/), [two-columns](https://wordpress.org/themes/tags/two-columns/)<br />
 **Requires at least:** 4.4<br />
 **Tested up to:**      4.7<br />
-**Stable tag:**        1.4.1<br />
+**Stable tag:**        1.7.0<br />
 **License:**           GPL-2.0<br />
 **License URI:**       https://www.gnu.org/licenses/gpl-2.0.html<br />
 
@@ -64,6 +64,29 @@ Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 ## Changelog ##
 
+### 1.7.0 ###
+* New: Enabled video headers and introduced styles to accommodate full width video headers. @props [evanherman](https://github.com/EvanHerman)
+* New: Introduced new `primer_pre_hero` action. @props [evanherman](https://github.com/EvanHerman)
+* New: Added aria labels on the 'Continue Reading' links for `a11y` improvements. @props [evanherman](https://github.com/EvanHerman)
+* New: Introduced `primer_wc_product_header_image` filter. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Improved WooCommerce styles. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Tweak i18n functions, added translator comments. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Introduced Ninja Form response message styles. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Ensure color schemes work with custom Primer child themes. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Tweaked the WooCommerce product template title. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Prevent WooCommerce single product images from hijacking the header image. @props [evanherman](https://github.com/EvanHerman)
+
+### 1.6.0 ###
+* New: Hero Text widget designed for your site's front page @props [jonathanbardo](https://github.com/jonathanbardo), [fjarrett](https://github.com/fjarrett)
+* Tweak: Improved posts pagination design based on core pagination @props [fjarrett](https://github.com/fjarrett), [evanherman](https://github.com/EvanHerman)
+* Tweak: The `primer_paging_nav()` function has been deprecated in favor of `primer_pagination()` @props [fjarrett](https://github.com/fjarrett), [evanherman](https://github.com/EvanHerman)
+* Tweak: The WooCommerce template overrides directory has been moved to `templates/woocommerce/` @props [fjarrett](https://github.com/fjarrett)
+* Fix: Text overlap on WooCommerce Add to Cart buttons in certain languages @props [fjarrett](https://github.com/fjarrett), [evanherman](https://github.com/EvanHerman)
+* Fix: WooCommerce menu item appearing on older child themes without styles to support it @props [fjarrett](https://github.com/fjarrett)
+
+### 1.5.1 ###
+* Fix: Category and tag list display on posts @props [fjarrett](https://github.com/fjarrett)
+
 ### 1.5.0 ###
 * New: Full compatibility with the WooCommerce plugin @props [evanherman](https://github.com/EvanHerman), [fjarrett](https://github.com/fjarrett)
 * New: Add Front Page Title setting to the Static Front Page section of the Customizer @props [evanherman](https://github.com/EvanHerman)
@@ -71,7 +94,7 @@ Source: https://unsplash.com/photos/v4ZUGlrdVAA
 * New: Added Author Credit toggle to the Site Identity section of the Customizer @props [evanherman](https://github.com/EvanHerman)
 * New: [Developer documentation!](https://godaddy.github.io/wp-primer-theme/) @props [evanherman](https://github.com/EvanHerman)
 * Tweak: Added `nofollow` attribute to theme author link in the footer @props [evanherman](https://github.com/EvanHerman)
-* Tweak: Use core post navigation functions @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Use core post navigation function @props [evanherman](https://github.com/EvanHerman)
 * Fix: Display glitch when last main menu item is a submenu @props [evanherman](https://github.com/EvanHerman)
 
 ### 1.4.2 ###

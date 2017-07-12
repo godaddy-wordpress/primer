@@ -15,5 +15,5 @@ the file LICENSE.md that was distributed with this source code.
 
 {block #content}
 {var $lineRegex = '~<span class="line">(\\s*(\\d+):\\s*)</span>([^\\n]*(?:\\n|$))~'}
-<pre><code>{$source|replaceRE:$lineRegex,'<span id="$2" class="codeline"><a class="number" href="#$2">$1</a>$3</span>'|noescape}</code></pre>
+<pre class="lang-php line-numbers"><code>{$source|replaceRE:$lineRegex,'<span id="$2">$3</span>'|noescape}</code></pre>
 {/block}

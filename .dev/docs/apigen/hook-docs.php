@@ -359,6 +359,13 @@ class Primer_Hook_Finder {
 
 		echo '</div><div id="footer">';
 
+		if ( ! is_dir( '../sphinx/src/documentation/' ) ) {
+
+			// dir doesn't exist, make it
+			mkdir( '../sphinx/src/documentation/' );
+
+		}
+
 		file_put_contents( '../sphinx/src/documentation/hook-docs.html', ob_get_clean() );
 
 		echo "Primer Hook documentation successfully generated!\n";
