@@ -36,11 +36,12 @@ install:
   - source $DEV_LIB_PATH/travis.install.sh
   - curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
   - chmod +x /tmp/wp-cli.phar
-  - php /tmp/wp-cli.phar plugin install theme-check --activate
-  - php /tmp/wp-cli.phar package install anhskohbo/wp-cli-themecheck
+  - export PHP_VERSION=$(php -v | head -n 1 | awk '{print $2}') | cut -c1-3
+  - if [ $PHP_VERSION != "5.2" ]; then php /tmp/wp-cli.phar plugin install theme-check --activate; fi
+  - if [ $PHP_VERSION != "5.2" ]; then php /tmp/wp-cli.phar package install anhskohbo/wp-cli-themecheck; fi
 
 script:
-  - php /tmp/wp-cli.phar themecheck --theme=primer
+  - if [ $PHP_VERSION != "5.2" ]; then php /tmp/wp-cli.phar themecheck --theme=primer; fi
   - source $DEV_LIB_PATH/travis.script.sh
 
 after_script:
