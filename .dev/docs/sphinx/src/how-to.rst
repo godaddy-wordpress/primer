@@ -13,6 +13,7 @@ You should never edit theme files directly, otherwise your customizations will b
     tutorials-and-examples/tutorials/contributing
     tutorials-and-examples/tutorials/acceptance-tests
     tutorials-and-examples/tutorials/debugging
+    tutorials-and-examples/tutorials/infinite-scroll-jetpack
 
 .. toctree::
     :maxdepth: 1
