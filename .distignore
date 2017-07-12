@@ -2,7 +2,7 @@
 *.yml
 composer.*
 Gruntfile.js
-package.json
+package*.json
 phpcs.ruleset.xml
 phpunit.xml.dist
 readme.md
