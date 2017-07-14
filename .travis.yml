@@ -29,15 +29,17 @@ install:
   - source $DEV_LIB_PATH/travis.install.sh
   - curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
   - chmod +x /tmp/wp-cli.phar
-  - /tmp/wp-cli.phar package install anhskohbo/wp-cli-themecheck
+  - export WPCLI=/tmp/wp-cli.phar
+  - php ${WPCLI} package install anhskohbo/wp-cli-themecheck
 
 script:
   - source $DEV_LIB_PATH/travis.script.sh
   - bash .dev/install-wp-tests.sh wordpress wordpress_test root '' localhost $WP_VERSION
   - grunt copy:build
   - mv -f build $WP_CORE_DIR/wp-content/themes/$(basename $TRAVIS_BUILD_DIR)
-  - /tmp/wp-cli.phar theme activate $(basename $TRAVIS_BUILD_DIR) --path=$WP_CORE_DIR
-  - /tmp/wp-cli.phar --path=$WP_CORE_DIR themecheck --theme=Primer
+  - php ${WPCLI} theme activate $(basename $TRAVIS_BUILD_DIR) --path=$WP_CORE_DIR
+  - cd $WP_CORE_DIR
+  - php ${WPCLI} themecheck --theme=Primer
 
 after_script:
   - source $DEV_LIB_PATH/travis.after_script.sh
