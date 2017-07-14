@@ -108,8 +108,6 @@ install_default_site() {
 run_theme_check() {
 
 	cd ${TRAVIS_BUILD_DIR}
-	. $HOME/.nvm/nvm.sh
-	nvm install 7.4.0
 	node_modules/.bin/grunt build
 	mv -f build ${WP_CORE_DIR}/wp-content/themes/${THEME}
 	php /tmp/wp-cli.phar package install anhskohbo/wp-cli-themecheck
