@@ -24,7 +24,7 @@ matrix:
 
 install:
   - . $HOME/.nvm/nvm.sh
-  - nvm use 7.4.0
+  - nvm install 7.4.0
   - export DEV_LIB_PATH=.dev/dev-lib
   - if [ ! -e "$DEV_LIB_PATH" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
   - if [ ! -e "$DEV_LIB_PATH" ]; then git clone https://github.com/xwp/wp-dev-lib.git $DEV_LIB_PATH; fi
