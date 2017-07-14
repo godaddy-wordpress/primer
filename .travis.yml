@@ -24,6 +24,7 @@ matrix:
 
 install:
   - . $HOME/.nvm/nvm.sh
+  - nvm ls
   - nvm install 7.4.0
   - nvm use 7.4.0
   - export DEV_LIB_PATH=.dev/dev-lib
