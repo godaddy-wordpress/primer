@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-if [ ${TRAVIS_PHP_VERSION} -eq 5.2 ]; then
-	exit 0
-fi
-
 source ${DEV_LIB_PATH}/travis.install.sh
 source ${DEV_LIB_PATH}/travis.script.sh
 
