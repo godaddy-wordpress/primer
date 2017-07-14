@@ -34,6 +34,9 @@ install:
   - if [ ! -e "$DEV_LIB_PATH" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
   - if [ ! -e "$DEV_LIB_PATH" ]; then git clone https://github.com/xwp/wp-dev-lib.git $DEV_LIB_PATH; fi
   - source $DEV_LIB_PATH/travis.install.sh
+  - pwd
+  - ls
+  - ls -la
   - curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
   - chmod +x /tmp/wp-cli.phar
 
