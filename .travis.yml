@@ -38,7 +38,7 @@ script:
   - mv -f build $WP_CORE_DIR/wp-content/themes/$(basename $TRAVIS_BUILD_DIR)
   - /tmp/wp-cli.phar theme activate $(basename $TRAVIS_BUILD_DIR) --path=$WP_CORE_DIR
   - /tmp/wp-cli.phar plugin install theme-check --activate --path=$WP_CORE_DIR
-  - /tmp/wp-cli.phar theme list
+  - /tmp/wp-cli.phar theme list --path=$WP_CORE_DIR
   - /tmp/wp-cli.phar themecheck --theme=Primer --path=$WP_CORE_DIR
 
 after_script:
