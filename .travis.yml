@@ -35,6 +35,8 @@ script:
   - source $DEV_LIB_PATH/travis.script.sh
   - bash .dev/install-wp-tests.sh wordpress wordpress_test root '' localhost $WP_VERSION
   - grunt copy:build
+  - ls -ld build
+  - ls -ld $WP_CORE_DIR
   - mv -f build $WP_CORE_DIR/wp-content/themes/wp-primer-theme
   - /tmp/wp-cli.phar theme activate $(basename $TRAVIS_BUILD_DIR) --path=$WP_CORE_DIR
   - /tmp/wp-cli.phar themecheck --theme=wp-primer-theme --path=$WP_CORE_DIR
