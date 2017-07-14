@@ -30,10 +30,12 @@ install:
   - curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
   - chmod +x /tmp/wp-cli.phar
   - /tmp/wp-cli.phar package install anhskohbo/wp-cli-themecheck
-  - /tmp/wp-cli.phar themecheck --theme=wp-primer-theme
 
 script:
   - source $DEV_LIB_PATH/travis.script.sh
+  - ls
+  - pwd
+  - /tmp/wp-cli.phar themecheck --theme=wp-primer-theme
 
 after_script:
   - source $DEV_LIB_PATH/travis.after_script.sh
