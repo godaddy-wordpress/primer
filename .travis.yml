@@ -35,19 +35,9 @@ install:
   - export DEV_LIB_PATH=.dev/dev-lib
   - if [ ! -e "${DEV_LIB_PATH}" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
   - if [ ! -e "${DEV_LIB_PATH}" ]; then git clone https://github.com/xwp/wp-dev-lib.git ${DEV_LIB_PATH}; fi
-  - source ${DEV_LIB_PATH}/travis.install.sh
-  - curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
-  - chmod +x /tmp/wp-cli.phar
-  - /tmp/wp-cli.phar package install anhskohbo/wp-cli-themecheck
 
 script:
-  - source ${DEV_LIB_PATH}/travis.script.sh
   - bash .dev/install-wp.sh wordpress wordpress_test root '' localhost ${WP_VERSION}
-  - grunt build
-  - mv -f build ${WP_CORE_DIR}/wp-content/themes/$(basename ${TRAVIS_BUILD_DIR})
-  - /tmp/wp-cli.phar theme activate $(basename ${TRAVIS_BUILD_DIR}) --path=${WP_CORE_DIR}
-  - /tmp/wp-cli.phar plugin install theme-check --activate --path=${WP_CORE_DIR}
-  - /tmp/wp-cli.phar themecheck --theme=$(basename ${TRAVIS_BUILD_DIR}) --path=${WP_CORE_DIR}
 
 after_script:
   - source $DEV_LIB_PATH/travis.after_script.sh

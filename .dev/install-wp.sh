@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+if [ ${TRAVIS_PHP_VERSION} -eq 5.2 ]; then
+	exit 0
+fi
+
+source ${DEV_LIB_PATH}/travis.install.sh
+source ${DEV_LIB_PATH}/travis.script.sh
+
 if [ $# -lt 4 ]; then
 	echo "usage: $0 <db-name> <db-name-tests> <db-user> <db-pass> [db-host] [wp-version]"
 	exit 1
@@ -103,7 +110,19 @@ install_default_site() {
 	fi
 }
 
+install_theme_check() {
+
+	grunt build
+	mv -f build ${WP_CORE_DIR}/wp-content/themes/$(basename ${TRAVIS_BUILD_DIR})
+	php /tmp/wp-cli.phar package install anhskohbo/wp-cli-themecheck
+	php /tmp/wp-cli.phar theme activate $(basename ${TRAVIS_BUILD_DIR}) --path=${WP_CORE_DIR}
+	php /tmp/wp-cli.phar plugin install theme-check --activate --path=${WP_CORE_DIR}
+	php /tmp/wp-cli.phar themecheck --theme=$(basename ${TRAVIS_BUILD_DIR}) --path=${WP_CORE_DIR}
+
+}
+
 install_wp_core
 install_db
 install_wp_cli
 install_default_site
+install_theme_check
