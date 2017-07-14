@@ -19,10 +19,9 @@ php:
   - 7.1
 
 env:
-  - THEME=primer
-  - WP_VERSION=4.4 WP_MULTISITE=0
-  - WP_VERSION=latest WP_MULTISITE=0
-  - WP_VERSION=trunk WP_MULTISITE=0
+  - WP_VERSION=4.4 WP_MULTISITE=0 THEME=primer
+  - WP_VERSION=latest WP_MULTISITE=0 THEME=primer
+  - WP_VERSION=trunk WP_MULTISITE=0 THEME=primer
 
 matrix:
   fast_finish: true
