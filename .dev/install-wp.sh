@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-source ${DEV_LIB_PATH}/travis.install.sh
-source ${DEV_LIB_PATH}/travis.script.sh
-
 if [ $# -lt 4 ]; then
 	echo "usage: $0 <db-name> <db-name-tests> <db-user> <db-pass> [db-host] [wp-version]"
 	exit 1
