@@ -37,7 +37,7 @@ script:
   - grunt copy:build
   - mv -f build $WP_CORE_DIR/wp-content/themes/$(basename $TRAVIS_BUILD_DIR)
   - /tmp/wp-cli.phar theme activate $(basename $TRAVIS_BUILD_DIR) --path=$WP_CORE_DIR
-  - /tmp/wp-cli.phar themecheck --theme=Primer --path=$WP_CORE_DIR
+  - php /tmp/wp-cli.phar themecheck --theme=Primer --path=$WP_CORE_DIR
 
 after_script:
   - source $DEV_LIB_PATH/travis.after_script.sh
