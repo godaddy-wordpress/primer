@@ -11,8 +11,7 @@ DB_USER=$3
 DB_PASS=$4
 DB_HOST=${5-localhost}
 WP_VERSION=${6-latest}
-THEME=$7
-DEV_LIB_PATH=$8
+TRAVIS_BUILD_DIR=$7
 
 WP_CORE_DIR=${WP_CORE_DIR-/tmp/wordpress/}
 
@@ -107,13 +106,13 @@ install_default_site() {
 
 run_theme_check() {
 
-	cd ${DEV_LIB_PATH}
-	grunt build
-	mv -f build ${WP_CORE_DIR}/wp-content/themes/${THEME}
+	cd ${TRAVIS_BUILD_DIR}
+	node_modules/.bin/grunt build
+	mv -f build ${WP_CORE_DIR}/wp-content/themes/$(basename ${TRAVIS_BUILD_DIR})
 	php /tmp/wp-cli.phar package install anhskohbo/wp-cli-themecheck
-	php /tmp/wp-cli.phar theme activate ${THEME} --path=${WP_CORE_DIR}
+	php /tmp/wp-cli.phar theme activate $(basename ${TRAVIS_BUILD_DIR}) --path=${WP_CORE_DIR}
 	php /tmp/wp-cli.phar plugin install theme-check --activate --path=${WP_CORE_DIR}
-	php /tmp/wp-cli.phar themecheck --theme=${THEME} --path=${WP_CORE_DIR}
+	php /tmp/wp-cli.phar themecheck --theme=$(basename ${TRAVIS_BUILD_DIR}) --path=${WP_CORE_DIR}
 
 }
 
