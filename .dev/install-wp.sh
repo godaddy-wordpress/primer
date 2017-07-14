@@ -108,11 +108,11 @@ run_theme_check() {
 
 	cd ${TRAVIS_BUILD_DIR}
 	node_modules/.bin/grunt build
-	mv -f build ${WP_CORE_DIR}/wp-content/themes/$(basename ${TRAVIS_BUILD_DIR})
+	mv -f build ${WP_CORE_DIR}/wp-content/themes/${THEME}
 	php /tmp/wp-cli.phar package install anhskohbo/wp-cli-themecheck
-	php /tmp/wp-cli.phar theme activate $(basename ${TRAVIS_BUILD_DIR}) --path=${WP_CORE_DIR}
+	php /tmp/wp-cli.phar theme activate ${THEME} --path=${WP_CORE_DIR}
 	php /tmp/wp-cli.phar plugin install theme-check --activate --path=${WP_CORE_DIR}
-	php /tmp/wp-cli.phar themecheck --theme=$(basename ${TRAVIS_BUILD_DIR}) --path=${WP_CORE_DIR}
+	php /tmp/wp-cli.phar themecheck --theme=${THEME} --path=${WP_CORE_DIR}
 
 }
 

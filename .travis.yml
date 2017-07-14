@@ -19,6 +19,7 @@ php:
   - 7.1
 
 env:
+  - THEME=primer
   - WP_VERSION=4.4 WP_MULTISITE=0
   - WP_VERSION=latest WP_MULTISITE=0
   - WP_VERSION=trunk WP_MULTISITE=0
@@ -39,7 +40,7 @@ install:
 
 script:
   - source ${DEV_LIB_PATH}/travis.script.sh
-  - if [[ ${TRAVIS_PHP_VERSION:0:3} > "5.2" ]]; then bash .dev/install-wp.sh wordpress wordpress_test root '' localhost ${WP_VERSION} ${TRAVIS_BUILD_DIR}; fi
+  - if [[ ${TRAVIS_PHP_VERSION:0:3} > "5.2" ]]; then bash .dev/install-wp.sh wordpress wordpress_test root '' localhost ${WP_VERSION} ${TRAVIS_BUILD_DIR} ${THEME}; fi
 
 after_script:
   - source $DEV_LIB_PATH/travis.after_script.sh
