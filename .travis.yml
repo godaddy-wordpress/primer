@@ -34,10 +34,11 @@ install:
   - if [ ! -e ${DEV_LIB_PATH} ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
   - if [ ! -e ${DEV_LIB_PATH} ]; then git clone https://github.com/xwp/wp-dev-lib.git ${DEV_LIB_PATH}; fi
   - source ${DEV_LIB_PATH}/travis.install.sh
-  - export INSTALL_PATH="${WP_CORE_DIR}/src/wp-content/themes/primer"
-  - mkdir -p ${INSTALL_PATH} && rsync -av --exclude .git/hooks --delete ${PROJECT_DIR}/ ${INSTALL_PATH}/
   - curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
   - chmod +x /tmp/wp-cli.phar
+  - export INSTALL_PATH=${WP_CORE_DIR}/src/wp-content/themes/primer
+  - mkdir -p ${INSTALL_PATH}
+  - rsync -av --exclude-from .distignore --delete ${PROJECT_DIR}/ ${INSTALL_PATH}/
   - php /tmp/wp-cli.phar theme activate primer --path=${WP_CORE_DIR}/src
   - if [ ${TRAVIS_PHP_VERSION:0:3} != "5.2" ]; then php /tmp/wp-cli.phar plugin install theme-check --activate --path=${WP_CORE_DIR}/src; fi
   - if [ ${TRAVIS_PHP_VERSION:0:3} != "5.2" ]; then php /tmp/wp-cli.phar package install anhskohbo/wp-cli-themecheck; fi
