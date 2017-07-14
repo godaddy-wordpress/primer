@@ -104,9 +104,8 @@ install_default_site() {
 	fi
 }
 
-install_theme_check() {
+run_theme_check() {
 
-	mv -f build ${WP_CORE_DIR}/wp-content/themes/$(basename ${TRAVIS_BUILD_DIR})
 	php /tmp/wp-cli.phar package install anhskohbo/wp-cli-themecheck
 	php /tmp/wp-cli.phar theme activate $(basename ${TRAVIS_BUILD_DIR}) --path=${WP_CORE_DIR}
 	php /tmp/wp-cli.phar plugin install theme-check --activate --path=${WP_CORE_DIR}
@@ -118,4 +117,4 @@ install_wp_core
 install_db
 install_wp_cli
 install_default_site
-install_theme_check
+run_theme_check

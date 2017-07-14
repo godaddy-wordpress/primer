@@ -40,7 +40,7 @@ install:
 script:
   - source ${DEV_LIB_PATH}/travis.script.sh
   - echo ${TRAVIS_PHP_VERSION}
-  - if [[ ${TRAVIS_PHP_VERSION:0:3} > "5.2" ]]; then grunt build; bash .dev/install-wp.sh wordpress wordpress_test root '' localhost ${WP_VERSION} ${TRAVIS_BUILD_DIR}; fi
+  - if [[ ${TRAVIS_PHP_VERSION:0:3} > "5.2" ]]; then grunt build; mv -f build ${WP_CORE_DIR}/wp-content/themes/$(basename ${TRAVIS_BUILD_DIR}); bash .dev/install-wp.sh wordpress wordpress_test root '' localhost ${WP_VERSION} ${TRAVIS_BUILD_DIR}; fi
 
 after_script:
   - source $DEV_LIB_PATH/travis.after_script.sh
