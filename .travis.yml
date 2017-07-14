@@ -23,4 +23,4 @@ matrix:
   fast_finish: true
 
 install:
-  - npm -v
+  - node -v
