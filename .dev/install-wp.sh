@@ -12,6 +12,7 @@ DB_PASS=$4
 DB_HOST=${5-localhost}
 WP_VERSION=${6-latest}
 TRAVIS_BUILD_DIR=$7
+THEME=$8
 
 WP_CORE_DIR=${WP_CORE_DIR-/tmp/wordpress/}
 
