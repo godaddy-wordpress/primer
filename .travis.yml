@@ -32,18 +32,18 @@ matrix:
 install:
   - export WP_THEME=primer
   - export DEV_LIB_PATH=.dev/dev-lib
-  - if [ ! -e ${DEV_LIB_PATH} ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
-  - if [ ! -e ${DEV_LIB_PATH} ]; then git clone https://github.com/xwp/wp-dev-lib.git ${DEV_LIB_PATH}; fi
-  - source ${DEV_LIB_PATH}/travis.install.sh
+  - if [ ! -e "$DEV_LIB_PATH" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
+  - if [ ! -e "$DEV_LIB_PATH" ]; then git clone https://github.com/xwp/wp-dev-lib.git $DEV_LIB_PATH; fi
+  - source $DEV_LIB_PATH/travis.install.sh
   - curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
   - chmod +x /tmp/wp-cli.phar
 
 script:
   - if [ ${TRAVIS_PHP_VERSION:0:3} == "5.6" ]; then source ${TRAVIS_BUILD_DIR}/.dev/theme-check.sh; fi
-  - source ${DEV_LIB_PATH}/travis.script.sh
+  - source $DEV_LIB_PATH/travis.script.sh
 
 after_script:
-  - source ${DEV_LIB_PATH}/travis.after_script.sh
+  - source $DEV_LIB_PATH/travis.after_script.sh
 
 before_deploy:
   - php /tmp/wp-cli.phar package install wp-cli/dist-archive-command
