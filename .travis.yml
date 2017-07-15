@@ -23,6 +23,8 @@ env:
   - WP_VERSION=latest WP_MULTISITE=0
   - WP_VERSION=trunk WP_MULTISITE=0
   - WP_THEME=primer
+  - DB_USER=root
+  - DB_PASS=''
 
 matrix:
   fast_finish: true
@@ -38,7 +40,7 @@ install:
   - curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
   - chmod +x /tmp/wp-cli.phar
   - install_wp && install_test_suite && install_db
-  - INSTALL_PATH=${WP_CORE_DIR}/src/wp-content/themes/${WP_THEME}
+  - export INSTALL_PATH=${WP_CORE_DIR}/src/wp-content/themes/${WP_THEME}
   - mkdir -p ${INSTALL_PATH}
   - rsync -av --exclude-from ${PROJECT_DIR}/.distignore --delete ${PROJECT_DIR}/ ${INSTALL_PATH}/
   - cd ${INSTALL_PATH}
