@@ -23,7 +23,9 @@ php /tmp/wp-cli.phar core install \
 	--url=http://${WP_THEME}.dev \
 	--title=${WP_THEME} \
 	--admin_user=admin \
-	--admin_password=password
+	--admin_password=password \
+	--admin_email=local@${WP_THEME}.dev \
+	--skip-email
 
 export INSTALL_PATH=${WP_CORE_DIR}/src/wp-content/themes/${WP_THEME}
 mkdir -p ${INSTALL_PATH}
