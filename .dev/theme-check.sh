@@ -2,14 +2,22 @@
 
 set -e
 
+DB_NAME=wordpress
 DB_USER=root
 DB_PASS=''
+DB_HOST=localhost
 
 if install_wp && install_db; then
-	echo "WordPress is now installed"
+	echo "WordPress installed"
 fi
 
-INSTALL_PATH=${WP_CORE_DIR}/src/wp-content/themes/${WP_THEME}
+php /tmp/wp-cli.phar config create \
+	--dbname=${DB_NAME} \
+	--dbuser=${DB_USER} \
+	--dbpass=${DB_PASS} \
+	--dbhost=${DB_HOST}
+
+export INSTALL_PATH=${WP_CORE_DIR}/src/wp-content/themes/${WP_THEME}
 
 mkdir -p ${INSTALL_PATH}
 rsync -av --exclude-from ${TRAVIS_BUILD_DIR}/.distignore --delete ${TRAVIS_BUILD_DIR}/ ${INSTALL_PATH}/
