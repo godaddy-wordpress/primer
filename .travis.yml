@@ -41,25 +41,30 @@ install:
   - curl -o /tmp/wp-cli.phar -SL https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar
   - chmod +x /tmp/wp-cli.phar
 
-script:
-  - source $TRAVIS_BUILD_DIR/.dev/theme-check.sh
-  - source $DEV_LIB_PATH/travis.script.sh
-
 after_script:
   - source $DEV_LIB_PATH/travis.after_script.sh
 
 before_deploy:
   - zip -r $TRAVIS_BUILD_DIR/$WP_THEME.zip $INSTALL_PATH
 
-deploy:
-  provider: releases
-  api_key:
-    secure: nZeGCRawe6Vh/D6Cll8Egu1oRCpB14x4w1G35yfYrjWqL7Hak+C5+Se4TziTX2RudQX0JV7jlaydqKSrNaChlLkIrAd2DUt8SRgZrWuh18VXFVcOM6gWEvDBdiHOdN7TMlkFM6a3VM3aiMpZqsNbYF4GrMYeZ6coJMdV6Sy6eLpux8hPNbK17fKmdBW+oZor54/arLV9gdPmfPGq/lcdC2/hk9BMOlwZ0dpqH7kS27PDF4gmIVUCgIq+zg4SLqWGMsaZaDzygjBPjL6CKz9ZT+MswplWtz6QTIPfvJVm4tLip9wa9HMv65COo7L1j/1fXwakC4VCGIpGy1m/cDqnL37gAF1wQZXXGrV9JPG7PpOGyNahQZwPoYY8OUJCB+k9AmEwg6s9oBRWFBcY9PQW9sMH5UEGIXerqWfETy7qxGUqKElxogEnYKB/m/YzFhfw72Ew9Ra+AdMjgZOE+KoPo57AYQgbOw1WtPxQDqbWFCuennw2eD+l8WVWGogKEB6f8q0QnzpP+3mjxoSV99nx0sv126YowCrK0r2o5HOztPXp7ArtC3fZWdlGnjx/XWHfwlv75YnI71gD413ffGUXtk4xsCbD3vNOChBlAVphQfJcTscfUDknJFaCB7w7V8pyPXKTuRirBxtSQjddFG21zAOELDZntBgPZ/0Ixu9VJmA=
-  file: $WP_THEME.zip
-  on:
-    tags: true
-    repo: godaddy/wp-primer-theme
-    php: '7.1'
-    condition: "$WP_VERSION=trunk"
-  skip_cleanup: true
-  overwrite: true
+jobs:
+  include:
+    - stage: PHPCS
+      script:
+        - source $DEV_LIB_PATH/travis.script.sh
+    - stage: Theme Check
+      script:
+        - source $TRAVIS_BUILD_DIR/.dev/theme-check.sh
+    - stage: GitHub Release
+      deploy:
+        provider: releases
+        api_key:
+          secure: nZeGCRawe6Vh/D6Cll8Egu1oRCpB14x4w1G35yfYrjWqL7Hak+C5+Se4TziTX2RudQX0JV7jlaydqKSrNaChlLkIrAd2DUt8SRgZrWuh18VXFVcOM6gWEvDBdiHOdN7TMlkFM6a3VM3aiMpZqsNbYF4GrMYeZ6coJMdV6Sy6eLpux8hPNbK17fKmdBW+oZor54/arLV9gdPmfPGq/lcdC2/hk9BMOlwZ0dpqH7kS27PDF4gmIVUCgIq+zg4SLqWGMsaZaDzygjBPjL6CKz9ZT+MswplWtz6QTIPfvJVm4tLip9wa9HMv65COo7L1j/1fXwakC4VCGIpGy1m/cDqnL37gAF1wQZXXGrV9JPG7PpOGyNahQZwPoYY8OUJCB+k9AmEwg6s9oBRWFBcY9PQW9sMH5UEGIXerqWfETy7qxGUqKElxogEnYKB/m/YzFhfw72Ew9Ra+AdMjgZOE+KoPo57AYQgbOw1WtPxQDqbWFCuennw2eD+l8WVWGogKEB6f8q0QnzpP+3mjxoSV99nx0sv126YowCrK0r2o5HOztPXp7ArtC3fZWdlGnjx/XWHfwlv75YnI71gD413ffGUXtk4xsCbD3vNOChBlAVphQfJcTscfUDknJFaCB7w7V8pyPXKTuRirBxtSQjddFG21zAOELDZntBgPZ/0Ixu9VJmA=
+        file: $WP_THEME.zip
+        on:
+          tags: true
+          repo: godaddy/wp-primer-theme
+           php: 7.1
+          condition: "$WP_VERSION=latest"
+        skip_cleanup: true
+        overwrite: true
