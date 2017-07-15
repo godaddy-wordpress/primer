@@ -42,13 +42,13 @@ install:
   - chmod +x /tmp/wp-cli.phar
 
 script:
+  - source $TRAVIS_BUILD_DIR/.dev/theme-check.sh
   - source $DEV_LIB_PATH/travis.script.sh
 
 after_script:
   - source $DEV_LIB_PATH/travis.after_script.sh
 
 before_deploy:
-  - source $TRAVIS_BUILD_DIR/.dev/theme-check.sh
   - zip -r $TRAVIS_BUILD_DIR/$WP_THEME.zip $INSTALL_PATH
 
 deploy:
