@@ -38,11 +38,11 @@ matrix:
   fast_finish: true
   exclude:
     - php: 5.2
-      env: WP_VERSION=trunk WP_THEME=primer
+      env: WP_VERSION=trunk
     - php: 5.6
-      env: WP_VERSION=trunk WP_THEME=primer
+      env: WP_VERSION=trunk
     - php: 7.1
-      env: WP_VERSION=4.4 WP_THEME=primer
+      env: WP_VERSION=4.4
 
 before_install:
   - phpenv config-rm xdebug.ini
@@ -64,7 +64,7 @@ jobs:
   include:
     - stage: Theme Check
       php: 7.1
-      env: WP_VERSION=latest WP_THEME=primer
+      env: WP_VERSION=latest
       install:
         - curl -o /tmp/wp-cli.phar -SL https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar
         - chmod +x /tmp/wp-cli.phar
