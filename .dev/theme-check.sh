@@ -1,6 +1,10 @@
 #!/bin/bash
 
 set -e
+shopt -s expand_aliases
+source "$DEV_LIB_PATH/check-diff.sh"
+
+set_environment_variables
 
 DB_NAME=wordpress
 DB_USER=root
