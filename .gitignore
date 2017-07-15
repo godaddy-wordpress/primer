@@ -1,11 +1,9 @@
-.dev/docs/build/
-.dev/docs/sphinx/src/build/
+.dev/docs/**/build/
 .dev/docs/sphinx/src/documentation/
 .DS_Store
 .sass-cache/
 .sublime-grunt.cache
 bower_components/
-build/
 node_modules/
 svn-url
 svn-username
