@@ -39,17 +39,14 @@ install:
   - chmod +x /tmp/wp-cli.phar
 
 script:
-  - if [ ${TRAVIS_PHP_VERSION:0:3} == "5.6" ]; then source ${TRAVIS_BUILD_DIR}/.dev/theme-check.sh; fi
   - source $DEV_LIB_PATH/travis.script.sh
 
 after_script:
   - source $DEV_LIB_PATH/travis.after_script.sh
 
 before_deploy:
-  - php /tmp/wp-cli.phar package install wp-cli/dist-archive-command
-  - cp -r ${TRAVIS_BUILD_DIR} /tmp/${WP_THEME}
-  - mv /tmp/${WP_THEME} ${TRAVIS_BUILD_DIR}
-  - php /tmp/wp-cli.phar dist-archive ${WP_THEME} ${TRAVIS_BUILD_DIR}/${WP_THEME}.zip --format=zip --debug
+  - source ${TRAVIS_BUILD_DIR}/.dev/theme-check.sh
+  - zip -r ${TRAVIS_BUILD_DIR}/${WP_THEME}.zip ${INSTALL_PATH}
 
 deploy:
   provider: releases
