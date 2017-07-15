@@ -20,11 +20,11 @@ php /tmp/wp-cli.phar config create \
 	--dbhost=${DB_HOST}
 
 php /tmp/wp-cli.phar core install \
-	--url=http://${WP_THEME}.dev \
-	--title=${WP_THEME} \
+	--url=http://tests.dev \
+	--title="WordPress Site" \
 	--admin_user=admin \
 	--admin_password=password \
-	--admin_email=local@${WP_THEME}.dev \
+	--admin_email=admin@tests.dev \
 	--skip-email
 
 export INSTALL_PATH=${WP_CORE_DIR}/src/wp-content/themes/${WP_THEME}
