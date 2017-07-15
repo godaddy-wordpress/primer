@@ -37,7 +37,7 @@ install:
   - source ${DEV_LIB_PATH}/travis.install.sh
   - curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
   - chmod +x /tmp/wp-cli.phar
-  - install_wp && install_db
+  - install_wp && install_test_suite && install_db
   - INSTALL_PATH=${WP_CORE_DIR}/src/wp-content/themes/${WP_THEME}
   - mkdir -p ${INSTALL_PATH}
   - rsync -av --exclude-from ${PROJECT_DIR}/.distignore --delete ${PROJECT_DIR}/ ${INSTALL_PATH}/
