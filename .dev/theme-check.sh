@@ -7,9 +7,7 @@ DB_USER=root
 DB_PASS=''
 DB_HOST=localhost
 
-if install_wp && install_db; then
-	echo "WordPress installed"
-fi
+install_wp && install_db
 
 cd ${WP_CORE_DIR}/src
 
