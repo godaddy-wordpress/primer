@@ -22,9 +22,6 @@ env:
   - WP_VERSION=4.4 WP_MULTISITE=0
   - WP_VERSION=latest WP_MULTISITE=0
   - WP_VERSION=trunk WP_MULTISITE=0
-  - WP_THEME=primer
-  - DB_USER=root
-  - DB_PASS=''
 
 matrix:
   fast_finish: true
@@ -33,22 +30,16 @@ matrix:
       env: WP_VERSION=4.4 WP_MULTISITE=0
 
 install:
+  - export WP_THEME=primer
   - export DEV_LIB_PATH=.dev/dev-lib
   - if [ ! -e ${DEV_LIB_PATH} ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
   - if [ ! -e ${DEV_LIB_PATH} ]; then git clone https://github.com/xwp/wp-dev-lib.git ${DEV_LIB_PATH}; fi
   - source ${DEV_LIB_PATH}/travis.install.sh
   - curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
   - chmod +x /tmp/wp-cli.phar
-  - install_wp && install_test_suite && install_db
-  - export INSTALL_PATH=${WP_CORE_DIR}/src/wp-content/themes/${WP_THEME}
-  - mkdir -p ${INSTALL_PATH}
-  - rsync -av --exclude-from ${PROJECT_DIR}/.distignore --delete ${PROJECT_DIR}/ ${INSTALL_PATH}/
-  - cd ${INSTALL_PATH}
-  - php /tmp/wp-cli.phar package install anhskohbo/wp-cli-themecheck
-  - php /tmp/wp-cli.phar plugin install theme-check --activate
 
 script:
-  - if [ ${TRAVIS_PHP_VERSION:0:2} == "7." ]; then php /tmp/wp-cli.phar themecheck --theme=${WP_THEME} --no-interactive; fi
+  - if [ ${TRAVIS_PHP_VERSION:0:2} == "5.6" ]; then source ${TRAVIS_BUILD_DIR}/.dev/theme-check.sh; fi
   - source ${DEV_LIB_PATH}/travis.script.sh
 
 after_script:
