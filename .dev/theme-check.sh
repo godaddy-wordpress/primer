@@ -19,6 +19,12 @@ php /tmp/wp-cli.phar config create \
 	--dbpass=${DB_PASS} \
 	--dbhost=${DB_HOST}
 
+php /tmp/wp-cli.phar core install \
+	--url=http://${WP_THEME}.dev \
+	--title=${WP_THEME} \
+	--admin_user=admin \
+	--admin_password=password
+
 export INSTALL_PATH=${WP_CORE_DIR}/src/wp-content/themes/${WP_THEME}
 mkdir -p ${INSTALL_PATH}
 rsync -av --exclude-from ${TRAVIS_BUILD_DIR}/.distignore --delete ${TRAVIS_BUILD_DIR}/ ${INSTALL_PATH}/
