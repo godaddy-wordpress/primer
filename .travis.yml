@@ -34,15 +34,15 @@ env:
     - WP_VERSION=latest
     - WP_VERSION=trunk
 
-matrix:
-  fast_finish: true
-  exclude:
-    - php: 5.2
-      env: WP_VERSION=trunk
-    - php: 5.6
-      env: WP_VERSION=trunk
-    - php: 7.1
-      env: WP_VERSION=4.4
+#matrix:
+#  fast_finish: true
+#  exclude:
+#    - php: 5.2
+#      env: WP_VERSION=trunk
+#    - php: 5.6
+#      env: WP_VERSION=trunk
+#    - php: 7.1
+#      env: WP_VERSION=4.4
 
 before_install:
   - phpenv config-rm xdebug.ini
@@ -61,18 +61,40 @@ after_script:
   - source $DEV_LIB_PATH/travis.after_script.sh
 
 jobs:
+  fast_finish: true
+  exclude:
+    - php: 5.2
+      env: WP_VERSION=trunk
+    - php: 5.6
+      env: WP_VERSION=trunk
+    - php: 7.1
+      env: WP_VERSION=4.4
   include:
     - stage: Theme Check
       php: 7.1
-      env: WP_VERSION=latest
+      env:
+        - WP_VERSION=latest
       install:
-        - curl -o /tmp/wp-cli.phar -SL https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar
-        - chmod +x /tmp/wp-cli.phar
-      script: source $TRAVIS_BUILD_DIR/.dev/theme-check.sh
+        - curl -o /tmp/wp.phar -SL https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar
+        - chmod +x /tmp/wp.phar
+        - export WP_CORE_DIR=/tmp/wordpress
+        - export INSTALL_PATH=$WP_CORE_DIR/wp-content/themes/$WP_THEME
+        - mkdir -p $WP_CORE_DIR && cd $WP_CORE_DIR
+        - php /tmp/wp.phar core download --path=$WP_CORE_DIR --version=latest
+        - php /tmp/wp.phar config create --dbname=wordpress --dbuser=root --dbpass="" --skip-check
+        - php /tmp/wp.phar db create
+        - php /tmp/wp.phar core install --url=http://test.dev --title="WordPress" --admin_user=admin --admin_password=password --admin_email=admin@tests.dev --skip-email
+        - php /tmp/wp.phar package install anhskohbo/wp-cli-themecheck
+        - php /tmp/wp.phar plugin install theme-check --activate
+        - mkdir -p $INSTALL_PATH
+        - rsync -av --exclude-from $TRAVIS_BUILD_DIR/.distignore --delete $TRAVIS_BUILD_DIR/ $INSTALL_PATH/
+        - php /tmp/wp.phar themecheck --theme=$WP_THEME --no-interactive
+      script:
+        - source $TRAVIS_BUILD_DIR/.dev/theme-check.sh
     - stage: GitHub Release
       before_deploy:
         - mkdir -p /tmp/$WP_THEME
-        - rsync -av --exclude-from ${TRAVIS_BUILD_DIR}/.distignore --delete ${TRAVIS_BUILD_DIR}/ /tmp/$WP_THEME/
+        - rsync -av --exclude-from $TRAVIS_BUILD_DIR/.distignore --delete $TRAVIS_BUILD_DIR/ /tmp/$WP_THEME/
         - zip -r $TRAVIS_BUILD_DIR/$WP_THEME.zip /tmp/$WP_THEME
       deploy:
         provider: releases
