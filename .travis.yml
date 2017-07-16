@@ -70,41 +70,31 @@ jobs:
     - php: 7.1
       env: WP_VERSION=4.4
   include:
-    - stage: Theme Check
+    - stage: theme check
       php: 7.1
       env:
         - WP_VERSION=latest
       install:
+        - export THEME_CHECK=1
         - curl -o /tmp/wp.phar -SL https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar
         - chmod +x /tmp/wp.phar
-        - export WP_CORE_DIR=/tmp/wordpress
-        - export INSTALL_PATH=$WP_CORE_DIR/wp-content/themes/$WP_THEME
-        - mkdir -p $WP_CORE_DIR && cd $WP_CORE_DIR
-        - php /tmp/wp.phar core download --path=$WP_CORE_DIR --version=latest
-        - php /tmp/wp.phar config create --dbname=wordpress --dbuser=root --dbpass="" --skip-check
-        - php /tmp/wp.phar db create
-        - php /tmp/wp.phar core install --url=http://test.dev --title="WordPress" --admin_user=admin --admin_password=password --admin_email=admin@tests.dev --skip-email
-        - php /tmp/wp.phar package install anhskohbo/wp-cli-themecheck
-        - php /tmp/wp.phar plugin install theme-check --activate
-        - mkdir -p $INSTALL_PATH
-        - rsync -av --exclude-from $TRAVIS_BUILD_DIR/.distignore --delete $TRAVIS_BUILD_DIR/ $INSTALL_PATH/
-        - php /tmp/wp.phar themecheck --theme=$WP_THEME --no-interactive
+        - source .dev/themecheck.install.sh
       script:
-        - source $TRAVIS_BUILD_DIR/.dev/theme-check.sh
-    - stage: GitHub Release
-      before_deploy:
-        - mkdir -p /tmp/$WP_THEME
-        - rsync -av --exclude-from $TRAVIS_BUILD_DIR/.distignore --delete $TRAVIS_BUILD_DIR/ /tmp/$WP_THEME/
-        - zip -r $TRAVIS_BUILD_DIR/$WP_THEME.zip /tmp/$WP_THEME
-      deploy:
-        provider: releases
-        api_key:
-          secure: nZeGCRawe6Vh/D6Cll8Egu1oRCpB14x4w1G35yfYrjWqL7Hak+C5+Se4TziTX2RudQX0JV7jlaydqKSrNaChlLkIrAd2DUt8SRgZrWuh18VXFVcOM6gWEvDBdiHOdN7TMlkFM6a3VM3aiMpZqsNbYF4GrMYeZ6coJMdV6Sy6eLpux8hPNbK17fKmdBW+oZor54/arLV9gdPmfPGq/lcdC2/hk9BMOlwZ0dpqH7kS27PDF4gmIVUCgIq+zg4SLqWGMsaZaDzygjBPjL6CKz9ZT+MswplWtz6QTIPfvJVm4tLip9wa9HMv65COo7L1j/1fXwakC4VCGIpGy1m/cDqnL37gAF1wQZXXGrV9JPG7PpOGyNahQZwPoYY8OUJCB+k9AmEwg6s9oBRWFBcY9PQW9sMH5UEGIXerqWfETy7qxGUqKElxogEnYKB/m/YzFhfw72Ew9Ra+AdMjgZOE+KoPo57AYQgbOw1WtPxQDqbWFCuennw2eD+l8WVWGogKEB6f8q0QnzpP+3mjxoSV99nx0sv126YowCrK0r2o5HOztPXp7ArtC3fZWdlGnjx/XWHfwlv75YnI71gD413ffGUXtk4xsCbD3vNOChBlAVphQfJcTscfUDknJFaCB7w7V8pyPXKTuRirBxtSQjddFG21zAOELDZntBgPZ/0Ixu9VJmA=
-        file: $WP_THEME.zip
-        skip_cleanup: true
-        overwrite: true
-        on:
-          tags: true
-          repo: godaddy/wp-primer-theme
-          php: "7.1"
-          condition: "$WP_VERSION = trunk"
+        - php /tmp/wp.phar themecheck --theme=$WP_THEME --no-interactive
+
+before_deploy:
+  - mkdir -p /tmp/$WP_THEME
+  - rsync -av --exclude-from $TRAVIS_BUILD_DIR/.distignore --delete $TRAVIS_BUILD_DIR/ /tmp/$WP_THEME/
+  - zip -r $TRAVIS_BUILD_DIR/$WP_THEME.zip /tmp/$WP_THEME
+
+deploy:
+  provider: releases
+  api_key:
+    secure: nZeGCRawe6Vh/D6Cll8Egu1oRCpB14x4w1G35yfYrjWqL7Hak+C5+Se4TziTX2RudQX0JV7jlaydqKSrNaChlLkIrAd2DUt8SRgZrWuh18VXFVcOM6gWEvDBdiHOdN7TMlkFM6a3VM3aiMpZqsNbYF4GrMYeZ6coJMdV6Sy6eLpux8hPNbK17fKmdBW+oZor54/arLV9gdPmfPGq/lcdC2/hk9BMOlwZ0dpqH7kS27PDF4gmIVUCgIq+zg4SLqWGMsaZaDzygjBPjL6CKz9ZT+MswplWtz6QTIPfvJVm4tLip9wa9HMv65COo7L1j/1fXwakC4VCGIpGy1m/cDqnL37gAF1wQZXXGrV9JPG7PpOGyNahQZwPoYY8OUJCB+k9AmEwg6s9oBRWFBcY9PQW9sMH5UEGIXerqWfETy7qxGUqKElxogEnYKB/m/YzFhfw72Ew9Ra+AdMjgZOE+KoPo57AYQgbOw1WtPxQDqbWFCuennw2eD+l8WVWGogKEB6f8q0QnzpP+3mjxoSV99nx0sv126YowCrK0r2o5HOztPXp7ArtC3fZWdlGnjx/XWHfwlv75YnI71gD413ffGUXtk4xsCbD3vNOChBlAVphQfJcTscfUDknJFaCB7w7V8pyPXKTuRirBxtSQjddFG21zAOELDZntBgPZ/0Ixu9VJmA=
+  file: $WP_THEME.zip
+  skip_cleanup: true
+  overwrite: true
+  on:
+    tags: true
+    repo: godaddy/wp-primer-theme
+    condition: "$THEME_CHECK == 1"
