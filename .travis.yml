@@ -34,16 +34,6 @@ env:
     - WP_VERSION=latest
     - WP_VERSION=trunk
 
-#matrix:
-#  fast_finish: true
-#  exclude:
-#    - php: 5.2
-#      env: WP_VERSION=trunk
-#    - php: 5.6
-#      env: WP_VERSION=trunk
-#    - php: 7.1
-#      env: WP_VERSION=4.4
-
 before_install:
   - phpenv config-rm xdebug.ini
 
@@ -74,6 +64,8 @@ jobs:
       php: 7.1
       env:
         - WP_VERSION=latest
+      before_install:
+        - phpenv config-rm xdebug.ini
       install:
         - export THEME_CHECK=1
         - curl -o /tmp/wp.phar -SL https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar
@@ -81,6 +73,7 @@ jobs:
         - source .dev/themecheck.install.sh
       script:
         - php /tmp/wp.phar themecheck --theme=$WP_THEME --no-interactive
+      after_script: true
 
 before_deploy:
   - mkdir -p /tmp/$WP_THEME
