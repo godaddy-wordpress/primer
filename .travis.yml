@@ -62,18 +62,15 @@ jobs:
   include:
     - stage: theme check
       php: 7.1
-      env:
-        - WP_VERSION=latest
-      before_install:
-        - phpenv config-rm xdebug.ini
+      env: WP_VERSION=latest
       install:
         - export THEME_CHECK=1
         - curl -o /tmp/wp.phar -SL https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar
         - chmod +x /tmp/wp.phar
-        - source .dev/themecheck.install.sh
+        - source .dev/travis.install-themecheck.sh
       script:
         - php /tmp/wp.phar themecheck --theme=$WP_THEME --no-interactive
-      after_script: true
+      after_script: true # skip by returning true
 
 before_deploy:
   - mkdir -p /tmp/$WP_THEME
