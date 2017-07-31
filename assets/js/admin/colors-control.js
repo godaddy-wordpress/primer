@@ -48,11 +48,18 @@
 
 				$( '#customize-control-color_scheme select option[value="_custom"]' ).remove();
 
+				if ( ! $( '#customize-control-display_header_text' ).find( 'input' ).is( ':checked' ) ) {
+
+					delete colorSchemes[ scheme ].colors.header_textcolor;
+					delete colorSchemes[ scheme ].colors.tagline_text_color;
+
+				}
+
 				schemeIsChanging = true;
 
 				_.each( colorSchemes[ scheme ].colors, function( color, setting ) {
 
-					var api_setting = api( setting );
+					var api_setting       = api( setting );
 
 					if ( 'undefined' === typeof api_setting ) {
 
