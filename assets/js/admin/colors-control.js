@@ -59,7 +59,7 @@
 
 				_.each( colorSchemes[ scheme ].colors, function( color, setting ) {
 
-					var api_setting       = api( setting );
+					var api_setting = api( setting );
 
 					if ( 'undefined' === typeof api_setting ) {
 
