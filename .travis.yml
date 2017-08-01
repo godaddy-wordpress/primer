@@ -31,6 +31,7 @@ matrix:
 
 install:
   - export DEV_LIB_PATH=.dev/dev-lib
+  - DEV_LIB_SKIP=phpcs
   - if [ ! -e "$DEV_LIB_PATH" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
   - if [ ! -e "$DEV_LIB_PATH" ]; then git clone https://github.com/xwp/wp-dev-lib.git $DEV_LIB_PATH; fi
   - source $DEV_LIB_PATH/travis.install.sh
