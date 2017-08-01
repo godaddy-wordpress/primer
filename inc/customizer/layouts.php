@@ -429,6 +429,32 @@ class Primer_Customizer_Layouts {
 			)
 		);
 
+		$wp_customize->add_setting(
+			'layout',
+			array(
+				'default'           => get_theme_mod( 'layout', $this->default ),
+				'type'              => 'theme_mod',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'sanitize_html_class',
+				'transport'         => 'postMessage',
+			)
+		);
+
+		$wp_customize->add_control(
+			new Primer_Customizer_Layouts_Control(
+				$wp_customize,
+				'layout',
+				array(
+					'label'       => esc_html__( 'Default Layout', 'primer' ),
+					'description' => esc_html__( 'All posts and pages on your site will use this layout by default.', 'primer' ),
+					'section'     => 'layout',
+					'settings'    => 'layout',
+					'type'        => 'radio',
+					'choices'     => $this->layouts,
+				)
+			)
+		);
+
 		if ( ! $this->page_widths ) {
 
 			return;

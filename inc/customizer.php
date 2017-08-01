@@ -60,9 +60,34 @@ class Primer_Customizer {
 		require_once get_template_directory() . '/inc/customizer/static-front-page.php';
 
 		add_action( 'after_setup_theme',      array( $this, 'logo' ) );
+		add_action( 'customize_register',     array( $this, 'require_controls' ), 1 );
 		add_action( 'customize_register',     array( $this, 'selective_refresh' ), 11 );
 		add_action( 'customize_register',     array( $this, 'use_featured_hero_image' ) );
 		add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
+
+	}
+
+	/**
+	 * Include controls class required by our sections.
+	 *
+	 * This is hooked her since WP_Customize_Control is not present before.
+	 */
+	public function require_controls() {
+
+		/**
+		 * Autoload all customizer controls.
+		 *
+		 * @since 1.0.0
+		 */
+		foreach( glob( dirname( __FILE__ ) . '/customizer/controls/*.php' ) as $filename ) {
+
+			if ( is_readable( $filename ) ) {
+
+				require_once $filename;
+
+			}
+
+		}
 
 	}
 
