@@ -7,9 +7,9 @@
 
 	var PrimerFonts = function( element, options ) {
 
-		this.element             = element;
-		this.customSelectLink  = null;
-		this.customDropdown     = null;
+		this.element          = element;
+		this.customSelectLink = null;
+		this.customDropdown   = null;
 
 		this.options = jQuery.extend( {}, this.defaults, options );
 
@@ -31,8 +31,6 @@
 
 			this.element.hide().addClass( 'primer-font-select' );
 
-			this.element.change( $.proxy( self.changeFont, self ) );
-
 			this.element.find( 'option' ).each( function() {
 
 				var selected = $( this ).is( ':selected' ) ? ' class="primer-font-active"' : '';
@@ -47,13 +45,16 @@
 
 			this.customDropdown = this.customSelectLink.next('.primer-font-options');
 
+			// Populate the fields with correct values on load.
 			if ( $selectedOption.length ) {
 
-				this.customSelectLink.find( '.primer-filter-text' ).text( $selectedOption.text() );
+				var selectedValue = $selectedOption.text().replace( / *\([^)]*\) */g, '' );
 
-				$dropdownSelectedOption = this.customDropdown.find( 'li[data-value="' + $selectedOption.text() + '"]' );
+				this.customSelectLink.find( '.primer-filter-text' ).text( selectedValue );
 
-				this.customSelectLink.find( '.primer-filter-text' ).addClass( $dropdownSelectedOption.attr( 'class' ) ).data( 'gf-class', $dropdownSelectedOption.attr('class') );
+				$dropdownSelectedOption = this.customDropdown.find( 'li[data-value="' + selectedValue + '"]' );
+
+				this.customSelectLink.find( '.primer-filter-text' ).addClass( $dropdownSelectedOption.attr( 'class' ) ).data( 'gf-class', $dropdownSelectedOption.attr( 'class' ) );
 
 				$dropdownSelectedOption.addClass( 'primer-font-active' );
 
@@ -93,8 +94,9 @@
 		 */
 		selectFont: function( event ) {
 
-			var $mainText     = this.customSelectLink.find( '.primer-filter-text' ),
-			    $activeSelect = this.element.find( 'option[value="' + $( event.target ).text() + '"]' ),
+			var optionText    = $( event.target ).text().replace( / *\([^)]*\) */g, '' ),
+			    $mainText     = this.customSelectLink.find( '.primer-filter-text' ),
+			    $activeSelect = this.element.find( 'option[value="' + optionText + '"]' ),
 			    mainTextClass = $mainText.data( 'gf-class' );
 
 			if ( $( event.target ).hasClass( 'primer-font-active' ) ) {
@@ -104,6 +106,7 @@
 				return false;
 
 			}
+
 
 			$( event.target ).siblings().removeClass( 'primer-font-active' );
 
@@ -119,7 +122,7 @@
 
 			} else {
 
-				this.element.val( $( event.target ).text() ).trigger( 'change' );
+				this.element.val( optionText ).trigger( 'change' );
 
 			}
 
@@ -139,29 +142,6 @@
 		},
 
 		/**
-		 * Select a different font.
-		 */
-		changeFont: function() {
-
-			var self               = this,
-			    activeFontValue    = self.element.find( 'option:selected' ).val(),
-			    $option            = this.customDropdown.find( 'li[data-value="' + activeFontValue + '"]' ),
-			    $mainText          = self.customSelectLink.find( '.primer-filter-text' );
-
-			// Set the correct dropdown values on initial load.
-			if ( this.customDropdown.find( 'li.primer-font-active' ).data( 'value' ) !== activeFontValue ) {
-
-				this.customDropdown.find( 'li' ).removeClass( 'primer-font-active' );
-
-				$mainText.removeClass( $mainText.data( 'gf-class' ) ).addClass( $option.attr( 'class' ) ).data( 'gf-class', $option.attr( 'class' ) );
-
-				$option.addClass( 'primer-font-active' );
-
-			}
-
-		},
-
-		/**
 		 * Convert a font name to a class.
 		 *
 		 * @param  string text The text to convert.
@@ -169,6 +149,8 @@
 		 * @return string      Font name slugified and prefixed with 'primer-font-'
 		 */
 		fontNameToClass: function( text ) {
+
+			text = text.replace( / *\([^)]*\) */g, '' );
 
 			return 'primer-font-' + text.replace( / /g,'-' ).toLowerCase();
 
@@ -194,7 +176,7 @@
 	// Initialize font dropdowns.
 	$( document ).ready( function() {
 
-		var fontNames = [
+		var customFontSections = [
 			'site_title_font',
 			'navigation_font',
 			'heading_font',
@@ -202,9 +184,9 @@
 			'secondary_font',
 		];
 
-		for ( var i = 0, l = fontNames.length; i < l; i++ ) {
+		for ( var i = 0, l = customFontSections.length; i < l; i++ ) {
 
-			$( 'select[data-customize-setting-link="' + fontNames[i] + '"]' ).primerFonts( {} );
+			$( 'select[data-customize-setting-link="' + customFontSections[i] + '"]' ).primerFonts( {} );
 
 		}
 
