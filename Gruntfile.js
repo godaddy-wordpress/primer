@@ -34,7 +34,7 @@ module.exports = function( grunt ) {
 			},
 			main: {
 				src: [ 'style.css' ]
-			},
+			}
 		},
 
 		clean: {
