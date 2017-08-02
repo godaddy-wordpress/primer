@@ -26,9 +26,15 @@ module.exports = function( grunt ) {
 			editor: {
 				src: [ 'editor-style.css' ]
 			},
+			layouts: {
+				src: [ 'assets/css/admin/layouts.css' ]
+			},
+			customizer_fonts: {
+				src: [ 'assets/css/admin/customizer-fonts.css' ]
+			},
 			main: {
 				src: [ 'style.css' ]
-			}
+			},
 		},
 
 		clean: {
@@ -287,11 +293,11 @@ module.exports = function( grunt ) {
 				precision: 5,
 				sourceMap: false
 			},
-			assets: {
-				expand: true,
-				cwd: '.dev/sass/assets/',
-				src: [ '**/*.scss' ],
-				dest: 'assets/css/'
+			admin: {
+				files: {
+					'assets/css/admin/customizer-fonts.css': '.dev/sass/admin/customizer-fonts.scss',
+					'assets/css/admin/layouts.css': '.dev/sass/admin/layouts.scss'
+				}
 			},
 			editor: {
 				files: {
