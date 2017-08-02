@@ -32,13 +32,6 @@ class Primer_Customizer {
 		require_once get_template_directory() . '/inc/customizer/colors.php';
 
 		/**
-		 * Load additional static front page options
-		 *
-		 * @since 1.5.0
-		 */
-		require_once get_template_directory() . '/inc/customizer/font-preview.php';
-
-		/**
 		 * Load Customizer Fonts functionality.
 		 *
 		 * @since 1.0.0
