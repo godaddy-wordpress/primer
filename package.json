@@ -76,7 +76,7 @@
     "susy": "^2.2.12"
   },
   "scripts": {
-    "version": "grunt version && git add -A .",
+    "version": "grunt version && grunt deploy-docs && git add -A .",
     "postversion": "git push && git push --tags"
   }
 }
