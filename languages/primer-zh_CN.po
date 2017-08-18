@@ -333,7 +333,7 @@ msgstr "帖子标题、小组件标题、表单标签和表格标题。"
 
 #: inc/customizer/fonts.php:126
 msgid "Primary"
-msgstr "主"
+msgstr "主要"
 
 #: inc/customizer/fonts.php:127
 msgid "Paragraphs, lists, links, quotes, and tables."
@@ -341,7 +341,7 @@ msgstr "段落、列表、链接、报价和表格。"
 
 #: inc/customizer/fonts.php:141
 msgid "Secondary"
-msgstr "次级域名"
+msgstr "次要"
 
 #: inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
