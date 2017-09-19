@@ -43,6 +43,7 @@
     "pt_BR": "Português do Brasil",
     "pt_PT": "Português",
     "ru_RU": "Русский",
+    "sr_RS": "Српски језик",
     "sv_SE": "Svenska",
     "th": "ไทย",
     "tl": "Tagalog",
@@ -75,7 +76,7 @@
     "susy": "^2.2.12"
   },
   "scripts": {
-    "version": "grunt version && git add -A .",
+    "version": "grunt version && grunt deploy-docs && git add -A .",
     "postversion": "git push && git push --tags"
   }
 }
