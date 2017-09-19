@@ -3,17 +3,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.5.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-03-01 23:51:05+00:00\n"
+"POT-Creation-Date: 2017-09-19 16:31:21+00:00\n"
+"PO-Revision-Date: 2017-09-19 10:47-0700\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
-"X-Generator: grunt-wp-i18n1.0.0\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"X-Generator: Poedit 1.8.9\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 
 #: 404.php:22 templates/woocommerce/404.php:22
 msgid "Oops! That page can't be found."
@@ -21,13 +24,30 @@ msgstr "Проблема! Не удалось найти страницу."
 
 #: 404.php:28 templates/woocommerce/404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr "Похоже, ничего не найдено в этом месте. Попробуйте поискать ниже:"
+
+#. translators: 1. number of comments, 2. post title
+#: comments.php:36
+msgid "%1$d thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
+msgstr[0] "%1$d мысль о %2$s"
+msgstr[1] "%1$d мыслей о %2$s"
+msgstr[2] ""
 
 #: comments.php:56 comments.php:83
 msgid "Comment navigation"
 msgstr "Навигация по комментариям"
+
+#. translators: left arrow (LTR) / right arrow (RTL)
+#: comments.php:58
+msgid "%s Older Comments"
+msgstr "%s более старых комментариев"
+
+#. translators: right arrow (LTR) / left arrow (RTL)
+#: comments.php:60
+msgid "Newer Comments %s"
+msgstr "Новые комментарии %s"
 
 #: comments.php:85
 msgid "&larr; Older Comments"
@@ -45,11 +65,16 @@ msgstr "Комментарии закрыты."
 msgid "Nothing Found"
 msgstr "Ничего не найдено"
 
-#: content-none.php:33
+#. translators: link to write a new post
+#: content-none.php:30
+msgid "Ready to publish your first post? %s."
+msgstr "Готовы создать первую публикацию?%s."
+
+#: content-none.php:34
 msgid "Get started here"
 msgstr "Начните здесь"
 
-#: content-none.php:42
+#: content-none.php:43
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -57,9 +82,12 @@ msgstr ""
 "Извините, но ничего не соответствует условиям поиска. Повторите попытку с "
 "другими ключевыми словами."
 
-#: content-none.php:48
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr "Кажется, мы не смогли найти то, что вы искали. Попробуйте воспользоваться поиском."
+#: content-none.php:49
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"Кажется, мы не смогли найти то, что вы искали. Попробуйте воспользоваться "
+"поиском."
 
 #: functions.php:186
 msgid "Featured"
@@ -99,8 +127,8 @@ msgstr "Вспомогательная боковая панель"
 
 #: functions.php:403
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr ""
 "Вспомогательная боковая панель отображается только тогда, когда выбран макет "
 "с тремя колонками."
@@ -111,7 +139,8 @@ msgstr "Нижний колонтитул 1"
 
 #: functions.php:411
 msgid "This sidebar is the first column of the footer widget area."
-msgstr "Эта боковая панель — первый столбец области виджета нижнего колонтитула."
+msgstr ""
+"Эта боковая панель — первый столбец области виджета нижнего колонтитула."
 
 #: functions.php:418
 msgid "Footer 2"
@@ -119,7 +148,8 @@ msgstr "Нижний колонтитул 2"
 
 #: functions.php:419
 msgid "This sidebar is the second column of the footer widget area."
-msgstr "Эта боковая панель — второй столбец области виджета нижнего колонтитула."
+msgstr ""
+"Эта боковая панель — второй столбец области виджета нижнего колонтитула."
 
 #: functions.php:426
 msgid "Footer 3"
@@ -127,51 +157,77 @@ msgstr "Нижний колонтитул 3"
 
 #: functions.php:427
 msgid "This sidebar is the third column of the footer widget area."
-msgstr "Эта боковая панель — третий столбец области виджета нижнего колонтитула."
+msgstr ""
+"Эта боковая панель — третий столбец области виджета нижнего колонтитула."
 
 #: functions.php:435
 msgid "Hero widgets appear over the header image on the front page."
-msgstr "Виджеты Hero отражаются поверх изображения верхнего колонтитула на первой странице."
+msgstr ""
+"Виджеты Hero отражаются поверх изображения верхнего колонтитула на первой "
+"странице."
 
 #: header.php:44
 msgid "Skip to content"
 msgstr "Перейти к контенту"
 
+#. translators: 1. PHP function name, 2. theme name, 3. version number, 4.
+#. alternative function name
+#: inc/compat/deprecated.php:40
+msgid ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
+"instead."
+msgstr ""
+"%1$s <strong>не поддерживается</strong> начиная с %2$s версии %3$s! Вместо "
+"этого используйте %4$s."
+
+#. translators: 1. PHP function name, 2. theme name, 3. version number
+#: inc/compat/deprecated.php:41
+msgid ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
+"alternative available."
+msgstr ""
+"%1$s <strong>не поддерживается</strong> начиная с %2$s версии %3$s, но "
+"альтернативы нет."
+
 #. Theme Name of the plugin/theme
 msgid "Primer"
 msgstr "Primer"
 
-#: inc/compat/deprecated.php:152
+#: inc/compat/deprecated.php:190
 msgid "Posts navigation"
 msgstr "Навигация по постам"
 
-#: inc/compat/deprecated.php:158
+#: inc/compat/deprecated.php:196
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Старые посты"
 
-#: inc/compat/deprecated.php:164
+#: inc/compat/deprecated.php:202
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Новые посты <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/compat/woocommerce.php:526
+#. translators: WooCommerce shopping cart item count.
+#: inc/compat/woocommerce.php:581
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d позиция"
 msgstr[1] "%d позиций"
+msgstr[2] ""
 
-#: inc/compat/woocommerce.php:593
+#: inc/compat/woocommerce.php:652
 msgid "Featured Products"
 msgstr "Рекомендованные продукты"
 
-#: inc/compat/woocommerce.php:603
+#: inc/compat/woocommerce.php:662
 msgid "On Sale Now"
 msgstr "Идет распродажа"
 
-#: inc/compat/woocommerce.php:617
+#: inc/compat/woocommerce.php:676
 msgid "New In Store"
 msgstr "Новое в магазине"
 
-#: inc/compat/wordpress.php:55
+#. translators: 1. Primer minimum WordPress version. 2. Current WordPress
+#. version.
+#: inc/compat/wordpress.php:56
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
@@ -187,7 +243,8 @@ msgstr "Текст заголовка сайта"
 msgid "Tagline Text"
 msgstr "Текст лозунга"
 
-#: inc/customizer/colors.php:76
+#. translators: the widget title
+#: inc/customizer/colors.php:76 inc/hero-text-widget.php:30
 msgid "Hero Text"
 msgstr "Текст Hero"
 
@@ -217,7 +274,9 @@ msgstr "Вспомогательный текст"
 
 #: inc/customizer/colors.php:199
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr "Авторы публикаций, количество комментариев, нижние колонтитулы сообщений и цитат."
+msgstr ""
+"Авторы публикаций, количество комментариев, нижние колонтитулы сообщений и "
+"цитат."
 
 #: inc/customizer/colors.php:213
 msgid "Widget Heading Text"
@@ -275,6 +334,61 @@ msgstr "Произвольно"
 msgid "Default"
 msgstr "По умолчанию"
 
+#. translators: color scheme name
+#: inc/customizer/colors.php:482
+msgid "Blush"
+msgstr "Румянец"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:486
+msgid "Bronze"
+msgstr "Бронза"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:490
+msgid "Canary"
+msgstr "Канарейка"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:494
+msgid "Cool"
+msgstr "Отличный"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:498
+msgid "Dark"
+msgstr "Темная"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:502
+msgid "Iguana"
+msgstr "Игуана"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:506
+msgid "Muted"
+msgstr "Приглушенная"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:510
+msgid "Plum"
+msgstr "Слива"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:514
+msgid "Rose"
+msgstr "Роза"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:518
+msgid "Tangerine"
+msgstr "Мандарин"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:522
+msgid "Turquoise"
+msgstr "Бирюзовый"
+
 #: inc/customizer/colors.php:714
 msgid "Colors"
 msgstr "Цвета"
@@ -307,13 +421,16 @@ msgstr "Нижний колонтитул"
 msgid "Base Color Scheme"
 msgstr "Основная цветовая схема"
 
-#: inc/customizer/colors.php:1291
+#: inc/customizer/colors.php:1292
 msgid "Hero Background Overlay"
 msgstr "Наложение фона Hero"
 
-#: inc/customizer/colors.php:1292
-msgid "Control the color overlay transparency when using a custom Header Image."
-msgstr "Управляйте прозрачностью цвета наложения, когда используете собственное изображение заголовка."
+#: inc/customizer/colors.php:1293
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+"Управляйте прозрачностью цвета наложения, когда используете собственное "
+"изображение заголовка."
 
 #: inc/customizer/fonts.php:89
 msgid "Site Title"
@@ -353,11 +470,17 @@ msgstr "Вторично"
 
 #: inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr "Авторы, количество комментариев, нижние колонтитулы публикаций и цитат."
+msgstr ""
+"Авторы, количество комментариев, нижние колонтитулы публикаций и цитат."
 
 #: inc/customizer/fonts.php:192
 msgid "Fonts"
 msgstr "Шрифты"
+
+#. translators: font name
+#: inc/customizer/fonts.php:217
+msgid "%s (Default)"
+msgstr "%s (по умолчанию)"
 
 #: inc/customizer/layouts.php:55
 msgid "One Column: Wide"
@@ -387,6 +510,16 @@ msgstr "Три столбца: Боковая панель | Содержани�
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "Три столбца: Боковая панель | Боковая панель | Содержание"
 
+#. translators: fixed-width page layout
+#: inc/customizer/layouts.php:99
+msgid "Fixed"
+msgstr "Фиксированная"
+
+#. translators: fluid-width page layout
+#: inc/customizer/layouts.php:100
+msgid "Fluid"
+msgstr "Пропорциональный"
+
 #: inc/customizer/layouts.php:263 inc/customizer/layouts.php:426
 msgid "Layout"
 msgstr "Макет"
@@ -399,11 +532,16 @@ msgstr "Ширина страницы"
 msgid "Display your site differently on larger screens."
 msgstr "Отображайте свой сайт по-другому на больших экранах."
 
-#: inc/customizer/site-identity.php:82
+#. translators: 1. copyright symbol, 2. year, 3. site title
+#: inc/customizer/site-identity.php:72 templates/parts/credit.php:24
+msgid "Copyright %1$s %2$d %3$s"
+msgstr "Авторское право %1$s %2$d %3$s"
+
+#: inc/customizer/site-identity.php:83
 msgid "Footer Copyright Text"
 msgstr "Текст сообщения об авторском праве в нижнем колонтитуле"
 
-#: inc/customizer/site-identity.php:101
+#: inc/customizer/site-identity.php:102
 msgid "Display theme author credit"
 msgstr "Показать сведения об авторе темы"
 
@@ -416,48 +554,82 @@ msgid "Use featured image"
 msgstr "Используйте рекомендованное изображение"
 
 #: inc/customizer.php:194
-msgid "Allow the featured image on the current post to override the hero image."
-msgstr "Позволить рекомендованному изображению из текущей публикации перекрывать изображение Hero."
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+"Позволить рекомендованному изображению из текущей публикации перекрывать "
+"изображение Hero."
 
-#: inc/helpers.php:56
+#. translators: search term
+#: inc/helpers.php:47
+msgid "Search Results for: %s"
+msgstr "Результаты поиска для: %s"
+
+#: inc/helpers.php:58
 msgid "404 Page Not Found"
 msgstr "404 — страница не найдена"
 
-#: inc/hero-text-widget.php:147
+#. translators: theme name
+#: inc/hero-text-widget.php:25
+msgid "A %s theme widget designed for the Hero area on your site's front page."
+msgstr ""
+"Разработан виджет темы %s для области Hero на главной странице вашего сайта."
+
+#: inc/hero-text-widget.php:148
 msgid "The title of widget. Leave empty for no title."
 msgstr "Название виджета. Если названия нет, оставьте поле пустым."
 
-#: inc/hero-text-widget.php:147
+#: inc/hero-text-widget.php:148
 msgid "Title:"
 msgstr "Заголовок:"
 
-#: inc/hero-text-widget.php:152
+#: inc/hero-text-widget.php:153
 msgid "Text:"
 msgstr "Текст:"
 
-#: inc/hero-text-widget.php:157
+#: inc/hero-text-widget.php:158
 msgid "Button Text:"
 msgstr "Текст кнопки:"
 
-#: inc/hero-text-widget.php:162
+#: inc/hero-text-widget.php:163
 msgid "Button Link URL:"
 msgstr "URL ссылки кнопки:"
 
-#: inc/hero-text-widget.php:163
+#: inc/hero-text-widget.php:164
 msgid "Paste URL or type to search"
 msgstr "Вставьте URL или введите текст для поиска"
 
-#: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
+#. translators: page number
+#: inc/hooks.php:414
+msgid "Page %d"
+msgstr "Страница %d"
+
+#. translators: 1. current page number, 2. total number of pages
+#: inc/hooks.php:498 templates/woocommerce/loop/pagination.php:47
+msgid "Page %1$d of %2$d"
+msgstr "Стр. %1$d из %2$d"
+
+#: inc/template-tags.php:278 templates/woocommerce/loop/pagination.php:32
 msgid "&larr; Previous"
 msgstr "&larr; Назад"
 
-#: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
+#: inc/template-tags.php:279 templates/woocommerce/loop/pagination.php:33
 msgid "Next &rarr;"
 msgstr "Далее &rarr;"
 
-#: inc/template-tags.php:266
+#. translators: post type singular label
+#: inc/template-tags.php:280
+msgid "%1$s navigation"
+msgstr "Навигация %1$s"
+
+#: inc/template-tags.php:393
 msgid "Blog"
 msgstr "Блог"
+
+#. translators: 1. theme name link, 2. theme author link
+#: templates/parts/credit.php:51
+msgid "%1$s WordPress theme by %2$s"
+msgstr "Тема %1$s для WordPress от %2$s"
 
 #: templates/parts/loop/page-content.php:28
 #: templates/parts/loop/post-content.php:19
@@ -474,6 +646,36 @@ msgstr "Изменить"
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Подробнее <span class=\"meta-nav\">&rarr;</span>"
 
+#. translators: post title
+#: templates/parts/loop/post-excerpt.php:15
+msgid "Continue reading %s"
+msgstr "Продолжить чтение %s"
+
+#. translators: right arrow (LTR) / left arrow (RTL)
+#: templates/parts/loop/post-excerpt.php:15
+msgid "Continue Reading %s"
+msgstr "Продолжить чтение %s"
+
+#. translators: separator for items in a list
+#: templates/parts/loop/post-footer.php:21
+#: templates/parts/loop/post-footer.php:33
+#: templates/parts/loop/post-search-footer.php:15
+#: templates/parts/loop/post-search-footer.php:27
+msgid ", "
+msgstr ", "
+
+#. translators: category list
+#: templates/parts/loop/post-footer.php:27
+#: templates/parts/loop/post-search-footer.php:21
+msgid "Posted in: %s"
+msgstr "Опубликовано в категории: %s"
+
+#. translators: tag list
+#: templates/parts/loop/post-footer.php:39
+#: templates/parts/loop/post-search-footer.php:33
+msgid "Filed under: %s"
+msgstr "Рубрика: %s"
+
 #: templates/parts/loop/post-meta.php:25
 #: templates/parts/loop/post-search-footer.php:43
 msgid "Leave a comment"
@@ -483,6 +685,12 @@ msgstr "Оставить комментарий"
 #: templates/parts/loop/post-search-footer.php:43
 msgid "1 Comment"
 msgstr "1 комментарий"
+
+#. translators: number of comments
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:43
+msgid "%d Comments"
+msgstr "% комментариев"
 
 #: templates/woocommerce/404.php:30
 msgid "Search"
@@ -496,6 +704,11 @@ msgstr "Рекламируемые продукты"
 msgid "Popular Products"
 msgstr "Популярные продукты"
 
+#. translators: post type singular label
+#: templates/woocommerce/loop/pagination.php:45
+msgid "%s navigation"
+msgstr "Навигация %s"
+
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
 msgstr "https://github.com/godaddy/wp-primer-theme"
@@ -505,7 +718,8 @@ msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Primer — это яркая тема, которая придает вашему контенту ясность и свежий облик."
+"Primer — это яркая тема, которая придает вашему контенту ясность и свежий "
+"облик."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
@@ -515,190 +729,6 @@ msgstr "GoDaddy"
 msgid "https://www.godaddy.com/"
 msgstr "https://www.godaddy.com/"
 
-#: comments.php:35
-msgctxt "1. number of comments, 2. post title"
-msgid "%1$d thought on %2$s"
-msgid_plural "%1$d thoughts on %2$s"
-msgstr[0] "%1$d мысль о %2$s"
-msgstr[1] "%1$d мыслей о %2$s"
-
-#: comments.php:58
-msgctxt "left arrow (LTR) / right arrow (RTL)"
-msgid "%s Older Comments"
-msgstr "%s более старых комментариев"
-
-#: comments.php:60
-msgctxt "right arrow (LTR) / left arrow (RTL)"
-msgid "Newer Comments %s"
-msgstr "Новые комментарии %s"
-
-#: templates/parts/loop/post-excerpt.php:15
-msgctxt "right arrow (LTR) / left arrow (RTL)"
-msgid "Continue Reading %s"
-msgstr "Продолжить чтение %s"
-
-#: content-none.php:29
-msgctxt "link to write a new post"
-msgid "Ready to publish your first post? %s."
-msgstr "Готовы создать первую публикацию?%s."
-
-#: inc/compat/deprecated.php:117
-msgctxt ""
-"1. PHP function name, 2. theme name, 3. version number, 4. alternative "
-"function name"
-msgid ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
-"instead."
-msgstr ""
-"%1$s <strong>не поддерживается</strong> начиная с %2$s версии %3$s! Вместо "
-"этого используйте %4$s."
-
-#: inc/compat/deprecated.php:118
-msgctxt "1. PHP function name, 2. theme name, 3. version number"
-msgid ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
-"alternative available."
-msgstr ""
-"%1$s <strong>не поддерживается</strong> начиная с %2$s версии %3$s, но "
-"альтернативы нет."
-
-#: inc/customizer/colors.php:482
-msgctxt "color scheme name"
-msgid "Blush"
-msgstr "Румянец"
-
-#: inc/customizer/colors.php:486
-msgctxt "color scheme name"
-msgid "Bronze"
-msgstr "Бронза"
-
-#: inc/customizer/colors.php:490
-msgctxt "color scheme name"
-msgid "Canary"
-msgstr "Канарейка"
-
-#: inc/customizer/colors.php:494
-msgctxt "color scheme name"
-msgid "Cool"
-msgstr "Отличный"
-
-#: inc/customizer/colors.php:498
-msgctxt "color scheme name"
-msgid "Dark"
-msgstr "Темная"
-
-#: inc/customizer/colors.php:502
-msgctxt "color scheme name"
-msgid "Iguana"
-msgstr "Игуана"
-
-#: inc/customizer/colors.php:506
-msgctxt "color scheme name"
-msgid "Muted"
-msgstr "Приглушенная"
-
-#: inc/customizer/colors.php:510
-msgctxt "color scheme name"
-msgid "Plum"
-msgstr "Слива"
-
-#: inc/customizer/colors.php:514
-msgctxt "color scheme name"
-msgid "Rose"
-msgstr "Роза"
-
-#: inc/customizer/colors.php:518
-msgctxt "color scheme name"
-msgid "Tangerine"
-msgstr "Мандарин"
-
-#: inc/customizer/colors.php:522
-msgctxt "color scheme name"
-msgid "Turquoise"
-msgstr "Бирюзовый"
-
-#: inc/customizer/fonts.php:217
-msgctxt "font name"
-msgid "%s (Default)"
-msgstr "%s (по умолчанию)"
-
-#: inc/customizer/layouts.php:99
-msgctxt "fixed-width page layout"
-msgid "Fixed"
-msgstr "Фиксированная"
-
-#: inc/customizer/layouts.php:100
-msgctxt "fluid-width page layout"
-msgid "Fluid"
-msgstr "Пропорциональный"
-
-#: inc/customizer/site-identity.php:71 templates/parts/credit.php:23
-msgctxt "1. copyright symbol, 2. year, 3. site title"
-msgid "Copyright %1$s %2$d %3$s"
-msgstr "Авторское право %1$s %2$d %3$s"
-
-#: inc/helpers.php:45
-msgctxt "search term"
-msgid "Search Results for: %s"
-msgstr "Результаты поиска для: %s"
-
-#: inc/hero-text-widget.php:24
-msgctxt "theme name"
-msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr "Разработан виджет темы %s для области Hero на главной странице вашего сайта."
-
-#: inc/hero-text-widget.php:29
-msgctxt "the widget title"
-msgid "Hero Text"
-msgstr "Текст Hero"
-
-#: inc/hooks.php:394
-msgctxt "page number"
-msgid "Page %d"
-msgstr "Страница %d"
-
-#: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
-msgctxt "1. current page number, 2. total number of pages"
-msgid "Page %1$d of %2$d"
-msgstr "Стр. %1$d из %2$d"
-
-#: inc/template-tags.php:153
-msgctxt "post type singular label"
-msgid "%1$s navigation"
-msgstr "Навигация %1$s"
-
-#: templates/woocommerce/loop/pagination.php:43
-msgctxt "post type singular label"
-msgid "%s navigation"
-msgstr "Навигация %s"
-
-#: templates/parts/credit.php:49
-msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s WordPress theme by %2$s"
-msgstr "Тема %1$s для WordPress от %2$s"
-
-#: templates/parts/loop/post-footer.php:21
-#: templates/parts/loop/post-footer.php:33
-#: templates/parts/loop/post-search-footer.php:15
-#: templates/parts/loop/post-search-footer.php:27
-msgctxt "separator for items in a list"
-msgid ", "
-msgstr ", "
-
-#: templates/parts/loop/post-footer.php:27
-#: templates/parts/loop/post-search-footer.php:21
-msgctxt "category list"
-msgid "Posted in: %s"
-msgstr "Опубликовано в категории: %s"
-
-#: templates/parts/loop/post-footer.php:39
-#: templates/parts/loop/post-search-footer.php:33
-msgctxt "tag list"
-msgid "Filed under: %s"
-msgstr "Рубрика: %s"
-
-#: templates/parts/loop/post-meta.php:25
-#: templates/parts/loop/post-search-footer.php:43
-msgctxt "number of comments"
-msgid "% Comments"
-msgstr "% комментариев"
+#~ msgctxt "the widget title"
+#~ msgid "Hero Text"
+#~ msgstr "Текст Hero"

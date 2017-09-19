@@ -3,20 +3,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.5.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-03-01 23:51:05+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-09-19 16:31:21+00:00\n"
 "PO-Revision-Date: 2017-04-05 13:55+0200\n"
 "Last-Translator: Luka Paunović <office@leo-host.com>\n"
+"Language-Team: \n"
+"Language: sr_RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
 "_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
 "esc_html_x:1,2c\n"
 "X-Generator: Poedit 2.0\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 "
-"&& (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"Language-Team: \n"
-"Language: sr_RS\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: 404.php:22 templates/woocommerce/404.php:22
 msgid "Oops! That page can't be found."
@@ -26,12 +26,33 @@ msgstr "Ups! Ova stranica ne može biti pronađena."
 msgid ""
 "It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
-"Izgleda da ništa nije pronađeno na ovoj lokaciji. Molimo pokušajte sa pretragom "
-"ispod:"
+"Izgleda da ništa nije pronađeno na ovoj lokaciji. Molimo pokušajte sa "
+"pretragom ispod:"
+
+#. translators: 1. number of comments, 2. post title
+#: comments.php:36
+#, fuzzy
+msgid "%1$d thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
+msgstr[0] "%1$d komentar na %2$s"
+msgstr[1] "%1$d komentara na %2$s"
+msgstr[2] "%1$d komentara na %2$s"
 
 #: comments.php:56 comments.php:83
 msgid "Comment navigation"
 msgstr "Navigacija Komentara"
+
+#. translators: left arrow (LTR) / right arrow (RTL)
+#: comments.php:58
+#, fuzzy
+msgid "%s Older Comments"
+msgstr "%s Stariji Komentari"
+
+#. translators: right arrow (LTR) / left arrow (RTL)
+#: comments.php:60
+#, fuzzy
+msgid "Newer Comments %s"
+msgstr "Noviji Komentari %s"
 
 #: comments.php:85
 msgid "&larr; Older Comments"
@@ -49,20 +70,27 @@ msgstr "Komentari su zatvoreni."
 msgid "Nothing Found"
 msgstr "Ništa nije pronađeno"
 
-#: content-none.php:33
+#. translators: link to write a new post
+#: content-none.php:30
+#, fuzzy
+msgid "Ready to publish your first post? %s."
+msgstr "Da li ste spremni da objavite svoj prvi članak? %s."
+
+#: content-none.php:34
 msgid "Get started here"
 msgstr "Započnite ovde"
 
-#: content-none.php:42
+#: content-none.php:43
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Izvinite, ali ništa se ne podudara sa vašim terminima pretrage. Molimo pokušajte "
-"ponovo."
+"Izvinite, ali ništa se ne podudara sa vašim terminima pretrage. Molimo "
+"pokušajte ponovo."
 
-#: content-none.php:48
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+#: content-none.php:49
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "Izgleda da ne možemo pronaći šta tražite. Možda pretraga može pomoći."
 
 #: functions.php:186
@@ -91,11 +119,11 @@ msgstr "Bočna traka"
 
 #: functions.php:395
 msgid ""
-"The primary sidebar appears alongside the content of every page, post, archive, "
-"and search template."
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
 msgstr ""
-"Primarna bočna traka se pojavljuje sa sadržajem svake stranice, članka, arhive, "
-"ili šablona za pretragu."
+"Primarna bočna traka se pojavljuje sa sadržajem svake stranice, članka, "
+"arhive, ili šablona za pretragu."
 
 #: functions.php:402
 msgid "Secondary Sidebar"
@@ -135,51 +163,75 @@ msgstr "Ova bočna traka je treća kolona podnožja vidžet područja."
 
 #: functions.php:435
 msgid "Hero widgets appear over the header image on the front page."
-msgstr "Heroj vidžet se prikazuje preko slike u zaglavlju na početnoj stranici."
+msgstr ""
+"Heroj vidžet se prikazuje preko slike u zaglavlju na početnoj stranici."
 
 #: header.php:44
 msgid "Skip to content"
 msgstr "Preskoči na sadržaj"
 
+#. translators: 1. PHP function name, 2. theme name, 3. version number, 4.
+#. alternative function name
+#: inc/compat/deprecated.php:40
+#, fuzzy
+msgid ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
+"instead."
+msgstr ""
+"%1$s je <strong>zastarelo</strong> još od %2$s verzije %3$s! Koristi %4$s"
+
+#. translators: 1. PHP function name, 2. theme name, 3. version number
+#: inc/compat/deprecated.php:41
+#, fuzzy
+msgid ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
+"alternative available."
+msgstr ""
+"%1$s je <strong>zastarelo</strong> još od %2$s verzije %3$s bez dostupnih "
+"alternativa."
+
 #. Theme Name of the plugin/theme
 msgid "Primer"
 msgstr "Primer"
 
-#: inc/compat/deprecated.php:152
+#: inc/compat/deprecated.php:190
 msgid "Posts navigation"
 msgstr "Navigacija članaka"
 
-#: inc/compat/deprecated.php:158
+#: inc/compat/deprecated.php:196
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Stariji članci"
 
-#: inc/compat/deprecated.php:164
+#: inc/compat/deprecated.php:202
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Noviji članci <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/compat/woocommerce.php:526
+#. translators: WooCommerce shopping cart item count.
+#: inc/compat/woocommerce.php:581
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d stavka"
 msgstr[1] "%d stavke"
 msgstr[2] "%d stavki"
 
-#: inc/compat/woocommerce.php:593
+#: inc/compat/woocommerce.php:652
 msgid "Featured Products"
 msgstr "Najnoviji proizvodi"
 
-#: inc/compat/woocommerce.php:603
+#: inc/compat/woocommerce.php:662
 msgid "On Sale Now"
 msgstr "Na prodaji sada"
 
-#: inc/compat/woocommerce.php:617
+#: inc/compat/woocommerce.php:676
 msgid "New In Store"
 msgstr "Novo u prodavnici"
 
-#: inc/compat/wordpress.php:55
+#. translators: 1. Primer minimum WordPress version. 2. Current WordPress
+#. version.
+#: inc/compat/wordpress.php:56
 msgid ""
-"Primer requires at least WordPress version %1$s. You are running version %2$s. "
-"Please upgrade and try again."
+"Primer requires at least WordPress version %1$s. You are running version "
+"%2$s. Please upgrade and try again."
 msgstr ""
 "Primer zahteva najmanje WordPress %1$s. Vi imate verziju %2$s. Molimo vas "
 "ažurirajte Vordpres i pokušajte ponovo."
@@ -192,7 +244,8 @@ msgstr "Tekst Naslova Sajta"
 msgid "Tagline Text"
 msgstr "Tagline Tekst"
 
-#: inc/customizer/colors.php:76
+#. translators: the widget title
+#: inc/customizer/colors.php:76 inc/hero-text-widget.php:30
 msgid "Hero Text"
 msgstr "Heroj Tekst"
 
@@ -206,7 +259,8 @@ msgstr "Zaglavlje Tekst"
 
 #: inc/customizer/colors.php:130
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "Naslovi članaka, naslovi vidžeta, oznake formi, tabele zaglavlja i dugmad."
+msgstr ""
+"Naslovi članaka, naslovi vidžeta, oznake formi, tabele zaglavlja i dugmad."
 
 #: inc/customizer/colors.php:151
 msgid "Primary Text"
@@ -280,6 +334,72 @@ msgstr "Prilagođeno"
 msgid "Default"
 msgstr "Podrazumevno"
 
+#. translators: color scheme name
+#: inc/customizer/colors.php:482
+#, fuzzy
+msgid "Blush"
+msgstr "Rumenilo"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:486
+#, fuzzy
+msgid "Bronze"
+msgstr "Bronza"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:490
+#, fuzzy
+msgid "Canary"
+msgstr "Kanari"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:494
+#, fuzzy
+msgid "Cool"
+msgstr "Hladna"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:498
+#, fuzzy
+msgid "Dark"
+msgstr "Tamna"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:502
+#, fuzzy
+msgid "Iguana"
+msgstr "Iguana"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:506
+#, fuzzy
+msgid "Muted"
+msgstr "Prigušena"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:510
+#, fuzzy
+msgid "Plum"
+msgstr "Šljiva"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:514
+#, fuzzy
+msgid "Rose"
+msgstr "Ruža"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:518
+#, fuzzy
+msgid "Tangerine"
+msgstr "Mandarina"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:522
+#, fuzzy
+msgid "Turquoise"
+msgstr "Tirkizna"
+
 #: inc/customizer/colors.php:714
 msgid "Colors"
 msgstr "Boje"
@@ -312,12 +432,13 @@ msgstr "Podnožje"
 msgid "Base Color Scheme"
 msgstr "Glavna šema boja"
 
-#: inc/customizer/colors.php:1291
+#: inc/customizer/colors.php:1292
 msgid "Hero Background Overlay"
 msgstr "Heroj Preklapanje Pozadine"
 
-#: inc/customizer/colors.php:1292
-msgid "Control the color overlay transparency when using a custom Header Image."
+#: inc/customizer/colors.php:1293
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
 msgstr ""
 "Kontroliše transparentnost boje kada koristite prilagođenu sliku zaglavlja."
 
@@ -365,6 +486,12 @@ msgstr ""
 msgid "Fonts"
 msgstr "Fontovi"
 
+#. translators: font name
+#: inc/customizer/fonts.php:217
+#, fuzzy
+msgid "%s (Default)"
+msgstr "%s (Pozdrazumevno)"
+
 #: inc/customizer/layouts.php:55
 msgid "One Column: Wide"
 msgstr "Jedna Kolona: Široko"
@@ -393,6 +520,18 @@ msgstr "Tir Kolone: Bočni traka | Sadržaj | Bočna traka"
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "Tri Kolone: Bočna traka | Bočna traka | Sadržaj"
 
+#. translators: fixed-width page layout
+#: inc/customizer/layouts.php:99
+#, fuzzy
+msgid "Fixed"
+msgstr "Fiksirano"
+
+#. translators: fluid-width page layout
+#: inc/customizer/layouts.php:100
+#, fuzzy
+msgid "Fluid"
+msgstr "Fluid"
+
 #: inc/customizer/layouts.php:263 inc/customizer/layouts.php:426
 msgid "Layout"
 msgstr "Izgled"
@@ -405,11 +544,17 @@ msgstr "Širina stranice"
 msgid "Display your site differently on larger screens."
 msgstr "Prikaži svoj sajt drugačije na većim ekranima."
 
-#: inc/customizer/site-identity.php:82
+#. translators: 1. copyright symbol, 2. year, 3. site title
+#: inc/customizer/site-identity.php:72 templates/parts/credit.php:24
+#, fuzzy
+msgid "Copyright %1$s %2$d %3$s"
+msgstr "Copyright %1$s %2$d %3$s"
+
+#: inc/customizer/site-identity.php:83
 msgid "Footer Copyright Text"
 msgstr "Copyright Tekst Podnožja"
 
-#: inc/customizer/site-identity.php:101
+#: inc/customizer/site-identity.php:102
 msgid "Display theme author credit"
 msgstr "Prikaži copyright autora teme"
 
@@ -422,55 +567,96 @@ msgid "Use featured image"
 msgstr "Koristi istaknutu fotografiju"
 
 #: inc/customizer.php:194
-msgid "Allow the featured image on the current post to override the hero image."
-msgstr "Dozvoli da istaknuta fotografija trenutnog posta zameni Heroj fotografiju."
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+"Dozvoli da istaknuta fotografija trenutnog posta zameni Heroj fotografiju."
 
-#: inc/helpers.php:56
+#. translators: search term
+#: inc/helpers.php:47
+#, fuzzy
+msgid "Search Results for: %s"
+msgstr "Rezultati pretrage za: %s"
+
+#: inc/helpers.php:58
 msgid "404 Page Not Found"
 msgstr "404 Stranica Nije Pronađena"
 
-#: inc/hero-text-widget.php:147
+#. translators: theme name
+#: inc/hero-text-widget.php:25
+#, fuzzy
+msgid "A %s theme widget designed for the Hero area on your site's front page."
+msgstr ""
+"Vidžet %s teme je dizajniran za Heroj oblast na početnoj stranici vašeg "
+"sajta."
+
+#: inc/hero-text-widget.php:148
 msgid "The title of widget. Leave empty for no title."
 msgstr "Naslov vidžeta. Ostavite prazno bez naslova."
 
-#: inc/hero-text-widget.php:147
+#: inc/hero-text-widget.php:148
 msgid "Title:"
 msgstr "Naslov:"
 
-#: inc/hero-text-widget.php:152
+#: inc/hero-text-widget.php:153
 msgid "Text:"
 msgstr "Tekst:"
 
-#: inc/hero-text-widget.php:157
+#: inc/hero-text-widget.php:158
 msgid "Button Text:"
 msgstr "Tekst Dugmeta:"
 
-#: inc/hero-text-widget.php:162
+#: inc/hero-text-widget.php:163
 msgid "Button Link URL:"
 msgstr "Dugme Link URL:"
 
-#: inc/hero-text-widget.php:163
+#: inc/hero-text-widget.php:164
 msgid "Paste URL or type to search"
 msgstr "Nalepi URL ili kucaj za pretragu"
 
-#: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
+#. translators: page number
+#: inc/hooks.php:414
+#, fuzzy
+msgid "Page %d"
+msgstr "Stranica %d"
+
+#. translators: 1. current page number, 2. total number of pages
+#: inc/hooks.php:498 templates/woocommerce/loop/pagination.php:47
+#, fuzzy
+msgid "Page %1$d of %2$d"
+msgstr "Stranica %1$d od %2$d"
+
+#: inc/template-tags.php:278 templates/woocommerce/loop/pagination.php:32
 msgid "&larr; Previous"
 msgstr "&larr; Prethodna"
 
-#: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
+#: inc/template-tags.php:279 templates/woocommerce/loop/pagination.php:33
 msgid "Next &rarr;"
 msgstr "Sledeće &rarr;"
 
-#: inc/template-tags.php:266
+#. translators: post type singular label
+#: inc/template-tags.php:280
+#, fuzzy
+msgid "%1$s navigation"
+msgstr "%1$s navigacija"
+
+#: inc/template-tags.php:393
 msgid "Blog"
 msgstr "Blog"
+
+#. translators: 1. theme name link, 2. theme author link
+#: templates/parts/credit.php:51
+#, fuzzy
+msgid "%1$s WordPress theme by %2$s"
+msgstr "%1$s WordPress tema od %2$s"
 
 #: templates/parts/loop/page-content.php:28
 #: templates/parts/loop/post-content.php:19
 msgid "Pages:"
 msgstr "Stranice:"
 
-#: templates/parts/loop/page-footer.php:9 templates/parts/loop/post-footer.php:15
+#: templates/parts/loop/page-footer.php:9
+#: templates/parts/loop/post-footer.php:15
 #: templates/parts/loop/post-search-footer.php:47
 msgid "Edit"
 msgstr "Izmena"
@@ -478,6 +664,40 @@ msgstr "Izmena"
 #: templates/parts/loop/post-content.php:15
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Pročitaj više <span class=\"meta-nav\">&rarr;</span>"
+
+#. translators: post title
+#: templates/parts/loop/post-excerpt.php:15
+#, fuzzy
+msgid "Continue reading %s"
+msgstr "Nastavi Čitanje %s"
+
+#. translators: right arrow (LTR) / left arrow (RTL)
+#: templates/parts/loop/post-excerpt.php:15
+#, fuzzy
+msgid "Continue Reading %s"
+msgstr "Nastavi Čitanje %s"
+
+#. translators: separator for items in a list
+#: templates/parts/loop/post-footer.php:21
+#: templates/parts/loop/post-footer.php:33
+#: templates/parts/loop/post-search-footer.php:15
+#: templates/parts/loop/post-search-footer.php:27
+msgid ", "
+msgstr ""
+
+#. translators: category list
+#: templates/parts/loop/post-footer.php:27
+#: templates/parts/loop/post-search-footer.php:21
+#, fuzzy
+msgid "Posted in: %s"
+msgstr "Objavljeno u: %s"
+
+#. translators: tag list
+#: templates/parts/loop/post-footer.php:39
+#: templates/parts/loop/post-search-footer.php:33
+#, fuzzy
+msgid "Filed under: %s"
+msgstr "Postavljeno unutar: %s"
 
 #: templates/parts/loop/post-meta.php:25
 #: templates/parts/loop/post-search-footer.php:43
@@ -488,6 +708,13 @@ msgstr "Ostavi komentar"
 #: templates/parts/loop/post-search-footer.php:43
 msgid "1 Comment"
 msgstr "1 Komentar"
+
+#. translators: number of comments
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:43
+#, fuzzy
+msgid "%d Comments"
+msgstr "% Komentara"
 
 #: templates/woocommerce/404.php:30
 msgid "Search"
@@ -501,14 +728,22 @@ msgstr "Promovisani Proizvodi"
 msgid "Popular Products"
 msgstr "Popularni Proizvodi"
 
+#. translators: post type singular label
+#: templates/woocommerce/loop/pagination.php:45
+#, fuzzy
+msgid "%s navigation"
+msgstr "%s navigacija"
+
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
 msgstr "https://github.com/godaddy/wp-primer-theme"
 
 #. Description of the plugin/theme
 msgid ""
-"Primer is a powerful theme that brings clarity to your content in a fresh design."
-msgstr "Primer je moćna tema koja donosi jasnoću vašem sadržaju uz svež dizajn."
+"Primer is a powerful theme that brings clarity to your content in a fresh "
+"design."
+msgstr ""
+"Primer je moćna tema koja donosi jasnoću vašem sadržaju uz svež dizajn."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
@@ -518,188 +753,6 @@ msgstr "GoDaddy"
 msgid "https://www.godaddy.com/"
 msgstr "https://www.godaddy.com/"
 
-#: comments.php:35
-msgctxt "1. number of comments, 2. post title"
-msgid "%1$d thought on %2$s"
-msgid_plural "%1$d thoughts on %2$s"
-msgstr[0] "%1$d komentar na %2$s"
-msgstr[1] "%1$d komentara na %2$s"
-msgstr[2] "%1$d komentara na %2$s"
-
-#: comments.php:58
-msgctxt "left arrow (LTR) / right arrow (RTL)"
-msgid "%s Older Comments"
-msgstr "%s Stariji Komentari"
-
-#: comments.php:60
-msgctxt "right arrow (LTR) / left arrow (RTL)"
-msgid "Newer Comments %s"
-msgstr "Noviji Komentari %s"
-
-#: templates/parts/loop/post-excerpt.php:15
-msgctxt "right arrow (LTR) / left arrow (RTL)"
-msgid "Continue Reading %s"
-msgstr "Nastavi Čitanje %s"
-
-#: content-none.php:29
-msgctxt "link to write a new post"
-msgid "Ready to publish your first post? %s."
-msgstr "Da li ste spremni da objavite svoj prvi članak? %s."
-
-#: inc/compat/deprecated.php:117
-msgctxt ""
-"1. PHP function name, 2. theme name, 3. version number, 4. alternative function "
-"name"
-msgid ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead."
-msgstr "%1$s je <strong>zastarelo</strong> još od %2$s verzije %3$s! Koristi %4$s"
-
-#: inc/compat/deprecated.php:118
-msgctxt "1. PHP function name, 2. theme name, 3. version number"
-msgid ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no alternative "
-"available."
-msgstr ""
-"%1$s je <strong>zastarelo</strong> još od %2$s verzije %3$s bez dostupnih "
-"alternativa."
-
-#: inc/customizer/colors.php:482
-msgctxt "color scheme name"
-msgid "Blush"
-msgstr "Rumenilo"
-
-#: inc/customizer/colors.php:486
-msgctxt "color scheme name"
-msgid "Bronze"
-msgstr "Bronza"
-
-#: inc/customizer/colors.php:490
-msgctxt "color scheme name"
-msgid "Canary"
-msgstr "Kanari"
-
-#: inc/customizer/colors.php:494
-msgctxt "color scheme name"
-msgid "Cool"
-msgstr "Hladna"
-
-#: inc/customizer/colors.php:498
-msgctxt "color scheme name"
-msgid "Dark"
-msgstr "Tamna"
-
-#: inc/customizer/colors.php:502
-msgctxt "color scheme name"
-msgid "Iguana"
-msgstr "Iguana"
-
-#: inc/customizer/colors.php:506
-msgctxt "color scheme name"
-msgid "Muted"
-msgstr "Prigušena"
-
-#: inc/customizer/colors.php:510
-msgctxt "color scheme name"
-msgid "Plum"
-msgstr "Šljiva"
-
-#: inc/customizer/colors.php:514
-msgctxt "color scheme name"
-msgid "Rose"
-msgstr "Ruža"
-
-#: inc/customizer/colors.php:518
-msgctxt "color scheme name"
-msgid "Tangerine"
-msgstr "Mandarina"
-
-#: inc/customizer/colors.php:522
-msgctxt "color scheme name"
-msgid "Turquoise"
-msgstr "Tirkizna"
-
-#: inc/customizer/fonts.php:217
-msgctxt "font name"
-msgid "%s (Default)"
-msgstr "%s (Pozdrazumevno)"
-
-#: inc/customizer/layouts.php:99
-msgctxt "fixed-width page layout"
-msgid "Fixed"
-msgstr "Fiksirano"
-
-#: inc/customizer/layouts.php:100
-msgctxt "fluid-width page layout"
-msgid "Fluid"
-msgstr "Fluid"
-
-#: inc/customizer/site-identity.php:71 templates/parts/credit.php:23
-msgctxt "1. copyright symbol, 2. year, 3. site title"
-msgid "Copyright %1$s %2$d %3$s"
-msgstr "Copyright %1$s %2$d %3$s"
-
-#: inc/helpers.php:45
-msgctxt "search term"
-msgid "Search Results for: %s"
-msgstr "Rezultati pretrage za: %s"
-
-#: inc/hero-text-widget.php:24
-msgctxt "theme name"
-msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr ""
-"Vidžet %s teme je dizajniran za Heroj oblast na početnoj stranici vašeg sajta."
-
-#: inc/hero-text-widget.php:29
-msgctxt "the widget title"
-msgid "Hero Text"
-msgstr "Heroj Tekst"
-
-#: inc/hooks.php:394
-msgctxt "page number"
-msgid "Page %d"
-msgstr "Stranica %d"
-
-#: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
-msgctxt "1. current page number, 2. total number of pages"
-msgid "Page %1$d of %2$d"
-msgstr "Stranica %1$d od %2$d"
-
-#: inc/template-tags.php:153
-msgctxt "post type singular label"
-msgid "%1$s navigation"
-msgstr "%1$s navigacija"
-
-#: templates/woocommerce/loop/pagination.php:43
-msgctxt "post type singular label"
-msgid "%s navigation"
-msgstr "%s navigacija"
-
-#: templates/parts/credit.php:49
-msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s WordPress theme by %2$s"
-msgstr "%1$s WordPress tema od %2$s"
-
-#: templates/parts/loop/post-footer.php:21 templates/parts/loop/post-footer.php:33
-#: templates/parts/loop/post-search-footer.php:15
-#: templates/parts/loop/post-search-footer.php:27
-msgctxt "separator for items in a list"
-msgid ", "
-msgstr ""
-
-#: templates/parts/loop/post-footer.php:27
-#: templates/parts/loop/post-search-footer.php:21
-msgctxt "category list"
-msgid "Posted in: %s"
-msgstr "Objavljeno u: %s"
-
-#: templates/parts/loop/post-footer.php:39
-#: templates/parts/loop/post-search-footer.php:33
-msgctxt "tag list"
-msgid "Filed under: %s"
-msgstr "Postavljeno unutar: %s"
-
-#: templates/parts/loop/post-meta.php:25
-#: templates/parts/loop/post-search-footer.php:43
-msgctxt "number of comments"
-msgid "% Comments"
-msgstr "% Komentara"
+#~ msgctxt "the widget title"
+#~ msgid "Hero Text"
+#~ msgstr "Heroj Tekst"
