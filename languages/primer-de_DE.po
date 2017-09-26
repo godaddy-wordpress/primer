@@ -56,8 +56,8 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Es tut uns leid, aber es wurden keine Ergebnisse zu Ihren Suchbegriffen "
-"gefunden. Bitte versuchen Sie es erneut mit einem anderen Suchbegriffen."
+"Sorry, aber es wurden keine Ergebnisse zu deinen Suchbegriffen gefunden. "
+"Bitte versuche es mit einigen anderen Suchbegriffen."
 
 #: content-none.php:48
 msgid "It seems we can't find what you're looking for. Perhaps searching can help."
@@ -104,8 +104,8 @@ msgid ""
 "The secondary sidebar will only appear when you have selected a "
 "three-column layout."
 msgstr ""
-"Die sekundäre Seitenleiste erscheint nur, wenn sie ein dreispaltiges Layout "
-"gewählt haben."
+"Die zweite Seitenleiste erscheint nur, wenn du ein dreispaltiges Layout "
+"gewählt hast."
 
 #: functions.php:410
 msgid "Footer 1"
@@ -178,8 +178,8 @@ msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Für Primer benötigen Sie WordPress Version %1$s oder höher. Sie führen "
-"Version %2$s aus. Bitte führen Sie ein Upgrade durch und versuchen Sie es erneut."
+"Für Primer benötigst du WordPress Version %1$s oder höher. Du führst Version "
+"%2$s aus. Führe bitte ein Upgrade durch und versuche es dann erneut."
 
 #: inc/customizer/colors.php:49
 msgid "Site Title Text"
