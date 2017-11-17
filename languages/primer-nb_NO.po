@@ -3,17 +3,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.5.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-03-01 23:51:05+00:00\n"
+"POT-Creation-Date: 2017-09-19 16:31:21+00:00\n"
+"PO-Revision-Date: 2017-09-19 10:48-0700\n"
+"Language: nb_NO\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
-"X-Generator: grunt-wp-i18n1.0.0\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"X-Generator: Poedit 1.8.9\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 
 #: 404.php:22 templates/woocommerce/404.php:22
 msgid "Oops! That page can't be found."
@@ -21,14 +23,31 @@ msgstr "Ops! Fant ikke den siden."
 
 #: 404.php:28 templates/woocommerce/404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
-"Det virker ikke som om noe ble funnet på denne plasseringen. Prøv å søke nedenfor:"
+"Det virker ikke som om noe ble funnet på denne plasseringen. Prøv å søke "
+"nedenfor:"
+
+#. translators: 1. number of comments, 2. post title
+#: comments.php:36
+msgid "%1$d thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
+msgstr[0] "%1$d en tanke om %2$s"
+msgstr[1] "%1$d tanker om %2$s"
 
 #: comments.php:56 comments.php:83
 msgid "Comment navigation"
 msgstr "Kommenter navigering"
+
+#. translators: left arrow (LTR) / right arrow (RTL)
+#: comments.php:58
+msgid "%s Older Comments"
+msgstr "%s Eldre kommentarer"
+
+#. translators: right arrow (LTR) / left arrow (RTL)
+#: comments.php:60
+msgid "Newer Comments %s"
+msgstr "Nyere kommentarer %s"
 
 #: comments.php:85
 msgid "&larr; Older Comments"
@@ -46,11 +65,16 @@ msgstr "Kommentarer er lukket."
 msgid "Nothing Found"
 msgstr "Ingen resultat"
 
-#: content-none.php:33
+#. translators: link to write a new post
+#: content-none.php:30
+msgid "Ready to publish your first post? %s."
+msgstr "Er du klar til å publisere den første posten din? %s."
+
+#: content-none.php:34
 msgid "Get started here"
 msgstr "Kom i gang her"
 
-#: content-none.php:42
+#: content-none.php:43
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -58,9 +82,12 @@ msgstr ""
 "Beklager, men ingenting stemte overens med søkeordene dine. Prøv på nytt med "
 "noen andre søkeord."
 
-#: content-none.php:48
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr "Det virker ikke som om vi finner det du leter etter. Kanskje det kan hjelpe å søke."
+#: content-none.php:49
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"Det virker ikke som om vi finner det du leter etter. Kanskje det kan hjelpe "
+"å søke."
 
 #: functions.php:186
 msgid "Featured"
@@ -100,10 +127,11 @@ msgstr "Sekundær sidestolpe"
 
 #: functions.php:403
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr ""
-"Den sekundære sidestolpen vil kun vises når du har valgt en utforming med tre kolonner."
+"Den sekundære sidestolpen vil kun vises når du har valgt en utforming med "
+"tre kolonner."
 
 #: functions.php:410
 msgid "Footer 1"
@@ -111,7 +139,9 @@ msgstr "Bunntekst 1"
 
 #: functions.php:411
 msgid "This sidebar is the first column of the footer widget area."
-msgstr "Denne sidestolpen er den første kolonnen i bunntekstens kontrollprogramområde."
+msgstr ""
+"Denne sidestolpen er den første kolonnen i bunntekstens "
+"kontrollprogramområde."
 
 #: functions.php:418
 msgid "Footer 2"
@@ -119,7 +149,8 @@ msgstr "Bunntekst 2"
 
 #: functions.php:419
 msgid "This sidebar is the second column of the footer widget area."
-msgstr "Denne sidestolpen er den andre kolonnen i bunntekstens kontrollprogramområde."
+msgstr ""
+"Denne sidestolpen er den andre kolonnen i bunntekstens kontrollprogramområde."
 
 #: functions.php:426
 msgid "Footer 3"
@@ -127,7 +158,9 @@ msgstr "Bunntekst 3"
 
 #: functions.php:427
 msgid "This sidebar is the third column of the footer widget area."
-msgstr "Denne sidestolpen er den tredje kolonnen i bunntekstens kontrollprogramområde."
+msgstr ""
+"Denne sidestolpen er den tredje kolonnen i bunntekstens "
+"kontrollprogramområde."
 
 #: functions.php:435
 msgid "Hero widgets appear over the header image on the front page."
@@ -137,47 +170,69 @@ msgstr "Hero-kontrollprogrammer vises over topptekst-bildet på forsiden."
 msgid "Skip to content"
 msgstr "Hopp til innhold"
 
+#. translators: 1. PHP function name, 2. theme name, 3. version number, 4.
+#. alternative function name
+#: inc/compat/deprecated.php:40
+msgid ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
+"instead."
+msgstr ""
+"%1$s er <strong>avskrevet</strong> siden %2$s versjon %3$s! Bruk %4$s "
+"isteden."
+
+#. translators: 1. PHP function name, 2. theme name, 3. version number
+#: inc/compat/deprecated.php:41
+msgid ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
+"alternative available."
+msgstr ""
+"%1$s er <strong>avskrevet</strong> siden %2$s versjon %3$s uten annet "
+"tilgjengelig alternativ."
+
 #. Theme Name of the plugin/theme
 msgid "Primer"
 msgstr "Primer"
 
-#: inc/compat/deprecated.php:152
+#: inc/compat/deprecated.php:190
 msgid "Posts navigation"
 msgstr "Post-navigering"
 
-#: inc/compat/deprecated.php:158
+#: inc/compat/deprecated.php:196
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Eldre poster"
 
-#: inc/compat/deprecated.php:164
+#: inc/compat/deprecated.php:202
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Nyere poster <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/compat/woocommerce.php:526
+#. translators: WooCommerce shopping cart item count.
+#: inc/compat/woocommerce.php:581
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d vare"
 msgstr[1] "%d varer"
 
-#: inc/compat/woocommerce.php:593
+#: inc/compat/woocommerce.php:652
 msgid "Featured Products"
 msgstr "Profilerte produkter"
 
-#: inc/compat/woocommerce.php:603
+#: inc/compat/woocommerce.php:662
 msgid "On Sale Now"
 msgstr "På salg nå"
 
-#: inc/compat/woocommerce.php:617
+#: inc/compat/woocommerce.php:676
 msgid "New In Store"
 msgstr "Ny i butikken"
 
-#: inc/compat/wordpress.php:55
+#. translators: 1. Primer minimum WordPress version. 2. Current WordPress
+#. version.
+#: inc/compat/wordpress.php:56
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer krever minst WordPress-versjon %1$s. Du kjører versjon %2$s. Oppgrader "
-"og prøv på nytt."
+"Primer krever minst WordPress-versjon %1$s. Du kjører versjon %2$s. "
+"Oppgrader og prøv på nytt."
 
 #: inc/customizer/colors.php:49
 msgid "Site Title Text"
@@ -187,7 +242,8 @@ msgstr "Nettstedstittel-tekst"
 msgid "Tagline Text"
 msgstr "Slagord-tekst"
 
-#: inc/customizer/colors.php:76
+#. translators: the widget title
+#: inc/customizer/colors.php:76 inc/hero-text-widget.php:30
 msgid "Hero Text"
 msgstr "Hero-tekst"
 
@@ -201,7 +257,9 @@ msgstr "Topptekst-tekst"
 
 #: inc/customizer/colors.php:130
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "Post titler, kontrollprogram-titler, skjemaetiketter, tabelloverskrifter og knapper."
+msgstr ""
+"Post titler, kontrollprogram-titler, skjemaetiketter, tabelloverskrifter og "
+"knapper."
 
 #: inc/customizer/colors.php:151
 msgid "Primary Text"
@@ -275,6 +333,61 @@ msgstr "Tilpasset"
 msgid "Default"
 msgstr "Standard"
 
+#. translators: color scheme name
+#: inc/customizer/colors.php:482
+msgid "Blush"
+msgstr "Rosenrød"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:486
+msgid "Bronze"
+msgstr "Bronse"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:490
+msgid "Canary"
+msgstr "Lysegul"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:494
+msgid "Cool"
+msgstr "Kul"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:498
+msgid "Dark"
+msgstr "Mørkt"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:502
+msgid "Iguana"
+msgstr "Iguan"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:506
+msgid "Muted"
+msgstr "Dempet"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:510
+msgid "Plum"
+msgstr "Plomme"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:514
+msgid "Rose"
+msgstr "Rosa"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:518
+msgid "Tangerine"
+msgstr "Oransjerød"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:522
+msgid "Turquoise"
+msgstr "Turkis"
+
 #: inc/customizer/colors.php:714
 msgid "Colors"
 msgstr "Farger"
@@ -307,13 +420,16 @@ msgstr "Bunntekst"
 msgid "Base Color Scheme"
 msgstr "Grunnleggende fargevalg"
 
-#: inc/customizer/colors.php:1291
+#: inc/customizer/colors.php:1292
 msgid "Hero Background Overlay"
 msgstr "Hero-bakgrunnsoverlegg"
 
-#: inc/customizer/colors.php:1292
-msgid "Control the color overlay transparency when using a custom Header Image."
-msgstr "Kontroller gjennomsiktigheten av fargevalg når du bruker et egendefinert topptekstbilde."
+#: inc/customizer/colors.php:1293
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+"Kontroller gjennomsiktigheten av fargevalg når du bruker et egendefinert "
+"topptekstbilde."
 
 #: inc/customizer/fonts.php:89
 msgid "Site Title"
@@ -337,7 +453,8 @@ msgstr "Overskrifter"
 
 #: inc/customizer/fonts.php:111
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr "Post titler, kontrollprogram-titler, skjemaetiketter og tabelloverskrifter."
+msgstr ""
+"Post titler, kontrollprogram-titler, skjemaetiketter og tabelloverskrifter."
 
 #: inc/customizer/fonts.php:126
 msgid "Primary"
@@ -353,11 +470,18 @@ msgstr "Sekundært"
 
 #: inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr "Bylines, antall kommentarer, svarkoblinger, post-bunntekster og sitat-bunntekster."
+msgstr ""
+"Bylines, antall kommentarer, svarkoblinger, post-bunntekster og sitat-"
+"bunntekster."
 
 #: inc/customizer/fonts.php:192
 msgid "Fonts"
 msgstr "Skrifttype"
+
+#. translators: font name
+#: inc/customizer/fonts.php:217
+msgid "%s (Default)"
+msgstr "%s (standard)"
 
 #: inc/customizer/layouts.php:55
 msgid "One Column: Wide"
@@ -387,6 +511,16 @@ msgstr "Tre kolonner: Sidestolpe / innhold / sidestolpe"
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "Tre kolonner: Sidestolpe / sidestolpe / innhold"
 
+#. translators: fixed-width page layout
+#: inc/customizer/layouts.php:99
+msgid "Fixed"
+msgstr "Fast"
+
+#. translators: fluid-width page layout
+#: inc/customizer/layouts.php:100
+msgid "Fluid"
+msgstr "Flytende"
+
 #: inc/customizer/layouts.php:263 inc/customizer/layouts.php:426
 msgid "Layout"
 msgstr "Layout"
@@ -399,11 +533,16 @@ msgstr "Sidebredde"
 msgid "Display your site differently on larger screens."
 msgstr "Vis nettstedet forskjellig på større skjermer."
 
-#: inc/customizer/site-identity.php:82
+#. translators: 1. copyright symbol, 2. year, 3. site title
+#: inc/customizer/site-identity.php:72 templates/parts/credit.php:24
+msgid "Copyright %1$s %2$d %3$s"
+msgstr "Copyright %1$s %2$d %3$s"
+
+#: inc/customizer/site-identity.php:83
 msgid "Footer Copyright Text"
 msgstr "Opphavsrett-tekst for bunntekst"
 
-#: inc/customizer/site-identity.php:101
+#: inc/customizer/site-identity.php:102
 msgid "Display theme author credit"
 msgstr "Vis temaforfatter-kreditt"
 
@@ -416,48 +555,82 @@ msgid "Use featured image"
 msgstr "Bruk profilert bilde"
 
 #: inc/customizer.php:194
-msgid "Allow the featured image on the current post to override the hero image."
-msgstr "La det profilerte bildet på den nåværende posten overstyre hero-bildet."
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+"La det profilerte bildet på den nåværende posten overstyre hero-bildet."
 
-#: inc/helpers.php:56
+#. translators: search term
+#: inc/helpers.php:47
+msgid "Search Results for: %s"
+msgstr "Søkeresultater for: %s"
+
+#: inc/helpers.php:58
 msgid "404 Page Not Found"
 msgstr "404 Side ikke funnet"
 
-#: inc/hero-text-widget.php:147
+#. translators: theme name
+#: inc/hero-text-widget.php:25
+msgid "A %s theme widget designed for the Hero area on your site's front page."
+msgstr ""
+"Et %s-temakontrollprogram designet for Hero-området på forsiden til "
+"nettstedet ditt."
+
+#: inc/hero-text-widget.php:148
 msgid "The title of widget. Leave empty for no title."
 msgstr "Navnet på kontrollprogrammet. La stå tomt hvis navn ikke finnes."
 
-#: inc/hero-text-widget.php:147
+#: inc/hero-text-widget.php:148
 msgid "Title:"
 msgstr "Tittel:"
 
-#: inc/hero-text-widget.php:152
+#: inc/hero-text-widget.php:153
 msgid "Text:"
 msgstr "Tekst:"
 
-#: inc/hero-text-widget.php:157
+#: inc/hero-text-widget.php:158
 msgid "Button Text:"
 msgstr "Knappetekst:"
 
-#: inc/hero-text-widget.php:162
+#: inc/hero-text-widget.php:163
 msgid "Button Link URL:"
 msgstr "URL-knappekobling"
 
-#: inc/hero-text-widget.php:163
+#: inc/hero-text-widget.php:164
 msgid "Paste URL or type to search"
 msgstr "Lim inn URL eller skriv inn for å søke"
 
-#: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
+#. translators: page number
+#: inc/hooks.php:414
+msgid "Page %d"
+msgstr "Side %d"
+
+#. translators: 1. current page number, 2. total number of pages
+#: inc/hooks.php:498 templates/woocommerce/loop/pagination.php:47
+msgid "Page %1$d of %2$d"
+msgstr "Side %1$d av %2$d"
+
+#: inc/template-tags.php:278 templates/woocommerce/loop/pagination.php:32
 msgid "&larr; Previous"
 msgstr "&larr; Forrige"
 
-#: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
+#: inc/template-tags.php:279 templates/woocommerce/loop/pagination.php:33
 msgid "Next &rarr;"
 msgstr "Neste &rarr;"
 
-#: inc/template-tags.php:266
+#. translators: post type singular label
+#: inc/template-tags.php:280
+msgid "%1$s navigation"
+msgstr "%1$s-navigering"
+
+#: inc/template-tags.php:393
 msgid "Blog"
 msgstr "Blogg"
+
+#. translators: 1. theme name link, 2. theme author link
+#: templates/parts/credit.php:51
+msgid "%1$s WordPress theme by %2$s"
+msgstr "%1$s WordPress-tema av %2$s"
 
 #: templates/parts/loop/page-content.php:28
 #: templates/parts/loop/post-content.php:19
@@ -474,6 +647,36 @@ msgstr "Rediger"
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Les mer <span class=\"meta-nav\">&rarr;</span>"
 
+#. translators: post title
+#: templates/parts/loop/post-excerpt.php:15
+msgid "Continue reading %s"
+msgstr "Fortsett å lese %s"
+
+#. translators: right arrow (LTR) / left arrow (RTL)
+#: templates/parts/loop/post-excerpt.php:15
+msgid "Continue Reading %s"
+msgstr "Fortsett å lese %s"
+
+#. translators: separator for items in a list
+#: templates/parts/loop/post-footer.php:21
+#: templates/parts/loop/post-footer.php:33
+#: templates/parts/loop/post-search-footer.php:15
+#: templates/parts/loop/post-search-footer.php:27
+msgid ", "
+msgstr ", "
+
+#. translators: category list
+#: templates/parts/loop/post-footer.php:27
+#: templates/parts/loop/post-search-footer.php:21
+msgid "Posted in: %s"
+msgstr "Postet i: %s"
+
+#. translators: tag list
+#: templates/parts/loop/post-footer.php:39
+#: templates/parts/loop/post-search-footer.php:33
+msgid "Filed under: %s"
+msgstr "Arkivert under: %s"
+
 #: templates/parts/loop/post-meta.php:25
 #: templates/parts/loop/post-search-footer.php:43
 msgid "Leave a comment"
@@ -483,6 +686,12 @@ msgstr "Legg inn en kommentar"
 #: templates/parts/loop/post-search-footer.php:43
 msgid "1 Comment"
 msgstr "1 kommentar"
+
+#. translators: number of comments
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:43
+msgid "%d Comments"
+msgstr "% kommentarer"
 
 #: templates/woocommerce/404.php:30
 msgid "Search"
@@ -495,6 +704,11 @@ msgstr "Markedsførte produkter"
 #: templates/woocommerce/404.php:42 templates/woocommerce/404.php:44
 msgid "Popular Products"
 msgstr "Populære produkter"
+
+#. translators: post type singular label
+#: templates/woocommerce/loop/pagination.php:45
+msgid "%s navigation"
+msgstr "%s-navigering"
 
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
@@ -515,189 +729,6 @@ msgstr "GoDaddy"
 msgid "https://www.godaddy.com/"
 msgstr "https://www.godaddy.com/"
 
-#: comments.php:35
-msgctxt "1. number of comments, 2. post title"
-msgid "%1$d thought on %2$s"
-msgid_plural "%1$d thoughts on %2$s"
-msgstr[0] "%1$d en tanke om %2$s"
-msgstr[1] "%1$d tanker om %2$s"
-
-#: comments.php:58
-msgctxt "left arrow (LTR) / right arrow (RTL)"
-msgid "%s Older Comments"
-msgstr "%s Eldre kommentarer"
-
-#: comments.php:60
-msgctxt "right arrow (LTR) / left arrow (RTL)"
-msgid "Newer Comments %s"
-msgstr "Nyere kommentarer %s"
-
-#: templates/parts/loop/post-excerpt.php:15
-msgctxt "right arrow (LTR) / left arrow (RTL)"
-msgid "Continue Reading %s"
-msgstr "Fortsett å lese %s"
-
-#: content-none.php:29
-msgctxt "link to write a new post"
-msgid "Ready to publish your first post? %s."
-msgstr "Er du klar til å publisere den første posten din? %s."
-
-#: inc/compat/deprecated.php:117
-msgctxt ""
-"1. PHP function name, 2. theme name, 3. version number, 4. alternative "
-"function name"
-msgid ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
-"instead."
-msgstr ""
-"%1$s er <strong>avskrevet</strong> siden %2$s versjon %3$s! Bruk %4$s isteden."
-
-#: inc/compat/deprecated.php:118
-msgctxt "1. PHP function name, 2. theme name, 3. version number"
-msgid ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
-"alternative available."
-msgstr ""
-"%1$s er <strong>avskrevet</strong> siden %2$s versjon %3$s uten annet "
-"tilgjengelig alternativ."
-
-#: inc/customizer/colors.php:482
-msgctxt "color scheme name"
-msgid "Blush"
-msgstr "Rosenrød"
-
-#: inc/customizer/colors.php:486
-msgctxt "color scheme name"
-msgid "Bronze"
-msgstr "Bronse"
-
-#: inc/customizer/colors.php:490
-msgctxt "color scheme name"
-msgid "Canary"
-msgstr "Lysegul"
-
-#: inc/customizer/colors.php:494
-msgctxt "color scheme name"
-msgid "Cool"
-msgstr "Kul"
-
-#: inc/customizer/colors.php:498
-msgctxt "color scheme name"
-msgid "Dark"
-msgstr "Mørkt"
-
-#: inc/customizer/colors.php:502
-msgctxt "color scheme name"
-msgid "Iguana"
-msgstr "Iguan"
-
-#: inc/customizer/colors.php:506
-msgctxt "color scheme name"
-msgid "Muted"
-msgstr "Dempet"
-
-#: inc/customizer/colors.php:510
-msgctxt "color scheme name"
-msgid "Plum"
-msgstr "Plomme"
-
-#: inc/customizer/colors.php:514
-msgctxt "color scheme name"
-msgid "Rose"
-msgstr "Rosa"
-
-#: inc/customizer/colors.php:518
-msgctxt "color scheme name"
-msgid "Tangerine"
-msgstr "Oransjerød"
-
-#: inc/customizer/colors.php:522
-msgctxt "color scheme name"
-msgid "Turquoise"
-msgstr "Turkis"
-
-#: inc/customizer/fonts.php:217
-msgctxt "font name"
-msgid "%s (Default)"
-msgstr "%s (standard)"
-
-#: inc/customizer/layouts.php:99
-msgctxt "fixed-width page layout"
-msgid "Fixed"
-msgstr "Fast"
-
-#: inc/customizer/layouts.php:100
-msgctxt "fluid-width page layout"
-msgid "Fluid"
-msgstr "Flytende"
-
-#: inc/customizer/site-identity.php:71 templates/parts/credit.php:23
-msgctxt "1. copyright symbol, 2. year, 3. site title"
-msgid "Copyright %1$s %2$d %3$s"
-msgstr "Copyright %1$s %2$d %3$s"
-
-#: inc/helpers.php:45
-msgctxt "search term"
-msgid "Search Results for: %s"
-msgstr "Søkeresultater for: %s"
-
-#: inc/hero-text-widget.php:24
-msgctxt "theme name"
-msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr "Et %s-temakontrollprogram designet for Hero-området på forsiden til nettstedet ditt."
-
-#: inc/hero-text-widget.php:29
-msgctxt "the widget title"
-msgid "Hero Text"
-msgstr "Hero-tekst"
-
-#: inc/hooks.php:394
-msgctxt "page number"
-msgid "Page %d"
-msgstr "Side %d"
-
-#: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
-msgctxt "1. current page number, 2. total number of pages"
-msgid "Page %1$d of %2$d"
-msgstr "Side %1$d av %2$d"
-
-#: inc/template-tags.php:153
-msgctxt "post type singular label"
-msgid "%1$s navigation"
-msgstr "%1$s-navigering"
-
-#: templates/woocommerce/loop/pagination.php:43
-msgctxt "post type singular label"
-msgid "%s navigation"
-msgstr "%s-navigering"
-
-#: templates/parts/credit.php:49
-msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s WordPress theme by %2$s"
-msgstr "%1$s WordPress-tema av %2$s"
-
-#: templates/parts/loop/post-footer.php:21
-#: templates/parts/loop/post-footer.php:33
-#: templates/parts/loop/post-search-footer.php:15
-#: templates/parts/loop/post-search-footer.php:27
-msgctxt "separator for items in a list"
-msgid ", "
-msgstr ", "
-
-#: templates/parts/loop/post-footer.php:27
-#: templates/parts/loop/post-search-footer.php:21
-msgctxt "category list"
-msgid "Posted in: %s"
-msgstr "Postet i: %s"
-
-#: templates/parts/loop/post-footer.php:39
-#: templates/parts/loop/post-search-footer.php:33
-msgctxt "tag list"
-msgid "Filed under: %s"
-msgstr "Arkivert under: %s"
-
-#: templates/parts/loop/post-meta.php:25
-#: templates/parts/loop/post-search-footer.php:43
-msgctxt "number of comments"
-msgid "% Comments"
-msgstr "% kommentarer"
+#~ msgctxt "the widget title"
+#~ msgid "Hero Text"
+#~ msgstr "Hero-tekst"
