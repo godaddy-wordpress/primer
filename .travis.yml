@@ -24,9 +24,6 @@ env:
 
 matrix:
   fast_finish: true
-  include:
-    - php: 5.2
-      dist: precise
   exclude:
     - php: 7.1
       env: WP_VERSION=4.4 WP_MULTISITE=0
