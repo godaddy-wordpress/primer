@@ -36,7 +36,7 @@ function primer_get_the_page_title() {
 
 		case is_archive() :
 
-			$title = get_the_archive_title();
+			$title = wp_strip_all_tags( get_the_archive_title() );
 
 			break;
 
@@ -45,10 +45,7 @@ function primer_get_the_page_title() {
 			$title = sprintf(
 				/* translators: search term */
 				esc_html__( 'Search Results for: %s', 'primer' ),
-				sprintf(
-					'<span>%s</span>',
-					get_search_query()
-				)
+				get_search_query()
 			);
 
 			break;

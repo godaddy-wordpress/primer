@@ -3,32 +3,48 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.5.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-03-01 23:51:05+00:00\n"
+"POT-Creation-Date: 2017-09-19 16:31:21+00:00\n"
+"PO-Revision-Date: 2017-09-19 10:49-0700\n"
+"Language: mr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
-"X-Generator: grunt-wp-i18n1.0.0\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"X-Generator: Poedit 1.8.9\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 
 #: 404.php:22 templates/woocommerce/404.php:22
 msgid "Oops! That page can't be found."
 msgstr "‌‌अरेरे! ते पृष्ठ आढळू शकत नाही."
 
 #: 404.php:28 templates/woocommerce/404.php:28
-msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
-msgstr ""
-"या स्थानावर काहीही सापडले नाही असे दिसते. कृपया खाली शोधण्याचा प्रयत्न कराः"
+msgid "It looks like nothing was found at this location. Please try searching below:"
+msgstr "या स्थानावर काहीही सापडले नाही असे दिसते. कृपया खाली शोधण्याचा प्रयत्न कराः"
+
+#. translators: 1. number of comments, 2. post title
+#: comments.php:36
+msgid "%1$d thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
+msgstr[0] "%2$s वरील एक विचार %1$d"
+msgstr[1] "%1$d वरील %2$s विचार"
 
 #: comments.php:56 comments.php:83
 msgid "Comment navigation"
 msgstr "टिप्पणी नेव्हिगेशन"
+
+#. translators: left arrow (LTR) / right arrow (RTL)
+#: comments.php:58
+msgid "%s Older Comments"
+msgstr "%s जुन्या टिप्पण्या"
+
+#. translators: right arrow (LTR) / left arrow (RTL)
+#: comments.php:60
+msgid "Newer Comments %s"
+msgstr "नवीन टिप्पण्या %s"
 
 #: comments.php:85
 msgid "&larr; Older Comments"
@@ -46,19 +62,23 @@ msgstr "टिप्पण्या बंद केल्या आहेत."
 msgid "Nothing Found"
 msgstr "काहीही सापडले नाही"
 
-#: content-none.php:33
+#. translators: link to write a new post
+#: content-none.php:30
+msgid "Ready to publish your first post? %s."
+msgstr "आपण आपली पहिली पोस्ट प्रकाशित करण्यास तयार आहात? %s."
+
+#: content-none.php:34
 msgid "Get started here"
 msgstr "येथे प्रारंभ करा"
 
-#: content-none.php:42
+#: content-none.php:43
 msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+"Sorry, but nothing matched your search terms. Please try again with some different "
+"keywords."
 msgstr ""
-"क्षमस्व, परंतु आपल्या शोध संज्ञांशी काहीही जुळले नाही. कृपया काही भिन्न "
-"कीवर्डसह पुन्हा प्रयत्न करा."
+"क्षमस्व, परंतु आपल्या शोध संज्ञांशी काहीही जुळले नाही. कृपया काही भिन्न कीवर्डसह पुन्हा प्रयत्न करा."
 
-#: content-none.php:48
+#: content-none.php:49
 msgid "It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr "आपण शोधत असलेले आम्ही शोधू शकत नाही असे दिसते. कदाचित शोधण्याने मदत होऊ शकते."
 
@@ -88,11 +108,9 @@ msgstr "साइडबार"
 
 #: functions.php:395
 msgid ""
-"The primary sidebar appears alongside the content of every page, post, "
-"archive, and search template."
-msgstr ""
-"प्रत्येक पृष्‍ठ, पोस्ट, संग्रहण आणि शोध टेम्पलेटच्या सामग्रीच्या बाजूस "
-"प्राथमिक साइडबार दिसतो. "
+"The primary sidebar appears alongside the content of every page, post, archive, and "
+"search template."
+msgstr "प्रत्येक पृष्‍ठ, पोस्ट, संग्रहण आणि शोध टेम्पलेटच्या सामग्रीच्या बाजूस प्राथमिक साइडबार दिसतो. "
 
 #: functions.php:402
 msgid "Secondary Sidebar"
@@ -100,8 +118,7 @@ msgstr "दुय्यम साइडबार"
 
 #: functions.php:403
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column layout."
 msgstr "आपण एक तृतीय-स्तंभ लेआउट निवडता केवळ तेव्हाच दुय्यम साइडबार दिसेल. "
 
 #: functions.php:410
@@ -136,47 +153,64 @@ msgstr "पहिल्या पृष्ठावरील शीर्षल�
 msgid "Skip to content"
 msgstr "सामग्रीवर जा"
 
+#. translators: 1. PHP function name, 2. theme name, 3. version number, 4.
+#. alternative function name
+#: inc/compat/deprecated.php:40
+msgid "%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s instead."
+msgstr "%1$s ला %2$s पासून आवृत्ती %3$s ला <strong>नापसंत केले आहे</strong>! त्याऐवजी %4$s वापरा."
+
+#. translators: 1. PHP function name, 2. theme name, 3. version number
+#: inc/compat/deprecated.php:41
+msgid ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no alternative "
+"available."
+msgstr ""
+"कोणताही पर्याय उपलब्ध नसताना %1$s ला %2$s पासून आवृत्ती %3$s ला <strong>नापसंत केले आहे</strong>!"
+
 #. Theme Name of the plugin/theme
 msgid "Primer"
 msgstr "Primer"
 
-#: inc/compat/deprecated.php:152
+#: inc/compat/deprecated.php:190
 msgid "Posts navigation"
 msgstr "पोस्ट नेव्हिगेशन"
 
-#: inc/compat/deprecated.php:158
+#: inc/compat/deprecated.php:196
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> जुने पोस्ट"
 
-#: inc/compat/deprecated.php:164
+#: inc/compat/deprecated.php:202
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "नवीन पोस्ट <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/compat/woocommerce.php:526
+#. translators: WooCommerce shopping cart item count.
+#: inc/compat/woocommerce.php:581
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%dआयटम"
 msgstr[1] "%dआयटम्स"
 
-#: inc/compat/woocommerce.php:593
+#: inc/compat/woocommerce.php:652
 msgid "Featured Products"
 msgstr "वैशिष्ट्यीकृत उत्पादने"
 
-#: inc/compat/woocommerce.php:603
+#: inc/compat/woocommerce.php:662
 msgid "On Sale Now"
 msgstr "आता विक्रीसाठी आहेत"
 
-#: inc/compat/woocommerce.php:617
+#: inc/compat/woocommerce.php:676
 msgid "New In Store"
 msgstr "स्टोअरमध्ये नवीन"
 
-#: inc/compat/wordpress.php:55
+#. translators: 1. Primer minimum WordPress version. 2. Current WordPress
+#. version.
+#: inc/compat/wordpress.php:56
 msgid ""
-"Primer requires at least WordPress version %1$s. You are running version "
-"%2$s. Please upgrade and try again."
+"Primer requires at least WordPress version %1$s. You are running version %2$s. Please "
+"upgrade and try again."
 msgstr ""
-"Primer ला किमान WordPress आवृत्तीची आवश्यकता आहे %1$s. आपण %2$s आवृत्ती रन "
-"करीत आहात. कृपया श्रेणीसुधारित करा आणि पुन्हा प्रयत्न करा."
+"Primer ला किमान WordPress आवृत्तीची आवश्यकता आहे %1$s. आपण %2$s आवृत्ती रन करीत आहात. कृपया "
+"श्रेणीसुधारित करा आणि पुन्हा प्रयत्न करा."
 
 #: inc/customizer/colors.php:49
 msgid "Site Title Text"
@@ -186,7 +220,8 @@ msgstr "साइट शीर्षक मजकूर"
 msgid "Tagline Text"
 msgstr "टॅगलाइन मजकूर"
 
-#: inc/customizer/colors.php:76
+#. translators: the widget title
+#: inc/customizer/colors.php:76 inc/hero-text-widget.php:30
 msgid "Hero Text"
 msgstr "हिरो मजकूर"
 
@@ -274,6 +309,61 @@ msgstr "सानुकूल"
 msgid "Default"
 msgstr "डिफॉल्ट"
 
+#. translators: color scheme name
+#: inc/customizer/colors.php:482
+msgid "Blush"
+msgstr "लाली"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:486
+msgid "Bronze"
+msgstr "तांबूस"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:490
+msgid "Canary"
+msgstr "कॅनरी"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:494
+msgid "Cool"
+msgstr "थंड"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:498
+msgid "Dark"
+msgstr "गडद"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:502
+msgid "Iguana"
+msgstr "घोरपड"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:506
+msgid "Muted"
+msgstr "नि: शब्द केलेले"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:510
+msgid "Plum"
+msgstr "प्लम"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:514
+msgid "Rose"
+msgstr "गुलाब"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:518
+msgid "Tangerine"
+msgstr "नारिंगी"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:522
+msgid "Turquoise"
+msgstr "आकाशी"
+
 #: inc/customizer/colors.php:714
 msgid "Colors"
 msgstr "रंग"
@@ -306,11 +396,11 @@ msgstr "फूटर"
 msgid "Base Color Scheme"
 msgstr "पार्श्वभूमी रंग थीम"
 
-#: inc/customizer/colors.php:1291
+#: inc/customizer/colors.php:1292
 msgid "Hero Background Overlay"
 msgstr "हिरो पार्श्वभूमी आच्छादन"
 
-#: inc/customizer/colors.php:1292
+#: inc/customizer/colors.php:1293
 msgid "Control the color overlay transparency when using a custom Header Image."
 msgstr "सानुकूल शीर्षलेख प्रतिमा वापरताना रंग आच्छादन पारदर्शकता नियंत्रित करा."
 
@@ -358,6 +448,11 @@ msgstr "बायलाईन, टिप्पणी संख्या, प्�
 msgid "Fonts"
 msgstr "फॉन्ट"
 
+#. translators: font name
+#: inc/customizer/fonts.php:217
+msgid "%s (Default)"
+msgstr "%s (डिफॉल्ट)"
+
 #: inc/customizer/layouts.php:55
 msgid "One Column: Wide"
 msgstr "एक स्तंभः रुंद"
@@ -386,6 +481,16 @@ msgstr "तीन स्तंभः साइडबार / सामग्र�
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "तीन स्तंभः साइडबार / साइडबार / सामग्री"
 
+#. translators: fixed-width page layout
+#: inc/customizer/layouts.php:99
+msgid "Fixed"
+msgstr "निराकरण केलेले"
+
+#. translators: fluid-width page layout
+#: inc/customizer/layouts.php:100
+msgid "Fluid"
+msgstr "प्रवाही"
+
 #: inc/customizer/layouts.php:263 inc/customizer/layouts.php:426
 msgid "Layout"
 msgstr "लेआउट"
@@ -398,11 +503,16 @@ msgstr "पृष्ठ रुंदी"
 msgid "Display your site differently on larger screens."
 msgstr "मोठ्या स्क्रिनवर आपली साइट वेगळ्या पद्धतीने प्रदर्शित करा."
 
-#: inc/customizer/site-identity.php:82
+#. translators: 1. copyright symbol, 2. year, 3. site title
+#: inc/customizer/site-identity.php:72 templates/parts/credit.php:24
+msgid "Copyright %1$s %2$d %3$s"
+msgstr "कॉपीराइट %1$s%2$d %3$s."
+
+#: inc/customizer/site-identity.php:83
 msgid "Footer Copyright Text"
 msgstr "फूटर सर्वहक्कस्वाधीन"
 
-#: inc/customizer/site-identity.php:101
+#: inc/customizer/site-identity.php:102
 msgid "Display theme author credit"
 msgstr "थीम लेखक क्रेडिट प्रदर्शित करा"
 
@@ -418,53 +528,81 @@ msgstr "वैशिष्ट्यीकृत प्रतिमा वाप�
 msgid "Allow the featured image on the current post to override the hero image."
 msgstr "हिरो प्रतिमा ओव्हरराइड करण्यासाठी वैशिष्ट्यीकृत प्रतिमेला सद्य पोस्ट वर परवानगी द्या."
 
-#: inc/helpers.php:56
+#. translators: search term
+#: inc/helpers.php:47
+msgid "Search Results for: %s"
+msgstr "साठी शोध परिणाम: %s"
+
+#: inc/helpers.php:58
 msgid "404 Page Not Found"
 msgstr "404 पृष्ठ आढळले नाही"
 
-#: inc/hero-text-widget.php:147
+#. translators: theme name
+#: inc/hero-text-widget.php:25
+msgid "A %s theme widget designed for the Hero area on your site's front page."
+msgstr "आपल्या साइटच्या पुढील पृष्ठावर हिरो भागासाठी %s थीम विजेट डिझाइन केला आहे."
+
+#: inc/hero-text-widget.php:148
 msgid "The title of widget. Leave empty for no title."
 msgstr "विजेटचे शीर्षक. शीर्षक नको असल्यास रिक्त ठेवा."
 
-#: inc/hero-text-widget.php:147
+#: inc/hero-text-widget.php:148
 msgid "Title:"
 msgstr "शीर्षक:"
 
-#: inc/hero-text-widget.php:152
+#: inc/hero-text-widget.php:153
 msgid "Text:"
 msgstr "मजकूर:"
 
-#: inc/hero-text-widget.php:157
+#: inc/hero-text-widget.php:158
 msgid "Button Text:"
 msgstr "बटण मजकूर:"
 
-#: inc/hero-text-widget.php:162
+#: inc/hero-text-widget.php:163
 msgid "Button Link URL:"
 msgstr "बटण लिंक URL:"
 
-#: inc/hero-text-widget.php:163
+#: inc/hero-text-widget.php:164
 msgid "Paste URL or type to search"
 msgstr "URL पेस्ट करा किंवा शोधण्यासाठी टाइप करा"
 
-#: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
+#. translators: page number
+#: inc/hooks.php:414
+msgid "Page %d"
+msgstr "पृष्ठ %d"
+
+#. translators: 1. current page number, 2. total number of pages
+#: inc/hooks.php:498 templates/woocommerce/loop/pagination.php:47
+msgid "Page %1$d of %2$d"
+msgstr "%1$d पैकी %2$d पृष्ठ"
+
+#: inc/template-tags.php:278 templates/woocommerce/loop/pagination.php:32
 msgid "&larr; Previous"
 msgstr "&larr; मागील"
 
-#: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
+#: inc/template-tags.php:279 templates/woocommerce/loop/pagination.php:33
 msgid "Next &rarr;"
 msgstr "पुढील &rarr;"
 
-#: inc/template-tags.php:266
+#. translators: post type singular label
+#: inc/template-tags.php:280
+msgid "%1$s navigation"
+msgstr "%1$s नेव्हिगेशन"
+
+#: inc/template-tags.php:393
 msgid "Blog"
 msgstr "ब्लॉग"
 
-#: templates/parts/loop/page-content.php:28
-#: templates/parts/loop/post-content.php:19
+#. translators: 1. theme name link, 2. theme author link
+#: templates/parts/credit.php:51
+msgid "%1$s WordPress theme by %2$s"
+msgstr "%1$s द्वारे वर्डप्रेस थीम %2$s"
+
+#: templates/parts/loop/page-content.php:28 templates/parts/loop/post-content.php:19
 msgid "Pages:"
 msgstr "पृष्‍ठे:"
 
-#: templates/parts/loop/page-footer.php:9
-#: templates/parts/loop/post-footer.php:15
+#: templates/parts/loop/page-footer.php:9 templates/parts/loop/post-footer.php:15
 #: templates/parts/loop/post-search-footer.php:47
 msgid "Edit"
 msgstr "संपादित करा"
@@ -473,15 +611,45 @@ msgstr "संपादित करा"
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "आणखी वाचा <span class=\"meta-nav\">&rarr;</span>"
 
-#: templates/parts/loop/post-meta.php:25
-#: templates/parts/loop/post-search-footer.php:43
+#. translators: post title
+#: templates/parts/loop/post-excerpt.php:15
+msgid "Continue reading %s"
+msgstr "वाचन सुरू ठेवा %s"
+
+#. translators: right arrow (LTR) / left arrow (RTL)
+#: templates/parts/loop/post-excerpt.php:15
+msgid "Continue Reading %s"
+msgstr "वाचन सुरू ठेवा %s"
+
+#. translators: separator for items in a list
+#: templates/parts/loop/post-footer.php:21 templates/parts/loop/post-footer.php:33
+#: templates/parts/loop/post-search-footer.php:15
+#: templates/parts/loop/post-search-footer.php:27
+msgid ", "
+msgstr ", "
+
+#. translators: category list
+#: templates/parts/loop/post-footer.php:27 templates/parts/loop/post-search-footer.php:21
+msgid "Posted in: %s"
+msgstr "यामध्ये पोस्ट केले: %s"
+
+#. translators: tag list
+#: templates/parts/loop/post-footer.php:39 templates/parts/loop/post-search-footer.php:33
+msgid "Filed under: %s"
+msgstr "या अंतर्गत फाईल केले: %s"
+
+#: templates/parts/loop/post-meta.php:25 templates/parts/loop/post-search-footer.php:43
 msgid "Leave a comment"
 msgstr "एक टिप्पणी द्या"
 
-#: templates/parts/loop/post-meta.php:25
-#: templates/parts/loop/post-search-footer.php:43
+#: templates/parts/loop/post-meta.php:25 templates/parts/loop/post-search-footer.php:43
 msgid "1 Comment"
 msgstr "1 टिप्पणी"
+
+#. translators: number of comments
+#: templates/parts/loop/post-meta.php:25 templates/parts/loop/post-search-footer.php:43
+msgid "%d Comments"
+msgstr "% टिप्पण्या"
 
 #: templates/woocommerce/404.php:30
 msgid "Search"
@@ -495,16 +663,18 @@ msgstr "जाहिरात केलेली उत्पादने"
 msgid "Popular Products"
 msgstr "लोकप्रिय उत्पादने"
 
+#. translators: post type singular label
+#: templates/woocommerce/loop/pagination.php:45
+msgid "%s navigation"
+msgstr "%s नेव्हिगेशन"
+
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
 msgstr "https://github.com/godaddy/wp-primer-theme"
 
 #. Description of the plugin/theme
-msgid ""
-"Primer is a powerful theme that brings clarity to your content in a fresh "
-"design."
-msgstr ""
-"Primer एक शक्तीशाली थीम आहे जी आपल्या ताज्या डिझाइनमध्ये सामग्रीला स्पष्टता आणते."
+msgid "Primer is a powerful theme that brings clarity to your content in a fresh design."
+msgstr "Primer एक शक्तीशाली थीम आहे जी आपल्या ताज्या डिझाइनमध्ये सामग्रीला स्पष्टता आणते."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
@@ -514,190 +684,6 @@ msgstr "GoDaddy"
 msgid "https://www.godaddy.com/"
 msgstr "https://www.godaddy.com/"
 
-#: comments.php:35
-msgctxt "1. number of comments, 2. post title"
-msgid "%1$d thought on %2$s"
-msgid_plural "%1$d thoughts on %2$s"
-msgstr[0] "%2$s वरील एक विचार %1$d"
-msgstr[1] "%1$d वरील %2$s विचार"
-
-#: comments.php:58
-msgctxt "left arrow (LTR) / right arrow (RTL)"
-msgid "%s Older Comments"
-msgstr "%s जुन्या टिप्पण्या"
-
-#: comments.php:60
-msgctxt "right arrow (LTR) / left arrow (RTL)"
-msgid "Newer Comments %s"
-msgstr "नवीन टिप्पण्या %s"
-
-#: templates/parts/loop/post-excerpt.php:15
-msgctxt "right arrow (LTR) / left arrow (RTL)"
-msgid "Continue Reading %s"
-msgstr "वाचन सुरू ठेवा %s"
-
-#: content-none.php:29
-msgctxt "link to write a new post"
-msgid "Ready to publish your first post? %s."
-msgstr "आपण आपली पहिली पोस्ट प्रकाशित करण्यास तयार आहात? %s."
-
-#: inc/compat/deprecated.php:117
-msgctxt ""
-"1. PHP function name, 2. theme name, 3. version number, 4. alternative "
-"function name"
-msgid ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
-"instead."
-msgstr ""
-"%1$s ला %2$s पासून आवृत्ती %3$s ला <strong>नापसंत केले आहे</strong>! त्याऐवजी "
-"%4$s वापरा."
-
-#: inc/compat/deprecated.php:118
-msgctxt "1. PHP function name, 2. theme name, 3. version number"
-msgid ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
-"alternative available."
-msgstr ""
-"कोणताही पर्याय उपलब्ध नसताना %1$s ला %2$s पासून आवृत्ती %3$s ला "
-"<strong>नापसंत केले आहे</strong>!"
-
-#: inc/customizer/colors.php:482
-msgctxt "color scheme name"
-msgid "Blush"
-msgstr "लाली"
-
-#: inc/customizer/colors.php:486
-msgctxt "color scheme name"
-msgid "Bronze"
-msgstr "तांबूस"
-
-#: inc/customizer/colors.php:490
-msgctxt "color scheme name"
-msgid "Canary"
-msgstr "कॅनरी"
-
-#: inc/customizer/colors.php:494
-msgctxt "color scheme name"
-msgid "Cool"
-msgstr "थंड"
-
-#: inc/customizer/colors.php:498
-msgctxt "color scheme name"
-msgid "Dark"
-msgstr "गडद"
-
-#: inc/customizer/colors.php:502
-msgctxt "color scheme name"
-msgid "Iguana"
-msgstr "घोरपड"
-
-#: inc/customizer/colors.php:506
-msgctxt "color scheme name"
-msgid "Muted"
-msgstr "नि: शब्द केलेले"
-
-#: inc/customizer/colors.php:510
-msgctxt "color scheme name"
-msgid "Plum"
-msgstr "प्लम"
-
-#: inc/customizer/colors.php:514
-msgctxt "color scheme name"
-msgid "Rose"
-msgstr "गुलाब"
-
-#: inc/customizer/colors.php:518
-msgctxt "color scheme name"
-msgid "Tangerine"
-msgstr "नारिंगी"
-
-#: inc/customizer/colors.php:522
-msgctxt "color scheme name"
-msgid "Turquoise"
-msgstr "आकाशी"
-
-#: inc/customizer/fonts.php:217
-msgctxt "font name"
-msgid "%s (Default)"
-msgstr "%s (डिफॉल्ट)"
-
-#: inc/customizer/layouts.php:99
-msgctxt "fixed-width page layout"
-msgid "Fixed"
-msgstr "निराकरण केलेले"
-
-#: inc/customizer/layouts.php:100
-msgctxt "fluid-width page layout"
-msgid "Fluid"
-msgstr "प्रवाही"
-
-#: inc/customizer/site-identity.php:71 templates/parts/credit.php:23
-msgctxt "1. copyright symbol, 2. year, 3. site title"
-msgid "Copyright %1$s %2$d %3$s"
-msgstr "कॉपीराइट %1$s%2$d %3$s."
-
-#: inc/helpers.php:45
-msgctxt "search term"
-msgid "Search Results for: %s"
-msgstr "साठी शोध परिणाम: %s"
-
-#: inc/hero-text-widget.php:24
-msgctxt "theme name"
-msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr "आपल्या साइटच्या पुढील पृष्ठावर हिरो भागासाठी %s थीम विजेट डिझाइन केला आहे."
-
-#: inc/hero-text-widget.php:29
-msgctxt "the widget title"
-msgid "Hero Text"
-msgstr "हिरो मजकूर"
-
-#: inc/hooks.php:394
-msgctxt "page number"
-msgid "Page %d"
-msgstr "पृष्ठ %d"
-
-#: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
-msgctxt "1. current page number, 2. total number of pages"
-msgid "Page %1$d of %2$d"
-msgstr "%1$d पैकी %2$d पृष्ठ"
-
-#: inc/template-tags.php:153
-msgctxt "post type singular label"
-msgid "%1$s navigation"
-msgstr "%1$s नेव्हिगेशन"
-
-#: templates/woocommerce/loop/pagination.php:43
-msgctxt "post type singular label"
-msgid "%s navigation"
-msgstr "%s नेव्हिगेशन"
-
-#: templates/parts/credit.php:49
-msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s WordPress theme by %2$s"
-msgstr "%1$s द्वारे वर्डप्रेस थीम %2$s"
-
-#: templates/parts/loop/post-footer.php:21
-#: templates/parts/loop/post-footer.php:33
-#: templates/parts/loop/post-search-footer.php:15
-#: templates/parts/loop/post-search-footer.php:27
-msgctxt "separator for items in a list"
-msgid ", "
-msgstr ", "
-
-#: templates/parts/loop/post-footer.php:27
-#: templates/parts/loop/post-search-footer.php:21
-msgctxt "category list"
-msgid "Posted in: %s"
-msgstr "यामध्ये पोस्ट केले: %s"
-
-#: templates/parts/loop/post-footer.php:39
-#: templates/parts/loop/post-search-footer.php:33
-msgctxt "tag list"
-msgid "Filed under: %s"
-msgstr "या अंतर्गत फाईल केले: %s"
-
-#: templates/parts/loop/post-meta.php:25
-#: templates/parts/loop/post-search-footer.php:43
-msgctxt "number of comments"
-msgid "% Comments"
-msgstr "% टिप्पण्या"
+#~ msgctxt "the widget title"
+#~ msgid "Hero Text"
+#~ msgstr "हिरो मजकूर"
