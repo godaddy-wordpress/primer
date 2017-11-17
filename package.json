@@ -72,7 +72,7 @@
     "grunt-wp-i18n": "^1.0.1",
     "grunt-wp-readme-to-markdown": "^2.0.1",
     "load-grunt-tasks": "^3.5.2",
-    "matchdep": "^1.0.1",
+    "matchdep": "^2.0.0",
     "susy": "^2.2.12"
   },
   "scripts": {
