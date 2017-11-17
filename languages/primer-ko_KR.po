@@ -3,17 +3,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.5.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-03-01 23:51:05+00:00\n"
+"POT-Creation-Date: 2017-09-19 16:31:21+00:00\n"
+"PO-Revision-Date: 2017-09-19 10:49-0700\n"
+"Language: ko_KR\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
-"X-Generator: grunt-wp-i18n1.0.0\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"X-Generator: Poedit 1.8.9\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 
 #: 404.php:22 templates/woocommerce/404.php:22
 msgid "Oops! That page can't be found."
@@ -21,13 +23,28 @@ msgstr "이런! 해당 페이지를 찾을 수 없습니다."
 
 #: 404.php:28 templates/woocommerce/404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr "이 곳에는 아무 것도 없는 것 같습니다. 아래에서 검색해 보십시오."
+
+#. translators: 1. number of comments, 2. post title
+#: comments.php:36
+msgid "%1$d thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
+msgstr[0] "%2$s에 관한 %1$d개의 댓글"
 
 #: comments.php:56 comments.php:83
 msgid "Comment navigation"
 msgstr "의견 탐색"
+
+#. translators: left arrow (LTR) / right arrow (RTL)
+#: comments.php:58
+msgid "%s Older Comments"
+msgstr "%s개의 이전 댓글"
+
+#. translators: right arrow (LTR) / left arrow (RTL)
+#: comments.php:60
+msgid "Newer Comments %s"
+msgstr "새 댓글 %s"
 
 #: comments.php:85
 msgid "&larr; Older Comments"
@@ -45,19 +62,28 @@ msgstr "의견 작성이 중지되었습니다."
 msgid "Nothing Found"
 msgstr "찾은 것 없음"
 
-#: content-none.php:33
+#. translators: link to write a new post
+#: content-none.php:30
+msgid "Ready to publish your first post? %s."
+msgstr "첫 번째 게시물을 게시할 준비가 되었나요? %s."
+
+#: content-none.php:34
 msgid "Get started here"
 msgstr "여기서부터 시작"
 
-#: content-none.php:42
+#: content-none.php:43
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr "죄송합니다, 검색 조건과 일치하는 것이 없습니다. 다른 키워드를 사용하여 다시 해보세요."
+msgstr ""
+"죄송합니다, 검색 조건과 일치하는 것이 없습니다. 다른 키워드를 사용하여 다시 "
+"해보세요."
 
-#: content-none.php:48
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr "귀하가 찾으시는 내용을 찾지 못한 것 같습니다. 검색이 도움될 수도 있습니다."
+#: content-none.php:49
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"귀하가 찾으시는 내용을 찾지 못한 것 같습니다. 검색이 도움될 수도 있습니다."
 
 #: functions.php:186
 msgid "Featured"
@@ -87,7 +113,9 @@ msgstr "사이드바"
 msgid ""
 "The primary sidebar appears alongside the content of every page, post, "
 "archive, and search template."
-msgstr "주 사이드바는 모든 페이지의 내용 게시물, 아카이브 및 검색 템플릿에서 표시됩니다."
+msgstr ""
+"주 사이드바는 모든 페이지의 내용 게시물, 아카이브 및 검색 템플릿에서 표시됩니"
+"다."
 
 #: functions.php:402
 msgid "Secondary Sidebar"
@@ -95,8 +123,8 @@ msgstr "보조 사이드바"
 
 #: functions.php:403
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr "보조 사이드바는 3열 레이아웃을 선택할 때 표시됩니다."
 
 #: functions.php:410
@@ -131,46 +159,68 @@ msgstr "Hero 위젯은 첫 페이지의 머리글 이미지 위에 나타납니�
 msgid "Skip to content"
 msgstr "컨텐츠로 건너뛰기"
 
+#. translators: 1. PHP function name, 2. theme name, 3. version number, 4.
+#. alternative function name
+#: inc/compat/deprecated.php:40
+msgid ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
+"instead."
+msgstr ""
+"%1$s은(는) %2$s 버전 %3$s 이후부터 <strong>사용하지 않습니다</strong>! 대신"
+"에 %4$s(을)를 사용하세요."
+
+#. translators: 1. PHP function name, 2. theme name, 3. version number
+#: inc/compat/deprecated.php:41
+msgid ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
+"alternative available."
+msgstr ""
+"%1$s은(는) %2$s 버전 %3$s 이후부터 <strong>사용하지 않으며</strong> 이용 가"
+"능 대체물이 없습니다."
+
 #. Theme Name of the plugin/theme
 msgid "Primer"
 msgstr "Primer"
 
-#: inc/compat/deprecated.php:152
+#: inc/compat/deprecated.php:190
 msgid "Posts navigation"
 msgstr "게시물 탐색"
 
-#: inc/compat/deprecated.php:158
+#: inc/compat/deprecated.php:196
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> 이전 게시물"
 
-#: inc/compat/deprecated.php:164
+#: inc/compat/deprecated.php:202
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "새 게시물 <span class=\"meta-nav\">&rarr;</span>"
 
-#: inc/compat/woocommerce.php:526
+#. translators: WooCommerce shopping cart item count.
+#: inc/compat/woocommerce.php:581
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d 항목"
-msgstr[1] "%d개의 항목"
 
-#: inc/compat/woocommerce.php:593
+#: inc/compat/woocommerce.php:652
 msgid "Featured Products"
 msgstr "추천 제품"
 
-#: inc/compat/woocommerce.php:603
+#: inc/compat/woocommerce.php:662
 msgid "On Sale Now"
 msgstr "현재 할인 중"
 
-#: inc/compat/woocommerce.php:617
+#: inc/compat/woocommerce.php:676
 msgid "New In Store"
 msgstr "상점의 신상품"
 
-#: inc/compat/wordpress.php:55
+#. translators: 1. Primer minimum WordPress version. 2. Current WordPress
+#. version.
+#: inc/compat/wordpress.php:56
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
 msgstr ""
-"Primer는 워드프레스 버전 %1$s 이상을 요구합니다. 귀하는 %2$s 버전을 실행 중입니다. 업그레이드하고 다시 시도하세요."
+"Primer는 워드프레스 버전 %1$s 이상을 요구합니다. 귀하는 %2$s 버전을 실행 중입"
+"니다. 업그레이드하고 다시 시도하세요."
 
 #: inc/customizer/colors.php:49
 msgid "Site Title Text"
@@ -180,7 +230,8 @@ msgstr "사이트 제목 텍스트"
 msgid "Tagline Text"
 msgstr "태그라인 텍스트"
 
-#: inc/customizer/colors.php:76
+#. translators: the widget title
+#: inc/customizer/colors.php:76 inc/hero-text-widget.php:30
 msgid "Hero Text"
 msgstr "Hero 텍스트"
 
@@ -268,6 +319,61 @@ msgstr "사용자 정의"
 msgid "Default"
 msgstr "기본"
 
+#. translators: color scheme name
+#: inc/customizer/colors.php:482
+msgid "Blush"
+msgstr "블러시"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:486
+msgid "Bronze"
+msgstr "브론즈"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:490
+msgid "Canary"
+msgstr "카나리아"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:494
+msgid "Cool"
+msgstr "멋진"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:498
+msgid "Dark"
+msgstr "어두움"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:502
+msgid "Iguana"
+msgstr "이구아나"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:506
+msgid "Muted"
+msgstr "뮤트"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:510
+msgid "Plum"
+msgstr "진한 보라"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:514
+msgid "Rose"
+msgstr "로즈"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:518
+msgid "Tangerine"
+msgstr "오렌지"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:522
+msgid "Turquoise"
+msgstr "옥색"
+
 #: inc/customizer/colors.php:714
 msgid "Colors"
 msgstr "색상"
@@ -300,12 +406,13 @@ msgstr "바닥글"
 msgid "Base Color Scheme"
 msgstr "기본 색상표"
 
-#: inc/customizer/colors.php:1291
+#: inc/customizer/colors.php:1292
 msgid "Hero Background Overlay"
 msgstr "Hero 배경 오버레이"
 
-#: inc/customizer/colors.php:1292
-msgid "Control the color overlay transparency when using a custom Header Image."
+#: inc/customizer/colors.php:1293
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
 msgstr "사용자 지정 머리글 이미지를 사용할 때 색 오버레이 투명도를 제어합니다."
 
 #: inc/customizer/fonts.php:89
@@ -352,6 +459,11 @@ msgstr "평행선, 댓글 수, 답변 링크, 게시물 바닥글 및 인용문 
 msgid "Fonts"
 msgstr "글꼴"
 
+#. translators: font name
+#: inc/customizer/fonts.php:217
+msgid "%s (Default)"
+msgstr "%s(기본값)"
+
 #: inc/customizer/layouts.php:55
 msgid "One Column: Wide"
 msgstr "열 1개: 넓게"
@@ -380,6 +492,16 @@ msgstr "열 3개: 사이드바 | 콘텐츠 | 사이드바"
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr "열 3개: 사이드바 | 사이드바 | 콘텐츠"
 
+#. translators: fixed-width page layout
+#: inc/customizer/layouts.php:99
+msgid "Fixed"
+msgstr "고정됨"
+
+#. translators: fluid-width page layout
+#: inc/customizer/layouts.php:100
+msgid "Fluid"
+msgstr "유동"
+
 #: inc/customizer/layouts.php:263 inc/customizer/layouts.php:426
 msgid "Layout"
 msgstr "레이아웃"
@@ -392,11 +514,16 @@ msgstr "페이지 너비"
 msgid "Display your site differently on larger screens."
 msgstr "큰 화면에서는 사이트가 다르게 표시됩니다."
 
-#: inc/customizer/site-identity.php:82
+#. translators: 1. copyright symbol, 2. year, 3. site title
+#: inc/customizer/site-identity.php:72 templates/parts/credit.php:24
+msgid "Copyright %1$s %2$d %3$s"
+msgstr "Copyright %1$s %2$d %3$s"
+
+#: inc/customizer/site-identity.php:83
 msgid "Footer Copyright Text"
 msgstr "바닥글 저작권 텍스트"
 
-#: inc/customizer/site-identity.php:101
+#: inc/customizer/site-identity.php:102
 msgid "Display theme author credit"
 msgstr "테마 작성자 크레드트 표시"
 
@@ -409,48 +536,79 @@ msgid "Use featured image"
 msgstr "추천 이미지 사용"
 
 #: inc/customizer.php:194
-msgid "Allow the featured image on the current post to override the hero image."
+msgid ""
+"Allow the featured image on the current post to override the hero image."
 msgstr "Hero 이미지를 재정의하려면 현재 게시물에 추천 이미지를 허용하세요."
 
-#: inc/helpers.php:56
+#. translators: search term
+#: inc/helpers.php:47
+msgid "Search Results for: %s"
+msgstr "검색 결과: %s"
+
+#: inc/helpers.php:58
 msgid "404 Page Not Found"
 msgstr "404 페이지를 찾을 수 없음"
 
-#: inc/hero-text-widget.php:147
+#. translators: theme name
+#: inc/hero-text-widget.php:25
+msgid "A %s theme widget designed for the Hero area on your site's front page."
+msgstr "귀하 사이트의 전면 페이지를 위해 %s 테마 위젯이 디자인되어 있습니다."
+
+#: inc/hero-text-widget.php:148
 msgid "The title of widget. Leave empty for no title."
 msgstr "위젯의 이름. 이름이 없는 경우는 비워 두십시오."
 
-#: inc/hero-text-widget.php:147
+#: inc/hero-text-widget.php:148
 msgid "Title:"
 msgstr "제목:"
 
-#: inc/hero-text-widget.php:152
+#: inc/hero-text-widget.php:153
 msgid "Text:"
 msgstr "텍스트:"
 
-#: inc/hero-text-widget.php:157
+#: inc/hero-text-widget.php:158
 msgid "Button Text:"
 msgstr "버튼 텍스트:"
 
-#: inc/hero-text-widget.php:162
+#: inc/hero-text-widget.php:163
 msgid "Button Link URL:"
 msgstr "버튼 링크 URL:"
 
-#: inc/hero-text-widget.php:163
+#: inc/hero-text-widget.php:164
 msgid "Paste URL or type to search"
 msgstr "검색할 URL 붙여 넣거 또는 입력"
 
-#: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
+#. translators: page number
+#: inc/hooks.php:414
+msgid "Page %d"
+msgstr "페이지 %d"
+
+#. translators: 1. current page number, 2. total number of pages
+#: inc/hooks.php:498 templates/woocommerce/loop/pagination.php:47
+msgid "Page %1$d of %2$d"
+msgstr "페이지 %1$d / %2$d"
+
+#: inc/template-tags.php:278 templates/woocommerce/loop/pagination.php:32
 msgid "&larr; Previous"
 msgstr "&larr; 이전"
 
-#: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
+#: inc/template-tags.php:279 templates/woocommerce/loop/pagination.php:33
 msgid "Next &rarr;"
 msgstr "다음 &rarr;"
 
-#: inc/template-tags.php:266
+#. translators: post type singular label
+#: inc/template-tags.php:280
+msgid "%1$s navigation"
+msgstr "%1$s 탐색"
+
+#: inc/template-tags.php:393
 msgid "Blog"
 msgstr "블로그"
+
+#. translators: 1. theme name link, 2. theme author link
+#: templates/parts/credit.php:51
+msgid "%1$s WordPress theme by %2$s"
+msgstr "%1$s 워드프레스 테마 작성자 %2$s"
 
 #: templates/parts/loop/page-content.php:28
 #: templates/parts/loop/post-content.php:19
@@ -467,6 +625,36 @@ msgstr "편집"
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "더 읽기 <span class=\"meta-nav\">&rarr;</span>"
 
+#. translators: post title
+#: templates/parts/loop/post-excerpt.php:15
+msgid "Continue reading %s"
+msgstr "%s 계속 읽기"
+
+#. translators: right arrow (LTR) / left arrow (RTL)
+#: templates/parts/loop/post-excerpt.php:15
+msgid "Continue Reading %s"
+msgstr "%s 계속 읽기"
+
+#. translators: separator for items in a list
+#: templates/parts/loop/post-footer.php:21
+#: templates/parts/loop/post-footer.php:33
+#: templates/parts/loop/post-search-footer.php:15
+#: templates/parts/loop/post-search-footer.php:27
+msgid ", "
+msgstr ", "
+
+#. translators: category list
+#: templates/parts/loop/post-footer.php:27
+#: templates/parts/loop/post-search-footer.php:21
+msgid "Posted in: %s"
+msgstr "게시 범주: %s"
+
+#. translators: tag list
+#: templates/parts/loop/post-footer.php:39
+#: templates/parts/loop/post-search-footer.php:33
+msgid "Filed under: %s"
+msgstr "접수 태그: %s"
+
 #: templates/parts/loop/post-meta.php:25
 #: templates/parts/loop/post-search-footer.php:43
 msgid "Leave a comment"
@@ -476,6 +664,12 @@ msgstr "의견 작성하기"
 #: templates/parts/loop/post-search-footer.php:43
 msgid "1 Comment"
 msgstr "1 의견"
+
+#. translators: number of comments
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:43
+msgid "%d Comments"
+msgstr "% 의견"
 
 #: templates/woocommerce/404.php:30
 msgid "Search"
@@ -489,6 +683,11 @@ msgstr "프로모션 제품"
 msgid "Popular Products"
 msgstr "인기 있는 제품"
 
+#. translators: post type singular label
+#: templates/woocommerce/loop/pagination.php:45
+msgid "%s navigation"
+msgstr "%s 탐색"
+
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
 msgstr "https://github.com/godaddy/wp-primer-theme"
@@ -497,7 +696,8 @@ msgstr "https://github.com/godaddy/wp-primer-theme"
 msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
-msgstr "Primer는 신선한 디자인의 컨텐트에 명료함을 불어 넣는 강력한 테마입니다."
+msgstr ""
+"Primer는 신선한 디자인의 컨텐트에 명료함을 불어 넣는 강력한 테마입니다."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
@@ -507,187 +707,6 @@ msgstr "GoDaddy"
 msgid "https://www.godaddy.com/"
 msgstr "https://www.godaddy.com/"
 
-#: comments.php:35
-msgctxt "1. number of comments, 2. post title"
-msgid "%1$d thought on %2$s"
-msgid_plural "%1$d thoughts on %2$s"
-msgstr[0] "%2$s에 관한 %1$d개의 댓글"
-msgstr[1] "%1$d에 관한 %2$s개의 댓글"
-
-#: comments.php:58
-msgctxt "left arrow (LTR) / right arrow (RTL)"
-msgid "%s Older Comments"
-msgstr "%s개의 이전 댓글"
-
-#: comments.php:60
-msgctxt "right arrow (LTR) / left arrow (RTL)"
-msgid "Newer Comments %s"
-msgstr "새 댓글 %s"
-
-#: templates/parts/loop/post-excerpt.php:15
-msgctxt "right arrow (LTR) / left arrow (RTL)"
-msgid "Continue Reading %s"
-msgstr "%s 계속 읽기"
-
-#: content-none.php:29
-msgctxt "link to write a new post"
-msgid "Ready to publish your first post? %s."
-msgstr "첫 번째 게시물을 게시할 준비가 되었나요? %s."
-
-#: inc/compat/deprecated.php:117
-msgctxt ""
-"1. PHP function name, 2. theme name, 3. version number, 4. alternative "
-"function name"
-msgid ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
-"instead."
-msgstr ""
-"%1$s은(는) %2$s 버전 %3$s 이후부터 <strong>사용하지 않습니다</strong>! 대신에 %4$s(을)를 사용하세요."
-
-#: inc/compat/deprecated.php:118
-msgctxt "1. PHP function name, 2. theme name, 3. version number"
-msgid ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
-"alternative available."
-msgstr "%1$s은(는) %2$s 버전 %3$s 이후부터 <strong>사용하지 않으며</strong> 이용 가능 대체물이 없습니다."
-
-#: inc/customizer/colors.php:482
-msgctxt "color scheme name"
-msgid "Blush"
-msgstr "블러시"
-
-#: inc/customizer/colors.php:486
-msgctxt "color scheme name"
-msgid "Bronze"
-msgstr "브론즈"
-
-#: inc/customizer/colors.php:490
-msgctxt "color scheme name"
-msgid "Canary"
-msgstr "카나리아"
-
-#: inc/customizer/colors.php:494
-msgctxt "color scheme name"
-msgid "Cool"
-msgstr "멋진"
-
-#: inc/customizer/colors.php:498
-msgctxt "color scheme name"
-msgid "Dark"
-msgstr "어두움"
-
-#: inc/customizer/colors.php:502
-msgctxt "color scheme name"
-msgid "Iguana"
-msgstr "이구아나"
-
-#: inc/customizer/colors.php:506
-msgctxt "color scheme name"
-msgid "Muted"
-msgstr "뮤트"
-
-#: inc/customizer/colors.php:510
-msgctxt "color scheme name"
-msgid "Plum"
-msgstr "진한 보라"
-
-#: inc/customizer/colors.php:514
-msgctxt "color scheme name"
-msgid "Rose"
-msgstr "로즈"
-
-#: inc/customizer/colors.php:518
-msgctxt "color scheme name"
-msgid "Tangerine"
-msgstr "오렌지"
-
-#: inc/customizer/colors.php:522
-msgctxt "color scheme name"
-msgid "Turquoise"
-msgstr "옥색"
-
-#: inc/customizer/fonts.php:217
-msgctxt "font name"
-msgid "%s (Default)"
-msgstr "%s(기본값)"
-
-#: inc/customizer/layouts.php:99
-msgctxt "fixed-width page layout"
-msgid "Fixed"
-msgstr "고정됨"
-
-#: inc/customizer/layouts.php:100
-msgctxt "fluid-width page layout"
-msgid "Fluid"
-msgstr "유동"
-
-#: inc/customizer/site-identity.php:71 templates/parts/credit.php:23
-msgctxt "1. copyright symbol, 2. year, 3. site title"
-msgid "Copyright %1$s %2$d %3$s"
-msgstr "Copyright %1$s %2$d %3$s"
-
-#: inc/helpers.php:45
-msgctxt "search term"
-msgid "Search Results for: %s"
-msgstr "검색 결과: %s"
-
-#: inc/hero-text-widget.php:24
-msgctxt "theme name"
-msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr "귀하 사이트의 전면 페이지를 위해 %s 테마 위젯이 디자인되어 있습니다."
-
-#: inc/hero-text-widget.php:29
-msgctxt "the widget title"
-msgid "Hero Text"
-msgstr "Hero 텍스트"
-
-#: inc/hooks.php:394
-msgctxt "page number"
-msgid "Page %d"
-msgstr "페이지 %d"
-
-#: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
-msgctxt "1. current page number, 2. total number of pages"
-msgid "Page %1$d of %2$d"
-msgstr "페이지 %1$d / %2$d"
-
-#: inc/template-tags.php:153
-msgctxt "post type singular label"
-msgid "%1$s navigation"
-msgstr "%1$s 탐색"
-
-#: templates/woocommerce/loop/pagination.php:43
-msgctxt "post type singular label"
-msgid "%s navigation"
-msgstr "%s 탐색"
-
-#: templates/parts/credit.php:49
-msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s WordPress theme by %2$s"
-msgstr "%1$s 워드프레스 테마 작성자 %2$s"
-
-#: templates/parts/loop/post-footer.php:21
-#: templates/parts/loop/post-footer.php:33
-#: templates/parts/loop/post-search-footer.php:15
-#: templates/parts/loop/post-search-footer.php:27
-msgctxt "separator for items in a list"
-msgid ", "
-msgstr ", "
-
-#: templates/parts/loop/post-footer.php:27
-#: templates/parts/loop/post-search-footer.php:21
-msgctxt "category list"
-msgid "Posted in: %s"
-msgstr "게시 범주: %s"
-
-#: templates/parts/loop/post-footer.php:39
-#: templates/parts/loop/post-search-footer.php:33
-msgctxt "tag list"
-msgid "Filed under: %s"
-msgstr "접수 태그: %s"
-
-#: templates/parts/loop/post-meta.php:25
-#: templates/parts/loop/post-search-footer.php:43
-msgctxt "number of comments"
-msgid "% Comments"
-msgstr "% 의견"
+#~ msgctxt "the widget title"
+#~ msgid "Hero Text"
+#~ msgstr "Hero 텍스트"

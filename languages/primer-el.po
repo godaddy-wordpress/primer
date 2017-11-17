@@ -3,17 +3,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Primer 1.5.1\n"
 "Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
-"POT-Creation-Date: 2017-03-01 23:51:05+00:00\n"
+"POT-Creation-Date: 2017-09-19 16:31:21+00:00\n"
+"PO-Revision-Date: 2017-09-19 10:51-0700\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
-"X-Generator: grunt-wp-i18n1.0.0\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"X-Generator: Poedit 1.8.9\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 
 #: 404.php:22 templates/woocommerce/404.php:22
 msgid "Oops! That page can't be found."
@@ -21,15 +23,31 @@ msgstr "Ωχ! Δεν είναι δυνατή η εύρεση αυτής της �
 
 #: 404.php:28 templates/woocommerce/404.php:28
 msgid ""
-"It looks like nothing was found at this location. Please try searching "
-"below:"
+"It looks like nothing was found at this location. Please try searching below:"
 msgstr ""
 "Μάλλον δεν βρέθηκε τίποτα σε αυτή την τοποθεσία. Δοκιμάστε να κάνετε "
 "αναζήτηση παρακάτω:"
 
+#. translators: 1. number of comments, 2. post title
+#: comments.php:36
+msgid "%1$d thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
+msgstr[0] "%1$d σκέψη για το %2$s"
+msgstr[1] "%1$d σκέψεις για το %2$s"
+
 #: comments.php:56 comments.php:83
 msgid "Comment navigation"
 msgstr "Περιήγηση στα σχόλια"
+
+#. translators: left arrow (LTR) / right arrow (RTL)
+#: comments.php:58
+msgid "%s Older Comments"
+msgstr "%s παλιότερα σχόλια"
+
+#. translators: right arrow (LTR) / left arrow (RTL)
+#: comments.php:60
+msgid "Newer Comments %s"
+msgstr "Νεώτερα σχόλια %s"
 
 #: comments.php:85
 msgid "&larr; Older Comments"
@@ -47,11 +65,16 @@ msgstr "Τα σχόλια είναι κλειστά."
 msgid "Nothing Found"
 msgstr "Δεν βρέθηκε τίποτα"
 
-#: content-none.php:33
+#. translators: link to write a new post
+#: content-none.php:30
+msgid "Ready to publish your first post? %s."
+msgstr "Είστε έτοιμοι για να δημοσιεύσετε την πρώτη σας ανάρτηση; %s."
+
+#: content-none.php:34
 msgid "Get started here"
 msgstr "Ξεκινήστε εδώ"
 
-#: content-none.php:42
+#: content-none.php:43
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -59,9 +82,12 @@ msgstr ""
 "Λυπούμαστε, αλλά τίποτα δεν ταιριάζει με τους όρους αναζήτησης. Δοκιμάστε "
 "ξανά με διαφορετικές λέξεις-κλειδιά."
 
-#: content-none.php:48
-msgid "It seems we can't find what you're looking for. Perhaps searching can help."
-msgstr "Μάλλον δεν μπορούμε να βρούμε αυτό που ψάχνετε. Ίσως μπορεί να σας βοηθήσει η αναζήτηση."
+#: content-none.php:49
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"Μάλλον δεν μπορούμε να βρούμε αυτό που ψάχνετε. Ίσως μπορεί να σας βοηθήσει "
+"η αναζήτηση."
 
 #: functions.php:186
 msgid "Featured"
@@ -101,8 +127,8 @@ msgstr "Δευτερεύουσα πλευρική γραμμή"
 
 #: functions.php:403
 msgid ""
-"The secondary sidebar will only appear when you have selected a "
-"three-column layout."
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
 msgstr ""
 "Η δευτερεύουσα πλευρική γραμμή θα εμφανίζεται μόνο όταν έχετε επιλέξει "
 "διάταξη τριών στηλών."
@@ -113,7 +139,9 @@ msgstr "Υποσέλιδο 1"
 
 #: functions.php:411
 msgid "This sidebar is the first column of the footer widget area."
-msgstr "Αυτή η πλευρική γραμμή εμφανίζεται στην πρώτη στήλη της περιοχής μικροεφαρμογής στο υποσέλιδο."
+msgstr ""
+"Αυτή η πλευρική γραμμή εμφανίζεται στην πρώτη στήλη της περιοχής "
+"μικροεφαρμογής στο υποσέλιδο."
 
 #: functions.php:418
 msgid "Footer 2"
@@ -121,7 +149,9 @@ msgstr "Υποσέλιδο 2"
 
 #: functions.php:419
 msgid "This sidebar is the second column of the footer widget area."
-msgstr "Αυτή η πλευρική γραμμή εμφανίζεται στη δεύτερη στήλη της περιοχής μικροεφαρμογής στο υποσέλιδο."
+msgstr ""
+"Αυτή η πλευρική γραμμή εμφανίζεται στη δεύτερη στήλη της περιοχής "
+"μικροεφαρμογής στο υποσέλιδο."
 
 #: functions.php:426
 msgid "Footer 3"
@@ -129,51 +159,77 @@ msgstr "Υποσέλιδο 3"
 
 #: functions.php:427
 msgid "This sidebar is the third column of the footer widget area."
-msgstr "Αυτή η πλευρική γραμμή εμφανίζεται στην τρίτη στήλη της περιοχής μικροεφαρμογής στο υποσέλιδο."
+msgstr ""
+"Αυτή η πλευρική γραμμή εμφανίζεται στην τρίτη στήλη της περιοχής "
+"μικροεφαρμογής στο υποσέλιδο."
 
 #: functions.php:435
 msgid "Hero widgets appear over the header image on the front page."
-msgstr "Οι μικροεφαρμογές Hero εμφανίζονται επάνω από την εικόνα κεφαλίδας στην πρώτη σελίδα."
+msgstr ""
+"Οι μικροεφαρμογές Hero εμφανίζονται επάνω από την εικόνα κεφαλίδας στην "
+"πρώτη σελίδα."
 
 #: header.php:44
 msgid "Skip to content"
 msgstr "Μετάβαση απευθείας στο περιεχόμενο"
 
+#. translators: 1. PHP function name, 2. theme name, 3. version number, 4.
+#. alternative function name
+#: inc/compat/deprecated.php:40
+msgid ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
+"instead."
+msgstr ""
+"Η συνάρτηση %1$s είναι <strong>ξεπερασμένη</strong> από το %2$s έκδοσης %3$s "
+"και μετά! Στη θέση της, χρησιμοποιήστε τη συνάρτηση %4$s."
+
+#. translators: 1. PHP function name, 2. theme name, 3. version number
+#: inc/compat/deprecated.php:41
+msgid ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
+"alternative available."
+msgstr ""
+"Η συνάρτηση %1$s είναι <strong>ξεπερασμένη</strong> από το %2$s έκδοσης %3$s "
+"και μετά, χωρίς να υπάρχει διαθέσιμη εναλλακτική συνάρτηση."
+
 #. Theme Name of the plugin/theme
 msgid "Primer"
 msgstr "Primer"
 
-#: inc/compat/deprecated.php:152
+#: inc/compat/deprecated.php:190
 msgid "Posts navigation"
 msgstr "Πλοήγηση στις αναρτήσεις"
 
-#: inc/compat/deprecated.php:158
+#: inc/compat/deprecated.php:196
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "  <span class=\"meta-nav\">&larr;</span> Παλιότερες αναρτήσεις"
 
-#: inc/compat/deprecated.php:164
+#: inc/compat/deprecated.php:202
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Νεότερες αναρτήσεις <span class=\"meta-nav\">&rarr;</span>  "
 
-#: inc/compat/woocommerce.php:526
+#. translators: WooCommerce shopping cart item count.
+#: inc/compat/woocommerce.php:581
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] "%d είδος"
 msgstr[1] "%d είδη"
 
-#: inc/compat/woocommerce.php:593
+#: inc/compat/woocommerce.php:652
 msgid "Featured Products"
 msgstr "Επιλεγμένα προϊόντα"
 
-#: inc/compat/woocommerce.php:603
+#: inc/compat/woocommerce.php:662
 msgid "On Sale Now"
 msgstr "Σε έκπτωση τώρα"
 
-#: inc/compat/woocommerce.php:617
+#: inc/compat/woocommerce.php:676
 msgid "New In Store"
 msgstr "Νέα στο κατάστημα"
 
-#: inc/compat/wordpress.php:55
+#. translators: 1. Primer minimum WordPress version. 2. Current WordPress
+#. version.
+#: inc/compat/wordpress.php:56
 msgid ""
 "Primer requires at least WordPress version %1$s. You are running version "
 "%2$s. Please upgrade and try again."
@@ -189,7 +245,8 @@ msgstr "Κείμενο τίτλου ιστότοπου"
 msgid "Tagline Text"
 msgstr "Κείμενο υπότιτλου"
 
-#: inc/customizer/colors.php:76
+#. translators: the widget title
+#: inc/customizer/colors.php:76 inc/hero-text-widget.php:30
 msgid "Hero Text"
 msgstr "Κείμενο Hero"
 
@@ -203,7 +260,9 @@ msgstr "Κείμενο επικεφαλίδας"
 
 #: inc/customizer/colors.php:130
 msgid "Post titles, widget titles, form labels, table headers and buttons."
-msgstr "Τίτλοι άρθρων, τίτλοι μικροεφαρμογών, ετικέτες φορμών, κεφαλίδες πινάκων και κουμπιά."
+msgstr ""
+"Τίτλοι άρθρων, τίτλοι μικροεφαρμογών, ετικέτες φορμών, κεφαλίδες πινάκων και "
+"κουμπιά."
 
 #: inc/customizer/colors.php:151
 msgid "Primary Text"
@@ -219,7 +278,9 @@ msgstr "Δευτερεύον κείμενο"
 
 #: inc/customizer/colors.php:199
 msgid "Post bylines, comment counts, post footers and quote footers."
-msgstr "Γραμμές συντάκτη άρθρου, πλήθος σχολίων, υποσέλιδα άρθρων και υποσέλιδα ρήσεων."
+msgstr ""
+"Γραμμές συντάκτη άρθρου, πλήθος σχολίων, υποσέλιδα άρθρων και υποσέλιδα "
+"ρήσεων."
 
 #: inc/customizer/colors.php:213
 msgid "Widget Heading Text"
@@ -277,6 +338,61 @@ msgstr "Προσαρμογή"
 msgid "Default"
 msgstr "Προεπιλογή"
 
+#. translators: color scheme name
+#: inc/customizer/colors.php:482
+msgid "Blush"
+msgstr "Φούξια"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:486
+msgid "Bronze"
+msgstr "Χάλκινο"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:490
+msgid "Canary"
+msgstr "Καναρινί"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:494
+msgid "Cool"
+msgstr "Μοντέρνο"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:498
+msgid "Dark"
+msgstr "Σκούρο"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:502
+msgid "Iguana"
+msgstr "Ιγκουάνα"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:506
+msgid "Muted"
+msgstr "Σιωπηρό"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:510
+msgid "Plum"
+msgstr "Δαμασκηνί"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:514
+msgid "Rose"
+msgstr "Τριανταφυλλί"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:518
+msgid "Tangerine"
+msgstr "Μανταρινί"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:522
+msgid "Turquoise"
+msgstr "Τυρκουάζ"
+
 #: inc/customizer/colors.php:714
 msgid "Colors"
 msgstr "Χρώματα"
@@ -309,13 +425,16 @@ msgstr "Υποσέλιδο"
 msgid "Base Color Scheme"
 msgstr "Βασικός συνδυασμός χρωμάτων"
 
-#: inc/customizer/colors.php:1291
+#: inc/customizer/colors.php:1292
 msgid "Hero Background Overlay"
 msgstr "Επικάλυψη φόντου Hero"
 
-#: inc/customizer/colors.php:1292
-msgid "Control the color overlay transparency when using a custom Header Image."
-msgstr "Ελέγξτε τη διαφάνεια της επικάλυψης φόντου όταν χρησιμοποιείτε μια προσαρμοσμένη εικόνα κεφαλίδας."
+#: inc/customizer/colors.php:1293
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+"Ελέγξτε τη διαφάνεια της επικάλυψης φόντου όταν χρησιμοποιείτε μια "
+"προσαρμοσμένη εικόνα κεφαλίδας."
 
 #: inc/customizer/fonts.php:89
 msgid "Site Title"
@@ -339,7 +458,8 @@ msgstr "Κεφαλίδες"
 
 #: inc/customizer/fonts.php:111
 msgid "Post titles, widget titles, form labels, and table headers."
-msgstr "Τίτλοι άρθρων, τίτλοι μικροεφαρμογών, ετικέτες φορμών και κεφαλίδες πινάκων."
+msgstr ""
+"Τίτλοι άρθρων, τίτλοι μικροεφαρμογών, ετικέτες φορμών και κεφαλίδες πινάκων."
 
 #: inc/customizer/fonts.php:126
 msgid "Primary"
@@ -355,11 +475,18 @@ msgstr "Δευτερεύων"
 
 #: inc/customizer/fonts.php:142
 msgid "Bylines, comment counts, reply links, post footers, and quote footers."
-msgstr "Γραμμές συντάκτη, πλήθος σχολίων, σύνδεσμοι απαντήσεων, υποσέλιδα άρθρων και υποσέλιδα ρήσεων."
+msgstr ""
+"Γραμμές συντάκτη, πλήθος σχολίων, σύνδεσμοι απαντήσεων, υποσέλιδα άρθρων και "
+"υποσέλιδα ρήσεων."
 
 #: inc/customizer/fonts.php:192
 msgid "Fonts"
 msgstr "Γραμματοσειρές"
+
+#. translators: font name
+#: inc/customizer/fonts.php:217
+msgid "%s (Default)"
+msgstr "%s (Προεπιλογή)"
 
 #: inc/customizer/layouts.php:55
 msgid "One Column: Wide"
@@ -389,6 +516,16 @@ msgstr "Τρίστηλο: Πλευρική στήλη | περιεχόμενο |
 msgid "Three Columns: Sidebar | Sidebar | Content"
 msgstr " Στήλη Πλευρική στήλη | πλευρική στήλη | περιεχόμενο"
 
+#. translators: fixed-width page layout
+#: inc/customizer/layouts.php:99
+msgid "Fixed"
+msgstr "Σταθερό πλάτος"
+
+#. translators: fluid-width page layout
+#: inc/customizer/layouts.php:100
+msgid "Fluid"
+msgstr "Ρέον"
+
 #: inc/customizer/layouts.php:263 inc/customizer/layouts.php:426
 msgid "Layout"
 msgstr "Διάταξη"
@@ -401,11 +538,16 @@ msgstr "Πλάτος σελίδας"
 msgid "Display your site differently on larger screens."
 msgstr "Προβολή του ιστότοπού σας διαφορετικά σε μεγάλες οθόνες."
 
-#: inc/customizer/site-identity.php:82
+#. translators: 1. copyright symbol, 2. year, 3. site title
+#: inc/customizer/site-identity.php:72 templates/parts/credit.php:24
+msgid "Copyright %1$s %2$d %3$s"
+msgstr "Copyright %1$s %2$d %3$s"
+
+#: inc/customizer/site-identity.php:83
 msgid "Footer Copyright Text"
 msgstr "Κείμενο copyright υποσέλιδου"
 
-#: inc/customizer/site-identity.php:101
+#: inc/customizer/site-identity.php:102
 msgid "Display theme author credit"
 msgstr "Εμφάνιση στοιχείων δημιουργού θέματος"
 
@@ -418,48 +560,83 @@ msgid "Use featured image"
 msgstr "Χρήση επιλεγμένης εικόνας"
 
 #: inc/customizer.php:194
-msgid "Allow the featured image on the current post to override the hero image."
-msgstr "Να επιτρέπεται στην επιλεγμένη εικόνα της τρέχουσας ανάρτησης να υπερσκελίζει την εικόνα hero."
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+"Να επιτρέπεται στην επιλεγμένη εικόνα της τρέχουσας ανάρτησης να "
+"υπερσκελίζει την εικόνα hero."
 
-#: inc/helpers.php:56
+#. translators: search term
+#: inc/helpers.php:47
+msgid "Search Results for: %s"
+msgstr "Αποτελέσματα αναζήτησης για: %s"
+
+#: inc/helpers.php:58
 msgid "404 Page Not Found"
 msgstr "404 - Η σελίδα δεν βρέθηκε"
 
-#: inc/hero-text-widget.php:147
+#. translators: theme name
+#: inc/hero-text-widget.php:25
+msgid "A %s theme widget designed for the Hero area on your site's front page."
+msgstr ""
+"Μια μικροεφαρμογή για το θέμα %s, σχεδιασμένη για την περιοχή Hero στην "
+"αρχική σελίδα του ιστότοπού σας."
+
+#: inc/hero-text-widget.php:148
 msgid "The title of widget. Leave empty for no title."
 msgstr "Ο τίτλος του widget. Να παραμείνει κενό αν δεν υπάρχει τίτλος "
 
-#: inc/hero-text-widget.php:147
+#: inc/hero-text-widget.php:148
 msgid "Title:"
 msgstr "Τίτλος:"
 
-#: inc/hero-text-widget.php:152
+#: inc/hero-text-widget.php:153
 msgid "Text:"
 msgstr "Κείμενο:"
 
-#: inc/hero-text-widget.php:157
+#: inc/hero-text-widget.php:158
 msgid "Button Text:"
 msgstr "Κείμενο κουμπιού:"
 
-#: inc/hero-text-widget.php:162
+#: inc/hero-text-widget.php:163
 msgid "Button Link URL:"
 msgstr "URL σύνδεσης κουμπιού:"
 
-#: inc/hero-text-widget.php:163
+#: inc/hero-text-widget.php:164
 msgid "Paste URL or type to search"
 msgstr "Επικολλήστε το URL ή πληκτρολογήστε για να γίνει αναζήτηση"
 
-#: inc/template-tags.php:151 templates/woocommerce/loop/pagination.php:30
+#. translators: page number
+#: inc/hooks.php:414
+msgid "Page %d"
+msgstr "Σελίδα %d"
+
+#. translators: 1. current page number, 2. total number of pages
+#: inc/hooks.php:498 templates/woocommerce/loop/pagination.php:47
+msgid "Page %1$d of %2$d"
+msgstr "Σελίδα %1$d από %2$d"
+
+#: inc/template-tags.php:278 templates/woocommerce/loop/pagination.php:32
 msgid "&larr; Previous"
 msgstr "&larr; Προηγούμενο"
 
-#: inc/template-tags.php:152 templates/woocommerce/loop/pagination.php:31
+#: inc/template-tags.php:279 templates/woocommerce/loop/pagination.php:33
 msgid "Next &rarr;"
 msgstr "Επόμενο &rarr;"
 
-#: inc/template-tags.php:266
+#. translators: post type singular label
+#: inc/template-tags.php:280
+msgid "%1$s navigation"
+msgstr "Πλοήγηση για %1$s"
+
+#: inc/template-tags.php:393
 msgid "Blog"
 msgstr "Blog"
+
+#. translators: 1. theme name link, 2. theme author link
+#: templates/parts/credit.php:51
+msgid "%1$s WordPress theme by %2$s"
+msgstr "Θέμα WordPress %1$s από την %2$s"
 
 #: templates/parts/loop/page-content.php:28
 #: templates/parts/loop/post-content.php:19
@@ -476,6 +653,36 @@ msgstr "Επεξεργασία"
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Διαβάστε περισσότερα <span class=\"meta-nav\">&rarr;</span>"
 
+#. translators: post title
+#: templates/parts/loop/post-excerpt.php:15
+msgid "Continue reading %s"
+msgstr "Συνεχίστε την ανάγνωση %s"
+
+#. translators: right arrow (LTR) / left arrow (RTL)
+#: templates/parts/loop/post-excerpt.php:15
+msgid "Continue Reading %s"
+msgstr "Συνεχίστε την ανάγνωση %s"
+
+#. translators: separator for items in a list
+#: templates/parts/loop/post-footer.php:21
+#: templates/parts/loop/post-footer.php:33
+#: templates/parts/loop/post-search-footer.php:15
+#: templates/parts/loop/post-search-footer.php:27
+msgid ", "
+msgstr ", "
+
+#. translators: category list
+#: templates/parts/loop/post-footer.php:27
+#: templates/parts/loop/post-search-footer.php:21
+msgid "Posted in: %s"
+msgstr "Ανάρτηση στην κατηγορία: %s"
+
+#. translators: tag list
+#: templates/parts/loop/post-footer.php:39
+#: templates/parts/loop/post-search-footer.php:33
+msgid "Filed under: %s"
+msgstr "Καταχωρήθηκε με ετικέτα: %s"
+
 #: templates/parts/loop/post-meta.php:25
 #: templates/parts/loop/post-search-footer.php:43
 msgid "Leave a comment"
@@ -485,6 +692,12 @@ msgstr "Αφήστε σχόλιο"
 #: templates/parts/loop/post-search-footer.php:43
 msgid "1 Comment"
 msgstr "1 σχόλιο"
+
+#. translators: number of comments
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:43
+msgid "%d Comments"
+msgstr "% σχόλια"
 
 #: templates/woocommerce/404.php:30
 msgid "Search"
@@ -498,6 +711,11 @@ msgstr "Προωθούμενα προϊόντα"
 msgid "Popular Products"
 msgstr "Δημοφιλή προϊόντα"
 
+#. translators: post type singular label
+#: templates/woocommerce/loop/pagination.php:45
+msgid "%s navigation"
+msgstr "Πλοήγηση για %s"
+
 #. Theme URI of the plugin/theme
 msgid "https://github.com/godaddy/wp-primer-theme"
 msgstr "https://github.com/godaddy/wp-primer-theme"
@@ -507,8 +725,8 @@ msgid ""
 "Primer is a powerful theme that brings clarity to your content in a fresh "
 "design."
 msgstr ""
-"Το Primer είναι ένα ισχυρό θέμα που προσθέτει σαφήνεια στο περιεχόμενό σας με "
-"μοντέρνα σχεδίαση."
+"Το Primer είναι ένα ισχυρό θέμα που προσθέτει σαφήνεια στο περιεχόμενό σας "
+"με μοντέρνα σχεδίαση."
 
 #. Author of the plugin/theme
 msgid "GoDaddy"
@@ -518,190 +736,6 @@ msgstr "GoDaddy"
 msgid "https://www.godaddy.com/"
 msgstr "https://www.godaddy.com/"
 
-#: comments.php:35
-msgctxt "1. number of comments, 2. post title"
-msgid "%1$d thought on %2$s"
-msgid_plural "%1$d thoughts on %2$s"
-msgstr[0] "%1$d σκέψη για το %2$s"
-msgstr[1] "%1$d σκέψεις για το %2$s"
-
-#: comments.php:58
-msgctxt "left arrow (LTR) / right arrow (RTL)"
-msgid "%s Older Comments"
-msgstr "%s παλιότερα σχόλια"
-
-#: comments.php:60
-msgctxt "right arrow (LTR) / left arrow (RTL)"
-msgid "Newer Comments %s"
-msgstr "Νεώτερα σχόλια %s"
-
-#: templates/parts/loop/post-excerpt.php:15
-msgctxt "right arrow (LTR) / left arrow (RTL)"
-msgid "Continue Reading %s"
-msgstr "Συνεχίστε την ανάγνωση %s"
-
-#: content-none.php:29
-msgctxt "link to write a new post"
-msgid "Ready to publish your first post? %s."
-msgstr "Είστε έτοιμοι για να δημοσιεύσετε την πρώτη σας ανάρτηση; %s."
-
-#: inc/compat/deprecated.php:117
-msgctxt ""
-"1. PHP function name, 2. theme name, 3. version number, 4. alternative "
-"function name"
-msgid ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
-"instead."
-msgstr ""
-"Η συνάρτηση %1$s είναι <strong>ξεπερασμένη</strong> από το %2$s έκδοσης %3$s "
-"και μετά! Στη θέση της, χρησιμοποιήστε τη συνάρτηση %4$s."
-
-#: inc/compat/deprecated.php:118
-msgctxt "1. PHP function name, 2. theme name, 3. version number"
-msgid ""
-"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
-"alternative available."
-msgstr ""
-"Η συνάρτηση %1$s είναι <strong>ξεπερασμένη</strong> από το %2$s έκδοσης %3$s "
-"και μετά, χωρίς να υπάρχει διαθέσιμη εναλλακτική συνάρτηση."
-
-#: inc/customizer/colors.php:482
-msgctxt "color scheme name"
-msgid "Blush"
-msgstr "Φούξια"
-
-#: inc/customizer/colors.php:486
-msgctxt "color scheme name"
-msgid "Bronze"
-msgstr "Χάλκινο"
-
-#: inc/customizer/colors.php:490
-msgctxt "color scheme name"
-msgid "Canary"
-msgstr "Καναρινί"
-
-#: inc/customizer/colors.php:494
-msgctxt "color scheme name"
-msgid "Cool"
-msgstr "Μοντέρνο"
-
-#: inc/customizer/colors.php:498
-msgctxt "color scheme name"
-msgid "Dark"
-msgstr "Σκούρο"
-
-#: inc/customizer/colors.php:502
-msgctxt "color scheme name"
-msgid "Iguana"
-msgstr "Ιγκουάνα"
-
-#: inc/customizer/colors.php:506
-msgctxt "color scheme name"
-msgid "Muted"
-msgstr "Σιωπηρό"
-
-#: inc/customizer/colors.php:510
-msgctxt "color scheme name"
-msgid "Plum"
-msgstr "Δαμασκηνί"
-
-#: inc/customizer/colors.php:514
-msgctxt "color scheme name"
-msgid "Rose"
-msgstr "Τριανταφυλλί"
-
-#: inc/customizer/colors.php:518
-msgctxt "color scheme name"
-msgid "Tangerine"
-msgstr "Μανταρινί"
-
-#: inc/customizer/colors.php:522
-msgctxt "color scheme name"
-msgid "Turquoise"
-msgstr "Τυρκουάζ"
-
-#: inc/customizer/fonts.php:217
-msgctxt "font name"
-msgid "%s (Default)"
-msgstr "%s (Προεπιλογή)"
-
-#: inc/customizer/layouts.php:99
-msgctxt "fixed-width page layout"
-msgid "Fixed"
-msgstr "Σταθερό πλάτος"
-
-#: inc/customizer/layouts.php:100
-msgctxt "fluid-width page layout"
-msgid "Fluid"
-msgstr "Ρέον"
-
-#: inc/customizer/site-identity.php:71 templates/parts/credit.php:23
-msgctxt "1. copyright symbol, 2. year, 3. site title"
-msgid "Copyright %1$s %2$d %3$s"
-msgstr "Copyright %1$s %2$d %3$s"
-
-#: inc/helpers.php:45
-msgctxt "search term"
-msgid "Search Results for: %s"
-msgstr "Αποτελέσματα αναζήτησης για: %s"
-
-#: inc/hero-text-widget.php:24
-msgctxt "theme name"
-msgid "A %s theme widget designed for the Hero area on your site's front page."
-msgstr "Μια μικροεφαρμογή για το θέμα %s, σχεδιασμένη για την περιοχή Hero στην αρχική σελίδα του ιστότοπού σας."
-
-#: inc/hero-text-widget.php:29
-msgctxt "the widget title"
-msgid "Hero Text"
-msgstr "Κείμενο Hero"
-
-#: inc/hooks.php:394
-msgctxt "page number"
-msgid "Page %d"
-msgstr "Σελίδα %d"
-
-#: inc/hooks.php:431 templates/woocommerce/loop/pagination.php:45
-msgctxt "1. current page number, 2. total number of pages"
-msgid "Page %1$d of %2$d"
-msgstr "Σελίδα %1$d από %2$d"
-
-#: inc/template-tags.php:153
-msgctxt "post type singular label"
-msgid "%1$s navigation"
-msgstr "Πλοήγηση για %1$s"
-
-#: templates/woocommerce/loop/pagination.php:43
-msgctxt "post type singular label"
-msgid "%s navigation"
-msgstr "Πλοήγηση για %s"
-
-#: templates/parts/credit.php:49
-msgctxt "1. theme name link, 2. theme author link"
-msgid "%1$s WordPress theme by %2$s"
-msgstr "Θέμα WordPress %1$s από την %2$s"
-
-#: templates/parts/loop/post-footer.php:21
-#: templates/parts/loop/post-footer.php:33
-#: templates/parts/loop/post-search-footer.php:15
-#: templates/parts/loop/post-search-footer.php:27
-msgctxt "separator for items in a list"
-msgid ", "
-msgstr ", "
-
-#: templates/parts/loop/post-footer.php:27
-#: templates/parts/loop/post-search-footer.php:21
-msgctxt "category list"
-msgid "Posted in: %s"
-msgstr "Ανάρτηση στην κατηγορία: %s"
-
-#: templates/parts/loop/post-footer.php:39
-#: templates/parts/loop/post-search-footer.php:33
-msgctxt "tag list"
-msgid "Filed under: %s"
-msgstr "Καταχωρήθηκε με ετικέτα: %s"
-
-#: templates/parts/loop/post-meta.php:25
-#: templates/parts/loop/post-search-footer.php:43
-msgctxt "number of comments"
-msgid "% Comments"
-msgstr "% σχόλια"
+#~ msgctxt "the widget title"
+#~ msgid "Hero Text"
+#~ msgstr "Κείμενο Hero"

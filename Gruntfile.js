@@ -377,9 +377,9 @@ module.exports = function( grunt ) {
 
 	grunt.registerTask( 'default',     [ 'sass', 'replace:charset', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify', 'imagemin' ] );
 	grunt.registerTask( 'check',       [ 'devUpdate' ] );
-	grunt.registerTask( 'deploy-docs', [ 'update-docs', 'shell:deploy_docs' ] );
 	grunt.registerTask( 'readme',      [ 'wp_readme_to_markdown' ] );
 	grunt.registerTask( 'update-docs', [ 'readme', 'clean:docs', 'replace:docs_version', 'replace:docs', 'shell:sphinx', 'shell:docs', 'copy:readme', 'copy:docs_html', 'copy:docs_landing', 'replace:intro' ] );
+	grunt.registerTask( 'deploy-docs', [ 'update-docs', 'shell:deploy_docs' ] );
 	grunt.registerTask( 'update-pot',  [ 'makepot' ] );
 	grunt.registerTask( 'update-mo',   [ 'potomo' ] );
 	grunt.registerTask( 'version',     [ 'replace', 'readme' ] );
