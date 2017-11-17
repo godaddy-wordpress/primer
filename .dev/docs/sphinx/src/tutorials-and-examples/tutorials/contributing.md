@@ -13,7 +13,7 @@ Building the documentation is easy using the bundled Grunt tasks.
 From the **theme root** you can use the following command to generate the documentation.
 
 ```bash
-$ grunt docs
+$ grunt update-docs
 ```
 
 The dependencies will be installed and the documentation will be built and compiled into the `/documentation/build/html/` directory. Feel free to preview the documentation before pushing changes live to the site.
