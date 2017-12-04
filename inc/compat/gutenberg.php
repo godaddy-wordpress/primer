@@ -9,6 +9,11 @@
  * @since      NEXT
  */
 
+/**
+ * Enable Gutenberg features.
+ *
+ * @since NEXT
+ */
 function primer_gutenberg_theme_support() {
 
 	add_theme_support( 'gutenberg', array(
