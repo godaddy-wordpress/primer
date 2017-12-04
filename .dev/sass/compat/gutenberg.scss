@@ -1,0 +1,43 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Blocks
+	## Featured Image
+	## Image
+--------------------------------------------------------------*/
+
+.hentry {
+
+	/*--------------------------------------------------------------
+	# Featured Image
+	# Image
+	--------------------------------------------------------------*/
+	.wp-block-cover-image,
+	.wp-block-image.alignfull {
+		margin-left: -3.375em;
+		width: calc( 100% + 6.75em );
+
+		figcaption {
+			padding: 0 3.375em;
+		}
+
+		@media #{$medium-down} {
+			margin-left: -2.375em;
+			width: calc( 100% + 4.75em );
+
+			figcaption {
+				padding: 0 2.375em;
+			}
+		}
+
+		@media #{$small-only} {
+			margin-left: -1em;
+			width: calc( 100% + 2em );
+
+			figcaption {
+				padding: 0 1em;
+			}
+		}
+	}
+
+}
