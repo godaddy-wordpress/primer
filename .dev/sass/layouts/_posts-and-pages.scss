@@ -3,6 +3,8 @@
 	padding: 2.5em 3.375em;
 	background-color: $color__content-bg;
 
+	@import "../compat/gutenberg.scss";
+
 	p:last-child {
 		margin-bottom: 0;
 	}

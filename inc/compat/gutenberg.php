@@ -1,12 +1,12 @@
 <?php
 /**
- * Gutenber compatibility.
+ * Gutenberg compatibility.
  *
  * @package    Compatibility
  * @subpackage Gutenberg
  * @category   Core
  * @author     GoDaddy
- * @since      1.0.0
+ * @since      NEXT
  */
 
 function primer_gutenberg_theme_support() {

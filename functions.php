@@ -128,9 +128,9 @@ if ( class_exists( 'FLBuilder' ) ) {
 }
 
 /**
- * Load Beaver Builder compatibility file.
+ * Load Gutenberg compatiblity.
  *
- * @since 1.0.0
+ * @since NEXT
  */
 if ( defined( 'GUTENBERG_VERSION' ) ) {
 
