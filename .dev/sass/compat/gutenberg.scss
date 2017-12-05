@@ -33,3 +33,22 @@
 		}
 	}
 }
+
+.wp-block-cover-image.alignwide,
+.wp-block-image.alignwide {
+	margin-left: -1.6875em;
+	margin-right: -1.6875em;
+	width: calc( 100% + 3.375em );
+
+	@media #{$medium-down} {
+		margin-left: -1.1875em;
+		margin-right: -1.1875em;
+		width: calc( 100% + 2.375em );
+	}
+
+	@media #{$small-only} {
+		margin-left: -0.5em;
+		margin-right: -0.5em;
+		width: calc( 100% + 1em );
+	}
+}

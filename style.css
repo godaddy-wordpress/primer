@@ -2079,36 +2079,58 @@ body.no-max-width .site-info-wrapper .site-info {
   background-color: #ffffff;
   /*--------------------------------------------------------------
 >>> Gutenberg:
-# Blocks
-	# Featured Image
-	# Image
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
+# Featured Image
+# Image
 --------------------------------------------------------------*/ }
-  .hentry .wp-block-cover-image,
+  .hentry .wp-block-cover-image.alignfull,
   .hentry .wp-block-image.alignfull {
     margin-left: -3.375em;
     width: -webkit-calc( 100% + 6.75em);
     width: calc( 100% + 6.75em); }
-    .hentry .wp-block-cover-image figcaption,
+    .hentry .wp-block-cover-image.alignfull figcaption,
     .hentry .wp-block-image.alignfull figcaption {
       padding: 0 3.375em; }
     @media only screen and (max-width: 61.063em) {
-      .hentry .wp-block-cover-image,
+      .hentry .wp-block-cover-image.alignfull,
       .hentry .wp-block-image.alignfull {
         margin-left: -2.375em;
         width: -webkit-calc( 100% + 4.75em);
         width: calc( 100% + 4.75em); }
-        .hentry .wp-block-cover-image figcaption,
+        .hentry .wp-block-cover-image.alignfull figcaption,
         .hentry .wp-block-image.alignfull figcaption {
           padding: 0 2.375em; } }
     @media only screen and (max-width: 40.063em) {
-      .hentry .wp-block-cover-image,
+      .hentry .wp-block-cover-image.alignfull,
       .hentry .wp-block-image.alignfull {
         margin-left: -1em;
         width: -webkit-calc( 100% + 2em);
         width: calc( 100% + 2em); }
-        .hentry .wp-block-cover-image figcaption,
+        .hentry .wp-block-cover-image.alignfull figcaption,
         .hentry .wp-block-image.alignfull figcaption {
           padding: 0 1em; } }
+  .hentry .wp-block-cover-image.alignwide,
+  .hentry .wp-block-image.alignwide {
+    margin-left: -1.6875em;
+    margin-right: -1.6875em;
+    width: -webkit-calc( 100% + 3.375em);
+    width: calc( 100% + 3.375em); }
+    @media only screen and (max-width: 61.063em) {
+      .hentry .wp-block-cover-image.alignwide,
+      .hentry .wp-block-image.alignwide {
+        margin-left: -1.1875em;
+        margin-right: -1.1875em;
+        width: -webkit-calc( 100% + 2.375em);
+        width: calc( 100% + 2.375em); } }
+    @media only screen and (max-width: 40.063em) {
+      .hentry .wp-block-cover-image.alignwide,
+      .hentry .wp-block-image.alignwide {
+        margin-left: -0.5em;
+        margin-right: -0.5em;
+        width: -webkit-calc( 100% + 1em);
+        width: calc( 100% + 1em); } }
   .hentry p:last-child {
     margin-bottom: 0; }
   .hentry:after {
