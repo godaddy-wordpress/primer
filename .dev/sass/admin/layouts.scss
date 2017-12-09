@@ -17,6 +17,7 @@
 	ul {
 		display: flex;
 		margin: 0;
+		list-style-type: none !important;
 
 		li {
 			margin: 0.3em 0.3em;
@@ -33,7 +34,7 @@
 			}
 
 			img {
-				width: calc(100% - 0.3em - 12px);
+				width: 100%;
 				height: auto;
 				padding: 6px;
 			}
