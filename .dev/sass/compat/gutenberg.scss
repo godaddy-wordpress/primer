@@ -1,13 +1,12 @@
 /*--------------------------------------------------------------
 >>> Gutenberg:
-----------------------------------------------------------------
-
-/*--------------------------------------------------------------
-# Featured Image
-# Image
 --------------------------------------------------------------*/
 .wp-block-cover-image.alignfull,
-.wp-block-image.alignfull {
+.wp-block-image.alignfull,
+.wp-block-cover-text.alignfull,
+.wp-block-image.alignfull,
+.wp-block-gallery.alignfull,
+.wp-block-text-columns.alignfull {
 	margin-left: -3.375em;
 	width: calc( 100% + 6.75em );
 
@@ -35,7 +34,11 @@
 }
 
 .wp-block-cover-image.alignwide,
-.wp-block-image.alignwide {
+.wp-block-image.alignwide,
+.wp-block-cover-text.alignwide,
+.wp-block-image.alignwide,
+.wp-block-gallery.alignwide,
+.wp-block-text-columns.alignwide {
 	margin-left: -1.6875em;
 	margin-right: -1.6875em;
 	width: calc( 100% + 3.375em );
@@ -50,5 +53,37 @@
 		margin-left: -0.5em;
 		margin-right: -0.5em;
 		width: calc( 100% + 1em );
+	}
+}
+
+.wp-block-image,
+.wp-block-gallery,
+.wp-block-video,
+.wp-block-quote,
+.wp-block-text-columns,
+.entry-content ul,
+.entry-content ol,
+.wp-block-cover-text {
+	&.alignleft {
+		max-width: calc( 0.4 * #{$container-size} );
+		margin: 0 1.5em 1.5em 0;
+	}
+
+	&.alignright {
+		max-width: calc( 0.4 * #{$container-size} );
+		margin: 0 0 1.5em 1.5em;
+	}
+}
+
+body.customize-support {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.site-title,
+	.page-title {
+		clear: none;
 	}
 }
