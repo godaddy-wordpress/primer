@@ -1,5 +1,10 @@
 ## Changelog
 
+### 1.8.1 ###
+* Fix: Prevent customizer title & tagline colors from updating when they are hidden. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Update translation files so translations load correctly. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Remove HTML markup in search results/author archive page titles. @props [evanherman](https://github.com/EvanHerman)
+
 ### 1.8.0 ###
 * New: Conditionally wrap site titles to improve SEO. @props [evanherman](https://github.com/EvanHerman), [fjarrett](https://github.com/fjarrett)
 * New: Added `sr_RS` (Serbian) translation. @props [lukapaunovic](https://github.com/lukapaunovic)
