@@ -382,6 +382,6 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'deploy-docs', [ 'update-docs', 'shell:deploy_docs' ] );
 	grunt.registerTask( 'update-pot',  [ 'makepot' ] );
 	grunt.registerTask( 'update-mo',   [ 'potomo' ] );
-	grunt.registerTask( 'version',     [ 'replace', 'readme' ] );
+	grunt.registerTask( 'version',     [ 'replace', 'readme', 'default', 'clean' ] );
 
 };
