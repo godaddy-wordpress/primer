@@ -308,7 +308,7 @@ module.exports = function( grunt ) {
 			deploy_docs: [
 				'cd .dev/docs/build/html',
 				'git add .',
-				'git commit -m "Update Documentation"',
+				'git commit -m "Update Documentation" || true',
 				'git push origin gh-pages --force'
 			].join( ' && ' )
 		},
@@ -382,6 +382,6 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'deploy-docs', [ 'update-docs', 'shell:deploy_docs' ] );
 	grunt.registerTask( 'update-pot',  [ 'makepot' ] );
 	grunt.registerTask( 'update-mo',   [ 'potomo' ] );
-	grunt.registerTask( 'version',     [ 'replace', 'readme' ] );
+	grunt.registerTask( 'version',     [ 'replace', 'readme', 'default', 'clean' ] );
 
 };
