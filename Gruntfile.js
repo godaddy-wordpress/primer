@@ -308,7 +308,7 @@ module.exports = function( grunt ) {
 			deploy_docs: [
 				'cd .dev/docs/build/html',
 				'git add .',
-				'git commit -m "Update Documentation"',
+				'git commit -m "Update Documentation" || true',
 				'git push origin gh-pages --force'
 			].join( ' && ' )
 		},
