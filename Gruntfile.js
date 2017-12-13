@@ -337,7 +337,7 @@ module.exports = function( grunt ) {
 			},
 			sass: {
 				files: '.dev/sass/**/*.scss',
-				tasks: [ 'sass', 'autoprefixer', 'cssjanus', 'cssmin' ]
+				tasks: [ 'sass', 'replace:charset', 'autoprefixer', 'cssjanus', 'cssmin' ]
 			}
 		},
 
