@@ -74,7 +74,7 @@ jobs:
 before_deploy:
   - mkdir -p /tmp/$WP_THEME
   - rsync -av --exclude-from $TRAVIS_BUILD_DIR/.distignore --delete $TRAVIS_BUILD_DIR/ /tmp/$WP_THEME/
-  - zip -rTj $TRAVIS_BUILD_DIR/$WP_THEME.zip /tmp/$WP_THEME
+  - zip -rT $TRAVIS_BUILD_DIR/$WP_THEME.zip /tmp/$WP_THEME/*
   - sha256sum -b $TRAVIS_BUILD_DIR/$WP_THEME.zip | awk '{print $1}' | tee $TRAVIS_BUILD_DIR/$WP_THEME.zip.sha256
 
 deploy:
