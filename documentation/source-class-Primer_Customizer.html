@@ -12,12 +12,11 @@
 	<link rel="stylesheet" type="text/css" href="resources/css/font-awesome.min.css?12d6861075de8e293265ff6ff03b1f3adcb44c76">
 	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css?4cf1ebacd5d9ed77cfdde569db191675add8bd1b">
 	<link rel="stylesheet" type="text/css" href="resources/css/styles.css?1c0be7d42007b45e49f18eeb0d35db57c73b27a6">
+	<link rel="stylesheet" type="text/css" href="resources/css/prism.css?9bc16dfb1371f65f7b17c8d50c25c6e225457735">
 	<link rel="stylesheet" type="text/css" href="resources/css/responsive.css?23aedcbba2a71c6eae0181247948af42426549eb">
 
-	<script type="text/javascript" src="resources/combined.js?6d96d814cee1a62683b46f9c7acd278de258fe45"></script>
-	<script type="text/javascript" src="elementlist.js?47cc419a1d1bb5f60f81e1f62e9668db5cb44319"></script>
-
-
+	<script type="text/javascript" src="resources/combined.js?d02d7bd069bed2aad1ebd684071d4775d432fd7f"></script>
+	<script type="text/javascript" src="elementlist.js?fa72ac6bf424ca706feec4ee743695c9a221905e"></script>
 
 </head>
 
@@ -107,9 +106,9 @@
 			<div class="row back-book">
 				<div class="col-md-3 t-api-title hidden-sm hidden-xs">
 					<h2>
-						<a href="../1.4.1/">
+						<a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html">
 							<span class="glyph_range icon-submenu icon-submenu-cook">B</span>
-							Primer Theme 1.4.1
+							Primer Theme 1.8.1
 							
 							<strong>API</strong>
 						</a>
@@ -128,17 +127,13 @@
 						</li>
 
 												<li class="version-picker">
-							<h6>Version:</h6>
+							<h6>Version: 1.8.1</h6>
+							<!--
 							<ul class="nav navbar-nav">
 								<li class="dropdown">
-										<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-											1.4.1 <i class="fa fa-menu-en fa-chevron-down"></i>
-										</a>
-										<ul class="dropdown-menu">
-												<li><a href="../1.4.1">1.4.1</a></li>
-										</ul>
 								</li>
 							</ul>
+							-->
 						</li>
 					</ul>
 				</div>
@@ -248,6 +243,7 @@
 
 						<h3 class="nav-title">Functions</h3>
 						<ul class="nav-list">
+							<li><a title="is_custom_primer_child" href="function-is_custom_primer_child.html">is_custom_primer_child</a></li>
 							<li><a title="primer_add_credit" href="function-primer_add_credit.html">primer_add_credit</a></li>
 							<li><a title="primer_add_footer_navigation" href="function-primer_add_footer_navigation.html">primer_add_footer_navigation</a></li>
 							<li><a title="primer_add_footer_widgets" href="function-primer_add_footer_widgets.html">primer_add_footer_widgets</a></li>
@@ -261,9 +257,12 @@
 							<li><a title="primer_add_site_info" href="function-primer_add_site_info.html">primer_add_site_info</a></li>
 							<li><a title="primer_add_site_title" href="function-primer_add_site_title.html">primer_add_site_title</a></li>
 							<li><a title="primer_add_social_navigation" href="function-primer_add_social_navigation.html">primer_add_social_navigation</a></li>
+							<li><a title="primer_apply_filters_deprecated" href="function-primer_apply_filters_deprecated.html">primer_apply_filters_deprecated</a></li>
 							<li><a title="primer_array_replace_recursive" href="function-primer_array_replace_recursive.html">primer_array_replace_recursive</a></li>
 							<li><a title="primer_bb_colors" href="function-primer_bb_colors.html">primer_bb_colors</a></li>
+							<li><a title="primer_bb_elements" href="function-primer_bb_elements.html">primer_bb_elements</a></li>
 							<li><a title="primer_bb_layout" href="function-primer_bb_layout.html">primer_bb_layout</a></li>
+							<li><a title="primer_bb_the_site_title_wrapper" href="function-primer_bb_the_site_title_wrapper.html">primer_bb_the_site_title_wrapper</a></li>
 							<li><a title="primer_body_class" href="function-primer_body_class.html">primer_body_class</a></li>
 							<li><a title="primer_breadcrumbs" href="function-primer_breadcrumbs.html">primer_breadcrumbs</a></li>
 							<li><a title="primer_child_compat" href="function-primer_child_compat.html">primer_child_compat</a></li>
@@ -273,7 +272,7 @@
 							<li><a title="primer_customize" href="function-primer_customize.html">primer_customize</a></li>
 							<li><a title="primer_deprecated" href="function-primer_deprecated.html">primer_deprecated</a></li>
 							<li><a title="primer_deprecated_function" href="function-primer_deprecated_function.html">primer_deprecated_function</a></li>
-							<li><a title="primer_deprecated_hook" href="function-primer_deprecated_hook.html">primer_deprecated_hook</a></li>
+							<li><a title="primer_do_action_deprecated" href="function-primer_do_action_deprecated.html">primer_do_action_deprecated</a></li>
 							<li><a title="primer_elements" href="function-primer_elements.html">primer_elements</a></li>
 							<li><a title="primer_excerpt_length" href="function-primer_excerpt_length.html">primer_excerpt_length</a></li>
 							<li><a title="primer_excerpt_more" href="function-primer_excerpt_more.html">primer_excerpt_more</a></li>
@@ -316,10 +315,13 @@
 							<li><a title="primer_switch_theme" href="function-primer_switch_theme.html">primer_switch_theme</a></li>
 							<li><a title="primer_the_custom_logo" href="function-primer_the_custom_logo.html">primer_the_custom_logo</a></li>
 							<li><a title="primer_the_page_title" href="function-primer_the_page_title.html">primer_the_page_title</a></li>
+							<li><a title="primer_the_page_title_wrapper" href="function-primer_the_page_title_wrapper.html">primer_the_page_title_wrapper</a></li>
 							<li><a title="primer_the_site_description" href="function-primer_the_site_description.html">primer_the_site_description</a></li>
 							<li><a title="primer_the_site_title" href="function-primer_the_site_title.html">primer_the_site_title</a></li>
+							<li><a title="primer_the_site_title_wrapper" href="function-primer_the_site_title_wrapper.html">primer_the_site_title_wrapper</a></li>
 							<li><a title="primer_upgrade_notice" href="function-primer_upgrade_notice.html">primer_upgrade_notice</a></li>
 							<li><a title="primer_use_featured_hero_image" href="function-primer_use_featured_hero_image.html">primer_use_featured_hero_image</a></li>
+							<li><a title="primer_video_header" href="function-primer_video_header.html">primer_video_header</a></li>
 							<li><a title="primer_wc_404_template" href="function-primer_wc_404_template.html">primer_wc_404_template</a></li>
 							<li><a title="primer_wc_best_selling_products" href="function-primer_wc_best_selling_products.html">primer_wc_best_selling_products</a></li>
 							<li><a title="primer_wc_cart_menu" href="function-primer_wc_cart_menu.html">primer_wc_cart_menu</a></li>
@@ -329,6 +331,8 @@
 							<li><a title="primer_wc_generate_cart_menu_item" href="function-primer_wc_generate_cart_menu_item.html">primer_wc_generate_cart_menu_item</a></li>
 							<li><a title="primer_wc_l10n_body_class" href="function-primer_wc_l10n_body_class.html">primer_wc_l10n_body_class</a></li>
 							<li><a title="primer_wc_product_classes" href="function-primer_wc_product_classes.html">primer_wc_product_classes</a></li>
+							<li><a title="primer_wc_product_header_image" href="function-primer_wc_product_header_image.html">primer_wc_product_header_image</a></li>
+							<li><a title="primer_wc_product_page_title_wrapper" href="function-primer_wc_product_page_title_wrapper.html">primer_wc_product_page_title_wrapper</a></li>
 							<li><a title="primer_wc_promoted_products" href="function-primer_wc_promoted_products.html">primer_wc_promoted_products</a></li>
 							<li><a title="primer_wc_setup" href="function-primer_wc_setup.html">primer_wc_setup</a></li>
 							<li><a title="primer_wc_shop_columns" href="function-primer_wc_shop_columns.html">primer_wc_shop_columns</a></li>
@@ -346,277 +350,277 @@
 			</div>
 
 						<div id="right" class="col-md-9">
-<pre><code><span id="1" class="codeline"><a class="number" href="#1">  1: </a><span class="xlang">&lt;?php</span>
-</span><span id="2" class="codeline"><a class="number" href="#2">  2: </a><span class="php-comment">/**
-</span></span><span id="3" class="codeline"><a class="number" href="#3">  3: </a><span class="php-comment"> * Customizer bootstrap.
-</span></span><span id="4" class="codeline"><a class="number" href="#4">  4: </a><span class="php-comment"> *
-</span></span><span id="5" class="codeline"><a class="number" href="#5">  5: </a><span class="php-comment"> * @class    Primer_Customizer
-</span></span><span id="6" class="codeline"><a class="number" href="#6">  6: </a><span class="php-comment"> * @package  Classes/Customizer
-</span></span><span id="7" class="codeline"><a class="number" href="#7">  7: </a><span class="php-comment"> * @category Class
-</span></span><span id="8" class="codeline"><a class="number" href="#8">  8: </a><span class="php-comment"> * @author   GoDaddy
-</span></span><span id="9" class="codeline"><a class="number" href="#9">  9: </a><span class="php-comment"> * @since    1.0.0
-</span></span><span id="10" class="codeline"><a class="number" href="#10"> 10: </a><span class="php-comment"> */</span>
-</span><span id="11" class="codeline"><a class="number" href="#11"> 11: </a><span class="php-keyword1">class</span> Primer_Customizer {
-</span><span id="12" class="codeline"><a class="number" href="#12"> 12: </a>
-</span><span id="13" class="codeline"><a class="number" href="#13"> 13: </a>    <span class="php-comment">/**
-</span></span><span id="14" class="codeline"><a class="number" href="#14"> 14: </a><span class="php-comment">     * Stylesheet slug.
-</span></span><span id="15" class="codeline"><a class="number" href="#15"> 15: </a><span class="php-comment">     *
-</span></span><span id="16" class="codeline"><a class="number" href="#16"> 16: </a><span class="php-comment">     * @var string
-</span></span><span id="17" class="codeline"><a class="number" href="#17"> 17: </a><span class="php-comment">     */</span>
-</span><span id="18" class="codeline"><a class="number" href="#18"> 18: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var">$stylesheet</span>;
-</span><span id="19" class="codeline"><a class="number" href="#19"> 19: </a>
-</span><span id="20" class="codeline"><a class="number" href="#20"> 20: </a>    <span class="php-comment">/**
-</span></span><span id="21" class="codeline"><a class="number" href="#21"> 21: </a><span class="php-comment">     * Class constructor.
-</span></span><span id="22" class="codeline"><a class="number" href="#22"> 22: </a><span class="php-comment">     */</span>
-</span><span id="23" class="codeline"><a class="number" href="#23"> 23: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct() {
-</span><span id="24" class="codeline"><a class="number" href="#24"> 24: </a>
-</span><span id="25" class="codeline"><a class="number" href="#25"> 25: </a>        self::<span class="php-var">$stylesheet</span> = get_stylesheet();
-</span><span id="26" class="codeline"><a class="number" href="#26"> 26: </a>
-</span><span id="27" class="codeline"><a class="number" href="#27"> 27: </a>        <span class="php-comment">/**
-</span></span><span id="28" class="codeline"><a class="number" href="#28"> 28: </a><span class="php-comment">         * Load Customizer Colors functionality.
-</span></span><span id="29" class="codeline"><a class="number" href="#29"> 29: </a><span class="php-comment">         *
-</span></span><span id="30" class="codeline"><a class="number" href="#30"> 30: </a><span class="php-comment">         * @since 1.0.0
-</span></span><span id="31" class="codeline"><a class="number" href="#31"> 31: </a><span class="php-comment">         */</span>
-</span><span id="32" class="codeline"><a class="number" href="#32"> 32: </a>        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/colors.php'</span>;
-</span><span id="33" class="codeline"><a class="number" href="#33"> 33: </a>
-</span><span id="34" class="codeline"><a class="number" href="#34"> 34: </a>        <span class="php-comment">/**
-</span></span><span id="35" class="codeline"><a class="number" href="#35"> 35: </a><span class="php-comment">         * Load Customizer Fonts functionality.
-</span></span><span id="36" class="codeline"><a class="number" href="#36"> 36: </a><span class="php-comment">         *
-</span></span><span id="37" class="codeline"><a class="number" href="#37"> 37: </a><span class="php-comment">         * @since 1.0.0
-</span></span><span id="38" class="codeline"><a class="number" href="#38"> 38: </a><span class="php-comment">         */</span>
-</span><span id="39" class="codeline"><a class="number" href="#39"> 39: </a>        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/fonts.php'</span>;
-</span><span id="40" class="codeline"><a class="number" href="#40"> 40: </a>
-</span><span id="41" class="codeline"><a class="number" href="#41"> 41: </a>        <span class="php-comment">/**
-</span></span><span id="42" class="codeline"><a class="number" href="#42"> 42: </a><span class="php-comment">         * Load Customizer Layouts functionality.
-</span></span><span id="43" class="codeline"><a class="number" href="#43"> 43: </a><span class="php-comment">         *
-</span></span><span id="44" class="codeline"><a class="number" href="#44"> 44: </a><span class="php-comment">         * @since 1.0.0
-</span></span><span id="45" class="codeline"><a class="number" href="#45"> 45: </a><span class="php-comment">         */</span>
-</span><span id="46" class="codeline"><a class="number" href="#46"> 46: </a>        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/layouts.php'</span>;
-</span><span id="47" class="codeline"><a class="number" href="#47"> 47: </a>
-</span><span id="48" class="codeline"><a class="number" href="#48"> 48: </a>        <span class="php-comment">/**
-</span></span><span id="49" class="codeline"><a class="number" href="#49"> 49: </a><span class="php-comment">         * Load additional site identity options
-</span></span><span id="50" class="codeline"><a class="number" href="#50"> 50: </a><span class="php-comment">         *
-</span></span><span id="51" class="codeline"><a class="number" href="#51"> 51: </a><span class="php-comment">         * @since 1.5.0
-</span></span><span id="52" class="codeline"><a class="number" href="#52"> 52: </a><span class="php-comment">         */</span>
-</span><span id="53" class="codeline"><a class="number" href="#53"> 53: </a>        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/site-identity.php'</span>;
-</span><span id="54" class="codeline"><a class="number" href="#54"> 54: </a>
-</span><span id="55" class="codeline"><a class="number" href="#55"> 55: </a>        <span class="php-comment">/**
-</span></span><span id="56" class="codeline"><a class="number" href="#56"> 56: </a><span class="php-comment">         * Load additional static front page options
-</span></span><span id="57" class="codeline"><a class="number" href="#57"> 57: </a><span class="php-comment">         *
-</span></span><span id="58" class="codeline"><a class="number" href="#58"> 58: </a><span class="php-comment">         * @since 1.5.0
-</span></span><span id="59" class="codeline"><a class="number" href="#59"> 59: </a><span class="php-comment">         */</span>
-</span><span id="60" class="codeline"><a class="number" href="#60"> 60: </a>        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/static-front-page.php'</span>;
-</span><span id="61" class="codeline"><a class="number" href="#61"> 61: </a>
-</span><span id="62" class="codeline"><a class="number" href="#62"> 62: </a>        add_action( <span class="php-quote">'after_setup_theme'</span>,      <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'logo'</span> ) );
-</span><span id="63" class="codeline"><a class="number" href="#63"> 63: </a>        add_action( <span class="php-quote">'customize_register'</span>,     <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'selective_refresh'</span> ), <span class="php-num">11</span> );
-</span><span id="64" class="codeline"><a class="number" href="#64"> 64: </a>        add_action( <span class="php-quote">'customize_register'</span>,     <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'use_featured_hero_image'</span> ) );
-</span><span id="65" class="codeline"><a class="number" href="#65"> 65: </a>        add_action( <span class="php-quote">'customize_preview_init'</span>, <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'customize_preview_js'</span> ) );
-</span><span id="66" class="codeline"><a class="number" href="#66"> 66: </a>
-</span><span id="67" class="codeline"><a class="number" href="#67"> 67: </a>    }
-</span><span id="68" class="codeline"><a class="number" href="#68"> 68: </a>
-</span><span id="69" class="codeline"><a class="number" href="#69"> 69: </a>    <span class="php-comment">/**
-</span></span><span id="70" class="codeline"><a class="number" href="#70"> 70: </a><span class="php-comment">     * Add custom logo support.
-</span></span><span id="71" class="codeline"><a class="number" href="#71"> 71: </a><span class="php-comment">     *
-</span></span><span id="72" class="codeline"><a class="number" href="#72"> 72: </a><span class="php-comment">     * @action after_setup_theme
-</span></span><span id="73" class="codeline"><a class="number" href="#73"> 73: </a><span class="php-comment">     * @uses   [add_theme_support](https://developer.wordpress.org/reference/functions/add_theme_support/)
-</span></span><span id="74" class="codeline"><a class="number" href="#74"> 74: </a><span class="php-comment">     *
-</span></span><span id="75" class="codeline"><a class="number" href="#75"> 75: </a><span class="php-comment">     * @since  1.0.0
-</span></span><span id="76" class="codeline"><a class="number" href="#76"> 76: </a><span class="php-comment">     */</span>
-</span><span id="77" class="codeline"><a class="number" href="#77"> 77: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> logo() {
-</span><span id="78" class="codeline"><a class="number" href="#78"> 78: </a>
-</span><span id="79" class="codeline"><a class="number" href="#79"> 79: </a>        <span class="php-comment">/**
-</span></span><span id="80" class="codeline"><a class="number" href="#80"> 80: </a><span class="php-comment">         * Filter the custom logo args.
-</span></span><span id="81" class="codeline"><a class="number" href="#81"> 81: </a><span class="php-comment">         *
-</span></span><span id="82" class="codeline"><a class="number" href="#82"> 82: </a><span class="php-comment">         * @since 1.0.0
-</span></span><span id="83" class="codeline"><a class="number" href="#83"> 83: </a><span class="php-comment">         *
-</span></span><span id="84" class="codeline"><a class="number" href="#84"> 84: </a><span class="php-comment">         * @var array
-</span></span><span id="85" class="codeline"><a class="number" href="#85"> 85: </a><span class="php-comment">         */</span>
-</span><span id="86" class="codeline"><a class="number" href="#86"> 86: </a>        <span class="php-var">$args</span> = (<span class="php-keyword1">array</span>) apply_filters( <span class="php-quote">'primer_custom_logo_args'</span>,
-</span><span id="87" class="codeline"><a class="number" href="#87"> 87: </a>            <span class="php-keyword1">array</span>(
-</span><span id="88" class="codeline"><a class="number" href="#88"> 88: </a>                <span class="php-quote">'height'</span>      =&gt; <span class="php-num">100</span>,
-</span><span id="89" class="codeline"><a class="number" href="#89"> 89: </a>                <span class="php-quote">'width'</span>       =&gt; <span class="php-num">400</span>,
-</span><span id="90" class="codeline"><a class="number" href="#90"> 90: </a>                <span class="php-quote">'flex-height'</span> =&gt; <span class="php-keyword1">true</span>,
-</span><span id="91" class="codeline"><a class="number" href="#91"> 91: </a>                <span class="php-quote">'flex-width'</span>  =&gt; <span class="php-keyword1">true</span>,
-</span><span id="92" class="codeline"><a class="number" href="#92"> 92: </a>                <span class="php-quote">'header-text'</span> =&gt; <span class="php-keyword1">array</span>( <span class="php-quote">'site-title'</span>, <span class="php-quote">'site-description'</span> ),
-</span><span id="93" class="codeline"><a class="number" href="#93"> 93: </a>            )
-</span><span id="94" class="codeline"><a class="number" href="#94"> 94: </a>        );
-</span><span id="95" class="codeline"><a class="number" href="#95"> 95: </a>
-</span><span id="96" class="codeline"><a class="number" href="#96"> 96: </a>        add_theme_support( <span class="php-quote">'custom-logo'</span>, <span class="php-var">$args</span> );
-</span><span id="97" class="codeline"><a class="number" href="#97"> 97: </a>
-</span><span id="98" class="codeline"><a class="number" href="#98"> 98: </a>    }
-</span><span id="99" class="codeline"><a class="number" href="#99"> 99: </a>
-</span><span id="100" class="codeline"><a class="number" href="#100">100: </a>    <span class="php-comment">/**
-</span></span><span id="101" class="codeline"><a class="number" href="#101">101: </a><span class="php-comment">     * Adds postMessage support for site title and description for the Customizer.
-</span></span><span id="102" class="codeline"><a class="number" href="#102">102: </a><span class="php-comment">     *
-</span></span><span id="103" class="codeline"><a class="number" href="#103">103: </a><span class="php-comment">     * @action customize_register
-</span></span><span id="104" class="codeline"><a class="number" href="#104">104: </a><span class="php-comment">     * @since  1.0.0
-</span></span><span id="105" class="codeline"><a class="number" href="#105">105: </a><span class="php-comment">     *
-</span></span><span id="106" class="codeline"><a class="number" href="#106">106: </a><span class="php-comment">     * @uses   $this-&gt;blogname()
-</span></span><span id="107" class="codeline"><a class="number" href="#107">107: </a><span class="php-comment">     * @uses   $this-&gt;blogdescription()
-</span></span><span id="108" class="codeline"><a class="number" href="#108">108: </a><span class="php-comment">     *
-</span></span><span id="109" class="codeline"><a class="number" href="#109">109: </a><span class="php-comment">     * @see    WP_Customize_Manager
-</span></span><span id="110" class="codeline"><a class="number" href="#110">110: </a><span class="php-comment">     *
-</span></span><span id="111" class="codeline"><a class="number" href="#111">111: </a><span class="php-comment">     * @param WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
-</span></span><span id="112" class="codeline"><a class="number" href="#112">112: </a><span class="php-comment">     */</span>
-</span><span id="113" class="codeline"><a class="number" href="#113">113: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> selective_refresh( WP_Customize_Manager <span class="php-var">$wp_customize</span> ) {
-</span><span id="114" class="codeline"><a class="number" href="#114">114: </a>
-</span><span id="115" class="codeline"><a class="number" href="#115">115: </a>        <span class="php-var">$wp_customize</span>-&gt;get_setting( <span class="php-quote">'blogname'</span> )-&gt;transport         = <span class="php-quote">'postMessage'</span>;
-</span><span id="116" class="codeline"><a class="number" href="#116">116: </a>        <span class="php-var">$wp_customize</span>-&gt;get_setting( <span class="php-quote">'blogdescription'</span> )-&gt;transport  = <span class="php-quote">'postMessage'</span>;
-</span><span id="117" class="codeline"><a class="number" href="#117">117: </a>        <span class="php-var">$wp_customize</span>-&gt;get_setting( <span class="php-quote">'header_textcolor'</span> )-&gt;transport = <span class="php-quote">'postMessage'</span>;
-</span><span id="118" class="codeline"><a class="number" href="#118">118: </a>
-</span><span id="119" class="codeline"><a class="number" href="#119">119: </a>        <span class="php-keyword1">if</span> ( ! <span class="php-keyword1">isset</span>( <span class="php-var">$wp_customize</span>-&gt;selective_refresh ) ) {
-</span><span id="120" class="codeline"><a class="number" href="#120">120: </a>
-</span><span id="121" class="codeline"><a class="number" href="#121">121: </a>            <span class="php-keyword1">return</span>;
-</span><span id="122" class="codeline"><a class="number" href="#122">122: </a>
-</span><span id="123" class="codeline"><a class="number" href="#123">123: </a>        }
-</span><span id="124" class="codeline"><a class="number" href="#124">124: </a>
-</span><span id="125" class="codeline"><a class="number" href="#125">125: </a>        <span class="php-var">$wp_customize</span>-&gt;selective_refresh-&gt;add_partial(
-</span><span id="126" class="codeline"><a class="number" href="#126">126: </a>            <span class="php-quote">'blogname'</span>,
-</span><span id="127" class="codeline"><a class="number" href="#127">127: </a>            <span class="php-keyword1">array</span>(
-</span><span id="128" class="codeline"><a class="number" href="#128">128: </a>                <span class="php-quote">'selector'</span>            =&gt; <span class="php-quote">'.site-title a'</span>,
-</span><span id="129" class="codeline"><a class="number" href="#129">129: </a>                <span class="php-quote">'container_inclusive'</span> =&gt; <span class="php-keyword1">false</span>,
-</span><span id="130" class="codeline"><a class="number" href="#130">130: </a>                <span class="php-quote">'render_callback'</span>     =&gt; <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'blogname'</span> ),
-</span><span id="131" class="codeline"><a class="number" href="#131">131: </a>            )
-</span><span id="132" class="codeline"><a class="number" href="#132">132: </a>        );
-</span><span id="133" class="codeline"><a class="number" href="#133">133: </a>
-</span><span id="134" class="codeline"><a class="number" href="#134">134: </a>        <span class="php-var">$wp_customize</span>-&gt;selective_refresh-&gt;add_partial(
-</span><span id="135" class="codeline"><a class="number" href="#135">135: </a>            <span class="php-quote">'blogdescription'</span>,
-</span><span id="136" class="codeline"><a class="number" href="#136">136: </a>            <span class="php-keyword1">array</span>(
-</span><span id="137" class="codeline"><a class="number" href="#137">137: </a>                <span class="php-quote">'selector'</span>            =&gt; <span class="php-quote">'.site-description'</span>,
-</span><span id="138" class="codeline"><a class="number" href="#138">138: </a>                <span class="php-quote">'container_inclusive'</span> =&gt; <span class="php-keyword1">false</span>,
-</span><span id="139" class="codeline"><a class="number" href="#139">139: </a>                <span class="php-quote">'render_callback'</span>     =&gt; <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'blogdescription'</span> ),
-</span><span id="140" class="codeline"><a class="number" href="#140">140: </a>            )
-</span><span id="141" class="codeline"><a class="number" href="#141">141: </a>        );
-</span><span id="142" class="codeline"><a class="number" href="#142">142: </a>
-</span><span id="143" class="codeline"><a class="number" href="#143">143: </a>    }
-</span><span id="144" class="codeline"><a class="number" href="#144">144: </a>
-</span><span id="145" class="codeline"><a class="number" href="#145">145: </a>    <span class="php-comment">/**
-</span></span><span id="146" class="codeline"><a class="number" href="#146">146: </a><span class="php-comment">     * Display the blog name.
-</span></span><span id="147" class="codeline"><a class="number" href="#147">147: </a><span class="php-comment">     *
-</span></span><span id="148" class="codeline"><a class="number" href="#148">148: </a><span class="php-comment">     * @since 1.0.0
-</span></span><span id="149" class="codeline"><a class="number" href="#149">149: </a><span class="php-comment">     *
-</span></span><span id="150" class="codeline"><a class="number" href="#150">150: </a><span class="php-comment">     * @see   $this-&gt;selective_refresh()
-</span></span><span id="151" class="codeline"><a class="number" href="#151">151: </a><span class="php-comment">     */</span>
-</span><span id="152" class="codeline"><a class="number" href="#152">152: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> blogname() {
-</span><span id="153" class="codeline"><a class="number" href="#153">153: </a>
-</span><span id="154" class="codeline"><a class="number" href="#154">154: </a>        bloginfo( <span class="php-quote">'name'</span> );
-</span><span id="155" class="codeline"><a class="number" href="#155">155: </a>
-</span><span id="156" class="codeline"><a class="number" href="#156">156: </a>    }
-</span><span id="157" class="codeline"><a class="number" href="#157">157: </a>
-</span><span id="158" class="codeline"><a class="number" href="#158">158: </a>    <span class="php-comment">/**
-</span></span><span id="159" class="codeline"><a class="number" href="#159">159: </a><span class="php-comment">     * Display the blog description.
-</span></span><span id="160" class="codeline"><a class="number" href="#160">160: </a><span class="php-comment">     *
-</span></span><span id="161" class="codeline"><a class="number" href="#161">161: </a><span class="php-comment">     * @since 1.0.0
-</span></span><span id="162" class="codeline"><a class="number" href="#162">162: </a><span class="php-comment">     * @see   $this-&gt;selective_refresh()
-</span></span><span id="163" class="codeline"><a class="number" href="#163">163: </a><span class="php-comment">     */</span>
-</span><span id="164" class="codeline"><a class="number" href="#164">164: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> blogdescription() {
-</span><span id="165" class="codeline"><a class="number" href="#165">165: </a>
-</span><span id="166" class="codeline"><a class="number" href="#166">166: </a>        bloginfo( <span class="php-quote">'description'</span> );
-</span><span id="167" class="codeline"><a class="number" href="#167">167: </a>
-</span><span id="168" class="codeline"><a class="number" href="#168">168: </a>    }
-</span><span id="169" class="codeline"><a class="number" href="#169">169: </a>
-</span><span id="170" class="codeline"><a class="number" href="#170">170: </a>    <span class="php-comment">/**
-</span></span><span id="171" class="codeline"><a class="number" href="#171">171: </a><span class="php-comment">     * Add control to use featured images as the hero image.
-</span></span><span id="172" class="codeline"><a class="number" href="#172">172: </a><span class="php-comment">     *
-</span></span><span id="173" class="codeline"><a class="number" href="#173">173: </a><span class="php-comment">     * @action customize_register
-</span></span><span id="174" class="codeline"><a class="number" href="#174">174: </a><span class="php-comment">     * @see    WP_Customize_Manager
-</span></span><span id="175" class="codeline"><a class="number" href="#175">175: </a><span class="php-comment">     *
-</span></span><span id="176" class="codeline"><a class="number" href="#176">176: </a><span class="php-comment">     * @since  1.0.0
-</span></span><span id="177" class="codeline"><a class="number" href="#177">177: </a><span class="php-comment">     *
-</span></span><span id="178" class="codeline"><a class="number" href="#178">178: </a><span class="php-comment">     * @param WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
-</span></span><span id="179" class="codeline"><a class="number" href="#179">179: </a><span class="php-comment">     */</span>
-</span><span id="180" class="codeline"><a class="number" href="#180">180: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> use_featured_hero_image( WP_Customize_Manager <span class="php-var">$wp_customize</span> ) {
-</span><span id="181" class="codeline"><a class="number" href="#181">181: </a>
-</span><span id="182" class="codeline"><a class="number" href="#182">182: </a>        <span class="php-var">$wp_customize</span>-&gt;add_setting(
-</span><span id="183" class="codeline"><a class="number" href="#183">183: </a>            <span class="php-quote">'use_featured_hero_image'</span>,
-</span><span id="184" class="codeline"><a class="number" href="#184">184: </a>            <span class="php-keyword1">array</span>(
-</span><span id="185" class="codeline"><a class="number" href="#185">185: </a>                <span class="php-quote">'default'</span>           =&gt; <span class="php-num">1</span>,
-</span><span id="186" class="codeline"><a class="number" href="#186">186: </a>                <span class="php-quote">'sanitize_callback'</span> =&gt; <span class="php-quote">'absint'</span>,
-</span><span id="187" class="codeline"><a class="number" href="#187">187: </a>            )
-</span><span id="188" class="codeline"><a class="number" href="#188">188: </a>        );
-</span><span id="189" class="codeline"><a class="number" href="#189">189: </a>
-</span><span id="190" class="codeline"><a class="number" href="#190">190: </a>        <span class="php-var">$wp_customize</span>-&gt;add_control(
-</span><span id="191" class="codeline"><a class="number" href="#191">191: </a>            <span class="php-quote">'use_featured_hero_image'</span>,
-</span><span id="192" class="codeline"><a class="number" href="#192">192: </a>            <span class="php-keyword1">array</span>(
-</span><span id="193" class="codeline"><a class="number" href="#193">193: </a>                <span class="php-quote">'label'</span>       =&gt; esc_html__( <span class="php-quote">'Use featured image'</span>, <span class="php-quote">'primer'</span> ),
-</span><span id="194" class="codeline"><a class="number" href="#194">194: </a>                <span class="php-quote">'description'</span> =&gt; esc_html__( <span class="php-quote">'Allow the featured image on the current post to override the hero image.'</span>, <span class="php-quote">'primer'</span> ),
-</span><span id="195" class="codeline"><a class="number" href="#195">195: </a>                <span class="php-quote">'section'</span>     =&gt; <span class="php-quote">'header_image'</span>,
-</span><span id="196" class="codeline"><a class="number" href="#196">196: </a>                <span class="php-quote">'priority'</span>    =&gt; <span class="php-num">5</span>,
-</span><span id="197" class="codeline"><a class="number" href="#197">197: </a>                <span class="php-quote">'type'</span>        =&gt; <span class="php-quote">'checkbox'</span>,
-</span><span id="198" class="codeline"><a class="number" href="#198">198: </a>            )
-</span><span id="199" class="codeline"><a class="number" href="#199">199: </a>        );
-</span><span id="200" class="codeline"><a class="number" href="#200">200: </a>
-</span><span id="201" class="codeline"><a class="number" href="#201">201: </a>    }
-</span><span id="202" class="codeline"><a class="number" href="#202">202: </a>
-</span><span id="203" class="codeline"><a class="number" href="#203">203: </a>    <span class="php-comment">/**
-</span></span><span id="204" class="codeline"><a class="number" href="#204">204: </a><span class="php-comment">     * Enqueue preview JS.
-</span></span><span id="205" class="codeline"><a class="number" href="#205">205: </a><span class="php-comment">     *
-</span></span><span id="206" class="codeline"><a class="number" href="#206">206: </a><span class="php-comment">     * @action customize_preview_init
-</span></span><span id="207" class="codeline"><a class="number" href="#207">207: </a><span class="php-comment">     *
-</span></span><span id="208" class="codeline"><a class="number" href="#208">208: </a><span class="php-comment">     * @since 1.0.0
-</span></span><span id="209" class="codeline"><a class="number" href="#209">209: </a><span class="php-comment">     */</span>
-</span><span id="210" class="codeline"><a class="number" href="#210">210: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> customize_preview_js() {
-</span><span id="211" class="codeline"><a class="number" href="#211">211: </a>
-</span><span id="212" class="codeline"><a class="number" href="#212">212: </a>        <span class="php-var">$suffix</span> = SCRIPT_DEBUG ? <span class="php-quote">''</span> : <span class="php-quote">'.min'</span>;
-</span><span id="213" class="codeline"><a class="number" href="#213">213: </a>
-</span><span id="214" class="codeline"><a class="number" href="#214">214: </a>        wp_enqueue_script( <span class="php-quote">'primer-customize-preview'</span>, get_template_directory_uri() . <span class="php-quote">&quot;/assets/js/admin/customizer</span><span class="php-var">{$suffix}</span><span class="php-quote">.js&quot;</span>, <span class="php-keyword1">array</span>( <span class="php-quote">'customize-preview'</span> ), PRIMER_VERSION, <span class="php-keyword1">true</span> );
-</span><span id="215" class="codeline"><a class="number" href="#215">215: </a>
-</span><span id="216" class="codeline"><a class="number" href="#216">216: </a>        wp_localize_script( <span class="php-quote">'primer-customize-preview'</span>, <span class="php-quote">'colorsSettings'</span>, <span class="php-keyword1">array</span>( <span class="php-quote">'hero_background_selector'</span> =&gt; primer_get_hero_image_selector() ) );
-</span><span id="217" class="codeline"><a class="number" href="#217">217: </a>
-</span><span id="218" class="codeline"><a class="number" href="#218">218: </a>    }
-</span><span id="219" class="codeline"><a class="number" href="#219">219: </a>
-</span><span id="220" class="codeline"><a class="number" href="#220">220: </a>    <span class="php-comment">/**
-</span></span><span id="221" class="codeline"><a class="number" href="#221">221: </a><span class="php-comment">     * Return an array of CSS rules as compacted CSS.
-</span></span><span id="222" class="codeline"><a class="number" href="#222">222: </a><span class="php-comment">     *
-</span></span><span id="223" class="codeline"><a class="number" href="#223">223: </a><span class="php-comment">     * Note: When `SCRIPT_DEBUG` is enabled, the returned CSS
-</span></span><span id="224" class="codeline"><a class="number" href="#224">224: </a><span class="php-comment">     * will be expanded instead of compacted.
-</span></span><span id="225" class="codeline"><a class="number" href="#225">225: </a><span class="php-comment">     *
-</span></span><span id="226" class="codeline"><a class="number" href="#226">226: </a><span class="php-comment">     * @since 1.0.0
-</span></span><span id="227" class="codeline"><a class="number" href="#227">227: </a><span class="php-comment">     *
-</span></span><span id="228" class="codeline"><a class="number" href="#228">228: </a><span class="php-comment">     * @param  array $rules Array of CSS rules to parse.
-</span></span><span id="229" class="codeline"><a class="number" href="#229">229: </a><span class="php-comment">     *
-</span></span><span id="230" class="codeline"><a class="number" href="#230">230: </a><span class="php-comment">     * @return string Returns parsed rules ready to be printed as inline CSS.
-</span></span><span id="231" class="codeline"><a class="number" href="#231">231: </a><span class="php-comment">     */</span>
-</span><span id="232" class="codeline"><a class="number" href="#232">232: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> parse_css_rules( <span class="php-keyword1">array</span> <span class="php-var">$rules</span> ) {
-</span><span id="233" class="codeline"><a class="number" href="#233">233: </a>
-</span><span id="234" class="codeline"><a class="number" href="#234">234: </a>        <span class="php-var">$open_format</span>  = SCRIPT_DEBUG ? <span class="php-quote">&quot;%s {\n&quot;</span>      : <span class="php-quote">'%s{'</span>;
-</span><span id="235" class="codeline"><a class="number" href="#235">235: </a>        <span class="php-var">$rule_format</span>  = SCRIPT_DEBUG ? <span class="php-quote">&quot;\t%s: %s;\n&quot;</span> : <span class="php-quote">'%s:%s;'</span>;
-</span><span id="236" class="codeline"><a class="number" href="#236">236: </a>        <span class="php-var">$close_format</span> = SCRIPT_DEBUG ? <span class="php-quote">&quot;}\n&quot;</span>         : <span class="php-quote">'}'</span>;
-</span><span id="237" class="codeline"><a class="number" href="#237">237: </a>
-</span><span id="238" class="codeline"><a class="number" href="#238">238: </a>        <span class="php-keyword2">ob_start</span>();
-</span><span id="239" class="codeline"><a class="number" href="#239">239: </a>
-</span><span id="240" class="codeline"><a class="number" href="#240">240: </a>        <span class="php-keyword1">foreach</span> ( <span class="php-var">$rules</span> <span class="php-keyword1">as</span> <span class="php-var">$rule</span> =&gt; <span class="php-var">$properties</span> ) {
-</span><span id="241" class="codeline"><a class="number" href="#241">241: </a>
-</span><span id="242" class="codeline"><a class="number" href="#242">242: </a>            <span class="php-comment">// @codingStandardsIgnoreStart</span>
-</span><span id="243" class="codeline"><a class="number" href="#243">243: </a>            <span class="php-keyword2">printf</span>(
-</span><span id="244" class="codeline"><a class="number" href="#244">244: </a>                <span class="php-var">$open_format</span>,
-</span><span id="245" class="codeline"><a class="number" href="#245">245: </a>                <span class="php-keyword2">implode</span>(
-</span><span id="246" class="codeline"><a class="number" href="#246">246: </a>                    SCRIPT_DEBUG ? <span class="php-quote">&quot;,\n&quot;</span> : <span class="php-quote">','</span>,
-</span><span id="247" class="codeline"><a class="number" href="#247">247: </a>                    <span class="php-keyword2">array_map</span>( <span class="php-quote">'trim'</span>, <span class="php-keyword2">explode</span>( <span class="php-quote">','</span>, <span class="php-var">$rule</span> ) )
-</span><span id="248" class="codeline"><a class="number" href="#248">248: </a>                )
-</span><span id="249" class="codeline"><a class="number" href="#249">249: </a>            );
-</span><span id="250" class="codeline"><a class="number" href="#250">250: </a>            <span class="php-comment">// @codingStandardsIgnoreEnd</span>
-</span><span id="251" class="codeline"><a class="number" href="#251">251: </a>
-</span><span id="252" class="codeline"><a class="number" href="#252">252: </a>            <span class="php-keyword1">foreach</span> ( <span class="php-var">$properties</span> <span class="php-keyword1">as</span> <span class="php-var">$property</span> =&gt; <span class="php-var">$value</span> ) {
-</span><span id="253" class="codeline"><a class="number" href="#253">253: </a>
-</span><span id="254" class="codeline"><a class="number" href="#254">254: </a>                <span class="php-comment">// @codingStandardsIgnoreStart</span>
-</span><span id="255" class="codeline"><a class="number" href="#255">255: </a>                <span class="php-keyword2">printf</span>( <span class="php-var">$rule_format</span>, <span class="php-var">$property</span>, <span class="php-var">$value</span> );
-</span><span id="256" class="codeline"><a class="number" href="#256">256: </a>                <span class="php-comment">// @codingStandardsIgnoreEnd</span>
-</span><span id="257" class="codeline"><a class="number" href="#257">257: </a>
-</span><span id="258" class="codeline"><a class="number" href="#258">258: </a>            }
-</span><span id="259" class="codeline"><a class="number" href="#259">259: </a>
-</span><span id="260" class="codeline"><a class="number" href="#260">260: </a>            <span class="php-keyword1">echo</span> <span class="php-var">$close_format</span>; <span class="php-comment">// xss ok.</span>
-</span><span id="261" class="codeline"><a class="number" href="#261">261: </a>
-</span><span id="262" class="codeline"><a class="number" href="#262">262: </a>        }
-</span><span id="263" class="codeline"><a class="number" href="#263">263: </a>
-</span><span id="264" class="codeline"><a class="number" href="#264">264: </a>        <span class="php-keyword1">return</span> <span class="php-keyword2">ob_get_clean</span>();
-</span><span id="265" class="codeline"><a class="number" href="#265">265: </a>
-</span><span id="266" class="codeline"><a class="number" href="#266">266: </a>    }
-</span><span id="267" class="codeline"><a class="number" href="#267">267: </a>
-</span><span id="268" class="codeline"><a class="number" href="#268">268: </a>}
-</span><span id="269" class="codeline"><a class="number" href="#269">269: </a>
-</span><span id="270" class="codeline"><a class="number" href="#270">270: </a><span class="php-keyword1">new</span> Primer_Customizer;
-</span><span id="271" class="codeline"><a class="number" href="#271">271: </a></span></code></pre>
+<pre class="lang-php line-numbers"><code><span id="1"><span class="xlang">&lt;?php</span>
+</span><span id="2"><span class="php-comment">/**
+</span></span><span id="3"><span class="php-comment"> * Customizer bootstrap.
+</span></span><span id="4"><span class="php-comment"> *
+</span></span><span id="5"><span class="php-comment"> * @class    Primer_Customizer
+</span></span><span id="6"><span class="php-comment"> * @package  Classes/Customizer
+</span></span><span id="7"><span class="php-comment"> * @category Class
+</span></span><span id="8"><span class="php-comment"> * @author   GoDaddy
+</span></span><span id="9"><span class="php-comment"> * @since    1.0.0
+</span></span><span id="10"><span class="php-comment"> */</span>
+</span><span id="11"><span class="php-keyword1">class</span> Primer_Customizer {
+</span><span id="12">
+</span><span id="13">    <span class="php-comment">/**
+</span></span><span id="14"><span class="php-comment">     * Stylesheet slug.
+</span></span><span id="15"><span class="php-comment">     *
+</span></span><span id="16"><span class="php-comment">     * @var string
+</span></span><span id="17"><span class="php-comment">     */</span>
+</span><span id="18">    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-var">$stylesheet</span>;
+</span><span id="19">
+</span><span id="20">    <span class="php-comment">/**
+</span></span><span id="21"><span class="php-comment">     * Class constructor.
+</span></span><span id="22"><span class="php-comment">     */</span>
+</span><span id="23">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct() {
+</span><span id="24">
+</span><span id="25">        self::<span class="php-var">$stylesheet</span> = get_stylesheet();
+</span><span id="26">
+</span><span id="27">        <span class="php-comment">/**
+</span></span><span id="28"><span class="php-comment">         * Load Customizer Colors functionality.
+</span></span><span id="29"><span class="php-comment">         *
+</span></span><span id="30"><span class="php-comment">         * @since 1.0.0
+</span></span><span id="31"><span class="php-comment">         */</span>
+</span><span id="32">        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/colors.php'</span>;
+</span><span id="33">
+</span><span id="34">        <span class="php-comment">/**
+</span></span><span id="35"><span class="php-comment">         * Load Customizer Fonts functionality.
+</span></span><span id="36"><span class="php-comment">         *
+</span></span><span id="37"><span class="php-comment">         * @since 1.0.0
+</span></span><span id="38"><span class="php-comment">         */</span>
+</span><span id="39">        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/fonts.php'</span>;
+</span><span id="40">
+</span><span id="41">        <span class="php-comment">/**
+</span></span><span id="42"><span class="php-comment">         * Load Customizer Layouts functionality.
+</span></span><span id="43"><span class="php-comment">         *
+</span></span><span id="44"><span class="php-comment">         * @since 1.0.0
+</span></span><span id="45"><span class="php-comment">         */</span>
+</span><span id="46">        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/layouts.php'</span>;
+</span><span id="47">
+</span><span id="48">        <span class="php-comment">/**
+</span></span><span id="49"><span class="php-comment">         * Load additional site identity options
+</span></span><span id="50"><span class="php-comment">         *
+</span></span><span id="51"><span class="php-comment">         * @since 1.5.0
+</span></span><span id="52"><span class="php-comment">         */</span>
+</span><span id="53">        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/site-identity.php'</span>;
+</span><span id="54">
+</span><span id="55">        <span class="php-comment">/**
+</span></span><span id="56"><span class="php-comment">         * Load additional static front page options
+</span></span><span id="57"><span class="php-comment">         *
+</span></span><span id="58"><span class="php-comment">         * @since 1.5.0
+</span></span><span id="59"><span class="php-comment">         */</span>
+</span><span id="60">        <span class="php-keyword1">require_once</span> get_template_directory() . <span class="php-quote">'/inc/customizer/static-front-page.php'</span>;
+</span><span id="61">
+</span><span id="62">        add_action( <span class="php-quote">'after_setup_theme'</span>,      <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'logo'</span> ) );
+</span><span id="63">        add_action( <span class="php-quote">'customize_register'</span>,     <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'selective_refresh'</span> ), <span class="php-num">11</span> );
+</span><span id="64">        add_action( <span class="php-quote">'customize_register'</span>,     <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'use_featured_hero_image'</span> ) );
+</span><span id="65">        add_action( <span class="php-quote">'customize_preview_init'</span>, <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'customize_preview_js'</span> ) );
+</span><span id="66">
+</span><span id="67">    }
+</span><span id="68">
+</span><span id="69">    <span class="php-comment">/**
+</span></span><span id="70"><span class="php-comment">     * Add custom logo support.
+</span></span><span id="71"><span class="php-comment">     *
+</span></span><span id="72"><span class="php-comment">     * @action after_setup_theme
+</span></span><span id="73"><span class="php-comment">     * @uses   [add_theme_support](https://developer.wordpress.org/reference/functions/add_theme_support/)
+</span></span><span id="74"><span class="php-comment">     *
+</span></span><span id="75"><span class="php-comment">     * @since  1.0.0
+</span></span><span id="76"><span class="php-comment">     */</span>
+</span><span id="77">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> logo() {
+</span><span id="78">
+</span><span id="79">        <span class="php-comment">/**
+</span></span><span id="80"><span class="php-comment">         * Filter the custom logo args.
+</span></span><span id="81"><span class="php-comment">         *
+</span></span><span id="82"><span class="php-comment">         * @since 1.0.0
+</span></span><span id="83"><span class="php-comment">         *
+</span></span><span id="84"><span class="php-comment">         * @var array
+</span></span><span id="85"><span class="php-comment">         */</span>
+</span><span id="86">        <span class="php-var">$args</span> = (<span class="php-keyword1">array</span>) apply_filters( <span class="php-quote">'primer_custom_logo_args'</span>,
+</span><span id="87">            <span class="php-keyword1">array</span>(
+</span><span id="88">                <span class="php-quote">'height'</span>      =&gt; <span class="php-num">100</span>,
+</span><span id="89">                <span class="php-quote">'width'</span>       =&gt; <span class="php-num">400</span>,
+</span><span id="90">                <span class="php-quote">'flex-height'</span> =&gt; <span class="php-keyword1">true</span>,
+</span><span id="91">                <span class="php-quote">'flex-width'</span>  =&gt; <span class="php-keyword1">true</span>,
+</span><span id="92">                <span class="php-quote">'header-text'</span> =&gt; <span class="php-keyword1">array</span>( <span class="php-quote">'site-title'</span>, <span class="php-quote">'site-description'</span> ),
+</span><span id="93">            )
+</span><span id="94">        );
+</span><span id="95">
+</span><span id="96">        add_theme_support( <span class="php-quote">'custom-logo'</span>, <span class="php-var">$args</span> );
+</span><span id="97">
+</span><span id="98">    }
+</span><span id="99">
+</span><span id="100">    <span class="php-comment">/**
+</span></span><span id="101"><span class="php-comment">     * Adds postMessage support for site title and description for the Customizer.
+</span></span><span id="102"><span class="php-comment">     *
+</span></span><span id="103"><span class="php-comment">     * @action customize_register
+</span></span><span id="104"><span class="php-comment">     * @since  1.0.0
+</span></span><span id="105"><span class="php-comment">     *
+</span></span><span id="106"><span class="php-comment">     * @uses   $this-&gt;blogname()
+</span></span><span id="107"><span class="php-comment">     * @uses   $this-&gt;blogdescription()
+</span></span><span id="108"><span class="php-comment">     *
+</span></span><span id="109"><span class="php-comment">     * @see    WP_Customize_Manager
+</span></span><span id="110"><span class="php-comment">     *
+</span></span><span id="111"><span class="php-comment">     * @param WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
+</span></span><span id="112"><span class="php-comment">     */</span>
+</span><span id="113">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> selective_refresh( WP_Customize_Manager <span class="php-var">$wp_customize</span> ) {
+</span><span id="114">
+</span><span id="115">        <span class="php-var">$wp_customize</span>-&gt;get_setting( <span class="php-quote">'blogname'</span> )-&gt;transport         = <span class="php-quote">'postMessage'</span>;
+</span><span id="116">        <span class="php-var">$wp_customize</span>-&gt;get_setting( <span class="php-quote">'blogdescription'</span> )-&gt;transport  = <span class="php-quote">'postMessage'</span>;
+</span><span id="117">        <span class="php-var">$wp_customize</span>-&gt;get_setting( <span class="php-quote">'header_textcolor'</span> )-&gt;transport = <span class="php-quote">'postMessage'</span>;
+</span><span id="118">
+</span><span id="119">        <span class="php-keyword1">if</span> ( ! <span class="php-keyword1">isset</span>( <span class="php-var">$wp_customize</span>-&gt;selective_refresh ) ) {
+</span><span id="120">
+</span><span id="121">            <span class="php-keyword1">return</span>;
+</span><span id="122">
+</span><span id="123">        }
+</span><span id="124">
+</span><span id="125">        <span class="php-var">$wp_customize</span>-&gt;selective_refresh-&gt;add_partial(
+</span><span id="126">            <span class="php-quote">'blogname'</span>,
+</span><span id="127">            <span class="php-keyword1">array</span>(
+</span><span id="128">                <span class="php-quote">'selector'</span>            =&gt; <span class="php-quote">'.site-title a'</span>,
+</span><span id="129">                <span class="php-quote">'container_inclusive'</span> =&gt; <span class="php-keyword1">false</span>,
+</span><span id="130">                <span class="php-quote">'render_callback'</span>     =&gt; <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'blogname'</span> ),
+</span><span id="131">            )
+</span><span id="132">        );
+</span><span id="133">
+</span><span id="134">        <span class="php-var">$wp_customize</span>-&gt;selective_refresh-&gt;add_partial(
+</span><span id="135">            <span class="php-quote">'blogdescription'</span>,
+</span><span id="136">            <span class="php-keyword1">array</span>(
+</span><span id="137">                <span class="php-quote">'selector'</span>            =&gt; <span class="php-quote">'.site-description'</span>,
+</span><span id="138">                <span class="php-quote">'container_inclusive'</span> =&gt; <span class="php-keyword1">false</span>,
+</span><span id="139">                <span class="php-quote">'render_callback'</span>     =&gt; <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'blogdescription'</span> ),
+</span><span id="140">            )
+</span><span id="141">        );
+</span><span id="142">
+</span><span id="143">    }
+</span><span id="144">
+</span><span id="145">    <span class="php-comment">/**
+</span></span><span id="146"><span class="php-comment">     * Display the blog name.
+</span></span><span id="147"><span class="php-comment">     *
+</span></span><span id="148"><span class="php-comment">     * @since 1.0.0
+</span></span><span id="149"><span class="php-comment">     *
+</span></span><span id="150"><span class="php-comment">     * @see   $this-&gt;selective_refresh()
+</span></span><span id="151"><span class="php-comment">     */</span>
+</span><span id="152">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> blogname() {
+</span><span id="153">
+</span><span id="154">        bloginfo( <span class="php-quote">'name'</span> );
+</span><span id="155">
+</span><span id="156">    }
+</span><span id="157">
+</span><span id="158">    <span class="php-comment">/**
+</span></span><span id="159"><span class="php-comment">     * Display the blog description.
+</span></span><span id="160"><span class="php-comment">     *
+</span></span><span id="161"><span class="php-comment">     * @since 1.0.0
+</span></span><span id="162"><span class="php-comment">     * @see   $this-&gt;selective_refresh()
+</span></span><span id="163"><span class="php-comment">     */</span>
+</span><span id="164">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> blogdescription() {
+</span><span id="165">
+</span><span id="166">        bloginfo( <span class="php-quote">'description'</span> );
+</span><span id="167">
+</span><span id="168">    }
+</span><span id="169">
+</span><span id="170">    <span class="php-comment">/**
+</span></span><span id="171"><span class="php-comment">     * Add control to use featured images as the hero image.
+</span></span><span id="172"><span class="php-comment">     *
+</span></span><span id="173"><span class="php-comment">     * @action customize_register
+</span></span><span id="174"><span class="php-comment">     * @see    WP_Customize_Manager
+</span></span><span id="175"><span class="php-comment">     *
+</span></span><span id="176"><span class="php-comment">     * @since  1.0.0
+</span></span><span id="177"><span class="php-comment">     *
+</span></span><span id="178"><span class="php-comment">     * @param WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
+</span></span><span id="179"><span class="php-comment">     */</span>
+</span><span id="180">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> use_featured_hero_image( WP_Customize_Manager <span class="php-var">$wp_customize</span> ) {
+</span><span id="181">
+</span><span id="182">        <span class="php-var">$wp_customize</span>-&gt;add_setting(
+</span><span id="183">            <span class="php-quote">'use_featured_hero_image'</span>,
+</span><span id="184">            <span class="php-keyword1">array</span>(
+</span><span id="185">                <span class="php-quote">'default'</span>           =&gt; <span class="php-num">1</span>,
+</span><span id="186">                <span class="php-quote">'sanitize_callback'</span> =&gt; <span class="php-quote">'absint'</span>,
+</span><span id="187">            )
+</span><span id="188">        );
+</span><span id="189">
+</span><span id="190">        <span class="php-var">$wp_customize</span>-&gt;add_control(
+</span><span id="191">            <span class="php-quote">'use_featured_hero_image'</span>,
+</span><span id="192">            <span class="php-keyword1">array</span>(
+</span><span id="193">                <span class="php-quote">'label'</span>       =&gt; esc_html__( <span class="php-quote">'Use featured image'</span>, <span class="php-quote">'primer'</span> ),
+</span><span id="194">                <span class="php-quote">'description'</span> =&gt; esc_html__( <span class="php-quote">'Allow the featured image on the current post to override the hero image.'</span>, <span class="php-quote">'primer'</span> ),
+</span><span id="195">                <span class="php-quote">'section'</span>     =&gt; <span class="php-quote">'header_image'</span>,
+</span><span id="196">                <span class="php-quote">'priority'</span>    =&gt; <span class="php-num">5</span>,
+</span><span id="197">                <span class="php-quote">'type'</span>        =&gt; <span class="php-quote">'checkbox'</span>,
+</span><span id="198">            )
+</span><span id="199">        );
+</span><span id="200">
+</span><span id="201">    }
+</span><span id="202">
+</span><span id="203">    <span class="php-comment">/**
+</span></span><span id="204"><span class="php-comment">     * Enqueue preview JS.
+</span></span><span id="205"><span class="php-comment">     *
+</span></span><span id="206"><span class="php-comment">     * @action customize_preview_init
+</span></span><span id="207"><span class="php-comment">     *
+</span></span><span id="208"><span class="php-comment">     * @since 1.0.0
+</span></span><span id="209"><span class="php-comment">     */</span>
+</span><span id="210">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> customize_preview_js() {
+</span><span id="211">
+</span><span id="212">        <span class="php-var">$suffix</span> = SCRIPT_DEBUG ? <span class="php-quote">''</span> : <span class="php-quote">'.min'</span>;
+</span><span id="213">
+</span><span id="214">        wp_enqueue_script( <span class="php-quote">'primer-customize-preview'</span>, get_template_directory_uri() . <span class="php-quote">&quot;/assets/js/admin/customizer</span><span class="php-var">{$suffix}</span><span class="php-quote">.js&quot;</span>, <span class="php-keyword1">array</span>( <span class="php-quote">'customize-preview'</span> ), PRIMER_VERSION, <span class="php-keyword1">true</span> );
+</span><span id="215">
+</span><span id="216">        wp_localize_script( <span class="php-quote">'primer-customize-preview'</span>, <span class="php-quote">'colorsSettings'</span>, <span class="php-keyword1">array</span>( <span class="php-quote">'hero_background_selector'</span> =&gt; primer_get_hero_image_selector() ) );
+</span><span id="217">
+</span><span id="218">    }
+</span><span id="219">
+</span><span id="220">    <span class="php-comment">/**
+</span></span><span id="221"><span class="php-comment">     * Return an array of CSS rules as compacted CSS.
+</span></span><span id="222"><span class="php-comment">     *
+</span></span><span id="223"><span class="php-comment">     * Note: When `SCRIPT_DEBUG` is enabled, the returned CSS
+</span></span><span id="224"><span class="php-comment">     * will be expanded instead of compacted.
+</span></span><span id="225"><span class="php-comment">     *
+</span></span><span id="226"><span class="php-comment">     * @since 1.0.0
+</span></span><span id="227"><span class="php-comment">     *
+</span></span><span id="228"><span class="php-comment">     * @param  array $rules Array of CSS rules to parse.
+</span></span><span id="229"><span class="php-comment">     *
+</span></span><span id="230"><span class="php-comment">     * @return string Returns parsed rules ready to be printed as inline CSS.
+</span></span><span id="231"><span class="php-comment">     */</span>
+</span><span id="232">    <span class="php-keyword1">public</span> <span class="php-keyword1">static</span> <span class="php-keyword1">function</span> parse_css_rules( <span class="php-keyword1">array</span> <span class="php-var">$rules</span> ) {
+</span><span id="233">
+</span><span id="234">        <span class="php-var">$open_format</span>  = SCRIPT_DEBUG ? <span class="php-quote">&quot;%s {\n&quot;</span>      : <span class="php-quote">'%s{'</span>;
+</span><span id="235">        <span class="php-var">$rule_format</span>  = SCRIPT_DEBUG ? <span class="php-quote">&quot;\t%s: %s;\n&quot;</span> : <span class="php-quote">'%s:%s;'</span>;
+</span><span id="236">        <span class="php-var">$close_format</span> = SCRIPT_DEBUG ? <span class="php-quote">&quot;}\n&quot;</span>         : <span class="php-quote">'}'</span>;
+</span><span id="237">
+</span><span id="238">        <span class="php-keyword2">ob_start</span>();
+</span><span id="239">
+</span><span id="240">        <span class="php-keyword1">foreach</span> ( <span class="php-var">$rules</span> <span class="php-keyword1">as</span> <span class="php-var">$rule</span> =&gt; <span class="php-var">$properties</span> ) {
+</span><span id="241">
+</span><span id="242">            <span class="php-comment">// @codingStandardsIgnoreStart</span>
+</span><span id="243">            <span class="php-keyword2">printf</span>(
+</span><span id="244">                <span class="php-var">$open_format</span>,
+</span><span id="245">                <span class="php-keyword2">implode</span>(
+</span><span id="246">                    SCRIPT_DEBUG ? <span class="php-quote">&quot;,\n&quot;</span> : <span class="php-quote">','</span>,
+</span><span id="247">                    <span class="php-keyword2">array_map</span>( <span class="php-quote">'trim'</span>, <span class="php-keyword2">explode</span>( <span class="php-quote">','</span>, <span class="php-var">$rule</span> ) )
+</span><span id="248">                )
+</span><span id="249">            );
+</span><span id="250">            <span class="php-comment">// @codingStandardsIgnoreEnd</span>
+</span><span id="251">
+</span><span id="252">            <span class="php-keyword1">foreach</span> ( <span class="php-var">$properties</span> <span class="php-keyword1">as</span> <span class="php-var">$property</span> =&gt; <span class="php-var">$value</span> ) {
+</span><span id="253">
+</span><span id="254">                <span class="php-comment">// @codingStandardsIgnoreStart</span>
+</span><span id="255">                <span class="php-keyword2">printf</span>( <span class="php-var">$rule_format</span>, <span class="php-var">$property</span>, <span class="php-var">$value</span> );
+</span><span id="256">                <span class="php-comment">// @codingStandardsIgnoreEnd</span>
+</span><span id="257">
+</span><span id="258">            }
+</span><span id="259">
+</span><span id="260">            <span class="php-keyword1">echo</span> <span class="php-var">$close_format</span>; <span class="php-comment">// xss ok.</span>
+</span><span id="261">
+</span><span id="262">        }
+</span><span id="263">
+</span><span id="264">        <span class="php-keyword1">return</span> <span class="php-keyword2">ob_get_clean</span>();
+</span><span id="265">
+</span><span id="266">    }
+</span><span id="267">
+</span><span id="268">}
+</span><span id="269">
+</span><span id="270"><span class="php-keyword1">new</span> Primer_Customizer;
+</span><span id="271"></span></code></pre>
 			</div>
 		</div>
 

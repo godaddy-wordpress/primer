@@ -118,7 +118,7 @@
                             <h2>
                                 <a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html">
                                     <span class="glyph_range icon-submenu icon-submenu-cook">B</span>
-                                    Primer Theme v1.4.1 <strong>Documentation</strong>
+                                    Primer Theme v1.8.1 <strong>Documentation</strong>
                                 </a>
                             </h2>
                         </div>
@@ -176,10 +176,10 @@
 
 <div class="container page-container"><div id="improve-slideout">
         <i class="fa fa-pencil icon-improve"></i>
-        <a href="https://github.com/godaddy/wp-primer-theme/edit//en/changelog.rst" target="_blank">
+        <a href="https://github.com/godaddy/wp-primer-theme/edit/develop/.dev/docs/sphinx/src/changelog.md" target="_blank">
             <div id="improve-slideout-inner"><h6>Improve This Doc <i class="fa fa-github git-improve"></i></h6></div>
         </a>
-    </div><a id="back-to-contents" href="#page-contents"><i class="fa fa-arrow-circle-up icon-improve" title="Back to Contents"></i></a>
+    </div><a id="back-to-contents" href="#page-contents"><i class="fa fa-arrow-circle-up icon-improve" title="Back to Top"></i></a>
 
     
     <div class="row">
@@ -188,29 +188,94 @@
   <div class="section" id="changelog">
 <span id="changelog"></span><h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="">
-<span id="id1"></span><h2>1.4.2<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<span id="id1"></span><h2>1.8.1<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fix: Prevent customizer title &amp; tagline colors from updating when they are hidden. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>Fix: Update translation files so translations load correctly. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>Fix: Remove HTML markup in search results/author archive page titles. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+</ul>
+</div>
+<div class="section" id="">
+<span id="id2"></span><h2>1.8.0<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>New: Conditionally wrap site titles to improve SEO. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a>, <a class="reference external" href="https://github.com/fjarrett">fjarrett</a></li>
+<li>New: Added <code class="docutils literal"><span class="pre">sr_RS</span></code> (Serbian) translation. &#64;props <a class="reference external" href="https://github.com/lukapaunovic">lukapaunovic</a></li>
+<li>Fix: Remove reference to a missing <code class="docutils literal"><span class="pre">search.svg</span></code> icon. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>Fix: Adjust site title width to prevent overlapping with the mobile menu button. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>Fix: Conditionally load video header for WordPress 4.7 or later. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a>, <a class="reference external" href="https://github.com/fjarrett">fjarrett</a></li>
+<li>Fix: Added a missing <code class="docutils literal"><span class="pre">&#64;version</span></code> docblock to the WooCommerce pagination template to prevent out of date template notices. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>Fix: Backward compatibility issue when using <a class="reference external" href="https://wordpress.org/plugins/beaver-builder-lite-version/">Beaver Builder</a> on PHP 5.3. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a>, <a class="reference external" href="https://github.com/fjarrett">fjarrett</a></li>
+<li>Fix: Fixed the tertiary sidebar visibility. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a>, <a class="reference external" href="https://github.com/fjarrett">fjarrett</a></li>
+</ul>
+</div>
+<div class="section" id="">
+<span id="id3"></span><h2>1.7.0<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>New: Enabled video headers and introduced styles to accommodate full width video headers. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>New: Introduced new <code class="docutils literal"><span class="pre">primer_pre_hero</span></code> action. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>New: Added aria labels on the &#8216;Continue Reading&#8217; links for <code class="docutils literal"><span class="pre">a11y</span></code> improvements. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>New: Introduced <code class="docutils literal"><span class="pre">primer_wc_product_header_image</span></code> filter. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>Tweak: Improved WooCommerce styles. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>Tweak: Tweak i18n functions, added translator comments. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>Tweak: Introduced Ninja Form response message styles. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>Fix: Ensure color schemes work with custom Primer child themes. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>Fix: Tweaked the WooCommerce product template title. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>Fix: Prevent WooCommerce single product images from hijacking the header image. &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+</ul>
+</div>
+<div class="section" id="">
+<span id="id4"></span><h2>1.6.0<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>New: Hero Text widget designed for your site&#8217;s front page &#64;props <a class="reference external" href="https://github.com/jonathanbardo">jonathanbardo</a>, <a class="reference external" href="https://github.com/fjarrett">fjarrett</a></li>
+<li>Tweak: Improved posts pagination design based on core pagination &#64;props <a class="reference external" href="https://github.com/fjarrett">fjarrett</a>, <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>Tweak: The <code class="docutils literal"><span class="pre">primer_paging_nav()</span></code> function has been deprecated in favor of <code class="docutils literal"><span class="pre">primer_pagination()</span></code> &#64;props <a class="reference external" href="https://github.com/fjarrett">fjarrett</a>, <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>Tweak: The WooCommerce template overrides directory has been moved to <code class="docutils literal"><span class="pre">templates/woocommerce/</span></code> &#64;props <a class="reference external" href="https://github.com/fjarrett">fjarrett</a></li>
+<li>Fix: Text overlap on WooCommerce Add to Cart buttons in certain languages &#64;props <a class="reference external" href="https://github.com/fjarrett">fjarrett</a>, <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>Fix: WooCommerce menu item appearing on older child themes without styles to support it &#64;props <a class="reference external" href="https://github.com/fjarrett">fjarrett</a></li>
+</ul>
+</div>
+<div class="section" id="">
+<span id="id5"></span><h2>1.5.1<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fix: Category and tag list display on posts &#64;props <a class="reference external" href="https://github.com/fjarrett">fjarrett</a></li>
+</ul>
+</div>
+<div class="section" id="">
+<span id="id6"></span><h2>1.5.0<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>New: Full compatibility with the WooCommerce plugin &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a>, <a class="reference external" href="https://github.com/fjarrett">fjarrett</a></li>
+<li>New: Add Front Page Title setting to the Static Front Page section of the Customizer &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>New: Added Footer Copyright Text setting to the Site Identity section of the Customizer &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>New: Added Author Credit toggle to the Site Identity section of the Customizer &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>New: <a class="reference external" href="https://godaddy.github.io/wp-primer-theme/">Developer documentation!</a> &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>Tweak: Added <code class="docutils literal"><span class="pre">nofollow</span></code> attribute to theme author link in the footer &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>Tweak: Use core post navigation function &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+<li>Fix: Display glitch when last main menu item is a submenu &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
+</ul>
+</div>
+<div class="section" id="">
+<span id="id7"></span><h2>1.4.2<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Added word-wrap where text was overflowing &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
 <li>Updated translations &#64;props <a class="reference external" href="https://github.com/jonathanbardo">jonathanbardo</a></li>
 <li>Added font-family support for WooCommerce buttons &#64;props <a class="reference external" href="https://github.com/fjarrett">fjarret</a></li>
-<li>Introduced &#8216;Author Credit&#8217; toggle in the customizer &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a></li>
 </ul>
 </div>
 <div class="section" id="">
-<span id="id2"></span><h2>1.4.1<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<span id="id8"></span><h2>1.4.1<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Fixed hero widget font sizes &#64;props <a class="reference external" href="https://github.com/jonathanbardo">jonathanbardo</a></li>
 </ul>
 </div>
 <div class="section" id="">
-<span id="id3"></span><h2>1.4.0<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<span id="id9"></span><h2>1.4.0<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Fixed comment meta template &#64;props <a class="reference external" href="https://github.com/wpexplorer">wpexplorer</a></li>
 <li>Expose color schemes array &#64;props <a class="reference external" href="https://github.com/EvanHerman">evanherman</a>, <a class="reference external" href="https://github.com/jonathanbardo">jonathanbardo</a></li>
 </ul>
 </div>
 <div class="section" id="">
-<span id="id4"></span><h2>1.3.0<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<span id="id10"></span><h2>1.3.0<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Initial release.</li>
 </ul>
@@ -290,13 +355,7 @@
             <div class="col-sm-12 col-md-3">
                 <div class="footer-widget t-footer">
                     <div class="col-md-12">
-                        <a href="https://www.openhub.net/p/wp-primer-theme">
-                            <img src="_static/open-hub.png">
-                        </a>
-                    </div>
-										<br /><br />
-										<div class="col-md-12">
-                        <a href="https://www.godaddy.com">
+                        <a href="https://www.godaddy.com/">
                             <img src="_static/godaddy-logo-white.png">
                         </a>
                     </div>
@@ -357,9 +416,9 @@
         <div class="row">
             <div class="col-md-12 text-center mt30">
                 <p class="copyright">
-                            &copy; Copyright 2017, GoDaddy, Inc.
-                        Last updated on Feb 07, 2017.
-                        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.4.5.
+                            &copy; Copyright 2017 GoDaddy Operating Company, LLC. Primer is distributed under the terms of the GNU GPL.
+                        Last updated on Dec 13, 2017.
+                        Created using <a href="http://www.sphinx-doc.org/">Sphinx</a> 1.4.5.
                 </p>
             </div>
         </div>
@@ -370,16 +429,5 @@
 
 
 </div>
-
-<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-743287-3']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-</script>
   </body>
 </html>

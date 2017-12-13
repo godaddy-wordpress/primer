@@ -1,0 +1,475 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Conditionally Displaying Menus</title>
+    <link href="../../_static/favicon.png" type="image/png" rel="icon" />
+
+    
+    <link rel="stylesheet" href="../../_static/css/app.css" type="text/css" />
+    
+    <script type="text/javascript" src="../../_static/app.js"></script>
+
+    
+
+    <link rel="search" type="application/opensearchdescription+xml" title="Search within Primer Theme Documentation 1.x documentation" href="../../_static/opensearchdescription-book-3-x.xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="top" title="Primer Theme Documentation 1.x documentation" href="../../index.html" />
+    <link rel="up" title="Tutorials &amp; Examples" href="../../how-to.html" />
+    <link rel="next" title="Contributing" href="contributing.html" />
+    <link rel="prev" title="How to create a must-use plugin" href="mu-plugin.html" />
+
+    <script type="text/javascript">
+    window.lang = "en";
+    </script>
+  </head>
+  <body>
+
+<div id="container">
+    
+    <header class="nav-down">
+        <div class="container-fluid hidden-xs hidden-sm">
+            <div class="row">
+                <div class="col-sm-3 col-md-3">
+                    <a class="logo-godaddy" href="https://godaddy.github.io/wp-primer-theme/intro.html">
+                        <img src="../../_static/godaddy-logo.png" alt="GoDaddy" />
+                    </a>
+                </div>
+
+                <div class="col-sm-9 col-md-9">
+                    <nav class="navbar-right">
+                        <ul class="menu">
+                            <li class="first">
+                                <a href="#"><i class="fa fa-menu fa-chevron-down"></i>Documentation</a>
+                                <ul class="submenu">
+                                    
+<li><a href="https://godaddy.github.io/wp-primer-theme/intro.html"><i class="fa fa-menu fa-chevron-right"></i>Wiki</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html"><i class="fa fa-menu fa-chevron-right"></i>Documentation</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/how-to.html"><i class="fa fa-menu fa-chevron-right"></i>Tutorials</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/license.html"><i class="fa fa-menu fa-chevron-right"></i>License</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/changelog.html"><i class="fa fa-menu fa-chevron-right"></i>Changelog</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="contributors.html">Contributors</a></li>
+
+                            <li>
+                                <a href="#"><i class="fa fa-menu fa-chevron-down"></i>Community</a>
+                                <div class="megamenu full">
+                                    <div class="row">
+                                        <div class="col-6 pl30">
+                                            <ul class="megamenu-list">
+                                                
+<li class="menu-title"><i class="fa fa-menu-title fa-users"></i>Community</li>
+
+<li><a href="https://aboutus.godaddy.net/about-us/default.aspx"><i class="fa fa-menu fa-chevron-right"></i>About Us</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-6 pl30">
+                                            <ul class="megamenu-list">
+                                                
+<li class="menu-title"><i class="fa fa-menu-title fa-comments-o"></i>Help &amp; Support</li>
+
+<li><a href="https://github.com/godaddy/wp-primer-theme/issues"><i class="fa fa-menu fa-github"></i>GitHub</a></li>
+<li><a href="https://wordpress.org/support/theme/primer"><i class="fa fa-menu fa-wordpress"></i>WordPress</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="container-fluid hidden-md hidden-lg">
+            <div class="row">
+                <div class="col-sm-6 col-xs-6">
+                    <a class="logo-godaddy" href="https://godaddy.github.io/wp-primer-theme/intro.html">
+                        <img src="../../_static/godaddy-logo.png" alt="GoDaddy" />
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-xs-6">
+                    <div class="navbar-right">
+                        <button id="btn-menu" class="btn-menu" data-toggle="modal" data-target="#modal">
+                            <i class="fa fa-bars toggle-modal"></i>
+                        </button>
+                    </div>
+                    <div id="wrap">
+                        <form class="search" action="../../search.html" method="get">
+                            <input name="q" type="search" placeholder="What are you looking for?">
+                            <input id="search_submit" value="Search" type="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <section id="nav-cook" class="hidden-xs hidden-sm">
+            <div class="container-fluid ">
+                <div class="row ">
+                    <div class="col-md-12 back-book">
+                        <div class="col-md-5 text-center t-cook-nav p0 hidden-sm hidden-xs">
+                            <h2>
+                                <a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html">
+                                    <span class="glyph_range icon-submenu icon-submenu-cook">B</span>
+                                    Primer Theme v1.8.1 <strong>Documentation</strong>
+                                </a>
+                            </h2>
+                        </div>
+
+                        <div class="col-md-4 pull-right hidden-sm">
+                            <form class="search" action="../../search.html" method="get">
+                                <input type="hidden" name="check_keywords" value="yes" />
+                                <input type="hidden" name="area" value="default" />
+
+                                <div class="col-md-10 p0">
+                                    <input class="form-control form-cook" autocomplete="off" type="search" name="q" size="18" placeholder='Documentation Search' />
+                                </div>
+                                <div class="col-md-2 p0 search-cook">
+                                    <button type="submit">
+                                        <span class="glyph_range icon-submenu icon-submenu-cook">A</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    
+    <section class="nav-btn visible-sm visible-xs">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xs-6 text-center">
+                    <button id="btn-nav" class="btn btn-b btn-nav" data-toggle="modal" data-target="#modal"><strong>Nav</strong></button>
+                </div>
+
+                <div class="col-sm-6 col-xs-6 text-center">
+                    <button id="btn-toc" class="btn btn-b btn-nav" data-toggle="modal" data-target="#modal"><strong>Table of Contents</strong></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <div id="modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-header">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title-documentation" id="modal-header"></h4>
+                </div>
+                <div class="modal-body"></div>
+            </div>
+        </div>
+    </div>
+
+<div class="container page-container"><div id="improve-slideout">
+        <i class="fa fa-pencil icon-improve"></i>
+        <a href="https://github.com/godaddy/wp-primer-theme/edit/develop/.dev/docs/sphinx/src/tutorials-and-examples/tutorials/conditional-menus.md" target="_blank">
+            <div id="improve-slideout-inner"><h6>Improve This Doc <i class="fa fa-github git-improve"></i></h6></div>
+        </a>
+    </div><a id="back-to-contents" href="#page-contents"><i class="fa fa-arrow-circle-up icon-improve" title="Back to Top"></i></a>
+
+    
+    <div class="row">
+        <div class="col-sm-12 col-md-9 col-md-push-3 space-left push-off"><div class="page-contents col-sm-5">
+                <h3>Page Contents</h3>
+                <ul>
+<li><a class="reference internal" href="#">Conditionally Displaying Menus</a><ul>
+<li><a class="reference internal" href="#creating-the-menus">Creating the Menus</a></li>
+<li><a class="reference internal" href="#create-the-mu-plugin">Create the MU Plugin</a></li>
+<li><a class="reference internal" href="#the-code">The Code</a></li>
+<li><a class="reference internal" href="#additional-notes">Additional Notes</a></li>
+</ul>
+</li>
+</ul>
+
+            </div><div class="document-body">
+            
+  <div class="section" id="conditionally-displaying-menus">
+<span id="conditionally-displaying-menus"></span><h1>Conditionally Displaying Menus<a class="headerlink" href="#conditionally-displaying-menus" title="Permalink to this headline">¶</a></h1>
+<p>On some sites you may want to display a different navigation when a user is logged in vs not logged in. For logged in users this can be a navigation with an &#8216;Account&#8217; link, and for non-logged in users this can be a navigation with a &#8216;Login&#8217; link.</p>
+<div class="section" id="creating-the-menus">
+<span id="creating-the-menus"></span><h2>Creating the Menus<a class="headerlink" href="#creating-the-menus" title="Permalink to this headline">¶</a></h2>
+<p>You&#8217;ll first want to create the menus that you want to display to each user. You can name them accordingly so you know which menu is displayed to which users. (eg: Logged In Menu, Logged Out Menu etc.).</p>
+<p>As you create each menu, keep note of the menu ID in the URL. You will see something along the lines of <code class="docutils literal"><span class="pre">menu=4</span></code> where <code class="docutils literal"><span class="pre">4</span></code> is the menu ID for the current menu you are editing.</p>
+<p>The logged out menu ID is not as important as this is the default menu and not something we&#8217;ll have to reference. However, the other IDs are important in the next steps, so keep them handy or remember how to reference them.</p>
+</div>
+<div class="section" id="create-the-mu-plugin">
+<span id="create-the-mu-plugin"></span><h2>Create the MU Plugin<a class="headerlink" href="#create-the-mu-plugin" title="Permalink to this headline">¶</a></h2>
+<p>Next you&#8217;ll want to go through the steps found in our <a class="reference external" href="/mu-plugin.html">How to create a must-use plugin</a> tutorial.</p>
+<p>Once you have your must use plugin setup, you can continue to the code snippet below.</p>
+</div>
+<div class="section" id="the-code">
+<span id="the-code"></span><h2>The Code<a class="headerlink" href="#the-code" title="Permalink to this headline">¶</a></h2>
+<p>The code snippet found below will alter the menu for logged in users. Non-logged in users will still see the default menu you have setup in your header.</p>
+<p>The ID inside of the code snippet below should match the ID of the menu you want to display to logged in users. This is the ID that we took note of in the first step. If you need help retrieving the menu IDs, re-read through the steps above.</p>
+<p>You&#8217;ll want to swap out the menu ID (that you took note of before) in the code snippet below. Swap out <code class="docutils literal"><span class="pre">4</span></code> with the ID of your Logged In Menu.</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">/**</span>
+<span class="x"> * Display a custom menu for logged in users.</span>
+<span class="x"> *</span>
+<span class="x"> * @return mixed Markup for the nav menu.</span>
+<span class="x"> */</span>
+<span class="x">function primer_logged_in_nav_menu() {</span>
+
+<span class="x">    if ( ! is_user_logged_in() ) {</span>
+
+<span class="x">        return;</span>
+
+<span class="x">    }</span>
+
+<span class="x">    remove_action( &#39;primer_site_navigation&#39;, &#39;primer_add_primary_menu&#39; );</span>
+
+<span class="x">    add_action( &#39;primer_site_navigation&#39;, function() {</span>
+<span class="x">        wp_nav_menu(</span>
+<span class="x">            array(</span>
+<span class="x">                &#39;menu&#39;   =&gt; 4,</span>
+<span class="x">                &#39;walker&#39; =&gt; new Primer_Walker_Nav_Menu,</span>
+<span class="x">            )</span>
+<span class="x">        );</span>
+<span class="x">    } );</span>
+
+<span class="x">}</span>
+<span class="x">add_action( &#39;template_redirect&#39;, &#39;primer_logged_in_nav&#39; );</span>
+</pre></div>
+</div>
+<p>Save the code in the MU plugin and take a look at your site when logged in vs not. You should see your two different menus displaying based on the logged in state.</p>
+</div>
+<div class="section" id="additional-notes">
+<span id="additional-notes"></span><h2>Additional Notes<a class="headerlink" href="#additional-notes" title="Permalink to this headline">¶</a></h2>
+<p>It&#8217;s important to note that the code snippet above is not limited to displaying menus for logged in users. You can alter the code snippet above to display different menus for different user roles or capabilities.</p>
+<p>If you wanted to display different menus for administrators and editors you can do so in the following manner:</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">/**</span>
+<span class="x"> * Display a custom menu for logged in users.</span>
+<span class="x"> *</span>
+<span class="x"> * @return mixed Markup for the nav menu.</span>
+<span class="x"> */</span>
+<span class="x">function primer_logged_in_nav_menu() {</span>
+
+<span class="x">    if ( ! is_user_logged_in() ) {</span>
+
+<span class="x">        return;</span>
+
+<span class="x">    }</span>
+
+<span class="x">    remove_action( &#39;primer_site_navigation&#39;, &#39;primer_add_primary_menu&#39; );</span>
+
+<span class="x">    // Administrators</span>
+<span class="x">    if ( current_user_can( &#39;manage_options&#39; ) ) {</span>
+
+<span class="x">        add_action( &#39;primer_site_navigation&#39;, function() {</span>
+<span class="x">            wp_nav_menu(</span>
+<span class="x">                array(</span>
+<span class="x">                    &#39;menu&#39;   =&gt; 4,</span>
+<span class="x">                    &#39;walker&#39; =&gt; new Primer_Walker_Nav_Menu,</span>
+<span class="x">                )</span>
+<span class="x">            );</span>
+<span class="x">        } );</span>
+
+<span class="x">        return;</span>
+
+<span class="x">    }</span>
+
+<span class="x">    // Editors</span>
+<span class="x">    if ( current_user_can( &#39;edit_posts&#39; ) ) {</span>
+
+<span class="x">        add_action( &#39;primer_site_navigation&#39;, function() {</span>
+<span class="x">            wp_nav_menu(</span>
+<span class="x">                array(</span>
+<span class="x">                    &#39;menu&#39;   =&gt; 5,</span>
+<span class="x">                    &#39;walker&#39; =&gt; new Primer_Walker_Nav_Menu,</span>
+<span class="x">                )</span>
+<span class="x">            );</span>
+<span class="x">        } );</span>
+
+<span class="x">        return;</span>
+
+<span class="x">    }</span>
+
+<span class="x">    // All other users</span>
+<span class="x">    add_action( &#39;primer_site_navigation&#39;, function() {</span>
+<span class="x">        wp_nav_menu(</span>
+<span class="x">            array(</span>
+<span class="x">                &#39;menu&#39;   =&gt; 7,</span>
+<span class="x">                &#39;walker&#39; =&gt; new Primer_Walker_Nav_Menu,</span>
+<span class="x">            )</span>
+<span class="x">        );</span>
+<span class="x">    } );</span>
+
+<span class="x">}</span>
+<span class="x">add_action( &#39;template_redirect&#39;, &#39;primer_logged_in_nav&#39; );</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+            </div>
+        </div>
+
+        
+        <div class="col-md-3 col-md-pull-9 pull-off hidden-xs hidden-sm" lang="en">
+            <aside class="sidebar">
+                <div class="mb30 row">
+<div id="sidebar-navigation" class="hidden-xs">
+	<p class="caption"><span class="caption-text">Overview</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../recommended-plugins.html">Recommended Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../how-to.html">Tutorials &amp; Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="mu-plugin.html">How to create a must-use plugin</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Conditionally Displaying Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acceptance-tests.html">Acceptance Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html">Debugging Primer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="infinite-scroll-jetpack.html">Infinite Scroll - Jetpack</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../child-themes.html">Official Child Themes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+
+</div>
+
+                </div>
+            </aside>
+            <aside class="sidebar">
+                <div class="mb30 row">
+                </div>
+            </aside>
+        </div>
+    </div>
+</div>
+
+<section id="socials" class="back-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-5  social text-center">
+                <div class="col-sm-3 col-xs-3">
+                </div>
+
+                <div class="col-sm-3 col-xs-3">
+									<!-- Place this tag where you want the button to render. -->
+									<a class="github-button" href="https://github.com/godaddy/wp-primer-theme" data-icon="octicon-star" data-count-href="/godaddy/wp-primer-theme/stargazers" data-count-api="/repos/godaddy/wp-primer-theme#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star godaddy/wp-primer-theme on GitHub">Star</a>
+                </div>
+
+                <div class="col-sm-3 col-xs-3">
+									<!-- Place this tag where you want the button to render. -->
+									<a class="github-button" href="https://github.com/godaddy/wp-primer-theme/fork" data-icon="octicon-repo-forked" data-count-href="/godaddy/wp-primer-theme/network" data-count-api="/repos/godaddy/wp-primer-theme#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork godaddy/wp-primer-theme on GitHub">Fork</a>
+									<!-- Place this tag in your head or just before your close body tag. -->
+									<script async defer src="https://buttons.github.io/buttons.js"></script>
+								</div>
+
+                <div class="col-sm-3 col-xs-3">
+                    <a href="https://twitter.com/GoDaddy" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @GoDaddy</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-3 social-footer text-center">
+                <a href="https://twitter.com/GoDaddy" data-toggle="tooltip" title="Twitter"><i class="fa icon-social fa-twitter"></i>
+                <a href="https://github.com/GoDaddy" data-toggle="tooltip" title="Github"><i class="fa icon-social fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="footer" class="footer-wrapper">
+    <div class="container">
+
+        <div class="row col-p30">
+            <div class="col-sm-12 col-md-3">
+                <div class="footer-widget t-footer">
+                    <div class="col-md-12">
+                        <a href="https://www.godaddy.com/">
+                            <img src="../../_static/godaddy-logo-white.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-9">
+                <div class="col-md-3 col-sm-6 business-solution">
+                    <ul class="footer-menu">
+                        <li class="menu-title">
+
+	<a href="https://www.GoDaddy.com">
+
+		<i class="fa fa-menu-title fa-briefcase"></i> GoDaddy Products
+
+	</a>
+
+</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <ul class="footer-menu">
+                        
+<li class="menu-title">
+	<i class="fa fa-menu-title fa-book"></i>Documentation
+</li>
+
+<li><a href="https://godaddy.github.io/wp-primer-theme/intro.html"><i class="fa fa-menu fa-chevron-right"></i>Wiki</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html"><i class="fa fa-menu fa-chevron-right"></i>Documentation</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/how-to.html"><i class="fa fa-menu fa-chevron-right"></i>Tutorials</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/license.html"><i class="fa fa-menu fa-chevron-right"></i>License</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/changelog.html"><i class="fa fa-menu fa-chevron-right"></i>Changelog</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <ul class="footer-menu">
+                        
+<li class="menu-title"><i class="fa fa-menu-title fa-users"></i>Community</li>
+
+<li><a href="https://aboutus.godaddy.net/about-us/default.aspx"><i class="fa fa-menu fa-chevron-right"></i>About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <ul class="footer-menu">
+                        
+<li class="menu-title"><i class="fa fa-menu-title fa-comments-o"></i>Help &amp; Support</li>
+
+<li><a href="https://github.com/godaddy/wp-primer-theme/issues"><i class="fa fa-menu fa-github"></i>GitHub</a></li>
+<li><a href="https://wordpress.org/support/theme/primer"><i class="fa fa-menu fa-wordpress"></i>WordPress</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center mt30">
+                <p class="copyright">
+                            &copy; Copyright 2017 GoDaddy Operating Company, LLC. Primer is distributed under the terms of the GNU GPL.
+                        Last updated on Dec 13, 2017.
+                        Created using <a href="http://www.sphinx-doc.org/">Sphinx</a> 1.4.5.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="inline-search-results"></div>
+
+
+</div>
+  </body>
+</html>

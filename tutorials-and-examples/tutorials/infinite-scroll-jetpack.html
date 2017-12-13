@@ -1,0 +1,528 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Infinite Scroll - Jetpack</title>
+    <link href="../../_static/favicon.png" type="image/png" rel="icon" />
+
+    
+    <link rel="stylesheet" href="../../_static/css/app.css" type="text/css" />
+    
+    <script type="text/javascript" src="../../_static/app.js"></script>
+
+    
+
+    <link rel="search" type="application/opensearchdescription+xml" title="Search within Primer Theme Documentation 1.x documentation" href="../../_static/opensearchdescription-book-3-x.xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="top" title="Primer Theme Documentation 1.x documentation" href="../../index.html" />
+    <link rel="up" title="Tutorials &amp; Examples" href="../../how-to.html" />
+    <link rel="next" title="Official Child Themes" href="../../child-themes.html" />
+    <link rel="prev" title="Debugging Primer" href="debugging.html" />
+
+    <script type="text/javascript">
+    window.lang = "en";
+    </script>
+  </head>
+  <body>
+
+<div id="container">
+    
+    <header class="nav-down">
+        <div class="container-fluid hidden-xs hidden-sm">
+            <div class="row">
+                <div class="col-sm-3 col-md-3">
+                    <a class="logo-godaddy" href="https://godaddy.github.io/wp-primer-theme/intro.html">
+                        <img src="../../_static/godaddy-logo.png" alt="GoDaddy" />
+                    </a>
+                </div>
+
+                <div class="col-sm-9 col-md-9">
+                    <nav class="navbar-right">
+                        <ul class="menu">
+                            <li class="first">
+                                <a href="#"><i class="fa fa-menu fa-chevron-down"></i>Documentation</a>
+                                <ul class="submenu">
+                                    
+<li><a href="https://godaddy.github.io/wp-primer-theme/intro.html"><i class="fa fa-menu fa-chevron-right"></i>Wiki</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html"><i class="fa fa-menu fa-chevron-right"></i>Documentation</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/how-to.html"><i class="fa fa-menu fa-chevron-right"></i>Tutorials</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/license.html"><i class="fa fa-menu fa-chevron-right"></i>License</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/changelog.html"><i class="fa fa-menu fa-chevron-right"></i>Changelog</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="contributors.html">Contributors</a></li>
+
+                            <li>
+                                <a href="#"><i class="fa fa-menu fa-chevron-down"></i>Community</a>
+                                <div class="megamenu full">
+                                    <div class="row">
+                                        <div class="col-6 pl30">
+                                            <ul class="megamenu-list">
+                                                
+<li class="menu-title"><i class="fa fa-menu-title fa-users"></i>Community</li>
+
+<li><a href="https://aboutus.godaddy.net/about-us/default.aspx"><i class="fa fa-menu fa-chevron-right"></i>About Us</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-6 pl30">
+                                            <ul class="megamenu-list">
+                                                
+<li class="menu-title"><i class="fa fa-menu-title fa-comments-o"></i>Help &amp; Support</li>
+
+<li><a href="https://github.com/godaddy/wp-primer-theme/issues"><i class="fa fa-menu fa-github"></i>GitHub</a></li>
+<li><a href="https://wordpress.org/support/theme/primer"><i class="fa fa-menu fa-wordpress"></i>WordPress</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="container-fluid hidden-md hidden-lg">
+            <div class="row">
+                <div class="col-sm-6 col-xs-6">
+                    <a class="logo-godaddy" href="https://godaddy.github.io/wp-primer-theme/intro.html">
+                        <img src="../../_static/godaddy-logo.png" alt="GoDaddy" />
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-xs-6">
+                    <div class="navbar-right">
+                        <button id="btn-menu" class="btn-menu" data-toggle="modal" data-target="#modal">
+                            <i class="fa fa-bars toggle-modal"></i>
+                        </button>
+                    </div>
+                    <div id="wrap">
+                        <form class="search" action="../../search.html" method="get">
+                            <input name="q" type="search" placeholder="What are you looking for?">
+                            <input id="search_submit" value="Search" type="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <section id="nav-cook" class="hidden-xs hidden-sm">
+            <div class="container-fluid ">
+                <div class="row ">
+                    <div class="col-md-12 back-book">
+                        <div class="col-md-5 text-center t-cook-nav p0 hidden-sm hidden-xs">
+                            <h2>
+                                <a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html">
+                                    <span class="glyph_range icon-submenu icon-submenu-cook">B</span>
+                                    Primer Theme v1.8.1 <strong>Documentation</strong>
+                                </a>
+                            </h2>
+                        </div>
+
+                        <div class="col-md-4 pull-right hidden-sm">
+                            <form class="search" action="../../search.html" method="get">
+                                <input type="hidden" name="check_keywords" value="yes" />
+                                <input type="hidden" name="area" value="default" />
+
+                                <div class="col-md-10 p0">
+                                    <input class="form-control form-cook" autocomplete="off" type="search" name="q" size="18" placeholder='Documentation Search' />
+                                </div>
+                                <div class="col-md-2 p0 search-cook">
+                                    <button type="submit">
+                                        <span class="glyph_range icon-submenu icon-submenu-cook">A</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    
+    <section class="nav-btn visible-sm visible-xs">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xs-6 text-center">
+                    <button id="btn-nav" class="btn btn-b btn-nav" data-toggle="modal" data-target="#modal"><strong>Nav</strong></button>
+                </div>
+
+                <div class="col-sm-6 col-xs-6 text-center">
+                    <button id="btn-toc" class="btn btn-b btn-nav" data-toggle="modal" data-target="#modal"><strong>Table of Contents</strong></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <div id="modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-header">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title-documentation" id="modal-header"></h4>
+                </div>
+                <div class="modal-body"></div>
+            </div>
+        </div>
+    </div>
+
+<div class="container page-container"><div id="improve-slideout">
+        <i class="fa fa-pencil icon-improve"></i>
+        <a href="https://github.com/godaddy/wp-primer-theme/edit/develop/.dev/docs/sphinx/src/tutorials-and-examples/tutorials/infinite-scroll-jetpack.md" target="_blank">
+            <div id="improve-slideout-inner"><h6>Improve This Doc <i class="fa fa-github git-improve"></i></h6></div>
+        </a>
+    </div><a id="back-to-contents" href="#page-contents"><i class="fa fa-arrow-circle-up icon-improve" title="Back to Top"></i></a>
+
+    
+    <div class="row">
+        <div class="col-sm-12 col-md-9 col-md-push-3 space-left push-off"><div class="page-contents col-sm-5">
+                <h3>Page Contents</h3>
+                <ul>
+<li><a class="reference internal" href="#">Infinite Scroll - Jetpack</a><ul>
+<li><a class="reference internal" href="#tutorial">Tutorial</a><ul>
+<li><a class="reference internal" href="#step-1-mu-plugin">Step 1) MU Plugin</a></li>
+<li><a class="reference internal" href="#step-2-local-development-environments">Step 2) Local Development Environments</a></li>
+<li><a class="reference internal" href="#step-3-enable-primer-theme-support">Step 3) Enable Primer Theme Support</a></li>
+<li><a class="reference internal" href="#step-4-style-tweaks">Step 4) Style Tweaks</a></li>
+<li><a class="reference internal" href="#full-primer-jetpack-blog-infinite-scroll-plugin-code">Full Primer - Jetpack Blog Infinite Scroll Plugin Code</a></li>
+<li><a class="reference internal" href="#download-full-mu-plugin">Download Full MU Plugin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </div><div class="document-body">
+            
+  <div class="section" id="infinite-scroll-jetpack">
+<span id="infinite-scroll-jetpack"></span><h1>Infinite Scroll - Jetpack<a class="headerlink" href="#infinite-scroll-jetpack" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial we&#8217;re going to setup the blog page to use infinite scroll through the <a class="reference external" href="https://wordpress.org/plugins/jetpack/">Jetpack</a> module.</p>
+<p>This tutorial assumes that you have the Primer theme (or one of it&#8217;s <a class="reference external" href="https://godaddy.github.io/wp-primer-theme/child-themes.html">child themes</a>) installed and you have installed and setup the <a class="reference external" href="https://wordpress.org/plugins/jetpack/">Jetpack</a> plugin.</p>
+<div class="section" id="tutorial">
+<span id="tutorial"></span><h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="step-1-mu-plugin">
+<span id="step-1-mu-plugin"></span><h3>Step 1) MU Plugin<a class="headerlink" href="#step-1-mu-plugin" title="Permalink to this headline">¶</a></h3>
+<p>First thing we&#8217;ll need to do is setup an MU plugin where we can add our custom code to. We also have documentation on setting up an MU plugin, so if you are unfamiliar with the process please <a class="reference external" href="https://godaddy.github.io/wp-primer-theme/tutorials-and-examples/tutorials/mu-plugin.html#how-to-create-a-must-use-plugin">visit the documentation</a> and follow along. Once your MU plugin is setup, you can continue below.</p>
+</div>
+<div class="section" id="step-2-local-development-environments">
+<span id="step-2-local-development-environments"></span><h3>Step 2) Local Development Environments<a class="headerlink" href="#step-2-local-development-environments" title="Permalink to this headline">¶</a></h3>
+<p>If you are developing on a localhost installation, some of the  <a class="reference external" href="https://wordpress.org/plugins/jetpack/">Jetpack</a> modules will be disabled. One of the modules disabled is &#8216;Infinite Scroll&#8217;. To enable the modules on a localhost install, <a class="reference external" href="https://wordpress.org/plugins/jetpack/">Jetpack</a> requires us to enable <em>development mode</em>.</p>
+<p>If you are working on a localhost install you&#8217;ll first want to add the following code to the MU plugin you have setup.</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">/**</span>
+<span class="x"> * Jetpack development mode.</span>
+<span class="x"> *</span>
+<span class="x"> * Note: Required for infinite scroll to work on localhost.</span>
+<span class="x"> */</span>
+<span class="x">add_filter( &#39;jetpack_development_mode&#39;, &#39;__return_true&#39; );</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-3-enable-primer-theme-support">
+<span id="step-3-enable-primer-theme-support"></span><h3>Step 3) Enable Primer Theme Support<a class="headerlink" href="#step-3-enable-primer-theme-support" title="Permalink to this headline">¶</a></h3>
+<p>The next thing that we have to do is add theme support for &#8216;infinite-scroll&#8217;. If you are interested in learning more about some of the parameters that infinite scroll supports, feel free to visit the <a class="reference external" href="https://jetpack.com/support/infinite-scroll/">Jetpack Documentation</a>.</p>
+<p>Add the following to your MU plugin to enable infinite scroll theme support in Primer.</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">/**</span>
+<span class="x"> * Add theme support for infinite scroll.</span>
+<span class="x"> *</span>
+<span class="x"> * @uses add_theme_support</span>
+<span class="x"> * @return void</span>
+<span class="x"> */</span>
+<span class="x">function primer_infinite_scroll_init() {</span>
+
+<span class="x">    add_theme_support( &#39;infinite-scroll&#39;, array(</span>
+<span class="x">        &#39;container&#39;      =&gt; &#39;main&#39;,</span>
+<span class="x">        &#39;wrapper&#39;        =&gt; &#39;.post&#39;,</span>
+<span class="x">        &#39;footer_widgets&#39; =&gt; array(</span>
+<span class="x">            &#39;footer-1&#39;,</span>
+<span class="x">            &#39;footer-2&#39;,</span>
+<span class="x">            &#39;footer-3&#39;,</span>
+<span class="x">        ),</span>
+<span class="x">    ) );</span>
+
+<span class="x">}</span>
+<span class="x">add_action( &#39;after_setup_theme&#39;, &#39;primer_infinite_scroll_init&#39; );</span>
+</pre></div>
+</div>
+<p>Once you&#8217;ve added the above into your MU plugin, feel free to save the file and check your site. Things should be working at this point, so when you visit your blog posting page as you scroll down you should see additional items loading. You will also notice that the URL of the page will change.</p>
+<p>The last thing we&#8217;ll need to do is clean up the appearance of the theme a bit, so infinite scroll fits better into Primer.</p>
+</div>
+<div class="section" id="step-4-style-tweaks">
+<span id="step-4-style-tweaks"></span><h3>Step 4) Style Tweaks<a class="headerlink" href="#step-4-style-tweaks" title="Permalink to this headline">¶</a></h3>
+<p>Finally, we are going to clean up the styles a bit. Ideally this woudld be done inside of an external stylesheet, but to for brevity we are demonstrating how to load the styles right into the head of the site.</p>
+<p>The following code will remove the pagination links at the bottom of the blog page and, to make things look a little cleaner, we&#8217;ll center the spinner that displays while additional posts are loading.</p>
+<p>Add the following snippet to the bottom of your MU plugin.</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="x">/**</span>
+<span class="x"> * Hide the blog page pagination links and style the infinite loader.</span>
+<span class="x"> *</span>
+<span class="x"> * @return void</span>
+<span class="x"> */</span>
+<span class="x">function hide_blog_pagination() {</span>
+
+<span class="x">    if ( ! is_home() ) {</span>
+
+<span class="x">        return;</span>
+
+<span class="x">    }</span>
+
+<span class="x">    ?&gt;</span>
+
+<span class="x">    &lt;style&gt;</span>
+<span class="x">    body.blog .navigation.pagination {</span>
+<span class="x">        display: none;</span>
+<span class="x">    }</span>
+
+<span class="x">    span.infinite-loader {</span>
+<span class="x">        width: 34px;</span>
+<span class="x">        margin: 1.5em auto;</span>
+<span class="x">    }</span>
+<span class="x">    &lt;/style&gt;</span>
+
+<span class="x">    </span><span class="cp">&lt;?php</span>
+
+<span class="p">}</span>
+<span class="nx">add_action</span><span class="p">(</span> <span class="s1">&#39;wp_enqueue_scripts&#39;</span><span class="p">,</span> <span class="s1">&#39;hide_blog_pagination&#39;</span> <span class="p">);</span>
+</pre></div>
+</div>
+<p>And that&#8217;s it! Feel free to save the MU plugin and check your blog page. Things should now look great and function properly!</p>
+<p>For the entire MU plugin code, in full, please see the next section.</p>
+</div>
+<div class="section" id="full-primer-jetpack-blog-infinite-scroll-plugin-code">
+<span id="full-primer-jetpack-blog-infinite-scroll-plugin-code"></span><h3>Full Primer - Jetpack Blog Infinite Scroll Plugin Code<a class="headerlink" href="#full-primer-jetpack-blog-infinite-scroll-plugin-code" title="Permalink to this headline">¶</a></h3>
+<p>Here is the entire MU plugin code that we have put together in this tutorial. Feel free to copy this right into your own MU plugin file to get things up and running quickly.</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="sd">/**</span>
+<span class="sd"> * Plugin Name: Primer - Jetpack Blog Infinite Scroll</span>
+<span class="sd"> * Description: Enable Jetpack infinite scroll support within Primer.</span>
+<span class="sd"> * Author: GoDaddy</span>
+<span class="sd"> */</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * Add theme support for infinite scroll.</span>
+<span class="sd"> *</span>
+<span class="sd"> * @uses add_theme_support</span>
+<span class="sd"> * @return void</span>
+<span class="sd"> */</span>
+<span class="k">function</span> <span class="nf">primer_infinite_scroll_init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="nx">add_theme_support</span><span class="p">(</span> <span class="s1">&#39;infinite-scroll&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span>
+        <span class="s1">&#39;container&#39;</span>      <span class="o">=&gt;</span> <span class="s1">&#39;main&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;wrapper&#39;</span>        <span class="o">=&gt;</span> <span class="s1">&#39;.post&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;posts_per_page&#39;</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s1">&#39;footer_widgets&#39;</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+            <span class="s1">&#39;footer-1&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;footer-2&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;footer-3&#39;</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">)</span> <span class="p">);</span>
+
+<span class="p">}</span>
+<span class="nx">add_action</span><span class="p">(</span> <span class="s1">&#39;after_setup_theme&#39;</span><span class="p">,</span> <span class="s1">&#39;primer_infinite_scroll_init&#39;</span> <span class="p">);</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * Hide the blog page pagination links and style the infinite loader.</span>
+<span class="sd"> *</span>
+<span class="sd"> * @return void</span>
+<span class="sd"> */</span>
+<span class="k">function</span> <span class="nf">hide_blog_pagination</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span> <span class="nx">is_home</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
+
+        <span class="k">return</span><span class="p">;</span>
+
+    <span class="p">}</span>
+
+    <span class="cp">?&gt;</span><span class="x"></span>
+
+<span class="x">    &lt;style&gt;</span>
+<span class="x">    body.blog .navigation.pagination {</span>
+<span class="x">        display: none;</span>
+<span class="x">    }</span>
+
+<span class="x">    span.infinite-loader {</span>
+<span class="x">        width: 34px;</span>
+<span class="x">        margin: 1.5em auto;</span>
+<span class="x">    }</span>
+<span class="x">    &lt;/style&gt;</span>
+
+<span class="x">    </span><span class="cp">&lt;?php</span>
+
+<span class="p">}</span>
+<span class="nx">add_action</span><span class="p">(</span> <span class="s1">&#39;wp_enqueue_scripts&#39;</span><span class="p">,</span> <span class="s1">&#39;hide_blog_pagination&#39;</span> <span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="download-full-mu-plugin">
+<span id="download-full-mu-plugin"></span><h3>Download Full MU Plugin<a class="headerlink" href="#download-full-mu-plugin" title="Permalink to this headline">¶</a></h3>
+<p>If you are uncomfortable editing code, or just want to get things up and running quickly, feel free to download the MU Plugin using the link below.</p>
+<p><a href="https://raw.githubusercontent.com/godaddy/wp-primer-theme/tree/develop/.dev/docs/sphinx/tutorial-assets/downloads/primer-jetpack-infinite-scroll-mu-plugin.zip" download>Download Primer Infinite Scroll - Jetpack Plugin</a></p>
+</div>
+</div>
+</div>
+
+
+            </div>
+        </div>
+
+        
+        <div class="col-md-3 col-md-pull-9 pull-off hidden-xs hidden-sm" lang="en">
+            <aside class="sidebar">
+                <div class="mb30 row">
+<div id="sidebar-navigation" class="hidden-xs">
+	<p class="caption"><span class="caption-text">Overview</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../recommended-plugins.html">Recommended Plugins</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../how-to.html">Tutorials &amp; Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="mu-plugin.html">How to create a must-use plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conditional-menus.html">Conditionally Displaying Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="acceptance-tests.html">Acceptance Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html">Debugging Primer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Infinite Scroll - Jetpack</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../child-themes.html">Official Child Themes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+
+</div>
+
+                </div>
+            </aside>
+            <aside class="sidebar">
+                <div class="mb30 row">
+                </div>
+            </aside>
+        </div>
+    </div>
+</div>
+
+<section id="socials" class="back-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-5  social text-center">
+                <div class="col-sm-3 col-xs-3">
+                </div>
+
+                <div class="col-sm-3 col-xs-3">
+									<!-- Place this tag where you want the button to render. -->
+									<a class="github-button" href="https://github.com/godaddy/wp-primer-theme" data-icon="octicon-star" data-count-href="/godaddy/wp-primer-theme/stargazers" data-count-api="/repos/godaddy/wp-primer-theme#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star godaddy/wp-primer-theme on GitHub">Star</a>
+                </div>
+
+                <div class="col-sm-3 col-xs-3">
+									<!-- Place this tag where you want the button to render. -->
+									<a class="github-button" href="https://github.com/godaddy/wp-primer-theme/fork" data-icon="octicon-repo-forked" data-count-href="/godaddy/wp-primer-theme/network" data-count-api="/repos/godaddy/wp-primer-theme#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork godaddy/wp-primer-theme on GitHub">Fork</a>
+									<!-- Place this tag in your head or just before your close body tag. -->
+									<script async defer src="https://buttons.github.io/buttons.js"></script>
+								</div>
+
+                <div class="col-sm-3 col-xs-3">
+                    <a href="https://twitter.com/GoDaddy" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @GoDaddy</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-3 social-footer text-center">
+                <a href="https://twitter.com/GoDaddy" data-toggle="tooltip" title="Twitter"><i class="fa icon-social fa-twitter"></i>
+                <a href="https://github.com/GoDaddy" data-toggle="tooltip" title="Github"><i class="fa icon-social fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="footer" class="footer-wrapper">
+    <div class="container">
+
+        <div class="row col-p30">
+            <div class="col-sm-12 col-md-3">
+                <div class="footer-widget t-footer">
+                    <div class="col-md-12">
+                        <a href="https://www.godaddy.com/">
+                            <img src="../../_static/godaddy-logo-white.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-9">
+                <div class="col-md-3 col-sm-6 business-solution">
+                    <ul class="footer-menu">
+                        <li class="menu-title">
+
+	<a href="https://www.GoDaddy.com">
+
+		<i class="fa fa-menu-title fa-briefcase"></i> GoDaddy Products
+
+	</a>
+
+</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <ul class="footer-menu">
+                        
+<li class="menu-title">
+	<i class="fa fa-menu-title fa-book"></i>Documentation
+</li>
+
+<li><a href="https://godaddy.github.io/wp-primer-theme/intro.html"><i class="fa fa-menu fa-chevron-right"></i>Wiki</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html"><i class="fa fa-menu fa-chevron-right"></i>Documentation</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/how-to.html"><i class="fa fa-menu fa-chevron-right"></i>Tutorials</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/license.html"><i class="fa fa-menu fa-chevron-right"></i>License</a></li>
+<li><a href="https://godaddy.github.io/wp-primer-theme/changelog.html"><i class="fa fa-menu fa-chevron-right"></i>Changelog</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <ul class="footer-menu">
+                        
+<li class="menu-title"><i class="fa fa-menu-title fa-users"></i>Community</li>
+
+<li><a href="https://aboutus.godaddy.net/about-us/default.aspx"><i class="fa fa-menu fa-chevron-right"></i>About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <ul class="footer-menu">
+                        
+<li class="menu-title"><i class="fa fa-menu-title fa-comments-o"></i>Help &amp; Support</li>
+
+<li><a href="https://github.com/godaddy/wp-primer-theme/issues"><i class="fa fa-menu fa-github"></i>GitHub</a></li>
+<li><a href="https://wordpress.org/support/theme/primer"><i class="fa fa-menu fa-wordpress"></i>WordPress</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center mt30">
+                <p class="copyright">
+                            &copy; Copyright 2017 GoDaddy Operating Company, LLC. Primer is distributed under the terms of the GNU GPL.
+                        Last updated on Dec 13, 2017.
+                        Created using <a href="http://www.sphinx-doc.org/">Sphinx</a> 1.4.5.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="inline-search-results"></div>
+
+
+</div>
+  </body>
+</html>
