@@ -1,5 +1,15 @@
 ## Changelog
 
+### 1.8.0 ###
+* New: Conditionally wrap site titles to improve SEO. @props [evanherman](https://github.com/EvanHerman), [fjarrett](https://github.com/fjarrett)
+* New: Added `sr_RS` (Serbian) translation. @props [lukapaunovic](https://github.com/lukapaunovic)
+* Fix: Remove reference to a missing `search.svg` icon. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Adjust site title width to prevent overlapping with the mobile menu button. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Conditionally load video header for WordPress 4.7 or later. @props [evanherman](https://github.com/EvanHerman), [fjarrett](https://github.com/fjarrett)
+* Fix: Added a missing `@version` docblock to the WooCommerce pagination template to prevent out of date template notices. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Backward compatibility issue when using [Beaver Builder](https://wordpress.org/plugins/beaver-builder-lite-version/) on PHP 5.3. @props [evanherman](https://github.com/EvanHerman), [fjarrett](https://github.com/fjarrett)
+* Fix: Fixed the tertiary sidebar visibility. @props [evanherman](https://github.com/EvanHerman), [fjarrett](https://github.com/fjarrett)
+
 ### 1.7.0 ###
 * New: Enabled video headers and introduced styles to accommodate full width video headers. @props [evanherman](https://github.com/EvanHerman)
 * New: Introduced new `primer_pre_hero` action. @props [evanherman](https://github.com/EvanHerman)

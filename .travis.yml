@@ -1,11 +1,25 @@
 sudo: false
 
-language: php
-
 notifications:
   email:
     on_success: never
     on_failure: change
+
+cache:
+  directories:
+    - node_modules
+    - vendor
+    - $HOME/.composer/cache
+    - $HOME/.wp-cli/cache
+    - $HOME/.wp-cli/packages/cache
+
+language:
+  - php
+  - node_js
+
+php:
+  - 5.6
+  - 7.1
 
 branches:
   only:
@@ -13,29 +27,23 @@ branches:
     - master
     - develop
 
-php:
-  - 5.2
-  - 5.6
-  - 7.1
-
 env:
-  - WP_VERSION=4.4 WP_MULTISITE=0
-  - WP_VERSION=latest WP_MULTISITE=0
-  - WP_VERSION=trunk WP_MULTISITE=0
+  global:
+    - WP_THEME=primer
+  matrix:
+    - WP_VERSION=4.4
+    - WP_VERSION=latest
+    - WP_VERSION=trunk
 
-matrix:
-  fast_finish: true
-  exclude:
-    - php: 7.1
-      env: WP_VERSION=4.4 WP_MULTISITE=0
+before_install:
+  - phpenv config-rm xdebug.ini
 
 install:
+  - nvm install 6 && nvm use 6
   - export DEV_LIB_PATH=.dev/dev-lib
   - if [ ! -e "$DEV_LIB_PATH" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
   - if [ ! -e "$DEV_LIB_PATH" ]; then git clone https://github.com/xwp/wp-dev-lib.git $DEV_LIB_PATH; fi
   - source $DEV_LIB_PATH/travis.install.sh
-  - curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
-  - chmod +x /tmp/wp-cli.phar
 
 script:
   - source $DEV_LIB_PATH/travis.script.sh
@@ -43,22 +51,42 @@ script:
 after_script:
   - source $DEV_LIB_PATH/travis.after_script.sh
 
+jobs:
+  fast_finish: true
+  exclude:
+    - php: 5.6
+      env: WP_VERSION=trunk
+    - php: 7.1
+      env: WP_VERSION=4.4
+  include:
+    - stage: theme check
+      php: 7.1
+      env: WP_VERSION=latest
+      install:
+        - export THEME_CHECK=1
+        - curl -o /tmp/wp.phar -SL https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar
+        - chmod +x /tmp/wp.phar
+        - source .dev/travis.install-themecheck.sh
+      script:
+        - php /tmp/wp.phar themecheck --theme=$WP_THEME --no-interactive
+      after_script: true # skip by returning true
+
 before_deploy:
-  - export RELEASE_FOLDER=primer
-  - php /tmp/wp-cli.phar package install wp-cli/dist-archive-command
-  - cp -r ${TRAVIS_BUILD_DIR} /tmp/${RELEASE_FOLDER}
-  - mv /tmp/${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}
-  - php /tmp/wp-cli.phar dist-archive ${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}/${RELEASE_FOLDER}.zip --format=zip --debug
+  - mkdir -p /tmp/$WP_THEME
+  - rsync -av --exclude-from $TRAVIS_BUILD_DIR/.distignore --delete $TRAVIS_BUILD_DIR/ /tmp/$WP_THEME/
+  - zip -rT $TRAVIS_BUILD_DIR/$WP_THEME.zip /tmp/$WP_THEME
+  - sha256sum -b $TRAVIS_BUILD_DIR/$WP_THEME.zip | awk '{print $1}' | tee $TRAVIS_BUILD_DIR/$WP_THEME.zip.sha256
 
 deploy:
   provider: releases
   api_key:
     secure: nZeGCRawe6Vh/D6Cll8Egu1oRCpB14x4w1G35yfYrjWqL7Hak+C5+Se4TziTX2RudQX0JV7jlaydqKSrNaChlLkIrAd2DUt8SRgZrWuh18VXFVcOM6gWEvDBdiHOdN7TMlkFM6a3VM3aiMpZqsNbYF4GrMYeZ6coJMdV6Sy6eLpux8hPNbK17fKmdBW+oZor54/arLV9gdPmfPGq/lcdC2/hk9BMOlwZ0dpqH7kS27PDF4gmIVUCgIq+zg4SLqWGMsaZaDzygjBPjL6CKz9ZT+MswplWtz6QTIPfvJVm4tLip9wa9HMv65COo7L1j/1fXwakC4VCGIpGy1m/cDqnL37gAF1wQZXXGrV9JPG7PpOGyNahQZwPoYY8OUJCB+k9AmEwg6s9oBRWFBcY9PQW9sMH5UEGIXerqWfETy7qxGUqKElxogEnYKB/m/YzFhfw72Ew9Ra+AdMjgZOE+KoPo57AYQgbOw1WtPxQDqbWFCuennw2eD+l8WVWGogKEB6f8q0QnzpP+3mjxoSV99nx0sv126YowCrK0r2o5HOztPXp7ArtC3fZWdlGnjx/XWHfwlv75YnI71gD413ffGUXtk4xsCbD3vNOChBlAVphQfJcTscfUDknJFaCB7w7V8pyPXKTuRirBxtSQjddFG21zAOELDZntBgPZ/0Ixu9VJmA=
-  file: primer.zip
+  file:
+    - "$WP_THEME.zip"
+    - "$WP_THEME.zip.sha256"
+  skip_cleanup: true
+  overwrite: true
   on:
     tags: true
     repo: godaddy/wp-primer-theme
-    php: '7.1'
-    condition: "$WP_VERSION=trunk"
-  skip_cleanup: true
-  overwrite: true
+    condition: "$THEME_CHECK == 1"

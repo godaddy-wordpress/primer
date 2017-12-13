@@ -2,7 +2,7 @@
 Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
 Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
-Tested up to:      4.8
+Tested up to:      4.9
 Stable tag:        1.8.0
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -63,6 +63,11 @@ License: Creative Commons Zero
 Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 == Changelog ==
+
+= 1.8.1 =
+* Fix: Prevent customizer title & tagline colors from updating when they are hidden. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Update translation files so translations load correctly. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Remove HTML markup in search results/author archive page titles. @props [evanherman](https://github.com/EvanHerman)
 
 = 1.8.0 =
 * New: Conditionally wrap site titles to improve SEO. @props [evanherman](https://github.com/EvanHerman), [fjarrett](https://github.com/fjarrett)
