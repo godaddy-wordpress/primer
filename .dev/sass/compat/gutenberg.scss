@@ -65,13 +65,33 @@
 .entry-content ol,
 .wp-block-cover-text {
 	&.alignleft {
-		max-width: calc( 0.4 * #{$container-size} );
 		margin: 0 1.5em 1.5em 0;
 	}
 
 	&.alignright {
-		max-width: calc( 0.4 * #{$container-size} );
 		margin: 0 0 1.5em 1.5em;
+	}
+
+	&.alignleft,
+	&.alignright {
+		max-width: calc( 0.4 * #{$container-size} );
+		@media #{$medium-only} {
+			max-width: calc( 0.25 * #{$container-size} );
+			margin-bottom: 0.5em;
+		}
+		@media #{$small-only} {
+			max-width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+.wp-block-pullquote {
+	padding: 2em 0;
+
+	p {
+		margin: 0 0 0.25rem 0;
 	}
 }
 
