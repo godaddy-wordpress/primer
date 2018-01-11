@@ -268,7 +268,7 @@ msgstr "Plano de fundo do rodapé"
 
 #: inc/customizer/colors.php:455 inc/customizer/layouts.php:298
 msgid "Custom"
-msgstr "Customizado"
+msgstr "Personalizado"
 
 #: inc/customizer/colors.php:472 inc/customizer/layouts.php:294
 msgid "Default"

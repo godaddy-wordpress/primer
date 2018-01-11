@@ -312,7 +312,7 @@ msgstr "ควบคุมความโปร่งแสงการทับ
 
 #: inc/customizer/fonts.php:89
 msgid "Site Title"
-msgstr "หัวข้อไซต์"
+msgstr "ชื่อเว็บไซต์"
 
 #: inc/customizer/fonts.php:90
 msgid "Site title text in the header."
