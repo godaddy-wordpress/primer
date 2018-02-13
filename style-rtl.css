@@ -2326,8 +2326,7 @@ body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
   .woocommerce nav.woocommerce-pagination .nav-links .page-numbers {
     padding: 0.3em 0.6em; }
     .woocommerce nav.woocommerce-pagination .nav-links .page-numbers:last-child {
-      margin-left: 0;
-      padding-left: 0; }
+      margin-left: 0; }
     @media only screen and (max-width: 40.063em) {
       .woocommerce nav.woocommerce-pagination .nav-links .page-numbers:first-child {
         margin-right: 0;
