@@ -66,6 +66,11 @@ Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 ## Changelog ##
 
+### 1.8.2 ###
+* Fix: Comment counts showing an extra character. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Bump WooCommerce pagination template to 3.3.1. @props [evanherman](https://github.com/EvanHerman)
+* Fix: WooCommerce pagination padding. @props [evanherman](https://github.com/EvanHerman)
+
 ### 1.8.1 ###
 * Fix: Prevent customizer title & tagline colors from updating when they are hidden. @props [evanherman](https://github.com/EvanHerman)
 * Fix: Update translation files so translations load correctly. @props [evanherman](https://github.com/EvanHerman)
