@@ -2202,6 +2202,20 @@ body.no-max-width .site-info-wrapper .site-info {
   .comments-area input:not(.submit),
   .comments-area textarea {
     width: 100%; }
+  .comments-area .comment-form-cookies-consent {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 16px; }
+    .comments-area .comment-form-cookies-consent #wp-comment-cookies-consent {
+      display: inline;
+      width: auto;
+      margin: 0 10px 0 0; }
+      @media only screen and (max-width: 40.063em) {
+        .comments-area .comment-form-cookies-consent #wp-comment-cookies-consent {
+          margin-top: 2px; } }
 
 .comment-list {
   padding: 0;
