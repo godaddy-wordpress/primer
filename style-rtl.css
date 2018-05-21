@@ -1831,6 +1831,13 @@ body.no-max-width .footer-widget-area {
       content: " ";
       display: block;
       clear: both; }
+  .site-info-wrapper .privacy-policy-link {
+    width: 47.22222%;
+    float: right;
+    margin-right: 1.38889%;
+    margin-left: 1.38889%;
+    font-size: 90%;
+    line-height: 38px; }
   .site-info-wrapper .site-info-text {
     width: 47.22222%;
     float: right;
@@ -1846,6 +1853,7 @@ body.no-max-width .footer-widget-area {
     margin-left: 1.38889%; }
   @media only screen and (max-width: 61.063em) {
     .site-info-wrapper .footer-menu,
+    .site-info-wrapper .privacy-policy-link,
     .site-info-wrapper .site-info-text,
     .site-info-wrapper .social-menu {
       width: 97.22222%;
