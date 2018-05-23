@@ -2,8 +2,8 @@
 **Contributors:** [godaddy](https://profiles.wordpress.org/godaddy), [fjarrett](https://profiles.wordpress.org/fjarrett), [jonathanbardo](https://profiles.wordpress.org/jonathanbardo), [eherman24](https://profiles.wordpress.org/eherman24)  
 **Tags:**              [custom-background](https://wordpress.org/themes/tags/custom-background/), [custom-colors](https://wordpress.org/themes/tags/custom-colors/), [custom-header](https://wordpress.org/themes/tags/custom-header/), [custom-menu](https://wordpress.org/themes/tags/custom-menu/), [editor-style](https://wordpress.org/themes/tags/editor-style/), [featured-images](https://wordpress.org/themes/tags/featured-images/), [flexible-header](https://wordpress.org/themes/tags/flexible-header/), [left-sidebar](https://wordpress.org/themes/tags/left-sidebar/), [one-column](https://wordpress.org/themes/tags/one-column/), [right-sidebar](https://wordpress.org/themes/tags/right-sidebar/), [rtl-language-support](https://wordpress.org/themes/tags/rtl-language-support/), [sticky-post](https://wordpress.org/themes/tags/sticky-post/), [threaded-comments](https://wordpress.org/themes/tags/threaded-comments/), [three-columns](https://wordpress.org/themes/tags/three-columns/), [translation-ready](https://wordpress.org/themes/tags/translation-ready/), [two-columns](https://wordpress.org/themes/tags/two-columns/)  
 **Requires at least:** 4.4  
-**Tested up to:**      4.8  
-**Stable tag:**        1.8.0  
+**Tested up to:**      4.9  
+**Stable tag:**        1.8.2  
 **License:**           GPL-2.0  
 **License URI:**       https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -65,6 +65,16 @@ License: Creative Commons Zero
 Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 ## Changelog ##
+
+### 1.8.2 ###
+* Fix: Comment counts showing an extra character. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Bump WooCommerce pagination template to 3.3.1. @props [evanherman](https://github.com/EvanHerman)
+* Fix: WooCommerce pagination padding. @props [evanherman](https://github.com/EvanHerman)
+
+### 1.8.1 ###
+* Fix: Prevent customizer title & tagline colors from updating when they are hidden. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Update translation files so translations load correctly. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Remove HTML markup in search results/author archive page titles. @props [evanherman](https://github.com/EvanHerman)
 
 ### 1.8.0 ###
 * New: Conditionally wrap site titles to improve SEO. @props [evanherman](https://github.com/EvanHerman), [fjarrett](https://github.com/fjarrett)

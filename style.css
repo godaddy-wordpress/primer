@@ -4,7 +4,7 @@
  * Author: GoDaddy
  * Author URI: https://www.godaddy.com/
  * Description: Primer is a powerful theme that brings clarity to your content in a fresh design.
- * Version: 1.8.0
+ * Version: 1.8.2
  * License: GPL-2.0
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: primer
@@ -1831,6 +1831,13 @@ body.no-max-width .footer-widget-area {
       content: " ";
       display: block;
       clear: both; }
+  .site-info-wrapper .privacy-policy-link {
+    width: 47.22222%;
+    float: left;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%;
+    font-size: 90%;
+    line-height: 38px; }
   .site-info-wrapper .site-info-text {
     width: 47.22222%;
     float: left;
@@ -1846,6 +1853,7 @@ body.no-max-width .footer-widget-area {
     margin-right: 1.38889%; }
   @media only screen and (max-width: 61.063em) {
     .site-info-wrapper .footer-menu,
+    .site-info-wrapper .privacy-policy-link,
     .site-info-wrapper .site-info-text,
     .site-info-wrapper .social-menu {
       width: 97.22222%;
@@ -2194,6 +2202,20 @@ body.no-max-width .site-info-wrapper .site-info {
   .comments-area input:not(.submit),
   .comments-area textarea {
     width: 100%; }
+  .comments-area .comment-form-cookies-consent {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 16px; }
+    .comments-area .comment-form-cookies-consent #wp-comment-cookies-consent {
+      display: inline;
+      width: auto;
+      margin: 0 10px 0 0; }
+      @media only screen and (max-width: 40.063em) {
+        .comments-area .comment-form-cookies-consent #wp-comment-cookies-consent {
+          margin-top: 2px; } }
 
 .comment-list {
   padding: 0;
@@ -2326,8 +2348,7 @@ body.primer-woocommerce-l10n.woocommerce ul.products li.product .button,
   .woocommerce nav.woocommerce-pagination .nav-links .page-numbers {
     padding: 0.3em 0.6em; }
     .woocommerce nav.woocommerce-pagination .nav-links .page-numbers:last-child {
-      margin-right: 0;
-      padding-right: 0; }
+      margin-right: 0; }
     @media only screen and (max-width: 40.063em) {
       .woocommerce nav.woocommerce-pagination .nav-links .page-numbers:first-child {
         margin-left: 0;

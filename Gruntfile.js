@@ -41,26 +41,10 @@ module.exports = function( grunt ) {
 			options: {
 				force: true
 			},
-			build: [ 'build/' ],
 			docs: [ '.dev/docs/sphinx/src/documentation/' ]
 		},
 
 		copy: {
-			build: {
-				expand: true,
-				cwd: '.',
-				src: [
-					'*.css',
-					'*.php',
-					'*.txt',
-					'screenshot.png',
-					'assets/**',
-					'inc/**',
-					'languages/**/*.{mo,pot}',
-					'templates/**'
-				],
-				dest: 'build/'
-			},
 			docs_html: {
 				expand: true,
 				cwd: '.dev/docs/sphinx/src/documentation/',
@@ -166,7 +150,7 @@ module.exports = function( grunt ) {
 				options: {
 					domainPath: 'languages/',
 					include: [ '.+\.php' ],
-					exclude: [ '.dev/', 'build/', 'node_modules/', 'tests/', 'vendor/' ],
+					exclude: [ '.dev/', 'node_modules/', 'tests/', 'vendor/' ],
 					potComments: 'Copyright (c) {year} GoDaddy Operating Company, LLC. All Rights Reserved.',
 					potHeaders: {
 						'x-poedit-keywordslist': true
@@ -330,7 +314,7 @@ module.exports = function( grunt ) {
 			deploy_docs: [
 				'cd .dev/docs/build/html',
 				'git add .',
-				'git commit -m "Update Documentation"',
+				'git commit -m "Update Documentation" || true',
 				'git push origin gh-pages --force'
 			].join( ' && ' )
 		},
@@ -359,7 +343,7 @@ module.exports = function( grunt ) {
 			},
 			sass: {
 				files: '.dev/sass/**/*.scss',
-				tasks: [ 'sass', 'autoprefixer', 'cssjanus', 'cssmin' ]
+				tasks: [ 'sass', 'replace:charset', 'autoprefixer', 'cssjanus', 'cssmin' ]
 			}
 		},
 
@@ -398,13 +382,12 @@ module.exports = function( grunt ) {
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
 	grunt.registerTask( 'default',     [ 'sass', 'replace:charset', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify', 'imagemin' ] );
-	grunt.registerTask( 'build',       [ 'default', 'clean:build', 'copy:build' ] );
 	grunt.registerTask( 'check',       [ 'devUpdate' ] );
-	grunt.registerTask( 'deploy-docs', [ 'update-docs', 'shell:deploy_docs' ] );
 	grunt.registerTask( 'readme',      [ 'wp_readme_to_markdown' ] );
 	grunt.registerTask( 'update-docs', [ 'readme', 'clean:docs', 'replace:docs_version', 'replace:docs', 'shell:sphinx', 'shell:docs', 'copy:readme', 'copy:docs_html', 'copy:docs_landing', 'replace:intro' ] );
+	grunt.registerTask( 'deploy-docs', [ 'update-docs', 'shell:deploy_docs' ] );
 	grunt.registerTask( 'update-pot',  [ 'makepot' ] );
 	grunt.registerTask( 'update-mo',   [ 'potomo' ] );
-	grunt.registerTask( 'version',     [ 'replace', 'readme', 'build' ] );
+	grunt.registerTask( 'version',     [ 'replace', 'readme', 'default', 'clean' ] );
 
 };
