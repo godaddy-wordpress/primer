@@ -43,7 +43,7 @@
 
 			this.customSelectLink = this.element.next( '.primer-font-select' );
 
-			this.customDropdown = this.customSelectLink.next('.primer-font-options');
+			this.customDropdown = this.customSelectLink.next( '.primer-font-options' );
 
 			// Populate the fields with correct values on load.
 			if ( $selectedOption.length ) {
@@ -75,15 +75,13 @@
 
 			if ( this.customDropdown.hasClass( 'primer-font-open' ) ) {
 
-				return false;
+				return;
 
 			}
 
 			this.customDropdown.show().addClass( 'primer-font-open' );
 
 			$( event.target ).hide();
-
-			return false;
 
 		},
 
@@ -98,15 +96,6 @@
 			    $mainText     = this.customSelectLink.find( '.primer-filter-text' ),
 			    $activeSelect = this.element.find( 'option[value="' + optionText + '"]' ),
 			    mainTextClass = $mainText.data( 'gf-class' );
-
-			if ( $( event.target ).hasClass( 'primer-font-active' ) ) {
-
-				this.closeDropdown();
-
-				return false;
-
-			}
-
 
 			$( event.target ).siblings().removeClass( 'primer-font-active' );
 
@@ -125,8 +114,6 @@
 				this.element.val( optionText ).trigger( 'change' );
 
 			}
-
-			return false;
 
 		},
 
@@ -173,7 +160,6 @@
 
 	};
 
-	// Initialize font dropdowns.
 	$( document ).ready( function() {
 
 		var customFontSections = [

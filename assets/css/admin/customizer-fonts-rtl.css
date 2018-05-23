@@ -16,7 +16,7 @@
   border-width: 6px 6px 0;
   position: absolute;
   top: 18px;
-  left: 8px;
+  left: 15px;
   z-index: 1; }
 
 .primer-font-options,
@@ -33,6 +33,9 @@
   text-indent: -9999px;
   background-repeat: no-repeat;
   height: 30px;
+  zoom: 0.65;
+  -moz-transform: scale(0.65);
+  -moz-transform-origin: 0 0;
   background-image: url(../../images/fonts/sprite-sheet.png);
   margin-bottom: 0; }
 
