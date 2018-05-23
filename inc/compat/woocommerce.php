@@ -239,17 +239,13 @@ add_filter( 'primer_the_page_title_args', 'primer_wc_product_page_title_wrapper'
  *
  * @since  1.0.0
  *
- * @param  int $columns $columns The default number of columns.
+ * @param  int $columns The default number of columns.
  *
  * @return int The number of columns to use.
  */
 function primer_wc_shop_columns( $columns ) {
 
-	global $post;
-
-	$page_id = ( is_shop() ) ? wc_get_page_id( 'shop' ) : $post->ID;
-
-	if ( 0 === strpos( primer_get_layout( absint( $page_id ) ), 'three-column-' ) ) {
+	if ( 0 === strpos( primer_get_layout( absint( wc_get_page_id( 'shop' ) ) ), 'three-column-' ) ) {
 
 		add_filter( 'post_class', 'primer_wc_product_classes' );
 
