@@ -71,6 +71,13 @@ body.no-max-width .footer-widget-area {
 		@include container($container-size);
 	}
 
+	.privacy-policy-link {
+		@include span(first 6);
+
+		font-size: 90%;
+		line-height: 38px;
+	}
+
 	.site-info-text {
 		@include span(first 6);
 
@@ -86,6 +93,7 @@ body.no-max-width .footer-widget-area {
 	@media #{$medium-down} {
 
 		.footer-menu,
+		.privacy-policy-link,
 		.site-info-text,
 		.social-menu {
 			@include span(12);
