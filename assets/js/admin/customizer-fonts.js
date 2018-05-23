@@ -1,7 +1,7 @@
 /**
  * Customizer Font Select Preview
  *
- * @since NEXT
+ * @since 1.8.3
  */
 ( function( $ ) {
 
