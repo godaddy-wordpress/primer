@@ -261,7 +261,7 @@ add_action( 'primer_site_info', 'primer_add_credit' );
  * Display privacy policy link
  *
  * @action the_privacy_policy_link
- * @since  NEXT
+ * @since  1.8.3
  */
 function primer_privacy_policy_link() {
 
@@ -270,7 +270,7 @@ function primer_privacy_policy_link() {
 		/**
 		 * Filter the footer privacy policy link display.
 		 *
-		 * @since NEXT
+		 * @since 1.8.3
 		 *
 		 * @var bool
 		 */

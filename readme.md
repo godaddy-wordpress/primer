@@ -3,7 +3,7 @@
 **Tags:**              [custom-background](https://wordpress.org/themes/tags/custom-background/), [custom-colors](https://wordpress.org/themes/tags/custom-colors/), [custom-header](https://wordpress.org/themes/tags/custom-header/), [custom-menu](https://wordpress.org/themes/tags/custom-menu/), [editor-style](https://wordpress.org/themes/tags/editor-style/), [featured-images](https://wordpress.org/themes/tags/featured-images/), [flexible-header](https://wordpress.org/themes/tags/flexible-header/), [left-sidebar](https://wordpress.org/themes/tags/left-sidebar/), [one-column](https://wordpress.org/themes/tags/one-column/), [right-sidebar](https://wordpress.org/themes/tags/right-sidebar/), [rtl-language-support](https://wordpress.org/themes/tags/rtl-language-support/), [sticky-post](https://wordpress.org/themes/tags/sticky-post/), [threaded-comments](https://wordpress.org/themes/tags/threaded-comments/), [three-columns](https://wordpress.org/themes/tags/three-columns/), [translation-ready](https://wordpress.org/themes/tags/translation-ready/), [two-columns](https://wordpress.org/themes/tags/two-columns/)  
 **Requires at least:** 4.4  
 **Tested up to:**      4.9  
-**Stable tag:**        1.8.2  
+**Stable tag:**        1.8.3  
 **License:**           GPL-2.0  
 **License URI:**       https://www.gnu.org/licenses/gpl-2.0.html  
 
