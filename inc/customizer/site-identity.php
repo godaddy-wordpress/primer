@@ -56,7 +56,7 @@ class Primer_Site_Identity_Options {
 	 * Toggle the visibility of the privacy policy link in the footer.
 	 *
 	 * @filter primer_privacy_policy_link
-	 * @since  NEXT
+	 * @since  1.8.3
 	 *
 	 * @return bool Returns true when `show_privacy_policy` theme mod is set.
 	 */

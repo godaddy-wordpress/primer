@@ -402,7 +402,7 @@ class Primer_Customizer_Fonts {
 	 * Enqueue font control scripts.
 	 *
 	 * @action customize_controls_enqueue_scripts
-	 * @since NEXT
+	 * @since 1.8.3
 	 */
 	public function font_control_scripts() {
 
