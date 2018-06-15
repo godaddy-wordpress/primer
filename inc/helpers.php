@@ -261,7 +261,7 @@ function primer_get_hero_image_selector() {
  */
 function primer_use_featured_hero_image() {
 
-	$enabled = (bool) get_theme_mod( 'use_featured_hero_image' );
+	$enabled = (bool) get_theme_mod( 'use_featured_hero_image', 1 );
 
 	/**
 	 * Filter if a post's featured image should be the header image.
