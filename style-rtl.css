@@ -2450,79 +2450,36 @@ li.primer-wc-cart-menu .primer-wc-cart-sub-menu {
 /*--------------------------------------------------------------
 >>> Gutenberg:
 --------------------------------------------------------------*/
-.wp-block-cover-image.alignfull,
-.wp-block-image.alignfull,
-.wp-block-cover-text.alignfull,
-.wp-block-gallery.alignfull,
-.wp-block-text-columns.alignfull {
-  margin-right: -3.375em;
-  width: -webkit-calc( 100% + 6.75em);
-  width: calc( 100% + 6.75em); }
-  .wp-block-cover-image.alignfull figcaption,
-  .wp-block-image.alignfull figcaption,
-  .wp-block-cover-text.alignfull figcaption,
-  .wp-block-gallery.alignfull figcaption,
-  .wp-block-text-columns.alignfull figcaption {
+.alignfull {
+  width: 100vw;
+  position: relative;
+  right: 50%;
+  left: 50%;
+  margin-right: -50vw;
+  margin-left: -50vw;
+  text-align: center; }
+  .alignfull figcaption {
     padding: 0 3.375em; }
-  @media only screen and (max-width: 61.063em) {
-    .wp-block-cover-image.alignfull,
-    .wp-block-image.alignfull,
-    .wp-block-cover-text.alignfull,
-    .wp-block-gallery.alignfull,
-    .wp-block-text-columns.alignfull {
-      margin-right: -2.375em;
-      width: -webkit-calc( 100% + 4.75em);
-      width: calc( 100% + 4.75em); }
-      .wp-block-cover-image.alignfull figcaption,
-      .wp-block-image.alignfull figcaption,
-      .wp-block-cover-text.alignfull figcaption,
-      .wp-block-gallery.alignfull figcaption,
-      .wp-block-text-columns.alignfull figcaption {
+    @media only screen and (max-width: 61.063em) {
+      .alignfull figcaption {
         padding: 0 2.375em; } }
-  @media only screen and (max-width: 40.063em) {
-    .wp-block-cover-image.alignfull,
-    .wp-block-image.alignfull,
-    .wp-block-cover-text.alignfull,
-    .wp-block-gallery.alignfull,
-    .wp-block-text-columns.alignfull {
-      margin-right: -1em;
-      width: -webkit-calc( 100% + 2em);
-      width: calc( 100% + 2em); }
-      .wp-block-cover-image.alignfull figcaption,
-      .wp-block-image.alignfull figcaption,
-      .wp-block-cover-text.alignfull figcaption,
-      .wp-block-gallery.alignfull figcaption,
-      .wp-block-text-columns.alignfull figcaption {
+    @media only screen and (max-width: 40.063em) {
+      .alignfull figcaption {
         padding: 0 1em; } }
 
-.wp-block-cover-image.alignwide,
-.wp-block-image.alignwide,
-.wp-block-cover-text.alignwide,
-.wp-block-image.alignwide,
-.wp-block-gallery.alignwide,
-.wp-block-text-columns.alignwide {
+.alignwide {
   margin-right: -1.6875em;
   margin-left: -1.6875em;
   width: -webkit-calc( 100% + 3.375em);
   width: calc( 100% + 3.375em); }
   @media only screen and (max-width: 61.063em) {
-    .wp-block-cover-image.alignwide,
-    .wp-block-image.alignwide,
-    .wp-block-cover-text.alignwide,
-    .wp-block-image.alignwide,
-    .wp-block-gallery.alignwide,
-    .wp-block-text-columns.alignwide {
+    .alignwide {
       margin-right: -1.1875em;
       margin-left: -1.1875em;
       width: -webkit-calc( 100% + 2.375em);
       width: calc( 100% + 2.375em); } }
   @media only screen and (max-width: 40.063em) {
-    .wp-block-cover-image.alignwide,
-    .wp-block-image.alignwide,
-    .wp-block-cover-text.alignwide,
-    .wp-block-image.alignwide,
-    .wp-block-gallery.alignwide,
-    .wp-block-text-columns.alignwide {
+    .alignwide {
       margin-right: -0.5em;
       margin-left: -0.5em;
       width: -webkit-calc( 100% + 1em);
