@@ -66,12 +66,16 @@ Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 ## Changelog ##
 
+### 1.8.4 ###
+* New: Introduce accessibility controls & styles for tab navigation through the main nav. [evanherman](https://github.com/EvanHerman)
+* Tweak: Add default value of `1` to theme_mod `use_featured_hero_image`. [evanherman](https://github.com/EvanHerman)
+
 ### 1.8.3 ###
-* Tweak: Update `primer_wc_shop_columns()` to reference the shop page ID.
-* New: Introduce a privacy policy link in the footer, when set.
-* New: Introduce `primer_privacy_policy_link ` filter to enable/disable the privacy policy link in footer.
-* New: Add styles for privacy policy link and cookie comment checkbox & label.
-* New: Add font previews to the customizer when selecting a font.
+* New: Introduce a privacy policy link in the footer, when set. [evanherman](https://github.com/EvanHerman)
+* New: Introduce `primer_privacy_policy_link` filter to enable/disable the privacy policy link in footer. [evanherman](https://github.com/EvanHerman)
+* New: Add styles for privacy policy link and cookie comment checkbox & label. [evanherman](https://github.com/EvanHerman)
+* New: Add font previews to the customizer when selecting a font. [evanherman](https://github.com/EvanHerman)
+* Tweak: Update `primer_wc_shop_columns()` to reference the shop page ID. [evanherman](https://github.com/EvanHerman)
 
 ### 1.8.2 ###
 * Fix: Comment counts showing an extra character. @props [evanherman](https://github.com/EvanHerman)
