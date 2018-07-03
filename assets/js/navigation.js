@@ -61,6 +61,30 @@
 
 	}
 
+	function tabNavigationMenuIn() {
+
+		var subMenuCount = $( this ).parents( 'ul.sub-menu' ).length;
+
+		$( this ).parents( 'ul.sub-menu' ).css( 'left', 'auto' );
+
+		if ( 1 <= subMenuCount && $( this ).next().next().hasClass( 'sub-menu' ) ) {
+			$( this ).next().next().css( 'left', '100%' );
+		}
+
+		if ( 2 <= subMenuCount ) {
+			$( this ).parents( 'ul.sub-menu' ).css( 'left', '100%' );
+			$( this ).parents( 'ul.sub-menu' ).last().css( 'left', 'auto' );
+		}
+
+	}
+
+	function tabNavigationMenuOut() {
+
+		$( this ).closest( 'ul.sub-menu' ).find( 'ul.sub-menu' ).removeAttr( 'style' );
+		$( this ).parents( 'ul.sub-menu' ).removeAttr( 'style' );
+
+	}
+
 	function isOffScreen( $submenu ) {
 
 		var submenuPosition = $submenu.offset().left,
@@ -84,6 +108,10 @@
 		$menuToggle.on( 'click', toggle );
 
 		$navMenu.find( '.menu-item-has-children' ).on( 'hover', position );
+
+		$navMenu.find( '.menu-item > a' ).on( 'focusin', tabNavigationMenuIn );
+
+		$navMenu.find( '.menu-item > a' ).on( 'focusout', tabNavigationMenuOut );
 
 		$navMenu.find( '.expand' ).on( 'click', expand );
 

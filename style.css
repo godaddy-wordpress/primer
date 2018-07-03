@@ -701,8 +701,7 @@ a {
             left: 100%; }
           .main-navigation ul ul a {
             width: 200px; } }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
+    .main-navigation ul li:hover > ul {
       left: auto; }
   @media only screen and (min-width: 61.063em) {
     .main-navigation li {
@@ -717,7 +716,7 @@ a {
     @media only screen and (max-width: 61.063em) {
       .main-navigation a {
         padding: 1.2rem 1rem; } }
-    .main-navigation a:hover, .main-navigation a:visited:hover {
+    .main-navigation a:hover, .main-navigation a:focus, .main-navigation a:visited:hover {
       background-color: rgba(0, 0, 0, 0.1);
       color: #ffffff; }
   .main-navigation .current_page_item > a,
