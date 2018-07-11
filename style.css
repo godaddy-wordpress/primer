@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Theme Name: Primer
  * Theme URI: https://github.com/godaddy/wp-primer-theme
@@ -2562,7 +2563,9 @@ li.primer-wc-cart-menu .primer-wc-cart-sub-menu {
       margin-right: 0; } }
 
 .wp-block-pullquote {
-  padding: 2em 0; }
+  padding: 2em 0;
+  border-top: none;
+  border-bottom: none; }
   .wp-block-pullquote p {
     margin: 0 0 0.25rem 0; }
 

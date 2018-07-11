@@ -1,0 +1,26 @@
+.edit-post-visual-editor.narrow .edit-post-post-text-editor__toolbar,
+.edit-post-visual-editor.narrow .editor-writing-flow__click-redirect,
+.edit-post-visual-editor.narrow .editor-post-title__block,
+.edit-post-visual-editor.narrow .editor-block-list__block,
+.edit-post-visual-editor.narrow .editor-default-block-appender,
+.edit-post-text-editor.narrow .edit-post-post-text-editor__toolbar,
+.edit-post-text-editor.narrow .editor-writing-flow__click-redirect,
+.edit-post-text-editor.narrow .editor-post-title__block,
+.edit-post-text-editor.narrow .editor-block-list__block,
+.edit-post-text-editor.narrow .editor-default-block-appender {
+  max-width: 400px; }
+
+.edit-post-visual-editor.wide .edit-post-post-text-editor__toolbar,
+.edit-post-visual-editor.wide .editor-writing-flow__click-redirect,
+.edit-post-visual-editor.wide .editor-post-title__block,
+.edit-post-visual-editor.wide .editor-block-list__block,
+.edit-post-visual-editor.wide .editor-default-block-appender,
+.edit-post-text-editor.wide .edit-post-post-text-editor__toolbar,
+.edit-post-text-editor.wide .editor-writing-flow__click-redirect,
+.edit-post-text-editor.wide .editor-post-title__block,
+.edit-post-text-editor.wide .editor-block-list__block,
+.edit-post-text-editor.wide .editor-default-block-appender {
+  max-width: 800px; }
+
+.components-panel .primer-layout-wrap ul li img {
+  max-width: 85%; }

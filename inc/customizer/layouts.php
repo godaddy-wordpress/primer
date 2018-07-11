@@ -198,6 +198,8 @@ class Primer_Customizer_Layouts {
 
 		}
 
+		global $post;
+
 		$rtl    = is_rtl() ? '-rtl' : '';
 		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
@@ -207,6 +209,14 @@ class Primer_Customizer_Layouts {
 			array( 'jquery' ),
 			PRIMER_VERSION
 		);
+
+    if ( isset( $post->ID ) ) {
+
+      wp_localize_script( 'primer-layouts', 'primerLayouts', [
+        'selected' => $this->get_post_layout( $post->ID ),
+      ] );
+
+    }
 
 		wp_enqueue_style(
 			'primer-layouts',

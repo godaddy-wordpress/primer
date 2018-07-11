@@ -1,0 +1,27 @@
+.edit-post-visual-editor,
+.edit-post-text-editor {
+  &.narrow {
+    .edit-post-post-text-editor__toolbar,
+    .editor-writing-flow__click-redirect,
+    .editor-post-title__block,
+    .editor-block-list__block,
+    .editor-default-block-appender {
+      max-width: 400px;
+    }
+  }
+  &.wide {
+    .edit-post-post-text-editor__toolbar,
+    .editor-writing-flow__click-redirect,
+    .editor-post-title__block,
+    .editor-block-list__block,
+    .editor-default-block-appender {
+      max-width: 800px;
+    }
+  }
+}
+
+.components-panel {
+  .primer-layout-wrap ul li img {
+    max-width: 85%;
+  }
+}
