@@ -39,7 +39,7 @@ window.wp = window.wp || {};
 
 	} );
 
-	$( document ).on( 'DOMContentLoaded', function() {
+	$( document ).on( 'ready', function() {
 		toggleEditorWidth( primerLayouts.selected );
 	} );
 
@@ -49,8 +49,8 @@ function toggleEditorWidth( pageWidth ) {
 
 	pageWidth = pageWidth.indexOf( 'wide' ) >= 0 ? 'wide' : ( pageWidth.indexOf( 'narrow' ) >= 0 || pageWidth.indexOf( 'three-column' ) >= 0 ? 'narrow' : 'default' );
 
-	$( '.edit-post-visual-editor, .edit-post-text-editor' )
-		.removeClass( 'default wide narrow' )
-		.addClass( pageWidth );
+	$( 'body.gutenberg-editor-page' )
+		.removeClass( 'primer-gutenberg-default primer-gutenberg-wide primer-gutenberg-narrow' )
+		.addClass( 'primer-gutenberg-' + pageWidth );
 
 }

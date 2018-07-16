@@ -1,6 +1,6 @@
-.edit-post-visual-editor,
-.edit-post-text-editor {
-  &.narrow {
+body.primer-gutenberg-narrow {
+  .edit-post-visual-editor,
+  .edit-post-text-editor {
     .edit-post-post-text-editor__toolbar,
     .editor-writing-flow__click-redirect,
     .editor-post-title__block,
@@ -9,7 +9,11 @@
       max-width: 400px;
     }
   }
-  &.wide {
+}
+
+body.primer-gutenberg-wide {
+  .edit-post-visual-editor,
+  .edit-post-text-editor {
     .edit-post-post-text-editor__toolbar,
     .editor-writing-flow__click-redirect,
     .editor-post-title__block,
