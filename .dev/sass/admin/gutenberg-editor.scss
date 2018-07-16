@@ -1,31 +1,31 @@
 body.primer-gutenberg-narrow {
-  .edit-post-visual-editor,
-  .edit-post-text-editor {
-    .edit-post-post-text-editor__toolbar,
-    .editor-writing-flow__click-redirect,
-    .editor-post-title__block,
-    .editor-block-list__block,
-    .editor-default-block-appender {
-      max-width: 400px;
-    }
-  }
+	.edit-post-visual-editor,
+	.edit-post-text-editor {
+		.edit-post-post-text-editor__toolbar,
+		.editor-writing-flow__click-redirect,
+		.editor-post-title__block,
+		.editor-block-list__block,
+		.editor-default-block-appender {
+			max-width: 400px;
+		}
+	}
 }
 
 body.primer-gutenberg-wide {
-  .edit-post-visual-editor,
-  .edit-post-text-editor {
-    .edit-post-post-text-editor__toolbar,
-    .editor-writing-flow__click-redirect,
-    .editor-post-title__block,
-    .editor-block-list__block,
-    .editor-default-block-appender {
-      max-width: none;
-    }
-  }
+	.edit-post-visual-editor,
+	.edit-post-text-editor {
+		.edit-post-post-text-editor__toolbar,
+		.editor-writing-flow__click-redirect,
+		.editor-post-title__block,
+		.editor-block-list__block,
+		.editor-default-block-appender {
+			max-width: none;
+		}
+	}
 }
 
 .components-panel {
-  .primer-layout-wrap ul li img {
-    max-width: 85%;
-  }
+	.primer-layout-wrap ul li img {
+		max-width: 85%;
+	}
 }
