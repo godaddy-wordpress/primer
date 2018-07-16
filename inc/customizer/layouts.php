@@ -210,13 +210,13 @@ class Primer_Customizer_Layouts {
 			PRIMER_VERSION
 		);
 
-    if ( isset( $post->ID ) ) {
+		if ( isset( $post->ID ) ) {
 
-      wp_localize_script( 'primer-layouts', 'primerLayouts', [
-        'selected' => $this->get_post_layout( $post->ID ),
-      ] );
+			wp_localize_script( 'primer-layouts', 'primerLayouts', [
+				'selected' => $this->get_post_layout( $post->ID ),
+			] );
 
-    }
+		}
 
 		wp_enqueue_style(
 			'primer-layouts',

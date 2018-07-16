@@ -13,8 +13,6 @@
  * Enable Gutenberg features.
  *
  * @since NEXT
- *
- * @return null
  */
 function primer_gutenberg_theme_support() {
 
@@ -28,8 +26,6 @@ add_action( 'after_setup_theme', 'primer_gutenberg_theme_support' );
  * Enqueue styles for Gutenberg editor.
  *
  * @since NEXT
- *
- * @return null
  */
 function primer_gutenberg_editor_assets() {
 
