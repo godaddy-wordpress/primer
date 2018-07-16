@@ -22,7 +22,7 @@
 
 		<span class="comments-number">
 
-			<?php comments_popup_link( esc_html__( 'Leave a comment', 'primer' ), esc_html__( '1 Comment', 'primer' ), /* translators: number of comments */ esc_html__( '%d Comments', 'primer' ), 'comments-link' ); ?>
+			<?php comments_popup_link( esc_html__( 'Leave a comment', 'primer' ), esc_html__( '1 Comment', 'primer' ), /* translators: number of comments */ esc_html__( '% Comments', 'primer' ), 'comments-link' ); ?>
 
 		</span>
 

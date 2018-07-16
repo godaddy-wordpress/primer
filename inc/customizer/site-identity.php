@@ -28,6 +28,8 @@ class Primer_Site_Identity_Options {
 
 		}
 
+		add_filter( 'primer_privacy_policy_link', array( $this, 'toggle_primer_privacy_link' ) );
+
 		add_filter( 'primer_author_credit', array( $this, 'toggle_primer_author_credit' ) );
 
 		add_action( 'customize_register', array( $this, 'customize_register' ) );
@@ -47,6 +49,22 @@ class Primer_Site_Identity_Options {
 		$show_author_credit = get_theme_mod( 'show_author_credit', true );
 
 		return ! empty( $show_author_credit );
+
+	}
+
+	/**
+	 * Toggle the visibility of the privacy policy link in the footer.
+	 *
+	 * @filter primer_privacy_policy_link
+	 * @since  1.8.3
+	 *
+	 * @return bool Returns true when `show_privacy_policy` theme mod is set.
+	 */
+	public function toggle_primer_privacy_link() {
+
+		$show_privacy_policy = get_theme_mod( 'show_privacy_policy', true );
+
+		return ! empty( $show_privacy_policy );
 
 	}
 
@@ -102,6 +120,25 @@ class Primer_Site_Identity_Options {
 				'label'    => esc_html__( 'Display theme author credit', 'primer' ),
 				'section'  => 'title_tagline',
 				'settings' => 'show_author_credit',
+				'type'     => 'checkbox',
+				'priority' => 50,
+			)
+		);
+
+		$wp_customize->add_setting(
+			'show_privacy_policy',
+			array(
+				'default'           => 1,
+				'sanitize_callback' => 'absint',
+			)
+		);
+
+		$wp_customize->add_control(
+			'show_privacy_policy',
+			array(
+				'label'    => esc_html__( 'Display privacy policy link', 'primer' ),
+				'section'  => 'title_tagline',
+				'settings' => 'show_privacy_policy',
 				'type'     => 'checkbox',
 				'priority' => 50,
 			)

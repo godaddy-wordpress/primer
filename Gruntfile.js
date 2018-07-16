@@ -26,6 +26,12 @@ module.exports = function( grunt ) {
 			editor: {
 				src: [ 'editor-style.css' ]
 			},
+			layouts: {
+				src: [ 'assets/css/admin/layouts.css' ]
+			},
+			customizer_fonts: {
+				src: [ 'assets/css/admin/customizer-fonts.css' ]
+			},
 			main: {
 				src: [ 'style.css' ]
 			}
@@ -271,11 +277,11 @@ module.exports = function( grunt ) {
 				precision: 5,
 				sourceMap: false
 			},
-			assets: {
-				expand: true,
-				cwd: '.dev/sass/assets/',
-				src: [ '**/*.scss' ],
-				dest: 'assets/css/'
+			admin: {
+				files: {
+					'assets/css/admin/customizer-fonts.css': '.dev/sass/admin/customizer-fonts.scss',
+					'assets/css/admin/layouts.css': '.dev/sass/admin/layouts.scss'
+				}
 			},
 			editor: {
 				files: {
@@ -318,7 +324,7 @@ module.exports = function( grunt ) {
 			deploy_docs: [
 				'cd .dev/docs/build/html',
 				'git add .',
-				'git commit -m "Update Documentation"',
+				'git commit -m "Update Documentation" || true',
 				'git push origin gh-pages --force'
 			].join( ' && ' )
 		},
@@ -347,7 +353,7 @@ module.exports = function( grunt ) {
 			},
 			sass: {
 				files: '.dev/sass/**/*.scss',
-				tasks: [ 'sass', 'autoprefixer', 'cssjanus', 'cssmin' ]
+				tasks: [ 'sass', 'replace:charset', 'autoprefixer', 'cssjanus', 'cssmin' ]
 			}
 		},
 
@@ -392,6 +398,6 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'deploy-docs', [ 'update-docs', 'shell:deploy_docs' ] );
 	grunt.registerTask( 'update-pot',  [ 'makepot' ] );
 	grunt.registerTask( 'update-mo',   [ 'potomo' ] );
-	grunt.registerTask( 'version',     [ 'replace', 'readme' ] );
+	grunt.registerTask( 'version',     [ 'replace', 'readme', 'default', 'clean' ] );
 
 };

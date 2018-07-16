@@ -258,6 +258,36 @@ function primer_add_credit() {
 add_action( 'primer_site_info', 'primer_add_credit' );
 
 /**
+ * Display privacy policy link
+ *
+ * @action the_privacy_policy_link
+ * @since  1.8.3
+ */
+function primer_privacy_policy_link() {
+
+	if ( function_exists( 'the_privacy_policy_link' ) ) {
+
+		/**
+		 * Filter the footer privacy policy link display.
+		 *
+		 * @since 1.8.3
+		 *
+		 * @var bool
+		 */
+		if ( ! (bool) apply_filters( 'primer_privacy_policy_link', true ) ) {
+
+			return;
+
+		}
+
+		the_privacy_policy_link();
+
+	}
+
+}
+add_action( 'primer_site_info', 'primer_privacy_policy_link', 7 );
+
+/**
  * Set the post excerpt length to 20 words.
  *
  * To override this in a child theme, remove the filter and add

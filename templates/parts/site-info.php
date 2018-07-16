@@ -21,6 +21,7 @@
 			 *
 			 * @hooked primer_add_footer_navigation - 5
 			 * @hooked primer_add_social_navigation - 7
+			 * @hooked primer_privacy_policy_link - 7
 			 * @hooked primer_add_credit - 10
 			 *
 			 * @since 1.0.0

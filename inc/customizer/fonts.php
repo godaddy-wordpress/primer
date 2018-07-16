@@ -166,6 +166,8 @@ class Primer_Customizer_Fonts {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_google_fonts' ), 11 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_inline_css' ), 12 );
 
+		add_action( 'customize_controls_enqueue_scripts', array( $this, 'font_control_scripts' ) );
+
 	}
 
 	/**
@@ -229,6 +231,8 @@ class Primer_Customizer_Fonts {
 			);
 
 		}
+
+		$suffix = SCRIPT_DEBUG ? '' : '.min';
 
 	}
 
@@ -391,6 +395,21 @@ class Primer_Customizer_Fonts {
 			wp_add_inline_style( Primer_Customizer::$stylesheet . '-fonts', $css );
 
 		}
+
+	}
+
+	/**
+	 * Enqueue font control scripts.
+	 *
+	 * @action customize_controls_enqueue_scripts
+	 * @since 1.8.3
+	 */
+	public function font_control_scripts() {
+
+		$suffix = SCRIPT_DEBUG ? '' : '.min';
+
+		wp_enqueue_style( 'primer-customizer-fonts', get_template_directory_uri() . "/assets/css/admin/customizer-fonts{$suffix}.css", array(), PRIMER_VERSION, 'all' );
+		wp_enqueue_script( 'primer-customizer-fonts', get_template_directory_uri() . "/assets/js/admin/customizer-fonts{$suffix}.js", array( 'jquery' ), PRIMER_VERSION, true );
 
 	}
 
