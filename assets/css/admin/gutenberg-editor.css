@@ -20,7 +20,7 @@ body.primer-gutenberg-wide .edit-post-text-editor .editor-writing-flow__click-re
 body.primer-gutenberg-wide .edit-post-text-editor .editor-post-title__block,
 body.primer-gutenberg-wide .edit-post-text-editor .editor-block-list__block,
 body.primer-gutenberg-wide .edit-post-text-editor .editor-default-block-appender {
-  max-width: 800px; }
+  max-width: none; }
 
 .components-panel .primer-layout-wrap ul li img {
   max-width: 85%; }
