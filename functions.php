@@ -128,6 +128,17 @@ if ( class_exists( 'FLBuilder' ) ) {
 }
 
 /**
+ * Load Gutenberg compatiblity.
+ *
+ * @since NEXT
+ */
+if ( defined( 'GUTENBERG_VERSION' ) ) {
+
+	require_once get_template_directory() . '/inc/compat/gutenberg.php';
+
+}
+
+/**
  * Load Jetpack compatibility file.
  *
  * @since 1.0.0
