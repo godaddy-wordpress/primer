@@ -2470,130 +2470,129 @@ li.primer-wc-cart-menu .primer-wc-cart-sub-menu {
 /*--------------------------------------------------------------
 >>> Gutenberg:
 --------------------------------------------------------------*/
-.alignfull {
+body.customize-support .alignfull {
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
-  margin-right: -50vw;
-  text-align: center; }
-  .alignfull figcaption {
+  margin-right: -50vw; }
+  body.customize-support .alignfull figcaption {
     padding: 0 3.375em; }
     @media only screen and (max-width: 61.063em) {
-      .alignfull figcaption {
+      body.customize-support .alignfull figcaption {
         padding: 0 2.375em; } }
     @media only screen and (max-width: 40.063em) {
-      .alignfull figcaption {
+      body.customize-support .alignfull figcaption {
         padding: 0 1em; } }
 
-.alignwide {
+body.customize-support .alignwide {
   margin-left: -1.6875em;
   margin-right: -1.6875em;
   width: -webkit-calc( 100% + 3.375em);
   width: calc( 100% + 3.375em); }
   @media only screen and (max-width: 61.063em) {
-    .alignwide {
+    body.customize-support .alignwide {
       margin-left: -1.1875em;
       margin-right: -1.1875em;
       width: -webkit-calc( 100% + 2.375em);
       width: calc( 100% + 2.375em); } }
   @media only screen and (max-width: 40.063em) {
-    .alignwide {
+    body.customize-support .alignwide {
       margin-left: -0.5em;
       margin-right: -0.5em;
       width: -webkit-calc( 100% + 1em);
       width: calc( 100% + 1em); } }
 
-.wp-block-image.alignleft,
-.wp-block-gallery.alignleft,
-.wp-block-video.alignleft,
-.wp-block-quote.alignleft,
-.wp-block-text-columns.alignleft,
-.entry-content ul.alignleft,
-.entry-content ol.alignleft,
-.wp-block-cover-text.alignleft {
+body.customize-support .wp-block-image.alignleft,
+body.customize-support .wp-block-gallery.alignleft,
+body.customize-support .wp-block-video.alignleft,
+body.customize-support .wp-block-quote.alignleft,
+body.customize-support .wp-block-text-columns.alignleft,
+body.customize-support .entry-content ul.alignleft,
+body.customize-support .entry-content ol.alignleft,
+body.customize-support .wp-block-cover-text.alignleft {
   margin: 0 1.5em 1.5em 0; }
 
-.wp-block-image.alignright,
-.wp-block-gallery.alignright,
-.wp-block-video.alignright,
-.wp-block-quote.alignright,
-.wp-block-text-columns.alignright,
-.entry-content ul.alignright,
-.entry-content ol.alignright,
-.wp-block-cover-text.alignright {
+body.customize-support .wp-block-image.alignright,
+body.customize-support .wp-block-gallery.alignright,
+body.customize-support .wp-block-video.alignright,
+body.customize-support .wp-block-quote.alignright,
+body.customize-support .wp-block-text-columns.alignright,
+body.customize-support .entry-content ul.alignright,
+body.customize-support .entry-content ol.alignright,
+body.customize-support .wp-block-cover-text.alignright {
   margin: 0 0 1.5em 1.5em; }
 
-.wp-block-image.alignleft, .wp-block-image.alignright,
-.wp-block-gallery.alignleft,
-.wp-block-gallery.alignright,
-.wp-block-video.alignleft,
-.wp-block-video.alignright,
-.wp-block-quote.alignleft,
-.wp-block-quote.alignright,
-.wp-block-text-columns.alignleft,
-.wp-block-text-columns.alignright,
-.entry-content ul.alignleft,
-.entry-content ul.alignright,
-.entry-content ol.alignleft,
-.entry-content ol.alignright,
-.wp-block-cover-text.alignleft,
-.wp-block-cover-text.alignright {
+body.customize-support .wp-block-image.alignleft, body.customize-support .wp-block-image.alignright,
+body.customize-support .wp-block-gallery.alignleft,
+body.customize-support .wp-block-gallery.alignright,
+body.customize-support .wp-block-video.alignleft,
+body.customize-support .wp-block-video.alignright,
+body.customize-support .wp-block-quote.alignleft,
+body.customize-support .wp-block-quote.alignright,
+body.customize-support .wp-block-text-columns.alignleft,
+body.customize-support .wp-block-text-columns.alignright,
+body.customize-support .entry-content ul.alignleft,
+body.customize-support .entry-content ul.alignright,
+body.customize-support .entry-content ol.alignleft,
+body.customize-support .entry-content ol.alignright,
+body.customize-support .wp-block-cover-text.alignleft,
+body.customize-support .wp-block-cover-text.alignright {
   max-width: -webkit-calc( 0.4 * 1100px);
   max-width: calc( 0.4 * 1100px); }
   @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
-    .wp-block-image.alignleft, .wp-block-image.alignright,
-    .wp-block-gallery.alignleft,
-    .wp-block-gallery.alignright,
-    .wp-block-video.alignleft,
-    .wp-block-video.alignright,
-    .wp-block-quote.alignleft,
-    .wp-block-quote.alignright,
-    .wp-block-text-columns.alignleft,
-    .wp-block-text-columns.alignright,
-    .entry-content ul.alignleft,
-    .entry-content ul.alignright,
-    .entry-content ol.alignleft,
-    .entry-content ol.alignright,
-    .wp-block-cover-text.alignleft,
-    .wp-block-cover-text.alignright {
+    body.customize-support .wp-block-image.alignleft, body.customize-support .wp-block-image.alignright,
+    body.customize-support .wp-block-gallery.alignleft,
+    body.customize-support .wp-block-gallery.alignright,
+    body.customize-support .wp-block-video.alignleft,
+    body.customize-support .wp-block-video.alignright,
+    body.customize-support .wp-block-quote.alignleft,
+    body.customize-support .wp-block-quote.alignright,
+    body.customize-support .wp-block-text-columns.alignleft,
+    body.customize-support .wp-block-text-columns.alignright,
+    body.customize-support .entry-content ul.alignleft,
+    body.customize-support .entry-content ul.alignright,
+    body.customize-support .entry-content ol.alignleft,
+    body.customize-support .entry-content ol.alignright,
+    body.customize-support .wp-block-cover-text.alignleft,
+    body.customize-support .wp-block-cover-text.alignright {
       max-width: -webkit-calc( 0.25 * 1100px);
       max-width: calc( 0.25 * 1100px);
       margin-bottom: 0.5em; } }
   @media only screen and (max-width: 40.063em) {
-    .wp-block-image.alignleft, .wp-block-image.alignright,
-    .wp-block-gallery.alignleft,
-    .wp-block-gallery.alignright,
-    .wp-block-video.alignleft,
-    .wp-block-video.alignright,
-    .wp-block-quote.alignleft,
-    .wp-block-quote.alignright,
-    .wp-block-text-columns.alignleft,
-    .wp-block-text-columns.alignright,
-    .entry-content ul.alignleft,
-    .entry-content ul.alignright,
-    .entry-content ol.alignleft,
-    .entry-content ol.alignright,
-    .wp-block-cover-text.alignleft,
-    .wp-block-cover-text.alignright {
+    body.customize-support .wp-block-image.alignleft, body.customize-support .wp-block-image.alignright,
+    body.customize-support .wp-block-gallery.alignleft,
+    body.customize-support .wp-block-gallery.alignright,
+    body.customize-support .wp-block-video.alignleft,
+    body.customize-support .wp-block-video.alignright,
+    body.customize-support .wp-block-quote.alignleft,
+    body.customize-support .wp-block-quote.alignright,
+    body.customize-support .wp-block-text-columns.alignleft,
+    body.customize-support .wp-block-text-columns.alignright,
+    body.customize-support .entry-content ul.alignleft,
+    body.customize-support .entry-content ul.alignright,
+    body.customize-support .entry-content ol.alignleft,
+    body.customize-support .entry-content ol.alignright,
+    body.customize-support .wp-block-cover-text.alignleft,
+    body.customize-support .wp-block-cover-text.alignright {
       max-width: 100%;
       margin-left: 0;
       margin-right: 0; } }
 
-.wp-block-pullquote {
+body.customize-support .wp-block-pullquote {
   padding: 2em 0;
   border-top: none;
   border-bottom: none; }
-  .wp-block-pullquote p {
+  body.customize-support .wp-block-pullquote p {
     margin: 0 0 0.25rem 0; }
 
-body.customize-support h1,
-body.customize-support h2,
-body.customize-support h3,
-body.customize-support h4,
-body.customize-support h5,
-body.customize-support h6,
-body.customize-support .site-title,
-body.customize-support .page-title {
+body.customize-support body.customize-support h1,
+body.customize-support body.customize-support h2,
+body.customize-support body.customize-support h3,
+body.customize-support body.customize-support h4,
+body.customize-support body.customize-support h5,
+body.customize-support body.customize-support h6,
+body.customize-support body.customize-support .site-title,
+body.customize-support body.customize-support .page-title {
   clear: none; }
