@@ -2,6 +2,16 @@
 >>> Gutenberg:
 --------------------------------------------------------------*/
 body.customize-support {
+	.page-header {
+		max-width: 100%;
+
+		.page-title {
+			width: 100%;
+			margin: 0;
+			padding: 2.5em 3.375em 0 3.375em;
+		}
+	}
+
 	.alignfull {
 		width: 100vw;
 		position: relative;
@@ -84,16 +94,14 @@ body.customize-support {
 		}
 	}
 
-	body.customize-support {
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6,
-		.site-title,
-		.page-title {
-			clear: none;
-		}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.site-title,
+	.page-title {
+		clear: none;
 	}
 }

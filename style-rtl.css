@@ -2470,6 +2470,13 @@ li.primer-wc-cart-menu .primer-wc-cart-sub-menu {
 /*--------------------------------------------------------------
 >>> Gutenberg:
 --------------------------------------------------------------*/
+body.customize-support .page-header {
+  max-width: 100%; }
+  body.customize-support .page-header .page-title {
+    width: 100%;
+    margin: 0;
+    padding: 2.5em 3.375em 0 3.375em; }
+
 body.customize-support .alignfull {
   width: 100vw;
   position: relative;
@@ -2587,12 +2594,12 @@ body.customize-support .wp-block-pullquote {
   body.customize-support .wp-block-pullquote p {
     margin: 0 0 0.25rem 0; }
 
-body.customize-support body.customize-support h1,
-body.customize-support body.customize-support h2,
-body.customize-support body.customize-support h3,
-body.customize-support body.customize-support h4,
-body.customize-support body.customize-support h5,
-body.customize-support body.customize-support h6,
-body.customize-support body.customize-support .site-title,
-body.customize-support body.customize-support .page-title {
+body.customize-support h1,
+body.customize-support h2,
+body.customize-support h3,
+body.customize-support h4,
+body.customize-support h5,
+body.customize-support h6,
+body.customize-support .site-title,
+body.customize-support .page-title {
   clear: none; }
