@@ -6,13 +6,13 @@
  * @subpackage Gutenberg
  * @category   Core
  * @author     GoDaddy
- * @since      NEXT
+ * @since      1.8.5
  */
 
 /**
  * Enable Gutenberg features.
  *
- * @since NEXT
+ * @since 1.8.5
  */
 function primer_gutenberg_theme_support() {
 
@@ -25,7 +25,7 @@ add_action( 'after_setup_theme', 'primer_gutenberg_theme_support' );
 /**
  * Enqueue styles for Gutenberg editor.
  *
- * @since NEXT
+ * @since 1.8.5
  */
 function primer_gutenberg_editor_assets() {
 
