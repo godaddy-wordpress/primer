@@ -23,7 +23,7 @@
  *
  * @var string
  */
-define( 'PRIMER_VERSION', '1.8.4' );
+define( 'PRIMER_VERSION', '1.8.5' );
 
 /**
  * Minimum WordPress version required for Primer.
@@ -130,7 +130,7 @@ if ( class_exists( 'FLBuilder' ) ) {
 /**
  * Load Gutenberg compatiblity.
  *
- * @since NEXT
+ * @since 1.8.5
  */
 require_once get_template_directory() . '/inc/compat/gutenberg.php';
 
