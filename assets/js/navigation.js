@@ -3,7 +3,7 @@
 ( function( $ ) {
 
 	var $navMenu    = false,
-      $menuToggle = false,
+	    $menuToggle = false,
 	    $submenu    = false;
 
 	function toggle() {
