@@ -13,7 +13,8 @@
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0; }
+  margin: 0;
+  list-style-type: none !important; }
   .primer-layout-wrap ul li {
     margin: 0.3em 0.3em;
     padding: 0; }
@@ -24,8 +25,7 @@
     .primer-layout-wrap ul li span {
       display: none; }
     .primer-layout-wrap ul li img {
-      width: -webkit-calc(100% - 0.3em - 12px);
-      width: calc(100% - 0.3em - 12px);
+      width: 100%;
       height: auto;
       padding: 6px; }
     .primer-layout-wrap ul li label {

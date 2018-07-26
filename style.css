@@ -33,6 +33,7 @@
 # Content
     ## Posts and pages
 	## Comments
+# Compatibility
 # Infinite scroll
 # Media
 	## Captions
@@ -2465,3 +2466,96 @@ li.primer-wc-cart-menu .primer-wc-cart-sub-menu {
     width: 100%; }
   ul.cart_list li.mini_cart_item a:nth-child(2) {
     padding-bottom: 0; } }
+
+/*--------------------------------------------------------------
+>>> Gutenberg:
+--------------------------------------------------------------*/
+[class^="wp-block-"].alignfull {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw; }
+
+[class^="wp-block-"].alignwide {
+  margin-left: -1.6875em;
+  margin-right: -1.6875em;
+  width: -webkit-calc( 100% + 3.375em);
+  width: calc( 100% + 3.375em); }
+  @media only screen and (max-width: 61.063em) {
+    [class^="wp-block-"].alignwide {
+      margin-left: -1.1875em;
+      margin-right: -1.1875em;
+      width: -webkit-calc( 100% + 2.375em);
+      width: calc( 100% + 2.375em); } }
+  @media only screen and (max-width: 40.063em) {
+    [class^="wp-block-"].alignwide {
+      margin-left: -0.5em;
+      margin-right: -0.5em;
+      width: -webkit-calc( 100% + 1em);
+      width: calc( 100% + 1em); } }
+
+.wp-block-image.alignleft,
+.wp-block-gallery.alignleft,
+.wp-block-video.alignleft,
+.wp-block-quote.alignleft,
+.wp-block-text-columns.alignleft,
+.entry-content ul.alignleft,
+.entry-content ol.alignleft,
+.wp-block-cover-text.alignleft {
+  margin: 0 1.5em 1.5em 0; }
+
+.wp-block-image.alignright,
+.wp-block-gallery.alignright,
+.wp-block-video.alignright,
+.wp-block-quote.alignright,
+.wp-block-text-columns.alignright,
+.entry-content ul.alignright,
+.entry-content ol.alignright,
+.wp-block-cover-text.alignright {
+  margin: 0 0 1.5em 1.5em; }
+
+.wp-block-image.alignleft, .wp-block-image.alignright,
+.wp-block-gallery.alignleft,
+.wp-block-gallery.alignright,
+.wp-block-video.alignleft,
+.wp-block-video.alignright,
+.wp-block-quote.alignleft,
+.wp-block-quote.alignright,
+.wp-block-text-columns.alignleft,
+.wp-block-text-columns.alignright,
+.entry-content ul.alignleft,
+.entry-content ul.alignright,
+.entry-content ol.alignleft,
+.entry-content ol.alignright,
+.wp-block-cover-text.alignleft,
+.wp-block-cover-text.alignright {
+  max-width: 40%;
+  width: 100%; }
+  .wp-block-image.alignleft img, .wp-block-image.alignright img,
+  .wp-block-gallery.alignleft img,
+  .wp-block-gallery.alignright img,
+  .wp-block-video.alignleft img,
+  .wp-block-video.alignright img,
+  .wp-block-quote.alignleft img,
+  .wp-block-quote.alignright img,
+  .wp-block-text-columns.alignleft img,
+  .wp-block-text-columns.alignright img,
+  .entry-content ul.alignleft img,
+  .entry-content ul.alignright img,
+  .entry-content ol.alignleft img,
+  .entry-content ol.alignright img,
+  .wp-block-cover-text.alignleft img,
+  .wp-block-cover-text.alignright img {
+    width: inherit; }
+
+.wp-block-audio audio {
+  width: 100%; }
+
+.wp-block-pullquote {
+  padding: 2em 0;
+  border-top: none;
+  border-bottom: none; }
+  .wp-block-pullquote p {
+    margin: 0 0 0.25rem 0; }

@@ -1,0 +1,72 @@
+/*--------------------------------------------------------------
+>>> Gutenberg:
+--------------------------------------------------------------*/
+[class^="wp-block-"].alignfull {
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+}
+
+[class^="wp-block-"].alignwide {
+	margin-left: -1.6875em;
+	margin-right: -1.6875em;
+	width: calc( 100% + 3.375em );
+
+	@media #{$medium-down} {
+		margin-left: -1.1875em;
+		margin-right: -1.1875em;
+		width: calc( 100% + 2.375em );
+	}
+
+	@media #{$small-only} {
+		margin-left: -0.5em;
+		margin-right: -0.5em;
+		width: calc( 100% + 1em );
+	}
+}
+
+.wp-block-image,
+.wp-block-gallery,
+.wp-block-video,
+.wp-block-quote,
+.wp-block-text-columns,
+.entry-content ul,
+.entry-content ol,
+.wp-block-cover-text {
+	&.alignleft {
+		margin: 0 1.5em 1.5em 0;
+	}
+
+	&.alignright {
+		margin: 0 0 1.5em 1.5em;
+	}
+
+	&.alignleft,
+	&.alignright {
+		max-width: 40%;
+		width: 100%;
+
+		img {
+			width: inherit;
+		}
+	}
+}
+
+.wp-block-audio {
+	audio {
+		width: 100%;
+	}
+}
+
+.wp-block-pullquote {
+	padding: 2em 0;
+	border-top: none;
+	border-bottom: none;
+
+	p {
+		margin: 0 0 0.25rem 0;
+	}
+}

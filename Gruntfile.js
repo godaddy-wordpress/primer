@@ -288,6 +288,16 @@ module.exports = function( grunt ) {
 					'editor-style.css': '.dev/sass/editor-style.scss'
 				}
 			},
+			layouts: {
+				files: {
+					'assets/css/admin/layouts.css': '.dev/sass/admin/layouts.scss'
+				}
+			},
+			gutenberg: {
+				files: {
+					'assets/css/admin/gutenberg-editor.css': '.dev/sass/admin/gutenberg-editor.scss'
+				}
+			},
 			main: {
 				files: {
 					'style.css': '.dev/sass/style.scss'

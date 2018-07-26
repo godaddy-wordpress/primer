@@ -107,11 +107,16 @@
 
 		$menuToggle.on( 'click', toggle );
 
-		$navMenu.find( '.menu-item-has-children' ).on( 'hover', position );
+		$navMenu.find( '.menu-item-has-children' ).on( 'hover, focusin', position );
 
-		$navMenu.find( '.menu-item > a' ).on( 'focusin', tabNavigationMenuIn );
-
-		$navMenu.find( '.menu-item > a' ).on( 'focusout', tabNavigationMenuOut );
+		$navMenu.find( '.menu-item > a' ).on( 'keyup', function( e ) {
+			if ( 9 !== e.which ) {
+				return;
+			}
+			$menuItem = $navMenu.find( '.menu-item > a' );
+			$menuItem.on( 'focusin', tabNavigationMenuIn );
+			$menuItem.on( 'focusout', tabNavigationMenuOut );
+		} );
 
 		$navMenu.find( '.expand' ).on( 'click', expand );
 

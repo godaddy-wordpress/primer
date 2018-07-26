@@ -1,0 +1,26 @@
+body.primer-gutenberg-narrow .edit-post-visual-editor .edit-post-post-text-editor__toolbar,
+body.primer-gutenberg-narrow .edit-post-visual-editor .editor-writing-flow__click-redirect,
+body.primer-gutenberg-narrow .edit-post-visual-editor .editor-post-title__block,
+body.primer-gutenberg-narrow .edit-post-visual-editor .editor-block-list__block,
+body.primer-gutenberg-narrow .edit-post-visual-editor .editor-default-block-appender,
+body.primer-gutenberg-narrow .edit-post-text-editor .edit-post-post-text-editor__toolbar,
+body.primer-gutenberg-narrow .edit-post-text-editor .editor-writing-flow__click-redirect,
+body.primer-gutenberg-narrow .edit-post-text-editor .editor-post-title__block,
+body.primer-gutenberg-narrow .edit-post-text-editor .editor-block-list__block,
+body.primer-gutenberg-narrow .edit-post-text-editor .editor-default-block-appender {
+  max-width: 400px; }
+
+body.primer-gutenberg-wide .edit-post-visual-editor .edit-post-post-text-editor__toolbar,
+body.primer-gutenberg-wide .edit-post-visual-editor .editor-writing-flow__click-redirect,
+body.primer-gutenberg-wide .edit-post-visual-editor .editor-post-title__block,
+body.primer-gutenberg-wide .edit-post-visual-editor .editor-block-list__block,
+body.primer-gutenberg-wide .edit-post-visual-editor .editor-default-block-appender,
+body.primer-gutenberg-wide .edit-post-text-editor .edit-post-post-text-editor__toolbar,
+body.primer-gutenberg-wide .edit-post-text-editor .editor-writing-flow__click-redirect,
+body.primer-gutenberg-wide .edit-post-text-editor .editor-post-title__block,
+body.primer-gutenberg-wide .edit-post-text-editor .editor-block-list__block,
+body.primer-gutenberg-wide .edit-post-text-editor .editor-default-block-appender {
+  max-width: none; }
+
+.components-panel .primer-layout-wrap ul li img {
+  max-width: 85%; }
