@@ -23,7 +23,7 @@
  *
  * @var string
  */
-define( 'PRIMER_VERSION', '1.8.4' );
+define( 'PRIMER_VERSION', '1.8.5' );
 
 /**
  * Minimum WordPress version required for Primer.
