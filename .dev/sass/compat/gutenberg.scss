@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
 >>> Gutenberg:
 --------------------------------------------------------------*/
-.alignfull {
+[class^="wp-block-"].alignfull {
 	width: 100vw;
 	position: relative;
 	left: 50%;
@@ -10,7 +10,7 @@
 	margin-right: -50vw;
 }
 
-.alignwide {
+[class^="wp-block-"].alignwide {
 	margin-left: -1.6875em;
 	margin-right: -1.6875em;
 	width: calc( 100% + 3.375em );

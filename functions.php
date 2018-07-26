@@ -132,11 +132,8 @@ if ( class_exists( 'FLBuilder' ) ) {
  *
  * @since NEXT
  */
-if ( defined( 'GUTENBERG_VERSION' ) ) {
+require_once get_template_directory() . '/inc/compat/gutenberg.php';
 
-	require_once get_template_directory() . '/inc/compat/gutenberg.php';
-
-}
 
 /**
  * Load Jetpack compatibility file.

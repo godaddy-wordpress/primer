@@ -2470,7 +2470,7 @@ li.primer-wc-cart-menu .primer-wc-cart-sub-menu {
 /*--------------------------------------------------------------
 >>> Gutenberg:
 --------------------------------------------------------------*/
-.alignfull {
+[class^="wp-block-"].alignfull {
   width: 100vw;
   position: relative;
   right: 50%;
@@ -2478,19 +2478,19 @@ li.primer-wc-cart-menu .primer-wc-cart-sub-menu {
   margin-right: -50vw;
   margin-left: -50vw; }
 
-.alignwide {
+[class^="wp-block-"].alignwide {
   margin-right: -1.6875em;
   margin-left: -1.6875em;
   width: -webkit-calc( 100% + 3.375em);
   width: calc( 100% + 3.375em); }
   @media only screen and (max-width: 61.063em) {
-    .alignwide {
+    [class^="wp-block-"].alignwide {
       margin-right: -1.1875em;
       margin-left: -1.1875em;
       width: -webkit-calc( 100% + 2.375em);
       width: calc( 100% + 2.375em); } }
   @media only screen and (max-width: 40.063em) {
-    .alignwide {
+    [class^="wp-block-"].alignwide {
       margin-right: -0.5em;
       margin-left: -0.5em;
       width: -webkit-calc( 100% + 1em);

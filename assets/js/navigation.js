@@ -3,8 +3,8 @@
 ( function( $ ) {
 
 	var $navMenu    = false,
-			$menuToggle = false,
-			$submenu    = false;
+      $menuToggle = false,
+	    $submenu    = false;
 
 	function toggle() {
 
@@ -88,7 +88,7 @@
 	function isOffScreen( $submenu ) {
 
 		var submenuPosition = $submenu.offset().left,
-				submenuWidth    = $submenu.width();
+		    submenuWidth    = $submenu.width();
 
 		return ( submenuPosition + submenuWidth ) > $( window ).width();
 
