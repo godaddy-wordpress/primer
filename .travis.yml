@@ -57,6 +57,8 @@ after_script:
 jobs:
   fast_finish: true
   exclude:
+    - php: 5.3
+      env: WP_VERSION=trunk
     - php: 5.6
       env: WP_VERSION=trunk
     - php: 7.1
