@@ -66,6 +66,9 @@ Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 ## Changelog ##
 
+### 1.8.6 ###
+* Tweak: Adjust shorthand array syntax to ensure backwards compatibility with PHP < 5.6. @props [evanherman](https://github.com/EvanHerman)
+
 ### 1.8.5 ###
 * New: Introduce styles for Gutenberg compatibility. @props [evanherman](https://github.com/EvanHerman)
 * Tweak: Update navigation script to fix left side menu item click bug. @props [evanherman](https://github.com/EvanHerman)
