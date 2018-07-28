@@ -18,6 +18,7 @@ language:
   - node_js
 
 php:
+  - 5.3
   - 5.6
   - 7.1
 
