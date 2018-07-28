@@ -212,9 +212,9 @@ class Primer_Customizer_Layouts {
 
 		if ( isset( $post->ID ) ) {
 
-			wp_localize_script( 'primer-layouts', 'primerLayouts', [
+			wp_localize_script( 'primer-layouts', 'primerLayouts', array(
 				'selected' => $this->get_post_layout( $post->ID ),
-			] );
+			) );
 
 		}
 
