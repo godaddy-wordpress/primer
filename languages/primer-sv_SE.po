@@ -61,7 +61,7 @@ msgstr "Vi hittar inte vad du söker. Prova med att söka."
 
 #: functions.php:186
 msgid "Featured"
-msgstr "Utvald"
+msgstr "Utvalt"
 
 #: functions.php:192 functions.php:434
 msgid "Hero"
