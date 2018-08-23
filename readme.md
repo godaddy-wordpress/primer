@@ -66,6 +66,9 @@ Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 ## Changelog ##
 
+### 1.9.0 ###
+* New: Add templates for [Reseller Store](https://wordpress.org/plugins/reseller-store/) plugin
+
 ### 1.8.6 ###
 * Tweak: Adjust shorthand array syntax to ensure backwards compatibility with PHP < 5.6. @props [evanherman](https://github.com/EvanHerman)
 

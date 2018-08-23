@@ -25,7 +25,15 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content', get_post_format() ); ?>
+			<?php if ( true === apply_filters( 'rstore_is_product', $post ) ) : ?>
+
+				<?php get_template_part( 'templates/reseller-store/list-product' ); ?>
+
+			<?php else : ?>
+
+				<?php get_template_part( 'content', get_post_format() ); ?>
+
+			<?php endif; ?>
 
 		<?php endwhile; ?>
 

@@ -158,6 +158,17 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 
 /**
+ * Load Reseller Store compatibility file.
+ *
+ * @since NEXT
+ */
+if ( class_exists( 'Reseller_Store\Plugin' ) && rstore_is_setup() ) {
+
+	require_once __DIR__ . '/inc/compat/reseller-store.php';
+
+}
+
+/**
  * Load Customizer class (must be required last).
  *
  * @since 1.0.0

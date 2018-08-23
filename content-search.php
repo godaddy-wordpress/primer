@@ -10,6 +10,14 @@
 
 ?>
 
+<?php
+if ( true === apply_filters( 'rstore_is_product', $post ) ) {
+
+	return get_template_part( 'templates/reseller-store/list-product' );
+
+}
+?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php get_template_part( 'templates/parts/loop/post', 'title' ); ?>
