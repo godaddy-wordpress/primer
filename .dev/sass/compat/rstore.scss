@@ -1,108 +1,109 @@
 /* reseller store plugin specific css */
+article {
+	/* product post page */
+	.rstore-product {
 
-/* product post page */
-.single-reseller_product {
-
-	.product {
-		margin-bottom: 0;
-		position: relative;
-	}
-
-	.featured-image {
-		@media #{$small-only} {
-			img {
-				max-width: 85%;
-			}
-		}
-
-		float: left;
-		width: 33%;
-	}
-
-	.product-header {
-		float: right;
-		width: 66%;
-
-		.rstore-message {
-			display: inline-block;
-			height: 0px;
-		}
-	}
-
-	.product-tabs {
-		clear: both;
-	}
-}
-
-/* product taxonomy list/search */
-article.rstore-list-product {
-
-	&.reseller_product {
-
-		div.product {
+		.product {
 			margin-bottom: 0;
 			position: relative;
 		}
 
 		.featured-image {
-			display: inline-block;
-			width: 11%;
-			margin: 12px 5px 0 0;
-			vertical-align: top;
-		}
+			@media #{$small-only} {
+				img {
+					max-width: 85%;
+				}
+			}
 
-		.rstore-pricing {
-			margin: 0;
-			padding: 0;
+			float: left;
+			width: 33%;
 		}
 
 		.product-header {
-			display: inline-block;
-			header.entry-header {
-				h2.entry-title, .archive-title {
-					font-size: 1.8rem;
-					font-size: 1.8em;
-
-					padding-right: 1em;
-				}
-			}
-		}
-
-		.product-summary {
-			width: 100%;
-		}
-
-		.entry-meta {
-			clear: both;
-		}
-
-		.entry-summary {
-			margin: 0;
-			padding: 0;
-			p {
-				margin-bottom: 0;
-				display: inline;
-			}
-		}
-
-		.rstore-add-to-cart-form {
-			display: inline-block;
-			clear: both;
+			float: right;
+			width: 66%;
 
 			.rstore-message {
 				display: inline-block;
-				height: 0;
+				height: 0px;
+			}
+		}
+
+		.product-tabs {
+			clear: both;
+		}
+	}
+
+	/* product taxonomy list/search */
+	&.rstore-list-product {
+
+		&.reseller_product {
+
+			div.product {
+				margin-bottom: 0;
+				position: relative;
 			}
 
-			.rstore-add-to-cart.button {
+			.featured-image {
 				display: inline-block;
+				width: 11%;
+				margin: 12px 5px 0 0;
+				vertical-align: top;
 			}
 
-			.rstore-loading,
-			.rstore-cart {
-				margin-right: 5px;
+			.rstore-pricing {
+				margin: 0;
+				padding: 0;
 			}
 
+			.product-header {
+				display: inline-block;
+				header.entry-header {
+					h2.entry-title, .archive-title {
+						font-size: 1.8rem;
+						font-size: 1.8em;
+
+						padding-right: 1em;
+					}
+				}
+			}
+
+			.product-summary {
+				width: 100%;
+			}
+
+			.entry-meta {
+				clear: both;
+			}
+
+			.entry-summary {
+				margin: 0;
+				padding: 0;
+				p {
+					margin-bottom: 0;
+					display: inline;
+				}
+			}
+
+			.rstore-add-to-cart-form {
+				display: inline-block;
+				clear: both;
+
+				.rstore-message {
+					display: inline-block;
+					height: 0;
+				}
+
+				.rstore-add-to-cart.button {
+					display: inline-block;
+				}
+
+				.rstore-loading,
+				.rstore-cart {
+					margin-right: 5px;
+				}
+
+			}
 		}
 	}
 }
