@@ -2591,3 +2591,8 @@ li.primer-wc-cart-menu .primer-wc-cart-sub-menu {
     display: block; }
   .wp-block-column {
     margin: 20px 0; } }
+
+.wp-block-columns.has-1-columns .wp-block-column {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
