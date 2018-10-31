@@ -71,7 +71,7 @@ jobs:
       php: 5.6
       env: WP_VERSION=latest
       before_install:
-        - if [ -z "$TRAVIS_TAG" ] then exit 1; fi # Exit if this is not a tagged release
+        - if [ -z "$TRAVIS_TAG" ] then travis_terminate 0; fi # Exit if this is not a tagged release
         - nvm install 9 && nvm use 9
         - npm i -g npm@6
         - composer require apigen/apigen:4.1.0
