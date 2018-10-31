@@ -324,7 +324,7 @@ module.exports = function( grunt ) {
 				'cd .dev/docs/build/html',
 				'git add .',
 				'git commit -m "Update Documentation" || true',
-				'if [ -z "$TRAVIS" ]; then git push origin gh-pages --force; else git config user.name "Travis CI"; git config user.email "travis@travis-ci.com"; git push -f -q https://$GH_PAGES_DEPLOY_KEY@github.com/godaddy/wp-primer-theme.git gh-pages; fi',
+				'if [ -z "$TRAVIS" ]; then git push origin gh-pages --force; else git push -f -q https://$GH_PAGES_DEPLOY_KEY@github.com/godaddy/wp-primer-theme.git gh-pages; fi',
 			].join( ' && ' )
 		},
 

@@ -78,7 +78,8 @@ jobs:
       install:
         - npm install
       script:
-        - grunt update-docs
+        - git config user.name "Travis CI"
+        - git config user.email "travis@travis-ci.com"
         - grunt deploy-docs
       after_script: true # skip by returning true
 
