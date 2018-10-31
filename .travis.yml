@@ -71,6 +71,7 @@ jobs:
       php: 5.6
       env: WP_VERSION=latest
       before_install:
+        # - if [ -z "$TRAVIS_TAG" ] then exit 1; fi # Exit if this is not a tagged release
         - composer install
         - nvm install 9 && nvm use 9
         - npm i -g npm@6
@@ -78,7 +79,7 @@ jobs:
         - npm install
       script:
         - grunt update-docs
-        - if [ -n "$TRAVIS_TAG" ]; grunt deploy-docs; fi
+        - grunt deploy-docs
       after_script: true # skip by returning true
 
 before_deploy:
@@ -87,8 +88,6 @@ before_deploy:
   - cd /tmp
   - zip -rT $TRAVIS_BUILD_DIR/$WP_THEME.zip $WP_THEME/
   - sha256sum -b $TRAVIS_BUILD_DIR/$WP_THEME.zip | awk '{print $1}' | tee $TRAVIS_BUILD_DIR/$WP_THEME.zip.sha256
-  - if [[ ${TRAVIS_PHP_VERSION} == "5.6" ]]; then grunt update-docs; fi
-  - echo ${TRAVIS_PHP_VERSION}
 
 deploy:
   provider: releases
