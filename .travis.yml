@@ -17,7 +17,9 @@ cache:
 
 language:
   - php
-  - node
+  - node_js
+  node_js:
+    - "node"
 
 php:
   - 5.3
