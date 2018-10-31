@@ -47,6 +47,7 @@ install:
   - if [ ! -e "$DEV_LIB_PATH" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
   - if [ ! -e "$DEV_LIB_PATH" ]; then git clone https://github.com/xwp/wp-dev-lib.git $DEV_LIB_PATH; fi
   - source $DEV_LIB_PATH/travis.install.sh
+  - if [[ ${TRAVIS_PHP_VERSION:0:3} == "5.6" ]]; then npm install; fi
 
 script:
   - source $DEV_LIB_PATH/travis.script.sh
@@ -82,6 +83,7 @@ before_deploy:
   - cd /tmp
   - zip -rT $TRAVIS_BUILD_DIR/$WP_THEME.zip $WP_THEME/
   - sha256sum -b $TRAVIS_BUILD_DIR/$WP_THEME.zip | awk '{print $1}' | tee $TRAVIS_BUILD_DIR/$WP_THEME.zip.sha256
+  - if [[ ${TRAVIS_PHP_VERSION:0:3} == "5.6" ]]; then grunt update-docs; fi
 
 deploy:
   provider: releases
