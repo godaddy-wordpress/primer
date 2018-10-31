@@ -318,7 +318,7 @@ module.exports = function( grunt ) {
 				'php contributor-list.php',
 				'php hook-docs.php',
 				'cd ../../../',
-				'vendor/bin/apigen generate --config .dev/docs/apigen/apigen.neon',
+				'if [ -z "$TRAVIS" ]; then apigen generate --config .dev/docs/apigen/apigen.neon; else vendor/bin/apigen generate --config .dev/docs/apigen/apigen.neon; fi',
 			].join( ' && ' ),
 			deploy_docs: [
 				'cd .dev/docs/build/html',
