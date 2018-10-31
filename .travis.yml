@@ -75,11 +75,11 @@ jobs:
         - composer install
         - nvm install 9 && nvm use 9
         - npm i -g npm@6
+        - git config --global user.name "Travis CI"
+        - git config --global user.email "travis@travis-ci.com"
       install:
         - npm install
       script:
-        - git config user.name "Travis CI"
-        - git config user.email "travis@travis-ci.com"
         - grunt deploy-docs
       after_script: true # skip by returning true
 
