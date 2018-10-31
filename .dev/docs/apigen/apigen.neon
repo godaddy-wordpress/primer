@@ -10,10 +10,10 @@ destination: .dev/docs/sphinx/src/documentation/
 ## excluded files
 exclude:
 	- .dev/
-	- apigen/
 	- assets/
 	- languages/
 	- node_modules/
+	- vendor/
 
 # choose ApiGen template theme
 templateTheme: default
