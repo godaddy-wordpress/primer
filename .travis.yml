@@ -71,7 +71,9 @@ jobs:
       php: 5.6
       env: WP_VERSION=latest
       install:
+        - npm --version
         - nvm install 9 && nvm use 9
+        - npm --version
         - npm install
       script:
         - grunt update-docs
