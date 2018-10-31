@@ -15,8 +15,8 @@
 	<link rel="stylesheet" type="text/css" href="resources/css/prism.css?9bc16dfb1371f65f7b17c8d50c25c6e225457735">
 	<link rel="stylesheet" type="text/css" href="resources/css/responsive.css?23aedcbba2a71c6eae0181247948af42426549eb">
 
-	<script type="text/javascript" src="resources/combined.js?5997ce084f75415bb689f3d986095ed2f17e8bf4"></script>
-	<script type="text/javascript" src="elementlist.js?fa72ac6bf424ca706feec4ee743695c9a221905e"></script>
+	<script type="text/javascript" src="resources/combined.js?7de7b9dfb0e446cc48b8dc328cbc5205f257dd3f"></script>
+	<script type="text/javascript" src="elementlist.js?a2032d8086b9ad2d657c6c7a0ee23f8aeec7618b"></script>
 
 </head>
 
@@ -108,7 +108,7 @@
 					<h2>
 						<a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html">
 							<span class="glyph_range icon-submenu icon-submenu-cook">B</span>
-							Primer Theme 1.8.2
+							Primer Theme 1.8.6
 							
 							<strong>API</strong>
 						</a>
@@ -127,7 +127,7 @@
 						</li>
 
 												<li class="version-picker">
-							<h6>Version: 1.8.2</h6>
+							<h6>Version: 1.8.6</h6>
 							<!--
 							<ul class="nav navbar-nav">
 								<li class="dropdown">
@@ -206,6 +206,8 @@
 							<li><a href="package-Compatibility.BeaverBuilder.html">BeaverBuilder</a>
 									</li>
 							<li><a href="package-Compatibility.ChildThemes.html">ChildThemes</a>
+									</li>
+							<li><a href="package-Compatibility.Gutenberg.html">Gutenberg</a>
 									</li>
 							<li><a href="package-Compatibility.Jetpack.html">Jetpack</a>
 									</li>
@@ -288,6 +290,8 @@
 							<li><a title="primer_get_the_page_title" href="function-primer_get_the_page_title.html">primer_get_the_page_title</a></li>
 							<li><a title="primer_get_the_widget" href="function-primer_get_the_widget.html">primer_get_the_widget</a></li>
 							<li><a title="primer_get_wp_upgrade_message" href="function-primer_get_wp_upgrade_message.html">primer_get_wp_upgrade_message</a></li>
+							<li><a title="primer_gutenberg_editor_assets" href="function-primer_gutenberg_editor_assets.html">primer_gutenberg_editor_assets</a></li>
+							<li><a title="primer_gutenberg_theme_support" href="function-primer_gutenberg_theme_support.html">primer_gutenberg_theme_support</a></li>
 							<li><a title="primer_has_active_categories" href="function-primer_has_active_categories.html">primer_has_active_categories</a></li>
 							<li><a title="primer_has_active_categories_reset" href="function-primer_has_active_categories_reset.html">primer_has_active_categories_reset</a></li>
 							<li><a title="primer_has_active_footer_sidebars" href="function-primer_has_active_footer_sidebars.html">primer_has_active_footer_sidebars</a></li>
@@ -307,6 +311,7 @@
 							<li><a title="primer_post_nav" href="function-primer_post_nav.html">primer_post_nav</a></li>
 							<li><a title="primer_posted_on" href="function-primer_posted_on.html">primer_posted_on</a></li>
 							<li><a title="primer_preview" href="function-primer_preview.html">primer_preview</a></li>
+							<li><a title="primer_privacy_policy_link" href="function-primer_privacy_policy_link.html">primer_privacy_policy_link</a></li>
 							<li><a title="primer_register_sidebars" href="function-primer_register_sidebars.html">primer_register_sidebars</a></li>
 							<li><a title="primer_register_widgets" href="function-primer_register_widgets.html">primer_register_widgets</a></li>
 							<li><a title="primer_scripts" href="function-primer_scripts.html">primer_scripts</a></li>
@@ -550,393 +555,403 @@
 </span><span id="198">
 </span><span id="199">        }
 </span><span id="200">
-</span><span id="201">        <span class="php-var">$rtl</span>    = is_rtl() ? <span class="php-quote">'-rtl'</span> : <span class="php-quote">''</span>;
-</span><span id="202">        <span class="php-var">$suffix</span> = SCRIPT_DEBUG ? <span class="php-quote">''</span> : <span class="php-quote">'.min'</span>;
-</span><span id="203">
-</span><span id="204">        wp_enqueue_script(
-</span><span id="205">            <span class="php-quote">'primer-layouts'</span>,
-</span><span id="206">            get_template_directory_uri() . <span class="php-quote">&quot;/assets/js/admin/layouts</span><span class="php-var">{$suffix}</span><span class="php-quote">.js&quot;</span>,
-</span><span id="207">            <span class="php-keyword1">array</span>( <span class="php-quote">'jquery'</span> ),
-</span><span id="208">            PRIMER_VERSION
-</span><span id="209">        );
-</span><span id="210">
-</span><span id="211">        wp_enqueue_style(
-</span><span id="212">            <span class="php-quote">'primer-layouts'</span>,
-</span><span id="213">            get_template_directory_uri() . <span class="php-quote">&quot;/assets/css/admin/layouts</span><span class="php-var">{$rtl}{$suffix}</span><span class="php-quote">.css&quot;</span>,
-</span><span id="214">            <span class="php-keyword1">array</span>(),
-</span><span id="215">            PRIMER_VERSION
-</span><span id="216">        );
-</span><span id="217">
-</span><span id="218">    }
-</span><span id="219">
-</span><span id="220">    <span class="php-comment">/**
-</span></span><span id="221"><span class="php-comment">     * Add a new meta box to post screens.
-</span></span><span id="222"><span class="php-comment">     *
-</span></span><span id="223"><span class="php-comment">     * @action load-post.php
-</span></span><span id="224"><span class="php-comment">     * @action load-post-new.php
-</span></span><span id="225"><span class="php-comment">     *
-</span></span><span id="226"><span class="php-comment">     * @since  1.0.0
-</span></span><span id="227"><span class="php-comment">     * @uses   $this-&gt;add_meta_box()
-</span></span><span id="228"><span class="php-comment">     */</span>
-</span><span id="229">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> load_post() {
-</span><span id="230">
-</span><span id="231">        add_action( <span class="php-quote">'add_meta_boxes'</span>, <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'add_meta_box'</span> ), <span class="php-num">10</span>, <span class="php-num">2</span> );
-</span><span id="232">
-</span><span id="233">    }
-</span><span id="234">
-</span><span id="235">    <span class="php-comment">/**
-</span></span><span id="236"><span class="php-comment">     * Add post meta box for custom layouts.
-</span></span><span id="237"><span class="php-comment">     *
-</span></span><span id="238"><span class="php-comment">     * @see   $this-&gt;load_post()
-</span></span><span id="239"><span class="php-comment">     * @since 1.0.0
-</span></span><span id="240"><span class="php-comment">     * @uses  $this-&gt;render_meta_box()
-</span></span><span id="241"><span class="php-comment">     *
-</span></span><span id="242"><span class="php-comment">     * @param string  $post_type Post type slug name.
-</span></span><span id="243"><span class="php-comment">     * @param WP_Post $post      Post object.
-</span></span><span id="244"><span class="php-comment">     */</span>
-</span><span id="245">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> add_meta_box( <span class="php-var">$post_type</span>, WP_Post <span class="php-var">$post</span> ) {
-</span><span id="246">
-</span><span id="247">        <span class="php-keyword1">if</span> (
-</span><span id="248">            ! post_type_supports( <span class="php-var">$post_type</span>, <span class="php-quote">'primer-layouts'</span> )
-</span><span id="249">            ||
-</span><span id="250">            ! current_user_can( <span class="php-quote">'edit_post_meta'</span>, <span class="php-var">$post</span>-&gt;ID )
-</span><span id="251">            ||
-</span><span id="252">            ! current_user_can( <span class="php-quote">'add_post_meta'</span>, <span class="php-var">$post</span>-&gt;ID )
-</span><span id="253">            ||
-</span><span id="254">            ! current_user_can( <span class="php-quote">'delete_post_meta'</span>, <span class="php-var">$post</span>-&gt;ID )
-</span><span id="255">        ) {
+</span><span id="201">        <span class="php-keyword1">global</span> <span class="php-var">$post</span>;
+</span><span id="202">
+</span><span id="203">        <span class="php-var">$rtl</span>    = is_rtl() ? <span class="php-quote">'-rtl'</span> : <span class="php-quote">''</span>;
+</span><span id="204">        <span class="php-var">$suffix</span> = SCRIPT_DEBUG ? <span class="php-quote">''</span> : <span class="php-quote">'.min'</span>;
+</span><span id="205">
+</span><span id="206">        wp_enqueue_script(
+</span><span id="207">            <span class="php-quote">'primer-layouts'</span>,
+</span><span id="208">            get_template_directory_uri() . <span class="php-quote">&quot;/assets/js/admin/layouts</span><span class="php-var">{$suffix}</span><span class="php-quote">.js&quot;</span>,
+</span><span id="209">            <span class="php-keyword1">array</span>( <span class="php-quote">'jquery'</span> ),
+</span><span id="210">            PRIMER_VERSION
+</span><span id="211">        );
+</span><span id="212">
+</span><span id="213">        <span class="php-keyword1">if</span> ( <span class="php-keyword1">isset</span>( <span class="php-var">$post</span>-&gt;ID ) ) {
+</span><span id="214">
+</span><span id="215">            wp_localize_script( <span class="php-quote">'primer-layouts'</span>, <span class="php-quote">'primerLayouts'</span>, <span class="php-keyword1">array</span>(
+</span><span id="216">                <span class="php-quote">'selected'</span> =&gt; <span class="php-var">$this</span>-&gt;get_post_layout( <span class="php-var">$post</span>-&gt;ID ),
+</span><span id="217">            ) );
+</span><span id="218">
+</span><span id="219">        }
+</span><span id="220">
+</span><span id="221">        wp_enqueue_style(
+</span><span id="222">            <span class="php-quote">'primer-layouts'</span>,
+</span><span id="223">            get_template_directory_uri() . <span class="php-quote">&quot;/assets/css/admin/layouts</span><span class="php-var">{$rtl}{$suffix}</span><span class="php-quote">.css&quot;</span>,
+</span><span id="224">            <span class="php-keyword1">array</span>(),
+</span><span id="225">            PRIMER_VERSION
+</span><span id="226">        );
+</span><span id="227">
+</span><span id="228">    }
+</span><span id="229">
+</span><span id="230">    <span class="php-comment">/**
+</span></span><span id="231"><span class="php-comment">     * Add a new meta box to post screens.
+</span></span><span id="232"><span class="php-comment">     *
+</span></span><span id="233"><span class="php-comment">     * @action load-post.php
+</span></span><span id="234"><span class="php-comment">     * @action load-post-new.php
+</span></span><span id="235"><span class="php-comment">     *
+</span></span><span id="236"><span class="php-comment">     * @since  1.0.0
+</span></span><span id="237"><span class="php-comment">     * @uses   $this-&gt;add_meta_box()
+</span></span><span id="238"><span class="php-comment">     */</span>
+</span><span id="239">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> load_post() {
+</span><span id="240">
+</span><span id="241">        add_action( <span class="php-quote">'add_meta_boxes'</span>, <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'add_meta_box'</span> ), <span class="php-num">10</span>, <span class="php-num">2</span> );
+</span><span id="242">
+</span><span id="243">    }
+</span><span id="244">
+</span><span id="245">    <span class="php-comment">/**
+</span></span><span id="246"><span class="php-comment">     * Add post meta box for custom layouts.
+</span></span><span id="247"><span class="php-comment">     *
+</span></span><span id="248"><span class="php-comment">     * @see   $this-&gt;load_post()
+</span></span><span id="249"><span class="php-comment">     * @since 1.0.0
+</span></span><span id="250"><span class="php-comment">     * @uses  $this-&gt;render_meta_box()
+</span></span><span id="251"><span class="php-comment">     *
+</span></span><span id="252"><span class="php-comment">     * @param string  $post_type Post type slug name.
+</span></span><span id="253"><span class="php-comment">     * @param WP_Post $post      Post object.
+</span></span><span id="254"><span class="php-comment">     */</span>
+</span><span id="255">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> add_meta_box( <span class="php-var">$post_type</span>, WP_Post <span class="php-var">$post</span> ) {
 </span><span id="256">
-</span><span id="257">            <span class="php-keyword1">return</span>;
-</span><span id="258">
-</span><span id="259">        }
-</span><span id="260">
-</span><span id="261">        add_meta_box(
-</span><span id="262">            <span class="php-quote">'primer-layouts-meta-box'</span>,
-</span><span id="263">            esc_html__( <span class="php-quote">'Layout'</span>, <span class="php-quote">'primer'</span> ),
-</span><span id="264">            <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'render_meta_box'</span> ),
-</span><span id="265">            <span class="php-var">$post_type</span>,
-</span><span id="266">            <span class="php-quote">'side'</span>,
-</span><span id="267">            <span class="php-quote">'default'</span>,
-</span><span id="268">            <span class="php-keyword1">null</span>
-</span><span id="269">        );
+</span><span id="257">        <span class="php-keyword1">if</span> (
+</span><span id="258">            ! post_type_supports( <span class="php-var">$post_type</span>, <span class="php-quote">'primer-layouts'</span> )
+</span><span id="259">            ||
+</span><span id="260">            ! current_user_can( <span class="php-quote">'edit_post_meta'</span>, <span class="php-var">$post</span>-&gt;ID )
+</span><span id="261">            ||
+</span><span id="262">            ! current_user_can( <span class="php-quote">'add_post_meta'</span>, <span class="php-var">$post</span>-&gt;ID )
+</span><span id="263">            ||
+</span><span id="264">            ! current_user_can( <span class="php-quote">'delete_post_meta'</span>, <span class="php-var">$post</span>-&gt;ID )
+</span><span id="265">        ) {
+</span><span id="266">
+</span><span id="267">            <span class="php-keyword1">return</span>;
+</span><span id="268">
+</span><span id="269">        }
 </span><span id="270">
-</span><span id="271">    }
-</span><span id="272">
-</span><span id="273">    <span class="php-comment">/**
-</span></span><span id="274"><span class="php-comment">     * Display the custom layouts post meta box.
-</span></span><span id="275"><span class="php-comment">     *
-</span></span><span id="276"><span class="php-comment">     * @see   $this-&gt;add_meta_box()
-</span></span><span id="277"><span class="php-comment">     * @since 1.0.0
-</span></span><span id="278"><span class="php-comment">     *
-</span></span><span id="279"><span class="php-comment">     * @param WP_Post $post Post object.
-</span></span><span id="280"><span class="php-comment">     */</span>
-</span><span id="281">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> render_meta_box( WP_Post <span class="php-var">$post</span> ) {
+</span><span id="271">        add_meta_box(
+</span><span id="272">            <span class="php-quote">'primer-layouts-meta-box'</span>,
+</span><span id="273">            esc_html__( <span class="php-quote">'Layout'</span>, <span class="php-quote">'primer'</span> ),
+</span><span id="274">            <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'render_meta_box'</span> ),
+</span><span id="275">            <span class="php-var">$post_type</span>,
+</span><span id="276">            <span class="php-quote">'side'</span>,
+</span><span id="277">            <span class="php-quote">'default'</span>,
+</span><span id="278">            <span class="php-keyword1">null</span>
+</span><span id="279">        );
+</span><span id="280">
+</span><span id="281">    }
 </span><span id="282">
-</span><span id="283">        <span class="php-var">$current_layout</span> = <span class="php-var">$this</span>-&gt;get_post_layout( <span class="php-var">$post</span>-&gt;ID );
-</span><span id="284">        <span class="php-var">$has_custom</span> = ! <span class="php-keyword1">empty</span>( <span class="php-var">$current_layout</span> );
-</span><span id="285">
-</span><span id="286">        wp_nonce_field( <span class="php-keyword2">basename</span>( __FILE__ ), <span class="php-quote">'primer-layout-nonce'</span> );
-</span><span id="287">
-</span><span id="288">        <span class="xlang">?&gt;</span>
-</span><span id="289">        &lt;div <span class="php-keyword1">class</span>=<span class="php-quote">&quot;primer-layout&quot;</span>&gt;
-</span><span id="290">
-</span><span id="291">            &lt;p&gt;
-</span><span id="292">                &lt;label <span class="php-keyword1">for</span>=<span class="php-quote">&quot;primer-layout-use-default&quot;</span>&gt;
-</span><span id="293">                    &lt;input type=<span class="php-quote">&quot;radio&quot;</span> name=<span class="php-quote">&quot;primer-layout-override&quot;</span> id=<span class="php-quote">&quot;primer-layout-use-default&quot;</span> value=<span class="php-quote">&quot;0&quot;</span> autocomplete=<span class="php-quote">&quot;off&quot;</span> <span class="xlang">&lt;?php</span> checked( ! <span class="php-var">$has_custom</span> ); <span class="xlang">?&gt;</span>&gt;
-</span><span id="294">                    <span class="xlang">&lt;?php</span> esc_html_e( <span class="php-quote">'Default'</span>, <span class="php-quote">'primer'</span> ); <span class="xlang">?&gt;</span>
-</span><span id="295">                &lt;/label&gt;
-</span><span id="296">                &lt;label <span class="php-keyword1">for</span>=<span class="php-quote">&quot;primer-layout-use-custom&quot;</span>&gt;
-</span><span id="297">                    &lt;input type=<span class="php-quote">&quot;radio&quot;</span> name=<span class="php-quote">&quot;primer-layout-override&quot;</span> id=<span class="php-quote">&quot;primer-layout-use-custom&quot;</span> value=<span class="php-quote">&quot;1&quot;</span> autocomplete=<span class="php-quote">&quot;off&quot;</span> <span class="xlang">&lt;?php</span> checked( <span class="php-var">$has_custom</span> ); <span class="xlang">?&gt;</span>&gt;
-</span><span id="298">                    <span class="xlang">&lt;?php</span> esc_html_e( <span class="php-quote">'Custom'</span>, <span class="php-quote">'primer'</span> ); <span class="xlang">?&gt;</span>
-</span><span id="299">                &lt;/label&gt;
-</span><span id="300">                &lt;span <span class="php-keyword1">class</span>=<span class="php-quote">&quot;clear&quot;</span>&gt;&lt;/span&gt;
-</span><span id="301">            &lt;/p&gt;
-</span><span id="302">
-</span><span id="303">            <span class="xlang">&lt;?php</span> <span class="php-var">$this</span>-&gt;print_layout_choices( <span class="php-var">$this</span>-&gt;layouts, <span class="php-var">$post</span>-&gt;ID, <span class="php-var">$current_layout</span>, <span class="php-var">$has_custom</span> ); <span class="xlang">?&gt;</span>
-</span><span id="304">
-</span><span id="305">        &lt;/div&gt;
-</span><span id="306">        <span class="xlang">&lt;?php</span>
-</span><span id="307">
-</span><span id="308">    }
-</span><span id="309">
-</span><span id="310">    <span class="php-comment">/**
-</span></span><span id="311"><span class="php-comment">     * Print all layouts choices to a meta-box or the Customizer.
-</span></span><span id="312"><span class="php-comment">     *
-</span></span><span id="313"><span class="php-comment">     * @global WP_Customize_Manager $wp_customize
-</span></span><span id="314"><span class="php-comment">     * @since 1.0.0
-</span></span><span id="315"><span class="php-comment">     *
-</span></span><span id="316"><span class="php-comment">     * @param array  $layouts        Array of layouts.
-</span></span><span id="317"><span class="php-comment">     * @param int    $post_id        (optional) Post ID. Default is `null`.
-</span></span><span id="318"><span class="php-comment">     * @param string $current_layout (optional) Current layout slug name. Default is `null`.
-</span></span><span id="319"><span class="php-comment">     * @param bool   $has_custom     (optional) Whether the current layout is a custom one. Default is `true`.
-</span></span><span id="320"><span class="php-comment">     */</span>
-</span><span id="321">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> print_layout_choices( <span class="php-var">$layouts</span>, <span class="php-var">$post_id</span> = <span class="php-keyword1">null</span>, <span class="php-var">$current_layout</span> = <span class="php-keyword1">null</span>, <span class="php-var">$has_custom</span> = <span class="php-keyword1">true</span> ) {
-</span><span id="322">
-</span><span id="323">        <span class="php-keyword1">global</span> <span class="php-var">$wp_customize</span>;
-</span><span id="324">
-</span><span id="325">        <span class="php-var">$global_layout</span> = <span class="php-var">$this</span>-&gt;get_global_layout();
-</span><span id="326">
-</span><span id="327">        <span class="php-keyword1">if</span> ( ! <span class="php-var">$current_layout</span> ) {
-</span><span id="328">
-</span><span id="329">            <span class="php-var">$current_layout</span> = <span class="php-var">$global_layout</span>;
-</span><span id="330">
-</span><span id="331">        }
+</span><span id="283">    <span class="php-comment">/**
+</span></span><span id="284"><span class="php-comment">     * Display the custom layouts post meta box.
+</span></span><span id="285"><span class="php-comment">     *
+</span></span><span id="286"><span class="php-comment">     * @see   $this-&gt;add_meta_box()
+</span></span><span id="287"><span class="php-comment">     * @since 1.0.0
+</span></span><span id="288"><span class="php-comment">     *
+</span></span><span id="289"><span class="php-comment">     * @param WP_Post $post Post object.
+</span></span><span id="290"><span class="php-comment">     */</span>
+</span><span id="291">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> render_meta_box( WP_Post <span class="php-var">$post</span> ) {
+</span><span id="292">
+</span><span id="293">        <span class="php-var">$current_layout</span> = <span class="php-var">$this</span>-&gt;get_post_layout( <span class="php-var">$post</span>-&gt;ID );
+</span><span id="294">        <span class="php-var">$has_custom</span> = ! <span class="php-keyword1">empty</span>( <span class="php-var">$current_layout</span> );
+</span><span id="295">
+</span><span id="296">        wp_nonce_field( <span class="php-keyword2">basename</span>( __FILE__ ), <span class="php-quote">'primer-layout-nonce'</span> );
+</span><span id="297">
+</span><span id="298">        <span class="xlang">?&gt;</span>
+</span><span id="299">        &lt;div <span class="php-keyword1">class</span>=<span class="php-quote">&quot;primer-layout&quot;</span>&gt;
+</span><span id="300">
+</span><span id="301">            &lt;p&gt;
+</span><span id="302">                &lt;label <span class="php-keyword1">for</span>=<span class="php-quote">&quot;primer-layout-use-default&quot;</span>&gt;
+</span><span id="303">                    &lt;input type=<span class="php-quote">&quot;radio&quot;</span> name=<span class="php-quote">&quot;primer-layout-override&quot;</span> id=<span class="php-quote">&quot;primer-layout-use-default&quot;</span> value=<span class="php-quote">&quot;0&quot;</span> autocomplete=<span class="php-quote">&quot;off&quot;</span> <span class="xlang">&lt;?php</span> checked( ! <span class="php-var">$has_custom</span> ); <span class="xlang">?&gt;</span>&gt;
+</span><span id="304">                    <span class="xlang">&lt;?php</span> esc_html_e( <span class="php-quote">'Default'</span>, <span class="php-quote">'primer'</span> ); <span class="xlang">?&gt;</span>
+</span><span id="305">                &lt;/label&gt;
+</span><span id="306">                &lt;label <span class="php-keyword1">for</span>=<span class="php-quote">&quot;primer-layout-use-custom&quot;</span>&gt;
+</span><span id="307">                    &lt;input type=<span class="php-quote">&quot;radio&quot;</span> name=<span class="php-quote">&quot;primer-layout-override&quot;</span> id=<span class="php-quote">&quot;primer-layout-use-custom&quot;</span> value=<span class="php-quote">&quot;1&quot;</span> autocomplete=<span class="php-quote">&quot;off&quot;</span> <span class="xlang">&lt;?php</span> checked( <span class="php-var">$has_custom</span> ); <span class="xlang">?&gt;</span>&gt;
+</span><span id="308">                    <span class="xlang">&lt;?php</span> esc_html_e( <span class="php-quote">'Custom'</span>, <span class="php-quote">'primer'</span> ); <span class="xlang">?&gt;</span>
+</span><span id="309">                &lt;/label&gt;
+</span><span id="310">                &lt;span <span class="php-keyword1">class</span>=<span class="php-quote">&quot;clear&quot;</span>&gt;&lt;/span&gt;
+</span><span id="311">            &lt;/p&gt;
+</span><span id="312">
+</span><span id="313">            <span class="xlang">&lt;?php</span> <span class="php-var">$this</span>-&gt;print_layout_choices( <span class="php-var">$this</span>-&gt;layouts, <span class="php-var">$post</span>-&gt;ID, <span class="php-var">$current_layout</span>, <span class="php-var">$has_custom</span> ); <span class="xlang">?&gt;</span>
+</span><span id="314">
+</span><span id="315">        &lt;/div&gt;
+</span><span id="316">        <span class="xlang">&lt;?php</span>
+</span><span id="317">
+</span><span id="318">    }
+</span><span id="319">
+</span><span id="320">    <span class="php-comment">/**
+</span></span><span id="321"><span class="php-comment">     * Print all layouts choices to a meta-box or the Customizer.
+</span></span><span id="322"><span class="php-comment">     *
+</span></span><span id="323"><span class="php-comment">     * @global WP_Customize_Manager $wp_customize
+</span></span><span id="324"><span class="php-comment">     * @since 1.0.0
+</span></span><span id="325"><span class="php-comment">     *
+</span></span><span id="326"><span class="php-comment">     * @param array  $layouts        Array of layouts.
+</span></span><span id="327"><span class="php-comment">     * @param int    $post_id        (optional) Post ID. Default is `null`.
+</span></span><span id="328"><span class="php-comment">     * @param string $current_layout (optional) Current layout slug name. Default is `null`.
+</span></span><span id="329"><span class="php-comment">     * @param bool   $has_custom     (optional) Whether the current layout is a custom one. Default is `true`.
+</span></span><span id="330"><span class="php-comment">     */</span>
+</span><span id="331">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> print_layout_choices( <span class="php-var">$layouts</span>, <span class="php-var">$post_id</span> = <span class="php-keyword1">null</span>, <span class="php-var">$current_layout</span> = <span class="php-keyword1">null</span>, <span class="php-var">$has_custom</span> = <span class="php-keyword1">true</span> ) {
 </span><span id="332">
-</span><span id="333">        <span class="php-var">$name</span> = <span class="php-keyword1">isset</span>( <span class="php-var">$wp_customize</span> ) ? <span class="php-quote">'_customize-radio'</span> : <span class="php-quote">'primer'</span>;
+</span><span id="333">        <span class="php-keyword1">global</span> <span class="php-var">$wp_customize</span>;
 </span><span id="334">
-</span><span id="335">        <span class="xlang">?&gt;</span>
-</span><span id="336">        &lt;div <span class="php-keyword1">class</span>=<span class="php-quote">&quot;primer-layout-wrap&quot;</span>&gt;
-</span><span id="337">
-</span><span id="338">            &lt;ul&gt;
-</span><span id="339">            <span class="xlang">&lt;?php</span>
+</span><span id="335">        <span class="php-var">$global_layout</span> = <span class="php-var">$this</span>-&gt;get_global_layout();
+</span><span id="336">
+</span><span id="337">        <span class="php-keyword1">if</span> ( ! <span class="php-var">$current_layout</span> ) {
+</span><span id="338">
+</span><span id="339">            <span class="php-var">$current_layout</span> = <span class="php-var">$global_layout</span>;
 </span><span id="340">
-</span><span id="341">            <span class="php-keyword1">foreach</span> ( <span class="php-var">$layouts</span> <span class="php-keyword1">as</span> <span class="php-var">$layout</span> =&gt; <span class="php-var">$label</span> ) :
+</span><span id="341">        }
 </span><span id="342">
-</span><span id="343">                <span class="php-var">$class</span> = ( <span class="php-var">$has_custom</span> ) ? <span class="php-quote">'active'</span> : <span class="php-quote">'disabled'</span>;
-</span><span id="344">                <span class="php-var">$class</span> .= ( <span class="php-var">$layout</span> === <span class="php-var">$global_layout</span> ) ? <span class="php-quote">' active global'</span> : <span class="php-quote">''</span>;
-</span><span id="345">
-</span><span id="346">                <span class="xlang">?&gt;</span>
-</span><span id="347">                &lt;li <span class="php-keyword1">class</span>=<span class="php-quote">&quot;&lt;?php echo esc_attr( </span><span class="php-var">$class</span><span class="php-quote"> ); ?&gt;&quot;</span>&gt;
-</span><span id="348">                    &lt;label <span class="php-keyword1">for</span>=<span class="php-quote">&quot;primer-layout-&lt;?php echo esc_attr( </span><span class="php-var">$layout</span><span class="php-quote"> ); ?&gt;&quot;</span>&gt;
-</span><span id="349">                        &lt;input type=<span class="php-quote">&quot;radio&quot;</span> name=<span class="php-quote">&quot;&lt;?php echo esc_attr( </span><span class="php-var">$name</span><span class="php-quote"> ); ?&gt;-layout&quot;</span> data-customize-setting-<span class="php-keyword2">link</span>=<span class="php-quote">&quot;layout&quot;</span> id=<span class="php-quote">&quot;primer-layout-&lt;?php echo esc_attr( </span><span class="php-var">$layout</span><span class="php-quote"> ); ?&gt;&quot;</span> value=<span class="php-quote">&quot;&lt;?php echo esc_attr( </span><span class="php-var">$layout</span><span class="php-quote"> ); ?&gt;&quot;</span> <span class="xlang">&lt;?php</span> checked( <span class="php-var">$current_layout</span>, <span class="php-var">$layout</span> ); <span class="xlang">?&gt;</span> <span class="xlang">&lt;?php</span> disabled( <span class="php-quote">'disabled'</span> === <span class="php-var">$class</span> ); <span class="xlang">?&gt;</span>&gt;
-</span><span id="350">                        &lt;img src=<span class="php-quote">&quot;&lt;?php echo esc_url( sprintf( '%s/assets/images/layouts/%s%s.svg', get_template_directory_uri(), </span><span class="php-var">$layout</span><span class="php-quote">, is_rtl() ? '-rtl' : '' ) ); ?&gt;&quot;</span>
-</span><span id="351">                            alt=<span class="php-quote">&quot;&lt;?php echo esc_attr( </span><span class="php-var">$label</span><span class="php-quote"> ); ?&gt;&quot;</span>
-</span><span id="352">                            title=<span class="php-quote">&quot;&lt;?php echo esc_attr( </span><span class="php-var">$label</span><span class="php-quote"> ); ?&gt;&quot;</span>&gt;
-</span><span id="353">                        &lt;span&gt;<span class="xlang">&lt;?php</span> <span class="php-keyword1">echo</span> esc_html( <span class="php-var">$label</span> ); <span class="xlang">?&gt;</span>&lt;/span&gt;
-</span><span id="354">                    &lt;/label&gt;
-</span><span id="355">                &lt;/li&gt;
-</span><span id="356">                <span class="xlang">&lt;?php</span>
-</span><span id="357">
-</span><span id="358">            <span class="php-keyword1">endforeach</span>;
-</span><span id="359">
-</span><span id="360">            <span class="xlang">?&gt;</span>
-</span><span id="361">            &lt;/ul&gt;
-</span><span id="362">
-</span><span id="363">        &lt;/div&gt;
-</span><span id="364">        <span class="xlang">&lt;?php</span>
-</span><span id="365">
-</span><span id="366">    }
+</span><span id="343">        <span class="php-var">$name</span> = <span class="php-keyword1">isset</span>( <span class="php-var">$wp_customize</span> ) ? <span class="php-quote">'_customize-radio'</span> : <span class="php-quote">'primer'</span>;
+</span><span id="344">
+</span><span id="345">        <span class="xlang">?&gt;</span>
+</span><span id="346">        &lt;div <span class="php-keyword1">class</span>=<span class="php-quote">&quot;primer-layout-wrap&quot;</span>&gt;
+</span><span id="347">
+</span><span id="348">            &lt;ul&gt;
+</span><span id="349">            <span class="xlang">&lt;?php</span>
+</span><span id="350">
+</span><span id="351">            <span class="php-keyword1">foreach</span> ( <span class="php-var">$layouts</span> <span class="php-keyword1">as</span> <span class="php-var">$layout</span> =&gt; <span class="php-var">$label</span> ) :
+</span><span id="352">
+</span><span id="353">                <span class="php-var">$class</span> = ( <span class="php-var">$has_custom</span> ) ? <span class="php-quote">'active'</span> : <span class="php-quote">'disabled'</span>;
+</span><span id="354">                <span class="php-var">$class</span> .= ( <span class="php-var">$layout</span> === <span class="php-var">$global_layout</span> ) ? <span class="php-quote">' active global'</span> : <span class="php-quote">''</span>;
+</span><span id="355">
+</span><span id="356">                <span class="xlang">?&gt;</span>
+</span><span id="357">                &lt;li <span class="php-keyword1">class</span>=<span class="php-quote">&quot;&lt;?php echo esc_attr( </span><span class="php-var">$class</span><span class="php-quote"> ); ?&gt;&quot;</span>&gt;
+</span><span id="358">                    &lt;label <span class="php-keyword1">for</span>=<span class="php-quote">&quot;primer-layout-&lt;?php echo esc_attr( </span><span class="php-var">$layout</span><span class="php-quote"> ); ?&gt;&quot;</span>&gt;
+</span><span id="359">                        &lt;input type=<span class="php-quote">&quot;radio&quot;</span> name=<span class="php-quote">&quot;&lt;?php echo esc_attr( </span><span class="php-var">$name</span><span class="php-quote"> ); ?&gt;-layout&quot;</span> data-customize-setting-<span class="php-keyword2">link</span>=<span class="php-quote">&quot;layout&quot;</span> id=<span class="php-quote">&quot;primer-layout-&lt;?php echo esc_attr( </span><span class="php-var">$layout</span><span class="php-quote"> ); ?&gt;&quot;</span> value=<span class="php-quote">&quot;&lt;?php echo esc_attr( </span><span class="php-var">$layout</span><span class="php-quote"> ); ?&gt;&quot;</span> <span class="xlang">&lt;?php</span> checked( <span class="php-var">$current_layout</span>, <span class="php-var">$layout</span> ); <span class="xlang">?&gt;</span> <span class="xlang">&lt;?php</span> disabled( <span class="php-quote">'disabled'</span> === <span class="php-var">$class</span> ); <span class="xlang">?&gt;</span>&gt;
+</span><span id="360">                        &lt;img src=<span class="php-quote">&quot;&lt;?php echo esc_url( sprintf( '%s/assets/images/layouts/%s%s.svg', get_template_directory_uri(), </span><span class="php-var">$layout</span><span class="php-quote">, is_rtl() ? '-rtl' : '' ) ); ?&gt;&quot;</span>
+</span><span id="361">                            alt=<span class="php-quote">&quot;&lt;?php echo esc_attr( </span><span class="php-var">$label</span><span class="php-quote"> ); ?&gt;&quot;</span>
+</span><span id="362">                            title=<span class="php-quote">&quot;&lt;?php echo esc_attr( </span><span class="php-var">$label</span><span class="php-quote"> ); ?&gt;&quot;</span>&gt;
+</span><span id="363">                        &lt;span&gt;<span class="xlang">&lt;?php</span> <span class="php-keyword1">echo</span> esc_html( <span class="php-var">$label</span> ); <span class="xlang">?&gt;</span>&lt;/span&gt;
+</span><span id="364">                    &lt;/label&gt;
+</span><span id="365">                &lt;/li&gt;
+</span><span id="366">                <span class="xlang">&lt;?php</span>
 </span><span id="367">
-</span><span id="368">    <span class="php-comment">/**
-</span></span><span id="369"><span class="php-comment">     * Save layout post meta.
-</span></span><span id="370"><span class="php-comment">     *
-</span></span><span id="371"><span class="php-comment">     * @action save_post
-</span></span><span id="372"><span class="php-comment">     * @since  1.0.0
-</span></span><span id="373"><span class="php-comment">     *
-</span></span><span id="374"><span class="php-comment">     * @param int $post_id Post ID.
-</span></span><span id="375"><span class="php-comment">     */</span>
-</span><span id="376">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> save_post( <span class="php-var">$post_id</span> ) {
+</span><span id="368">            <span class="php-keyword1">endforeach</span>;
+</span><span id="369">
+</span><span id="370">            <span class="xlang">?&gt;</span>
+</span><span id="371">            &lt;/ul&gt;
+</span><span id="372">
+</span><span id="373">        &lt;/div&gt;
+</span><span id="374">        <span class="xlang">&lt;?php</span>
+</span><span id="375">
+</span><span id="376">    }
 </span><span id="377">
-</span><span id="378">        <span class="php-keyword1">if</span> (
-</span><span id="379">            <span class="php-keyword1">empty</span>( <span class="php-var">$_POST</span>[<span class="php-quote">'primer-layout-nonce'</span>] ) <span class="php-comment">// input var ok.</span>
-</span><span id="380">            ||
-</span><span id="381">            ! wp_verify_nonce( <span class="php-var">$_POST</span>[<span class="php-quote">'primer-layout-nonce'</span>], <span class="php-keyword2">basename</span>( __FILE__ ) ) <span class="php-comment">// input var ok, sanitization ok.</span>
-</span><span id="382">        ) {
-</span><span id="383">
-</span><span id="384">            <span class="php-keyword1">return</span>;
-</span><span id="385">
-</span><span id="386">        }
+</span><span id="378">    <span class="php-comment">/**
+</span></span><span id="379"><span class="php-comment">     * Save layout post meta.
+</span></span><span id="380"><span class="php-comment">     *
+</span></span><span id="381"><span class="php-comment">     * @action save_post
+</span></span><span id="382"><span class="php-comment">     * @since  1.0.0
+</span></span><span id="383"><span class="php-comment">     *
+</span></span><span id="384"><span class="php-comment">     * @param int $post_id Post ID.
+</span></span><span id="385"><span class="php-comment">     */</span>
+</span><span id="386">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> save_post( <span class="php-var">$post_id</span> ) {
 </span><span id="387">
-</span><span id="388">        <span class="php-var">$override</span> = ! <span class="php-keyword1">empty</span>( <span class="php-var">$_POST</span>[<span class="php-quote">'primer-layout-override'</span>] ); <span class="php-comment">// input var ok.</span>
-</span><span id="389">        <span class="php-var">$current</span>  = <span class="php-var">$this</span>-&gt;get_post_layout( <span class="php-var">$post_id</span> );
-</span><span id="390">
-</span><span id="391">        <span class="php-keyword1">if</span> ( ! <span class="php-var">$override</span> &amp;&amp; <span class="php-var">$current</span> ) {
-</span><span id="392">
-</span><span id="393">            delete_post_meta( <span class="php-var">$post_id</span>, <span class="php-quote">'primer_layout'</span> );
-</span><span id="394">
-</span><span id="395">            <span class="php-keyword1">return</span>;
-</span><span id="396">
-</span><span id="397">        }
-</span><span id="398">
-</span><span id="399">        <span class="php-var">$layout</span> = <span class="php-keyword1">isset</span>( <span class="php-var">$_POST</span>[<span class="php-quote">'primer-layout'</span>] ) ? sanitize_key( <span class="php-var">$_POST</span>[<span class="php-quote">'primer-layout'</span>] ) : <span class="php-keyword1">null</span>; <span class="php-comment">// input var ok.</span>
+</span><span id="388">        <span class="php-keyword1">if</span> (
+</span><span id="389">            <span class="php-keyword1">empty</span>( <span class="php-var">$_POST</span>[<span class="php-quote">'primer-layout-nonce'</span>] ) <span class="php-comment">// input var ok.</span>
+</span><span id="390">            ||
+</span><span id="391">            ! wp_verify_nonce( <span class="php-var">$_POST</span>[<span class="php-quote">'primer-layout-nonce'</span>], <span class="php-keyword2">basename</span>( __FILE__ ) ) <span class="php-comment">// input var ok, sanitization ok.</span>
+</span><span id="392">        ) {
+</span><span id="393">
+</span><span id="394">            <span class="php-keyword1">return</span>;
+</span><span id="395">
+</span><span id="396">        }
+</span><span id="397">
+</span><span id="398">        <span class="php-var">$override</span> = ! <span class="php-keyword1">empty</span>( <span class="php-var">$_POST</span>[<span class="php-quote">'primer-layout-override'</span>] ); <span class="php-comment">// input var ok.</span>
+</span><span id="399">        <span class="php-var">$current</span>  = <span class="php-var">$this</span>-&gt;get_post_layout( <span class="php-var">$post_id</span> );
 </span><span id="400">
-</span><span id="401">        <span class="php-keyword1">if</span> ( ! <span class="php-var">$override</span> || ! <span class="php-var">$this</span>-&gt;layout_exists( <span class="php-var">$layout</span> ) || <span class="php-var">$layout</span> === <span class="php-var">$current</span> ) {
+</span><span id="401">        <span class="php-keyword1">if</span> ( ! <span class="php-var">$override</span> &amp;&amp; <span class="php-var">$current</span> ) {
 </span><span id="402">
-</span><span id="403">            <span class="php-keyword1">return</span>;
+</span><span id="403">            delete_post_meta( <span class="php-var">$post_id</span>, <span class="php-quote">'primer_layout'</span> );
 </span><span id="404">
-</span><span id="405">        }
+</span><span id="405">            <span class="php-keyword1">return</span>;
 </span><span id="406">
-</span><span id="407">        update_post_meta( <span class="php-var">$post_id</span>, <span class="php-quote">'primer_layout'</span>, <span class="php-var">$layout</span> );
+</span><span id="407">        }
 </span><span id="408">
-</span><span id="409">    }
+</span><span id="409">        <span class="php-var">$layout</span> = <span class="php-keyword1">isset</span>( <span class="php-var">$_POST</span>[<span class="php-quote">'primer-layout'</span>] ) ? sanitize_key( <span class="php-var">$_POST</span>[<span class="php-quote">'primer-layout'</span>] ) : <span class="php-keyword1">null</span>; <span class="php-comment">// input var ok.</span>
 </span><span id="410">
-</span><span id="411">    <span class="php-comment">/**
-</span></span><span id="412"><span class="php-comment">     * Register custom layout settings.
-</span></span><span id="413"><span class="php-comment">     *
-</span></span><span id="414"><span class="php-comment">     * @action customize_register
-</span></span><span id="415"><span class="php-comment">     * @see    WP_Customize_Manager
-</span></span><span id="416"><span class="php-comment">     *
-</span></span><span id="417"><span class="php-comment">     * @since  1.0.0
-</span></span><span id="418"><span class="php-comment">     *
-</span></span><span id="419"><span class="php-comment">     * @param WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
-</span></span><span id="420"><span class="php-comment">     */</span>
-</span><span id="421">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> customize_register( WP_Customize_Manager <span class="php-var">$wp_customize</span> ) {
-</span><span id="422">
-</span><span id="423">        <span class="php-var">$wp_customize</span>-&gt;add_section(
-</span><span id="424">            <span class="php-quote">'layout'</span>,
-</span><span id="425">            <span class="php-keyword1">array</span>(
-</span><span id="426">                <span class="php-quote">'title'</span>      =&gt; esc_html__( <span class="php-quote">'Layout'</span>, <span class="php-quote">'primer'</span> ),
-</span><span id="427">                <span class="php-quote">'priority'</span>   =&gt; <span class="php-num">30</span>,
-</span><span id="428">                <span class="php-quote">'capability'</span> =&gt; <span class="php-quote">'edit_theme_options'</span>,
-</span><span id="429">            )
-</span><span id="430">        );
-</span><span id="431">
-</span><span id="432">        <span class="php-keyword1">if</span> ( ! <span class="php-var">$this</span>-&gt;page_widths ) {
-</span><span id="433">
-</span><span id="434">            <span class="php-keyword1">return</span>;
-</span><span id="435">
-</span><span id="436">        }
-</span><span id="437">
-</span><span id="438">        <span class="php-keyword2">reset</span>( <span class="php-var">$this</span>-&gt;page_widths );
-</span><span id="439">
-</span><span id="440">        <span class="php-var">$wp_customize</span>-&gt;add_setting(
-</span><span id="441">            <span class="php-quote">'page_width'</span>,
-</span><span id="442">            <span class="php-keyword1">array</span>(
-</span><span id="443">                <span class="php-quote">'default'</span>           =&gt; <span class="php-keyword2">key</span>( <span class="php-var">$this</span>-&gt;page_widths ),
-</span><span id="444">                <span class="php-quote">'sanitize_callback'</span> =&gt; <span class="php-quote">'sanitize_key'</span>,
-</span><span id="445">                <span class="php-quote">'transport'</span>         =&gt; <span class="php-quote">'postMessage'</span>,
-</span><span id="446">            )
-</span><span id="447">        );
-</span><span id="448">
-</span><span id="449">        <span class="php-var">$wp_customize</span>-&gt;add_control(
-</span><span id="450">            <span class="php-quote">'page_width'</span>,
-</span><span id="451">            <span class="php-keyword1">array</span>(
-</span><span id="452">                <span class="php-quote">'label'</span>       =&gt; esc_html__( <span class="php-quote">'Page Width'</span>, <span class="php-quote">'primer'</span> ),
-</span><span id="453">                <span class="php-quote">'description'</span> =&gt; esc_html__( <span class="php-quote">'Display your site differently on larger screens.'</span>, <span class="php-quote">'primer'</span> ),
-</span><span id="454">                <span class="php-quote">'section'</span>     =&gt; <span class="php-quote">'layout'</span>,
-</span><span id="455">                <span class="php-quote">'settings'</span>    =&gt; <span class="php-quote">'page_width'</span>,
-</span><span id="456">                <span class="php-quote">'type'</span>        =&gt; <span class="php-quote">'radio'</span>,
-</span><span id="457">                <span class="php-quote">'choices'</span>     =&gt; <span class="php-var">$this</span>-&gt;page_widths,
-</span><span id="458">            )
-</span><span id="459">        );
-</span><span id="460">
-</span><span id="461">    }
-</span><span id="462">
-</span><span id="463">    <span class="php-comment">/**
-</span></span><span id="464"><span class="php-comment">     * Add layout class to body element on the front-end.
-</span></span><span id="465"><span class="php-comment">     *
-</span></span><span id="466"><span class="php-comment">     * @filter body_class
-</span></span><span id="467"><span class="php-comment">     * @since  1.0.0
-</span></span><span id="468"><span class="php-comment">     *
-</span></span><span id="469"><span class="php-comment">     * @param  array $classes Array of body classes.
-</span></span><span id="470"><span class="php-comment">     *
-</span></span><span id="471"><span class="php-comment">     * @return array Returns the filtered array of body classes.
-</span></span><span id="472"><span class="php-comment">     */</span>
-</span><span id="473">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> body_class( <span class="php-keyword1">array</span> <span class="php-var">$classes</span> ) {
-</span><span id="474">
-</span><span id="475">        <span class="php-var">$classes</span>[] = sanitize_html_class( <span class="php-keyword2">sprintf</span>( <span class="php-quote">'layout-%s'</span>, <span class="php-var">$this</span>-&gt;get_current_layout() ) );
-</span><span id="476">        <span class="php-var">$classes</span>[] = primer_is_fluid_width() ? <span class="php-quote">'no-max-width'</span> : <span class="php-keyword1">null</span>;
-</span><span id="477">
-</span><span id="478">        <span class="php-keyword1">return</span> <span class="php-keyword2">array_filter</span>( <span class="php-var">$classes</span> );
-</span><span id="479">
-</span><span id="480">    }
-</span><span id="481">
-</span><span id="482">    <span class="php-comment">/**
-</span></span><span id="483"><span class="php-comment">     * Check if a layout exists.
-</span></span><span id="484"><span class="php-comment">     *
-</span></span><span id="485"><span class="php-comment">     * @since 1.0.0
-</span></span><span id="486"><span class="php-comment">     *
-</span></span><span id="487"><span class="php-comment">     * @param  string $layout The layout name to check.
-</span></span><span id="488"><span class="php-comment">     *
-</span></span><span id="489"><span class="php-comment">     * @return bool Returns true if the layout is set, otherwise false.
-</span></span><span id="490"><span class="php-comment">     */</span>
-</span><span id="491">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> layout_exists( <span class="php-var">$layout</span> ) {
-</span><span id="492">
-</span><span id="493">        <span class="php-keyword1">return</span> <span class="php-keyword1">isset</span>( <span class="php-var">$this</span>-&gt;layouts[ <span class="php-var">$layout</span> ] );
-</span><span id="494">
-</span><span id="495">    }
-</span><span id="496">
-</span><span id="497">    <span class="php-comment">/**
-</span></span><span id="498"><span class="php-comment">     * Return a post ID.
-</span></span><span id="499"><span class="php-comment">     *
-</span></span><span id="500"><span class="php-comment">     * @param  WP_Post|int $post (optional) The WP_Post object.
-</span></span><span id="501"><span class="php-comment">     *
-</span></span><span id="502"><span class="php-comment">     * @return int Returns the post ID.
-</span></span><span id="503"><span class="php-comment">     */</span>
-</span><span id="504">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> get_post_id( <span class="php-var">$post</span> = <span class="php-keyword1">null</span> ) {
-</span><span id="505">
-</span><span id="506">        <span class="php-keyword1">return</span> <span class="php-keyword2">is_a</span>( <span class="php-quote">'WP_Post'</span>, <span class="php-var">$post</span> ) ? <span class="php-var">$post</span>-&gt;ID : ( <span class="php-keyword2">is_numeric</span>( <span class="php-var">$post</span> ) ? absint( <span class="php-var">$post</span> ) : get_queried_object_id() );
-</span><span id="507">
-</span><span id="508">    }
-</span><span id="509">
-</span><span id="510">    <span class="php-comment">/**
-</span></span><span id="511"><span class="php-comment">     * Return the layout override for a post.
-</span></span><span id="512"><span class="php-comment">     *
-</span></span><span id="513"><span class="php-comment">     * @param  WP_Post|int $post (optional) The WP_Post object.
-</span></span><span id="514"><span class="php-comment">     *
-</span></span><span id="515"><span class="php-comment">     * @return string Returns the post layout.
-</span></span><span id="516"><span class="php-comment">     */</span>
-</span><span id="517">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> get_post_layout( <span class="php-var">$post</span> = <span class="php-keyword1">null</span> ) {
-</span><span id="518">
-</span><span id="519">        <span class="php-keyword1">return</span> get_post_meta( <span class="php-var">$this</span>-&gt;get_post_id( <span class="php-var">$post</span> ), <span class="php-quote">'primer_layout'</span>, <span class="php-keyword1">true</span> );
-</span><span id="520">
-</span><span id="521">    }
-</span><span id="522">
-</span><span id="523">    <span class="php-comment">/**
-</span></span><span id="524"><span class="php-comment">     * Return the global layout.
-</span></span><span id="525"><span class="php-comment">     *
-</span></span><span id="526"><span class="php-comment">     * @uses [get_theme_mod](https://codex.wordpress.org/Function_Reference/get_theme_mod) To retreive the layout mod.
-</span></span><span id="527"><span class="php-comment">     *
-</span></span><span id="528"><span class="php-comment">     * @return string Returns the layout theme modification.
-</span></span><span id="529"><span class="php-comment">     */</span>
-</span><span id="530">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> get_global_layout() {
-</span><span id="531">
-</span><span id="532">        <span class="php-keyword1">return</span> get_theme_mod( <span class="php-quote">'layout'</span>, <span class="php-var">$this</span>-&gt;<span class="php-keyword1">default</span> );
-</span><span id="533">
-</span><span id="534">    }
-</span><span id="535">
-</span><span id="536">    <span class="php-comment">/**
-</span></span><span id="537"><span class="php-comment">     * Return the current layout.
-</span></span><span id="538"><span class="php-comment">     *
-</span></span><span id="539"><span class="php-comment">     * @uses   get_post_layout
-</span></span><span id="540"><span class="php-comment">     * @uses   get_global_layout
-</span></span><span id="541"><span class="php-comment">     * @uses   layout_exists
-</span></span><span id="542"><span class="php-comment">     *
-</span></span><span id="543"><span class="php-comment">     * @param  WP_Post|int $post (optional) The WP_Post object.
-</span></span><span id="544"><span class="php-comment">     *
-</span></span><span id="545"><span class="php-comment">     * @return string Returns the current layout which is set.
-</span></span><span id="546"><span class="php-comment">     */</span>
-</span><span id="547">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> get_current_layout( <span class="php-var">$post</span> = <span class="php-keyword1">null</span> ) {
-</span><span id="548">
-</span><span id="549">        <span class="php-var">$override</span> = <span class="php-var">$this</span>-&gt;get_post_layout( <span class="php-var">$post</span> );
-</span><span id="550">        <span class="php-var">$layout</span>   = ( <span class="php-var">$override</span> ) ? <span class="php-var">$override</span> : <span class="php-var">$this</span>-&gt;get_global_layout();
-</span><span id="551">
-</span><span id="552">        <span class="php-comment">/**
-</span></span><span id="553"><span class="php-comment">         * Filter the current layout.
-</span></span><span id="554"><span class="php-comment">         *
-</span></span><span id="555"><span class="php-comment">         * @since 1.0.0
-</span></span><span id="556"><span class="php-comment">         *
-</span></span><span id="557"><span class="php-comment">         * @param WP_Post|int|null $post
-</span></span><span id="558"><span class="php-comment">         *
-</span></span><span id="559"><span class="php-comment">         * @var string
-</span></span><span id="560"><span class="php-comment">         */</span>
-</span><span id="561">        <span class="php-var">$layout</span> = (string) apply_filters( <span class="php-quote">'primer_current_layout'</span>, <span class="php-var">$layout</span>, <span class="php-var">$post</span> );
-</span><span id="562">
-</span><span id="563">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;layout_exists( <span class="php-var">$layout</span> ) ? <span class="php-var">$layout</span> : <span class="php-var">$this</span>-&gt;<span class="php-keyword1">default</span>;
-</span><span id="564">
-</span><span id="565">    }
-</span><span id="566">
-</span><span id="567">    <span class="php-comment">/**
-</span></span><span id="568"><span class="php-comment">     * Magic getter for `$colors` and `$color_schemes` properties.
-</span></span><span id="569"><span class="php-comment">     *
-</span></span><span id="570"><span class="php-comment">     * @since  1.8.0
-</span></span><span id="571"><span class="php-comment">     *
-</span></span><span id="572"><span class="php-comment">     * @param  string $name Name of private property to retreive.
-</span></span><span id="573"><span class="php-comment">     *
-</span></span><span id="574"><span class="php-comment">     * @return string Return the specified property within the `Primer_Customizer_Layouts` class.
-</span></span><span id="575"><span class="php-comment">     */</span>
-</span><span id="576">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __get( <span class="php-var">$name</span> ) {
-</span><span id="577">
-</span><span id="578">        <span class="php-var">$properties</span> = <span class="php-keyword1">array</span>( <span class="php-quote">'layouts'</span>, <span class="php-quote">'default'</span>, <span class="php-quote">'meta_box'</span>, <span class="php-quote">'page_widths'</span> );
-</span><span id="579">
-</span><span id="580">        <span class="php-keyword1">return</span> <span class="php-keyword2">in_array</span>( <span class="php-var">$name</span>, <span class="php-var">$properties</span>, <span class="php-keyword1">true</span> ) ? <span class="php-var">$this</span>-&gt;name : <span class="php-keyword1">false</span>;
-</span><span id="581">
-</span><span id="582">    }
-</span><span id="583">
-</span><span id="584">}
-</span><span id="585">
-</span><span id="586"><span class="php-var">$GLOBALS</span>[<span class="php-quote">'primer_customizer_layouts'</span>] = <span class="php-keyword1">new</span> Primer_Customizer_Layouts;
-</span><span id="587"></span></code></pre>
+</span><span id="411">        <span class="php-keyword1">if</span> ( ! <span class="php-var">$override</span> || ! <span class="php-var">$this</span>-&gt;layout_exists( <span class="php-var">$layout</span> ) || <span class="php-var">$layout</span> === <span class="php-var">$current</span> ) {
+</span><span id="412">
+</span><span id="413">            <span class="php-keyword1">return</span>;
+</span><span id="414">
+</span><span id="415">        }
+</span><span id="416">
+</span><span id="417">        update_post_meta( <span class="php-var">$post_id</span>, <span class="php-quote">'primer_layout'</span>, <span class="php-var">$layout</span> );
+</span><span id="418">
+</span><span id="419">    }
+</span><span id="420">
+</span><span id="421">    <span class="php-comment">/**
+</span></span><span id="422"><span class="php-comment">     * Register custom layout settings.
+</span></span><span id="423"><span class="php-comment">     *
+</span></span><span id="424"><span class="php-comment">     * @action customize_register
+</span></span><span id="425"><span class="php-comment">     * @see    WP_Customize_Manager
+</span></span><span id="426"><span class="php-comment">     *
+</span></span><span id="427"><span class="php-comment">     * @since  1.0.0
+</span></span><span id="428"><span class="php-comment">     *
+</span></span><span id="429"><span class="php-comment">     * @param WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
+</span></span><span id="430"><span class="php-comment">     */</span>
+</span><span id="431">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> customize_register( WP_Customize_Manager <span class="php-var">$wp_customize</span> ) {
+</span><span id="432">
+</span><span id="433">        <span class="php-var">$wp_customize</span>-&gt;add_section(
+</span><span id="434">            <span class="php-quote">'layout'</span>,
+</span><span id="435">            <span class="php-keyword1">array</span>(
+</span><span id="436">                <span class="php-quote">'title'</span>      =&gt; esc_html__( <span class="php-quote">'Layout'</span>, <span class="php-quote">'primer'</span> ),
+</span><span id="437">                <span class="php-quote">'priority'</span>   =&gt; <span class="php-num">30</span>,
+</span><span id="438">                <span class="php-quote">'capability'</span> =&gt; <span class="php-quote">'edit_theme_options'</span>,
+</span><span id="439">            )
+</span><span id="440">        );
+</span><span id="441">
+</span><span id="442">        <span class="php-keyword1">if</span> ( ! <span class="php-var">$this</span>-&gt;page_widths ) {
+</span><span id="443">
+</span><span id="444">            <span class="php-keyword1">return</span>;
+</span><span id="445">
+</span><span id="446">        }
+</span><span id="447">
+</span><span id="448">        <span class="php-keyword2">reset</span>( <span class="php-var">$this</span>-&gt;page_widths );
+</span><span id="449">
+</span><span id="450">        <span class="php-var">$wp_customize</span>-&gt;add_setting(
+</span><span id="451">            <span class="php-quote">'page_width'</span>,
+</span><span id="452">            <span class="php-keyword1">array</span>(
+</span><span id="453">                <span class="php-quote">'default'</span>           =&gt; <span class="php-keyword2">key</span>( <span class="php-var">$this</span>-&gt;page_widths ),
+</span><span id="454">                <span class="php-quote">'sanitize_callback'</span> =&gt; <span class="php-quote">'sanitize_key'</span>,
+</span><span id="455">                <span class="php-quote">'transport'</span>         =&gt; <span class="php-quote">'postMessage'</span>,
+</span><span id="456">            )
+</span><span id="457">        );
+</span><span id="458">
+</span><span id="459">        <span class="php-var">$wp_customize</span>-&gt;add_control(
+</span><span id="460">            <span class="php-quote">'page_width'</span>,
+</span><span id="461">            <span class="php-keyword1">array</span>(
+</span><span id="462">                <span class="php-quote">'label'</span>       =&gt; esc_html__( <span class="php-quote">'Page Width'</span>, <span class="php-quote">'primer'</span> ),
+</span><span id="463">                <span class="php-quote">'description'</span> =&gt; esc_html__( <span class="php-quote">'Display your site differently on larger screens.'</span>, <span class="php-quote">'primer'</span> ),
+</span><span id="464">                <span class="php-quote">'section'</span>     =&gt; <span class="php-quote">'layout'</span>,
+</span><span id="465">                <span class="php-quote">'settings'</span>    =&gt; <span class="php-quote">'page_width'</span>,
+</span><span id="466">                <span class="php-quote">'type'</span>        =&gt; <span class="php-quote">'radio'</span>,
+</span><span id="467">                <span class="php-quote">'choices'</span>     =&gt; <span class="php-var">$this</span>-&gt;page_widths,
+</span><span id="468">            )
+</span><span id="469">        );
+</span><span id="470">
+</span><span id="471">    }
+</span><span id="472">
+</span><span id="473">    <span class="php-comment">/**
+</span></span><span id="474"><span class="php-comment">     * Add layout class to body element on the front-end.
+</span></span><span id="475"><span class="php-comment">     *
+</span></span><span id="476"><span class="php-comment">     * @filter body_class
+</span></span><span id="477"><span class="php-comment">     * @since  1.0.0
+</span></span><span id="478"><span class="php-comment">     *
+</span></span><span id="479"><span class="php-comment">     * @param  array $classes Array of body classes.
+</span></span><span id="480"><span class="php-comment">     *
+</span></span><span id="481"><span class="php-comment">     * @return array Returns the filtered array of body classes.
+</span></span><span id="482"><span class="php-comment">     */</span>
+</span><span id="483">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> body_class( <span class="php-keyword1">array</span> <span class="php-var">$classes</span> ) {
+</span><span id="484">
+</span><span id="485">        <span class="php-var">$classes</span>[] = sanitize_html_class( <span class="php-keyword2">sprintf</span>( <span class="php-quote">'layout-%s'</span>, <span class="php-var">$this</span>-&gt;get_current_layout() ) );
+</span><span id="486">        <span class="php-var">$classes</span>[] = primer_is_fluid_width() ? <span class="php-quote">'no-max-width'</span> : <span class="php-keyword1">null</span>;
+</span><span id="487">
+</span><span id="488">        <span class="php-keyword1">return</span> <span class="php-keyword2">array_filter</span>( <span class="php-var">$classes</span> );
+</span><span id="489">
+</span><span id="490">    }
+</span><span id="491">
+</span><span id="492">    <span class="php-comment">/**
+</span></span><span id="493"><span class="php-comment">     * Check if a layout exists.
+</span></span><span id="494"><span class="php-comment">     *
+</span></span><span id="495"><span class="php-comment">     * @since 1.0.0
+</span></span><span id="496"><span class="php-comment">     *
+</span></span><span id="497"><span class="php-comment">     * @param  string $layout The layout name to check.
+</span></span><span id="498"><span class="php-comment">     *
+</span></span><span id="499"><span class="php-comment">     * @return bool Returns true if the layout is set, otherwise false.
+</span></span><span id="500"><span class="php-comment">     */</span>
+</span><span id="501">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> layout_exists( <span class="php-var">$layout</span> ) {
+</span><span id="502">
+</span><span id="503">        <span class="php-keyword1">return</span> <span class="php-keyword1">isset</span>( <span class="php-var">$this</span>-&gt;layouts[ <span class="php-var">$layout</span> ] );
+</span><span id="504">
+</span><span id="505">    }
+</span><span id="506">
+</span><span id="507">    <span class="php-comment">/**
+</span></span><span id="508"><span class="php-comment">     * Return a post ID.
+</span></span><span id="509"><span class="php-comment">     *
+</span></span><span id="510"><span class="php-comment">     * @param  WP_Post|int $post (optional) The WP_Post object.
+</span></span><span id="511"><span class="php-comment">     *
+</span></span><span id="512"><span class="php-comment">     * @return int Returns the post ID.
+</span></span><span id="513"><span class="php-comment">     */</span>
+</span><span id="514">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> get_post_id( <span class="php-var">$post</span> = <span class="php-keyword1">null</span> ) {
+</span><span id="515">
+</span><span id="516">        <span class="php-keyword1">return</span> <span class="php-keyword2">is_a</span>( <span class="php-quote">'WP_Post'</span>, <span class="php-var">$post</span> ) ? <span class="php-var">$post</span>-&gt;ID : ( <span class="php-keyword2">is_numeric</span>( <span class="php-var">$post</span> ) ? absint( <span class="php-var">$post</span> ) : get_queried_object_id() );
+</span><span id="517">
+</span><span id="518">    }
+</span><span id="519">
+</span><span id="520">    <span class="php-comment">/**
+</span></span><span id="521"><span class="php-comment">     * Return the layout override for a post.
+</span></span><span id="522"><span class="php-comment">     *
+</span></span><span id="523"><span class="php-comment">     * @param  WP_Post|int $post (optional) The WP_Post object.
+</span></span><span id="524"><span class="php-comment">     *
+</span></span><span id="525"><span class="php-comment">     * @return string Returns the post layout.
+</span></span><span id="526"><span class="php-comment">     */</span>
+</span><span id="527">    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> get_post_layout( <span class="php-var">$post</span> = <span class="php-keyword1">null</span> ) {
+</span><span id="528">
+</span><span id="529">        <span class="php-keyword1">return</span> get_post_meta( <span class="php-var">$this</span>-&gt;get_post_id( <span class="php-var">$post</span> ), <span class="php-quote">'primer_layout'</span>, <span class="php-keyword1">true</span> );
+</span><span id="530">
+</span><span id="531">    }
+</span><span id="532">
+</span><span id="533">    <span class="php-comment">/**
+</span></span><span id="534"><span class="php-comment">     * Return the global layout.
+</span></span><span id="535"><span class="php-comment">     *
+</span></span><span id="536"><span class="php-comment">     * @uses [get_theme_mod](https://codex.wordpress.org/Function_Reference/get_theme_mod) To retreive the layout mod.
+</span></span><span id="537"><span class="php-comment">     *
+</span></span><span id="538"><span class="php-comment">     * @return string Returns the layout theme modification.
+</span></span><span id="539"><span class="php-comment">     */</span>
+</span><span id="540">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> get_global_layout() {
+</span><span id="541">
+</span><span id="542">        <span class="php-keyword1">return</span> get_theme_mod( <span class="php-quote">'layout'</span>, <span class="php-var">$this</span>-&gt;<span class="php-keyword1">default</span> );
+</span><span id="543">
+</span><span id="544">    }
+</span><span id="545">
+</span><span id="546">    <span class="php-comment">/**
+</span></span><span id="547"><span class="php-comment">     * Return the current layout.
+</span></span><span id="548"><span class="php-comment">     *
+</span></span><span id="549"><span class="php-comment">     * @uses   get_post_layout
+</span></span><span id="550"><span class="php-comment">     * @uses   get_global_layout
+</span></span><span id="551"><span class="php-comment">     * @uses   layout_exists
+</span></span><span id="552"><span class="php-comment">     *
+</span></span><span id="553"><span class="php-comment">     * @param  WP_Post|int $post (optional) The WP_Post object.
+</span></span><span id="554"><span class="php-comment">     *
+</span></span><span id="555"><span class="php-comment">     * @return string Returns the current layout which is set.
+</span></span><span id="556"><span class="php-comment">     */</span>
+</span><span id="557">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> get_current_layout( <span class="php-var">$post</span> = <span class="php-keyword1">null</span> ) {
+</span><span id="558">
+</span><span id="559">        <span class="php-var">$override</span> = <span class="php-var">$this</span>-&gt;get_post_layout( <span class="php-var">$post</span> );
+</span><span id="560">        <span class="php-var">$layout</span>   = ( <span class="php-var">$override</span> ) ? <span class="php-var">$override</span> : <span class="php-var">$this</span>-&gt;get_global_layout();
+</span><span id="561">
+</span><span id="562">        <span class="php-comment">/**
+</span></span><span id="563"><span class="php-comment">         * Filter the current layout.
+</span></span><span id="564"><span class="php-comment">         *
+</span></span><span id="565"><span class="php-comment">         * @since 1.0.0
+</span></span><span id="566"><span class="php-comment">         *
+</span></span><span id="567"><span class="php-comment">         * @param WP_Post|int|null $post
+</span></span><span id="568"><span class="php-comment">         *
+</span></span><span id="569"><span class="php-comment">         * @var string
+</span></span><span id="570"><span class="php-comment">         */</span>
+</span><span id="571">        <span class="php-var">$layout</span> = (string) apply_filters( <span class="php-quote">'primer_current_layout'</span>, <span class="php-var">$layout</span>, <span class="php-var">$post</span> );
+</span><span id="572">
+</span><span id="573">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;layout_exists( <span class="php-var">$layout</span> ) ? <span class="php-var">$layout</span> : <span class="php-var">$this</span>-&gt;<span class="php-keyword1">default</span>;
+</span><span id="574">
+</span><span id="575">    }
+</span><span id="576">
+</span><span id="577">    <span class="php-comment">/**
+</span></span><span id="578"><span class="php-comment">     * Magic getter for `$colors` and `$color_schemes` properties.
+</span></span><span id="579"><span class="php-comment">     *
+</span></span><span id="580"><span class="php-comment">     * @since  1.8.0
+</span></span><span id="581"><span class="php-comment">     *
+</span></span><span id="582"><span class="php-comment">     * @param  string $name Name of private property to retreive.
+</span></span><span id="583"><span class="php-comment">     *
+</span></span><span id="584"><span class="php-comment">     * @return string Return the specified property within the `Primer_Customizer_Layouts` class.
+</span></span><span id="585"><span class="php-comment">     */</span>
+</span><span id="586">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __get( <span class="php-var">$name</span> ) {
+</span><span id="587">
+</span><span id="588">        <span class="php-var">$properties</span> = <span class="php-keyword1">array</span>( <span class="php-quote">'layouts'</span>, <span class="php-quote">'default'</span>, <span class="php-quote">'meta_box'</span>, <span class="php-quote">'page_widths'</span> );
+</span><span id="589">
+</span><span id="590">        <span class="php-keyword1">return</span> <span class="php-keyword2">in_array</span>( <span class="php-var">$name</span>, <span class="php-var">$properties</span>, <span class="php-keyword1">true</span> ) ? <span class="php-var">$this</span>-&gt;name : <span class="php-keyword1">false</span>;
+</span><span id="591">
+</span><span id="592">    }
+</span><span id="593">
+</span><span id="594">}
+</span><span id="595">
+</span><span id="596"><span class="php-var">$GLOBALS</span>[<span class="php-quote">'primer_customizer_layouts'</span>] = <span class="php-keyword1">new</span> Primer_Customizer_Layouts;
+</span><span id="597"></span></code></pre>
 			</div>
 		</div>
 

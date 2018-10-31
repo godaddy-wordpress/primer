@@ -15,8 +15,8 @@
 	<link rel="stylesheet" type="text/css" href="resources/css/prism.css?9bc16dfb1371f65f7b17c8d50c25c6e225457735">
 	<link rel="stylesheet" type="text/css" href="resources/css/responsive.css?23aedcbba2a71c6eae0181247948af42426549eb">
 
-	<script type="text/javascript" src="resources/combined.js?5997ce084f75415bb689f3d986095ed2f17e8bf4"></script>
-	<script type="text/javascript" src="elementlist.js?fa72ac6bf424ca706feec4ee743695c9a221905e"></script>
+	<script type="text/javascript" src="resources/combined.js?7de7b9dfb0e446cc48b8dc328cbc5205f257dd3f"></script>
+	<script type="text/javascript" src="elementlist.js?a2032d8086b9ad2d657c6c7a0ee23f8aeec7618b"></script>
 
 </head>
 
@@ -108,7 +108,7 @@
 					<h2>
 						<a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html">
 							<span class="glyph_range icon-submenu icon-submenu-cook">B</span>
-							Primer Theme 1.8.2
+							Primer Theme 1.8.6
 							
 							<strong>API</strong>
 						</a>
@@ -127,7 +127,7 @@
 						</li>
 
 												<li class="version-picker">
-							<h6>Version: 1.8.2</h6>
+							<h6>Version: 1.8.6</h6>
 							<!--
 							<ul class="nav navbar-nav">
 								<li class="dropdown">
@@ -206,6 +206,8 @@
 							<li><a href="package-Compatibility.BeaverBuilder.html">BeaverBuilder</a>
 									</li>
 							<li><a href="package-Compatibility.ChildThemes.html">ChildThemes</a>
+									</li>
+							<li><a href="package-Compatibility.Gutenberg.html">Gutenberg</a>
 									</li>
 							<li><a href="package-Compatibility.Jetpack.html">Jetpack</a>
 									</li>
@@ -288,6 +290,8 @@
 							<li><a title="primer_get_the_page_title" href="function-primer_get_the_page_title.html">primer_get_the_page_title</a></li>
 							<li><a title="primer_get_the_widget" href="function-primer_get_the_widget.html">primer_get_the_widget</a></li>
 							<li><a title="primer_get_wp_upgrade_message" href="function-primer_get_wp_upgrade_message.html">primer_get_wp_upgrade_message</a></li>
+							<li><a title="primer_gutenberg_editor_assets" href="function-primer_gutenberg_editor_assets.html">primer_gutenberg_editor_assets</a></li>
+							<li><a title="primer_gutenberg_theme_support" href="function-primer_gutenberg_theme_support.html">primer_gutenberg_theme_support</a></li>
 							<li><a title="primer_has_active_categories" href="function-primer_has_active_categories.html">primer_has_active_categories</a></li>
 							<li><a title="primer_has_active_categories_reset" href="function-primer_has_active_categories_reset.html">primer_has_active_categories_reset</a></li>
 							<li><a title="primer_has_active_footer_sidebars" href="function-primer_has_active_footer_sidebars.html">primer_has_active_footer_sidebars</a></li>
@@ -307,6 +311,7 @@
 							<li><a title="primer_post_nav" href="function-primer_post_nav.html">primer_post_nav</a></li>
 							<li><a title="primer_posted_on" href="function-primer_posted_on.html">primer_posted_on</a></li>
 							<li><a title="primer_preview" href="function-primer_preview.html">primer_preview</a></li>
+							<li><a title="primer_privacy_policy_link" href="function-primer_privacy_policy_link.html">primer_privacy_policy_link</a></li>
 							<li><a title="primer_register_sidebars" href="function-primer_register_sidebars.html">primer_register_sidebars</a></li>
 							<li><a title="primer_register_widgets" href="function-primer_register_widgets.html">primer_register_widgets</a></li>
 							<li><a title="primer_scripts" href="function-primer_scripts.html">primer_scripts</a></li>
@@ -518,238 +523,257 @@
 </span><span id="166">        add_action( <span class="php-quote">'wp_enqueue_scripts'</span>, <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'enqueue_google_fonts'</span> ), <span class="php-num">11</span> );
 </span><span id="167">        add_action( <span class="php-quote">'wp_enqueue_scripts'</span>, <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'enqueue_inline_css'</span> ), <span class="php-num">12</span> );
 </span><span id="168">
-</span><span id="169">    }
+</span><span id="169">        add_action( <span class="php-quote">'customize_controls_enqueue_scripts'</span>, <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'font_control_scripts'</span> ) );
 </span><span id="170">
-</span><span id="171">    <span class="php-comment">/**
-</span></span><span id="172"><span class="php-comment">     * Register fonts section and settings.
-</span></span><span id="173"><span class="php-comment">     *
-</span></span><span id="174"><span class="php-comment">     * @action customize_registers
-</span></span><span id="175"><span class="php-comment">     * @see    WP_Customize_Manager
-</span></span><span id="176"><span class="php-comment">     *
-</span></span><span id="177"><span class="php-comment">     * @since  1.0.0
+</span><span id="171">    }
+</span><span id="172">
+</span><span id="173">    <span class="php-comment">/**
+</span></span><span id="174"><span class="php-comment">     * Register fonts section and settings.
+</span></span><span id="175"><span class="php-comment">     *
+</span></span><span id="176"><span class="php-comment">     * @action customize_registers
+</span></span><span id="177"><span class="php-comment">     * @see    WP_Customize_Manager
 </span></span><span id="178"><span class="php-comment">     *
-</span></span><span id="179"><span class="php-comment">     * @param  WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
-</span></span><span id="180"><span class="php-comment">     */</span>
-</span><span id="181">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> fonts( WP_Customize_Manager <span class="php-var">$wp_customize</span> ) {
-</span><span id="182">
-</span><span id="183">        <span class="php-keyword1">if</span> ( ! <span class="php-var">$this</span>-&gt;fonts || ! <span class="php-var">$this</span>-&gt;font_types ) {
+</span></span><span id="179"><span class="php-comment">     * @since  1.0.0
+</span></span><span id="180"><span class="php-comment">     *
+</span></span><span id="181"><span class="php-comment">     * @param  WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
+</span></span><span id="182"><span class="php-comment">     */</span>
+</span><span id="183">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> fonts( WP_Customize_Manager <span class="php-var">$wp_customize</span> ) {
 </span><span id="184">
-</span><span id="185">            <span class="php-keyword1">return</span>;
+</span><span id="185">        <span class="php-keyword1">if</span> ( ! <span class="php-var">$this</span>-&gt;fonts || ! <span class="php-var">$this</span>-&gt;font_types ) {
 </span><span id="186">
-</span><span id="187">        }
+</span><span id="187">            <span class="php-keyword1">return</span>;
 </span><span id="188">
-</span><span id="189">        <span class="php-var">$wp_customize</span>-&gt;add_section(
-</span><span id="190">            <span class="php-quote">'fonts'</span>,
-</span><span id="191">            <span class="php-keyword1">array</span>(
-</span><span id="192">                <span class="php-quote">'title'</span>    =&gt; esc_html__( <span class="php-quote">'Fonts'</span>, <span class="php-quote">'primer'</span> ),
-</span><span id="193">                <span class="php-quote">'priority'</span> =&gt; <span class="php-num">40</span>,
-</span><span id="194">            )
-</span><span id="195">        );
-</span><span id="196">
-</span><span id="197">        <span class="php-keyword1">foreach</span> ( <span class="php-var">$this</span>-&gt;font_types <span class="php-keyword1">as</span> <span class="php-var">$name</span> =&gt; <span class="php-var">$args</span> ) {
+</span><span id="189">        }
+</span><span id="190">
+</span><span id="191">        <span class="php-var">$wp_customize</span>-&gt;add_section(
+</span><span id="192">            <span class="php-quote">'fonts'</span>,
+</span><span id="193">            <span class="php-keyword1">array</span>(
+</span><span id="194">                <span class="php-quote">'title'</span>    =&gt; esc_html__( <span class="php-quote">'Fonts'</span>, <span class="php-quote">'primer'</span> ),
+</span><span id="195">                <span class="php-quote">'priority'</span> =&gt; <span class="php-num">40</span>,
+</span><span id="196">            )
+</span><span id="197">        );
 </span><span id="198">
-</span><span id="199">            <span class="php-keyword1">if</span> ( <span class="php-keyword1">empty</span>( <span class="php-var">$name</span> ) || <span class="php-keyword1">empty</span>( <span class="php-var">$args</span>[<span class="php-quote">'default'</span>] ) ) {
+</span><span id="199">        <span class="php-keyword1">foreach</span> ( <span class="php-var">$this</span>-&gt;font_types <span class="php-keyword1">as</span> <span class="php-var">$name</span> =&gt; <span class="php-var">$args</span> ) {
 </span><span id="200">
-</span><span id="201">                <span class="php-keyword1">continue</span>;
+</span><span id="201">            <span class="php-keyword1">if</span> ( <span class="php-keyword1">empty</span>( <span class="php-var">$name</span> ) || <span class="php-keyword1">empty</span>( <span class="php-var">$args</span>[<span class="php-quote">'default'</span>] ) ) {
 </span><span id="202">
-</span><span id="203">            }
+</span><span id="203">                <span class="php-keyword1">continue</span>;
 </span><span id="204">
-</span><span id="205">            <span class="php-var">$name</span> = sanitize_key( <span class="php-var">$name</span> );
+</span><span id="205">            }
 </span><span id="206">
-</span><span id="207">            <span class="php-var">$wp_customize</span>-&gt;add_setting(
-</span><span id="208">                <span class="php-var">$name</span>,
-</span><span id="209">                <span class="php-keyword1">array</span>(
-</span><span id="210">                    <span class="php-quote">'default'</span>           =&gt; <span class="php-var">$args</span>[<span class="php-quote">'default'</span>],
-</span><span id="211">                    <span class="php-quote">'sanitize_callback'</span> =&gt; <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'sanitize_font'</span> ),
-</span><span id="212">                )
-</span><span id="213">            );
-</span><span id="214">
-</span><span id="215">            <span class="php-var">$fonts</span>             = <span class="php-keyword2">array_combine</span>( <span class="php-var">$this</span>-&gt;fonts, <span class="php-var">$this</span>-&gt;fonts );
-</span><span id="216">            <span class="php-var">$default</span>           = <span class="php-var">$this</span>-&gt;get_default_font( <span class="php-var">$name</span> );
-</span><span id="217">            <span class="php-var">$fonts</span>[ <span class="php-var">$default</span> ] = <span class="php-keyword2">sprintf</span>( <span class="php-comment">/* translators: font name */</span> esc_html__( <span class="php-quote">'%s (Default)'</span>, <span class="php-quote">'primer'</span> ), <span class="php-var">$default</span> );
-</span><span id="218">
-</span><span id="219">            <span class="php-var">$wp_customize</span>-&gt;add_control(
-</span><span id="220">                <span class="php-var">$name</span>,
-</span><span id="221">                <span class="php-keyword1">array</span>(
-</span><span id="222">                    <span class="php-quote">'label'</span>       =&gt; ! <span class="php-keyword1">empty</span>( <span class="php-var">$args</span>[<span class="php-quote">'label'</span>] ) ? <span class="php-var">$args</span>[<span class="php-quote">'label'</span>] : <span class="php-var">$name</span>,
-</span><span id="223">                    <span class="php-quote">'description'</span> =&gt; ! <span class="php-keyword1">empty</span>( <span class="php-var">$args</span>[<span class="php-quote">'description'</span>] ) ? <span class="php-var">$args</span>[<span class="php-quote">'description'</span>] : <span class="php-keyword1">null</span>,
-</span><span id="224">                    <span class="php-quote">'section'</span>     =&gt; ! <span class="php-keyword1">empty</span>( <span class="php-var">$args</span>[<span class="php-quote">'section'</span>] ) ? <span class="php-var">$args</span>[<span class="php-quote">'section'</span>] : <span class="php-quote">'fonts'</span>,
-</span><span id="225">                    <span class="php-quote">'priority'</span>    =&gt; ! <span class="php-keyword1">empty</span>( <span class="php-var">$args</span>[<span class="php-quote">'priority'</span>] ) ? absint( <span class="php-var">$args</span>[<span class="php-quote">'priority'</span>] ) : <span class="php-keyword1">null</span>,
-</span><span id="226">                    <span class="php-quote">'type'</span>        =&gt; ! <span class="php-keyword1">empty</span>( <span class="php-var">$args</span>[<span class="php-quote">'type'</span>] ) ? <span class="php-var">$args</span>[<span class="php-quote">'type'</span>] : <span class="php-quote">'select'</span>,
-</span><span id="227">                    <span class="php-quote">'choices'</span>     =&gt; <span class="php-var">$fonts</span>,
-</span><span id="228">                )
-</span><span id="229">            );
-</span><span id="230">
-</span><span id="231">        }
+</span><span id="207">            <span class="php-var">$name</span> = sanitize_key( <span class="php-var">$name</span> );
+</span><span id="208">
+</span><span id="209">            <span class="php-var">$wp_customize</span>-&gt;add_setting(
+</span><span id="210">                <span class="php-var">$name</span>,
+</span><span id="211">                <span class="php-keyword1">array</span>(
+</span><span id="212">                    <span class="php-quote">'default'</span>           =&gt; <span class="php-var">$args</span>[<span class="php-quote">'default'</span>],
+</span><span id="213">                    <span class="php-quote">'sanitize_callback'</span> =&gt; <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'sanitize_font'</span> ),
+</span><span id="214">                )
+</span><span id="215">            );
+</span><span id="216">
+</span><span id="217">            <span class="php-var">$fonts</span>             = <span class="php-keyword2">array_combine</span>( <span class="php-var">$this</span>-&gt;fonts, <span class="php-var">$this</span>-&gt;fonts );
+</span><span id="218">            <span class="php-var">$default</span>           = <span class="php-var">$this</span>-&gt;get_default_font( <span class="php-var">$name</span> );
+</span><span id="219">            <span class="php-var">$fonts</span>[ <span class="php-var">$default</span> ] = <span class="php-keyword2">sprintf</span>( <span class="php-comment">/* translators: font name */</span> esc_html__( <span class="php-quote">'%s (Default)'</span>, <span class="php-quote">'primer'</span> ), <span class="php-var">$default</span> );
+</span><span id="220">
+</span><span id="221">            <span class="php-var">$wp_customize</span>-&gt;add_control(
+</span><span id="222">                <span class="php-var">$name</span>,
+</span><span id="223">                <span class="php-keyword1">array</span>(
+</span><span id="224">                    <span class="php-quote">'label'</span>       =&gt; ! <span class="php-keyword1">empty</span>( <span class="php-var">$args</span>[<span class="php-quote">'label'</span>] ) ? <span class="php-var">$args</span>[<span class="php-quote">'label'</span>] : <span class="php-var">$name</span>,
+</span><span id="225">                    <span class="php-quote">'description'</span> =&gt; ! <span class="php-keyword1">empty</span>( <span class="php-var">$args</span>[<span class="php-quote">'description'</span>] ) ? <span class="php-var">$args</span>[<span class="php-quote">'description'</span>] : <span class="php-keyword1">null</span>,
+</span><span id="226">                    <span class="php-quote">'section'</span>     =&gt; ! <span class="php-keyword1">empty</span>( <span class="php-var">$args</span>[<span class="php-quote">'section'</span>] ) ? <span class="php-var">$args</span>[<span class="php-quote">'section'</span>] : <span class="php-quote">'fonts'</span>,
+</span><span id="227">                    <span class="php-quote">'priority'</span>    =&gt; ! <span class="php-keyword1">empty</span>( <span class="php-var">$args</span>[<span class="php-quote">'priority'</span>] ) ? absint( <span class="php-var">$args</span>[<span class="php-quote">'priority'</span>] ) : <span class="php-keyword1">null</span>,
+</span><span id="228">                    <span class="php-quote">'type'</span>        =&gt; ! <span class="php-keyword1">empty</span>( <span class="php-var">$args</span>[<span class="php-quote">'type'</span>] ) ? <span class="php-var">$args</span>[<span class="php-quote">'type'</span>] : <span class="php-quote">'select'</span>,
+</span><span id="229">                    <span class="php-quote">'choices'</span>     =&gt; <span class="php-var">$fonts</span>,
+</span><span id="230">                )
+</span><span id="231">            );
 </span><span id="232">
-</span><span id="233">    }
+</span><span id="233">        }
 </span><span id="234">
-</span><span id="235">    <span class="php-comment">/**
-</span></span><span id="236"><span class="php-comment">     * Return a font by type.
-</span></span><span id="237"><span class="php-comment">     *
-</span></span><span id="238"><span class="php-comment">     * @since  1.0.0
-</span></span><span id="239"><span class="php-comment">     *
-</span></span><span id="240"><span class="php-comment">     * @param  string $font_type The font type to retreive.
+</span><span id="235">        <span class="php-var">$suffix</span> = SCRIPT_DEBUG ? <span class="php-quote">''</span> : <span class="php-quote">'.min'</span>;
+</span><span id="236">
+</span><span id="237">    }
+</span><span id="238">
+</span><span id="239">    <span class="php-comment">/**
+</span></span><span id="240"><span class="php-comment">     * Return a font by type.
 </span></span><span id="241"><span class="php-comment">     *
-</span></span><span id="242"><span class="php-comment">     * @return string Returns the theme mod font type.
-</span></span><span id="243"><span class="php-comment">     */</span>
-</span><span id="244">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> get_font( <span class="php-var">$font_type</span> ) {
-</span><span id="245">
-</span><span id="246">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;sanitize_font( get_theme_mod( <span class="php-var">$font_type</span>, <span class="php-var">$this</span>-&gt;get_default_font( <span class="php-var">$font_type</span> ) ) );
-</span><span id="247">
-</span><span id="248">    }
+</span></span><span id="242"><span class="php-comment">     * @since  1.0.0
+</span></span><span id="243"><span class="php-comment">     *
+</span></span><span id="244"><span class="php-comment">     * @param  string $font_type The font type to retreive.
+</span></span><span id="245"><span class="php-comment">     *
+</span></span><span id="246"><span class="php-comment">     * @return string Returns the theme mod font type.
+</span></span><span id="247"><span class="php-comment">     */</span>
+</span><span id="248">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> get_font( <span class="php-var">$font_type</span> ) {
 </span><span id="249">
-</span><span id="250">    <span class="php-comment">/**
-</span></span><span id="251"><span class="php-comment">     * Return the default font for a given font type.
-</span></span><span id="252"><span class="php-comment">     *
-</span></span><span id="253"><span class="php-comment">     * @since  1.0.0
-</span></span><span id="254"><span class="php-comment">     *
-</span></span><span id="255"><span class="php-comment">     * @param  string $font_type The font type to retreive.
+</span><span id="250">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;sanitize_font( get_theme_mod( <span class="php-var">$font_type</span>, <span class="php-var">$this</span>-&gt;get_default_font( <span class="php-var">$font_type</span> ) ) );
+</span><span id="251">
+</span><span id="252">    }
+</span><span id="253">
+</span><span id="254">    <span class="php-comment">/**
+</span></span><span id="255"><span class="php-comment">     * Return the default font for a given font type.
 </span></span><span id="256"><span class="php-comment">     *
-</span></span><span id="257"><span class="php-comment">     * @return string Returns the default font.
-</span></span><span id="258"><span class="php-comment">     */</span>
-</span><span id="259">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> get_default_font( <span class="php-var">$font_type</span> ) {
-</span><span id="260">
-</span><span id="261">        <span class="php-var">$defaults</span> = <span class="php-keyword2">array_combine</span>(
-</span><span id="262">            <span class="php-keyword2">array_keys</span>( <span class="php-var">$this</span>-&gt;font_types ),
-</span><span id="263">            wp_list_pluck( <span class="php-var">$this</span>-&gt;font_types, <span class="php-quote">'default'</span> )
-</span><span id="264">        );
-</span><span id="265">
-</span><span id="266">        <span class="php-var">$default</span> = <span class="php-keyword1">isset</span>( <span class="php-var">$defaults</span>[ <span class="php-var">$font_type</span> ] ) ? <span class="php-var">$defaults</span>[ <span class="php-var">$font_type</span> ] : <span class="php-var">$this</span>-&gt;fonts[<span class="php-num">0</span>];
-</span><span id="267">
-</span><span id="268">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;sanitize_font( <span class="php-var">$default</span> );
+</span></span><span id="257"><span class="php-comment">     * @since  1.0.0
+</span></span><span id="258"><span class="php-comment">     *
+</span></span><span id="259"><span class="php-comment">     * @param  string $font_type The font type to retreive.
+</span></span><span id="260"><span class="php-comment">     *
+</span></span><span id="261"><span class="php-comment">     * @return string Returns the default font.
+</span></span><span id="262"><span class="php-comment">     */</span>
+</span><span id="263">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> get_default_font( <span class="php-var">$font_type</span> ) {
+</span><span id="264">
+</span><span id="265">        <span class="php-var">$defaults</span> = <span class="php-keyword2">array_combine</span>(
+</span><span id="266">            <span class="php-keyword2">array_keys</span>( <span class="php-var">$this</span>-&gt;font_types ),
+</span><span id="267">            wp_list_pluck( <span class="php-var">$this</span>-&gt;font_types, <span class="php-quote">'default'</span> )
+</span><span id="268">        );
 </span><span id="269">
-</span><span id="270">    }
+</span><span id="270">        <span class="php-var">$default</span> = <span class="php-keyword1">isset</span>( <span class="php-var">$defaults</span>[ <span class="php-var">$font_type</span> ] ) ? <span class="php-var">$defaults</span>[ <span class="php-var">$font_type</span> ] : <span class="php-var">$this</span>-&gt;fonts[<span class="php-num">0</span>];
 </span><span id="271">
-</span><span id="272">    <span class="php-comment">/**
-</span></span><span id="273"><span class="php-comment">     * Sanitize a font.
-</span></span><span id="274"><span class="php-comment">     *
-</span></span><span id="275"><span class="php-comment">     * @since 1.0.0
-</span></span><span id="276"><span class="php-comment">     *
-</span></span><span id="277"><span class="php-comment">     * @param  string $font The font name to sanitize.
+</span><span id="272">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;sanitize_font( <span class="php-var">$default</span> );
+</span><span id="273">
+</span><span id="274">    }
+</span><span id="275">
+</span><span id="276">    <span class="php-comment">/**
+</span></span><span id="277"><span class="php-comment">     * Sanitize a font.
 </span></span><span id="278"><span class="php-comment">     *
-</span></span><span id="279"><span class="php-comment">     * @return string Returns the sanitized font name.
-</span></span><span id="280"><span class="php-comment">     */</span>
-</span><span id="281">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> sanitize_font( <span class="php-var">$font</span> ) {
-</span><span id="282">
-</span><span id="283">        <span class="php-keyword1">return</span> <span class="php-keyword2">in_array</span>( <span class="php-var">$font</span>, <span class="php-var">$this</span>-&gt;fonts, <span class="php-keyword1">true</span> ) ? <span class="php-var">$font</span> : <span class="php-var">$this</span>-&gt;fonts[<span class="php-num">0</span>];
-</span><span id="284">
-</span><span id="285">    }
+</span></span><span id="279"><span class="php-comment">     * @since 1.0.0
+</span></span><span id="280"><span class="php-comment">     *
+</span></span><span id="281"><span class="php-comment">     * @param  string $font The font name to sanitize.
+</span></span><span id="282"><span class="php-comment">     *
+</span></span><span id="283"><span class="php-comment">     * @return string Returns the sanitized font name.
+</span></span><span id="284"><span class="php-comment">     */</span>
+</span><span id="285">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> sanitize_font( <span class="php-var">$font</span> ) {
 </span><span id="286">
-</span><span id="287">    <span class="php-comment">/**
-</span></span><span id="288"><span class="php-comment">     * Return an array of weights for a font.
-</span></span><span id="289"><span class="php-comment">     *
-</span></span><span id="290"><span class="php-comment">     * @since 1.0.0
-</span></span><span id="291"><span class="php-comment">     *
-</span></span><span id="292"><span class="php-comment">     * @param  string $font      Font name to retreive weights for.
-</span></span><span id="293"><span class="php-comment">     * @param  string $font_type The font type to retreive weights for.
-</span></span><span id="294"><span class="php-comment">     *
-</span></span><span id="295"><span class="php-comment">     * @return array Returns the array of available font weights.
-</span></span><span id="296"><span class="php-comment">     */</span>
-</span><span id="297">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> get_font_weights( <span class="php-var">$font</span>, <span class="php-var">$font_type</span> ) {
-</span><span id="298">
-</span><span id="299">        <span class="php-comment">/**
-</span></span><span id="300"><span class="php-comment">         * Filter the array of weights for a font.
-</span></span><span id="301"><span class="php-comment">         *
-</span></span><span id="302"><span class="php-comment">         * @since 1.0.0
-</span></span><span id="303"><span class="php-comment">         *
-</span></span><span id="304"><span class="php-comment">         * @param string $font
-</span></span><span id="305"><span class="php-comment">         * @param string $font_type
-</span></span><span id="306"><span class="php-comment">         *
-</span></span><span id="307"><span class="php-comment">         * @var array
-</span></span><span id="308"><span class="php-comment">         */</span>
-</span><span id="309">        <span class="php-var">$weights</span> = (<span class="php-keyword1">array</span>) apply_filters( <span class="php-quote">'primer_font_weights'</span>, <span class="php-keyword1">array</span>( <span class="php-num">300</span>, <span class="php-num">400</span>, <span class="php-num">700</span> ), <span class="php-var">$font</span>, <span class="php-var">$font_type</span> );
-</span><span id="310">        <span class="php-var">$weights</span> = <span class="php-keyword2">array_filter</span>( <span class="php-keyword2">array_map</span>( <span class="php-quote">'absint'</span>, <span class="php-var">$weights</span> ) );
-</span><span id="311">
-</span><span id="312">        <span class="php-keyword2">sort</span>( <span class="php-var">$weights</span> );
-</span><span id="313">
-</span><span id="314">        <span class="php-keyword1">return</span> <span class="php-var">$weights</span>;
+</span><span id="287">        <span class="php-keyword1">return</span> <span class="php-keyword2">in_array</span>( <span class="php-var">$font</span>, <span class="php-var">$this</span>-&gt;fonts, <span class="php-keyword1">true</span> ) ? <span class="php-var">$font</span> : <span class="php-var">$this</span>-&gt;fonts[<span class="php-num">0</span>];
+</span><span id="288">
+</span><span id="289">    }
+</span><span id="290">
+</span><span id="291">    <span class="php-comment">/**
+</span></span><span id="292"><span class="php-comment">     * Return an array of weights for a font.
+</span></span><span id="293"><span class="php-comment">     *
+</span></span><span id="294"><span class="php-comment">     * @since 1.0.0
+</span></span><span id="295"><span class="php-comment">     *
+</span></span><span id="296"><span class="php-comment">     * @param  string $font      Font name to retreive weights for.
+</span></span><span id="297"><span class="php-comment">     * @param  string $font_type The font type to retreive weights for.
+</span></span><span id="298"><span class="php-comment">     *
+</span></span><span id="299"><span class="php-comment">     * @return array Returns the array of available font weights.
+</span></span><span id="300"><span class="php-comment">     */</span>
+</span><span id="301">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> get_font_weights( <span class="php-var">$font</span>, <span class="php-var">$font_type</span> ) {
+</span><span id="302">
+</span><span id="303">        <span class="php-comment">/**
+</span></span><span id="304"><span class="php-comment">         * Filter the array of weights for a font.
+</span></span><span id="305"><span class="php-comment">         *
+</span></span><span id="306"><span class="php-comment">         * @since 1.0.0
+</span></span><span id="307"><span class="php-comment">         *
+</span></span><span id="308"><span class="php-comment">         * @param string $font
+</span></span><span id="309"><span class="php-comment">         * @param string $font_type
+</span></span><span id="310"><span class="php-comment">         *
+</span></span><span id="311"><span class="php-comment">         * @var array
+</span></span><span id="312"><span class="php-comment">         */</span>
+</span><span id="313">        <span class="php-var">$weights</span> = (<span class="php-keyword1">array</span>) apply_filters( <span class="php-quote">'primer_font_weights'</span>, <span class="php-keyword1">array</span>( <span class="php-num">300</span>, <span class="php-num">400</span>, <span class="php-num">700</span> ), <span class="php-var">$font</span>, <span class="php-var">$font_type</span> );
+</span><span id="314">        <span class="php-var">$weights</span> = <span class="php-keyword2">array_filter</span>( <span class="php-keyword2">array_map</span>( <span class="php-quote">'absint'</span>, <span class="php-var">$weights</span> ) );
 </span><span id="315">
-</span><span id="316">    }
+</span><span id="316">        <span class="php-keyword2">sort</span>( <span class="php-var">$weights</span> );
 </span><span id="317">
-</span><span id="318">    <span class="php-comment">/**
-</span></span><span id="319"><span class="php-comment">     * Enqueue Google Fonts.
-</span></span><span id="320"><span class="php-comment">     *
-</span></span><span id="321"><span class="php-comment">     * @action wp_enqueue_scripts
-</span></span><span id="322"><span class="php-comment">     * @since  1.0.0
-</span></span><span id="323"><span class="php-comment">     */</span>
-</span><span id="324">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> enqueue_google_fonts() {
-</span><span id="325">
-</span><span id="326">        <span class="php-var">$font_families</span> = <span class="php-keyword1">array</span>();
-</span><span id="327">
-</span><span id="328">        <span class="php-keyword1">foreach</span> ( <span class="php-var">$this</span>-&gt;font_types <span class="php-keyword1">as</span> <span class="php-var">$name</span> =&gt; <span class="php-var">$args</span> ) {
+</span><span id="318">        <span class="php-keyword1">return</span> <span class="php-var">$weights</span>;
+</span><span id="319">
+</span><span id="320">    }
+</span><span id="321">
+</span><span id="322">    <span class="php-comment">/**
+</span></span><span id="323"><span class="php-comment">     * Enqueue Google Fonts.
+</span></span><span id="324"><span class="php-comment">     *
+</span></span><span id="325"><span class="php-comment">     * @action wp_enqueue_scripts
+</span></span><span id="326"><span class="php-comment">     * @since  1.0.0
+</span></span><span id="327"><span class="php-comment">     */</span>
+</span><span id="328">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> enqueue_google_fonts() {
 </span><span id="329">
-</span><span id="330">            <span class="php-keyword1">if</span> ( <span class="php-keyword1">empty</span>( <span class="php-var">$name</span> ) ) {
+</span><span id="330">        <span class="php-var">$font_families</span> = <span class="php-keyword1">array</span>();
 </span><span id="331">
-</span><span id="332">                <span class="php-keyword1">continue</span>;
+</span><span id="332">        <span class="php-keyword1">foreach</span> ( <span class="php-var">$this</span>-&gt;font_types <span class="php-keyword1">as</span> <span class="php-var">$name</span> =&gt; <span class="php-var">$args</span> ) {
 </span><span id="333">
-</span><span id="334">            }
+</span><span id="334">            <span class="php-keyword1">if</span> ( <span class="php-keyword1">empty</span>( <span class="php-var">$name</span> ) ) {
 </span><span id="335">
-</span><span id="336">            <span class="php-var">$font</span>    = <span class="php-var">$this</span>-&gt;get_font( <span class="php-var">$name</span> );
-</span><span id="337">            <span class="php-var">$weights</span> = <span class="php-var">$this</span>-&gt;get_font_weights( <span class="php-var">$font</span>, <span class="php-var">$name</span> );
-</span><span id="338">
-</span><span id="339">            <span class="php-var">$font_families</span>[ <span class="php-var">$font</span> ] = <span class="php-keyword1">isset</span>( <span class="php-var">$font_families</span>[ <span class="php-var">$font</span> ] ) ? <span class="php-keyword2">array_merge</span>( <span class="php-var">$font_families</span>[ <span class="php-var">$font</span> ], <span class="php-var">$weights</span> ) : <span class="php-var">$weights</span>;
-</span><span id="340">
-</span><span id="341">        }
+</span><span id="336">                <span class="php-keyword1">continue</span>;
+</span><span id="337">
+</span><span id="338">            }
+</span><span id="339">
+</span><span id="340">            <span class="php-var">$font</span>    = <span class="php-var">$this</span>-&gt;get_font( <span class="php-var">$name</span> );
+</span><span id="341">            <span class="php-var">$weights</span> = <span class="php-var">$this</span>-&gt;get_font_weights( <span class="php-var">$font</span>, <span class="php-var">$name</span> );
 </span><span id="342">
-</span><span id="343">        <span class="php-keyword1">foreach</span> ( <span class="php-var">$font_families</span> <span class="php-keyword1">as</span> <span class="php-var">$font</span> =&gt; &amp;<span class="php-var">$weights</span> ) {
+</span><span id="343">            <span class="php-var">$font_families</span>[ <span class="php-var">$font</span> ] = <span class="php-keyword1">isset</span>( <span class="php-var">$font_families</span>[ <span class="php-var">$font</span> ] ) ? <span class="php-keyword2">array_merge</span>( <span class="php-var">$font_families</span>[ <span class="php-var">$font</span> ], <span class="php-var">$weights</span> ) : <span class="php-var">$weights</span>;
 </span><span id="344">
-</span><span id="345">            <span class="php-var">$weights</span> = <span class="php-keyword2">implode</span>( <span class="php-quote">','</span>, <span class="php-keyword2">array_unique</span>( <span class="php-var">$weights</span> ) );
-</span><span id="346">            <span class="php-var">$weights</span> = <span class="php-keyword2">sprintf</span>( <span class="php-quote">'%s:%s'</span>, <span class="php-var">$font</span>, <span class="php-var">$weights</span> );
-</span><span id="347">
-</span><span id="348">        }
-</span><span id="349">
-</span><span id="350">        <span class="php-var">$font_families</span> = <span class="php-keyword2">implode</span>( <span class="php-quote">'|'</span>, <span class="php-var">$font_families</span> );
+</span><span id="345">        }
+</span><span id="346">
+</span><span id="347">        <span class="php-keyword1">foreach</span> ( <span class="php-var">$font_families</span> <span class="php-keyword1">as</span> <span class="php-var">$font</span> =&gt; &amp;<span class="php-var">$weights</span> ) {
+</span><span id="348">
+</span><span id="349">            <span class="php-var">$weights</span> = <span class="php-keyword2">implode</span>( <span class="php-quote">','</span>, <span class="php-keyword2">array_unique</span>( <span class="php-var">$weights</span> ) );
+</span><span id="350">            <span class="php-var">$weights</span> = <span class="php-keyword2">sprintf</span>( <span class="php-quote">'%s:%s'</span>, <span class="php-var">$font</span>, <span class="php-var">$weights</span> );
 </span><span id="351">
-</span><span id="352">        <span class="php-comment">/**
-</span></span><span id="353"><span class="php-comment">         * Filter the Google Fonts query args.
-</span></span><span id="354"><span class="php-comment">         *
-</span></span><span id="355"><span class="php-comment">         * @since 1.0.0
-</span></span><span id="356"><span class="php-comment">         *
-</span></span><span id="357"><span class="php-comment">         * @var array
-</span></span><span id="358"><span class="php-comment">         */</span>
-</span><span id="359">        <span class="php-var">$query_args</span> = (<span class="php-keyword1">array</span>) apply_filters( <span class="php-quote">'primer_google_fonts_query_args'</span>,
-</span><span id="360">            <span class="php-keyword1">array</span>(
-</span><span id="361">                <span class="php-quote">'family'</span> =&gt; <span class="php-var">$font_families</span>,
-</span><span id="362">                <span class="php-quote">'subset'</span> =&gt; <span class="php-quote">'latin'</span>,
-</span><span id="363">            )
-</span><span id="364">        );
-</span><span id="365">
-</span><span id="366">        wp_enqueue_style( Primer_Customizer::<span class="php-var">$stylesheet</span> . <span class="php-quote">'-fonts'</span>, add_query_arg( <span class="php-var">$query_args</span>, <span class="php-quote">'//fonts.googleapis.com/css'</span> ), <span class="php-keyword1">false</span> );
-</span><span id="367">
-</span><span id="368">    }
+</span><span id="352">        }
+</span><span id="353">
+</span><span id="354">        <span class="php-var">$font_families</span> = <span class="php-keyword2">implode</span>( <span class="php-quote">'|'</span>, <span class="php-var">$font_families</span> );
+</span><span id="355">
+</span><span id="356">        <span class="php-comment">/**
+</span></span><span id="357"><span class="php-comment">         * Filter the Google Fonts query args.
+</span></span><span id="358"><span class="php-comment">         *
+</span></span><span id="359"><span class="php-comment">         * @since 1.0.0
+</span></span><span id="360"><span class="php-comment">         *
+</span></span><span id="361"><span class="php-comment">         * @var array
+</span></span><span id="362"><span class="php-comment">         */</span>
+</span><span id="363">        <span class="php-var">$query_args</span> = (<span class="php-keyword1">array</span>) apply_filters( <span class="php-quote">'primer_google_fonts_query_args'</span>,
+</span><span id="364">            <span class="php-keyword1">array</span>(
+</span><span id="365">                <span class="php-quote">'family'</span> =&gt; <span class="php-var">$font_families</span>,
+</span><span id="366">                <span class="php-quote">'subset'</span> =&gt; <span class="php-quote">'latin'</span>,
+</span><span id="367">            )
+</span><span id="368">        );
 </span><span id="369">
-</span><span id="370">    <span class="php-comment">/**
-</span></span><span id="371"><span class="php-comment">     * Add inline CSS for the font customizations.
-</span></span><span id="372"><span class="php-comment">     *
-</span></span><span id="373"><span class="php-comment">     * @action wp_enqueue_scripts
-</span></span><span id="374"><span class="php-comment">     * @since  1.0.0
-</span></span><span id="375"><span class="php-comment">     */</span>
-</span><span id="376">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> enqueue_inline_css() {
-</span><span id="377">
-</span><span id="378">        <span class="php-keyword1">foreach</span> ( <span class="php-var">$this</span>-&gt;font_types <span class="php-keyword1">as</span> <span class="php-var">$name</span> =&gt; <span class="php-var">$args</span> ) {
-</span><span id="379">
-</span><span id="380">            <span class="php-keyword1">if</span> ( <span class="php-keyword1">empty</span>( <span class="php-var">$name</span> ) || <span class="php-keyword1">empty</span>( <span class="php-var">$args</span>[<span class="php-quote">'css'</span>] ) ) {
+</span><span id="370">        wp_enqueue_style( Primer_Customizer::<span class="php-var">$stylesheet</span> . <span class="php-quote">'-fonts'</span>, add_query_arg( <span class="php-var">$query_args</span>, <span class="php-quote">'//fonts.googleapis.com/css'</span> ), <span class="php-keyword1">false</span> );
+</span><span id="371">
+</span><span id="372">    }
+</span><span id="373">
+</span><span id="374">    <span class="php-comment">/**
+</span></span><span id="375"><span class="php-comment">     * Add inline CSS for the font customizations.
+</span></span><span id="376"><span class="php-comment">     *
+</span></span><span id="377"><span class="php-comment">     * @action wp_enqueue_scripts
+</span></span><span id="378"><span class="php-comment">     * @since  1.0.0
+</span></span><span id="379"><span class="php-comment">     */</span>
+</span><span id="380">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> enqueue_inline_css() {
 </span><span id="381">
-</span><span id="382">                <span class="php-keyword1">continue</span>;
+</span><span id="382">        <span class="php-keyword1">foreach</span> ( <span class="php-var">$this</span>-&gt;font_types <span class="php-keyword1">as</span> <span class="php-var">$name</span> =&gt; <span class="php-var">$args</span> ) {
 </span><span id="383">
-</span><span id="384">            }
+</span><span id="384">            <span class="php-keyword1">if</span> ( <span class="php-keyword1">empty</span>( <span class="php-var">$name</span> ) || <span class="php-keyword1">empty</span>( <span class="php-var">$args</span>[<span class="php-quote">'css'</span>] ) ) {
 </span><span id="385">
-</span><span id="386">            <span class="php-var">$css</span> = <span class="php-keyword2">sprintf</span>(
-</span><span id="387">                Primer_Customizer::parse_css_rules( <span class="php-var">$args</span>[<span class="php-quote">'css'</span>] ),
-</span><span id="388">                <span class="php-var">$this</span>-&gt;get_font( <span class="php-var">$name</span> )
-</span><span id="389">            );
-</span><span id="390">
-</span><span id="391">            wp_add_inline_style( Primer_Customizer::<span class="php-var">$stylesheet</span> . <span class="php-quote">'-fonts'</span>, <span class="php-var">$css</span> );
-</span><span id="392">
-</span><span id="393">        }
+</span><span id="386">                <span class="php-keyword1">continue</span>;
+</span><span id="387">
+</span><span id="388">            }
+</span><span id="389">
+</span><span id="390">            <span class="php-var">$css</span> = <span class="php-keyword2">sprintf</span>(
+</span><span id="391">                Primer_Customizer::parse_css_rules( <span class="php-var">$args</span>[<span class="php-quote">'css'</span>] ),
+</span><span id="392">                <span class="php-var">$this</span>-&gt;get_font( <span class="php-var">$name</span> )
+</span><span id="393">            );
 </span><span id="394">
-</span><span id="395">    }
+</span><span id="395">            wp_add_inline_style( Primer_Customizer::<span class="php-var">$stylesheet</span> . <span class="php-quote">'-fonts'</span>, <span class="php-var">$css</span> );
 </span><span id="396">
-</span><span id="397">}
+</span><span id="397">        }
 </span><span id="398">
-</span><span id="399"><span class="php-keyword1">new</span> Primer_Customizer_Fonts;
-</span><span id="400"></span></code></pre>
+</span><span id="399">    }
+</span><span id="400">
+</span><span id="401">    <span class="php-comment">/**
+</span></span><span id="402"><span class="php-comment">     * Enqueue font control scripts.
+</span></span><span id="403"><span class="php-comment">     *
+</span></span><span id="404"><span class="php-comment">     * @action customize_controls_enqueue_scripts
+</span></span><span id="405"><span class="php-comment">     * @since 1.8.3
+</span></span><span id="406"><span class="php-comment">     */</span>
+</span><span id="407">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> font_control_scripts() {
+</span><span id="408">
+</span><span id="409">        <span class="php-var">$suffix</span> = SCRIPT_DEBUG ? <span class="php-quote">''</span> : <span class="php-quote">'.min'</span>;
+</span><span id="410">
+</span><span id="411">        wp_enqueue_style( <span class="php-quote">'primer-customizer-fonts'</span>, get_template_directory_uri() . <span class="php-quote">&quot;/assets/css/admin/customizer-fonts</span><span class="php-var">{$suffix}</span><span class="php-quote">.css&quot;</span>, <span class="php-keyword1">array</span>(), PRIMER_VERSION, <span class="php-quote">'all'</span> );
+</span><span id="412">        wp_enqueue_script( <span class="php-quote">'primer-customizer-fonts'</span>, get_template_directory_uri() . <span class="php-quote">&quot;/assets/js/admin/customizer-fonts</span><span class="php-var">{$suffix}</span><span class="php-quote">.js&quot;</span>, <span class="php-keyword1">array</span>( <span class="php-quote">'jquery'</span> ), PRIMER_VERSION, <span class="php-keyword1">true</span> );
+</span><span id="413">
+</span><span id="414">    }
+</span><span id="415">
+</span><span id="416">}
+</span><span id="417">
+</span><span id="418"><span class="php-keyword1">new</span> Primer_Customizer_Fonts;
+</span><span id="419"></span></code></pre>
 			</div>
 		</div>
 

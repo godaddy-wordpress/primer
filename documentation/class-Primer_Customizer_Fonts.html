@@ -107,7 +107,7 @@
 					<h2>
 						<a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html">
 							<span class="glyph_range icon-submenu icon-submenu-cook">B</span>
-							Primer Theme 1.8.2
+							Primer Theme 1.8.6
 							
 							<strong>API</strong>
 						</a>
@@ -126,7 +126,7 @@
 						</li>
 
 												<li class="version-picker">
-							<h6>Version: 1.8.2</h6>
+							<h6>Version: 1.8.6</h6>
 							<!--
 							<ul class="nav navbar-nav">
 								<li class="dropdown">
@@ -206,6 +206,8 @@
 									</li>
 							<li><a href="package-Compatibility.ChildThemes.html">ChildThemes</a>
 									</li>
+							<li><a href="package-Compatibility.Gutenberg.html">Gutenberg</a>
+									</li>
 							<li><a href="package-Compatibility.Jetpack.html">Jetpack</a>
 									</li>
 							<li><a href="package-Compatibility.WooCommerce.html">WooCommerce</a>
@@ -273,7 +275,7 @@
 				1.0.0<br>
 				<b>Class:</b>
 				Primer_Customizer_Fonts<br>
-		<b>Location:</b> <a href="source-class-Primer_Customizer_Fonts.html#2-397" title="Go to source code">inc/customizer/fonts.php</a><br>
+		<b>Location:</b> <a href="source-class-Primer_Customizer_Fonts.html#2-416" title="Go to source code">inc/customizer/fonts.php</a><br>
 	</div>
 
 
@@ -365,6 +367,18 @@
 		</li>
 		<li class="clearfix">
 			<h5 class="method-name">
+					<a href="class-Primer_Customizer_Fonts.html#_font_control_scripts">font_control_scripts()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Enqueue font control scripts.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h5 class="method-name">
 					<a href="class-Primer_Customizer_Fonts.html#_fonts">fonts()</a>
 
 
@@ -434,7 +448,7 @@
 				<a id="___construct"></a>
 		<a id="method-Primer_Customizer_Fonts__construct"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Fonts.html#31-169" title="Go to source code">__construct()</a>
+<a href="source-class-Primer_Customizer_Fonts.html#31-171" title="Go to source code">__construct()</a>
 
 		<span class="label">public</span>
 
@@ -459,7 +473,7 @@ __construct( )
 				<a id="_enqueue_google_fonts"></a>
 		<a id="method-Primer_Customizer_Fontsenqueue_google_fonts"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Fonts.html#318-368" title="Go to source code">enqueue_google_fonts()</a>
+<a href="source-class-Primer_Customizer_Fonts.html#322-372" title="Go to source code">enqueue_google_fonts()</a>
 
 		<span class="label">public</span>
 
@@ -492,7 +506,7 @@ enqueue_google_fonts( )
 				<a id="_enqueue_inline_css"></a>
 		<a id="method-Primer_Customizer_Fontsenqueue_inline_css"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Fonts.html#370-395" title="Go to source code">enqueue_inline_css()</a>
+<a href="source-class-Primer_Customizer_Fonts.html#374-399" title="Go to source code">enqueue_inline_css()</a>
 
 		<span class="label">public</span>
 
@@ -522,10 +536,43 @@ enqueue_inline_css( )
 		</div>
 		</div>
 		<div class="method-detail">
+				<a id="_font_control_scripts"></a>
+		<a id="method-Primer_Customizer_Fontsfont_control_scripts"></a>
+		<h3 class="method-name">
+<a href="source-class-Primer_Customizer_Fonts.html#401-414" title="Go to source code">font_control_scripts()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_font_control_scripts" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<p class="method-signature">
+font_control_scripts( )
+		</p>
+
+		<div class="description detailed">
+			<p>Enqueue font control scripts.</p>
+
+
+
+
+
+				<h6>Since</h6>
+				<div class="list">
+						1.8.3<br>
+				</div>
+				<h6>Action</h6>
+				<div class="list">
+						customize_controls_enqueue_scripts<br>
+				</div>
+
+
+		</div>
+		</div>
+		<div class="method-detail">
 				<a id="_fonts"></a>
 		<a id="method-Primer_Customizer_Fontsfonts"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Fonts.html#171-233" title="Go to source code">fonts()</a>
+<a href="source-class-Primer_Customizer_Fonts.html#173-237" title="Go to source code">fonts()</a>
 
 		<span class="label">public</span>
 
@@ -573,7 +620,7 @@ fonts( WP_Customize_Manager <var>$wp_customize</var> )
 				<a id="_get_default_font"></a>
 		<a id="method-Primer_Customizer_Fontsget_default_font"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Fonts.html#250-270" title="Go to source code">get_default_font()</a>
+<a href="source-class-Primer_Customizer_Fonts.html#254-274" title="Go to source code">get_default_font()</a>
 
 		<span class="label">public</span>
 
@@ -617,7 +664,7 @@ get_default_font( string <var>$font_type</var> )
 				<a id="_get_font"></a>
 		<a id="method-Primer_Customizer_Fontsget_font"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Fonts.html#235-248" title="Go to source code">get_font()</a>
+<a href="source-class-Primer_Customizer_Fonts.html#239-252" title="Go to source code">get_font()</a>
 
 		<span class="label">public</span>
 
@@ -661,7 +708,7 @@ get_font( string <var>$font_type</var> )
 				<a id="_get_font_weights"></a>
 		<a id="method-Primer_Customizer_Fontsget_font_weights"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Fonts.html#287-316" title="Go to source code">get_font_weights()</a>
+<a href="source-class-Primer_Customizer_Fonts.html#291-320" title="Go to source code">get_font_weights()</a>
 
 		<span class="label">public</span>
 
@@ -711,7 +758,7 @@ get_font_weights( string <var>$font</var> , string <var>$font_type</var> )
 				<a id="_sanitize_font"></a>
 		<a id="method-Primer_Customizer_Fontssanitize_font"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Customizer_Fonts.html#272-285" title="Go to source code">sanitize_font()</a>
+<a href="source-class-Primer_Customizer_Fonts.html#276-289" title="Go to source code">sanitize_font()</a>
 
 		<span class="label">public</span>
 

@@ -107,7 +107,7 @@
 					<h2>
 						<a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html">
 							<span class="glyph_range icon-submenu icon-submenu-cook">B</span>
-							Primer Theme 1.8.2
+							Primer Theme 1.8.6
 							
 							<strong>API</strong>
 						</a>
@@ -126,7 +126,7 @@
 						</li>
 
 												<li class="version-picker">
-							<h6>Version: 1.8.2</h6>
+							<h6>Version: 1.8.6</h6>
 							<!--
 							<ul class="nav navbar-nav">
 								<li class="dropdown">
@@ -206,6 +206,8 @@
 									</li>
 							<li><a href="package-Compatibility.ChildThemes.html">ChildThemes</a>
 									</li>
+							<li><a href="package-Compatibility.Gutenberg.html">Gutenberg</a>
+									</li>
 							<li><a href="package-Compatibility.Jetpack.html">Jetpack</a>
 									</li>
 							<li><a href="package-Compatibility.WooCommerce.html">WooCommerce</a>
@@ -273,7 +275,7 @@
 				1.5.0<br>
 				<b>Class:</b>
 				Primer_Site_Identity_Options<br>
-		<b>Location:</b> <a href="source-class-Primer_Site_Identity_Options.html#2-112" title="Go to source code">inc/customizer/site-identity.php</a><br>
+		<b>Location:</b> <a href="source-class-Primer_Site_Identity_Options.html#2-149" title="Go to source code">inc/customizer/site-identity.php</a><br>
 	</div>
 
 
@@ -326,6 +328,18 @@
 				Toggle the visibility of the site credits in the footer.
 			</div>
 		</li>
+		<li class="clearfix">
+			<h5 class="method-name">
+					<a href="class-Primer_Site_Identity_Options.html#_toggle_primer_privacy_link">toggle_primer_privacy_link()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Toggle the visibility of the privacy policy link in the footer.
+			</div>
+		</li>
 		</ul>
 	</div>
 
@@ -337,7 +351,7 @@
 				<a id="___construct"></a>
 		<a id="method-Primer_Site_Identity_Options__construct"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Site_Identity_Options.html#13-35" title="Go to source code">__construct()</a>
+<a href="source-class-Primer_Site_Identity_Options.html#13-37" title="Go to source code">__construct()</a>
 
 		<span class="label">public</span>
 
@@ -362,7 +376,7 @@ __construct( )
 				<a id="_customize_register"></a>
 		<a id="method-Primer_Site_Identity_Optionscustomize_register"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Site_Identity_Options.html#53-110" title="Go to source code">customize_register()</a>
+<a href="source-class-Primer_Site_Identity_Options.html#71-147" title="Go to source code">customize_register()</a>
 
 		<span class="label">public</span>
 
@@ -410,7 +424,7 @@ customize_register( WP_Customize_Manager <var>$wp_customize</var> )
 				<a id="_toggle_primer_author_credit"></a>
 		<a id="method-Primer_Site_Identity_Optionstoggle_primer_author_credit"></a>
 		<h3 class="method-name">
-<a href="source-class-Primer_Site_Identity_Options.html#37-51" title="Go to source code">toggle_primer_author_credit()</a>
+<a href="source-class-Primer_Site_Identity_Options.html#39-53" title="Go to source code">toggle_primer_author_credit()</a>
 
 		<span class="label">public</span>
 
@@ -438,6 +452,43 @@ toggle_primer_author_credit( )
 				<h6>Filter</h6>
 				<div class="list">
 						primer_author_credit<br>
+				</div>
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_toggle_primer_privacy_link"></a>
+		<a id="method-Primer_Site_Identity_Optionstoggle_primer_privacy_link"></a>
+		<h3 class="method-name">
+<a href="source-class-Primer_Site_Identity_Options.html#55-69" title="Go to source code">toggle_primer_privacy_link()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_toggle_primer_privacy_link" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<p class="method-signature">
+toggle_primer_privacy_link( )
+		</p>
+
+		<div class="description detailed">
+			<p>Toggle the visibility of the privacy policy link in the footer.</p>
+
+
+
+				<h6>Returns</h6>
+				<div class="list">
+					boolean<br>Returns true when <code>show_privacy_policy</code> theme mod is set.<br>
+				</div>
+
+
+				<h6>Since</h6>
+				<div class="list">
+						1.8.3<br>
+				</div>
+				<h6>Filter</h6>
+				<div class="list">
+						primer_privacy_policy_link<br>
 				</div>
 
 

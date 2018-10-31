@@ -15,8 +15,8 @@
 	<link rel="stylesheet" type="text/css" href="resources/css/prism.css?9bc16dfb1371f65f7b17c8d50c25c6e225457735">
 	<link rel="stylesheet" type="text/css" href="resources/css/responsive.css?23aedcbba2a71c6eae0181247948af42426549eb">
 
-	<script type="text/javascript" src="resources/combined.js?5997ce084f75415bb689f3d986095ed2f17e8bf4"></script>
-	<script type="text/javascript" src="elementlist.js?fa72ac6bf424ca706feec4ee743695c9a221905e"></script>
+	<script type="text/javascript" src="resources/combined.js?7de7b9dfb0e446cc48b8dc328cbc5205f257dd3f"></script>
+	<script type="text/javascript" src="elementlist.js?a2032d8086b9ad2d657c6c7a0ee23f8aeec7618b"></script>
 
 </head>
 
@@ -108,7 +108,7 @@
 					<h2>
 						<a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html">
 							<span class="glyph_range icon-submenu icon-submenu-cook">B</span>
-							Primer Theme 1.8.2
+							Primer Theme 1.8.6
 							
 							<strong>API</strong>
 						</a>
@@ -127,7 +127,7 @@
 						</li>
 
 												<li class="version-picker">
-							<h6>Version: 1.8.2</h6>
+							<h6>Version: 1.8.6</h6>
 							<!--
 							<ul class="nav navbar-nav">
 								<li class="dropdown">
@@ -206,6 +206,8 @@
 							<li><a href="package-Compatibility.BeaverBuilder.html">BeaverBuilder</a>
 									</li>
 							<li><a href="package-Compatibility.ChildThemes.html">ChildThemes</a>
+									</li>
+							<li><a href="package-Compatibility.Gutenberg.html">Gutenberg</a>
 									</li>
 							<li><a href="package-Compatibility.Jetpack.html">Jetpack</a>
 									</li>
@@ -288,6 +290,8 @@
 							<li><a title="primer_get_the_page_title" href="function-primer_get_the_page_title.html">primer_get_the_page_title</a></li>
 							<li><a title="primer_get_the_widget" href="function-primer_get_the_widget.html">primer_get_the_widget</a></li>
 							<li><a title="primer_get_wp_upgrade_message" href="function-primer_get_wp_upgrade_message.html">primer_get_wp_upgrade_message</a></li>
+							<li><a title="primer_gutenberg_editor_assets" href="function-primer_gutenberg_editor_assets.html">primer_gutenberg_editor_assets</a></li>
+							<li><a title="primer_gutenberg_theme_support" href="function-primer_gutenberg_theme_support.html">primer_gutenberg_theme_support</a></li>
 							<li><a title="primer_has_active_categories" href="function-primer_has_active_categories.html">primer_has_active_categories</a></li>
 							<li><a title="primer_has_active_categories_reset" href="function-primer_has_active_categories_reset.html">primer_has_active_categories_reset</a></li>
 							<li><a title="primer_has_active_footer_sidebars" href="function-primer_has_active_footer_sidebars.html">primer_has_active_footer_sidebars</a></li>
@@ -307,6 +311,7 @@
 							<li><a title="primer_post_nav" href="function-primer_post_nav.html">primer_post_nav</a></li>
 							<li><a title="primer_posted_on" href="function-primer_posted_on.html">primer_posted_on</a></li>
 							<li><a title="primer_preview" href="function-primer_preview.html">primer_preview</a></li>
+							<li><a title="primer_privacy_policy_link" href="function-primer_privacy_policy_link.html">primer_privacy_policy_link</a></li>
 							<li><a title="primer_register_sidebars" href="function-primer_register_sidebars.html">primer_register_sidebars</a></li>
 							<li><a title="primer_register_widgets" href="function-primer_register_widgets.html">primer_register_widgets</a></li>
 							<li><a title="primer_scripts" href="function-primer_scripts.html">primer_scripts</a></li>
@@ -380,91 +385,128 @@
 </span><span id="28">
 </span><span id="29">        }
 </span><span id="30">
-</span><span id="31">        add_filter( <span class="php-quote">'primer_author_credit'</span>, <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'toggle_primer_author_credit'</span> ) );
+</span><span id="31">        add_filter( <span class="php-quote">'primer_privacy_policy_link'</span>, <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'toggle_primer_privacy_link'</span> ) );
 </span><span id="32">
-</span><span id="33">        add_action( <span class="php-quote">'customize_register'</span>, <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'customize_register'</span> ) );
+</span><span id="33">        add_filter( <span class="php-quote">'primer_author_credit'</span>, <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'toggle_primer_author_credit'</span> ) );
 </span><span id="34">
-</span><span id="35">    }
+</span><span id="35">        add_action( <span class="php-quote">'customize_register'</span>, <span class="php-keyword1">array</span>( <span class="php-var">$this</span>, <span class="php-quote">'customize_register'</span> ) );
 </span><span id="36">
-</span><span id="37">    <span class="php-comment">/**
-</span></span><span id="38"><span class="php-comment">     * Toggle the visibility of the site credits in the footer.
-</span></span><span id="39"><span class="php-comment">     *
-</span></span><span id="40"><span class="php-comment">     * @filter primer_author_credit
-</span></span><span id="41"><span class="php-comment">     * @since  1.5.0
-</span></span><span id="42"><span class="php-comment">     *
-</span></span><span id="43"><span class="php-comment">     * @return bool Returns true when `show_author_credit` theme mod is set.
-</span></span><span id="44"><span class="php-comment">     */</span>
-</span><span id="45">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> toggle_primer_author_credit() {
-</span><span id="46">
-</span><span id="47">        <span class="php-var">$show_author_credit</span> = get_theme_mod( <span class="php-quote">'show_author_credit'</span>, <span class="php-keyword1">true</span> );
+</span><span id="37">    }
+</span><span id="38">
+</span><span id="39">    <span class="php-comment">/**
+</span></span><span id="40"><span class="php-comment">     * Toggle the visibility of the site credits in the footer.
+</span></span><span id="41"><span class="php-comment">     *
+</span></span><span id="42"><span class="php-comment">     * @filter primer_author_credit
+</span></span><span id="43"><span class="php-comment">     * @since  1.5.0
+</span></span><span id="44"><span class="php-comment">     *
+</span></span><span id="45"><span class="php-comment">     * @return bool Returns true when `show_author_credit` theme mod is set.
+</span></span><span id="46"><span class="php-comment">     */</span>
+</span><span id="47">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> toggle_primer_author_credit() {
 </span><span id="48">
-</span><span id="49">        <span class="php-keyword1">return</span> ! <span class="php-keyword1">empty</span>( <span class="php-var">$show_author_credit</span> );
+</span><span id="49">        <span class="php-var">$show_author_credit</span> = get_theme_mod( <span class="php-quote">'show_author_credit'</span>, <span class="php-keyword1">true</span> );
 </span><span id="50">
-</span><span id="51">    }
+</span><span id="51">        <span class="php-keyword1">return</span> ! <span class="php-keyword1">empty</span>( <span class="php-var">$show_author_credit</span> );
 </span><span id="52">
-</span><span id="53">    <span class="php-comment">/**
-</span></span><span id="54"><span class="php-comment">     * Register additional site identity options.
-</span></span><span id="55"><span class="php-comment">     *
-</span></span><span id="56"><span class="php-comment">     * @action customize_register
-</span></span><span id="57"><span class="php-comment">     * @see    WP_Customize_Manager
-</span></span><span id="58"><span class="php-comment">     *
-</span></span><span id="59"><span class="php-comment">     * @since  1.5.0
+</span><span id="53">    }
+</span><span id="54">
+</span><span id="55">    <span class="php-comment">/**
+</span></span><span id="56"><span class="php-comment">     * Toggle the visibility of the privacy policy link in the footer.
+</span></span><span id="57"><span class="php-comment">     *
+</span></span><span id="58"><span class="php-comment">     * @filter primer_privacy_policy_link
+</span></span><span id="59"><span class="php-comment">     * @since  1.8.3
 </span></span><span id="60"><span class="php-comment">     *
-</span></span><span id="61"><span class="php-comment">     * @param  WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
+</span></span><span id="61"><span class="php-comment">     * @return bool Returns true when `show_privacy_policy` theme mod is set.
 </span></span><span id="62"><span class="php-comment">     */</span>
-</span><span id="63">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> customize_register( WP_Customize_Manager <span class="php-var">$wp_customize</span> ) {
+</span><span id="63">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> toggle_primer_privacy_link() {
 </span><span id="64">
-</span><span id="65">        <span class="php-var">$wp_customize</span>-&gt;add_setting(
-</span><span id="66">            <span class="php-quote">'copyright_text'</span>,
-</span><span id="67">            <span class="php-keyword1">array</span>(
-</span><span id="68">                <span class="php-quote">'sanitize_callback'</span>    =&gt; <span class="php-quote">'wp_kses_post'</span>,
-</span><span id="69">                <span class="php-quote">'sanitize_js_callback'</span> =&gt; <span class="php-quote">'wp_kses_post'</span>,
-</span><span id="70">                <span class="php-quote">'default'</span>              =&gt; <span class="php-keyword2">sprintf</span>(
-</span><span id="71">                    <span class="php-comment">/* translators: 1. copyright symbol, 2. year, 3. site title */</span>
-</span><span id="72">                    esc_html__( <span class="php-quote">'Copyright %1$s %2$d %3$s'</span>, <span class="php-quote">'primer'</span> ),
-</span><span id="73">                    <span class="php-quote">'&amp;copy;'</span>,
-</span><span id="74">                    <span class="php-keyword2">date</span>( <span class="php-quote">'Y'</span> ),
-</span><span id="75">                    get_bloginfo( <span class="php-quote">'blogname'</span> )
-</span><span id="76">                ),
-</span><span id="77">            )
-</span><span id="78">        );
-</span><span id="79">
-</span><span id="80">        <span class="php-var">$wp_customize</span>-&gt;add_control(
-</span><span id="81">            <span class="php-quote">'copyright_text'</span>,
-</span><span id="82">            <span class="php-keyword1">array</span>(
-</span><span id="83">                <span class="php-quote">'label'</span>    =&gt; esc_html__( <span class="php-quote">'Footer Copyright Text'</span>, <span class="php-quote">'primer'</span> ),
-</span><span id="84">                <span class="php-quote">'section'</span>  =&gt; <span class="php-quote">'title_tagline'</span>,
-</span><span id="85">                <span class="php-quote">'settings'</span> =&gt; <span class="php-quote">'copyright_text'</span>,
-</span><span id="86">                <span class="php-quote">'type'</span>     =&gt; <span class="php-quote">'text'</span>,
-</span><span id="87">                <span class="php-quote">'priority'</span> =&gt; <span class="php-num">40</span>,
-</span><span id="88">            )
-</span><span id="89">        );
-</span><span id="90">
-</span><span id="91">        <span class="php-var">$wp_customize</span>-&gt;add_setting(
-</span><span id="92">            <span class="php-quote">'show_author_credit'</span>,
-</span><span id="93">            <span class="php-keyword1">array</span>(
-</span><span id="94">                <span class="php-quote">'default'</span>           =&gt; <span class="php-num">1</span>,
-</span><span id="95">                <span class="php-quote">'sanitize_callback'</span> =&gt; <span class="php-quote">'absint'</span>,
-</span><span id="96">            )
-</span><span id="97">        );
-</span><span id="98">
-</span><span id="99">        <span class="php-var">$wp_customize</span>-&gt;add_control(
-</span><span id="100">            <span class="php-quote">'show_author_credit'</span>,
-</span><span id="101">            <span class="php-keyword1">array</span>(
-</span><span id="102">                <span class="php-quote">'label'</span>    =&gt; esc_html__( <span class="php-quote">'Display theme author credit'</span>, <span class="php-quote">'primer'</span> ),
-</span><span id="103">                <span class="php-quote">'section'</span>  =&gt; <span class="php-quote">'title_tagline'</span>,
-</span><span id="104">                <span class="php-quote">'settings'</span> =&gt; <span class="php-quote">'show_author_credit'</span>,
-</span><span id="105">                <span class="php-quote">'type'</span>     =&gt; <span class="php-quote">'checkbox'</span>,
-</span><span id="106">                <span class="php-quote">'priority'</span> =&gt; <span class="php-num">50</span>,
-</span><span id="107">            )
-</span><span id="108">        );
-</span><span id="109">
-</span><span id="110">    }
-</span><span id="111">
-</span><span id="112">}
-</span><span id="113">
-</span><span id="114"><span class="php-var">$GLOBALS</span>[<span class="php-quote">'primer_site_identity_options'</span>] = <span class="php-keyword1">new</span> Primer_Site_Identity_Options;
-</span><span id="115"></span></code></pre>
+</span><span id="65">        <span class="php-var">$show_privacy_policy</span> = get_theme_mod( <span class="php-quote">'show_privacy_policy'</span>, <span class="php-keyword1">true</span> );
+</span><span id="66">
+</span><span id="67">        <span class="php-keyword1">return</span> ! <span class="php-keyword1">empty</span>( <span class="php-var">$show_privacy_policy</span> );
+</span><span id="68">
+</span><span id="69">    }
+</span><span id="70">
+</span><span id="71">    <span class="php-comment">/**
+</span></span><span id="72"><span class="php-comment">     * Register additional site identity options.
+</span></span><span id="73"><span class="php-comment">     *
+</span></span><span id="74"><span class="php-comment">     * @action customize_register
+</span></span><span id="75"><span class="php-comment">     * @see    WP_Customize_Manager
+</span></span><span id="76"><span class="php-comment">     *
+</span></span><span id="77"><span class="php-comment">     * @since  1.5.0
+</span></span><span id="78"><span class="php-comment">     *
+</span></span><span id="79"><span class="php-comment">     * @param  WP_Customize_Manager $wp_customize Instance of the WP_Customize_Manager class.
+</span></span><span id="80"><span class="php-comment">     */</span>
+</span><span id="81">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> customize_register( WP_Customize_Manager <span class="php-var">$wp_customize</span> ) {
+</span><span id="82">
+</span><span id="83">        <span class="php-var">$wp_customize</span>-&gt;add_setting(
+</span><span id="84">            <span class="php-quote">'copyright_text'</span>,
+</span><span id="85">            <span class="php-keyword1">array</span>(
+</span><span id="86">                <span class="php-quote">'sanitize_callback'</span>    =&gt; <span class="php-quote">'wp_kses_post'</span>,
+</span><span id="87">                <span class="php-quote">'sanitize_js_callback'</span> =&gt; <span class="php-quote">'wp_kses_post'</span>,
+</span><span id="88">                <span class="php-quote">'default'</span>              =&gt; <span class="php-keyword2">sprintf</span>(
+</span><span id="89">                    <span class="php-comment">/* translators: 1. copyright symbol, 2. year, 3. site title */</span>
+</span><span id="90">                    esc_html__( <span class="php-quote">'Copyright %1$s %2$d %3$s'</span>, <span class="php-quote">'primer'</span> ),
+</span><span id="91">                    <span class="php-quote">'&amp;copy;'</span>,
+</span><span id="92">                    <span class="php-keyword2">date</span>( <span class="php-quote">'Y'</span> ),
+</span><span id="93">                    get_bloginfo( <span class="php-quote">'blogname'</span> )
+</span><span id="94">                ),
+</span><span id="95">            )
+</span><span id="96">        );
+</span><span id="97">
+</span><span id="98">        <span class="php-var">$wp_customize</span>-&gt;add_control(
+</span><span id="99">            <span class="php-quote">'copyright_text'</span>,
+</span><span id="100">            <span class="php-keyword1">array</span>(
+</span><span id="101">                <span class="php-quote">'label'</span>    =&gt; esc_html__( <span class="php-quote">'Footer Copyright Text'</span>, <span class="php-quote">'primer'</span> ),
+</span><span id="102">                <span class="php-quote">'section'</span>  =&gt; <span class="php-quote">'title_tagline'</span>,
+</span><span id="103">                <span class="php-quote">'settings'</span> =&gt; <span class="php-quote">'copyright_text'</span>,
+</span><span id="104">                <span class="php-quote">'type'</span>     =&gt; <span class="php-quote">'text'</span>,
+</span><span id="105">                <span class="php-quote">'priority'</span> =&gt; <span class="php-num">40</span>,
+</span><span id="106">            )
+</span><span id="107">        );
+</span><span id="108">
+</span><span id="109">        <span class="php-var">$wp_customize</span>-&gt;add_setting(
+</span><span id="110">            <span class="php-quote">'show_author_credit'</span>,
+</span><span id="111">            <span class="php-keyword1">array</span>(
+</span><span id="112">                <span class="php-quote">'default'</span>           =&gt; <span class="php-num">1</span>,
+</span><span id="113">                <span class="php-quote">'sanitize_callback'</span> =&gt; <span class="php-quote">'absint'</span>,
+</span><span id="114">            )
+</span><span id="115">        );
+</span><span id="116">
+</span><span id="117">        <span class="php-var">$wp_customize</span>-&gt;add_control(
+</span><span id="118">            <span class="php-quote">'show_author_credit'</span>,
+</span><span id="119">            <span class="php-keyword1">array</span>(
+</span><span id="120">                <span class="php-quote">'label'</span>    =&gt; esc_html__( <span class="php-quote">'Display theme author credit'</span>, <span class="php-quote">'primer'</span> ),
+</span><span id="121">                <span class="php-quote">'section'</span>  =&gt; <span class="php-quote">'title_tagline'</span>,
+</span><span id="122">                <span class="php-quote">'settings'</span> =&gt; <span class="php-quote">'show_author_credit'</span>,
+</span><span id="123">                <span class="php-quote">'type'</span>     =&gt; <span class="php-quote">'checkbox'</span>,
+</span><span id="124">                <span class="php-quote">'priority'</span> =&gt; <span class="php-num">50</span>,
+</span><span id="125">            )
+</span><span id="126">        );
+</span><span id="127">
+</span><span id="128">        <span class="php-var">$wp_customize</span>-&gt;add_setting(
+</span><span id="129">            <span class="php-quote">'show_privacy_policy'</span>,
+</span><span id="130">            <span class="php-keyword1">array</span>(
+</span><span id="131">                <span class="php-quote">'default'</span>           =&gt; <span class="php-num">1</span>,
+</span><span id="132">                <span class="php-quote">'sanitize_callback'</span> =&gt; <span class="php-quote">'absint'</span>,
+</span><span id="133">            )
+</span><span id="134">        );
+</span><span id="135">
+</span><span id="136">        <span class="php-var">$wp_customize</span>-&gt;add_control(
+</span><span id="137">            <span class="php-quote">'show_privacy_policy'</span>,
+</span><span id="138">            <span class="php-keyword1">array</span>(
+</span><span id="139">                <span class="php-quote">'label'</span>    =&gt; esc_html__( <span class="php-quote">'Display privacy policy link'</span>, <span class="php-quote">'primer'</span> ),
+</span><span id="140">                <span class="php-quote">'section'</span>  =&gt; <span class="php-quote">'title_tagline'</span>,
+</span><span id="141">                <span class="php-quote">'settings'</span> =&gt; <span class="php-quote">'show_privacy_policy'</span>,
+</span><span id="142">                <span class="php-quote">'type'</span>     =&gt; <span class="php-quote">'checkbox'</span>,
+</span><span id="143">                <span class="php-quote">'priority'</span> =&gt; <span class="php-num">50</span>,
+</span><span id="144">            )
+</span><span id="145">        );
+</span><span id="146">
+</span><span id="147">    }
+</span><span id="148">
+</span><span id="149">}
+</span><span id="150">
+</span><span id="151"><span class="php-var">$GLOBALS</span>[<span class="php-quote">'primer_site_identity_options'</span>] = <span class="php-keyword1">new</span> Primer_Site_Identity_Options;
+</span><span id="152"></span></code></pre>
 			</div>
 		</div>
 

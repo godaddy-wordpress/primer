@@ -15,8 +15,8 @@
 	<link rel="stylesheet" type="text/css" href="resources/css/prism.css?9bc16dfb1371f65f7b17c8d50c25c6e225457735">
 	<link rel="stylesheet" type="text/css" href="resources/css/responsive.css?23aedcbba2a71c6eae0181247948af42426549eb">
 
-	<script type="text/javascript" src="resources/combined.js?5997ce084f75415bb689f3d986095ed2f17e8bf4"></script>
-	<script type="text/javascript" src="elementlist.js?fa72ac6bf424ca706feec4ee743695c9a221905e"></script>
+	<script type="text/javascript" src="resources/combined.js?7de7b9dfb0e446cc48b8dc328cbc5205f257dd3f"></script>
+	<script type="text/javascript" src="elementlist.js?a2032d8086b9ad2d657c6c7a0ee23f8aeec7618b"></script>
 
 </head>
 
@@ -108,7 +108,7 @@
 					<h2>
 						<a href="https://godaddy.github.io/wp-primer-theme/documentation/index.html">
 							<span class="glyph_range icon-submenu icon-submenu-cook">B</span>
-							Primer Theme 1.8.2
+							Primer Theme 1.8.6
 							
 							<strong>API</strong>
 						</a>
@@ -127,7 +127,7 @@
 						</li>
 
 												<li class="version-picker">
-							<h6>Version: 1.8.2</h6>
+							<h6>Version: 1.8.6</h6>
 							<!--
 							<ul class="nav navbar-nav">
 								<li class="dropdown">
@@ -206,6 +206,8 @@
 							<li><a href="package-Compatibility.BeaverBuilder.html">BeaverBuilder</a>
 									</li>
 							<li><a href="package-Compatibility.ChildThemes.html">ChildThemes</a>
+									</li>
+							<li><a href="package-Compatibility.Gutenberg.html">Gutenberg</a>
 									</li>
 							<li><a href="package-Compatibility.Jetpack.html">Jetpack</a>
 									</li>
@@ -288,6 +290,8 @@
 							<li><a title="primer_get_the_page_title" href="function-primer_get_the_page_title.html">primer_get_the_page_title</a></li>
 							<li><a title="primer_get_the_widget" href="function-primer_get_the_widget.html">primer_get_the_widget</a></li>
 							<li><a title="primer_get_wp_upgrade_message" href="function-primer_get_wp_upgrade_message.html">primer_get_wp_upgrade_message</a></li>
+							<li><a title="primer_gutenberg_editor_assets" href="function-primer_gutenberg_editor_assets.html">primer_gutenberg_editor_assets</a></li>
+							<li><a title="primer_gutenberg_theme_support" href="function-primer_gutenberg_theme_support.html">primer_gutenberg_theme_support</a></li>
 							<li><a title="primer_has_active_categories" href="function-primer_has_active_categories.html">primer_has_active_categories</a></li>
 							<li><a title="primer_has_active_categories_reset" href="function-primer_has_active_categories_reset.html">primer_has_active_categories_reset</a></li>
 							<li><a title="primer_has_active_footer_sidebars" href="function-primer_has_active_footer_sidebars.html">primer_has_active_footer_sidebars</a></li>
@@ -307,6 +311,7 @@
 							<li><a title="primer_post_nav" href="function-primer_post_nav.html">primer_post_nav</a></li>
 							<li><a title="primer_posted_on" href="function-primer_posted_on.html">primer_posted_on</a></li>
 							<li><a title="primer_preview" href="function-primer_preview.html">primer_preview</a></li>
+							<li><a title="primer_privacy_policy_link" href="function-primer_privacy_policy_link.html">primer_privacy_policy_link</a></li>
 							<li><a title="primer_register_sidebars" href="function-primer_register_sidebars.html">primer_register_sidebars</a></li>
 							<li><a title="primer_register_widgets" href="function-primer_register_widgets.html">primer_register_widgets</a></li>
 							<li><a title="primer_scripts" href="function-primer_scripts.html">primer_scripts</a></li>
@@ -610,255 +615,285 @@
 </span><span id="258">add_action( <span class="php-quote">'primer_site_info'</span>, <span class="php-quote">'primer_add_credit'</span> );
 </span><span id="259">
 </span><span id="260"><span class="php-comment">/**
-</span></span><span id="261"><span class="php-comment"> * Set the post excerpt length to 20 words.
+</span></span><span id="261"><span class="php-comment"> * Display privacy policy link
 </span></span><span id="262"><span class="php-comment"> *
-</span></span><span id="263"><span class="php-comment"> * To override this in a child theme, remove the filter and add
-</span></span><span id="264"><span class="php-comment"> * your own function tied to the `excerpt_length` filter hook:
-</span></span><span id="265"><span class="php-comment"> *
-</span></span><span id="266"><span class="php-comment"> * ```
-</span></span><span id="267"><span class="php-comment"> * remove_filter( 'excerpt_length', 'primer_excerpt_length' );
-</span></span><span id="268"><span class="php-comment"> * add_filter( 'excerpt_length', function() { return 30; } );
-</span></span><span id="269"><span class="php-comment"> * ```
-</span></span><span id="270"><span class="php-comment"> *
-</span></span><span id="271"><span class="php-comment"> * @filter excerpt_length
-</span></span><span id="272"><span class="php-comment"> * @link   https://developer.wordpress.org/reference/hooks/excerpt_length/
-</span></span><span id="273"><span class="php-comment"> * @since  1.0.0
-</span></span><span id="274"><span class="php-comment"> *
-</span></span><span id="275"><span class="php-comment"> * @param  int $number The number of words. Default is `55`.
-</span></span><span id="276"><span class="php-comment"> *
-</span></span><span id="277"><span class="php-comment"> * @return int Return the maximum number of words to use for excerpts.
-</span></span><span id="278"><span class="php-comment"> */</span>
-</span><span id="279"><span class="php-keyword1">function</span> primer_excerpt_length( <span class="php-var">$number</span> ) {
+</span></span><span id="263"><span class="php-comment"> * @action the_privacy_policy_link
+</span></span><span id="264"><span class="php-comment"> * @since  1.8.3
+</span></span><span id="265"><span class="php-comment"> */</span>
+</span><span id="266"><span class="php-keyword1">function</span> primer_privacy_policy_link() {
+</span><span id="267">
+</span><span id="268">    <span class="php-keyword1">if</span> ( <span class="php-keyword2">function_exists</span>( <span class="php-quote">'the_privacy_policy_link'</span> ) ) {
+</span><span id="269">
+</span><span id="270">        <span class="php-comment">/**
+</span></span><span id="271"><span class="php-comment">         * Filter the footer privacy policy link display.
+</span></span><span id="272"><span class="php-comment">         *
+</span></span><span id="273"><span class="php-comment">         * @since 1.8.3
+</span></span><span id="274"><span class="php-comment">         *
+</span></span><span id="275"><span class="php-comment">         * @var bool
+</span></span><span id="276"><span class="php-comment">         */</span>
+</span><span id="277">        <span class="php-keyword1">if</span> ( ! (bool) apply_filters( <span class="php-quote">'primer_privacy_policy_link'</span>, <span class="php-keyword1">true</span> ) ) {
+</span><span id="278">
+</span><span id="279">            <span class="php-keyword1">return</span>;
 </span><span id="280">
-</span><span id="281">    <span class="php-keyword1">return</span> <span class="php-num">20</span>;
+</span><span id="281">        }
 </span><span id="282">
-</span><span id="283">}
-</span><span id="284">add_filter( <span class="php-quote">'excerpt_length'</span>, <span class="php-quote">'primer_excerpt_length'</span> );
-</span><span id="285">
-</span><span id="286"><span class="php-comment">/**
-</span></span><span id="287"><span class="php-comment"> * Replace &quot;[...]&quot; with an ellipsis.
-</span></span><span id="288"><span class="php-comment"> *
-</span></span><span id="289"><span class="php-comment"> * To override this in a child theme, remove the filter and add
-</span></span><span id="290"><span class="php-comment"> * your own function tied to the `excerpt_more` filter hook:
-</span></span><span id="291"><span class="php-comment"> *
-</span></span><span id="292"><span class="php-comment"> * ```
-</span></span><span id="293"><span class="php-comment"> * remove_filter( 'excerpt_more', 'primer_excerpt_more' );
-</span></span><span id="294"><span class="php-comment"> * add_filter( 'excerpt_more', function() { return '...and more'; } );
-</span></span><span id="295"><span class="php-comment"> * ```
-</span></span><span id="296"><span class="php-comment"> *
-</span></span><span id="297"><span class="php-comment"> * @filter excerpt_more
-</span></span><span id="298"><span class="php-comment"> * @link   https://developer.wordpress.org/reference/hooks/excerpt_more/
-</span></span><span id="299"><span class="php-comment"> * @since  1.0.0
+</span><span id="283">        the_privacy_policy_link();
+</span><span id="284">
+</span><span id="285">    }
+</span><span id="286">
+</span><span id="287">}
+</span><span id="288">add_action( <span class="php-quote">'primer_site_info'</span>, <span class="php-quote">'primer_privacy_policy_link'</span>, <span class="php-num">7</span> );
+</span><span id="289">
+</span><span id="290"><span class="php-comment">/**
+</span></span><span id="291"><span class="php-comment"> * Set the post excerpt length to 20 words.
+</span></span><span id="292"><span class="php-comment"> *
+</span></span><span id="293"><span class="php-comment"> * To override this in a child theme, remove the filter and add
+</span></span><span id="294"><span class="php-comment"> * your own function tied to the `excerpt_length` filter hook:
+</span></span><span id="295"><span class="php-comment"> *
+</span></span><span id="296"><span class="php-comment"> * ```
+</span></span><span id="297"><span class="php-comment"> * remove_filter( 'excerpt_length', 'primer_excerpt_length' );
+</span></span><span id="298"><span class="php-comment"> * add_filter( 'excerpt_length', function() { return 30; } );
+</span></span><span id="299"><span class="php-comment"> * ```
 </span></span><span id="300"><span class="php-comment"> *
-</span></span><span id="301"><span class="php-comment"> * @param  string $more_string The string shown within the more link.
-</span></span><span id="302"><span class="php-comment"> *
-</span></span><span id="303"><span class="php-comment"> * @return string Returns the string in the “more” link displayed after a trimmed excerpt.
-</span></span><span id="304"><span class="php-comment"> */</span>
-</span><span id="305"><span class="php-keyword1">function</span> primer_excerpt_more( <span class="php-var">$more_string</span> ) {
-</span><span id="306">
-</span><span id="307">    <span class="php-keyword1">return</span> ! is_admin() ? <span class="php-quote">'&amp;hellip;'</span> : <span class="php-var">$more_string</span>;
-</span><span id="308">
-</span><span id="309">}
-</span><span id="310">add_filter( <span class="php-quote">'excerpt_more'</span>, <span class="php-quote">'primer_excerpt_more'</span> );
-</span><span id="311">
-</span><span id="312"><span class="php-comment">/**
-</span></span><span id="313"><span class="php-comment"> * Wrap the jQuery script tag in a conditional comment.
-</span></span><span id="314"><span class="php-comment"> *
-</span></span><span id="315"><span class="php-comment"> * This technique allows non-IE 9 (and lower) browsers to use the
-</span></span><span id="316"><span class="php-comment"> * latest version of jQuery.
-</span></span><span id="317"><span class="php-comment"> *
-</span></span><span id="318"><span class="php-comment"> * To override this behavior in a child theme, remove the filter:
-</span></span><span id="319"><span class="php-comment"> *
-</span></span><span id="320"><span class="php-comment"> * remove_filter( 'script_loader_tag', 'primer_conditional_jquery_tag', 10, 2 );
+</span></span><span id="301"><span class="php-comment"> * @filter excerpt_length
+</span></span><span id="302"><span class="php-comment"> * @link   https://developer.wordpress.org/reference/hooks/excerpt_length/
+</span></span><span id="303"><span class="php-comment"> * @since  1.0.0
+</span></span><span id="304"><span class="php-comment"> *
+</span></span><span id="305"><span class="php-comment"> * @param  int $number The number of words. Default is `55`.
+</span></span><span id="306"><span class="php-comment"> *
+</span></span><span id="307"><span class="php-comment"> * @return int Return the maximum number of words to use for excerpts.
+</span></span><span id="308"><span class="php-comment"> */</span>
+</span><span id="309"><span class="php-keyword1">function</span> primer_excerpt_length( <span class="php-var">$number</span> ) {
+</span><span id="310">
+</span><span id="311">    <span class="php-keyword1">return</span> <span class="php-num">20</span>;
+</span><span id="312">
+</span><span id="313">}
+</span><span id="314">add_filter( <span class="php-quote">'excerpt_length'</span>, <span class="php-quote">'primer_excerpt_length'</span> );
+</span><span id="315">
+</span><span id="316"><span class="php-comment">/**
+</span></span><span id="317"><span class="php-comment"> * Replace &quot;[...]&quot; with an ellipsis.
+</span></span><span id="318"><span class="php-comment"> *
+</span></span><span id="319"><span class="php-comment"> * To override this in a child theme, remove the filter and add
+</span></span><span id="320"><span class="php-comment"> * your own function tied to the `excerpt_more` filter hook:
 </span></span><span id="321"><span class="php-comment"> *
-</span></span><span id="322"><span class="php-comment"> * @filter script_loader_tag
-</span></span><span id="323"><span class="php-comment"> * @link   https://developer.wordpress.org/reference/hooks/script_loader_tag/
-</span></span><span id="324"><span class="php-comment"> * @since  1.0.0
-</span></span><span id="325"><span class="php-comment"> *
-</span></span><span id="326"><span class="php-comment"> * @param  string $tag    The `&lt;script&gt;` tag for the enqueued script.
-</span></span><span id="327"><span class="php-comment"> * @param  string $handle The script's registered handle.
-</span></span><span id="328"><span class="php-comment"> *
-</span></span><span id="329"><span class="php-comment"> * @return string Returns the HTML script tag of an enqueued script.
-</span></span><span id="330"><span class="php-comment"> */</span>
-</span><span id="331"><span class="php-keyword1">function</span> primer_conditional_jquery_tag( <span class="php-var">$tag</span>, <span class="php-var">$handle</span> ) {
-</span><span id="332">
-</span><span id="333">    <span class="php-keyword1">return</span> ( <span class="php-quote">'jquery'</span> === <span class="php-var">$handle</span> ) ? <span class="php-quote">&quot;&lt;!--[if (gte IE 9) | (!IE)]&gt;&lt;!--&gt;</span><span class="php-var">$tag</span><span class="php-quote">&lt;!--&lt;![endif]--&gt;&quot;</span> : <span class="php-var">$tag</span>;
-</span><span id="334">
-</span><span id="335">}
-</span><span id="336">add_filter( <span class="php-quote">'script_loader_tag'</span>, <span class="php-quote">'primer_conditional_jquery_tag'</span>, <span class="php-num">10</span>, <span class="php-num">2</span> );
-</span><span id="337">
-</span><span id="338"><span class="php-comment">/**
-</span></span><span id="339"><span class="php-comment"> * Add custom body classes.
-</span></span><span id="340"><span class="php-comment"> *
-</span></span><span id="341"><span class="php-comment"> * @filter body_class
-</span></span><span id="342"><span class="php-comment"> * @since  1.0.0
-</span></span><span id="343"><span class="php-comment"> *
-</span></span><span id="344"><span class="php-comment"> * @param  array $classes An array of body classes.
-</span></span><span id="345"><span class="php-comment"> *
-</span></span><span id="346"><span class="php-comment"> * @return array Returns an array of body classes.
-</span></span><span id="347"><span class="php-comment"> */</span>
-</span><span id="348"><span class="php-keyword1">function</span> primer_body_class( <span class="php-keyword1">array</span> <span class="php-var">$classes</span> ) {
-</span><span id="349">
-</span><span id="350">    <span class="php-keyword1">if</span> ( is_multi_author() ) {
-</span><span id="351">
-</span><span id="352">        <span class="php-var">$classes</span>[] = <span class="php-quote">'group-blog'</span>;
-</span><span id="353">
-</span><span id="354">    }
-</span><span id="355">
-</span><span id="356">    <span class="php-keyword1">if</span> ( has_header_image() ) {
-</span><span id="357">
-</span><span id="358">        <span class="php-var">$classes</span>[] = <span class="php-quote">'custom-header-image'</span>;
-</span><span id="359">
-</span><span id="360">    }
-</span><span id="361">
-</span><span id="362">    <span class="php-keyword1">return</span> <span class="php-var">$classes</span>;
-</span><span id="363">
-</span><span id="364">}
-</span><span id="365">add_filter( <span class="php-quote">'body_class'</span>, <span class="php-quote">'primer_body_class'</span> );
-</span><span id="366">
-</span><span id="367"><span class="php-comment">/**
-</span></span><span id="368"><span class="php-comment"> * Alter the `&lt;title&gt;` tag based on what is being viewed.
-</span></span><span id="369"><span class="php-comment"> *
-</span></span><span id="370"><span class="php-comment"> * @filter wp_title
-</span></span><span id="371"><span class="php-comment"> * @global int $page
-</span></span><span id="372"><span class="php-comment"> * @global int $paged
-</span></span><span id="373"><span class="php-comment"> * @since  1.0.0
-</span></span><span id="374"><span class="php-comment"> *
-</span></span><span id="375"><span class="php-comment"> * @param  string $title Page title.
-</span></span><span id="376"><span class="php-comment"> * @param  string $sep   Title separator.
-</span></span><span id="377"><span class="php-comment"> *
-</span></span><span id="378"><span class="php-comment"> * @return string Return the page title.
-</span></span><span id="379"><span class="php-comment"> */</span>
-</span><span id="380"><span class="php-keyword1">function</span> primer_wp_title( <span class="php-var">$title</span>, <span class="php-var">$sep</span> ) {
+</span></span><span id="322"><span class="php-comment"> * ```
+</span></span><span id="323"><span class="php-comment"> * remove_filter( 'excerpt_more', 'primer_excerpt_more' );
+</span></span><span id="324"><span class="php-comment"> * add_filter( 'excerpt_more', function() { return '...and more'; } );
+</span></span><span id="325"><span class="php-comment"> * ```
+</span></span><span id="326"><span class="php-comment"> *
+</span></span><span id="327"><span class="php-comment"> * @filter excerpt_more
+</span></span><span id="328"><span class="php-comment"> * @link   https://developer.wordpress.org/reference/hooks/excerpt_more/
+</span></span><span id="329"><span class="php-comment"> * @since  1.0.0
+</span></span><span id="330"><span class="php-comment"> *
+</span></span><span id="331"><span class="php-comment"> * @param  string $more_string The string shown within the more link.
+</span></span><span id="332"><span class="php-comment"> *
+</span></span><span id="333"><span class="php-comment"> * @return string Returns the string in the “more” link displayed after a trimmed excerpt.
+</span></span><span id="334"><span class="php-comment"> */</span>
+</span><span id="335"><span class="php-keyword1">function</span> primer_excerpt_more( <span class="php-var">$more_string</span> ) {
+</span><span id="336">
+</span><span id="337">    <span class="php-keyword1">return</span> ! is_admin() ? <span class="php-quote">'&amp;hellip;'</span> : <span class="php-var">$more_string</span>;
+</span><span id="338">
+</span><span id="339">}
+</span><span id="340">add_filter( <span class="php-quote">'excerpt_more'</span>, <span class="php-quote">'primer_excerpt_more'</span> );
+</span><span id="341">
+</span><span id="342"><span class="php-comment">/**
+</span></span><span id="343"><span class="php-comment"> * Wrap the jQuery script tag in a conditional comment.
+</span></span><span id="344"><span class="php-comment"> *
+</span></span><span id="345"><span class="php-comment"> * This technique allows non-IE 9 (and lower) browsers to use the
+</span></span><span id="346"><span class="php-comment"> * latest version of jQuery.
+</span></span><span id="347"><span class="php-comment"> *
+</span></span><span id="348"><span class="php-comment"> * To override this behavior in a child theme, remove the filter:
+</span></span><span id="349"><span class="php-comment"> *
+</span></span><span id="350"><span class="php-comment"> * remove_filter( 'script_loader_tag', 'primer_conditional_jquery_tag', 10, 2 );
+</span></span><span id="351"><span class="php-comment"> *
+</span></span><span id="352"><span class="php-comment"> * @filter script_loader_tag
+</span></span><span id="353"><span class="php-comment"> * @link   https://developer.wordpress.org/reference/hooks/script_loader_tag/
+</span></span><span id="354"><span class="php-comment"> * @since  1.0.0
+</span></span><span id="355"><span class="php-comment"> *
+</span></span><span id="356"><span class="php-comment"> * @param  string $tag    The `&lt;script&gt;` tag for the enqueued script.
+</span></span><span id="357"><span class="php-comment"> * @param  string $handle The script's registered handle.
+</span></span><span id="358"><span class="php-comment"> *
+</span></span><span id="359"><span class="php-comment"> * @return string Returns the HTML script tag of an enqueued script.
+</span></span><span id="360"><span class="php-comment"> */</span>
+</span><span id="361"><span class="php-keyword1">function</span> primer_conditional_jquery_tag( <span class="php-var">$tag</span>, <span class="php-var">$handle</span> ) {
+</span><span id="362">
+</span><span id="363">    <span class="php-keyword1">return</span> ( <span class="php-quote">'jquery'</span> === <span class="php-var">$handle</span> ) ? <span class="php-quote">&quot;&lt;!--[if (gte IE 9) | (!IE)]&gt;&lt;!--&gt;</span><span class="php-var">$tag</span><span class="php-quote">&lt;!--&lt;![endif]--&gt;&quot;</span> : <span class="php-var">$tag</span>;
+</span><span id="364">
+</span><span id="365">}
+</span><span id="366">add_filter( <span class="php-quote">'script_loader_tag'</span>, <span class="php-quote">'primer_conditional_jquery_tag'</span>, <span class="php-num">10</span>, <span class="php-num">2</span> );
+</span><span id="367">
+</span><span id="368"><span class="php-comment">/**
+</span></span><span id="369"><span class="php-comment"> * Add custom body classes.
+</span></span><span id="370"><span class="php-comment"> *
+</span></span><span id="371"><span class="php-comment"> * @filter body_class
+</span></span><span id="372"><span class="php-comment"> * @since  1.0.0
+</span></span><span id="373"><span class="php-comment"> *
+</span></span><span id="374"><span class="php-comment"> * @param  array $classes An array of body classes.
+</span></span><span id="375"><span class="php-comment"> *
+</span></span><span id="376"><span class="php-comment"> * @return array Returns an array of body classes.
+</span></span><span id="377"><span class="php-comment"> */</span>
+</span><span id="378"><span class="php-keyword1">function</span> primer_body_class( <span class="php-keyword1">array</span> <span class="php-var">$classes</span> ) {
+</span><span id="379">
+</span><span id="380">    <span class="php-keyword1">if</span> ( is_multi_author() ) {
 </span><span id="381">
-</span><span id="382">    <span class="php-keyword1">if</span> ( is_feed() ) {
+</span><span id="382">        <span class="php-var">$classes</span>[] = <span class="php-quote">'group-blog'</span>;
 </span><span id="383">
-</span><span id="384">        <span class="php-keyword1">return</span> <span class="php-var">$title</span>;
+</span><span id="384">    }
 </span><span id="385">
-</span><span id="386">    }
+</span><span id="386">    <span class="php-keyword1">if</span> ( has_header_image() ) {
 </span><span id="387">
-</span><span id="388">    <span class="php-keyword1">global</span> <span class="php-var">$page</span>, <span class="php-var">$paged</span>;
+</span><span id="388">        <span class="php-var">$classes</span>[] = <span class="php-quote">'custom-header-image'</span>;
 </span><span id="389">
-</span><span id="390">    <span class="php-comment">// Add the blog name.</span>
-</span><span id="391">    <span class="php-var">$title</span> .= get_bloginfo( <span class="php-quote">'name'</span>, <span class="php-quote">'display'</span> );
-</span><span id="392">
-</span><span id="393">    <span class="php-comment">// Add the blog description for the home/front page.</span>
-</span><span id="394">    <span class="php-var">$site_description</span> = get_bloginfo( <span class="php-quote">'description'</span>, <span class="php-quote">'display'</span> );
-</span><span id="395">
-</span><span id="396">    <span class="php-keyword1">if</span> ( <span class="php-var">$site_description</span> &amp;&amp; ( is_home() || is_front_page() ) ) {
-</span><span id="397">
-</span><span id="398">        <span class="php-var">$title</span> .= <span class="php-keyword2">sprintf</span>(
-</span><span id="399">            <span class="php-quote">' %s %s'</span>,
-</span><span id="400">            <span class="php-var">$sep</span>,
-</span><span id="401">            <span class="php-var">$site_description</span>
-</span><span id="402">        );
-</span><span id="403">
-</span><span id="404">    }
-</span><span id="405">
-</span><span id="406">    <span class="php-comment">// Add a page number if necessary.</span>
-</span><span id="407">    <span class="php-keyword1">if</span> ( ( <span class="php-var">$paged</span> &gt;= <span class="php-num">2</span> || <span class="php-var">$page</span> &gt;= <span class="php-num">2</span> ) &amp;&amp; ! is_404() ) {
-</span><span id="408">
-</span><span id="409">        <span class="php-var">$title</span> .= <span class="php-keyword2">sprintf</span>(
-</span><span id="410">            <span class="php-quote">' %s %s'</span>,
-</span><span id="411">            <span class="php-var">$sep</span>,
-</span><span id="412">            <span class="php-keyword2">sprintf</span>(
-</span><span id="413">                <span class="php-comment">/* translators: page number */</span>
-</span><span id="414">                esc_html__( <span class="php-quote">'Page %d'</span>, <span class="php-quote">'primer'</span> ),
-</span><span id="415">                <span class="php-keyword2">max</span>( <span class="php-var">$paged</span>, <span class="php-var">$page</span> )
-</span><span id="416">            )
-</span><span id="417">        );
-</span><span id="418">
-</span><span id="419">    }
-</span><span id="420">
-</span><span id="421">    <span class="php-keyword1">return</span> <span class="php-var">$title</span>;
+</span><span id="390">    }
+</span><span id="391">
+</span><span id="392">    <span class="php-keyword1">return</span> <span class="php-var">$classes</span>;
+</span><span id="393">
+</span><span id="394">}
+</span><span id="395">add_filter( <span class="php-quote">'body_class'</span>, <span class="php-quote">'primer_body_class'</span> );
+</span><span id="396">
+</span><span id="397"><span class="php-comment">/**
+</span></span><span id="398"><span class="php-comment"> * Alter the `&lt;title&gt;` tag based on what is being viewed.
+</span></span><span id="399"><span class="php-comment"> *
+</span></span><span id="400"><span class="php-comment"> * @filter wp_title
+</span></span><span id="401"><span class="php-comment"> * @global int $page
+</span></span><span id="402"><span class="php-comment"> * @global int $paged
+</span></span><span id="403"><span class="php-comment"> * @since  1.0.0
+</span></span><span id="404"><span class="php-comment"> *
+</span></span><span id="405"><span class="php-comment"> * @param  string $title Page title.
+</span></span><span id="406"><span class="php-comment"> * @param  string $sep   Title separator.
+</span></span><span id="407"><span class="php-comment"> *
+</span></span><span id="408"><span class="php-comment"> * @return string Return the page title.
+</span></span><span id="409"><span class="php-comment"> */</span>
+</span><span id="410"><span class="php-keyword1">function</span> primer_wp_title( <span class="php-var">$title</span>, <span class="php-var">$sep</span> ) {
+</span><span id="411">
+</span><span id="412">    <span class="php-keyword1">if</span> ( is_feed() ) {
+</span><span id="413">
+</span><span id="414">        <span class="php-keyword1">return</span> <span class="php-var">$title</span>;
+</span><span id="415">
+</span><span id="416">    }
+</span><span id="417">
+</span><span id="418">    <span class="php-keyword1">global</span> <span class="php-var">$page</span>, <span class="php-var">$paged</span>;
+</span><span id="419">
+</span><span id="420">    <span class="php-comment">// Add the blog name.</span>
+</span><span id="421">    <span class="php-var">$title</span> .= get_bloginfo( <span class="php-quote">'name'</span>, <span class="php-quote">'display'</span> );
 </span><span id="422">
-</span><span id="423">}
-</span><span id="424">add_filter( <span class="php-quote">'wp_title'</span>, <span class="php-quote">'primer_wp_title'</span>, <span class="php-num">10</span>, <span class="php-num">2</span> );
+</span><span id="423">    <span class="php-comment">// Add the blog description for the home/front page.</span>
+</span><span id="424">    <span class="php-var">$site_description</span> = get_bloginfo( <span class="php-quote">'description'</span>, <span class="php-quote">'display'</span> );
 </span><span id="425">
-</span><span id="426"><span class="php-comment">/**
-</span></span><span id="427"><span class="php-comment"> * Filter the site title HTML wrapper.
-</span></span><span id="428"><span class="php-comment"> *
-</span></span><span id="429"><span class="php-comment"> * @filter primer_the_site_title_args
-</span></span><span id="430"><span class="php-comment"> * @since  1.8.0
-</span></span><span id="431"><span class="php-comment"> *
-</span></span><span id="432"><span class="php-comment"> * @param  array $args The site title args.
-</span></span><span id="433"><span class="php-comment"> *
-</span></span><span id="434"><span class="php-comment"> * @return array
-</span></span><span id="435"><span class="php-comment"> */</span>
-</span><span id="436"><span class="php-keyword1">function</span> primer_the_site_title_wrapper( <span class="php-var">$args</span> ) {
-</span><span id="437">
-</span><span id="438">    <span class="php-keyword1">if</span> ( is_home() ) {
-</span><span id="439">
-</span><span id="440">        <span class="php-var">$args</span>[<span class="php-quote">'wrapper'</span>] = <span class="php-quote">'h1'</span>;
-</span><span id="441">
-</span><span id="442">    }
-</span><span id="443">
-</span><span id="444">    <span class="php-keyword1">return</span> <span class="php-var">$args</span>;
-</span><span id="445">
-</span><span id="446">}
-</span><span id="447">add_filter( <span class="php-quote">'primer_the_site_title_args'</span>, <span class="php-quote">'primer_the_site_title_wrapper'</span> );
+</span><span id="426">    <span class="php-keyword1">if</span> ( <span class="php-var">$site_description</span> &amp;&amp; ( is_home() || is_front_page() ) ) {
+</span><span id="427">
+</span><span id="428">        <span class="php-var">$title</span> .= <span class="php-keyword2">sprintf</span>(
+</span><span id="429">            <span class="php-quote">' %s %s'</span>,
+</span><span id="430">            <span class="php-var">$sep</span>,
+</span><span id="431">            <span class="php-var">$site_description</span>
+</span><span id="432">        );
+</span><span id="433">
+</span><span id="434">    }
+</span><span id="435">
+</span><span id="436">    <span class="php-comment">// Add a page number if necessary.</span>
+</span><span id="437">    <span class="php-keyword1">if</span> ( ( <span class="php-var">$paged</span> &gt;= <span class="php-num">2</span> || <span class="php-var">$page</span> &gt;= <span class="php-num">2</span> ) &amp;&amp; ! is_404() ) {
+</span><span id="438">
+</span><span id="439">        <span class="php-var">$title</span> .= <span class="php-keyword2">sprintf</span>(
+</span><span id="440">            <span class="php-quote">' %s %s'</span>,
+</span><span id="441">            <span class="php-var">$sep</span>,
+</span><span id="442">            <span class="php-keyword2">sprintf</span>(
+</span><span id="443">                <span class="php-comment">/* translators: page number */</span>
+</span><span id="444">                esc_html__( <span class="php-quote">'Page %d'</span>, <span class="php-quote">'primer'</span> ),
+</span><span id="445">                <span class="php-keyword2">max</span>( <span class="php-var">$paged</span>, <span class="php-var">$page</span> )
+</span><span id="446">            )
+</span><span id="447">        );
 </span><span id="448">
-</span><span id="449"><span class="php-comment">/**
-</span></span><span id="450"><span class="php-comment"> * Filter the page title HTML wrapper.
-</span></span><span id="451"><span class="php-comment"> *
-</span></span><span id="452"><span class="php-comment"> * @filter primer_the_page_title_args
-</span></span><span id="453"><span class="php-comment"> * @since  1.8.0
-</span></span><span id="454"><span class="php-comment"> *
-</span></span><span id="455"><span class="php-comment"> * @param  array $args The page title args.
-</span></span><span id="456"><span class="php-comment"> *
-</span></span><span id="457"><span class="php-comment"> * @return array
-</span></span><span id="458"><span class="php-comment"> */</span>
-</span><span id="459"><span class="php-keyword1">function</span> primer_the_page_title_wrapper( <span class="php-var">$args</span> ) {
-</span><span id="460">
-</span><span id="461">    <span class="php-keyword1">if</span> ( is_single() ) {
-</span><span id="462">
-</span><span id="463">        <span class="php-var">$args</span>[<span class="php-quote">'wrapper'</span>] = <span class="php-quote">'h2'</span>;
-</span><span id="464">
-</span><span id="465">    }
-</span><span id="466">
-</span><span id="467">    <span class="php-keyword1">return</span> <span class="php-var">$args</span>;
-</span><span id="468">
-</span><span id="469">}
-</span><span id="470">add_filter( <span class="php-quote">'primer_the_page_title_args'</span>, <span class="php-quote">'primer_the_page_title_wrapper'</span> );
+</span><span id="449">    }
+</span><span id="450">
+</span><span id="451">    <span class="php-keyword1">return</span> <span class="php-var">$title</span>;
+</span><span id="452">
+</span><span id="453">}
+</span><span id="454">add_filter( <span class="php-quote">'wp_title'</span>, <span class="php-quote">'primer_wp_title'</span>, <span class="php-num">10</span>, <span class="php-num">2</span> );
+</span><span id="455">
+</span><span id="456"><span class="php-comment">/**
+</span></span><span id="457"><span class="php-comment"> * Filter the site title HTML wrapper.
+</span></span><span id="458"><span class="php-comment"> *
+</span></span><span id="459"><span class="php-comment"> * @filter primer_the_site_title_args
+</span></span><span id="460"><span class="php-comment"> * @since  1.8.0
+</span></span><span id="461"><span class="php-comment"> *
+</span></span><span id="462"><span class="php-comment"> * @param  array $args The site title args.
+</span></span><span id="463"><span class="php-comment"> *
+</span></span><span id="464"><span class="php-comment"> * @return array
+</span></span><span id="465"><span class="php-comment"> */</span>
+</span><span id="466"><span class="php-keyword1">function</span> primer_the_site_title_wrapper( <span class="php-var">$args</span> ) {
+</span><span id="467">
+</span><span id="468">    <span class="php-keyword1">if</span> ( is_home() ) {
+</span><span id="469">
+</span><span id="470">        <span class="php-var">$args</span>[<span class="php-quote">'wrapper'</span>] = <span class="php-quote">'h1'</span>;
 </span><span id="471">
-</span><span id="472"><span class="php-comment">/**
-</span></span><span id="473"><span class="php-comment"> * Customize the default pagination links template.
-</span></span><span id="474"><span class="php-comment"> *
-</span></span><span id="475"><span class="php-comment"> * @filter navigation_markup_template
-</span></span><span id="476"><span class="php-comment"> * @since  1.6.0
-</span></span><span id="477"><span class="php-comment"> *
-</span></span><span id="478"><span class="php-comment"> * @param  string $template The navigation template.
-</span></span><span id="479"><span class="php-comment"> * @param  string $class    The class passed by the calling function.
-</span></span><span id="480"><span class="php-comment"> *
-</span></span><span id="481"><span class="php-comment"> * @return string
-</span></span><span id="482"><span class="php-comment"> */</span>
-</span><span id="483"><span class="php-keyword1">function</span> primer_pagination_template( <span class="php-var">$template</span>, <span class="php-var">$class</span> ) {
-</span><span id="484">
-</span><span id="485">    <span class="php-keyword1">if</span> ( <span class="php-quote">'pagination'</span> !== <span class="php-var">$class</span> ) {
-</span><span id="486">
-</span><span id="487">        <span class="php-keyword1">return</span> <span class="php-var">$template</span>;
-</span><span id="488">
-</span><span id="489">    }
+</span><span id="472">    }
+</span><span id="473">
+</span><span id="474">    <span class="php-keyword1">return</span> <span class="php-var">$args</span>;
+</span><span id="475">
+</span><span id="476">}
+</span><span id="477">add_filter( <span class="php-quote">'primer_the_site_title_args'</span>, <span class="php-quote">'primer_the_site_title_wrapper'</span> );
+</span><span id="478">
+</span><span id="479"><span class="php-comment">/**
+</span></span><span id="480"><span class="php-comment"> * Filter the page title HTML wrapper.
+</span></span><span id="481"><span class="php-comment"> *
+</span></span><span id="482"><span class="php-comment"> * @filter primer_the_page_title_args
+</span></span><span id="483"><span class="php-comment"> * @since  1.8.0
+</span></span><span id="484"><span class="php-comment"> *
+</span></span><span id="485"><span class="php-comment"> * @param  array $args The page title args.
+</span></span><span id="486"><span class="php-comment"> *
+</span></span><span id="487"><span class="php-comment"> * @return array
+</span></span><span id="488"><span class="php-comment"> */</span>
+</span><span id="489"><span class="php-keyword1">function</span> primer_the_page_title_wrapper( <span class="php-var">$args</span> ) {
 </span><span id="490">
-</span><span id="491">    <span class="php-keyword1">global</span> <span class="php-var">$wp_query</span>;
+</span><span id="491">    <span class="php-keyword1">if</span> ( is_single() ) {
 </span><span id="492">
-</span><span id="493">    <span class="php-var">$search</span>  = <span class="php-quote">'&lt;div class=&quot;nav-links&quot;&gt;'</span>;
-</span><span id="494">    <span class="php-var">$replace</span> = <span class="php-keyword2">sprintf</span>(
-</span><span id="495">        <span class="php-quote">'&lt;div class=&quot;paging-nav-text&quot;&gt;%s&lt;/div&gt;%s'</span>,
-</span><span id="496">        <span class="php-keyword2">sprintf</span>(
-</span><span id="497">            <span class="php-comment">/* translators: 1. current page number, 2. total number of pages */</span>
-</span><span id="498">            esc_html__( <span class="php-quote">'Page %1$d of %2$d'</span>, <span class="php-quote">'primer'</span> ),
-</span><span id="499">            <span class="php-keyword2">max</span>( <span class="php-num">1</span>, get_query_var( <span class="php-quote">'paged'</span> ) ),
-</span><span id="500">            absint( <span class="php-var">$wp_query</span>-&gt;max_num_pages )
-</span><span id="501">        ),
-</span><span id="502">        <span class="php-var">$search</span>
-</span><span id="503">    );
-</span><span id="504">
-</span><span id="505">    <span class="php-keyword1">return</span> <span class="php-keyword2">str_replace</span>( <span class="php-var">$search</span>, <span class="php-var">$replace</span>, <span class="php-var">$template</span> );
-</span><span id="506">
-</span><span id="507">}
-</span><span id="508">add_filter( <span class="php-quote">'navigation_markup_template'</span>, <span class="php-quote">'primer_pagination_template'</span>, <span class="php-num">10</span>, <span class="php-num">2</span> );
-</span><span id="509"></span></code></pre>
+</span><span id="493">        <span class="php-var">$args</span>[<span class="php-quote">'wrapper'</span>] = <span class="php-quote">'h2'</span>;
+</span><span id="494">
+</span><span id="495">    }
+</span><span id="496">
+</span><span id="497">    <span class="php-keyword1">return</span> <span class="php-var">$args</span>;
+</span><span id="498">
+</span><span id="499">}
+</span><span id="500">add_filter( <span class="php-quote">'primer_the_page_title_args'</span>, <span class="php-quote">'primer_the_page_title_wrapper'</span> );
+</span><span id="501">
+</span><span id="502"><span class="php-comment">/**
+</span></span><span id="503"><span class="php-comment"> * Customize the default pagination links template.
+</span></span><span id="504"><span class="php-comment"> *
+</span></span><span id="505"><span class="php-comment"> * @filter navigation_markup_template
+</span></span><span id="506"><span class="php-comment"> * @since  1.6.0
+</span></span><span id="507"><span class="php-comment"> *
+</span></span><span id="508"><span class="php-comment"> * @param  string $template The navigation template.
+</span></span><span id="509"><span class="php-comment"> * @param  string $class    The class passed by the calling function.
+</span></span><span id="510"><span class="php-comment"> *
+</span></span><span id="511"><span class="php-comment"> * @return string
+</span></span><span id="512"><span class="php-comment"> */</span>
+</span><span id="513"><span class="php-keyword1">function</span> primer_pagination_template( <span class="php-var">$template</span>, <span class="php-var">$class</span> ) {
+</span><span id="514">
+</span><span id="515">    <span class="php-keyword1">if</span> ( <span class="php-quote">'pagination'</span> !== <span class="php-var">$class</span> ) {
+</span><span id="516">
+</span><span id="517">        <span class="php-keyword1">return</span> <span class="php-var">$template</span>;
+</span><span id="518">
+</span><span id="519">    }
+</span><span id="520">
+</span><span id="521">    <span class="php-keyword1">global</span> <span class="php-var">$wp_query</span>;
+</span><span id="522">
+</span><span id="523">    <span class="php-var">$search</span>  = <span class="php-quote">'&lt;div class=&quot;nav-links&quot;&gt;'</span>;
+</span><span id="524">    <span class="php-var">$replace</span> = <span class="php-keyword2">sprintf</span>(
+</span><span id="525">        <span class="php-quote">'&lt;div class=&quot;paging-nav-text&quot;&gt;%s&lt;/div&gt;%s'</span>,
+</span><span id="526">        <span class="php-keyword2">sprintf</span>(
+</span><span id="527">            <span class="php-comment">/* translators: 1. current page number, 2. total number of pages */</span>
+</span><span id="528">            esc_html__( <span class="php-quote">'Page %1$d of %2$d'</span>, <span class="php-quote">'primer'</span> ),
+</span><span id="529">            <span class="php-keyword2">max</span>( <span class="php-num">1</span>, get_query_var( <span class="php-quote">'paged'</span> ) ),
+</span><span id="530">            absint( <span class="php-var">$wp_query</span>-&gt;max_num_pages )
+</span><span id="531">        ),
+</span><span id="532">        <span class="php-var">$search</span>
+</span><span id="533">    );
+</span><span id="534">
+</span><span id="535">    <span class="php-keyword1">return</span> <span class="php-keyword2">str_replace</span>( <span class="php-var">$search</span>, <span class="php-var">$replace</span>, <span class="php-var">$template</span> );
+</span><span id="536">
+</span><span id="537">}
+</span><span id="538">add_filter( <span class="php-quote">'navigation_markup_template'</span>, <span class="php-quote">'primer_pagination_template'</span>, <span class="php-num">10</span>, <span class="php-num">2</span> );
+</span><span id="539"></span></code></pre>
 			</div>
 		</div>
 
