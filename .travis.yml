@@ -15,11 +15,7 @@ cache:
     - $HOME/.wp-cli/cache
     - $HOME/.wp-cli/packages/cache
 
-language:
-  - php
-  - node_js
-  node_js:
-    - "node"
+language: php
 
 php:
   - 5.3
@@ -35,6 +31,7 @@ env:
     - WP_VERSION=trunk
 
 before_install:
+  - nvm install 9.11.1
   - phpenv config-rm xdebug.ini
 
 install:
