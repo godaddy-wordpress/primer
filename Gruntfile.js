@@ -307,8 +307,8 @@ module.exports = function( grunt ) {
 
 		shell: {
 			sphinx: [
-				'easy_install pip',
-				'pip install -r .dev/docs/requirements.txt',
+				'sudo easy_install pip',
+				'sudo pip install -r .dev/docs/requirements.txt',
 				'cd .dev/docs',
 				'make clean',
 				'git clone -b gh-pages git@github.com:godaddy/wp-primer-theme.git build/html',
