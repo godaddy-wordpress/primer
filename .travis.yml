@@ -1,6 +1,6 @@
 dist: precise
 
-sudo: false
+sudo: required
 
 notifications:
   email:
