@@ -31,11 +31,10 @@ env:
     - WP_VERSION=trunk
 
 before_install:
-  - nvm install 9.11.1
   - phpenv config-rm xdebug.ini
 
 install:
-  - nvm install 6 && nvm use 6
+  - nvm install 9 && nvm use 9
   - export DEV_LIB_PATH=.dev/dev-lib
   - if [ ! -e "$DEV_LIB_PATH" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
   - if [ ! -e "$DEV_LIB_PATH" ]; then git clone https://github.com/xwp/wp-dev-lib.git $DEV_LIB_PATH; fi
