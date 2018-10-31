@@ -68,7 +68,7 @@ jobs:
         - php /tmp/wp.phar themecheck --theme=$WP_THEME --no-interactive
       after_script: true # skip by returning true
     - stage: Build Documentation
-      if: tag IS present
+      if: tag = true
       php: 5.6
       env: WP_VERSION=latest
       before_install:
