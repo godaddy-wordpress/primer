@@ -311,7 +311,7 @@ module.exports = function( grunt ) {
 				'sudo pip install -r .dev/docs/requirements.txt',
 				'cd .dev/docs',
 				'make clean',
-				'git clone -b gh-pages git@github.com:godaddy/wp-primer-theme.git build/html',
+				'git clone -b gh-pages https://github.com/godaddy/wp-primer-theme.git build/html',
 				'make html'
 			].join( ' && ' ),
 			docs: [
