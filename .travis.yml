@@ -41,7 +41,6 @@ install:
   - if [ ! -e "$DEV_LIB_PATH" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
   - if [ ! -e "$DEV_LIB_PATH" ]; then git clone https://github.com/xwp/wp-dev-lib.git $DEV_LIB_PATH; fi
   - source $DEV_LIB_PATH/travis.install.sh
-  - if [[ ${TRAVIS_PHP_VERSION:0:3} == "5.6" ]]; then npm install; fi
 
 script:
   - source $DEV_LIB_PATH/travis.script.sh
@@ -69,6 +68,15 @@ jobs:
         - source .dev/travis.install-themecheck.sh
       script:
         - php /tmp/wp.phar themecheck --theme=$WP_THEME --no-interactive
+      after_script: true # skip by returning true
+    - stage: Build Documentation
+      php: 5.6
+      env: WP_VERSION=latest
+      install:
+        - npm install
+      script:
+        - grunt update-docs
+        - if [ -n "$TRAVIS_TAG" ]; grunt deploy-docs; fi
       after_script: true # skip by returning true
 
 before_deploy:
