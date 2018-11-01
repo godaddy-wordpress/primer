@@ -307,11 +307,10 @@ module.exports = function( grunt ) {
 
 		shell: {
 			sphinx: [
-				'easy_install pip',
-				'pip install -r .dev/docs/requirements.txt',
+				'if [ -z "$TRAVIS" ]; then easy_install pip; pip install -r .dev/docs/requirements.txt; else sudo easy_install pip; sudo pip install -r .dev/docs/requirements.txt; fi',
 				'cd .dev/docs',
 				'make clean',
-				'git clone -b gh-pages git@github.com:godaddy/wp-primer-theme.git build/html',
+				'git clone -b gh-pages https://github.com/godaddy/wp-primer-theme.git build/html',
 				'make html'
 			].join( ' && ' ),
 			docs: [
@@ -319,13 +318,13 @@ module.exports = function( grunt ) {
 				'php contributor-list.php',
 				'php hook-docs.php',
 				'cd ../../../',
-				'apigen generate --config .dev/docs/apigen/apigen.neon',
+				'if [ -z "$TRAVIS" ]; then apigen generate --config .dev/docs/apigen/apigen.neon; else vendor/bin/apigen generate --config .dev/docs/apigen/apigen.neon; fi',
 			].join( ' && ' ),
 			deploy_docs: [
 				'cd .dev/docs/build/html',
 				'git add .',
 				'git commit -m "Update Documentation" || true',
-				'git push origin gh-pages --force'
+				'if [ -z "$TRAVIS" ]; then git push origin gh-pages --force; else git push -f -q https://$GH_PAGES_DEPLOY_KEY@github.com/godaddy/wp-primer-theme.git gh-pages; fi',
 			].join( ' && ' )
 		},
 
