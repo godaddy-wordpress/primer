@@ -158,6 +158,13 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 
 /**
+ * Load Starter Content class
+ *
+ * @since 1.0.0
+ */
+require_once get_template_directory() . '/inc/starter-content.php';
+
+/**
  * Load Customizer class (must be required last).
  *
  * @since 1.0.0
