@@ -160,7 +160,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 /**
  * Load Starter Content class
  *
- * @since 1.0.0
+ * @since NEXT
  */
 require_once get_template_directory() . '/inc/starter-content.php';
 
