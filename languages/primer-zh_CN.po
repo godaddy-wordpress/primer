@@ -622,7 +622,7 @@ msgstr "流体"
 #: inc/customizer/site-identity.php:71 templates/parts/credit.php:23
 msgctxt "1. copyright symbol, 2. year, 3. site title"
 msgid "Copyright %1$s %2$d %3$s"
-msgstr "版权所有 %1$s %2$d %3$s"
+msgstr "版权 %1$s %2$d %3$s"
 
 #: inc/helpers.php:45
 msgctxt "search term"
