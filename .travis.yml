@@ -20,7 +20,7 @@ language: php
 php:
   - 5.3
   - 5.6
-  - 7.1
+  - 7.2
 
 env:
   global:
@@ -35,16 +35,14 @@ before_install:
 
 install:
   - nvm install 6 && nvm use 6
-  - export DEV_LIB_PATH=.dev/dev-lib
-  - if [ ! -e "$DEV_LIB_PATH" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
-  - if [ ! -e "$DEV_LIB_PATH" ]; then git clone https://github.com/xwp/wp-dev-lib.git $DEV_LIB_PATH; fi
-  - source $DEV_LIB_PATH/scripts/travis.install.sh
+  - export DEV_LIB_PATH=.dev/dev-lib/scripts
+  - source $DEV_LIB_PATH/travis.install.sh
 
 script:
-  - source $DEV_LIB_PATH/scripts/travis.script.sh
+  - source $DEV_LIB_PATH/travis.script.sh
 
 after_script:
-  - source $DEV_LIB_PATH/scripts/travis.after_script.sh
+  - source $DEV_LIB_PATH/travis.after_script.sh
 
 jobs:
   fast_finish: true
@@ -53,11 +51,13 @@ jobs:
       env: WP_VERSION=trunk
     - php: 5.6
       env: WP_VERSION=trunk
-    - php: 7.1
+    - php: 5.6
+      env: WP_VERSION=4.4
+    - php: 7.2
       env: WP_VERSION=4.4
   include:
     - stage: theme check
-      php: 7.1
+      php: 7.2
       env: WP_VERSION=latest
       install:
         - export THEME_CHECK=1
