@@ -295,7 +295,7 @@ module.exports = function( grunt ) {
 			},
 			gutenberg: {
 				files: {
-					'assets/css/admin/gutenberg-editor.css': '.dev/sass/admin/gutenberg-editor.scss'
+					'editor-blocks.css': '.dev/sass/editor-blocks.scss'
 				}
 			},
 			main: {
