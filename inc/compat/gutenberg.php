@@ -16,7 +16,10 @@
  */
 function primer_gutenberg_theme_support() {
 
+	// Load default block styles.
 	add_theme_support( 'wp-block-styles' );
+
+	// Add support for full and wide alignment.
 	add_theme_support( 'align-wide' );
 
 }
