@@ -27,7 +27,7 @@ module.exports = function( grunt ) {
 				src: [ 'editor-style.css' ]
 			},
 			blocks: {
-				src: [ 'editor-blocks.css' ]
+				src: [ 'assets/css/admin/blocks-style.css' ]
 			},
 			layouts: {
 				src: [ 'assets/css/admin/layouts.css' ]
@@ -298,7 +298,7 @@ module.exports = function( grunt ) {
 			},
 			blocks: {
 				files: {
-					'editor-blocks.css': '.dev/sass/editor-blocks.scss'
+					'assets/css/admin/blocks-style.css': '.dev/sass/blocks-style.scss'
 				}
 			},
 			main: {
