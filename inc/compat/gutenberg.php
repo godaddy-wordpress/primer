@@ -16,6 +16,9 @@
  */
 function primer_gutenberg_theme_support() {
 
+	// Load regular editor styles into the new block-based editor.
+	// add_theme_support( 'editor-styles' );
+
 	// Load default block styles.
 	add_theme_support( 'wp-block-styles' );
 
@@ -36,7 +39,6 @@ function primer_gutenberg_editor_assets() {
 
 	$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-	wp_enqueue_style( 'primer-gutenberg-editor', get_template_directory_uri() . "/assets/css/admin/gutenberg-editor{$suffix}.css", true, defined( 'PRIMER_CHILD_VERSION' ) ? PRIMER_CHILD_VERSION : PRIMER_VERSION, 'all' );
-
+	wp_enqueue_style( 'primer-block-editor-style', get_theme_file_uri( "assets/css/admin/blocks-style{$suffix}.css" ), true, defined( 'PRIMER_CHILD_VERSION' ) ? PRIMER_CHILD_VERSION : PRIMER_VERSION, 'all' );
 }
 add_action( 'enqueue_block_editor_assets', 'primer_gutenberg_editor_assets' );
