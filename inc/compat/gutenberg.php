@@ -39,6 +39,6 @@ function primer_gutenberg_editor_assets() {
 
 	$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-	wp_enqueue_style( 'primer-block-editor-style', get_theme_file_uri( "assets/css/admin/blocks-style{$suffix}.css" ), true, defined( 'PRIMER_CHILD_VERSION' ) ? PRIMER_CHILD_VERSION : PRIMER_VERSION, 'all' );
+	wp_enqueue_style( 'primer-block-editor-style', get_theme_file_uri( "assets/css/admin/editor-blocks{$suffix}.css" ), true, defined( 'PRIMER_CHILD_VERSION' ) ? PRIMER_CHILD_VERSION : PRIMER_VERSION, 'all' );
 }
 add_action( 'enqueue_block_editor_assets', 'primer_gutenberg_editor_assets' );
