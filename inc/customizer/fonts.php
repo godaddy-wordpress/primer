@@ -121,6 +121,18 @@ class Primer_Customizer_Fonts {
 							'font-family' => '"%1$s", sans-serif',
 						),
 					),
+					'editor-css'         => array(
+						'.wp-block h1,
+						.wp-block h2,
+						.wp-block h3,
+						.wp-block h4,
+						.wp-block h5,
+						.wp-block h6,
+						.editor-post-title__block .editor-post-title__input
+						' => array(
+							'font-family' => '"%1$s", sans-serif',
+						),
+					),
 				),
 				'primary_font' => array(
 					'label'       => esc_html__( 'Primary', 'primer' ),
@@ -133,6 +145,11 @@ class Primer_Customizer_Fonts {
 						ul li,
 						dl dd,
 						.fl-callout-text' => array(
+							'font-family' => '"%1$s", sans-serif',
+						),
+					),
+					'editor-css'         => array(
+						'.editor-styles-wrapper.edit-post-visual-editor' => array(
 							'font-family' => '"%1$s", sans-serif',
 						),
 					),
@@ -167,6 +184,10 @@ class Primer_Customizer_Fonts {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_inline_css' ), 12 );
 
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'font_control_scripts' ) );
+
+		// Fonts for the block editor.
+		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_google_fonts' ), 11 );
+		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_css' ), 12 );
 
 	}
 
@@ -389,6 +410,33 @@ class Primer_Customizer_Fonts {
 
 			$css = sprintf(
 				Primer_Customizer::parse_css_rules( $args['css'] ),
+				$this->get_font( $name )
+			);
+
+			wp_add_inline_style( Primer_Customizer::$stylesheet . '-fonts', $css );
+
+		}
+
+	}
+
+	/**
+	 * Add inline CSS for the font customizations.
+	 *
+	 * @action wp_enqueue_scripts
+	 * @since  1.0.0
+	 */
+	public function enqueue_block_editor_css() {
+
+		foreach ( $this->font_types as $name => $args ) {
+
+			if ( empty( $name ) || empty( $args['editor-css'] ) ) {
+
+				continue;
+
+			}
+
+			$css = sprintf(
+				Primer_Customizer::parse_css_rules( $args['editor-css'] ),
 				$this->get_font( $name )
 			);
 
