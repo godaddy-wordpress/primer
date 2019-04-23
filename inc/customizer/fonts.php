@@ -121,7 +121,7 @@ class Primer_Customizer_Fonts {
 							'font-family' => '"%1$s", sans-serif',
 						),
 					),
-					'editor-css'         => array(
+					'editor_css'         => array(
 						'.wp-block h1,
 						.wp-block h2,
 						.wp-block h3,
@@ -148,7 +148,7 @@ class Primer_Customizer_Fonts {
 							'font-family' => '"%1$s", sans-serif',
 						),
 					),
-					'editor-css'         => array(
+					'editor_css'         => array(
 						'.editor-styles-wrapper.edit-post-visual-editor' => array(
 							'font-family' => '"%1$s", sans-serif',
 						),
@@ -422,21 +422,21 @@ class Primer_Customizer_Fonts {
 	/**
 	 * Add inline CSS for the font customizations.
 	 *
-	 * @action wp_enqueue_scripts
-	 * @since  1.0.0
+	 * @action enqueue_block_editor_assets
+	 * @since  1.8.7
 	 */
 	public function enqueue_block_editor_css() {
 
 		foreach ( $this->font_types as $name => $args ) {
 
-			if ( empty( $name ) || empty( $args['editor-css'] ) ) {
+			if ( empty( $name ) || empty( $args['editor_css'] ) ) {
 
 				continue;
 
 			}
 
 			$css = sprintf(
-				Primer_Customizer::parse_css_rules( $args['editor-css'] ),
+				Primer_Customizer::parse_css_rules( $args['editor_css'] ),
 				$this->get_font( $name )
 			);
 

@@ -51,18 +51,7 @@ body {
 }
 
 a {
-	color: $color__link;
 	text-decoration: none;
-
-	&:visited {
-		color: $color__link;
-	}
-
-	&:hover,
-	&:focus,
-	&:active {
-		color: rgba($color__link, 0.8);
-	}
 }
 
 h1,

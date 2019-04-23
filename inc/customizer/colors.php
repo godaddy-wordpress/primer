@@ -147,6 +147,18 @@ class Primer_Customizer_Colors {
 							'color' => 'rgba(%1$s, 0.8)',
 						),
 					),
+					'editor_css'         => array(
+						'.editor-styles-wrapper .editor-post-title__block textarea.editor-post-title__input,
+						.editor-styles-wrapper .wp-block h1,
+						.editor-styles-wrapper .wp-block h2,
+						.editor-styles-wrapper .wp-block h3,
+						.editor-styles-wrapper .wp-block h4,
+						.editor-styles-wrapper .wp-block h5,
+						.editor-styles-wrapper .wp-block h6
+						' => array(
+							'color' => '%1$s',
+						),
+					),
 				),
 				'primary_text_color' => array(
 					'label'       => esc_html__( 'Primary Text', 'primer' ),
@@ -194,6 +206,11 @@ class Primer_Customizer_Colors {
 							'background-color' => 'rgba(%1$s, 0.05)',
 						),
 					),
+					'editor_css'         => array(
+						'.editor-styles-wrapper.edit-post-visual-editor' => array(
+							'color' => '%1$s',
+						),
+					),
 				),
 				'secondary_text_color' => array(
 					'label'       => esc_html__( 'Secondary Text', 'primer' ),
@@ -206,6 +223,11 @@ class Primer_Customizer_Colors {
 						.entry-footer,
 						.comment-meta .says,
 						.logged-in-as' => array(
+							'color' => '%1$s',
+						),
+					),
+					'editor_css'         => array(
+						'.wp-block-quote' => array(
 							'color' => '%1$s',
 						),
 					),
@@ -290,6 +312,24 @@ class Primer_Customizer_Colors {
 					),
 					'rgba_css' => array(
 						'a:hover, a:visited:hover, a:focus, a:visited:focus, a:active, a:visited:active' => array(
+							'color' => 'rgba(%1$s, 0.8)',
+						),
+						'.comment-list li.bypostauthor' => array(
+							'border-color' => 'rgba(%1$s, 0.2)',
+						),
+					),
+					'editor_css'         => array(
+						'.editor-styles-wrapper a:not(.editor-format-toolbar__link-container-value)' => array(
+							'color' => '%1$s',
+						),
+					),
+					'editor_rgba_css' => array(
+						'a:not(.editor-format-toolbar__link-container-value):hover,
+						a:not(.editor-format-toolbar__link-container-value):visited:hover,
+						a:not(.editor-format-toolbar__link-container-value):focus,
+						a:not(.editor-format-toolbar__link-container-value):visited:focus,
+						a:not(.editor-format-toolbar__link-container-value):active,
+						a:not(.editor-format-toolbar__link-container-value):visited:active' => array(
 							'color' => 'rgba(%1$s, 0.8)',
 						),
 						'.comment-list li.bypostauthor' => array(
@@ -893,6 +933,8 @@ class Primer_Customizer_Colors {
 		add_action( 'after_setup_theme', array( $this, 'header' ) );
 		add_action( 'after_setup_theme', array( $this, 'background' ) );
 		add_action( 'after_setup_theme', array( $this, 'block_editor_color_palette' ) );
+
+		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_colors_inline_css' ), 1 );
 	}
 
 	/**
@@ -1068,6 +1110,43 @@ class Primer_Customizer_Colors {
 			)
 		);
 
+	}
+
+	/**
+	 * Enqueue inline CSS in the block editor for custom colors.
+	 *
+	 * @action enqueue_block_editor_assets
+	 * @since  1.8.7
+	 */
+	public function enqueue_block_editor_colors_inline_css() {
+
+		// Register Customizer styles within the editor to use for inline additions.
+		wp_register_style( Primer_Customizer::$stylesheet . '-editor-customizer', false, '@@pkg.version', 'all' );
+
+		// Enqueue the Customizer style.
+		wp_enqueue_style( Primer_Customizer::$stylesheet . '-editor-customizer' );
+
+		foreach ( $this->colors as $name => $args ) {
+			if ( empty( $name ) || empty( $args['editor_css'] ) ) {
+				continue;
+			}
+
+			$default = $this->get_default_color( $name, 'default' );
+			$hex     = trim( get_theme_mod( $name, $default ), '#' );
+			$css     = sprintf( Primer_Customizer::parse_css_rules( $args['editor_css'] ), '#' . $hex );
+
+			if ( ! empty( $args['editor_rgba_css'] ) ) {
+
+				$css .= sprintf(
+					Primer_Customizer::parse_css_rules( $args['editor_rgba_css'] ),
+					implode( ', ', primer_hex2rgb( $hex ) )
+				);
+
+			}
+
+			wp_add_inline_style( Primer_Customizer::$stylesheet . '-editor-customizer', $css );
+
+		}
 	}
 
 	/**
