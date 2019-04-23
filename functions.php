@@ -185,7 +185,8 @@ function primer_setup() {
 	 *
 	 * @var array
 	 */
-	$primer_image_sizes = (array) apply_filters( 'primer_image_sizes',
+	$primer_image_sizes = (array) apply_filters(
+		'primer_image_sizes',
 		array(
 			'primer-featured' => array(
 				'width'  => 1600,
@@ -276,7 +277,8 @@ function primer_setup() {
 		 *
 		 * @var array
 		 */
-		(array) apply_filters( 'primer_nav_menus',
+		(array) apply_filters(
+			'primer_nav_menus',
 			array(
 				'primary' => esc_html__( 'Primary Menu', 'primer' ),
 				'social'  => esc_html__( 'Social Menu', 'primer' ),
@@ -374,12 +376,25 @@ function primer_content_width() {
 add_action( 'after_setup_theme', 'primer_content_width', 0 );
 
 /**
- * Enable support for custom editor style.
+ * Enable support for custom editor styles if using the classic editor.
  *
  * @link  https://developer.wordpress.org/reference/functions/add_editor_style/
  * @since 1.0.0
  */
-add_action( 'admin_init', 'add_editor_style', 10, 0 );
+function primer_classic_editor_styles() {
+
+	// Return if the block editor is not found.
+	if ( ! function_exists( 'register_block_type' ) ) {
+		return;
+	}
+
+	// Add editor styles for the classic editor.
+	if ( ! get_current_screen()->is_block_editor() ) {
+		add_editor_style( 'editor-style.css' );
+	}
+
+}
+add_action( 'admin_print_styles', 'primer_classic_editor_styles', 10, 0 );
 
 /**
  * Register sidebar areas.
@@ -396,7 +411,8 @@ function primer_register_sidebars() {
 	 *
 	 * @var array
 	 */
-	$sidebars = (array) apply_filters( 'primer_sidebars',
+	$sidebars = (array) apply_filters(
+		'primer_sidebars',
 		array(
 			'sidebar-1' => array(
 				'name'          => esc_html__( 'Sidebar', 'primer' ),
@@ -558,6 +574,6 @@ function primer_has_active_categories_reset() {
 
 }
 add_action( 'create_category', 'primer_has_active_categories_reset' );
-add_action( 'edit_category',   'primer_has_active_categories_reset' );
+add_action( 'edit_category', 'primer_has_active_categories_reset' );
 add_action( 'delete_category', 'primer_has_active_categories_reset' );
-add_action( 'save_post',       'primer_has_active_categories_reset' );
+add_action( 'save_post', 'primer_has_active_categories_reset' );
