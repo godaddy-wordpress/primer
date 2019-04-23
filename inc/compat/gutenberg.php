@@ -35,3 +35,13 @@ function primer_gutenberg_theme_support() {
 
 }
 add_action( 'after_setup_theme', 'primer_gutenberg_theme_support' );
+
+/**
+ * Enqueue supplemental block editor styles.
+ */
+function primer_editor_frame_styles() {
+
+	$suffix = SCRIPT_DEBUG ? '' : '.min';
+	wp_enqueue_style( Primer_Customizer::$stylesheet . '-editor-frame', get_template_directory_uri() . "/assets/css/admin/editor-frame{$suffix}.css", array(), PRIMER_VERSION, 'all' );
+}
+add_action( 'enqueue_block_editor_assets', 'primer_editor_frame_styles' );

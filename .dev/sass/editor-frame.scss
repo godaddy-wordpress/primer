@@ -1,0 +1,16 @@
+/*!
+Primer Block Editor Frame Styles
+*/
+
+@import "common/variables";
+@import "common/mixins";
+
+body.block-editor-page.post-type-post {
+
+	.editor-post-title__block {
+
+		.editor-post-title__input {
+			font-weight: 600;
+		}
+	}
+}
