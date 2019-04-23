@@ -1130,7 +1130,7 @@ class Primer_Customizer_Colors {
 	public function enqueue_block_editor_colors_inline_css() {
 
 		// Register Customizer styles within the editor to use for inline additions.
-		wp_register_style( Primer_Customizer::$stylesheet . '-editor-customizer', false, '@@pkg.version', 'all' );
+		wp_register_style( Primer_Customizer::$stylesheet . '-editor-customizer', false, PRIMER_VERSION, 'all' );
 
 		// Enqueue the Customizer style.
 		wp_enqueue_style( Primer_Customizer::$stylesheet . '-editor-customizer' );
