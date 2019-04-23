@@ -414,6 +414,11 @@ class Primer_Customizer_Colors {
 							'background-color' => '%1$s',
 						),
 					),
+					'editor_css'         => array(
+						'.block-editor__container' => array(
+							'background-color' => '%1$s',
+						),
+					),
 				),
 				'hero_background_color' => array(
 					'label'    => esc_html__( 'Hero Background', 'primer' ),
