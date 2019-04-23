@@ -319,21 +319,13 @@ class Primer_Customizer_Colors {
 						),
 					),
 					'editor_css'         => array(
-						'.editor-styles-wrapper a:not(.editor-format-toolbar__link-container-value)' => array(
+						'.editor-styles-wrapper a' => array(
 							'color' => '%1$s',
 						),
 					),
 					'editor_rgba_css' => array(
-						'a:not(.editor-format-toolbar__link-container-value):hover,
-						a:not(.editor-format-toolbar__link-container-value):visited:hover,
-						a:not(.editor-format-toolbar__link-container-value):focus,
-						a:not(.editor-format-toolbar__link-container-value):visited:focus,
-						a:not(.editor-format-toolbar__link-container-value):active,
-						a:not(.editor-format-toolbar__link-container-value):visited:active' => array(
+						'a:not(.editor-format-toolbar__link-container-value):hover' => array(
 							'color' => 'rgba(%1$s, 0.8)',
-						),
-						'.comment-list li.bypostauthor' => array(
-							'border-color' => 'rgba(%1$s, 0.2)',
 						),
 					),
 				),
