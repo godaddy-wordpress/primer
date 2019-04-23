@@ -1,33 +1,4 @@
-/*--------------------------------------------------------------
->>> Gutenberg:
---------------------------------------------------------------*/
-[class^="wp-block-"].alignfull {
-	margin-left: -3.375em;
-	margin-right: -3.375em;
 
-	@media #{$medium-only} {
-		margin-left: -2.375em;
-		margin-right: -2.375em;
-	}
-
-	@media #{$small-only} {
-		margin-left: -1em;
-		margin-right: -1em;
-	}
-
-	&,
-	img {
-		max-width: calc( 100% + 7.50em );
-
-		@media #{$medium-only} {
-			max-width: calc( 100% + 4.75em );
-		}
-
-		@media #{$small-only} {
-			max-width: calc( 100% + 2em );
-		}
-	}
-}
 
 // .wp-block-image,
 // .wp-block-gallery,

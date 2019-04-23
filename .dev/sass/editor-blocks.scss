@@ -1,31 +1,201 @@
-body.primer-gutenberg-narrow {
-	.edit-post-visual-editor,
-	.edit-post-text-editor {
-		.edit-post-post-text-editor__toolbar,
-		.editor-writing-flow__click-redirect,
-		.editor-post-title__block,
-		.editor-block-list__block,
-		.editor-default-block-appender {
-			max-width: 400px;
-		}
+/*!
+Primer Block Editor Styles
+*/
+
+@import "common/variables";
+@import "common/mixins";
+
+$content__spacer: 30px;
+
+/** === Title === */
+
+.editor-post-title__block {
+
+	.editor-post-title__input {
+		color: $color__heading-text;
+		font-size: 2.5em;
+		font-weight: 300;
+		line-height: 1.4;
+		text-rendering: optimizeLegibility;
 	}
 }
 
-body.primer-gutenberg-wide {
-	.edit-post-visual-editor,
-	.edit-post-text-editor {
-		.edit-post-post-text-editor__toolbar,
-		.editor-writing-flow__click-redirect,
-		.editor-post-title__block,
-		.editor-block-list__block,
-		.editor-default-block-appender {
-			max-width: none;
-		}
+/** === Permalink === */
+
+.editor-post-permalink__link {
+	color: #7e8993 !important;
+	text-decoration: underline;
+
+	&:active,
+	&:hover {
+		color: #00a0d2 !important;
 	}
 }
 
-.components-panel {
-	.primer-layout-wrap ul li img {
-		max-width: 85%;
+/** === Base Typography === */
+
+body {
+	color: $color__primary-text;
+	font-family: $font__main;
+	font-weight: normal;
+
+	@include font-size(1);
+
+	line-height: $font__line-height-body;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	@media #{$small-only} {
+		@include font-size(0.9);
 	}
 }
+
+a {
+	color: $color__link;
+	text-decoration: none;
+
+	&:visited {
+		color: $color__link;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: rgba($color__link, 0.8);
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	margin-top: 0.2rem;
+	margin-bottom: 0.8rem;
+	font-weight: bold;
+	line-height: $font__line-height-headings;
+	text-rendering: optimizeLegibility;
+	color: $color__heading-text;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+h4 {
+	font-size: 1.25em;
+}
+
+h5 {
+	font-size: 1.125em;
+}
+
+h6 {
+	font-size: 1em;
+}
+
+code {
+	font-family: $font__code;
+
+	@include font-size(0.9375);
+}
+
+code {
+	padding: 0.125rem 0.25rem;
+	background-color: rgba(225, 225, 225, 0.5);
+	border: 1px solid rgba($color__primary-text, 0.1);
+	border-radius: 2px;
+}
+
+/** === Heading Block === */
+.wp-block[data-type="core/heading"] {
+
+	.editor-block-list__block-edit {
+		margin-bottom: 0;
+	}
+
+	.wp-block-heading .editor-rich-text__editable {
+		margin-bottom: 0;
+	}
+
+	+ .wp-block[data-type="core/paragraph"] {
+		margin-top: -15px;
+	}
+}
+
+/** === Paragraph === */
+
+.wp-block-paragraph {
+	&.has-background {
+		// @todo - Add proper spacing
+	}
+
+	&.has-drop-cap:not(:focus)::first-letter {
+		font-size: 100px;
+		line-height: 1;
+		margin: -0.065em 0.275em 0 0;
+	}
+}
+
+/** === Captions === */
+
+// figcaption {
+// 	margin-bottom: -10px;
+// 	margin-top: 10px;
+
+// 	a {
+// 		color: inherit;
+// 	}
+// }
+
+
+
+
+
+
+
+
+
+
+
+// body.primer-gutenberg-narrow {
+// 	.edit-post-visual-editor,
+// 	.edit-post-text-editor {
+// 		.edit-post-post-text-editor__toolbar,
+// 		.editor-writing-flow__click-redirect,
+// 		.editor-post-title__block,
+// 		.editor-block-list__block,
+// 		.editor-default-block-appender {
+// 			max-width: 400px;
+// 		}
+// 	}
+// }
+
+// body.primer-gutenberg-wide {
+// 	.edit-post-visual-editor,
+// 	.edit-post-text-editor {
+// 		.edit-post-post-text-editor__toolbar,
+// 		.editor-writing-flow__click-redirect,
+// 		.editor-post-title__block,
+// 		.editor-block-list__block,
+// 		.editor-default-block-appender {
+// 			max-width: none;
+// 		}
+// 	}
+// }
+
+// .components-panel {
+// 	.primer-layout-wrap ul li img {
+// 		max-width: 85%;
+// 	}
+// }

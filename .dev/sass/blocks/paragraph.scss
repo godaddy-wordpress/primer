@@ -1,0 +1,11 @@
+.has-drop-cap {
+	&:not(:focus)::first-letter {
+		font-size: 100px;
+		line-height: 1;
+		margin: -0.065em 0.275em 0 0;
+	}
+}
+
+p.has-background {
+	// @todo - Add spacing
+}
