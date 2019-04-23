@@ -347,6 +347,7 @@ class Primer_Customizer_Colors {
 						input[type="button"],
 						input[type="reset"],
 						input[type="submit"],
+						.wp-block-button__link,
 						.site-info-wrapper .social-menu a:hover' => array(
 							'background-color' => '%1$s',
 							'border-color'     => '%1$s',
@@ -360,6 +361,11 @@ class Primer_Customizer_Colors {
 						input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
 							'background-color' => 'rgba(%1$s, 0.8)',
 							'border-color'     => 'rgba(%1$s, 0.8)',
+						),
+					),
+					'editor_css'         => array(
+						'.wp-block-button__link' => array(
+							'background-color' => '%1$s',
 						),
 					),
 				),
