@@ -29,6 +29,9 @@ module.exports = function( grunt ) {
 			blocks: {
 				src: [ 'assets/css/admin/editor-blocks.css' ]
 			},
+			frame: {
+				src: [ 'assets/css/admin/editor-frame.css' ]
+			},
 			layouts: {
 				src: [ 'assets/css/admin/layouts.css' ]
 			},
@@ -299,6 +302,11 @@ module.exports = function( grunt ) {
 			blocks: {
 				files: {
 					'assets/css/admin/editor-blocks.css': '.dev/sass/editor-blocks.scss'
+				}
+			},
+			frame: {
+				files: {
+					'assets/css/admin/editor-frame.css': '.dev/sass/editor-frame.scss'
 				}
 			},
 			main: {
