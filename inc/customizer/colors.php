@@ -378,7 +378,13 @@ class Primer_Customizer_Colors {
 						a.button, a.button:hover, a.button:active, a.button:focus, a.button:visited, a.button:visited:hover, a.button:visited:active, a.button:visited:focus,
 						input[type="button"], input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
 						input[type="reset"], input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
-						input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
+						input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus,
+						.wp-block-button__link' => array(
+							'color' => '%1$s',
+						),
+					),
+					'editor_css'         => array(
+						'.wp-block-button__link' => array(
 							'color' => '%1$s',
 						),
 					),
