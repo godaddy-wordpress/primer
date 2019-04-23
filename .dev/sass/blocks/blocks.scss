@@ -4,6 +4,11 @@
 // Blocks
 @import "paragraph";
 @import "coblocks";
+@import "image";
+@import "embed";
+@import "quote";
+@import "pullquote";
+@import "cover";
 
 // Full Alignment
 [class^="wp-block-"].alignfull {

@@ -1,0 +1,25 @@
+.wp-block-pullquote {
+	margin-bottom: 2em;
+	margin-top: 2em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+
+	blockquote {
+		border-width: 0;
+		font-style: normal;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	cite {
+		display: inline-block;
+		color: inherit;
+		margin-top: 2em;
+	}
+
+	&.is-style-solid-color blockquote {
+		max-width: 86%;
+	}
+}

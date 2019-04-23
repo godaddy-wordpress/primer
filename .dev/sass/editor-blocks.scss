@@ -5,9 +5,23 @@ Primer Block Editor Styles
 @import "common/variables";
 @import "common/mixins";
 
-$content__spacer: 30px;
+$content__spacer: 20px;
+$content__width--wide: 680px;
+
+.wp-block {
+	// margin-bottom: $content__spacer;
+	// margin-top: $content__spacer;
+
+	&[data-align="wide"] {
+		max-width: $content__width--wide - 10px;
+	}
+}
 
 /** === Title === */
+
+.editor-post-title {
+	margin-bottom: -15px;
+}
 
 .editor-post-title__block {
 
@@ -106,7 +120,18 @@ code {
 	border-radius: 2px;
 }
 
-/** === Heading Block === */
+/** === Captions === */
+
+figcaption {
+	margin-bottom: -10px;
+
+	a {
+		color: inherit;
+	}
+}
+
+/** === Heading === */
+
 .wp-block[data-type="core/heading"] {
 
 	.editor-block-list__block-edit {
@@ -125,9 +150,6 @@ code {
 /** === Paragraph === */
 
 .wp-block-paragraph {
-	&.has-background {
-		// @todo - Add proper spacing
-	}
 
 	&.has-drop-cap:not(:focus)::first-letter {
 		font-size: 100px;
@@ -136,17 +158,92 @@ code {
 	}
 }
 
-/** === Captions === */
+/** === Verse === */
 
-// figcaption {
-// 	margin-bottom: -10px;
-// 	margin-top: 10px;
+.wp-block-verse,
+.wp-block-preformatted {
 
-// 	a {
-// 		color: inherit;
-// 	}
-// }
+	pre {
+		background-color: rgba(225, 225, 225, 0.5);
+		border-radius: 2px;
+		border: 1px solid rgba($color__primary-text, 0.1);
+		font-family: $font__pre;
 
+		@include font-size(0.9375);
+
+		line-height: $font__line-height-pre;
+		margin-bottom: 1.6em;
+		max-width: 100%;
+		overflow: auto;
+		padding: 1em;
+	}
+}
+
+.wp-block-verse {
+
+	pre {
+		white-space: nowrap !important;
+	}
+}
+
+.wp-block-table {
+	table {
+		border-top-color: gray;
+	}
+
+	td {
+		padding: 0.5em;
+		text-align: left;
+
+		&:not(.is-selected) {
+			border-color: rgba(37, 37, 37, 0.1);
+			// border-left: none;
+			// border-right: none;
+		}
+	}
+
+	.wp-block-table__cell-content {
+		padding: 0.15em;
+	}
+}
+
+/** === Image === */
+
+.wp-block-image {
+
+	&:not(.editor-media-placeholder) {
+		// Fixes extra space where the image is not set all the way on the bottom of the div.
+		margin-top: 40px;
+	}
+
+	figcaption {
+		margin-top: 0;
+	}
+}
+
+.wp-block-quote {
+	border-color: rgba(37, 37, 37, 0.1);
+
+	p {
+		font-size: 125%;
+		font-style: italic;
+		line-height: 1.4;
+	}
+
+	&.is-style-large {
+		padding: 0 2em;
+
+		p {
+			font-size: 24px;
+			line-height: 1.6;
+			margin-bottom: 0;
+		}
+	}
+
+	&__citation {
+		font-size: 18px;
+	}
+}
 
 
 

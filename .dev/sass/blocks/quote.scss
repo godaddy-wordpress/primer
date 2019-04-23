@@ -1,0 +1,13 @@
+.wp-block-quote {
+	border-color: rgba(37, 37, 37, 0.1);
+
+	p {
+		margin-bottom: 0.55em;
+	}
+
+	&.is-style-large {
+		padding: 0 2em;
+		margin-bottom: 1.75em;
+		margin-top: 1.5em;
+	}
+}
