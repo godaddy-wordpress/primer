@@ -431,6 +431,75 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
+
+				/**
+				 * Editor color palette colors
+				 */
+				'primary_color' => array(
+					'label'           => esc_html__( 'Primary', 'primer' ),
+					'default'         => '#0b3954',
+					'section'         => 'colors-palette',
+					'css'             => array(
+						'.has-primary-color' => array(
+							'color' => '%1$s',
+						),
+						'.has-primary-background-color' => array(
+							'background-color' => '%1$s',
+						),
+					),
+				),
+				'secondary_color' => array(
+					'label'           => esc_html__( 'Secondary', 'primer' ),
+					'default'         => '#01628c',
+					'section'         => 'colors-palette',
+					'css'             => array(
+						'.has-secondary-color' => array(
+							'color' => '%1$s',
+						),
+						'.has-secondary-background-color' => array(
+							'background-color' => '%1$s',
+						),
+					),
+				),
+				'tertiary_color' => array(
+					'label'           => esc_html__( 'Tertiary', 'primer' ),
+					'default'         => '#bddae6',
+					'section'         => 'colors-palette',
+					'css'             => array(
+						'.has-tertiary-color' => array(
+							'color' => '%1$s',
+						),
+						'.has-tertiary-background-color' => array(
+							'background-color' => '%1$s',
+						),
+					),
+				),
+				'quaternary_color' => array(
+					'label'           => esc_html__( 'Quaternary', 'primer' ),
+					'default'         => '#ff6663',
+					'section'         => 'colors-palette',
+					'css'             => array(
+						'.has-quaternary-color' => array(
+							'color' => '%1$s',
+						),
+						'.has-quaternary-background-color' => array(
+							'background-color' => '%1$s',
+						),
+					),
+				),
+				'quinary_color' => array(
+					'label'           => esc_html__( 'Quinary', 'primer' ),
+					'default'         => '#ffffff',
+					'section'         => 'colors-palette',
+					'css'             => array(
+						'.has-quinary-color' => array(
+							'color' => '%1$s',
+						),
+						'.has-quinary-background-color' => array(
+							'background-color' => '%1$s',
+						),
+					),
+				),
 			)
 		);
 
@@ -453,7 +522,7 @@ class Primer_Customizer_Colors {
 		 */
 		$custom_scheme = array(
 			'_custom' => array(
-				'label' => sprintf( '- %s -' , esc_html__( 'Custom', 'primer' ) ),
+				'label' => sprintf( '- %s -', esc_html__( 'Custom', 'primer' ) ),
 			),
 		);
 
@@ -473,55 +542,114 @@ class Primer_Customizer_Colors {
 				'label'  => esc_html__( 'Default', 'primer' ),
 				'colors' => array_combine(
 					array_keys( $this->colors ),
-					wp_list_pluck( $this->colors, 'default' )
+					wp_list_pluck( $this->colors, 'default' ),
 				),
+				'secondary'  => '#F2AB7C',
+				'tertiary'  => '#D3B986',
+				'quaternary'  => '#ffedd8',
+				'quinary'  => '#ffffff',
+				'default'  => '#ff0000',
 			),
 		);
 
 		$color_schemes = array(
+			'default' => array(
+				'label' => /* translators: color scheme name */ esc_html__( 'Default', 'primer' ),
+				'base'  => '#cc494f',
+				'secondary'  => '#F2AB7C',
+				'tertiary'  => '#D3B986',
+				'quaternary'  => '#ffedd8',
+				'quinary'  => '#ffffff',
+				'default'  => '#ff0000',
+			),
 			'blush' => array(
 				'label' => /* translators: color scheme name */ esc_html__( 'Blush', 'primer' ),
 				'base'  => '#cc494f',
+				'secondary'  => '#F2AB7C',
+				'tertiary'  => '#D3B986',
+				'quaternary'  => '#ffedd8',
+				'quinary'  => '#ffffff',
+				'default'  => '#ff0000',
 			),
 			'bronze' => array(
 				'label' => /* translators: color scheme name */ esc_html__( 'Bronze', 'primer' ),
 				'base'  => '#b1a18b',
+				'secondary'  => '#8E7E6D',
+				'tertiary'  => '#C59054',
+				'quaternary'  => '#BC8A70',
+				'quinary'  => '#ffffff',
 			),
 			'canary' => array(
 				'label' => /* translators: color scheme name */ esc_html__( 'Canary', 'primer' ),
 				'base'  => '#e9c46a',
+				'secondary'  => '#EADE6D',
+				'tertiary'  => '#fdf0b2',
+				'quaternary'  => '#f5f2db',
+				'quinary'  => '#ffffff',
 			),
 			'cool' => array(
 				'label' => /* translators: color scheme name */ esc_html__( 'Cool', 'primer' ),
 				'base'  => '#78c3fb',
+				'secondary'  => '#367195',
+				'tertiary'  => '#4FACA8',
+				'quaternary'  => '#59B2CC',
+				'quinary'  => '#ffffff',
 			),
 			'dark' => array(
 				'label' => /* translators: color scheme name */ esc_html__( 'Dark', 'primer' ),
 				'base'  => '#222222',
+				'secondary'  => '#b74147',
+				'tertiary'  => '#fff000',
+				'quaternary'  => '#fff000',
+				'quinary'  => '#ffffff',
 			),
 			'iguana' => array(
 				'label' => /* translators: color scheme name */ esc_html__( 'Iguana', 'primer' ),
 				'base'  => '#62bf7c',
+				'secondary'  => '#8AD2B6',
+				'tertiary'  => '#B4DDC5',
+				'quaternary'  => '#dcf5e7',
+				'quinary'  => '#ffffff',
 			),
 			'muted' => array(
 				'label' => /* translators: color scheme name */ esc_html__( 'Muted', 'primer' ),
 				'base'  => '#3e4c75',
+				'secondary'  => '#79708B',
+				'tertiary'  => '#C6C0B2',
+				'quaternary'  => '#B6BFB3',
+				'quinary'  => '#ffffff',
 			),
 			'plum' => array(
 				'label' => /* translators: color scheme name */ esc_html__( 'Plum', 'primer' ),
 				'base'  => '#5d5179',
+				'secondary'  => '#808BA6',
+				'tertiary'  => '#ACB8CE',
+				'quaternary'  => '#dbe5f9',
+				'quinary'  => '#ffffff',
 			),
 			'rose' => array(
 				'label' => /* translators: color scheme name */ esc_html__( 'Rose', 'primer' ),
 				'base'  => '#f49390',
+				'secondary'  => '#E3AA97',
+				'tertiary'  => '#fae1cf',
+				'quaternary'  => '#ffefe6',
+				'quinary'  => '#ffffff',
 			),
 			'tangerine' => array(
 				'label' => /* translators: color scheme name */ esc_html__( 'Tangerine', 'primer' ),
 				'base'  => '#fc9e4f',
+				'secondary'  => '#ffa244',
+				'tertiary'  => '#E6BB7C',
+				'quaternary'  => '#fff2e5',
+				'quinary'  => '#ffffff',
 			),
 			'turquoise' => array(
 				'label' => /* translators: color scheme name */ esc_html__( 'Turquoise', 'primer' ),
 				'base'  => '#48e5c2',
+				'secondary'  => '#4EB3B6',
+				'tertiary'  => '#83C8B3',
+				'quaternary'  => '#418CAD',
+				'quinary'  => '#ffffff',
 			),
 		);
 
@@ -544,6 +672,13 @@ class Primer_Customizer_Colors {
 						'hero_background_color'          => $color_schemes['blush']['base'],
 						'menu_background_color'          => $color_schemes['blush']['base'],
 						'footer_widget_background_color' => $color_schemes['blush']['base'],
+						// Color palette.
+						'primary_color'                  => $color_schemes['blush']['base'],
+						'secondary_color'                => $color_schemes['blush']['secondary'],
+						'tertiary_color'                 => $color_schemes['blush']['tertiary'],
+						'quaternary_color'               => $color_schemes['blush']['quaternary'],
+						'quinary_color'                  => $color_schemes['blush']['quinary'],
+
 					),
 				),
 				'bronze' => array(
@@ -553,6 +688,12 @@ class Primer_Customizer_Colors {
 						'hero_background_color'          => $color_schemes['bronze']['base'],
 						'menu_background_color'          => $color_schemes['bronze']['base'],
 						'footer_widget_background_color' => $color_schemes['bronze']['base'],
+						// Color palette.
+						'primary_color'                  => $color_schemes['bronze']['base'],
+						'secondary_color'                => $color_schemes['bronze']['secondary'],
+						'tertiary_color'                 => $color_schemes['bronze']['tertiary'],
+						'quaternary_color'               => $color_schemes['bronze']['quaternary'],
+						'quinary_color'                  => $color_schemes['bronze']['quinary'],
 					),
 				),
 				'canary' => array(
@@ -562,6 +703,12 @@ class Primer_Customizer_Colors {
 						'hero_background_color'          => $color_schemes['canary']['base'],
 						'menu_background_color'          => $color_schemes['canary']['base'],
 						'footer_widget_background_color' => $color_schemes['canary']['base'],
+						// Color palette.
+						'primary_color'                  => $color_schemes['canary']['base'],
+						'secondary_color'                => $color_schemes['canary']['secondary'],
+						'tertiary_color'                 => $color_schemes['canary']['tertiary'],
+						'quaternary_color'               => $color_schemes['canary']['quaternary'],
+						'quinary_color'                  => $color_schemes['canary']['quinary'],
 					),
 				),
 				'cool' => array(
@@ -571,6 +718,12 @@ class Primer_Customizer_Colors {
 						'hero_background_color'          => $color_schemes['cool']['base'],
 						'menu_background_color'          => $color_schemes['cool']['base'],
 						'footer_widget_background_color' => $color_schemes['cool']['base'],
+						// Color palette.
+						'primary_color'                  => $color_schemes['cool']['base'],
+						'secondary_color'                => $color_schemes['cool']['secondary'],
+						'tertiary_color'                 => $color_schemes['cool']['tertiary'],
+						'quaternary_color'               => $color_schemes['cool']['quaternary'],
+						'quinary_color'                  => $color_schemes['cool']['quinary'],
 					),
 				),
 				'dark' => array(
@@ -590,6 +743,12 @@ class Primer_Customizer_Colors {
 						'footer_widget_content_background_color' => '#333333',
 						'footer_widget_background_color'         => '#282828',
 						'footer_background_color'                => '#222222',
+						// Color palette.
+						'primary_color'                  => $color_schemes['blush']['base'],
+						'secondary_color'                => $color_schemes['blush']['secondary'],
+						'tertiary_color'                 => $color_schemes['blush']['tertiary'],
+						'quaternary_color'               => $color_schemes['blush']['quaternary'],
+						'quinary_color'                  => $color_schemes['blush']['quinary'],
 					),
 				),
 				'iguana' => array(
@@ -599,6 +758,12 @@ class Primer_Customizer_Colors {
 						'hero_background_color'          => $color_schemes['iguana']['base'],
 						'menu_background_color'          => $color_schemes['iguana']['base'],
 						'footer_widget_background_color' => $color_schemes['iguana']['base'],
+						// Color palette.
+						'primary_color'                  => $color_schemes['iguana']['base'],
+						'secondary_color'                => $color_schemes['iguana']['secondary'],
+						'tertiary_color'                 => $color_schemes['iguana']['tertiary'],
+						'quaternary_color'               => $color_schemes['iguana']['quaternary'],
+						'quinary_color'                  => $color_schemes['iguana']['quinary'],
 					),
 				),
 				'muted' => array(
@@ -620,6 +785,12 @@ class Primer_Customizer_Colors {
 						'menu_background_color'          => '#5a6175',
 						'footer_widget_background_color' => '#5a6175',
 						'footer_background_color'        => '#d5d6e0',
+						// Color palette.
+						'primary_color'                  => $color_schemes['muted']['base'],
+						'secondary_color'                => $color_schemes['muted']['secondary'],
+						'tertiary_color'                 => $color_schemes['muted']['tertiary'],
+						'quaternary_color'               => $color_schemes['muted']['quaternary'],
+						'quinary_color'                  => $color_schemes['muted']['quinary'],
 					),
 				),
 				'plum' => array(
@@ -629,6 +800,12 @@ class Primer_Customizer_Colors {
 						'hero_background_color'          => $color_schemes['plum']['base'],
 						'menu_background_color'          => $color_schemes['plum']['base'],
 						'footer_widget_background_color' => $color_schemes['plum']['base'],
+						// Color palette.
+						'primary_color'                  => $color_schemes['plum']['base'],
+						'secondary_color'                => $color_schemes['plum']['secondary'],
+						'tertiary_color'                 => $color_schemes['plum']['tertiary'],
+						'quaternary_color'               => $color_schemes['plum']['quaternary'],
+						'quinary_color'                  => $color_schemes['plum']['quinary'],
 					),
 				),
 				'rose' => array(
@@ -638,6 +815,12 @@ class Primer_Customizer_Colors {
 						'hero_background_color'          => $color_schemes['rose']['base'],
 						'menu_background_color'          => $color_schemes['rose']['base'],
 						'footer_widget_background_color' => $color_schemes['rose']['base'],
+						// Color palette.
+						'primary_color'                  => $color_schemes['rose']['base'],
+						'secondary_color'                => $color_schemes['rose']['secondary'],
+						'tertiary_color'                 => $color_schemes['rose']['tertiary'],
+						'quaternary_color'               => $color_schemes['rose']['quaternary'],
+						'quinary_color'                  => $color_schemes['rose']['quinary'],
 					),
 				),
 				'tangerine' => array(
@@ -647,6 +830,12 @@ class Primer_Customizer_Colors {
 						'hero_background_color'          => $color_schemes['tangerine']['base'],
 						'menu_background_color'          => $color_schemes['tangerine']['base'],
 						'footer_widget_background_color' => $color_schemes['tangerine']['base'],
+						// Color palette.
+						'primary_color'                  => $color_schemes['tangerine']['base'],
+						'secondary_color'                => $color_schemes['tangerine']['secondary'],
+						'tertiary_color'                 => $color_schemes['tangerine']['tertiary'],
+						'quaternary_color'               => $color_schemes['tangerine']['quaternary'],
+						'quinary_color'                  => $color_schemes['tangerine']['quinary'],
 					),
 				),
 				'turquoise' => array(
@@ -656,6 +845,12 @@ class Primer_Customizer_Colors {
 						'hero_background_color'          => $color_schemes['turquoise']['base'],
 						'menu_background_color'          => $color_schemes['turquoise']['base'],
 						'footer_widget_background_color' => $color_schemes['turquoise']['base'],
+						// Color palette.
+						'primary_color'                  => $color_schemes['turquoise']['base'],
+						'secondary_color'                => $color_schemes['turquoise']['secondary'],
+						'tertiary_color'                 => $color_schemes['turquoise']['tertiary'],
+						'quaternary_color'               => $color_schemes['turquoise']['quaternary'],
+						'quinary_color'                  => $color_schemes['turquoise']['quinary'],
 					),
 				),
 			);
@@ -687,14 +882,53 @@ class Primer_Customizer_Colors {
 		add_action( 'customize_register', array( $this, 'color_scheme' ) );
 		add_action( 'customize_register', array( $this, 'color_overlay_transparency' ) );
 
-		add_action( 'customize_controls_enqueue_scripts',      array( $this, 'colors_control_js' ) );
+		add_action( 'customize_controls_enqueue_scripts', array( $this, 'colors_control_js' ) );
 		add_action( 'customize_controls_print_footer_scripts', array( $this, 'colors_preview_css' ) );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_colors_inline_css' ), 11 );
 
 		add_action( 'after_setup_theme', array( $this, 'header' ) );
 		add_action( 'after_setup_theme', array( $this, 'background' ) );
+		add_action( 'after_setup_theme', array( $this, 'block_editor_color_palette' ) );
+	}
 
+	/**
+	 * Custom colors for use in the editor.
+	 *
+	 * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
+	 */
+	public function block_editor_color_palette() {
+
+		add_theme_support(
+			'editor-color-palette',
+			array(
+				array(
+					'name'  => esc_html__( 'Primary', 'primer' ),
+					'slug'  => 'primary',
+					'color' => $this->color_schemes[ $this->get_current_color_scheme() ]['base'],
+				),
+				array(
+					'name'  => esc_html__( 'Secondary', 'primer' ),
+					'slug'  => 'secondary',
+					'color' => $this->color_schemes[ $this->get_current_color_scheme() ]['secondary'],
+				),
+				array(
+					'name'  => esc_html__( 'Tertiary', 'primer' ),
+					'slug'  => 'tertiary',
+					'color' => $this->color_schemes[ $this->get_current_color_scheme() ]['tertiary'],
+				),
+				array(
+					'name'  => esc_html__( 'Quaternary', 'primer' ),
+					'slug'  => 'quaternary',
+					'color' => $this->color_schemes[ $this->get_current_color_scheme() ]['quaternary'],
+				),
+				array(
+					'name'  => esc_html__( 'Quinary', 'primer' ),
+					'slug'  => 'quinary',
+					'color' => $this->color_schemes[ $this->get_current_color_scheme() ]['quinary'],
+				),
+			)
+		);
 	}
 
 	/**
@@ -725,6 +959,18 @@ class Primer_Customizer_Colors {
 				'panel' => 'colors',
 			)
 		);
+
+		// Utilize the new color palette panel if the block editor exists.
+		if ( function_exists( 'register_block_type' ) ) {
+			$wp_customize->add_section(
+				'colors-palette',
+				array(
+					'title' => esc_html__( 'Color Palette', 'primer' ),
+					'description' => esc_html__( 'The color palette is used to style content within the block editor.', 'primer' ),
+					'panel' => 'colors',
+				)
+			);
+		}
 
 		$wp_customize->add_section(
 			'colors-header',
@@ -936,7 +1182,6 @@ class Primer_Customizer_Colors {
 				$colors[ $name ] = $args['rgba_css'];
 
 			}
-
 		}
 
 		return $colors;
@@ -1029,7 +1274,6 @@ class Primer_Customizer_Colors {
 			);
 
 		}
-
 		?>
 		</script>
 		<?php
