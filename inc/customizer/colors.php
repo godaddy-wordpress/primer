@@ -950,7 +950,7 @@ class Primer_Customizer_Colors {
 			'colors',
 			array(
 				'title'       => esc_html__( 'Colors', 'primer' ),
-				'description' => 'Get what you need.',
+				'description' => esc_html__( 'Get what you need.', 'primer' ),
 				'priority'    => 40,
 			)
 		);
