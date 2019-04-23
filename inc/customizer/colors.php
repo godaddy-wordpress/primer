@@ -594,7 +594,7 @@ class Primer_Customizer_Colors {
 			'dark' => array(
 				'label' => /* translators: color scheme name */ esc_html__( 'Dark', 'primer' ),
 				'base'  => '#222222',
-				'primary'  => '#030202',
+				'primary'  => '#222222',
 				'secondary'  => '#282828',
 				'tertiary'  => '#626262',
 				'quaternary'  => '#969595',
@@ -747,11 +747,11 @@ class Primer_Customizer_Colors {
 						'footer_widget_background_color'         => '#282828',
 						'footer_background_color'                => '#222222',
 						// Color palette.
-						'primary_color'                  => $color_schemes['blush']['primary'],
-						'secondary_color'                => $color_schemes['blush']['secondary'],
-						'tertiary_color'                 => $color_schemes['blush']['tertiary'],
-						'quaternary_color'               => $color_schemes['blush']['quaternary'],
-						'quinary_color'                  => $color_schemes['blush']['quinary'],
+						'primary_color'                  => $color_schemes['dark']['primary'],
+						'secondary_color'                => $color_schemes['dark']['secondary'],
+						'tertiary_color'                 => $color_schemes['dark']['tertiary'],
+						'quaternary_color'               => $color_schemes['dark']['quaternary'],
+						'quinary_color'                  => $color_schemes['dark']['quinary'],
 					),
 				),
 				'iguana' => array(
