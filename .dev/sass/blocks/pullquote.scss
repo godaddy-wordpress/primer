@@ -1,8 +1,36 @@
 .wp-block-pullquote {
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 	margin-top: 2em;
 	padding-top: 2em;
 	padding-bottom: 2em;
+
+	@media #{$small-only} {
+		margin-bottom: 2em;
+	}
+
+	&.alignleft,
+	&.alignright {
+		margin-top: 0.75em;
+		margin-right: 0;
+		margin-left: 0;
+		max-width: 100%;
+
+		@media #{$medium-up} {
+			max-width: 50%;
+		}
+	}
+
+	&.alignleft {
+		@media #{$medium-up} {
+			margin-right: 2em;
+		}
+	}
+
+	&.alignright {
+		@media #{$medium-up} {
+			margin-left: 2em;
+		}
+	}
 
 	blockquote {
 		border-width: 0;
@@ -20,6 +48,18 @@
 	}
 
 	&.is-style-solid-color blockquote {
-		max-width: 86%;
+		padding-left: 0;
+
+		@media #{$small-only} {
+			max-width: 80%;
+		}
+
+		p {
+			@include font-size(1.25);
+		}
+
+		cite {
+			margin-top: 1em;
+		}
 	}
 }

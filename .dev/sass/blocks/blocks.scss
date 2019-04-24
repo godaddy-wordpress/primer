@@ -1,14 +1,13 @@
-// Editor customizations
-// @import "font-sizes";
-
 // Blocks
-@import "paragraph";
 @import "coblocks";
-@import "image";
-@import "embed";
-@import "quote";
-@import "pullquote";
 @import "cover";
+@import "embed";
+@import "gallery";
+@import "image";
+@import "latest-posts";
+@import "paragraph";
+@import "pullquote";
+@import "quote";
 
 // Full Alignment
 [class^="wp-block-"].alignfull {

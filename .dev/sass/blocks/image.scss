@@ -1,4 +1,14 @@
 .wp-block-image {
 	margin-bottom: 1.6em;
 	margin-top: 2.2em;
+
+	.alignleft {
+		margin-right: 1.5em;
+		margin-top: 0.6em;
+	}
+
+	.alignright {
+		margin-left: 1.5em;
+		margin-top: 0.6em;
+	}
 }
