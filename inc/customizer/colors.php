@@ -147,7 +147,7 @@ class Primer_Customizer_Colors {
 							'color' => 'rgba(%1$s, 0.8)',
 						),
 					),
-					'editor_css'         => array(
+					'editor_css'  => array(
 						'.editor-styles-wrapper .editor-post-title__block textarea.editor-post-title__input,
 						.editor-styles-wrapper .wp-block h1,
 						.editor-styles-wrapper .wp-block h2,
@@ -591,7 +591,7 @@ class Primer_Customizer_Colors {
 				'label'  => esc_html__( 'Default', 'primer' ),
 				'colors' => array_combine(
 					array_keys( $this->colors ),
-					wp_list_pluck( $this->colors, 'default' ),
+					wp_list_pluck( $this->colors, 'default' )
 				),
 				'primary'  => sanitize_hex_color( '#' . get_theme_mod( 'primary_color', $this->get_default_color( 'primary_color', 'default' ) ) ),
 				'secondary'  => sanitize_hex_color( '#' . get_theme_mod( 'secondary_color', $this->get_default_color( 'secondary_color', 'default' ) ) ),
