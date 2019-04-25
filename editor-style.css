@@ -344,6 +344,8 @@ ul, ol {
 
 ul {
   list-style: disc; }
+  ul ul {
+    list-style: circle; }
 
 ol {
   list-style: decimal; }
