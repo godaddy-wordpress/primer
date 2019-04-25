@@ -1,0 +1,17 @@
+// Using core block editor media queries to properly override.
+@media (min-width:600px) {
+    .wp-block-column {
+        flex-basis: calc(50% - 20px);
+        flex-grow: 0
+    }
+
+    .wp-block-column:nth-child(2n) {
+        margin-left: 40px
+    }
+}
+
+@media (min-width:782px) {
+    .wp-block-column:not(:first-child) {
+        margin-left: 40px
+    }
+}
