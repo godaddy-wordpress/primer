@@ -121,7 +121,7 @@ class Primer_Customizer_Fonts {
 							'font-family' => '"%1$s", sans-serif',
 						),
 					),
-					'editor_css'         => array(
+					'editor_css'  => array(
 						'.wp-block h1,
 						.wp-block h2,
 						.wp-block h3,
@@ -148,8 +148,9 @@ class Primer_Customizer_Fonts {
 							'font-family' => '"%1$s", sans-serif',
 						),
 					),
-					'editor_css'         => array(
-						'.editor-styles-wrapper.edit-post-visual-editor' => array(
+					'editor_css'  => array(
+						'.editor-styles-wrapper.edit-post-visual-editor,
+						.editor-styles-wrapper.edit-post-visual-editor .block-editor-default-block-appender textarea.block-editor-default-block-appender__content' => array(
 							'font-family' => '"%1$s", sans-serif',
 						),
 					),

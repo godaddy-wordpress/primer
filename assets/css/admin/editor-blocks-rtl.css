@@ -22,6 +22,20 @@ Primer Block Editor Styles
   .editor-post-permalink__link:active, .editor-post-permalink__link:hover {
     color: #00a0d2 !important; }
 
+/** === Block Appender "Start writing or type..." === */
+.block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  @media only screen and (max-width: 40.063em) {
+    .block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
+      font-size: 14.4px;
+      font-size: 0.9rem; } }
+
 /** === Base Typography === */
 body {
   color: #252525;
@@ -106,6 +120,10 @@ figcaption {
   line-height: 1;
   margin: -0.065em 0 0 0.275em; }
 
+/** === Separator === */
+.wp-block-separator {
+  border-bottom: 1px solid rgba(10, 10, 10, 0.1); }
+
 /** === Verse === */
 .wp-block-verse pre,
 .wp-block-preformatted pre {
@@ -125,6 +143,7 @@ figcaption {
 .wp-block-verse pre {
   white-space: nowrap !important; }
 
+/** === Table === */
 .wp-block-table table {
   border-top-color: gray; }
 
@@ -136,6 +155,19 @@ figcaption {
 
 .wp-block-table .wp-block-table__cell-content {
   padding: 0.15em; }
+
+/** === Button === */
+.wp-block-button .wp-block-button__link {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.75em 1em; }
+
+.wp-block-button.is-style-squared .wp-block-button__link {
+  -webkit-border-radius: 0;
+  border-radius: 0; }
 
 /** === Image === */
 .wp-block-image:not(.editor-media-placeholder) {
@@ -228,3 +260,21 @@ figcaption {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   margin-top: 10px; }
+
+/** === CoBlocks: Alert === */
+.wp-block-coblocks-alert__title {
+  font-size: 20px;
+  font-size: 1.25rem;
+  margin-bottom: 0.5em; }
+
+/** === CoBlocks: Author === */
+.wp-block-coblocks-author__heading {
+  font-size: 90%; }
+
+.wp-block-coblocks-author__name {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-bottom: 0.4em; }
+
+.wp-block-coblocks-author .wp-block-button {
+  margin-top: 1.25em; }

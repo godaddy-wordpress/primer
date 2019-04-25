@@ -616,8 +616,36 @@ a {
 /*--------------------------------------------------------------
 # Blocks
 --------------------------------------------------------------*/
+.wp-block-button__link {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.75em 1em; }
+
 .wp-block-coblocks-accordion {
-  margin-bottom: 1.4em; }
+  margin-bottom: 1.55em;
+  margin-top: 1.65em; }
+
+.wp-block-coblocks-alert__title {
+  font-size: 20px;
+  font-size: 1.25rem;
+  margin-bottom: 0;
+  margin-top: 0; }
+  .wp-block-coblocks-alert__title + p {
+    margin-top: 0.3em; }
+
+.wp-block-coblocks-author__heading {
+  font-size: 90%; }
+
+.wp-block-coblocks-author__name {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-bottom: 0.4em; }
+
+.wp-block-coblocks-author .wp-block-button {
+  margin-top: 1.25em; }
 
 @media (min-width: 600px) {
   .wp-block-column {

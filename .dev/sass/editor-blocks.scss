@@ -46,6 +46,23 @@ $content__width--wide: 680px;
 	}
 }
 
+/** === Block Appender "Start writing or type..." === */
+
+.block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
+	font-family: $font__main;
+	font-weight: normal;
+
+	@include font-size(1);
+
+	line-height: $font__line-height-body;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	@media #{$small-only} {
+		@include font-size(0.9);
+	}
+}
+
 /** === Base Typography === */
 
 body {
@@ -158,6 +175,12 @@ figcaption {
 	}
 }
 
+/** === Separator === */
+
+.wp-block-separator {
+	border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+}
+
 /** === Verse === */
 
 .wp-block-verse,
@@ -186,6 +209,8 @@ figcaption {
 	}
 }
 
+/** === Table === */
+
 .wp-block-table {
 	table {
 		border-top-color: gray;
@@ -204,6 +229,24 @@ figcaption {
 
 	.wp-block-table__cell-content {
 		padding: 0.15em;
+	}
+}
+
+/** === Button === */
+
+.wp-block-button {
+
+	.wp-block-button__link {
+		border-radius: 3px;
+
+		@include font-size(1);
+
+		line-height: 1;
+		padding: 0.75em 1em;
+	}
+
+	&.is-style-squared .wp-block-button__link {
+		border-radius: 0;
 	}
 }
 
@@ -351,40 +394,30 @@ figcaption {
 	}
 }
 
+/** === CoBlocks: Alert === */
 
+.wp-block-coblocks-alert__title {
+	@include font-size(1.25);
 
+	margin-bottom: 0.5em;
+}
 
+/** === CoBlocks: Author === */
 
+.wp-block-coblocks-author {
 
+	&__heading {
+		font-size: 90%;
 
-// body.primer-gutenberg-narrow {
-// 	.edit-post-visual-editor,
-// 	.edit-post-text-editor {
-// 		.edit-post-post-text-editor__toolbar,
-// 		.editor-writing-flow__click-redirect,
-// 		.editor-post-title__block,
-// 		.editor-block-list__block,
-// 		.editor-default-block-appender {
-// 			max-width: 400px;
-// 		}
-// 	}
-// }
+	}
 
-// body.primer-gutenberg-wide {
-// 	.edit-post-visual-editor,
-// 	.edit-post-text-editor {
-// 		.edit-post-post-text-editor__toolbar,
-// 		.editor-writing-flow__click-redirect,
-// 		.editor-post-title__block,
-// 		.editor-block-list__block,
-// 		.editor-default-block-appender {
-// 			max-width: none;
-// 		}
-// 	}
-// }
+	&__name {
+		font-size: 1.25em;
+		font-weight: 600;
+		margin-bottom: 0.4em;
+	}
 
-// .components-panel {
-// 	.primer-layout-wrap ul li img {
-// 		max-width: 85%;
-// 	}
-// }
+	.wp-block-button {
+		margin-top: 1.25em;
+	}
+}

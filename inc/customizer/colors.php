@@ -142,7 +142,7 @@ class Primer_Customizer_Colors {
 							'color' => '%1$s',
 						),
 					),
-					'rgba_css' => array(
+					'rgba_css'    => array(
 						'.entry-title a:hover, .entry-title a:visited:hover, .entry-title a:focus, .entry-title a:visited:focus, .entry-title a:active, .entry-title a:visited:active' => array(
 							'color' => 'rgba(%1$s, 0.8)',
 						),
@@ -190,7 +190,7 @@ class Primer_Customizer_Colors {
 							'color' => '%1$s',
 						),
 					),
-					'rgba_css' => array(
+					'rgba_css'    => array(
 						'hr' => array(
 							'background-color' => 'rgba(%1$s, 0.1)',
 							'border-color'     => 'rgba(%1$s, 0.1)',
@@ -206,7 +206,7 @@ class Primer_Customizer_Colors {
 							'background-color' => 'rgba(%1$s, 0.05)',
 						),
 					),
-					'editor_css'         => array(
+					'editor_css'  => array(
 						'.editor-styles-wrapper.edit-post-visual-editor' => array(
 							'color' => '%1$s',
 						),
@@ -222,12 +222,14 @@ class Primer_Customizer_Colors {
 						.entry-meta,
 						.entry-footer,
 						.comment-meta .says,
-						.logged-in-as' => array(
+						.logged-in-as,
+						.wp-block-coblocks-author__heading' => array(
 							'color' => '%1$s',
 						),
 					),
 					'editor_css'         => array(
-						'.wp-block-quote' => array(
+						'.wp-block-quote,
+						.wp-block-coblocks-author__heading' => array(
 							'color' => '%1$s',
 						),
 					),
@@ -298,10 +300,10 @@ class Primer_Customizer_Colors {
 				 * Link / Button colors
 				 */
 				'link_color' => array(
-					'label'   => esc_html__( 'Link Text', 'primer' ),
-					'default' => '#ff6663',
-					'section' => 'colors-content',
-					'css'     => array(
+					'label'          => esc_html__( 'Link Text', 'primer' ),
+					'default'        => '#ff6663',
+					'section'        => 'colors-content',
+					'css'            => array(
 						'a, a:visited,
 						.entry-title a:hover, .entry-title a:visited:hover' => array(
 							'color' => '%1$s',
@@ -310,7 +312,7 @@ class Primer_Customizer_Colors {
 							'background-color' => '%1$s',
 						),
 					),
-					'rgba_css' => array(
+					'rgba_css'       => array(
 						'a:hover, a:visited:hover, a:focus, a:visited:focus, a:active, a:visited:active' => array(
 							'color' => 'rgba(%1$s, 0.8)',
 						),
@@ -318,7 +320,7 @@ class Primer_Customizer_Colors {
 							'border-color' => 'rgba(%1$s, 0.2)',
 						),
 					),
-					'editor_css'         => array(
+					'editor_css'      => array(
 						'.editor-styles-wrapper a' => array(
 							'color' => '%1$s',
 						),
@@ -330,10 +332,10 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'button_color' => array(
-					'label'   => esc_html__( 'Background', 'primer' ),
-					'default' => '#ff6663',
-					'section' => 'colors-buttons',
-					'css'     => array(
+					'label'     => esc_html__( 'Background', 'primer' ),
+					'default'   => '#ff6663',
+					'section'   => 'colors-buttons',
+					'css'       => array(
 						'button,
 						a.button, a.button:visited,
 						input[type="button"],
@@ -345,7 +347,7 @@ class Primer_Customizer_Colors {
 							'border-color'     => '%1$s',
 						),
 					),
-					'rgba_css' => array(
+					'rgba_css'  => array(
 						'button:hover, button:active, button:focus,
 						a.button:hover, a.button:active, a.button:focus, a.button:visited:hover, a.button:visited:active, a.button:visited:focus,
 						input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
@@ -355,17 +357,17 @@ class Primer_Customizer_Colors {
 							'border-color'     => 'rgba(%1$s, 0.8)',
 						),
 					),
-					'editor_css'         => array(
+					'editor_css' => array(
 						'.wp-block-button__link' => array(
 							'background-color' => '%1$s',
 						),
 					),
 				),
 				'button_text_color' => array(
-					'label'   => esc_html__( 'Text', 'primer' ),
-					'default' => '#ffffff',
-					'section' => 'colors-buttons',
-					'css'     => array(
+					'label'      => esc_html__( 'Text', 'primer' ),
+					'default'    => '#ffffff',
+					'section'    => 'colors-buttons',
+					'css'        => array(
 						'button, button:hover, button:active, button:focus,
 						a.button, a.button:hover, a.button:active, a.button:focus, a.button:visited, a.button:visited:hover, a.button:visited:active, a.button:visited:focus,
 						input[type="button"], input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
@@ -375,7 +377,7 @@ class Primer_Customizer_Colors {
 							'color' => '%1$s',
 						),
 					),
-					'editor_css'         => array(
+					'editor_css' => array(
 						'.wp-block-button__link' => array(
 							'color' => '%1$s',
 						),
@@ -398,15 +400,15 @@ class Primer_Customizer_Colors {
 					),
 				),
 				'content_background_color' => array(
-					'label'   => esc_html__( 'Content Background', 'primer' ),
-					'default' => '#ffffff',
-					'section' => 'colors-content',
-					'css'     => array(
+					'label'      => esc_html__( 'Content Background', 'primer' ),
+					'default'    => '#ffffff',
+					'section'    => 'colors-content',
+					'css'        => array(
 						'.hentry, .comments-area, .widget, #page > .page-title-container' => array(
 							'background-color' => '%1$s',
 						),
 					),
-					'editor_css'         => array(
+					'editor_css' => array(
 						'.block-editor__container' => array(
 							'background-color' => '%1$s',
 						),
