@@ -154,8 +154,7 @@ class Primer_Customizer_Colors {
 						.editor-styles-wrapper .wp-block h3,
 						.editor-styles-wrapper .wp-block h4,
 						.editor-styles-wrapper .wp-block h5,
-						.editor-styles-wrapper .wp-block h6
-						' => array(
+						.editor-styles-wrapper .wp-block h6' => array(
 							'color' => '%1$s',
 						),
 					),
