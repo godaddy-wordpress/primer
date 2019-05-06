@@ -1,3 +1,9 @@
+/*!
+Primer Block Editor Frame Styles
+*/
+body.block-editor-page.post-type-post .editor-post-title__block .editor-post-title__input {
+  font-weight: 600; }
+
 body.primer-gutenberg-narrow .edit-post-visual-editor .edit-post-post-text-editor__toolbar,
 body.primer-gutenberg-narrow .edit-post-visual-editor .editor-writing-flow__click-redirect,
 body.primer-gutenberg-narrow .edit-post-visual-editor .editor-post-title__block,

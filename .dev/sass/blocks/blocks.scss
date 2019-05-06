@@ -1,0 +1,74 @@
+// Blocks
+@import "button";
+@import "coblocks";
+@import "columns";
+@import "cover";
+@import "embed";
+@import "gallery";
+@import "image";
+@import "latest-posts";
+@import "paragraph";
+@import "pullquote";
+@import "quote";
+@import "separator";
+
+// Full Alignment
+[class^="wp-block-"].alignfull {
+	margin-left: -3.375em;
+	margin-right: -3.375em;
+
+	@media #{$medium-only} {
+		margin-left: -2.375em;
+		margin-right: -2.375em;
+	}
+
+	@media #{$small-only} {
+		margin-left: -1em;
+		margin-right: -1em;
+	}
+
+	&,
+	img {
+		max-width: calc( 100% + 7.50em );
+
+		@media #{$medium-only} {
+			max-width: calc( 100% + 4.75em );
+		}
+
+		@media #{$small-only} {
+			max-width: calc( 100% + 2em );
+		}
+	}
+}
+
+// Wide Alignment
+[class^="wp-block-"].alignwide {
+	margin-left: -1.6875em;
+	margin-right: -1.6875em;
+	width: calc( 100% + 3.375em );
+
+	@media #{$medium-down} {
+		margin-left: -1.1875em;
+		margin-right: -1.1875em;
+		width: calc( 100% + 2.375em );
+	}
+
+	@media #{$small-only} {
+		margin-left: -0.5em;
+		margin-right: -0.5em;
+		width: calc( 100% + 1em );
+	}
+
+	&,
+	img {
+		max-width: calc( 100% + 7.50em );
+
+		@media #{$medium-only} {
+			max-width: calc( 100% + 4.75em );
+		}
+
+		@media #{$small-only} {
+			max-width: calc( 100% + 2em );
+		}
+	}
+}
