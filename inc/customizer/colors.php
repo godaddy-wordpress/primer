@@ -46,7 +46,7 @@ class Primer_Customizer_Colors {
 				/**
 				 * Text colors
 				 */
-				'header_textcolor' => array(
+				'header_textcolor'                       => array(
 					'label'           => esc_html__( 'Site Title Text', 'primer' ),
 					'default'         => '#ffffff',
 					'section'         => 'colors-header',
@@ -56,13 +56,13 @@ class Primer_Customizer_Colors {
 							'color' => '%1$s',
 						),
 					),
-					'rgba_css' => array(
+					'rgba_css'        => array(
 						'.site-title a:hover, .site-title a:visited:hover' => array(
 							'color' => 'rgba(%1$s, 0.8)',
 						),
 					),
 				),
-				'tagline_text_color' => array(
+				'tagline_text_color'                     => array(
 					'label'           => esc_html__( 'Tagline Text', 'primer' ),
 					'default'         => '#ffffff',
 					'section'         => 'colors-header',
@@ -73,7 +73,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				'hero_text_color' => array(
+				'hero_text_color'                        => array(
 					'label'    => esc_html__( 'Hero Text', 'primer' ),
 					'default'  => '#ffffff',
 					'section'  => 'colors-header',
@@ -99,16 +99,17 @@ class Primer_Customizer_Colors {
 						.hero .widget code,
 						.hero .widget pre,
 						.hero .widget .widget-title,
-						.hero .page-header h1' => array(
+						.hero .page-header h1' =>
+						array(
 							'color' => '%1$s',
 						),
 					),
 				),
-				'menu_text_color' => array(
-					'label'   => esc_html__( 'Text', 'primer' ),
-					'default' => '#ffffff',
-					'section' => 'colors-menu',
-					'css'     => array(
+				'menu_text_color'                        => array(
+					'label'    => esc_html__( 'Text', 'primer' ),
+					'default'  => '#ffffff',
+					'section'  => 'colors-menu',
+					'css'      => array(
 						'.main-navigation ul li a, .main-navigation ul li a:visited, .main-navigation ul li a:hover, .main-navigation ul li a:focus, .main-navigation ul li a:visited:hover' => array(
 							'color' => '%1$s',
 						),
@@ -122,12 +123,13 @@ class Primer_Customizer_Colors {
 					),
 					'rgba_css' => array(
 						'.main-navigation ul li a:hover,
-						.main-navigation ul li a:focus' => array(
+						.main-navigation ul li a:focus' =>
+						array(
 							'color' => 'rgba(%1$s, 0.8)',
 						),
 					),
 				),
-				'heading_text_color' => array(
+				'heading_text_color'                     => array(
 					'label'       => esc_html__( 'Heading Text', 'primer' ),
 					'description' => esc_html__( 'Post titles, widget titles, form labels, table headers and buttons.', 'primer' ),
 					'default'     => '#353535',
@@ -139,7 +141,8 @@ class Primer_Customizer_Colors {
 						table th,
 						dl dt,
 						.entry-title, .entry-title a, .entry-title a:visited,
-						.widget-title' => array(
+						.widget-title' =>
+						array(
 							'color' => '%1$s',
 						),
 					),
@@ -155,12 +158,13 @@ class Primer_Customizer_Colors {
 						.editor-styles-wrapper .wp-block h3,
 						.editor-styles-wrapper .wp-block h4,
 						.editor-styles-wrapper .wp-block h5,
-						.editor-styles-wrapper .wp-block h6' => array(
+						.editor-styles-wrapper .wp-block h6' =>
+						array(
 							'color' => '%1$s',
 						),
 					),
 				),
-				'primary_text_color' => array(
+				'primary_text_color'                     => array(
 					'label'       => esc_html__( 'Primary Text', 'primer' ),
 					'description' => esc_html__( 'Paragraphs, lists, menu links, quotes and tables.', 'primer' ),
 					'default'     => '#252525',
@@ -186,12 +190,13 @@ class Primer_Customizer_Colors {
 						input[type="datetime-local"]:focus,
 						input[type="color"]:focus,
 						textarea:focus,
-						.navigation.pagination .paging-nav-text' => array(
+						.navigation.pagination .paging-nav-text' =>
+						array(
 							'color' => '%1$s',
 						),
 					),
 					'rgba_css'    => array(
-						'hr' => array(
+						'hr'                        => array(
 							'background-color' => 'rgba(%1$s, 0.1)',
 							'border-color'     => 'rgba(%1$s, 0.1)',
 						),
@@ -212,7 +217,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				'secondary_text_color' => array(
+				'secondary_text_color'                   => array(
 					'label'       => esc_html__( 'Secondary Text', 'primer' ),
 					'description' => esc_html__( 'Post bylines, comment counts, post footers and quote footers.', 'primer' ),
 					'default'     => '#686868',
@@ -223,18 +228,20 @@ class Primer_Customizer_Colors {
 						.entry-footer,
 						.comment-meta .says,
 						.logged-in-as,
-						.wp-block-coblocks-author__heading' => array(
+						.wp-block-coblocks-author__heading' =>
+						array(
 							'color' => '%1$s',
 						),
 					),
-					'editor_css'         => array(
+					'editor_css'  => array(
 						'.wp-block-quote,
-						.wp-block-coblocks-author__heading' => array(
+						.wp-block-coblocks-author__heading' =>
+						array(
 							'color' => '%1$s',
 						),
 					),
 				),
-				'footer_widget_heading_text_color' => array(
+				'footer_widget_heading_text_color'       => array(
 					'label'           => esc_html__( 'Widget Heading Text', 'primer' ),
 					'default'         => '#353535',
 					'section'         => 'colors-footer',
@@ -246,24 +253,26 @@ class Primer_Customizer_Colors {
 						.site-footer h3,
 						.site-footer h4,
 						.site-footer h5,
-						.site-footer h6' => array(
+						.site-footer h6' =>
+						array(
 							'color' => '%1$s',
 						),
 					),
 				),
-				'footer_widget_text_color' => array(
+				'footer_widget_text_color'               => array(
 					'label'           => esc_html__( 'Widget Text', 'primer' ),
 					'default'         => '#252525',
 					'section'         => 'colors-footer',
 					'active_callback' => 'primer_has_active_footer_sidebars',
 					'css'             => array(
 						'.site-footer .widget,
-						.site-footer .widget form label' => array(
+						.site-footer .widget form label' =>
+						array(
 							'color' => '%1$s',
 						),
 					),
 				),
-				'footer_menu_text_color' => array(
+				'footer_menu_text_color'                 => array(
 					'label'           => esc_html__( 'Menu Text', 'primer' ),
 					'default'         => '#686868',
 					'section'         => 'colors-footer',
@@ -271,21 +280,23 @@ class Primer_Customizer_Colors {
 					'active_callback' => 'primer_has_footer_menu',
 					'css'             => array(
 						'.footer-menu ul li a,
-						.footer-menu ul li a:visited' => array(
+						.footer-menu ul li a:visited' =>
+						array(
 							'color' => '%1$s',
 						),
 						'.site-info-wrapper .social-menu a' => array(
 							'background-color' => '%1$s',
 						),
 					),
-					'rgba_css' => array(
+					'rgba_css'        => array(
 						'.footer-menu ul li a:hover,
-						.footer-menu ul li a:visited:hover' => array(
+						.footer-menu ul li a:visited:hover' =>
+						array(
 							'color' => 'rgba(%1$s, 0.8)',
 						),
 					),
 				),
-				'footer_text_color' => array(
+				'footer_text_color'                      => array(
 					'label'    => esc_html__( 'Copyright Text', 'primer' ),
 					'default'  => '#686868',
 					'section'  => 'colors-footer',
@@ -299,13 +310,14 @@ class Primer_Customizer_Colors {
 				/**
 				 * Link / Button colors
 				 */
-				'link_color' => array(
+				'link_color'                             => array(
 					'label'           => esc_html__( 'Link Text', 'primer' ),
 					'default'         => '#ff6663',
 					'section'         => 'colors-content',
 					'css'             => array(
 						'a, a:visited,
-						.entry-title a:hover, .entry-title a:visited:hover' => array(
+						.entry-title a:hover, .entry-title a:visited:hover' =>
+						array(
 							'color' => '%1$s',
 						),
 						'.navigation.pagination .nav-links .page-numbers.current, .social-menu a:hover' => array(
@@ -331,7 +343,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				'button_color' => array(
+				'button_color'                           => array(
 					'label'      => esc_html__( 'Background', 'primer' ),
 					'default'    => '#ff6663',
 					'section'    => 'colors-buttons',
@@ -342,7 +354,8 @@ class Primer_Customizer_Colors {
 						input[type="reset"],
 						input[type="submit"],
 						.wp-block-button__link,
-						.site-info-wrapper .social-menu a:hover' => array(
+						.site-info-wrapper .social-menu a:hover' =>
+						array(
 							'background-color' => '%1$s',
 							'border-color'     => '%1$s',
 						),
@@ -352,7 +365,8 @@ class Primer_Customizer_Colors {
 						a.button:hover, a.button:active, a.button:focus, a.button:visited:hover, a.button:visited:active, a.button:visited:focus,
 						input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
 						input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
-						input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' => array(
+						input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus' =>
+						array(
 							'background-color' => 'rgba(%1$s, 0.8)',
 							'border-color'     => 'rgba(%1$s, 0.8)',
 						),
@@ -363,7 +377,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				'button_text_color' => array(
+				'button_text_color'                      => array(
 					'label'      => esc_html__( 'Text', 'primer' ),
 					'default'    => '#ffffff',
 					'section'    => 'colors-buttons',
@@ -373,7 +387,8 @@ class Primer_Customizer_Colors {
 						input[type="button"], input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus,
 						input[type="reset"], input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus,
 						input[type="submit"], input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus,
-						.wp-block-button__link' => array(
+						.wp-block-button__link' =>
+						array(
 							'color' => '%1$s',
 						),
 					),
@@ -386,7 +401,7 @@ class Primer_Customizer_Colors {
 				/**
 				 * Background colors
 				 */
-				'background_color' => array(
+				'background_color'                       => array(
 					'label'   => esc_html__( 'Page Background', 'primer' ),
 					'default' => '#f5f5f5',
 					'section' => 'colors-content',
@@ -399,7 +414,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				'content_background_color' => array(
+				'content_background_color'               => array(
 					'label'      => esc_html__( 'Content Background', 'primer' ),
 					'default'    => '#ffffff',
 					'section'    => 'colors-content',
@@ -414,7 +429,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				'hero_background_color' => array(
+				'hero_background_color'                  => array(
 					'label'    => esc_html__( 'Hero Background', 'primer' ),
 					'default'  => '#0b3954',
 					'section'  => 'colors-header',
@@ -433,7 +448,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				'menu_background_color' => array(
+				'menu_background_color'                  => array(
 					'label'   => esc_html__( 'Background', 'primer' ),
 					'default' => '#0b3954',
 					'section' => 'colors-menu',
@@ -443,7 +458,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				'footer_widget_background_color' => array(
+				'footer_widget_background_color'         => array(
 					'label'           => esc_html__( 'Widgets Background', 'primer' ),
 					'default'         => '#0b3954',
 					'section'         => 'colors-footer',
@@ -465,7 +480,7 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				'footer_background_color' => array(
+				'footer_background_color'                => array(
 					'label'    => esc_html__( 'Footer Background', 'primer' ),
 					'default'  => '#f5f5f5',
 					'section'  => 'colors-footer',
@@ -477,21 +492,21 @@ class Primer_Customizer_Colors {
 						'.site-info-wrapper .social-menu a,
 						.site-info-wrapper .social-menu a:visited,
 						.site-info-wrapper .social-menu a:hover,
-						.site-info-wrapper .social-menu a:visited:hover' => array(
+						.site-info-wrapper .social-menu a:visited:hover' =>
+						array(
 							'color' => '%1$s',
 						),
 					),
 				),
-
 				/**
 				 * Editor color palette colors
 				 */
-				'primary_color' => array(
+				'primary_color'                          => array(
 					'label'   => esc_html__( 'Primary', 'primer' ),
 					'default' => '#03263B',
 					'section' => 'colors-palette',
 					'css'     => array(
-						'.has-primary-color' => array(
+						'.has-primary-color'            => array(
 							'color' => '%1$s',
 						),
 						'.has-primary-background-color' => array(
@@ -499,12 +514,12 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				'secondary_color' => array(
+				'secondary_color'                        => array(
 					'label'   => esc_html__( 'Secondary', 'primer' ),
 					'default' => '#0b3954',
 					'section' => 'colors-palette',
 					'css'     => array(
-						'.has-secondary-color' => array(
+						'.has-secondary-color'            => array(
 							'color' => '%1$s',
 						),
 						'.has-secondary-background-color' => array(
@@ -512,12 +527,12 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				'tertiary_color' => array(
+				'tertiary_color'                         => array(
 					'label'   => esc_html__( 'Tertiary', 'primer' ),
 					'default' => '#bddae6',
 					'section' => 'colors-palette',
 					'css'     => array(
-						'.has-tertiary-color' => array(
+						'.has-tertiary-color'            => array(
 							'color' => '%1$s',
 						),
 						'.has-tertiary-background-color' => array(
@@ -525,12 +540,12 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				'quaternary_color' => array(
+				'quaternary_color'                       => array(
 					'label'   => esc_html__( 'Quaternary', 'primer' ),
 					'default' => '#ff6663',
 					'section' => 'colors-palette',
 					'css'     => array(
-						'.has-quaternary-color' => array(
+						'.has-quaternary-color'            => array(
 							'color' => '%1$s',
 						),
 						'.has-quaternary-background-color' => array(
@@ -538,12 +553,12 @@ class Primer_Customizer_Colors {
 						),
 					),
 				),
-				'quinary_color' => array(
+				'quinary_color'                          => array(
 					'label'   => esc_html__( 'Quinary', 'primer' ),
 					'default' => '#ffffff',
 					'section' => 'colors-palette',
 					'css'     => array(
-						'.has-quinary-color' => array(
+						'.has-quinary-color'            => array(
 							'color' => '%1$s',
 						),
 						'.has-quinary-background-color' => array(
@@ -604,7 +619,7 @@ class Primer_Customizer_Colors {
 		);
 
 		$color_schemes = array(
-			'blush' => array(
+			'blush'     => array(
 				'label'      => /* translators: color scheme name */ esc_html__( 'Blush', 'primer' ),
 				'base'       => '#cc494f',
 				'primary'    => '#AE282F',
@@ -613,7 +628,7 @@ class Primer_Customizer_Colors {
 				'quaternary' => '#FCA6AB',
 				'quinary'    => '#ffffff',
 			),
-			'bronze' => array(
+			'bronze'    => array(
 				'label'      => /* translators: color scheme name */ esc_html__( 'Bronze', 'primer' ),
 				'base'       => '#b1a18b',
 				'primary'    => '#60523F',
@@ -622,7 +637,7 @@ class Primer_Customizer_Colors {
 				'quaternary' => '#E0D2C0',
 				'quinary'    => '#ffffff',
 			),
-			'canary' => array(
+			'canary'    => array(
 				'label'      => /* translators: color scheme name */ esc_html__( 'Canary', 'primer' ),
 				'base'       => '#e9c46a',
 				'primary'    => '#C69E40',
@@ -631,7 +646,7 @@ class Primer_Customizer_Colors {
 				'quaternary' => '#FFEDC3',
 				'quinary'    => '#ffffff',
 			),
-			'cool' => array(
+			'cool'      => array(
 				'label'      => /* translators: color scheme name */ esc_html__( 'Cool', 'primer' ),
 				'base'       => '#78c3fb',
 				'primary'    => '#51AFF7',
@@ -640,7 +655,7 @@ class Primer_Customizer_Colors {
 				'quaternary' => '#DFF1FF',
 				'quinary'    => '#ffffff',
 			),
-			'dark' => array(
+			'dark'      => array(
 				'label'      => /* translators: color scheme name */ esc_html__( 'Dark', 'primer' ),
 				'base'       => '#222222',
 				'primary'    => '#222222',
@@ -649,7 +664,7 @@ class Primer_Customizer_Colors {
 				'quaternary' => '#969595',
 				'quinary'    => '#ffffff',
 			),
-			'iguana' => array(
+			'iguana'    => array(
 				'label'      => /* translators: color scheme name */ esc_html__( 'Iguana', 'primer' ),
 				'base'       => '#62bf7c',
 				'primary'    => '#218D3E',
@@ -658,7 +673,7 @@ class Primer_Customizer_Colors {
 				'quaternary' => '#C1EDCC',
 				'quinary'    => '#ffffff',
 			),
-			'muted' => array(
+			'muted'     => array(
 				'label'      => /* translators: color scheme name */ esc_html__( 'Muted', 'primer' ),
 				'base'       => '#3e4c75',
 				'primary'    => '#42495E',
@@ -667,7 +682,7 @@ class Primer_Customizer_Colors {
 				'quaternary' => '#9EA1AC',
 				'quinary'    => '#ffffff',
 			),
-			'plum' => array(
+			'plum'      => array(
 				'label'      => /* translators: color scheme name */ esc_html__( 'Plum', 'primer' ),
 				'base'       => '#5d5179',
 				'primary'    => '#463A62',
@@ -676,7 +691,7 @@ class Primer_Customizer_Colors {
 				'quaternary' => '#9F98AF',
 				'quinary'    => '#ffffff',
 			),
-			'rose' => array(
+			'rose'      => array(
 				'label'      => /* translators: color scheme name */ esc_html__( 'Rose', 'primer' ),
 				'base'       => '#f49390',
 				'primary'    => '#CC5B58',
@@ -717,7 +732,7 @@ class Primer_Customizer_Colors {
 		if ( is_custom_primer_child() ) {
 
 			$overrides = array(
-				'blush' => array(
+				'blush'     => array(
 					'colors' => array(
 						'link_color'                     => $color_schemes['blush']['base'],
 						'button_color'                   => $color_schemes['blush']['base'],
@@ -733,7 +748,7 @@ class Primer_Customizer_Colors {
 
 					),
 				),
-				'bronze' => array(
+				'bronze'    => array(
 					'colors' => array(
 						'link_color'                     => $color_schemes['bronze']['base'],
 						'button_color'                   => $color_schemes['bronze']['base'],
@@ -748,7 +763,7 @@ class Primer_Customizer_Colors {
 						'quinary_color'                  => $color_schemes['bronze']['quinary'],
 					),
 				),
-				'canary' => array(
+				'canary'    => array(
 					'colors' => array(
 						'link_color'                     => $color_schemes['canary']['base'],
 						'button_color'                   => $color_schemes['canary']['base'],
@@ -763,7 +778,7 @@ class Primer_Customizer_Colors {
 						'quinary_color'                  => $color_schemes['canary']['quinary'],
 					),
 				),
-				'cool' => array(
+				'cool'      => array(
 					'colors' => array(
 						'link_color'                     => $color_schemes['cool']['base'],
 						'button_color'                   => $color_schemes['cool']['base'],
@@ -778,7 +793,7 @@ class Primer_Customizer_Colors {
 						'quinary_color'                  => $color_schemes['cool']['quinary'],
 					),
 				),
-				'dark' => array(
+				'dark'      => array(
 					'colors' => array(
 						// Text.
 						'tagline_text_color'               => '#999999',
@@ -788,22 +803,22 @@ class Primer_Customizer_Colors {
 						'footer_widget_heading_text_color' => '#ffffff',
 						'footer_widget_text_color'         => '#ffffff',
 						// Backgrounds.
-						'background_color'                       => '#222222',
-						'content_background_color'               => '#333333',
-						'hero_background_color'                  => '#282828',
-						'menu_background_color'                  => '#333333',
+						'background_color'                 => '#222222',
+						'content_background_color'         => '#333333',
+						'hero_background_color'            => '#282828',
+						'menu_background_color'            => '#333333',
 						'footer_widget_content_background_color' => '#333333',
-						'footer_widget_background_color'         => '#282828',
-						'footer_background_color'                => '#222222',
+						'footer_widget_background_color'   => '#282828',
+						'footer_background_color'          => '#222222',
 						// Color palette.
-						'primary_color'                  => $color_schemes['dark']['primary'],
-						'secondary_color'                => $color_schemes['dark']['secondary'],
-						'tertiary_color'                 => $color_schemes['dark']['tertiary'],
-						'quaternary_color'               => $color_schemes['dark']['quaternary'],
-						'quinary_color'                  => $color_schemes['dark']['quinary'],
+						'primary_color'                    => $color_schemes['dark']['primary'],
+						'secondary_color'                  => $color_schemes['dark']['secondary'],
+						'tertiary_color'                   => $color_schemes['dark']['tertiary'],
+						'quaternary_color'                 => $color_schemes['dark']['quaternary'],
+						'quinary_color'                    => $color_schemes['dark']['quinary'],
 					),
 				),
-				'iguana' => array(
+				'iguana'    => array(
 					'colors' => array(
 						'link_color'                     => $color_schemes['iguana']['base'],
 						'button_color'                   => $color_schemes['iguana']['base'],
@@ -818,7 +833,7 @@ class Primer_Customizer_Colors {
 						'quinary_color'                  => $color_schemes['iguana']['quinary'],
 					),
 				),
-				'muted' => array(
+				'muted'     => array(
 					'colors' => array(
 						// Text.
 						'heading_text_color'               => '#4f5875',
@@ -829,23 +844,23 @@ class Primer_Customizer_Colors {
 						'footer_menu_text_color'           => $color_schemes['muted']['base'],
 						'footer_text_color'                => '#4f5875',
 						// Links & Buttons.
-						'link_color'   => $color_schemes['muted']['base'],
-						'button_color' => $color_schemes['muted']['base'],
+						'link_color'                       => $color_schemes['muted']['base'],
+						'button_color'                     => $color_schemes['muted']['base'],
 						// Backgrounds.
-						'background_color'               => '#d5d6e0',
-						'hero_background_color'          => '#5a6175',
-						'menu_background_color'          => '#5a6175',
-						'footer_widget_background_color' => '#5a6175',
-						'footer_background_color'        => '#d5d6e0',
+						'background_color'                 => '#d5d6e0',
+						'hero_background_color'            => '#5a6175',
+						'menu_background_color'            => '#5a6175',
+						'footer_widget_background_color'   => '#5a6175',
+						'footer_background_color'          => '#d5d6e0',
 						// Color palette.
-						'primary_color'                  => $color_schemes['muted']['primary'],
-						'secondary_color'                => $color_schemes['muted']['secondary'],
-						'tertiary_color'                 => $color_schemes['muted']['tertiary'],
-						'quaternary_color'               => $color_schemes['muted']['quaternary'],
-						'quinary_color'                  => $color_schemes['muted']['quinary'],
+						'primary_color'                    => $color_schemes['muted']['primary'],
+						'secondary_color'                  => $color_schemes['muted']['secondary'],
+						'tertiary_color'                   => $color_schemes['muted']['tertiary'],
+						'quaternary_color'                 => $color_schemes['muted']['quaternary'],
+						'quinary_color'                    => $color_schemes['muted']['quinary'],
 					),
 				),
-				'plum' => array(
+				'plum'      => array(
 					'colors' => array(
 						'link_color'                     => $color_schemes['plum']['base'],
 						'button_color'                   => $color_schemes['plum']['base'],
@@ -860,7 +875,7 @@ class Primer_Customizer_Colors {
 						'quinary_color'                  => $color_schemes['plum']['quinary'],
 					),
 				),
-				'rose' => array(
+				'rose'      => array(
 					'colors' => array(
 						'link_color'                     => $color_schemes['rose']['base'],
 						'button_color'                   => $color_schemes['rose']['base'],
@@ -1019,9 +1034,9 @@ class Primer_Customizer_Colors {
 			$wp_customize->add_section(
 				'colors-palette',
 				array(
-					'title' => esc_html__( 'Color Palette', 'primer' ),
+					'title'       => esc_html__( 'Color Palette', 'primer' ),
 					'description' => esc_html__( 'The color palette, based on the selected color scheme, is used to style content within the block editor.', 'primer' ),
-					'panel' => 'colors',
+					'panel'       => 'colors',
 				)
 			);
 		}
