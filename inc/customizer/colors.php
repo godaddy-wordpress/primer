@@ -1151,8 +1151,11 @@ class Primer_Customizer_Colors {
 		wp_enqueue_style( Primer_Customizer::$stylesheet . '-editor-customizer' );
 
 		foreach ( $this->colors as $name => $args ) {
+
 			if ( empty( $name ) || empty( $args['editor_css'] ) ) {
+
 				continue;
+
 			}
 
 			$default = $this->get_default_color( $name, 'default' );
