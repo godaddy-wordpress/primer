@@ -385,12 +385,16 @@ function primer_classic_editor_styles() {
 
 	// Return if the block editor is not found.
 	if ( ! function_exists( 'register_block_type' ) ) {
+
 		return;
+
 	}
 
 	// Add editor styles for the classic editor.
 	if ( ! get_current_screen()->is_block_editor() ) {
+
 		add_editor_style( 'editor-style.css' );
+
 	}
 
 }

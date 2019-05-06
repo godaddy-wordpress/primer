@@ -595,11 +595,11 @@ class Primer_Customizer_Colors {
 					array_keys( $this->colors ),
 					wp_list_pluck( $this->colors, 'default' )
 				),
-				'primary'    => sanitize_hex_color( '#' . get_theme_mod( 'primary_color', $this->get_default_color( 'primary_color', 'default' ) ) ),
-				'secondary'  => sanitize_hex_color( '#' . get_theme_mod( 'secondary_color', $this->get_default_color( 'secondary_color', 'default' ) ) ),
-				'tertiary'   => sanitize_hex_color( '#' . get_theme_mod( 'tertiary_color', $this->get_default_color( 'tertiary_color', 'default' ) ) ),
-				'quaternary' => sanitize_hex_color( '#' . get_theme_mod( 'quaternary_color', $this->get_default_color( 'quaternary_color', 'default' ) ) ),
-				'quinary'    => sanitize_hex_color( '#' . get_theme_mod( 'quinary_color', $this->get_default_color( 'quinary_color', 'default' ) ) ),
+				'primary'    => sanitize_hex_color( '#' . get_theme_mod( 'primary_color', '03263B' ) ),
+				'secondary'  => sanitize_hex_color( '#' . get_theme_mod( 'secondary_color', '0b3954' ) ),
+				'tertiary'   => sanitize_hex_color( '#' . get_theme_mod( 'tertiary_color', 'bddae6' ) ),
+				'quaternary' => sanitize_hex_color( '#' . get_theme_mod( 'quaternary_color', 'ff6663' ) ),
+				'quinary'    => sanitize_hex_color( '#' . get_theme_mod( 'quinary_color', 'ffffff' ) ),
 			),
 		);
 
@@ -612,7 +612,6 @@ class Primer_Customizer_Colors {
 				'tertiary'   => '#EF767C',
 				'quaternary' => '#FCA6AB',
 				'quinary'    => '#ffffff',
-				'default'    => '#cc494f',
 			),
 			'bronze' => array(
 				'label'      => /* translators: color scheme name */ esc_html__( 'Bronze', 'primer' ),
@@ -622,7 +621,6 @@ class Primer_Customizer_Colors {
 				'tertiary'   => '#B1A18B',
 				'quaternary' => '#E0D2C0',
 				'quinary'    => '#ffffff',
-				'default'    => '#b1a18b',
 			),
 			'canary' => array(
 				'label'      => /* translators: color scheme name */ esc_html__( 'Canary', 'primer' ),

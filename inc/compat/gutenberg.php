@@ -31,6 +31,7 @@ function primer_gutenberg_theme_support() {
 
 		// Load regular editor styles into the new block-based editor.
 		add_editor_style( "assets/css/admin/editor-blocks{$suffix}.css" );
+
 	}
 
 }
@@ -42,6 +43,8 @@ add_action( 'after_setup_theme', 'primer_gutenberg_theme_support' );
 function primer_editor_frame_styles() {
 
 	$suffix = SCRIPT_DEBUG ? '' : '.min';
+
 	wp_enqueue_style( Primer_Customizer::$stylesheet . '-editor-frame', get_template_directory_uri() . "/assets/css/admin/editor-frame{$suffix}.css", array(), PRIMER_VERSION, 'all' );
+
 }
 add_action( 'enqueue_block_editor_assets', 'primer_editor_frame_styles' );
