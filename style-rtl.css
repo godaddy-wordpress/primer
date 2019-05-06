@@ -647,22 +647,9 @@ a {
 .wp-block-coblocks-author .wp-block-button {
   margin-top: 1.25em; }
 
-@media (min-width: 600px) {
-  .wp-block-column {
-    -webkit-flex-basis: -webkit-calc(50% - 20px);
-    -ms-flex-preferred-size: calc(50% - 20px);
-    flex-basis: calc(50% - 20px);
-    -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
-    -moz-box-flex: 0;
-    -ms-flex-positive: 0;
-    flex-grow: 0; }
-  .wp-block-column:nth-child(2n) {
-    margin-right: 40px; } }
-
 @media (min-width: 782px) {
-  .wp-block-column:not(:first-child) {
-    margin-right: 40px; } }
+  .has-3-columns .wp-block-column:nth-child(3n) {
+    margin-left: 0 !important; } }
 
 .wp-block-cover {
   margin-bottom: 2em;
