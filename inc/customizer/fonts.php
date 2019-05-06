@@ -40,7 +40,8 @@ class Primer_Customizer_Fonts {
 		 *
 		 * @var array
 		 */
-		$this->fonts = (array) apply_filters( 'primer_fonts',
+		$this->fonts = (array) apply_filters(
+			'primer_fonts',
 			array(
 				'Architects Daughter',
 				'Asap',
@@ -83,7 +84,8 @@ class Primer_Customizer_Fonts {
 		 *
 		 * @var array
 		 */
-		$this->font_types = (array) apply_filters( 'primer_font_types',
+		$this->font_types = (array) apply_filters(
+			'primer_font_types',
 			array(
 				'site_title_font' => array(
 					'label'       => esc_html__( 'Site Title', 'primer' ),
@@ -101,12 +103,13 @@ class Primer_Customizer_Fonts {
 					'default'     => 'Open Sans',
 					'css'         => array(
 						'.main-navigation ul li a, .main-navigation ul li a:visited,
-						button, a.button, a.fl-button, input[type="button"], input[type="reset"], input[type="submit"]' => array(
+						button, a.button, a.fl-button, input[type="button"], input[type="reset"], input[type="submit"]' =>
+						array(
 							'font-family' => '"%1$s", sans-serif',
 						),
 					),
 				),
-				'heading_font' => array(
+				'heading_font'    => array(
 					'label'       => esc_html__( 'Headings', 'primer' ),
 					'description' => esc_html__( 'Post titles, widget titles, form labels, and table headers.', 'primer' ),
 					'default'     => 'Open Sans',
@@ -117,7 +120,8 @@ class Primer_Customizer_Fonts {
 						table th,
 						dl dt,
 						.entry-title,
-						.widget-title' => array(
+						.widget-title' =>
+						array(
 							'font-family' => '"%1$s", sans-serif',
 						),
 					),
@@ -128,13 +132,13 @@ class Primer_Customizer_Fonts {
 						.wp-block h4,
 						.wp-block h5,
 						.wp-block h6,
-						.editor-post-title__block .editor-post-title__input
-						' => array(
+						.editor-post-title__block .editor-post-title__input' =>
+						array(
 							'font-family' => '"%1$s", sans-serif',
 						),
 					),
 				),
-				'primary_font' => array(
+				'primary_font'    => array(
 					'label'       => esc_html__( 'Primary', 'primer' ),
 					'description' => esc_html__( 'Paragraphs, lists, links, quotes, and tables.', 'primer' ),
 					'default'     => 'Open Sans',
@@ -144,18 +148,20 @@ class Primer_Customizer_Fonts {
 						ol li,
 						ul li,
 						dl dd,
-						.fl-callout-text' => array(
+						.fl-callout-text' =>
+						array(
 							'font-family' => '"%1$s", sans-serif',
 						),
 					),
 					'editor_css'  => array(
 						'.editor-styles-wrapper.edit-post-visual-editor,
-						.editor-styles-wrapper.edit-post-visual-editor .block-editor-default-block-appender textarea.block-editor-default-block-appender__content' => array(
+						.editor-styles-wrapper.edit-post-visual-editor .block-editor-default-block-appender textarea.block-editor-default-block-appender__content' =>
+						array(
 							'font-family' => '"%1$s", sans-serif',
 						),
 					),
 				),
-				'secondary_font' => array(
+				'secondary_font'  => array(
 					'label'       => esc_html__( 'Secondary', 'primer' ),
 					'description' => esc_html__( 'Bylines, comment counts, reply links, post footers, and quote footers.', 'primer' ),
 					'default'     => 'Open Sans',
@@ -166,7 +172,8 @@ class Primer_Customizer_Fonts {
 						.comment-list li .comment-meta .says,
 						.comment-list li .comment-metadata,
 						.comment-reply-link,
-						#respond .logged-in-as' => array(
+						#respond .logged-in-as' =>
+						array(
 							'font-family' => '"%1$s", sans-serif',
 						),
 					),
@@ -382,7 +389,8 @@ class Primer_Customizer_Fonts {
 		 *
 		 * @var array
 		 */
-		$query_args = (array) apply_filters( 'primer_google_fonts_query_args',
+		$query_args = (array) apply_filters(
+			'primer_google_fonts_query_args',
 			array(
 				'family' => $font_families,
 				'subset' => 'latin',
