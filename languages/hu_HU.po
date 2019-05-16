@@ -1,0 +1,717 @@
+# Copyright (c) 2017 GoDaddy Operating Company, LLC. All Rights Reserved.
+msgid ""
+msgstr ""
+"Project-Id-Version: Primer 1.8.0\n"
+"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
+"POT-Creation-Date: 2017-09-19 16:40:48+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-05-16 21:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: Magyar\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
+"X-Generator: Loco https://localise.biz/\n"
+"Language: hu_HU\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.2.2; wp-5.2"
+
+#: 404.php:22 templates/woocommerce/404.php:22
+msgid "Oops! That page can't be found."
+msgstr "Hoppá! Ez az oldal nem található."
+
+#: 404.php:28 templates/woocommerce/404.php:28
+msgid ""
+"It looks like nothing was found at this location. Please try searching below:"
+msgstr ""
+"Úgy tűnik, semmi sem található ezen a helyen. Kérjük, próbálja meg a "
+"keresést az alábbiak között:"
+
+#. translators: 1. number of comments, 2. post title
+#: comments.php:36
+msgid "%1$d thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
+msgstr[0] "%1$d megjegyzés %2$s -ra/re"
+msgstr[1] "%1$d megjegyzés %2$s -ra/re"
+
+#: comments.php:56 comments.php:83
+msgid "Comment navigation"
+msgstr "Komment navigáció"
+
+#. translators: left arrow (LTR) / right arrow (RTL)
+#: comments.php:58
+msgid "%s Older Comments"
+msgstr "%s Régebbi Kommentek"
+
+#. translators: right arrow (LTR) / left arrow (RTL)
+#: comments.php:60
+msgid "Newer Comments %s"
+msgstr "Újabb Kommentek %s"
+
+#: comments.php:85
+msgid "&larr; Older Comments"
+msgstr "&larr; Régebbi Megjegyzések"
+
+#: comments.php:87
+msgid "Newer Comments &rarr;"
+msgstr "Újabb Kommentek &rarr;"
+
+#: comments.php:97
+msgid "Comments are closed."
+msgstr "Kommentek zárva."
+
+#: content-none.php:17
+msgid "Nothing Found"
+msgstr "Nincs Találat"
+
+#. translators: link to write a new post
+#: content-none.php:30
+msgid "Ready to publish your first post? %s."
+msgstr "Készen áll az első bejegyzése közzétételére? %s."
+
+#: content-none.php:34
+msgid "Get started here"
+msgstr "Itt kezdje"
+
+#: content-none.php:43
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Sajnáljuk, de nincs találat a keresési kifejezéseire. Kérjük, próbálkozzon "
+"újra más kulcsszavakkal."
+
+#: content-none.php:49
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Úgy tűnik, nem találjuk, amit keres. Talán a keresés segíthet."
+
+#: functions.php:186
+msgid "Featured"
+msgstr "Kiemelt"
+
+#: functions.php:192 functions.php:434
+msgid "Hero"
+msgstr "Hero"
+
+#: functions.php:273
+msgid "Primary Menu"
+msgstr "Elsődleges Menü"
+
+#: functions.php:274
+msgid "Social Menu"
+msgstr "Szociális Menü"
+
+#: functions.php:275
+msgid "Footer Menu"
+msgstr "Lábléc Menü"
+
+#: functions.php:394
+msgid "Sidebar"
+msgstr "Oldalsáv"
+
+#: functions.php:395
+msgid ""
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
+msgstr ""
+"Az elsődleges oldalsáv minden oldal, bejegyzés, archívum és keresési sablon "
+"tartalma mellett megjelenik."
+
+#: functions.php:402
+msgid "Secondary Sidebar"
+msgstr "Másodlagos Oldalsáv"
+
+#: functions.php:403
+msgid ""
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
+msgstr ""
+"A másodlagos oldalsáv csak akkor jelenik meg, ha háromoszlopos elrendezést "
+"választott."
+
+#: functions.php:410
+msgid "Footer 1"
+msgstr "Lábléc 1"
+
+#: functions.php:411
+msgid "This sidebar is the first column of the footer widget area."
+msgstr "Ez az oldalsáv a lábléc widget területének első oszlopa."
+
+#: functions.php:418
+msgid "Footer 2"
+msgstr "Lábléc 2"
+
+#: functions.php:419
+msgid "This sidebar is the second column of the footer widget area."
+msgstr "Ez az oldalsáv a lábléc widget területének második oszlopa."
+
+#: functions.php:426
+msgid "Footer 3"
+msgstr "Lábléc 3"
+
+#: functions.php:427
+msgid "This sidebar is the third column of the footer widget area."
+msgstr "Ez az oldalsáv a lábléc widget területének harmadik oszlopa."
+
+#: functions.php:435
+msgid "Hero widgets appear over the header image on the front page."
+msgstr "A Hero widgetek a fejléckép fölött jelennek meg a főoldalon."
+
+#: header.php:44
+msgid "Skip to content"
+msgstr "Ugrás a tartalomra"
+
+#. translators: 1. PHP function name, 2. theme name, 3. version number, 4.
+#. alternative function name
+#: inc/compat/deprecated.php:40
+msgid ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
+"instead."
+msgstr ""
+"%1$s <strong>elavult</strong> %2$s %3$s óta! Használja inkább ezt: %4$s."
+
+#. translators: 1. PHP function name, 2. theme name, 3. version number
+#: inc/compat/deprecated.php:41
+msgid ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
+"alternative available."
+msgstr "%1$s <strong>elavult</strong> %2$s %3$s óta és nincs helyettese."
+
+#. Theme Name of the plugin/theme
+msgid "Primer"
+msgstr "Primer"
+
+#: inc/compat/deprecated.php:190
+msgid "Posts navigation"
+msgstr "Bejegyzés navigáció"
+
+#: inc/compat/deprecated.php:196
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Régebbi bejegyzések"
+
+#: inc/compat/deprecated.php:202
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Újabb bejegyzések <span class=\"meta-nav\">&rarr;</span>"
+
+#. translators: WooCommerce shopping cart item count.
+#: inc/compat/woocommerce.php:581
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d elem"
+msgstr[1] "%d elemek"
+
+#: inc/compat/woocommerce.php:652
+msgid "Featured Products"
+msgstr "Kiemelt Termék"
+
+#: inc/compat/woocommerce.php:662
+msgid "On Sale Now"
+msgstr "Eladó Most"
+
+#: inc/compat/woocommerce.php:676
+msgid "New In Store"
+msgstr "Új A Boltban"
+
+#. translators: 1. Primer minimum WordPress version. 2. Current WordPress
+#. version.
+#: inc/compat/wordpress.php:56
+msgid ""
+"Primer requires at least WordPress version %1$s. You are running version "
+"%2$s. Please upgrade and try again."
+msgstr ""
+"A Primernek legalább WordPress %1$s -re/ra van szüksége. Jelenlegi verzió: "
+"%2$s. Kérjük, frissítse és próbálja újra."
+
+#: inc/customizer/colors.php:49
+msgid "Site Title Text"
+msgstr "Oldal Címszöveg"
+
+#: inc/customizer/colors.php:65
+msgid "Tagline Text"
+msgstr "Szlogen szöveg"
+
+#. translators: the widget title
+#: inc/customizer/colors.php:76 inc/hero-text-widget.php:30
+msgid "Hero Text"
+msgstr "Hero Szöveg"
+
+#: inc/customizer/colors.php:107 inc/customizer/colors.php:326
+msgid "Text"
+msgstr "Szöveg"
+
+#: inc/customizer/colors.php:129
+msgid "Heading Text"
+msgstr "Cím Szöveg"
+
+#: inc/customizer/colors.php:130
+msgid "Post titles, widget titles, form labels, table headers and buttons."
+msgstr "Bejegyzés címek, widget-címek, űrlapcímkék, táblafejlécek és gombok."
+
+#: inc/customizer/colors.php:151
+msgid "Primary Text"
+msgstr "Elsődleges Szöveg"
+
+#: inc/customizer/colors.php:152
+msgid "Paragraphs, lists, menu links, quotes and tables."
+msgstr "Paragrafusok, listák, menü linkek, idézetek és táblák."
+
+#: inc/customizer/colors.php:198
+msgid "Secondary Text"
+msgstr "Másodlagos Szöveg"
+
+#: inc/customizer/colors.php:199
+msgid "Post bylines, comment counts, post footers and quote footers."
+msgstr ""
+"Bejegyzés összegző, megjegyzés számok, bejegyzés láblécek és idézet láblécek."
+
+#: inc/customizer/colors.php:213
+msgid "Widget Heading Text"
+msgstr "Widget Fejléc Szöveg"
+
+#: inc/customizer/colors.php:230
+msgid "Widget Text"
+msgstr "Widget Szöveg"
+
+#: inc/customizer/colors.php:242
+msgid "Menu Text"
+msgstr "Menü Szöveg"
+
+#: inc/customizer/colors.php:264
+msgid "Copyright Text"
+msgstr "Szerzőjogi Szöveg"
+
+#: inc/customizer/colors.php:278
+msgid "Link Text"
+msgstr "Link Szöveg"
+
+#: inc/customizer/colors.php:300 inc/customizer/colors.php:385
+msgid "Background"
+msgstr "Háttér"
+
+#: inc/customizer/colors.php:343
+msgid "Page Background"
+msgstr "Oldal Háttér"
+
+#: inc/customizer/colors.php:356
+msgid "Content Background"
+msgstr "Tartalom Háttér"
+
+#: inc/customizer/colors.php:366
+msgid "Hero Background"
+msgstr "Hero Háttér"
+
+#: inc/customizer/colors.php:395
+msgid "Widgets Background"
+msgstr "Widgetek Háttere"
+
+#: inc/customizer/colors.php:406
+msgid "Widget Content Background"
+msgstr "Widget Tartalom Háttér"
+
+#: inc/customizer/colors.php:417
+msgid "Footer Background"
+msgstr "Lábléc Háttér"
+
+#: inc/customizer/colors.php:455 inc/customizer/layouts.php:298
+msgid "Custom"
+msgstr "Egyedi"
+
+#: inc/customizer/colors.php:472 inc/customizer/layouts.php:294
+msgid "Default"
+msgstr "Alapértelmezett"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:482
+msgid "Blush"
+msgstr "Pír"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:486
+msgid "Bronze"
+msgstr "Bronz"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:490
+msgid "Canary"
+msgstr "Kanári"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:494
+msgid "Cool"
+msgstr "Hűvös"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:498
+msgid "Dark"
+msgstr "Sötét"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:502
+msgid "Iguana"
+msgstr "Iguána"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:506
+msgid "Muted"
+msgstr "Halkítva"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:510
+msgid "Plum"
+msgstr "Szilva"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:514
+msgid "Rose"
+msgstr "Rózsa"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:518
+msgid "Tangerine"
+msgstr "Mandarin"
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:522
+msgid "Turquoise"
+msgstr "Türkiz"
+
+#: inc/customizer/colors.php:714
+msgid "Colors"
+msgstr "Színek"
+
+#: inc/customizer/colors.php:723
+msgid "Color Schemes"
+msgstr "Színsémák"
+
+#: inc/customizer/colors.php:731
+msgid "Header"
+msgstr "Fejléc"
+
+#: inc/customizer/colors.php:739
+msgid "Menu"
+msgstr "Menü"
+
+#: inc/customizer/colors.php:747
+msgid "Buttons"
+msgstr "Gombok"
+
+#: inc/customizer/colors.php:755
+msgid "Content"
+msgstr "Tartalom"
+
+#: inc/customizer/colors.php:763
+msgid "Footer"
+msgstr "Lábléc"
+
+#: inc/customizer/colors.php:979
+msgid "Base Color Scheme"
+msgstr "Alapszín-séma"
+
+#: inc/customizer/colors.php:1292
+msgid "Hero Background Overlay"
+msgstr "Hero Háttér Fedő"
+
+#: inc/customizer/colors.php:1293
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr "Szabályozza a színfedő átlátszóságát, ha egyéni Fejlécképet használ."
+
+#: inc/customizer/fonts.php:89
+msgid "Site Title"
+msgstr "Oldal Cím"
+
+#: inc/customizer/fonts.php:90
+msgid "Site title text in the header."
+msgstr "Oldal címszövege a fejlécben."
+
+#: inc/customizer/fonts.php:99
+msgid "Navigation"
+msgstr "Navigáció"
+
+#: inc/customizer/fonts.php:100
+msgid "Primary menu links and button links."
+msgstr "Elsődleges menü linkek és gomb linkek."
+
+#: inc/customizer/fonts.php:110
+msgid "Headings"
+msgstr "Címek"
+
+#: inc/customizer/fonts.php:111
+msgid "Post titles, widget titles, form labels, and table headers."
+msgstr "Bejegyzés címek, widget-címek, űrlapcímkék és táblafejlécek."
+
+#: inc/customizer/fonts.php:126
+msgid "Primary"
+msgstr "Elsődleges"
+
+#: inc/customizer/fonts.php:127
+msgid "Paragraphs, lists, links, quotes, and tables."
+msgstr "Paragrafusok, listák, linkek, idézetek és táblák."
+
+#: inc/customizer/fonts.php:141
+msgid "Secondary"
+msgstr "Másodlagos"
+
+#: inc/customizer/fonts.php:142
+msgid "Bylines, comment counts, reply links, post footers, and quote footers."
+msgstr ""
+"Összegzők, megjegyzés számok, válasz linkek, bejegyzés láblécek és idézet "
+"láblécek."
+
+#: inc/customizer/fonts.php:192
+msgid "Fonts"
+msgstr "Betűtípusok"
+
+#. translators: font name
+#: inc/customizer/fonts.php:217
+msgid "%s (Default)"
+msgstr "%s (Alapértelmezett)"
+
+#: inc/customizer/layouts.php:55
+msgid "One Column: Wide"
+msgstr "Egy Oszlop: Széles"
+
+#: inc/customizer/layouts.php:56
+msgid "One Column: Narrow"
+msgstr "Egy Oszlop: Szoros"
+
+#: inc/customizer/layouts.php:57 inc/customizer/layouts.php:148
+msgid "Two Columns: Content | Sidebar"
+msgstr "Két Oszlop: Tartalom | Oldalsáv"
+
+#: inc/customizer/layouts.php:58 inc/customizer/layouts.php:147
+msgid "Two Columns: Sidebar | Content"
+msgstr "Két Oszlop: Oldalsáv | Tartalom"
+
+#: inc/customizer/layouts.php:59 inc/customizer/layouts.php:150
+msgid "Three Columns: Content | Sidebar | Sidebar"
+msgstr "Három Oszlop: Tartalom | Oldalsáv | Oldalsáv"
+
+#: inc/customizer/layouts.php:60
+msgid "Three Columns: Sidebar | Content | Sidebar"
+msgstr "Három Oszlop: Oldalsáv | Tartalom | Oldalsáv"
+
+#: inc/customizer/layouts.php:61 inc/customizer/layouts.php:149
+msgid "Three Columns: Sidebar | Sidebar | Content"
+msgstr "Három Oszlop: Oldalsáv | Oldalsáv | Tartalom"
+
+#. translators: fixed-width page layout
+#: inc/customizer/layouts.php:99
+msgid "Fixed"
+msgstr "Rögzített"
+
+#. translators: fluid-width page layout
+#: inc/customizer/layouts.php:100
+msgid "Fluid"
+msgstr "Folyékony"
+
+#: inc/customizer/layouts.php:263 inc/customizer/layouts.php:426
+msgid "Layout"
+msgstr "Elrendezés"
+
+#: inc/customizer/layouts.php:452
+msgid "Page Width"
+msgstr "Oldal Szélesség"
+
+#: inc/customizer/layouts.php:453
+msgid "Display your site differently on larger screens."
+msgstr "A nagyobb képernyőkön eltérő módon jelenítse meg webhelyét."
+
+#. translators: 1. copyright symbol, 2. year, 3. site title
+#: inc/customizer/site-identity.php:72 templates/parts/credit.php:24
+msgid "Copyright %1$s %2$d %3$s"
+msgstr "Copyright %1$s %2$d %3$s"
+
+#: inc/customizer/site-identity.php:83
+msgid "Footer Copyright Text"
+msgstr "Lábléc Szerzőjogi Szöveg"
+
+#: inc/customizer/site-identity.php:102
+msgid "Display theme author credit"
+msgstr "A téma készítőjének feltüntetése"
+
+#: inc/customizer/static-front-page.php:46
+msgid "Front page title"
+msgstr "Címlap cím"
+
+#: inc/customizer.php:193
+msgid "Use featured image"
+msgstr "Kiemelt kép használata"
+
+#: inc/customizer.php:194
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+"Hagyja, hogy az aktuális bejegyzésben szereplő kiemelt kép felülírja a Hero "
+"képét."
+
+#. translators: search term
+#: inc/helpers.php:47
+msgid "Search Results for: %s"
+msgstr "Keresési Eredmények a következőre: %s"
+
+#: inc/helpers.php:58
+msgid "404 Page Not Found"
+msgstr "404 Oldal Nem Található"
+
+#. translators: theme name
+#: inc/hero-text-widget.php:25
+msgid "A %s theme widget designed for the Hero area on your site's front page."
+msgstr "A %s téma widget a webhely főoldalának Hero területére lett tervezve."
+
+#: inc/hero-text-widget.php:148
+msgid "The title of widget. Leave empty for no title."
+msgstr "A widget címe. Hagyja üresen, ha nem akar címet neki."
+
+#: inc/hero-text-widget.php:148
+msgid "Title:"
+msgstr "Cím:"
+
+#: inc/hero-text-widget.php:153
+msgid "Text:"
+msgstr "Szöveg:"
+
+#: inc/hero-text-widget.php:158
+msgid "Button Text:"
+msgstr "Gomb Szöveg:"
+
+#: inc/hero-text-widget.php:163
+msgid "Button Link URL:"
+msgstr "Gomb Link URL:"
+
+#: inc/hero-text-widget.php:164
+msgid "Paste URL or type to search"
+msgstr "Illesszen be egy URL -t, vagy pötyögjön a kereséshez"
+
+#. translators: page number
+#: inc/hooks.php:414
+msgid "Page %d"
+msgstr "Oldal: %d"
+
+#. translators: 1. current page number, 2. total number of pages
+#: inc/hooks.php:498 templates/woocommerce/loop/pagination.php:47
+msgid "Page %1$d of %2$d"
+msgstr "Oldal: %1$d / %2$d"
+
+#: inc/template-tags.php:278 templates/woocommerce/loop/pagination.php:32
+msgid "&larr; Previous"
+msgstr "&larr; Előző"
+
+#: inc/template-tags.php:279 templates/woocommerce/loop/pagination.php:33
+msgid "Next &rarr;"
+msgstr "Következő &rarr;"
+
+#. translators: post type singular label
+#: inc/template-tags.php:280
+msgid "%1$s navigation"
+msgstr "%1$s navigáció"
+
+#: inc/template-tags.php:393
+msgid "Blog"
+msgstr "Blog"
+
+#. translators: 1. theme name link, 2. theme author link
+#: templates/parts/credit.php:51
+msgid "%1$s WordPress theme by %2$s"
+msgstr "%1$s WordPress téma %2$s -tól/től"
+
+#: templates/parts/loop/page-content.php:28
+#: templates/parts/loop/post-content.php:19
+msgid "Pages:"
+msgstr "Oldalak:"
+
+#: templates/parts/loop/page-footer.php:9
+#: templates/parts/loop/post-footer.php:15
+#: templates/parts/loop/post-search-footer.php:47
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: templates/parts/loop/post-content.php:15
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Olvass Tovább <span class=\"meta-nav\">&rarr;</span>"
+
+#. translators: post title
+#: templates/parts/loop/post-excerpt.php:15
+msgid "Continue reading %s"
+msgstr "Tovább olvasás %s"
+
+#. translators: right arrow (LTR) / left arrow (RTL)
+#: templates/parts/loop/post-excerpt.php:15
+msgid "Continue Reading %s"
+msgstr "Tovább Olvas %s"
+
+#. translators: separator for items in a list
+#: templates/parts/loop/post-footer.php:21
+#: templates/parts/loop/post-footer.php:33
+#: templates/parts/loop/post-search-footer.php:15
+#: templates/parts/loop/post-search-footer.php:27
+msgid ", "
+msgstr ", "
+
+#. translators: category list
+#: templates/parts/loop/post-footer.php:27
+#: templates/parts/loop/post-search-footer.php:21
+msgid "Posted in: %s"
+msgstr "Bejegyezve ide: %s"
+
+#. translators: tag list
+#: templates/parts/loop/post-footer.php:39
+#: templates/parts/loop/post-search-footer.php:33
+msgid "Filed under: %s"
+msgstr "Elkönyvelve mint: %s"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:43
+msgid "Leave a comment"
+msgstr "Hagyjon megjegyzést"
+
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:43
+msgid "1 Comment"
+msgstr "1 Komment"
+
+#. translators: number of comments
+#: templates/parts/loop/post-meta.php:25
+#: templates/parts/loop/post-search-footer.php:43
+msgid "%d Comments"
+msgstr "%d Kommentek"
+
+#: templates/woocommerce/404.php:30
+msgid "Search"
+msgstr "Keresés"
+
+#: templates/woocommerce/404.php:36
+msgid "Promoted Products"
+msgstr "Promotált Termékek"
+
+#: templates/woocommerce/404.php:42 templates/woocommerce/404.php:44
+msgid "Popular Products"
+msgstr "Népszerű Termékek"
+
+#. translators: post type singular label
+#: templates/woocommerce/loop/pagination.php:45
+msgid "%s navigation"
+msgstr "%s navigáció"
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/godaddy/wp-primer-theme"
+msgstr "https://github.com/godaddy/wp-primer-theme"
+
+#. Description of the plugin/theme
+msgid ""
+"Primer is a powerful theme that brings clarity to your content in a fresh "
+"design."
+msgstr ""
+"A Primer egy erőteljes téma, mely átláthatóságot hoz a tartalmának egy friss "
+"dizájnban."
+
+#. Author of the plugin/theme
+msgid "GoDaddy"
+msgstr "GoDaddy"
+
+#. Author URI of the plugin/theme
+msgid "https://www.godaddy.com/"
+msgstr "https://www.godaddy.com/"
