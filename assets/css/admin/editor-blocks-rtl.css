@@ -278,3 +278,27 @@ figcaption {
 
 .wp-block-coblocks-author .wp-block-button {
   margin-top: 1.25em; }
+
+/** === CoBlocks: Form === */
+.wp-block-coblocks-form .required,
+.wp-block-coblocks-form .coblocks-label {
+  font-weight: bold; }
+
+.wp-block-coblocks-form .coblocks-label {
+  line-height: 1.1; }
+
+.wp-block-coblocks-form .required {
+  margin-right: 7px;
+  position: relative;
+  top: -6px; }
+
+.wp-block-coblocks-form .coblocks-field .components-text-control__input,
+.wp-block-coblocks-form .coblocks-field .components-textarea-control__input {
+  border-color: rgba(37, 37, 37, 0.1);
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: rgba(37, 37, 37, 0.5);
+  padding: 1rem; }
+
+.wp-block-coblocks-form .coblocks-form__submit {
+  margin-top: -15px; }
