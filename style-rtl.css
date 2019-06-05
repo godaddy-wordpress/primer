@@ -651,6 +651,16 @@ a {
   .has-3-columns .wp-block-column:nth-child(3n) {
     margin-left: 0 !important; } }
 
+.wp-block-contact-widgets-contact-block > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .wp-block-contact-widgets-contact-block > ul li {
+    margin-bottom: 1rem; }
+
+.wp-block-contact-widgets-contact-block .has-map {
+  margin-top: 1rem; }
+
 .wp-block-cover {
   margin-bottom: 2em;
   margin-top: 2em; }
