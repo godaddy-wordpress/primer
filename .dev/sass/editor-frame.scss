@@ -49,39 +49,13 @@ body.primer-gutenberg-wide {
 
 body {
 
-	&.one-column-wide,
-	&.one-column-narrow,
-	&.two-column-default,
-	&.two-column-reversed,
-	&.three-column-default,
-	&.three-column-center,
-	&.three-column-reversed {
-		.editor-post-title__block {
-			margin-left: 10%;
-		}
-
-		.wp-block {
-			transition-property: all;
-			-webkit-transition-duration: .75s;
-			        transition-duration: .75s;
-		}
-	}
-
 	&.one-column-wide {
-		.editor-post-title__block {
-			margin-left: auto;
-		}
-
 		.wp-block {
-			max-width: 900px;
+			max-width: 980px;
 		}
 	}
 
 	&.one-column-narrow {
-		.editor-post-title__block {
-			margin-left: auto;
-		}
-
 		.wp-block {
 			max-width: 700px;
 		}
@@ -90,29 +64,15 @@ body {
 	&.two-column-default,
 	&.two-column-reversed {
 		.wp-block {
-			max-width: 550px;
+			max-width: 640px;
 		}
 	}
 
 	&.three-column-default,
 	&.three-column-center,
 	&.three-column-reversed {
-		.wp-block:not(.editor-post-title__block) {
+		.wp-block {
 			max-width: 450px;
-		}
-	}
-
-	&.two-column-default,
-	&.three-column-default {
-		.block-editor-block-list__block {
-			margin-left: 10%;
-		}
-	}
-
-	&.three-column-reversed,
-	&.two-column-reversed {
-		.block-editor-block-list__block {
-			margin-right: 10%;
 		}
 	}
 }
