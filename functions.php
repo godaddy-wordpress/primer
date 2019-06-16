@@ -103,13 +103,6 @@ require_once get_template_directory() . '/inc/helpers.php';
 require_once get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Load custom primary nav menu walker.
- *
- * @since 1.0.0
- */
-require_once get_template_directory() . '/inc/walker-nav-menu.php';
-
-/**
  * Load template parts and override some WordPress defaults.
  *
  * @since 1.0.0
@@ -525,8 +518,15 @@ function primer_scripts() {
 
 	$nav_dependencies = ( is_front_page() && function_exists( 'has_header_video' ) && has_header_video() ) ? array( 'jquery', 'wp-custom-header' ) : array( 'jquery' );
 
-	wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", $nav_dependencies, PRIMER_VERSION, true );
-	wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), PRIMER_VERSION, true );
+	// The interactivity of the menu in AMP is defined inline.
+	if ( ! primer_is_amp() ) {
+		wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", $nav_dependencies, PRIMER_VERSION, true );
+	}
+
+	// Skip enqueueing skip-focus-link script since part of the AMP. See <https://github.com/ampproject/amphtml/pull/19037>.
+	if ( ! primer_is_amp() ) {
+		wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), PRIMER_VERSION, true );
+	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 
