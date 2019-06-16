@@ -52,9 +52,13 @@
 		 */
 		do_action( 'primer_before_header' );
 
+		$masthead_classes = array( 'site-header' );
+		if ( has_header_video() && primer_is_amp() ) {
+			$masthead_classes[] = 'video-header';
+		}
 		?>
 
-		<header id="masthead" class="site-header" role="banner">
+		<header id="masthead" class="<?php echo esc_attr( implode( ' ', $masthead_classes ) ); ?>" role="banner">
 
 			<?php
 

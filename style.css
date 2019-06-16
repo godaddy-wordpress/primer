@@ -1866,8 +1866,14 @@ body.no-max-width .site-content {
     right: 1em;
     opacity: 0.5;
     padding: 0.5em .75em; }
-  .site-header.video-header iframe#wp-custom-header-video {
-    height: 100%; }
+  .site-header.video-header iframe#wp-custom-header-video,
+  .site-header.video-header video#wp-custom-header-video {
+    height: 100%;
+    width: 100%; }
+  .site-header.video-header video#wp-custom-header-video,
+  .site-header.video-header amp-video#wp-custom-header-video > video {
+    -o-object-fit: cover;
+    object-fit: cover; }
 
 .site-header {
   position: relative;

@@ -21,7 +21,14 @@
 		padding: 0.5em .75em;
 	}
 
-	iframe#wp-custom-header-video {
+	iframe#wp-custom-header-video,
+	video#wp-custom-header-video {
 		height: 100%;
+		width: 100%;
+	}
+
+	video#wp-custom-header-video,
+	amp-video#wp-custom-header-video > video {
+		object-fit: cover;
 	}
 }
