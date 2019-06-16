@@ -321,6 +321,20 @@ function primer_setup() {
 		)
 	);
 
+	/**
+	 * Enable support for AMP.
+	 *
+	 * @link  https://amp-wp.org
+	 * @since 1.9
+	 */
+	add_theme_support(
+		'amp',
+		array(
+			// Works in Standard and Transitional modes.
+			'paired' => true,
+		)
+	);
+
 }
 add_action( 'after_setup_theme', 'primer_setup' );
 

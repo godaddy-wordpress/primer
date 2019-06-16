@@ -134,6 +134,18 @@ function primer_is_fixed_width() {
 }
 
 /**
+ * Check if the response is AMP.
+ *
+ * @since 1.9
+ * @link https://wordpress.org/plugins/amp/
+ *
+ * @return bool If an AMP response.
+ */
+function primer_is_amp() {
+	return function_exists( 'is_amp_endpoint' ) && is_amp_endpoint();
+}
+
+/**
  * Return the current layout.
  *
  * @global $primer_customizer_layouts
