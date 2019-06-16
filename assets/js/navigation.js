@@ -36,6 +36,7 @@
 
 	}
 
+	// @todo Check AMP-compat for position(), tabNavigationMenuIn(), tabNavigationMenuOut(). Refer to Twenty Nineteen and use of :focus-within.
 	function position() {
 
 		var $this = $( this );
@@ -120,6 +121,7 @@
 
 		$navMenu.find( '.expand' ).on( 'click', expand );
 
+		// @todo Check AMP-compat.
 		$( document ).on( 'wp-custom-header-video-loaded', function() {
 
 			$( '.site-header' ).addClass( 'video-header' );
