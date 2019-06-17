@@ -317,16 +317,22 @@ function primer_setup() {
 	/**
 	 * Enable support for AMP.
 	 *
+	 * This is only done for version v1.2 and greater because in this version support was added for CSS tree shaking
+	 * and the AMP toggleClass action. Also, this is the version that adds the ability to switch the mode even when
+	 * the theme support flag is present.
+	 *
 	 * @link  https://amp-wp.org
 	 * @since 1.9
 	 */
-	add_theme_support(
-		'amp',
-		array(
-			// Works in Standard and Transitional modes.
-			'paired' => true,
-		)
-	);
+	if ( defined( 'AMP__VERSION' ) && version_compare( strtok( AMP__VERSION, '-' ), '1.2', '>=' ) ) {
+		add_theme_support(
+			'amp',
+			array(
+				// Works in Standard and Transitional modes.
+				'paired' => true,
+			)
+		);
+	}
 
 }
 add_action( 'after_setup_theme', 'primer_setup' );
