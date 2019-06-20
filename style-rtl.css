@@ -947,15 +947,21 @@ a {
       position: relative;
       float: right; } }
   .main-navigation a {
-    display: block;
+    display: block; }
+  .main-navigation a,
+  .main-navigation .expand {
     text-decoration: none;
     padding: 1.6rem 1rem;
     line-height: 1rem;
     color: #ffffff; }
     @media only screen and (max-width: 61.063em) {
-      .main-navigation a {
+      .main-navigation a,
+      .main-navigation .expand {
         padding: 1.2rem 1rem; } }
-    .main-navigation a:hover, .main-navigation a:focus, .main-navigation a:visited:hover {
+    .main-navigation a:hover, .main-navigation a:focus, .main-navigation a:visited:hover,
+    .main-navigation .expand:hover,
+    .main-navigation .expand:focus,
+    .main-navigation .expand:visited:hover {
       background-color: rgba(0, 0, 0, 0.1);
       color: #ffffff; }
   .main-navigation .current_page_item > a,
