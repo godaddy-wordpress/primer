@@ -529,12 +529,7 @@ function primer_scripts() {
 		wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", $nav_dependencies, PRIMER_VERSION, true );
 	}
 
-	// Skip enqueueing skip-focus-link script since part of the AMP. See <https://github.com/ampproject/amphtml/pull/19037>.
-	if ( ! primer_is_amp() ) {
-		wp_enqueue_script( 'primer-skip-link-focus-fix', get_template_directory_uri() . "/assets/js/skip-link-focus-fix{$suffix}.js", array(), PRIMER_VERSION, true );
-	}
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) && ! primer_is_amp() ) {
 
 		wp_enqueue_script( 'comment-reply' );
 
@@ -554,6 +549,32 @@ function primer_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'primer_scripts' );
+
+/**
+ * Fix skip link focus in IE11.
+ *
+ * This does not enqueue the script because it is tiny and because it is only for IE11,
+ * thus it does not warrant having an entire dedicated blocking script being loaded.
+ * This minified code comes from the Twenty Nineteen theme; refer to the theme for the
+ * unminified source. Since IE11 marketshare is very small, this code can likely be
+ * eliminated entirely soon.
+ *
+ * @see twentynineteen_skip_link_focus_fix()
+ * @link https://git.io/vWdr2
+ */
+function primer_skip_link_focus_fix() {
+	// Skip enqueueing skip-focus-link script since part of the AMP. See <https://github.com/ampproject/amphtml/pull/19037>.
+	if ( primer_is_amp() ) {
+		return;
+	}
+	?>
+	<script>
+	/* IE11 skip link focus fix */
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	<?php
+}
+add_action( 'wp_print_footer_scripts', 'primer_skip_link_focus_fix' );
 
 /**
  * Sets the authordata global when viewing an author archive.
