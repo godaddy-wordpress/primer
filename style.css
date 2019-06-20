@@ -953,7 +953,8 @@ a {
     text-decoration: none;
     padding: 1.6rem 1rem;
     line-height: 1rem;
-    color: #ffffff; }
+    color: #ffffff;
+    outline: none; }
     @media only screen and (max-width: 61.063em) {
       .main-navigation a,
       .main-navigation .expand {
@@ -1049,7 +1050,8 @@ body.no-max-width .main-navigation {
   cursor: pointer;
   width: 4rem;
   padding: 6% 5px 0;
-  z-index: 15; }
+  z-index: 15;
+  outline: none; }
   body.admin-bar .menu-toggle {
     padding-top: -webkit-calc(6% + 32px);
     padding-top: calc(6% + 32px); }
