@@ -161,6 +161,7 @@
 		padding: 1.6rem 1rem;
 		line-height: 1rem;
 		color: $color__menu-text;
+		outline: none;
 
 		@media #{$medium-down} {
 			padding: 1.2rem 1rem;
@@ -277,6 +278,7 @@ body.no-max-width .main-navigation {
 	width: 4rem;
 	padding: 6% 5px 0;
 	z-index: 15;
+	outline: none; // TODO: The toggle button needs some focus style for accessibility.
 
 	body.admin-bar & {
 		padding-top: calc(6% + 32px);
