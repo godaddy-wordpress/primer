@@ -934,9 +934,13 @@ a {
           .main-navigation ul ul li:hover > ul,
           .main-navigation ul ul li.focus > ul {
             right: 100%; }
+          .main-navigation ul ul li:focus-within > ul {
+            right: 100%; }
           .main-navigation ul ul a {
             width: 200px; } }
     .main-navigation ul li:hover > ul {
+      right: auto; }
+    .main-navigation ul li:focus-within > ul {
       right: auto; }
   @media only screen and (min-width: 61.063em) {
     .main-navigation li {

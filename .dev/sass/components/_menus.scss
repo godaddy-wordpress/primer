@@ -117,7 +117,12 @@
 
 				li {
 					&:hover > ul,
-					&.focus > ul {
+					&.focus > ul { // TODO: There does not seem to be any JS that toggles this class.
+						left: 100%;
+					}
+
+					// Add keyboard-accessible nested submenus for no-JS and AMP contexts.
+					&:focus-within > ul {
 						left: 100%;
 					}
 				}
@@ -129,6 +134,11 @@
 		}
 
 		li:hover > ul {
+			left: auto;
+		}
+
+		// Add keyboard-accessible submenu dropdowns for no-JS and AMP contexts.
+		li:focus-within > ul {
 			left: auto;
 		}
 	}
