@@ -15,6 +15,10 @@ $content__width--wide: 680px;
 	&[data-align="wide"] {
 		max-width: $content__width--wide - 10px;
 	}
+
+	&[data-align="full"] {
+		max-width: calc(100% + 90px);
+	}
 }
 
 /** === Title === */
