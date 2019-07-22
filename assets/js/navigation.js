@@ -9,15 +9,6 @@
 
 		$menuToggle.add( $navMenu ).toggleClass( 'open' );
 
-		// @todo Can this be removed? It seems somewhat annoying that the expanded submenus would reset when toggling the menu.
-		resetSubmenuToggles();
-
-	}
-
-	function resetSubmenuToggles() {
-
-		$navMenu.find( '.menu-item-has-children' ).removeClass( 'open' );
-
 	}
 
 	function expand( e ) {
