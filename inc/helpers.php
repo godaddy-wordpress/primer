@@ -142,7 +142,9 @@ function primer_is_fixed_width() {
  * @return bool If an AMP response.
  */
 function primer_is_amp() {
+
 	return function_exists( 'is_amp_endpoint' ) && is_amp_endpoint();
+
 }
 
 /**

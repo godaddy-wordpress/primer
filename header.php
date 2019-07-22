@@ -53,8 +53,11 @@
 		do_action( 'primer_before_header' );
 
 		$masthead_classes = array( 'site-header' );
+
 		if ( has_header_video() && primer_is_amp() ) {
+
 			$masthead_classes[] = 'video-header';
+
 		}
 		?>
 

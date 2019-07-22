@@ -132,11 +132,13 @@ function primer_add_primary_menu() {
 	}
 
 	add_filter( 'walker_nav_menu_start_el', 'primer_add_primary_nav_sub_menu_buttons', 10, 3 );
+
 	wp_nav_menu(
 		array(
 			'theme_location' => 'primary',
 		)
 	);
+
 	remove_filter( 'walker_nav_menu_start_el', 'primer_add_primary_nav_sub_menu_buttons', 10 );
 }
 add_action( 'primer_site_navigation', 'primer_add_primary_menu' );

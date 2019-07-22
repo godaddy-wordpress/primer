@@ -325,6 +325,7 @@ function primer_setup() {
 	 * @since 1.9
 	 */
 	if ( defined( 'AMP__VERSION' ) && version_compare( strtok( AMP__VERSION, '-' ), '1.2', '>=' ) ) {
+
 		add_theme_support(
 			'amp',
 			array(
@@ -332,6 +333,7 @@ function primer_setup() {
 				'paired' => true,
 			)
 		);
+
 	}
 
 }
@@ -526,7 +528,9 @@ function primer_scripts() {
 
 	// The interactivity of the menu in AMP is defined inline.
 	if ( ! primer_is_amp() ) {
+
 		wp_enqueue_script( 'primer-navigation', get_template_directory_uri() . "/assets/js/navigation{$suffix}.js", $nav_dependencies, PRIMER_VERSION, true );
+
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) && ! primer_is_amp() ) {
@@ -563,10 +567,12 @@ add_action( 'wp_enqueue_scripts', 'primer_scripts' );
  * @link https://git.io/vWdr2
  */
 function primer_skip_link_focus_fix() {
+
 	// Skip enqueueing skip-focus-link script since part of the AMP. See <https://github.com/ampproject/amphtml/pull/19037>.
 	if ( primer_is_amp() ) {
 		return;
 	}
+
 	?>
 	<script>
 	/* IE11 skip link focus fix */
