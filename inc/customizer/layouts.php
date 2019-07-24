@@ -587,7 +587,7 @@ class Primer_Customizer_Layouts {
 
 		$properties = array( 'layouts', 'default', 'meta_box', 'page_widths' );
 
-		return in_array( $name, $properties, true ) ? $this->name : false;
+		return in_array( $name, $properties, true ) ? $this->$name : false;
 
 	}
 

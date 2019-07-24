@@ -73,7 +73,7 @@
     "grunt-wp-readme-to-markdown": "^2.0.1",
     "load-grunt-tasks": "^4.0.0",
     "matchdep": "^2.0.0",
-    "susy": "^3.0.5"
+    "susy": "^2.2.14"
   },
   "scripts": {
     "version": "grunt version && git add -A .",

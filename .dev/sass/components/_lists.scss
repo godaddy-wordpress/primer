@@ -4,6 +4,10 @@ ul, ol {
 
 ul {
 	list-style: disc;
+
+	ul {
+		list-style: circle;
+	}
 }
 
 ol {

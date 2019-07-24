@@ -1,0 +1,30 @@
+// Styles to emulate BB structure in Gutenberg.
+.wp-block-columns {
+
+	&.is-services {
+
+		.wp-block-column {
+			@media (max-width:599px) {
+				max-width: 360px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+	}
+
+	&.is-main-message {
+		margin-top: 6em;
+	}
+
+	&.is-next-steps {
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 30px;
+
+		.wp-block-column:last-child {
+			flex-basis: calc(30% - 20px);
+		}
+
+	}
+}

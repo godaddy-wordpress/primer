@@ -1,0 +1,5 @@
+@media (min-width:782px) {
+    .has-3-columns .wp-block-column:nth-child(3n) {
+        margin-right: 0 !important;
+    }
+}

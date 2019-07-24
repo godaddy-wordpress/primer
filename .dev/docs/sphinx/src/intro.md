@@ -3,7 +3,7 @@
 **Tags:**              [custom-background](https://wordpress.org/themes/tags/custom-background/), [custom-colors](https://wordpress.org/themes/tags/custom-colors/), [custom-header](https://wordpress.org/themes/tags/custom-header/), [custom-menu](https://wordpress.org/themes/tags/custom-menu/), [editor-style](https://wordpress.org/themes/tags/editor-style/), [featured-images](https://wordpress.org/themes/tags/featured-images/), [flexible-header](https://wordpress.org/themes/tags/flexible-header/), [left-sidebar](https://wordpress.org/themes/tags/left-sidebar/), [one-column](https://wordpress.org/themes/tags/one-column/), [right-sidebar](https://wordpress.org/themes/tags/right-sidebar/), [rtl-language-support](https://wordpress.org/themes/tags/rtl-language-support/), [sticky-post](https://wordpress.org/themes/tags/sticky-post/), [threaded-comments](https://wordpress.org/themes/tags/threaded-comments/), [three-columns](https://wordpress.org/themes/tags/three-columns/), [translation-ready](https://wordpress.org/themes/tags/translation-ready/), [two-columns](https://wordpress.org/themes/tags/two-columns/)<br />
 **Requires at least:** 4.4<br />
 **Tested up to:**      4.9<br />
-**Stable tag:**        1.8.2<br />
+**Stable tag:**        1.8.6<br />
 **License:**           GPL-2.0<br />
 **License URI:**       https://www.gnu.org/licenses/gpl-2.0.html<br />
 
@@ -63,6 +63,24 @@ License: Creative Commons Zero
 Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 ## Changelog ##
+
+### 1.8.6 ###
+* Tweak: Adjust shorthand array syntax to ensure backwards compatibility with PHP < 5.6. @props [evanherman](https://github.com/EvanHerman)
+
+### 1.8.5 ###
+* New: Introduce styles for Gutenberg compatibility. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Update navigation script to fix left side menu item click bug. @props [evanherman](https://github.com/EvanHerman)
+
+### 1.8.4 ###
+* New: Introduce accessibility controls & styles for tab navigation through the main nav. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Add default value of `1` to theme_mod `use_featured_hero_image`. @props [evanherman](https://github.com/EvanHerman)
+
+### 1.8.3 ###
+* New: Introduce a privacy policy link in the footer, when set. @props [evanherman](https://github.com/EvanHerman)
+* New: Introduce `primer_privacy_policy_link` filter to enable/disable the privacy policy link in footer. @props [evanherman](https://github.com/EvanHerman)
+* New: Add styles for privacy policy link and cookie comment checkbox & label. @props [evanherman](https://github.com/EvanHerman)
+* New: Add font previews to the customizer when selecting a font. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Update `primer_wc_shop_columns()` to reference the shop page ID. @props [evanherman](https://github.com/EvanHerman)
 
 ### 1.8.2 ###
 * Fix: Comment counts showing an extra character. @props [evanherman](https://github.com/EvanHerman)

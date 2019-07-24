@@ -131,15 +131,58 @@ function primer_add_primary_menu() {
 
 	}
 
+	add_filter( 'walker_nav_menu_start_el', 'primer_add_primary_nav_sub_menu_buttons', 10, 3 );
+
 	wp_nav_menu(
 		array(
 			'theme_location' => 'primary',
-			'walker'         => new Primer_Walker_Nav_Menu,
 		)
 	);
 
+	remove_filter( 'walker_nav_menu_start_el', 'primer_add_primary_nav_sub_menu_buttons', 10 );
 }
 add_action( 'primer_site_navigation', 'primer_add_primary_menu' );
+
+/**
+ * Filter the HTML output of a nav menu item to add the AMP dropdown button to reveal the sub-menu.
+ *
+ * @link https://amp-wp.org/documentation/playbooks/navigation-sub-menu-buttons/()
+ * @param string $item_output   Nav menu item HTML.
+ * @param object $item          Nav menu item.
+ * @param int    $depth         Depth.
+ * @return string Modified nav menu item HTML.
+ */
+function primer_add_primary_nav_sub_menu_buttons( $item_output, $item, $depth ) {
+
+	// Skip when the item has no sub-menu.
+	if ( ! in_array( 'menu-item-has-children', $item->classes, true ) ) {
+		return $item_output;
+	}
+
+	$indent = str_repeat( "\t", $depth );
+
+	$item_output .= "\n";
+
+	// @todo Why not a <button>?
+	$expand_attrs = ' class="expand" role="button" tabindex="0"';
+
+	// Add toggle behavior in AMP.
+	if ( primer_is_amp() ) {
+		$expand_attrs .= sprintf(
+			' on="%s"',
+			esc_attr(
+				sprintf(
+					'tap:menu-item-%d.toggleClass(class="open")',
+					$item->ID
+				)
+			)
+		);
+	}
+
+	$item_output .= "{$indent}<span {$expand_attrs}></span>\n";
+
+	return $item_output;
+}
 
 /**
  * Display primary navigation menu after the header.

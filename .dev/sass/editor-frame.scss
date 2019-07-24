@@ -1,3 +1,20 @@
+/*!
+Primer Block Editor Frame Styles
+*/
+
+@import "common/variables";
+@import "common/mixins";
+
+body.block-editor-page.post-type-post {
+
+	.editor-post-title__block {
+
+		.editor-post-title__input {
+			font-weight: 600;
+		}
+	}
+}
+
 body.primer-gutenberg-narrow {
 	.edit-post-visual-editor,
 	.edit-post-text-editor {
@@ -27,5 +44,35 @@ body.primer-gutenberg-wide {
 .components-panel {
 	.primer-layout-wrap ul li img {
 		max-width: 85%;
+	}
+}
+
+body {
+
+	&.one-column-wide {
+		.wp-block {
+			max-width: 980px;
+		}
+	}
+
+	&.one-column-narrow {
+		.wp-block {
+			max-width: 700px;
+		}
+	}
+
+	&.two-column-default,
+	&.two-column-reversed {
+		.wp-block {
+			max-width: 640px;
+		}
+	}
+
+	&.three-column-default,
+	&.three-column-center,
+	&.three-column-reversed {
+		.wp-block {
+			max-width: 450px;
+		}
 	}
 }

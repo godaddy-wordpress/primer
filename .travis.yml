@@ -1,6 +1,6 @@
 dist: precise
 
-sudo: false
+sudo: required
 
 notifications:
   email:
@@ -15,20 +15,12 @@ cache:
     - $HOME/.wp-cli/cache
     - $HOME/.wp-cli/packages/cache
 
-language:
-  - php
-  - node_js
+language: php
 
 php:
-  - 5.3
+  - 5.4
   - 5.6
-  - 7.1
-
-branches:
-  only:
-    - /^v\d.*$/
-    - master
-    - develop
+  - 7.3
 
 env:
   global:
@@ -43,9 +35,7 @@ before_install:
 
 install:
   - nvm install 6 && nvm use 6
-  - export DEV_LIB_PATH=.dev/dev-lib
-  - if [ ! -e "$DEV_LIB_PATH" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
-  - if [ ! -e "$DEV_LIB_PATH" ]; then git clone https://github.com/xwp/wp-dev-lib.git $DEV_LIB_PATH; fi
+  - export DEV_LIB_PATH=.dev/dev-lib/scripts
   - source $DEV_LIB_PATH/travis.install.sh
 
 script:
@@ -57,15 +47,19 @@ after_script:
 jobs:
   fast_finish: true
   exclude:
-    - php: 5.3
+    - php: 5.4
+      env: WP_VERSION=latest
+    - php: 5.4
       env: WP_VERSION=trunk
     - php: 5.6
       env: WP_VERSION=trunk
-    - php: 7.1
+    - php: 5.6
+      env: WP_VERSION=4.4
+    - php: 7.3
       env: WP_VERSION=4.4
   include:
     - stage: theme check
-      php: 7.1
+      php: 7.3
       env: WP_VERSION=latest
       install:
         - export THEME_CHECK=1
@@ -74,6 +68,21 @@ jobs:
         - source .dev/travis.install-themecheck.sh
       script:
         - php /tmp/wp.phar themecheck --theme=$WP_THEME --no-interactive
+      after_script: true # skip by returning true
+    - stage: Build Documentation
+      if: tag = true
+      php: 5.6
+      env: WP_VERSION=latest
+      before_install:
+        - nvm install 9 && nvm use 9
+        - npm i -g npm@6
+        - composer require apigen/apigen:4.1.0
+        - git config --global user.name "Travis CI"
+        - git config --global user.email "travis@travis-ci.com"
+      install:
+        - npm install
+      script:
+        - grunt deploy-docs
       after_script: true # skip by returning true
 
 before_deploy:
