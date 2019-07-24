@@ -2,7 +2,7 @@
 **Contributors:** [godaddy](https://profiles.wordpress.org/godaddy), [fjarrett](https://profiles.wordpress.org/fjarrett), [jonathanbardo](https://profiles.wordpress.org/jonathanbardo), [eherman24](https://profiles.wordpress.org/eherman24)  
 **Tags:**              [custom-background](https://wordpress.org/themes/tags/custom-background/), [custom-colors](https://wordpress.org/themes/tags/custom-colors/), [custom-header](https://wordpress.org/themes/tags/custom-header/), [custom-menu](https://wordpress.org/themes/tags/custom-menu/), [editor-style](https://wordpress.org/themes/tags/editor-style/), [featured-images](https://wordpress.org/themes/tags/featured-images/), [flexible-header](https://wordpress.org/themes/tags/flexible-header/), [left-sidebar](https://wordpress.org/themes/tags/left-sidebar/), [one-column](https://wordpress.org/themes/tags/one-column/), [right-sidebar](https://wordpress.org/themes/tags/right-sidebar/), [rtl-language-support](https://wordpress.org/themes/tags/rtl-language-support/), [sticky-post](https://wordpress.org/themes/tags/sticky-post/), [threaded-comments](https://wordpress.org/themes/tags/threaded-comments/), [three-columns](https://wordpress.org/themes/tags/three-columns/), [translation-ready](https://wordpress.org/themes/tags/translation-ready/), [two-columns](https://wordpress.org/themes/tags/two-columns/)  
 **Requires at least:** 4.4  
-**Tested up to:**      4.9  
+**Tested up to:**      5.0  
 **Requires PHP:**      5.6.0  
 **Stable tag:**        1.8.6  
 **License:**           GPL-2.0  
@@ -66,6 +66,11 @@ License: Creative Commons Zero
 Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 ## Changelog ##
+
+### 1.8.7 ###
+* New: Introduce compatibility for Google Accelerated Mobile Pages. @props [westonruter](https://github.com/westonruter)
+* Tweak: Introduce editor styles for Coblocks Form block. @props [richtabor](https://github.com/richtabor)
+* Tweak: Introduce ability to add fullwidth alignment to blocks. @props [richtabor](https://github.com/richtabor)
 
 ### 1.8.6 ###
 * Tweak: Adjust shorthand array syntax to ensure backwards compatibility with PHP < 5.6. @props [evanherman](https://github.com/EvanHerman)
