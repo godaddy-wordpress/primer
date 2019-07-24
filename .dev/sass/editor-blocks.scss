@@ -421,3 +421,32 @@ figcaption {
 		margin-top: 1.25em;
 	}
 }
+
+/** === CoBlocks: Form === */
+
+.wp-block-coblocks-form {
+
+	.required,
+	.coblocks-label {
+		font-weight: bold;
+	}
+
+	.required {
+		margin-left: 7px;
+		position: relative;
+		top: -6px;
+	}
+
+	.coblocks-field .components-text-control__input,
+	.coblocks-field .components-textarea-control__input {
+		border-color: rgba(37, 37, 37, 0.1);
+		border-radius: 3px;
+		color: rgba(37, 37, 37, 0.5);
+		padding: 1rem;
+	}
+
+	.coblocks-form__submit {
+		margin-top: -15px;
+	}
+}
+
