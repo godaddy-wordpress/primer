@@ -4,6 +4,10 @@ Primer Block Editor Styles
 .wp-block[data-align="wide"] {
   max-width: 670px; }
 
+.wp-block[data-align="full"] {
+  max-width: -webkit-calc(100% + 90px);
+  max-width: calc(100% + 90px); }
+
 /** === Title === */
 .editor-post-title {
   margin-bottom: -15px; }
