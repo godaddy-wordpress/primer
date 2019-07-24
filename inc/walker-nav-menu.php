@@ -23,6 +23,7 @@ class Primer_Walker_Nav_Menu extends Walker_Nav_Menu {
 	 * @param array  $args   An array of wp_nav_menu() arguments.
 	 */
 	public function start_lvl( &$output, $depth = 0, $args = array() ) {
+		_deprecated_function( __METHOD__, '1.8', 'primer_add_primary_nav_sub_menu_buttons' );
 
 		$indent = str_repeat( "\t", $depth );
 

@@ -934,24 +934,35 @@ a {
           .main-navigation ul ul li:hover > ul,
           .main-navigation ul ul li.focus > ul {
             left: 100%; }
+          .main-navigation ul ul li:focus-within > ul {
+            left: 100%; }
           .main-navigation ul ul a {
             width: 200px; } }
     .main-navigation ul li:hover > ul {
+      left: auto; }
+    .main-navigation ul li:focus-within > ul {
       left: auto; }
   @media only screen and (min-width: 61.063em) {
     .main-navigation li {
       position: relative;
       float: left; } }
   .main-navigation a {
-    display: block;
+    display: block; }
+  .main-navigation a,
+  .main-navigation .expand {
     text-decoration: none;
     padding: 1.6rem 1rem;
     line-height: 1rem;
-    color: #ffffff; }
+    color: #ffffff;
+    outline: none; }
     @media only screen and (max-width: 61.063em) {
-      .main-navigation a {
+      .main-navigation a,
+      .main-navigation .expand {
         padding: 1.2rem 1rem; } }
-    .main-navigation a:hover, .main-navigation a:focus, .main-navigation a:visited:hover {
+    .main-navigation a:hover, .main-navigation a:focus, .main-navigation a:visited:hover,
+    .main-navigation .expand:hover,
+    .main-navigation .expand:focus,
+    .main-navigation .expand:visited:hover {
       background-color: rgba(0, 0, 0, 0.1);
       color: #ffffff; }
   .main-navigation .current_page_item > a,
@@ -1039,7 +1050,8 @@ body.no-max-width .main-navigation {
   cursor: pointer;
   width: 4rem;
   padding: 6% 5px 0;
-  z-index: 15; }
+  z-index: 15;
+  outline: none; }
   body.admin-bar .menu-toggle {
     padding-top: -webkit-calc(6% + 32px);
     padding-top: calc(6% + 32px); }
@@ -1866,8 +1878,14 @@ body.no-max-width .site-content {
     right: 1em;
     opacity: 0.5;
     padding: 0.5em .75em; }
-  .site-header.video-header iframe#wp-custom-header-video {
-    height: 100%; }
+  .site-header.video-header iframe#wp-custom-header-video,
+  .site-header.video-header video#wp-custom-header-video {
+    height: 100%;
+    width: 100%; }
+  .site-header.video-header video#wp-custom-header-video,
+  .site-header.video-header amp-video#wp-custom-header-video > video {
+    -o-object-fit: cover;
+    object-fit: cover; }
 
 .site-header {
   position: relative;
