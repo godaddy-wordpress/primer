@@ -1,0 +1,701 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Primer 1.8.0\n"
+"Report-Msgid-Bugs-To: https://github.com/godaddy/wp-primer-theme/issues\n"
+"POT-Creation-Date: 2017-09-19 16:40:48+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-07-31 16:47+0000\n"
+"Last-Translator: Jakub Blažej <trogper@gmail.com>\n"
+"Language-Team: Slovenčina\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;\n"
+"X-Generator: Loco https://localise.biz/\n"
+"Language: sk-SK\n"
+"Plural-Forms: nplurals=3; plural=( n == 1 ) ? 0 : ( n >= 2 && n <= 4 ) ? 1 : "
+"2;\n"
+"X-Loco-Version: 2.3.0; wp-5.2.2"
+
+#. translators: 1. number of comments, 2. post title
+#: comments.php:36
+msgid "%1$d thought on %2$s"
+msgid_plural "%1$d thoughts on %2$s"
+msgstr[0] "%1$d komentár k %2$s"
+msgstr[1] "%1$d komentáre k %2$s"
+msgstr[2] "%1$d komentárov k %2$s"
+
+#: comments.php:56 comments.php:83
+msgid "Comment navigation"
+msgstr ""
+
+#. translators: left arrow (LTR) / right arrow (RTL)
+#: comments.php:58
+msgid "%s Older Comments"
+msgstr "%s Staršie Komentáre"
+
+#. translators: right arrow (LTR) / left arrow (RTL)
+#: comments.php:60
+msgid "Newer Comments %s"
+msgstr "Novšie komentáre %s"
+
+#: comments.php:85
+msgid "&larr; Older Comments"
+msgstr "&larr; Staršie Komentáre"
+
+#: comments.php:87
+msgid "Newer Comments &rarr;"
+msgstr "Novšie komentáre &rarr;"
+
+#: comments.php:97
+msgid "Comments are closed."
+msgstr ""
+
+#. translators: link to write a new post
+#: content-none.php:30
+msgid "Ready to publish your first post? %s."
+msgstr ""
+
+#: content-none.php:49
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr "Zdá sa, že sme nenašli, čo ste hľadali. Hľadanie možno pomôže."
+
+#: functions.php:186
+msgid "Featured"
+msgstr ""
+
+#: functions.php:192 functions.php:434
+msgid "Hero"
+msgstr ""
+
+#: functions.php:273
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:274
+msgid "Social Menu"
+msgstr ""
+
+#: functions.php:275
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:394
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:395
+msgid ""
+"The primary sidebar appears alongside the content of every page, post, "
+"archive, and search template."
+msgstr ""
+
+#: functions.php:402
+msgid "Secondary Sidebar"
+msgstr ""
+
+#: functions.php:403
+msgid ""
+"The secondary sidebar will only appear when you have selected a three-column "
+"layout."
+msgstr ""
+
+#: functions.php:410
+msgid "Footer 1"
+msgstr ""
+
+#: functions.php:411
+msgid "This sidebar is the first column of the footer widget area."
+msgstr ""
+
+#: functions.php:418
+msgid "Footer 2"
+msgstr ""
+
+#: functions.php:419
+msgid "This sidebar is the second column of the footer widget area."
+msgstr ""
+
+#: functions.php:426
+msgid "Footer 3"
+msgstr ""
+
+#: functions.php:427
+msgid "This sidebar is the third column of the footer widget area."
+msgstr ""
+
+#: functions.php:435
+msgid "Hero widgets appear over the header image on the front page."
+msgstr ""
+
+#: header.php:44
+msgid "Skip to content"
+msgstr ""
+
+#. translators: 1. PHP function name, 2. theme name, 3. version number, 4.
+#. alternative function name
+#: inc/compat/deprecated.php:40
+msgid ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s! Use %4$s "
+"instead."
+msgstr ""
+
+#. translators: 1. PHP function name, 2. theme name, 3. version number
+#: inc/compat/deprecated.php:41
+msgid ""
+"%1$s is <strong>deprecated</strong> since %2$s version %3$s with no "
+"alternative available."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Primer"
+msgstr ""
+
+#: inc/compat/deprecated.php:190
+msgid "Posts navigation"
+msgstr ""
+
+#. translators: WooCommerce shopping cart item count.
+#: inc/compat/woocommerce.php:581
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d položka"
+msgstr[1] "%d položky"
+msgstr[2] "%d položiek"
+
+#: inc/compat/woocommerce.php:652
+msgid "Featured Products"
+msgstr ""
+
+#: inc/compat/woocommerce.php:662
+msgid "On Sale Now"
+msgstr ""
+
+#: inc/compat/woocommerce.php:676
+msgid "New In Store"
+msgstr ""
+
+#. translators: 1. Primer minimum WordPress version. 2. Current WordPress
+#. version.
+#: inc/compat/wordpress.php:56
+msgid ""
+"Primer requires at least WordPress version %1$s. You are running version "
+"%2$s. Please upgrade and try again."
+msgstr ""
+
+#: inc/customizer/colors.php:49
+msgid "Site Title Text"
+msgstr ""
+
+#: inc/customizer/colors.php:65
+msgid "Tagline Text"
+msgstr ""
+
+#. translators: the widget title
+#: inc/customizer/colors.php:76 inc/hero-text-widget.php:30
+msgid "Hero Text"
+msgstr ""
+
+#: inc/customizer/colors.php:107 inc/customizer/colors.php:326
+msgid "Text"
+msgstr ""
+
+#: inc/customizer/colors.php:129
+msgid "Heading Text"
+msgstr ""
+
+#: inc/customizer/colors.php:130
+msgid "Post titles, widget titles, form labels, table headers and buttons."
+msgstr ""
+
+#: inc/customizer/colors.php:151
+msgid "Primary Text"
+msgstr ""
+
+#: inc/customizer/colors.php:152
+msgid "Paragraphs, lists, menu links, quotes and tables."
+msgstr ""
+
+#: inc/customizer/colors.php:198
+msgid "Secondary Text"
+msgstr ""
+
+#: inc/customizer/colors.php:199
+msgid "Post bylines, comment counts, post footers and quote footers."
+msgstr ""
+
+#: inc/customizer/colors.php:213
+msgid "Widget Heading Text"
+msgstr ""
+
+#: inc/customizer/colors.php:230
+msgid "Widget Text"
+msgstr ""
+
+#: inc/customizer/colors.php:242
+msgid "Menu Text"
+msgstr ""
+
+#: inc/customizer/colors.php:264
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/customizer/colors.php:278
+msgid "Link Text"
+msgstr ""
+
+#: inc/customizer/colors.php:300 inc/customizer/colors.php:385
+msgid "Background"
+msgstr ""
+
+#: inc/customizer/colors.php:343
+msgid "Page Background"
+msgstr ""
+
+#: inc/customizer/colors.php:356
+msgid "Content Background"
+msgstr ""
+
+#: inc/customizer/colors.php:366
+msgid "Hero Background"
+msgstr ""
+
+#: inc/customizer/colors.php:395
+msgid "Widgets Background"
+msgstr ""
+
+#: inc/customizer/colors.php:406
+msgid "Widget Content Background"
+msgstr ""
+
+#: inc/customizer/colors.php:417
+msgid "Footer Background"
+msgstr ""
+
+#: inc/customizer/colors.php:455 inc/customizer/layouts.php:298
+msgid "Custom"
+msgstr ""
+
+#: inc/customizer/colors.php:472 inc/customizer/layouts.php:294
+msgid "Default"
+msgstr ""
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:482
+msgid "Blush"
+msgstr ""
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:486
+msgid "Bronze"
+msgstr ""
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:490
+msgid "Canary"
+msgstr ""
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:494
+msgid "Cool"
+msgstr ""
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:498
+msgid "Dark"
+msgstr ""
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:502
+msgid "Iguana"
+msgstr ""
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:506
+msgid "Muted"
+msgstr ""
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:510
+msgid "Plum"
+msgstr ""
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:514
+msgid "Rose"
+msgstr ""
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:518
+msgid "Tangerine"
+msgstr ""
+
+#. translators: color scheme name
+#: inc/customizer/colors.php:522
+msgid "Turquoise"
+msgstr ""
+
+#: inc/customizer/colors.php:714
+msgid "Colors"
+msgstr ""
+
+#: inc/customizer/colors.php:723
+msgid "Color Schemes"
+msgstr ""
+
+#: inc/customizer/colors.php:731
+msgid "Header"
+msgstr ""
+
+#: inc/customizer/colors.php:739
+msgid "Menu"
+msgstr ""
+
+#: inc/customizer/colors.php:747
+msgid "Buttons"
+msgstr ""
+
+#: inc/customizer/colors.php:755
+msgid "Content"
+msgstr "Obsah"
+
+#: inc/customizer/colors.php:763
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer/colors.php:979
+msgid "Base Color Scheme"
+msgstr ""
+
+#: inc/customizer/colors.php:1292
+msgid "Hero Background Overlay"
+msgstr ""
+
+#: inc/customizer/colors.php:1293
+msgid ""
+"Control the color overlay transparency when using a custom Header Image."
+msgstr ""
+
+#: inc/customizer/fonts.php:89
+msgid "Site Title"
+msgstr ""
+
+#: inc/customizer/fonts.php:90
+msgid "Site title text in the header."
+msgstr ""
+
+#: inc/customizer/fonts.php:99
+msgid "Navigation"
+msgstr "Navigácia"
+
+#: inc/customizer/fonts.php:100
+msgid "Primary menu links and button links."
+msgstr ""
+
+#: inc/customizer/fonts.php:110
+msgid "Headings"
+msgstr ""
+
+#: inc/customizer/fonts.php:111
+msgid "Post titles, widget titles, form labels, and table headers."
+msgstr ""
+
+#: inc/customizer/fonts.php:126
+msgid "Primary"
+msgstr ""
+
+#: inc/customizer/fonts.php:127
+msgid "Paragraphs, lists, links, quotes, and tables."
+msgstr ""
+
+#: inc/customizer/fonts.php:141
+msgid "Secondary"
+msgstr ""
+
+#: inc/customizer/fonts.php:142
+msgid "Bylines, comment counts, reply links, post footers, and quote footers."
+msgstr ""
+
+#. translators: font name
+#: inc/customizer/fonts.php:217
+msgid "%s (Default)"
+msgstr ""
+
+#: inc/customizer/layouts.php:55
+msgid "One Column: Wide"
+msgstr ""
+
+#: inc/customizer/layouts.php:56
+msgid "One Column: Narrow"
+msgstr ""
+
+#: inc/customizer/layouts.php:57 inc/customizer/layouts.php:148
+msgid "Two Columns: Content | Sidebar"
+msgstr ""
+
+#: inc/customizer/layouts.php:58 inc/customizer/layouts.php:147
+msgid "Two Columns: Sidebar | Content"
+msgstr ""
+
+#: inc/customizer/layouts.php:59 inc/customizer/layouts.php:150
+msgid "Three Columns: Content | Sidebar | Sidebar"
+msgstr ""
+
+#: inc/customizer/layouts.php:60
+msgid "Three Columns: Sidebar | Content | Sidebar"
+msgstr ""
+
+#: inc/customizer/layouts.php:61 inc/customizer/layouts.php:149
+msgid "Three Columns: Sidebar | Sidebar | Content"
+msgstr ""
+
+#. translators: fixed-width page layout
+#: inc/customizer/layouts.php:99
+msgid "Fixed"
+msgstr ""
+
+#. translators: fluid-width page layout
+#: inc/customizer/layouts.php:100
+msgid "Fluid"
+msgstr ""
+
+#: inc/customizer/layouts.php:263 inc/customizer/layouts.php:426
+msgid "Layout"
+msgstr ""
+
+#: inc/customizer/layouts.php:452
+msgid "Page Width"
+msgstr ""
+
+#: inc/customizer/layouts.php:453
+msgid "Display your site differently on larger screens."
+msgstr ""
+
+#. translators: 1. copyright symbol, 2. year, 3. site title
+#: inc/customizer/site-identity.php:72 templates/parts/credit.php:24
+msgid "Copyright %1$s %2$d %3$s"
+msgstr ""
+
+#: inc/customizer/site-identity.php:83
+msgid "Footer Copyright Text"
+msgstr ""
+
+#: inc/customizer/site-identity.php:102
+msgid "Display theme author credit"
+msgstr ""
+
+#: inc/customizer/static-front-page.php:46
+msgid "Front page title"
+msgstr ""
+
+#: inc/customizer.php:193
+msgid "Use featured image"
+msgstr ""
+
+#: inc/customizer.php:194
+msgid ""
+"Allow the featured image on the current post to override the hero image."
+msgstr ""
+
+#. translators: search term
+#: inc/helpers.php:47
+msgid "Search Results for: %s"
+msgstr ""
+
+#. translators: theme name
+#: inc/hero-text-widget.php:25
+msgid "A %s theme widget designed for the Hero area on your site's front page."
+msgstr ""
+
+#: inc/hero-text-widget.php:148
+msgid "The title of widget. Leave empty for no title."
+msgstr ""
+
+#: inc/hero-text-widget.php:148
+msgid "Title:"
+msgstr "Nadpis:"
+
+#: inc/hero-text-widget.php:153
+msgid "Text:"
+msgstr ""
+
+#: inc/hero-text-widget.php:158
+msgid "Button Text:"
+msgstr ""
+
+#: inc/hero-text-widget.php:163
+msgid "Button Link URL:"
+msgstr ""
+
+#: inc/hero-text-widget.php:164
+msgid "Paste URL or type to search"
+msgstr ""
+
+#. translators: page number
+#: inc/hooks.php:414
+msgid "Page %d"
+msgstr "Stránka %d"
+
+#. translators: 1. current page number, 2. total number of pages
+#: inc/hooks.php:498 templates/woocommerce/loop/pagination.php:47
+msgid "Page %1$d of %2$d"
+msgstr "Stránka %1$d z %2$d"
+
+#: inc/template-tags.php:278 templates/woocommerce/loop/pagination.php:32
+msgid "&larr; Previous"
+msgstr "&larr; Späť"
+
+#: inc/template-tags.php:279 templates/woocommerce/loop/pagination.php:33
+msgid "Next &rarr;"
+msgstr "Ďalej &rarr;"
+
+#. translators: post type singular label
+#: inc/template-tags.php:280
+msgid "%1$s navigation"
+msgstr ""
+
+#. translators: 1. theme name link, 2. theme author link
+#: templates/parts/credit.php:51
+msgid "%1$s WordPress theme by %2$s"
+msgstr ""
+
+#. translators: category list
+#: templates/parts/loop/post-footer.php:27 
+#: templates/parts/loop/post-search-footer.php:21
+msgid "Posted in: %s"
+msgstr "Zverejnené v: %s"
+
+#. translators: tag list
+#: templates/parts/loop/post-footer.php:39 
+#: templates/parts/loop/post-search-footer.php:33
+msgid "Filed under: %s"
+msgstr ""
+
+#: templates/woocommerce/404.php:36
+msgid "Promoted Products"
+msgstr ""
+
+#: templates/woocommerce/404.php:42 templates/woocommerce/404.php:44
+msgid "Popular Products"
+msgstr ""
+
+#. translators: post type singular label
+#: templates/woocommerce/loop/pagination.php:45
+msgid "%s navigation"
+msgstr "%s navigácia"
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/godaddy/wp-primer-theme"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Primer is a powerful theme that brings clarity to your content in a fresh "
+"design."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "GoDaddy"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.godaddy.com/"
+msgstr ""
+
+#: 404.php:22 templates/woocommerce/404.php:22
+msgid "Oops! That page can't be found."
+msgstr "Táto stránka neexistuje."
+
+#: 404.php:28 templates/woocommerce/404.php:28
+msgid ""
+"It looks like nothing was found at this location. Please try searching below:"
+msgstr "Zdá sa, že sa tu nič nenašlo. Skúste hľadať nižšie:"
+
+#: content-none.php:17
+msgid "Nothing Found"
+msgstr "Nič nenájdené"
+
+#: content-none.php:34
+msgid "Get started here"
+msgstr "Začnite tu"
+
+#: content-none.php:43
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "Ospravedlňujeme sa, nič sme nenašli. Skúste hľadať s inými slovami."
+
+#: inc/compat/deprecated.php:196
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Staršie príspevky"
+
+#: inc/compat/deprecated.php:202
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Novšie príspevky <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/customizer/fonts.php:192
+msgid "Fonts"
+msgstr "Fonty"
+
+#: inc/helpers.php:58
+msgid "404 Page Not Found"
+msgstr "[404] Stránka nenájdená"
+
+#: inc/template-tags.php:393
+msgid "Blog"
+msgstr "Blog"
+
+#: templates/parts/loop/page-content.php:28 
+#: templates/parts/loop/post-content.php:19
+msgid "Pages:"
+msgstr "Stránky:"
+
+#: templates/parts/loop/post-content.php:15
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Čítať Viac <span class=\"meta-nav\">&rarr;</span>"
+
+#. translators: separator for items in a list
+#: templates/parts/loop/post-footer.php:21 
+#: templates/parts/loop/post-footer.php:33 
+#: templates/parts/loop/post-search-footer.php:15 
+#: templates/parts/loop/post-search-footer.php:27
+msgid ", "
+msgstr ", "
+
+#: templates/woocommerce/404.php:30
+msgid "Search"
+msgstr "Hľadať"
+
+#: templates/parts/loop/post-meta.php:25 
+#: templates/parts/loop/post-search-footer.php:43
+msgid "1 Comment"
+msgstr "1 Komentár"
+
+#. translators: number of comments
+#: templates/parts/loop/post-meta.php:25 
+#: templates/parts/loop/post-search-footer.php:43
+msgid "%d Comments"
+msgstr "%d Komentárov"
+
+#: templates/parts/loop/page-footer.php:9 
+#: templates/parts/loop/post-footer.php:15 
+#: templates/parts/loop/post-search-footer.php:47
+msgid "Edit"
+msgstr "Upraviť"
+
+#. translators: post title
+#: templates/parts/loop/post-excerpt.php:15
+msgid "Continue reading %s"
+msgstr "Čítať ďalej %s "
+
+#. translators: right arrow (LTR) / left arrow (RTL)
+#: templates/parts/loop/post-excerpt.php:15
+msgid "Continue Reading %s"
+msgstr "Čítať ďalej %s"
+
+#: templates/parts/loop/post-meta.php:25 
+#: templates/parts/loop/post-search-footer.php:43
+msgid "Leave a comment"
+msgstr "Pridať komentár"
