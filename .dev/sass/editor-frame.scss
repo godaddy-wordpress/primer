@@ -46,3 +46,33 @@ body.primer-gutenberg-wide {
 		max-width: 85%;
 	}
 }
+
+body {
+
+	&.one-column-wide {
+		.wp-block {
+			max-width: 980px;
+		}
+	}
+
+	&.one-column-narrow {
+		.wp-block {
+			max-width: 700px;
+		}
+	}
+
+	&.two-column-default,
+	&.two-column-reversed {
+		.wp-block {
+			max-width: 640px;
+		}
+	}
+
+	&.three-column-default,
+	&.three-column-center,
+	&.three-column-reversed {
+		.wp-block {
+			max-width: 450px;
+		}
+	}
+}
