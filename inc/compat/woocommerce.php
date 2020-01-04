@@ -732,7 +732,7 @@ function primer_wc_product_header_image() {
 	 *
 	 * @since 1.7.0
 	 */
-	return apply_filters( 'primer_wc_product_header_image', $enabled && !is_product() );
+	return apply_filters( 'primer_wc_product_header_image', $enabled && ! is_product() );
 
 }
 add_filter( 'primer_use_featured_hero_image', 'primer_wc_product_header_image' );
