@@ -6,8 +6,6 @@
 
 		toggleWidth: function() {
 
-			console.log( window.matchMedia( "(min-width: 961px)" ).matches );
-
 			if ( window.matchMedia( "(min-width: 961px)" ).matches ) {
 
 				return $( 'body' ).removeClass( primerLayouts.join( ' ' ) ).addClass( $( 'input[name="primer-layout"]:checked' ).val() );
