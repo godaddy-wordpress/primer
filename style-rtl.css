@@ -1116,7 +1116,10 @@ body.no-max-width .main-navigation {
     .navigation.pagination .nav-links {
       float: left; }
       .navigation.pagination .nav-links .page-numbers:not(.prev):not(.next) {
-        display: none; } }
+        display: none; }
+      .navigation.pagination .nav-links .page-numbers.next {
+        margin-left: 0;
+        padding-left: 0; } }
 
 .site-main .comment-navigation, .site-main
 .post-navigation {

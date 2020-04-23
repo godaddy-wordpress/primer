@@ -366,6 +366,11 @@ body.no-max-width .main-navigation {
 				&:not(.prev):not(.next) {
 					display: none;
 				}
+
+				&.next {
+					margin-right: 0;
+					padding-right: 0;
+				}
 			}
 		}
 	}
