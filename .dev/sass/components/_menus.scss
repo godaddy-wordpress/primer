@@ -363,8 +363,13 @@ body.no-max-width .main-navigation {
 			float: right;
 
 			.page-numbers {
-				&:not(.prev, .next) {
+				&:not(.prev):not(.next) {
 					display: none;
+				}
+
+				&.next {
+					margin-right: 0;
+					padding-right: 0;
 				}
 			}
 		}
