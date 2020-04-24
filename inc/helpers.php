@@ -330,7 +330,12 @@ function primer_get_hero_image() {
 	 */
 	$size = (string) apply_filters( 'primer_hero_image_size', 'primer-hero' );
 
-	$post = get_queried_object();
+	/**
+	 * Filter the queried object
+	 *
+	 * @var object|integer
+	 */
+	$post = apply_filters( 'primer_hero_image_queried_object', get_queried_object() );
 
 	/**
 	 * Featured Image (if enabled)
