@@ -113,22 +113,6 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		devUpdate: {
-			packages: {
-				options: {
-					packageJson: null,
-					packages: {
-						devDependencies: true,
-						dependencies: false
-					},
-					reportOnlyPkgs: [],
-					reportUpdated: false,
-					semver: true,
-					updateType: 'force'
-				}
-			}
-		},
-
 		imagemin: {
 			options: {
 				optimizationLevel: 3
@@ -402,7 +386,6 @@ module.exports = function( grunt ) {
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
 	grunt.registerTask( 'default',     [ 'sass', 'replace:charset', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify', 'imagemin' ] );
-	grunt.registerTask( 'check',       [ 'devUpdate' ] );
 	grunt.registerTask( 'readme',      [ 'wp_readme_to_markdown' ] );
 	grunt.registerTask( 'update-docs', [ 'readme', 'clean:docs', 'replace:docs_version', 'replace:docs', 'shell:sphinx', 'shell:docs', 'copy:readme', 'copy:docs_html', 'copy:docs_landing', 'replace:intro' ] );
 	grunt.registerTask( 'deploy-docs', [ 'update-docs', 'shell:deploy_docs' ] );
