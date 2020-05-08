@@ -2,17 +2,16 @@
 <ruleset name="primer">
 	<description>Rules for primer</description>
 
-    <arg name="extensions" value="php" />
-    <arg name="basepath" value="./" />
-    <file>./</file>
+	<arg name="extensions" value="php" />
+	<arg name="basepath" value="./" />
+	<file>./</file>
 
-    <exclude-pattern>*/build/*</exclude-pattern>
-    <exclude-pattern>*/dist/*</exclude-pattern>
-    <exclude-pattern>*/vendor/*</exclude-pattern>
-    <exclude-pattern>*/node_modules/*</exclude-pattern>
-	<exclude-pattern>*/wordpress*/*</exclude-pattern>
-    <exclude-pattern>*/\.*</exclude-pattern>
-    <exclude-pattern>*/.dev/*</exclude-pattern>
+	<exclude-pattern>*/.dev/*</exclude-pattern>
+	<exclude-pattern>*/.git/*</exclude-pattern>
+	<exclude-pattern>*/build/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/tests/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
 
 	<arg name="colors"/>
 	<arg value="sp"/>
@@ -29,6 +28,21 @@
 		-->
 		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
 		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+	</rule>
+
+	<rule ref="WordPress">
+		<exclude name="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound"></exclude>
+		<exclude name="WordPress.Security.EscapeOutput.DeprecatedWhitelistCommentFound"></exclude>
+		<exclude name="WordPress.WhiteSpace.ControlStructureSpacing.BlankLineAfterEnd"></exclude>
+		<exclude name="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound"></exclude>
+		<exclude name="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound"></exclude>
+		<exclude name="WordPress.NamingConventions.PrefixAllGlobals.DynamicHooknameFound"></exclude>
+		<exclude name="Generic.CodeAnalysis.UnusedFunctionParameter.FoundBeforeLastUsed"></exclude>
+		<exclude name="Generic.CodeAnalysis.UnusedFunctionParameter.FoundInExtendedClassAfterLastUsed"></exclude>
+		<exclude name="Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed"></exclude>
+		<exclude name="WordPress.Security.ValidatedSanitizedInput.DeprecatedWhitelistCommentFound"></exclude>
+		<exclude name="Squiz.Commenting.FileComment.Missing"></exclude>
+		<exclude name="Standard.Category.SniffName.ErrorCode"></exclude>
 	</rule>
 
 	<!-- Let's also check that everything is properly documented. -->

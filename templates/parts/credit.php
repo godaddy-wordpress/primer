@@ -19,13 +19,19 @@
 	 *
 	 * @var string
 	 */
-	$copyright_text = (string) apply_filters( 'primer_copyright_text', get_theme_mod( 'copyright_text', sprintf(
-		/* translators: 1. copyright symbol, 2. year, 3. site title */
-		esc_html__( 'Copyright %1$s %2$d %3$s', 'primer' ),
-		'&copy;',
-		date( 'Y' ),
-		get_bloginfo( 'blogname' )
-	) ) );
+	$copyright_text = (string) apply_filters(
+		'primer_copyright_text',
+		get_theme_mod(
+			'copyright_text',
+			sprintf(
+				/* translators: 1. copyright symbol, 2. year, 3. site title */
+				esc_html__( 'Copyright %1$s %2$d %3$s', 'primer' ),
+				'&copy;',
+				gmdate( 'Y' ),
+				get_bloginfo( 'blogname' )
+			)
+		)
+	);
 
 	echo wp_kses_post( $copyright_text );
 

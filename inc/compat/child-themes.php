@@ -69,7 +69,7 @@ function primer_child_compat( $key, $value ) {
 	}
 
 	$compat = array(
-		'activation' => array(
+		'activation'   => array(
 			'1.1.0' => array(
 				'header__add_site_title'               => 10,
 				'header__add_hero'                     => 10,
@@ -78,7 +78,7 @@ function primer_child_compat( $key, $value ) {
 				'wc__cart_menu_item'                   => false,
 			),
 		),
-		'ascension' => array(
+		'ascension'    => array(
 			'1.1.0' => array(
 				'header__add_site_title'               => 10,
 				'header__add_hero'                     => 10,
@@ -87,7 +87,7 @@ function primer_child_compat( $key, $value ) {
 				'wc__cart_menu_item'                   => false,
 			),
 		),
-		'escapade' => array(
+		'escapade'     => array(
 			'1.1.0' => array(
 				'header__add_site_title'               => 10,
 				'header__add_hero'                     => 10,
@@ -96,7 +96,7 @@ function primer_child_compat( $key, $value ) {
 				'wc__cart_menu_item'                   => false,
 			),
 		),
-		'lyrical' => array(
+		'lyrical'      => array(
 			'1.1.0' => array(
 				'header__add_site_title'               => 10,
 				'header__add_hero'                     => 10,
@@ -105,7 +105,7 @@ function primer_child_compat( $key, $value ) {
 				'wc__cart_menu_item'                   => false,
 			),
 		),
-		'mins' => array(
+		'mins'         => array(
 			'1.1.0' => array(
 				'header__add_site_title'               => 10,
 				'header__add_hero'                     => 10,
@@ -114,7 +114,7 @@ function primer_child_compat( $key, $value ) {
 				'wc__cart_menu_item'                   => false,
 			),
 		),
-		'scribbles' => array(
+		'scribbles'    => array(
 			'1.1.0' => array(
 				'header__add_site_title'               => 10,
 				'header__add_hero'                     => 10,
@@ -123,7 +123,7 @@ function primer_child_compat( $key, $value ) {
 				'wc__cart_menu_item'                   => false,
 			),
 		),
-		'stout' => array(
+		'stout'        => array(
 			'1.1.0' => array(
 				'header__add_site_title'               => 10,
 				'header__add_hero'                     => 10,
@@ -141,7 +141,7 @@ function primer_child_compat( $key, $value ) {
 				'wc__cart_menu_item'                   => false,
 			),
 		),
-		'velux' => array(
+		'velux'        => array(
 			'1.1.0' => array(
 				'header__add_site_title'               => 10,
 				'header__add_hero'                     => 10,

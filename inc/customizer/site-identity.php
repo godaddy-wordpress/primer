@@ -89,7 +89,7 @@ class Primer_Site_Identity_Options {
 					/* translators: 1. copyright symbol, 2. year, 3. site title */
 					esc_html__( 'Copyright %1$s %2$d %3$s', 'primer' ),
 					'&copy;',
-					date( 'Y' ),
+					gmdate( 'Y' ),
 					get_bloginfo( 'blogname' )
 				),
 			)
@@ -148,4 +148,4 @@ class Primer_Site_Identity_Options {
 
 }
 
-$GLOBALS['primer_site_identity_options'] = new Primer_Site_Identity_Options;
+$GLOBALS['primer_site_identity_options'] = new Primer_Site_Identity_Options();

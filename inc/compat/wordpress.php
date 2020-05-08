@@ -26,7 +26,9 @@ function primer_switch_theme() {
 
 	switch_theme( WP_DEFAULT_THEME, WP_DEFAULT_THEME );
 
-	unset( $_GET['activated'] ); // input var ok.
+	$activated = filter_input( INPUT_GET, 'activated', FILTER_DEFAULT );
+
+	unset( $activated ); // input var ok.
 
 	add_action( 'admin_notices', 'primer_upgrade_notice' );
 
@@ -50,7 +52,8 @@ function primer_get_wp_upgrade_message() {
 	 *
 	 * @var string
 	 */
-	return (string) apply_filters( 'primer_required_wp_version_message',
+	return (string) apply_filters(
+		'primer_required_wp_version_message',
 		sprintf(
 			/* translators: 1. Primer minimum WordPress version. 2. Current WordPress version. */
 			esc_html__( 'Primer requires at least WordPress version %1$s. You are running version %2$s. Please upgrade and try again.', 'primer' ),

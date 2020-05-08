@@ -54,9 +54,9 @@ function primer_editor_frame_styles() {
 	wp_localize_script(
 		Primer_Customizer::$stylesheet . '-editor-frame',
 		'primerEditorFrame',
-		[
+		array(
 			'layouts' => array_keys( $primer_customizer_layouts->__get( 'layouts' ) ),
-		]
+		)
 	);
 
 }

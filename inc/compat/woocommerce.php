@@ -58,7 +58,7 @@ add_filter( 'body_class', 'primer_wc_l10n_body_class' );
  * @since 1.0.0
  */
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper' );
-remove_action( 'woocommerce_after_main_content',  'woocommerce_output_content_wrapper_end' );
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end' );
 
 /**
  * Markup for page wrapper start.
@@ -190,7 +190,6 @@ function primer_wc_shop_title( $title ) {
 	if ( is_product() ) {
 
 		$labels = get_post_type_labels( get_post_type_object( 'product' ) );
-
 		$title  = ! empty( $labels->singular_name ) ? $labels->singular_name : $title;
 
 	}
@@ -256,7 +255,7 @@ function primer_wc_shop_columns( $columns ) {
 	return $columns;
 
 }
-add_filter( 'loop_shop_columns',                    'primer_wc_shop_columns' );
+add_filter( 'loop_shop_columns', 'primer_wc_shop_columns' );
 add_filter( 'woocommerce_related_products_columns', 'primer_wc_shop_columns' );
 add_filter( 'woocommerce_upsells_products_columns', 'primer_wc_shop_columns' );
 
@@ -316,6 +315,7 @@ function primer_wc_product_classes( $classes ) {
  */
 function primer_wc_colors( $colors ) {
 
+	// @codingStandardsIgnoreStart
 	$wc_colors = array(
 		'primary_text_color' => array(
 			'css' => array(
@@ -388,6 +388,7 @@ function primer_wc_colors( $colors ) {
 			),
 		),
 	);
+	// @codingStandardsIgnoreEnd
 
 	return primer_array_replace_recursive( $colors, $wc_colors );
 
@@ -408,6 +409,7 @@ add_filter( 'primer_colors', 'primer_wc_colors' );
  */
 function primer_wc_font_types( $font_types ) {
 
+	// @codingStandardsIgnoreStart
 	$wc_font_types = array(
 		'navigation_font' => array(
 			'css' => array(
@@ -419,6 +421,7 @@ function primer_wc_font_types( $font_types ) {
 			),
 		),
 	);
+	// @codingStandardsIgnoreEnd
 
 	return primer_array_replace_recursive( $font_types, $wc_font_types );
 
@@ -572,11 +575,13 @@ function primer_wc_cart_menu( $items, $args ) {
 		</li>',
 		implode( ' ', array_map( 'esc_attr', $classes ) ),
 		$woocommerce->cart->get_cart_total(),
-		esc_html( sprintf(
-			/* translators: WooCommerce shopping cart item count. */
-			_n( '%d item', '%d items', $woocommerce->cart->get_cart_contents_count(), 'primer' ),
-			$woocommerce->cart->get_cart_contents_count()
-		) ),
+		esc_html(
+			sprintf(
+				/* translators: WooCommerce shopping cart item count. */
+				_n( '%d item', '%d items', $woocommerce->cart->get_cart_contents_count(), 'primer' ),
+				$woocommerce->cart->get_cart_contents_count()
+			)
+		),
 		$woocommerce->cart->get_cart_contents_count() ? '<a class="expand" href="#"></a>' : '',
 		$sub_menu
 	);
@@ -675,7 +680,7 @@ if ( ! function_exists( 'primer_wc_promoted_products' ) ) {
 
 	}
 
-} // End if().
+} // End if.
 
 if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
 
@@ -715,7 +720,7 @@ if ( ! function_exists( 'primer_wc_best_selling_products' ) ) {
 
 	}
 
-} // End if().
+} // End if.
 
 /**
  * Prevent WooCommerce product image from loading as the header image
