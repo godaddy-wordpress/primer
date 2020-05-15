@@ -25,13 +25,16 @@ if ( empty( $wp_query->max_num_pages ) || (int) $wp_query->max_num_pages < 2 ) {
  *
  * @var array
  */
-$args = (array) apply_filters( 'primer_wc_pagination_args', array(
-	'type'      => 'plain',
-	'end_size'  => 1,
-	'mid_size'  => 2,
-	'prev_text' => __( '&larr; Previous', 'primer' ),
-	'next_text' => __( 'Next &rarr;', 'primer' ),
-) );
+$args = (array) apply_filters(
+	'primer_wc_pagination_args',
+	array(
+		'type'      => 'plain',
+		'end_size'  => 1,
+		'mid_size'  => 2,
+		'prev_text' => __( '&larr; Previous', 'primer' ),
+		'next_text' => __( 'Next &rarr;', 'primer' ),
+	)
+);
 
 global $post;
 

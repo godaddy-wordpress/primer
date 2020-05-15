@@ -68,4 +68,4 @@ class Primer_Static_Front_Page_Options {
 
 }
 
-$GLOBALS['primer_static_front_page_options'] = new Primer_Static_Front_Page_Options;
+$GLOBALS['primer_static_front_page_options'] = new Primer_Static_Front_Page_Options();

@@ -14,26 +14,36 @@ get_header(); ?>
 
 	<main id="main" class="site-main" role="main">
 
-	<?php while ( have_posts() ) : the_post(); ?>
+	<?php
 
-		<?php get_template_part( 'content' ); ?>
+	while ( have_posts() ) :
 
-		<?php primer_post_nav(); ?>
+		the_post();
 
-		<?php if ( comments_open() || get_comments_number() ) : ?>
+		get_template_part( 'content' );
 
-			<?php comments_template(); ?>
+		primer_post_nav();
 
-		<?php endif; ?>
+		if ( comments_open() || get_comments_number() ) :
 
-	<?php endwhile; ?>
+			comments_template();
+
+		endif;
+
+	endwhile;
+
+	?>
 
 	</main><!-- #main -->
 
 </div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php
 
-<?php get_sidebar( 'tertiary' ); ?>
+get_sidebar();
 
-<?php get_footer(); ?>
+get_sidebar( 'tertiary' );
+
+get_footer();
+
+?>

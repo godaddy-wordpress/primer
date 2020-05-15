@@ -19,24 +19,34 @@ get_header(); ?>
 
 	<main id="main" class="site-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+		<?php
 
-			<?php get_template_part( 'content', 'page' ); ?>
+		while ( have_posts() ) :
 
-			<?php if ( comments_open() || get_comments_number() ) : ?>
+			the_post();
 
-				<?php comments_template(); ?>
+			get_template_part( 'content', 'page' );
 
-			<?php endif; ?>
+			if ( comments_open() || get_comments_number() ) :
 
-		<?php endwhile; ?>
+				comments_template();
+
+			endif;
+
+		endwhile;
+
+		?>
 
 	</main><!-- #main -->
 
 </div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php
 
-<?php get_sidebar( 'tertiary' ); ?>
+get_sidebar();
 
-<?php get_footer(); ?>
+get_sidebar( 'tertiary' );
+
+get_footer();
+
+?>

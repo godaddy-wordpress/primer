@@ -19,28 +19,38 @@ get_header(); ?>
 
 	<main id="main" class="site-main" role="main">
 
-	<?php if ( have_posts() ) : ?>
+	<?php
 
-		<?php while ( have_posts() ) : the_post(); ?>
+	if ( have_posts() ) :
 
-			<?php get_template_part( 'content', get_post_format() ); ?>
+		while ( have_posts() ) :
 
-		<?php endwhile; ?>
+			the_post();
 
-		<?php primer_pagination(); ?>
+			get_template_part( 'content', get_post_format() );
 
-	<?php else : ?>
+		endwhile;
 
-		<?php get_template_part( 'content', 'none' ); ?>
+		primer_pagination();
 
-	<?php endif; ?>
+		else :
+
+			get_template_part( 'content', 'none' );
+
+	endif;
+
+		?>
 
 	</main><!-- #main -->
 
 </div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php
 
-<?php get_sidebar( 'tertiary' ); ?>
+get_sidebar();
 
-<?php get_footer(); ?>
+get_sidebar( 'tertiary' );
+
+get_footer();
+
+?>
