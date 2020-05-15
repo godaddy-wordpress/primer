@@ -5,10 +5,10 @@
   "version": "1.8.7",
   "author": "GoDaddy",
   "license": "GPL-2.0",
-  "repository": "godaddy/wp-primer-theme",
-  "homepage": "https://wordpress.org/themes/primer/",
+  "repository": "godaddy-wordpress/primer",
+  "homepage": "https://github.com/godaddy-wordpress/primer/",
   "bugs": {
-    "url": "https://github.com/godaddy/wp-primer-theme/issues"
+    "url": "https://github.com/godaddy-wordpress/primer/issues"
   },
   "engines": {
     "node": ">= 7.5.0",
