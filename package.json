@@ -5,10 +5,10 @@
   "version": "1.8.7",
   "author": "GoDaddy",
   "license": "GPL-2.0",
-  "repository": "godaddy/wp-primer-theme",
-  "homepage": "https://wordpress.org/themes/primer/",
+  "repository": "godaddy-wordpress/primer",
+  "homepage": "https://github.com/godaddy-wordpress/primer/",
   "bugs": {
-    "url": "https://github.com/godaddy/wp-primer-theme/issues"
+    "url": "https://github.com/godaddy-wordpress/primer/issues"
   },
   "engines": {
     "node": ">= 7.5.0",
@@ -16,7 +16,7 @@
     "wordpress": ">= 4.4"
   },
   "badges": [
-    "[![Build Status](https://travis-ci.org/<%= pkg.repository %>.svg?branch=master)](https://travis-ci.org/<%= pkg.repository %>)",
+    "[![CircleCI](https://circleci.com/gh/godaddy-wordpress/primer.svg?style=svg)](https://circleci.com/gh/godaddy-wordpress/primer)",
     "[![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/<%= pkg.repository %>/blob/master/license.txt)",
     "[![PHP <%= pkg.engines.php %>](https://img.shields.io/badge/php-<% print(encodeURI(pkg.engines.php)) %>-8892bf.svg)](https://secure.php.net/supported-versions.php)",
     "[![WordPress <%= pkg.engines.wordpress %>](https://img.shields.io/badge/wordpress-<% print(encodeURI(pkg.engines.wordpress)) %>-blue.svg)](https://wordpress.org/download/release-archive/)"
