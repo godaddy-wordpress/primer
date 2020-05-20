@@ -22,26 +22,22 @@ function primer_get_the_page_title() {
 
 	switch ( true ) {
 
-		case is_front_page() :
-
+		case is_front_page():
 			$title = ( 'posts' === get_option( 'show_on_front' ) ) ? get_theme_mod( 'front_page_title', '' ) : get_the_title( get_option( 'page_on_front' ) );
 
 			break;
 
-		case is_home() :
-
+		case is_home():
 			$title = get_the_title( get_option( 'page_for_posts' ) );
 
 			break;
 
-		case is_archive() :
-
+		case is_archive():
 			$title = wp_strip_all_tags( get_the_archive_title() );
 
 			break;
 
-		case is_search() :
-
+		case is_search():
 			$title = sprintf(
 				/* translators: search term */
 				esc_html__( 'Search Results for: %s', 'primer' ),
@@ -50,20 +46,17 @@ function primer_get_the_page_title() {
 
 			break;
 
-		case is_404() :
-
+		case is_404():
 			$title = esc_html__( '404 Page Not Found', 'primer' );
 
 			break;
 
-		case is_page() :
-
+		case is_page():
 			$title = get_the_title();
 
 			break;
 
-		case ( ! is_post_type_hierarchical( get_post_type( $post ) ) ) :
-
+		case ( ! is_post_type_hierarchical( get_post_type( $post ) ) ):
 			$show_on_front  = get_option( 'show_on_front' );
 			$page_for_posts = get_option( 'page_for_posts' );
 
@@ -81,7 +74,7 @@ function primer_get_the_page_title() {
 
 			break;
 
-	} // End switch().
+	} // End switch.
 
 	/**
 	 * Filter the page title.
@@ -553,29 +546,30 @@ function primer_hex2rgb( $color ) {
 
 	switch ( strlen( $color ) ) {
 
-		case 3 :
-
+		case 3:
 			$r = hexdec( substr( $color, 0, 1 ) . substr( $color, 0, 1 ) );
 			$g = hexdec( substr( $color, 1, 1 ) . substr( $color, 1, 1 ) );
 			$b = hexdec( substr( $color, 2, 1 ) . substr( $color, 2, 1 ) );
 
 			break;
 
-		case 6 :
-
+		case 6:
 			$r = hexdec( substr( $color, 0, 2 ) );
 			$g = hexdec( substr( $color, 2, 2 ) );
 			$b = hexdec( substr( $color, 4, 2 ) );
 
 			break;
 
-		default :
-
+		default:
 			return array();
 
 	}
 
-	return array( 'red' => $r, 'green' => $g, 'blue' => $b );
+	return array(
+		'red'   => $r,
+		'green' => $g,
+		'blue'  => $b,
+	);
 
 }
 
@@ -593,7 +587,7 @@ function primer_hex2rgb( $color ) {
  *
  * @return array Returns an array with recursively replaced elements.
  */
-function primer_array_replace_recursive( array $array1, array $array2 ) {
+function primer_array_replace_recursive( array $array1, array $array2 ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed
 
 	if ( function_exists( 'array_replace_recursive' ) ) {
 
@@ -676,16 +670,20 @@ function is_custom_primer_child() {
 
 	$theme = wp_get_theme();
 
-	return ( ! is_child_theme() || ! in_array( $theme->get( 'Name' ), array(
-		'Activation',
-		'Ascension',
-		'Escapade',
-		'Mins',
-		'Scribbles',
-		'Stout',
-		'Lyrical',
-		'Uptown Style',
-		'Velux',
-	), true ) );
+	return ( ! is_child_theme() || ! in_array(
+		$theme->get( 'Name' ),
+		array(
+			'Activation',
+			'Ascension',
+			'Escapade',
+			'Mins',
+			'Scribbles',
+			'Stout',
+			'Lyrical',
+			'Uptown Style',
+			'Velux',
+		),
+		true
+	) );
 
 }

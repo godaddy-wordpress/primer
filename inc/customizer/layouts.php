@@ -50,7 +50,8 @@ class Primer_Customizer_Layouts {
 		 *
 		 * @var array
 		 */
-		$this->layouts = (array) apply_filters( 'primer_layouts',
+		$this->layouts = (array) apply_filters(
+			'primer_layouts',
 			array(
 				'one-column-wide'       => esc_html__( 'One Column: Wide', 'primer' ),
 				'one-column-narrow'     => esc_html__( 'One Column: Narrow', 'primer' ),
@@ -94,7 +95,8 @@ class Primer_Customizer_Layouts {
 		 *
 		 * @var array
 		 */
-		$this->page_widths = (array) apply_filters( 'primer_page_widths',
+		$this->page_widths = (array) apply_filters(
+			'primer_page_widths',
 			array(
 				'fixed' => /* translators: fixed-width page layout */ esc_html__( 'Fixed', 'primer' ),
 				'fluid' => /* translators: fluid-width page layout */ esc_html__( 'Fluid', 'primer' ),
@@ -105,13 +107,13 @@ class Primer_Customizer_Layouts {
 		add_action( 'init', array( $this, 'post_type_support' ), 11 );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
-		add_action( 'customize_register',    array( $this, 'customize_register' ) );
+		add_action( 'customize_register', array( $this, 'customize_register' ) );
 
 		if ( $this->meta_box ) {
 
-			add_action( 'load-post.php',     array( $this, 'load_post' ) );
+			add_action( 'load-post.php', array( $this, 'load_post' ) );
 			add_action( 'load-post-new.php', array( $this, 'load_post' ) );
-			add_action( 'save_post',         array( $this, 'save_post' ) );
+			add_action( 'save_post', array( $this, 'save_post' ) );
 
 		}
 
@@ -142,7 +144,8 @@ class Primer_Customizer_Layouts {
 		 *
 		 * @var array
 		 */
-		$rtl_layouts = (array) apply_filters( 'primer_layouts_rtl',
+		$rtl_layouts = (array) apply_filters(
+			'primer_layouts_rtl',
 			array(
 				'two-column-default'    => esc_html__( 'Two Columns: Sidebar | Content', 'primer' ),
 				'two-column-reversed'   => esc_html__( 'Two Columns: Content | Sidebar', 'primer' ),
@@ -207,14 +210,19 @@ class Primer_Customizer_Layouts {
 			'primer-layouts',
 			get_template_directory_uri() . "/assets/js/admin/layouts{$suffix}.js",
 			array( 'jquery' ),
-			PRIMER_VERSION
+			PRIMER_VERSION,
+			true
 		);
 
 		if ( isset( $post->ID ) ) {
 
-			wp_localize_script( 'primer-layouts', 'primerLayouts', array(
-				'selected' => $this->get_post_layout( $post->ID ),
-			) );
+			wp_localize_script(
+				'primer-layouts',
+				'primerLayouts',
+				array(
+					'selected' => $this->get_post_layout( $post->ID ),
+				)
+			);
 
 		}
 
@@ -291,7 +299,7 @@ class Primer_Customizer_Layouts {
 	public function render_meta_box( WP_Post $post ) {
 
 		$current_layout = $this->get_post_layout( $post->ID );
-		$has_custom = ! empty( $current_layout );
+		$has_custom     = ! empty( $current_layout );
 
 		wp_nonce_field( basename( __FILE__ ), 'primer-layout-nonce' );
 
@@ -350,7 +358,7 @@ class Primer_Customizer_Layouts {
 
 			foreach ( $layouts as $layout => $label ) :
 
-				$class = ( $has_custom ) ? 'active' : 'disabled';
+				$class  = ( $has_custom ) ? 'active' : 'disabled';
 				$class .= ( $layout === $global_layout ) ? ' active global' : '';
 
 				?>
@@ -593,4 +601,4 @@ class Primer_Customizer_Layouts {
 
 }
 
-$GLOBALS['primer_customizer_layouts'] = new Primer_Customizer_Layouts;
+$GLOBALS['primer_customizer_layouts'] = new Primer_Customizer_Layouts();

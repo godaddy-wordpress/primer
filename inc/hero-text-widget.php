@@ -118,11 +118,11 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 	 */
 	public function form( $instance ) {
 
-		add_action( 'admin_print_footer_scripts',              array( $this, 'print_scripts' ) );
+		add_action( 'admin_print_footer_scripts', array( $this, 'print_scripts' ) );
 		add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_scripts' ) );
 
-		$title       = isset( $instance['title'] )       ? $instance['title']       : null;
-		$text        = isset( $instance['text'] )        ? $instance['text']        : null;
+		$title       = isset( $instance['title'] ) ? $instance['title'] : null;
+		$text        = isset( $instance['text'] ) ? $instance['text'] : null;
 		$button_text = isset( $instance['button_text'] ) ? $instance['button_text'] : null;
 		$button_link = isset( $instance['button_link'] ) ? $instance['button_link'] : null;
 
@@ -183,12 +183,12 @@ class Primer_Hero_Text_Widget extends WP_Widget {
 
 		$instance = array();
 
-		$instance['title'] = ! empty( $new_instance['title'] ) ? trim( strip_tags( $new_instance['title'] ) ) : null;
+		$instance['title'] = ! empty( $new_instance['title'] ) ? trim( wp_strip_all_tags( $new_instance['title'] ) ) : null;
 
 		$instance['text'] = ! empty( $new_instance['text'] ) ? $new_instance['text'] : null;
 		$instance['text'] = current_user_can( 'unfiltered_html' ) ? trim( $new_instance['text'] ) : trim( wp_kses_post( stripslashes( $new_instance['text'] ) ) );
 
-		$instance['button_text'] = ! empty( $new_instance['button_text'] ) ? trim( strip_tags( $new_instance['button_text'] ) ) : null;
+		$instance['button_text'] = ! empty( $new_instance['button_text'] ) ? trim( wp_strip_all_tags( $new_instance['button_text'] ) ) : null;
 		$instance['button_link'] = ! empty( $new_instance['button_link'] ) ? esc_url_raw( trim( $new_instance['button_link'] ) ) : null;
 
 		return $instance;
