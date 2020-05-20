@@ -744,6 +744,8 @@ add_filter( 'primer_use_featured_hero_image', 'primer_wc_product_header_image' )
 /**
  * Override the queried object with the proper archive page post ID
  *
+ * @param object $queried_object Global queried object.
+ *
  * @return object|integer
  *
  * @since NEXT
