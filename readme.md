@@ -67,6 +67,14 @@ Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 ## Changelog ##
 
+### 1.8.9 ###
+* New: Add `Tested up to` and `Requires PHP` headers to style.css @props [evanherman](https://github.com/EvanHerman)
+* Fix: Fixed mobile pagination visibility. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Fixed the hero image on WooCommerce templates. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Update node dependencies. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Update PHP linting for improved coding standards. @props [jrtashjian](https://github.com/jrtashjian)/[evanherman](https://github.com/EvanHerman)
+* Tweak: Migrated build process to CircleCI. @props [evanherman](https://github.com/EvanHerman)
+
 ### 1.8.8 ###
 * Fix: Repaired the undefined `$` error thrown in `assets/js/admin/layouts.js` breaking the block editor. @props [evanherman](https://github.com/EvanHerman)
 * Remove: Unnecessary `console.log()` from `assets/js/admin/editor-frame.js`. @props [evanherman](https://github.com/EvanHerman)
