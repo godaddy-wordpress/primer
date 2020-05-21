@@ -740,3 +740,19 @@ function primer_wc_product_header_image() {
 
 }
 add_filter( 'primer_use_featured_hero_image', 'primer_wc_product_header_image' );
+
+/**
+ * Override the queried object with the proper archive page post ID
+ *
+ * @param object $queried_object Global queried object.
+ *
+ * @return object|integer
+ *
+ * @since NEXT
+ */
+function primer_wc_header_image_object( $queried_object ) {
+
+	return is_shop() ? wc_get_page_id( 'shop' ) : $queried_object;
+
+}
+add_filter( 'primer_hero_image_queried_object', 'primer_wc_header_image_object' );
