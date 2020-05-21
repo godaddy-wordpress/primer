@@ -2,7 +2,7 @@
 Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
 Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
-Tested up to:      5.0
+Tested up to:      5.4
 Requires PHP:      5.6.0
 Stable tag:        1.8.7
 License:           GPL-2.0
