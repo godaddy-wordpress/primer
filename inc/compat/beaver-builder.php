@@ -53,6 +53,7 @@ add_action( 'add_post_meta', 'primer_bb_layout', 10, 3 );
  */
 function primer_bb_colors( $colors ) {
 
+	// @codingStandardsIgnoreStart
 	$bb_colors = array(
 		'primary_text_color' => array(
 			'css' => array(
@@ -109,6 +110,7 @@ function primer_bb_colors( $colors ) {
 			),
 		),
 	);
+	// @codingStandardsIgnoreEnd
 
 	return primer_array_replace_recursive( $colors, $bb_colors );
 

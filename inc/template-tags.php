@@ -44,10 +44,13 @@ function primer_the_custom_logo() {
 	 *
 	 * @var array
 	 */
-	$args = (array) apply_filters( 'primer_the_custom_logo_args', array(
-		'class'    => 'custom-logo',
-		'itemprop' => 'logo',
-	) );
+	$args = (array) apply_filters(
+		'primer_the_custom_logo_args',
+		array(
+			'class'    => 'custom-logo',
+			'itemprop' => 'logo',
+		)
+	);
 
 	printf( // xss ok.
 		'<a href="%1$s" class="custom-logo-link" %2$s>%3$s</a>',
@@ -72,13 +75,16 @@ function primer_the_site_title() {
 	 *
 	 * @var array
 	 */
-	$args = (array) apply_filters( 'primer_the_site_title_args', array(
-		'wrapper'   => 'div',
-		'atts'      => array( 'class' => 'site-title' ),
-		'url'       => home_url( '/' ),
-		'link_atts' => array( 'rel' => 'home' ),
-		'title'     => get_bloginfo( 'name' ),
-	) );
+	$args = (array) apply_filters(
+		'primer_the_site_title_args',
+		array(
+			'wrapper'   => 'div',
+			'atts'      => array( 'class' => 'site-title' ),
+			'url'       => home_url( '/' ),
+			'link_atts' => array( 'rel' => 'home' ),
+			'title'     => get_bloginfo( 'name' ),
+		)
+	);
 
 	if ( empty( $args['title'] ) ) {
 
@@ -145,11 +151,14 @@ function primer_the_site_description() {
 	 *
 	 * @var array
 	 */
-	$args = (array) apply_filters( 'primer_the_site_description_args', array(
-		'wrapper'     => 'div',
-		'atts'        => array( 'class' => 'site-description' ),
-		'description' => get_bloginfo( 'description' ),
-	) );
+	$args = (array) apply_filters(
+		'primer_the_site_description_args',
+		array(
+			'wrapper'     => 'div',
+			'atts'        => array( 'class' => 'site-description' ),
+			'description' => get_bloginfo( 'description' ),
+		)
+	);
 
 	if ( empty( $args['description'] ) ) {
 
@@ -203,11 +212,14 @@ function primer_the_page_title() {
 	 *
 	 * @var array
 	 */
-	$args = (array) apply_filters( 'primer_the_page_title_args', array(
-		'wrapper' => 'h1',
-		'atts'    => array( 'class' => 'page-title' ),
-		'title'   => primer_get_the_page_title(),
-	) );
+	$args = (array) apply_filters(
+		'primer_the_page_title_args',
+		array(
+			'wrapper' => 'h1',
+			'atts'    => array( 'class' => 'page-title' ),
+			'title'   => primer_get_the_page_title(),
+		)
+	);
 
 	if ( empty( $args['title'] ) ) {
 
@@ -274,11 +286,16 @@ function primer_pagination( $args = array() ) {
 	 *
 	 * @var array
 	 */
-	$defaults = (array) apply_filters( 'primer_pagination_default_args', array(
-		'prev_text'          => __( '&larr; Previous', 'primer' ),
-		'next_text'          => __( 'Next &rarr;', 'primer' ),
-		'screen_reader_text' => sprintf( /* translators: post type singular label */ esc_html__( '%1$s navigation', 'primer' ), esc_html( $post_type_label ) ),
-	), max( 1, get_query_var( 'paged' ) ), absint( $wp_query->max_num_pages ) );
+	$defaults = (array) apply_filters(
+		'primer_pagination_default_args',
+		array(
+			'prev_text'          => __( '&larr; Previous', 'primer' ),
+			'next_text'          => __( 'Next &rarr;', 'primer' ),
+			'screen_reader_text' => sprintf( /* translators: post type singular label */ esc_html__( '%1$s navigation', 'primer' ), esc_html( $post_type_label ) ),
+		),
+		max( 1, get_query_var( 'paged' ) ),
+		absint( $wp_query->max_num_pages )
+	);
 
 	$args = wp_parse_args( $args, $defaults );
 
@@ -303,10 +320,13 @@ function primer_post_nav( $args = array() ) {
 	 *
 	 * @var array
 	 */
-	$defaults = (array) apply_filters( 'primer_post_nav_default_args', array(
-		'prev_text' => '&larr; %title',
-		'next_text' => '%title &rarr;',
-	) );
+	$defaults = (array) apply_filters(
+		'primer_post_nav_default_args',
+		array(
+			'prev_text' => '&larr; %title',
+			'next_text' => '%title &rarr;',
+		)
+	);
 
 	$args = wp_parse_args( $args, $defaults );
 
@@ -437,13 +457,13 @@ function primer_breadcrumbs() {
 
 			echo '404';
 
-		} // End if().
+		} // End if.
 
 	} else {
 
 		bloginfo( 'name' );
 
-	} // End if().
+	} // End if.
 
 	echo '</div>';
 

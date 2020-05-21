@@ -2,7 +2,7 @@
 Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
 Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
-Tested up to:      5.0
+Tested up to:      5.4
 Requires PHP:      5.6.0
 Stable tag:        1.8.8
 License:           GPL-2.0
@@ -64,6 +64,14 @@ License: Creative Commons Zero
 Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 == Changelog ==
+
+= 1.8.9 =
+* New: Add `Tested up to` and `Requires PHP` headers to style.css @props [evanherman](https://github.com/EvanHerman)
+* Fix: Fixed mobile pagination visibility. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Fixed the hero image on WooCommerce templates. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Update node dependencies. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Update PHP linting for improved coding standards. @props [jrtashjian](https://github.com/jrtashjian)/[evanherman](https://github.com/EvanHerman)
+* Tweak: Migrated build process to CircleCI. @props [evanherman](https://github.com/EvanHerman)
 
 = 1.8.8 =
 * Fix: Repaired the undefined `$` error thrown in `assets/js/admin/layouts.js` breaking the block editor. @props [evanherman](https://github.com/EvanHerman)

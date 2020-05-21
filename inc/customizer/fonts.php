@@ -472,4 +472,4 @@ class Primer_Customizer_Fonts {
 
 }
 
-new Primer_Customizer_Fonts;
+new Primer_Customizer_Fonts();

@@ -2,7 +2,7 @@
 **Contributors:** [godaddy](https://profiles.wordpress.org/godaddy), [fjarrett](https://profiles.wordpress.org/fjarrett), [jonathanbardo](https://profiles.wordpress.org/jonathanbardo), [eherman24](https://profiles.wordpress.org/eherman24)  
 **Tags:**              [custom-background](https://wordpress.org/themes/tags/custom-background/), [custom-colors](https://wordpress.org/themes/tags/custom-colors/), [custom-header](https://wordpress.org/themes/tags/custom-header/), [custom-menu](https://wordpress.org/themes/tags/custom-menu/), [editor-style](https://wordpress.org/themes/tags/editor-style/), [featured-images](https://wordpress.org/themes/tags/featured-images/), [flexible-header](https://wordpress.org/themes/tags/flexible-header/), [left-sidebar](https://wordpress.org/themes/tags/left-sidebar/), [one-column](https://wordpress.org/themes/tags/one-column/), [right-sidebar](https://wordpress.org/themes/tags/right-sidebar/), [rtl-language-support](https://wordpress.org/themes/tags/rtl-language-support/), [sticky-post](https://wordpress.org/themes/tags/sticky-post/), [threaded-comments](https://wordpress.org/themes/tags/threaded-comments/), [three-columns](https://wordpress.org/themes/tags/three-columns/), [translation-ready](https://wordpress.org/themes/tags/translation-ready/), [two-columns](https://wordpress.org/themes/tags/two-columns/)  
 **Requires at least:** 4.4  
-**Tested up to:**      5.0  
+**Tested up to:**      5.4  
 **Requires PHP:**      5.6.0  
 **Stable tag:**        1.8.8  
 **License:**           GPL-2.0  
@@ -10,7 +10,7 @@
 
 Primer is a powerful theme that brings clarity to your content in a fresh design. This is the parent for all themes in the GoDaddy Primer theme family.
 
-[![Build Status](https://travis-ci.org/godaddy/wp-primer-theme.svg?branch=master)](https://travis-ci.org/godaddy/wp-primer-theme) [![devDependencies Status](https://david-dm.org/godaddy/wp-primer-theme/master/dev-status.svg)](https://david-dm.org/godaddy/wp-primer-theme/master?type=dev) [![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/godaddy/wp-primer-theme/blob/master/license.txt) [![PHP >= 5.2](https://img.shields.io/badge/php-%3E=%205.2-8892bf.svg)](https://secure.php.net/supported-versions.php) [![WordPress >= 4.4](https://img.shields.io/badge/wordpress-%3E=%204.4-blue.svg)](https://wordpress.org/download/release-archive/)  
+[![CircleCI](https://circleci.com/gh/godaddy-wordpress/primer.svg?style=svg)](https://circleci.com/gh/godaddy-wordpress/primer) [![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/godaddy-wordpress/primer/blob/master/license.txt) [![PHP >= 5.2](https://img.shields.io/badge/php-%3E=%205.2-8892bf.svg)](https://secure.php.net/supported-versions.php) [![WordPress >= 4.4](https://img.shields.io/badge/wordpress-%3E=%204.4-blue.svg)](https://wordpress.org/download/release-archive/)  
 
 ## Description ##
 
@@ -66,6 +66,14 @@ License: Creative Commons Zero
 Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 ## Changelog ##
+
+### 1.8.9 ###
+* New: Add `Tested up to` and `Requires PHP` headers to style.css @props [evanherman](https://github.com/EvanHerman)
+* Fix: Fixed mobile pagination visibility. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Fixed the hero image on WooCommerce templates. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Update node dependencies. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Update PHP linting for improved coding standards. @props [jrtashjian](https://github.com/jrtashjian)/[evanherman](https://github.com/EvanHerman)
+* Tweak: Migrated build process to CircleCI. @props [evanherman](https://github.com/EvanHerman)
 
 ### 1.8.8 ###
 * Fix: Repaired the undefined `$` error thrown in `assets/js/admin/layouts.js` breaking the block editor. @props [evanherman](https://github.com/EvanHerman)

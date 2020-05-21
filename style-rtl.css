@@ -1115,8 +1115,11 @@ body.no-max-width .main-navigation {
       color: #252525; }
     .navigation.pagination .nav-links {
       float: left; }
-      .navigation.pagination .nav-links .page-numbers {
-        display: none; } }
+      .navigation.pagination .nav-links .page-numbers:not(.prev):not(.next) {
+        display: none; }
+      .navigation.pagination .nav-links .page-numbers.next {
+        margin-left: 0;
+        padding-left: 0; } }
 
 .site-main .comment-navigation, .site-main
 .post-navigation {

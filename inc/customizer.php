@@ -59,9 +59,9 @@ class Primer_Customizer {
 		 */
 		require_once get_template_directory() . '/inc/customizer/static-front-page.php';
 
-		add_action( 'after_setup_theme',      array( $this, 'logo' ) );
-		add_action( 'customize_register',     array( $this, 'selective_refresh' ), 11 );
-		add_action( 'customize_register',     array( $this, 'use_featured_hero_image' ) );
+		add_action( 'after_setup_theme', array( $this, 'logo' ) );
+		add_action( 'customize_register', array( $this, 'selective_refresh' ), 11 );
+		add_action( 'customize_register', array( $this, 'use_featured_hero_image' ) );
 		add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
 
 	}
@@ -83,7 +83,8 @@ class Primer_Customizer {
 		 *
 		 * @var array
 		 */
-		$args = (array) apply_filters( 'primer_custom_logo_args',
+		$args = (array) apply_filters(
+			'primer_custom_logo_args',
 			array(
 				'height'      => 100,
 				'width'       => 400,
@@ -231,9 +232,9 @@ class Primer_Customizer {
 	 */
 	public static function parse_css_rules( array $rules ) {
 
-		$open_format  = SCRIPT_DEBUG ? "%s {\n"      : '%s{';
+		$open_format  = SCRIPT_DEBUG ? "%s {\n" : '%s{';
 		$rule_format  = SCRIPT_DEBUG ? "\t%s: %s;\n" : '%s:%s;';
-		$close_format = SCRIPT_DEBUG ? "}\n"         : '}';
+		$close_format = SCRIPT_DEBUG ? "}\n" : '}';
 
 		ob_start();
 
@@ -267,4 +268,4 @@ class Primer_Customizer {
 
 }
 
-new Primer_Customizer;
+new Primer_Customizer();

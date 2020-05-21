@@ -187,7 +187,7 @@ function primer_setup() {
 				'crop'   => false,
 				'label'  => esc_html__( 'Featured', 'primer' ),
 			),
-			'primer-hero' => array(
+			'primer-hero'     => array(
 				'width'  => 2400,
 				'height' => 1300,
 				'crop'   => array( 'center', 'center' ),
@@ -449,7 +449,7 @@ function primer_register_sidebars() {
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
-			'footer-1' => array(
+			'footer-1'  => array(
 				'name'          => esc_html__( 'Footer 1', 'primer' ),
 				'description'   => esc_html__( 'This sidebar is the first column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -457,7 +457,7 @@ function primer_register_sidebars() {
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
-			'footer-2' => array(
+			'footer-2'  => array(
 				'name'          => esc_html__( 'Footer 2', 'primer' ),
 				'description'   => esc_html__( 'This sidebar is the second column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -465,7 +465,7 @@ function primer_register_sidebars() {
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
-			'footer-3' => array(
+			'footer-3'  => array(
 				'name'          => esc_html__( 'Footer 3', 'primer' ),
 				'description'   => esc_html__( 'This sidebar is the third column of the footer widget area.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -473,7 +473,7 @@ function primer_register_sidebars() {
 				'before_title'  => '<h4 class="widget-title">',
 				'after_title'   => '</h4>',
 			),
-			'hero' => array(
+			'hero'      => array(
 				'name'          => esc_html__( 'Hero', 'primer' ),
 				'description'   => esc_html__( 'Hero widgets appear over the header image on the front page.', 'primer' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -602,7 +602,7 @@ function primer_setup_author() {
 
 	if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
 
-		$authordata = get_userdata( $wp_query->post->post_author ); // override ok.
+		$authordata = get_userdata( $wp_query->post->post_author ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 
 	}
 
