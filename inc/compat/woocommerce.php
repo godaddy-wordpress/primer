@@ -748,7 +748,7 @@ add_filter( 'primer_use_featured_hero_image', 'primer_wc_product_header_image' )
  *
  * @return object|integer
  *
- * @since NEXT
+ * @since 1.8.9
  */
 function primer_wc_header_image_object( $queried_object ) {
 
