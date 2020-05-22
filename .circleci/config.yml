@@ -204,11 +204,10 @@ jobs:
       - run:
           name: Build the Primer Theme
           command: |
-            npm run build
             mkdir -p primer
             mkdir -p /tmp/artifacts
             rsync -av --exclude-from ~/project/.distignore --delete ~/project/. ./primer
-            zip -r /tmp/artifacts/primer.zip ./primer
+            zip -r /tmp/artifacts/primer-canary.zip ./primer
       - deploy:
           name: Deploy a new release to GitHub
           command: |
