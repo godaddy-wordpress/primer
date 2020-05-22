@@ -114,10 +114,9 @@ jobs:
       - run:
           name: Attach the primer theme to CircleCI artifacts
           command: |
-            mkdir -p ~/primer
-            mkdir -p /tmp/artifacts
-            rsync -av --exclude-from ~/project/.distignore ~/project/. ~/primer
-            zip -r /tmp/artifacts/primer.zip ~/primer
+            mkdir -p ~/primer && mkdir -p /tmp/artifacts
+            rsync -av --exclude-from ~/project/.distignore . ~/primer
+            cd ~/primer && zip -r /tmp/artifacts/primer.zip .
       - store_artifacts:
           path: /tmp/artifacts
 

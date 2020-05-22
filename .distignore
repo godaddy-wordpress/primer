@@ -3,7 +3,7 @@
 composer.*
 Gruntfile.js
 package*.json
-phpcs.ruleset.xml
+phpcs.xml
 phpunit.xml.dist
 readme.md
 svn-username
