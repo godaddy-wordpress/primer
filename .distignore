@@ -5,6 +5,7 @@ Gruntfile.js
 package*.json
 phpcs.ruleset.xml
 phpunit.xml.dist
+phpcs.xml
 readme.md
 svn-username
 bin/
