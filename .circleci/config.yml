@@ -29,10 +29,6 @@ workflows:
           filters:
             tags:
               only: /^(?!canary).*$/
-      - theme-check-new:
-          filters:
-            tags:
-              only: /^(?!canary).*$/
       - canary:
           requires:
             - php56-phpcs
@@ -126,38 +122,6 @@ jobs:
       - run:
           name: Run theme check
           command: wp themecheck --theme=primer --no-interactive --path=/tmp/wordpress
-
-  theme-check-new:
-    executor: php_73_apache_node_browser_mysql
-    steps:
-      - checkout
-      - run:
-          name: Waiting for MySQL to be ready
-          command: |
-            for i in `seq 1 10`;
-            do
-              nc -z 127.0.0.1 3306 && echo Success && exit 0
-              echo -n .
-              sleep 1
-            done
-            echo Failed waiting for MySQL && exit 1
-      - run:
-          name: Install MariaDB
-          command: |
-            sudo apt-get update --allow-releaseinfo-change
-            sudo apt-get install mariadb-client
-      - run:
-          name: Install WPCLI
-          command: |
-            curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-            chmod +x wp-cli.phar
-            sudo mv wp-cli.phar /usr/local/bin/wp
-      - run:
-          name: Setup WordPress site and install the Theme Check package
-          command: bash .dev/install-wp-tests.sh wordpress_test root '' 127.0.0.1 latest
-      - run:
-          name: Run theme check
-          command: wp themecheck --theme=primer --no-interactive --path=/var/www/html/wordpress
 
   canary:
     docker:
