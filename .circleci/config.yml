@@ -1,3 +1,16 @@
+executors:
+  php_73_apache_node_browser_mysql:
+    docker:
+      - image: circleci/php:7.3.31-apache-node-browsers
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
+        environment: XDEBUG_MODE=coverage
+      - image: circleci/mysql:5.7-ram
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
+
 workflows:
   version: 2.1
   main:
@@ -72,9 +85,7 @@ jobs:
           command: composer lint
 
   theme-check:
-    docker:
-      - image: circleci/php:7.3.31-apache-node-browsers
-      - image: circleci/mysql:5.7-ram
+    executor: php_73_apache_node_browser_mysql
     steps:
       - checkout
       - run:
