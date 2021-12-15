@@ -631,6 +631,13 @@ add_action( 'save_post', 'primer_has_active_categories_reset' );
 
 if ( ! function_exists( 'wp_body_open' ) ) {
 
+	/**
+	 * Fire the wp_body_open action.
+	 *
+	 * See {@see 'wp_body_open'}.
+	 *
+	 * @since 5.2.0
+	 */
 	function wp_body_open() {
 
 		do_action( 'wp_body_open' );
