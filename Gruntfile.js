@@ -67,7 +67,7 @@ module.exports = function( grunt ) {
 
 		postcss: {
 			options: {
-				map: true, // inline sourcemaps
+				map: false, // inline sourcemaps
 				processors: [
 					require( 'autoprefixer' ), // add vendor prefixes
 				]
