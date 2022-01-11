@@ -10,39 +10,6 @@ module.exports = function( grunt ) {
 
 		pkg: pkg,
 
-		autoprefixer: {
-			options: {
-				browsers: [
-					'Android >= 2.1',
-					'Chrome >= 21',
-					'Edge >= 12',
-					'Explorer >= 7',
-					'Firefox >= 17',
-					'Opera >= 12.1',
-					'Safari >= 6.0'
-				],
-				cascade: false
-			},
-			editor: {
-				src: [ 'editor-style.css' ]
-			},
-			blocks: {
-				src: [ 'assets/css/admin/editor-blocks.css' ]
-			},
-			frame: {
-				src: [ 'assets/css/admin/editor-frame.css' ]
-			},
-			layouts: {
-				src: [ 'assets/css/admin/layouts.css' ]
-			},
-			customizer_fonts: {
-				src: [ 'assets/css/admin/customizer-fonts.css' ]
-			},
-			main: {
-				src: [ 'style.css' ]
-			}
-		},
-
 		clean: {
 			options: {
 				force: true
@@ -98,6 +65,18 @@ module.exports = function( grunt ) {
 			}
 		},
 
+		postcss: {
+			options: {
+				map: false, // inline sourcemaps
+				processors: [
+					require( 'autoprefixer' ), // add vendor prefixes
+				]
+			},
+			dist: {
+				src: [ 'style.css', 'editor-style.css', 'assets/css/**/*.css', '!assets/css/**/*.min.css' ],
+			}
+		},
+
 		cssmin: {
 			options: {
 				processImport: false,
@@ -113,15 +92,14 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		imagemin: {
-			options: {
-				optimizationLevel: 3
-			},
+		image: {
 			assets: {
-				expand: true,
-				cwd: 'assets/images/',
-				src: [ '**/*.{gif,jpeg,jpg,png,svg}' ],
-				dest: 'assets/images/'
+				files: [ {
+					expand: true,
+					cwd: 'assets/images/',
+					src: [ '**/*.{gif,jpeg,jpg,png,svg}' ],
+					dest: 'assets/images/'
+				} ]
 			},
 			screenshot: {
 				files: {
@@ -264,6 +242,7 @@ module.exports = function( grunt ) {
 
 		sass: {
 			options: {
+				implementation: require( 'node-sass' ),
 				precision: 5,
 				sourceMap: false
 			},
@@ -339,7 +318,7 @@ module.exports = function( grunt ) {
 		watch: {
 			images: {
 				files: 'assets/images/**/*.{gif,jpeg,jpg,png,svg}',
-				tasks: [ 'imagemin' ]
+				tasks: [ 'image' ]
 			},
 			js: {
 				files: 'assets/js/**/*.js',
@@ -347,7 +326,7 @@ module.exports = function( grunt ) {
 			},
 			sass: {
 				files: '.dev/sass/**/*.scss',
-				tasks: [ 'sass', 'replace:charset', 'autoprefixer', 'cssjanus', 'cssmin' ]
+				tasks: [ 'sass', 'replace:charset', 'postcss', 'cssjanus', 'cssmin' ]
 			}
 		},
 
@@ -355,8 +334,8 @@ module.exports = function( grunt ) {
 			options: {
 				post_convert: function( readme ) {
 					var matches = readme.match( /\*\*Tags:\*\*(.*)\r?\n/ ),
-					    tags    = matches[1].trim().split( ', ' ),
-					    section = matches[0];
+							tags    = matches[1].trim().split( ', ' ),
+							section = matches[0];
 
 					for ( var i = 0; i < tags.length; i++ ) {
 						section = section.replace( tags[i], '[' + tags[i] + '](https://wordpress.org/themes/tags/' + tags[i] + '/)' );
@@ -385,7 +364,7 @@ module.exports = function( grunt ) {
 
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask( 'default',     [ 'sass', 'replace:charset', 'autoprefixer', 'cssjanus', 'cssmin', 'jshint', 'uglify', 'imagemin' ] );
+	grunt.registerTask( 'default',     [ 'sass', 'replace:charset', 'postcss', 'cssjanus', 'cssmin', 'jshint', 'uglify', 'image' ] );
 	grunt.registerTask( 'readme',      [ 'wp_readme_to_markdown' ] );
 	grunt.registerTask( 'update-docs', [ 'readme', 'clean:docs', 'replace:docs_version', 'replace:docs', 'shell:sphinx', 'shell:docs', 'copy:readme', 'copy:docs_html', 'copy:docs_landing', 'replace:intro' ] );
 	grunt.registerTask( 'deploy-docs', [ 'update-docs', 'shell:deploy_docs' ] );
