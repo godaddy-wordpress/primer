@@ -1,6 +1,6 @@
 <?php
 /**
- * Customizer bootstrap.
+ * Deprecation Notice bootstrap.
  *
  * @class    Primer_Deprecation_Notice
  * @package  Classes/Deprecation_Notice
