@@ -23,12 +23,12 @@ class Primer_Deprecation_Notice {
 
 		add_action( 'admin_notices', array( $this, 'deprecation_notice' ) );
 
-		add_action( 'wp_ajax_my_action', array( $this, 'my_action' ) );
+		add_action( 'wp_ajax_dismiss_primer_deprecation_notice', array( $this, 'dismiss_primer_deprecation_notice' ) );
 
 	}
 
 	/**
-	 * Show a dismissable admin notice about theme deprecation.
+	 * Show a dismissible admin notice about theme deprecation.
 	 */
 	public function deprecation_notice() {
 
@@ -42,7 +42,7 @@ class Primer_Deprecation_Notice {
 			)
 		);
 
-		$this->print_dismissable_script();
+		$this->print_dismissible_script();
 
 		printf(
 			'<div class="%1$s">
@@ -57,39 +57,33 @@ class Primer_Deprecation_Notice {
 	/**
 	 * Update the theme mod to dismiss the deprecation notice.
 	 */
-	public function my_action() {
+	public function dismiss_primer_deprecation_notice() {
 
 		set_theme_mod( 'deprecation_notice_dismissed', true );
 
-		wp_die(); // this is required to terminate immediately and return a proper response
+		wp_die();
 
 	}
 
 	/**
-	 * Print the dismissable deprecation notice script.
+	 * Print the dismissible deprecation notice script.
 	 */
-	public function print_dismissable_script() {
+	public function print_dismissible_script() {
 
 		?>
 		<script type="text/javascript">
-		/**
-		 * Admin code for dismissing notifications.
-		 *
-		 */
-		(function( $ ) {
-			'use strict';
+		( function( $ ) {
 			$( function() {
 				$( '.primer-deprecation-notice' ).on( 'click', '.notice-dismiss', function( event, el ) {
 					jQuery.post(
 						ajaxurl,
 						{
-							'action': 'my_action',
-							'whatever': 1234
+							'action': 'dismiss_primer_deprecation_notice'
 						}
 					);
-				});
+				} );
 			} );
-		})( jQuery );
+		} )( jQuery );
 		</script>
 		<?php
 
