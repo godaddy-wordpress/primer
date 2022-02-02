@@ -74,7 +74,7 @@ class Primer_Deprecation_Notice {
 		<script type="text/javascript">
 		( function( $ ) {
 			$( function() {
-				$( '.primer-deprecation-notice' ).on( 'click', '.notice-dismiss', function( event, el ) {
+				$( '.primer-deprecation-notice' ).on( 'click', '.notice-dismiss', function() {
 					jQuery.post(
 						ajaxurl,
 						{
