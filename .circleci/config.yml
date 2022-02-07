@@ -120,6 +120,9 @@ jobs:
           name: Remove unsplash.com from the list of unaccetable sources in theme check
           command: sed -i -e "s/unsplash.com/removed-url/g" /tmp/wordpress/wp-content/plugins/theme-check/checks/class-non-gpl-check.php
       - run:
+          name: Remove the text-domain check file.
+          command: rm -rf /tmp/wordpress/wp-content/plugins/theme-check/checks/class-textdomain-check.php
+      - run:
           name: Run theme check
           command: wp themecheck --theme=primer --no-interactive --path=/tmp/wordpress
 
