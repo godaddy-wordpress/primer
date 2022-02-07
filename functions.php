@@ -151,6 +151,13 @@ if ( class_exists( 'WooCommerce' ) ) {
 }
 
 /**
+ * Load deprecation notice class
+ *
+ * @since NEXT
+ */
+require_once get_template_directory() . '/inc/deprecation-notice.php';
+
+/**
  * Load Customizer class (must be required last).
  *
  * @since 1.0.0
