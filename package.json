@@ -75,7 +75,7 @@
     "grunt-wp-readme-to-markdown": "^2.0.1",
     "load-grunt-tasks": "^4.0.0",
     "matchdep": "^2.0.0",
-    "node-sass": "^6.0.1",
+    "node-sass": "^7.0.0",
     "susy": "^2.2.14"
   },
   "scripts": {
