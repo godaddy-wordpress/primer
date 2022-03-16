@@ -67,6 +67,9 @@ Source: https://unsplash.com/photos/v4ZUGlrdVAA
 
 ## Changelog ##
 
+### 1.8.10 ###
+* New: Introduce an admin notice about theme deprecation and migration to [Go](https://wordpress.org/themes/go). @props [evanherman](https://github.com/EvanHerman)
+
 ### 1.8.9 ###
 * New: Add `Tested up to` and `Requires PHP` headers to style.css @props [evanherman](https://github.com/EvanHerman)
 * Fix: Fixed mobile pagination visibility. @props [evanherman](https://github.com/EvanHerman)
