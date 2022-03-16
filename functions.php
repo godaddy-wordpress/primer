@@ -23,7 +23,7 @@
  *
  * @var string
  */
-define( 'PRIMER_VERSION', '1.8.9' );
+define( 'PRIMER_VERSION', '1.8.10' );
 
 /**
  * Minimum WordPress version required for Primer.
@@ -153,7 +153,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 /**
  * Load deprecation notice class
  *
- * @since NEXT
+ * @since 1.8.10
  */
 require_once get_template_directory() . '/inc/deprecation-notice.php';
 

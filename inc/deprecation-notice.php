@@ -6,7 +6,7 @@
  * @package  Classes/Deprecation_Notice
  * @category Class
  * @author   GoDaddy
- * @since    NEXT
+ * @since    1.8.10
  */
 class Primer_Deprecation_Notice {
 
