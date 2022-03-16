@@ -4,7 +4,7 @@ Tags:              custom-background, custom-colors, custom-header, custom-menu,
 Requires at least: 4.4
 Tested up to:      5.4
 Requires PHP:      5.6.0
-Stable tag:        1.8.9
+Stable tag:        1.8.10
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
