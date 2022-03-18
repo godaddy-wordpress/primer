@@ -117,9 +117,6 @@ jobs:
           name: Setup WordPress site and install Primer and the Theme Check package
           command: bash .dev/install-wp-tests.sh wordpress_test root '' 127.0.0.1 latest
       - run:
-          name: Remove unsplash.com from the list of unaccetable sources in theme check
-          command: sed -i '34d' /tmp/wordpress/wp-content/plugins/theme-check/checks/class-non-gpl-check.php
-      - run:
           name: Remove the text-domain check file.
           command: rm -rf /tmp/wordpress/wp-content/plugins/theme-check/checks/class-textdomain-check.php
       - run:

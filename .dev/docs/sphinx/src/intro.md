@@ -58,9 +58,9 @@ Genericons icon font, Copyright 2013 Automattic, Inc.
 License: GPL-2.0 (or later)
 Source: https://genericons.com/
 
-Stock photography, Unsplash
+Stock photography, WordPress.org
 License: Creative Commons Zero
-Source: https://unsplash.com/photos/v4ZUGlrdVAA
+Source: https://wordpress.org/photos/photo/10461ffffc/
 
 ## Changelog ##
 
