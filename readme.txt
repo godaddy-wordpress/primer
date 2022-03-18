@@ -59,14 +59,16 @@ Genericons icon font, Copyright 2013 Automattic, Inc.
 License: GPL-2.0 (or later)
 Source: https://genericons.com/
 
-Stock photography, Unsplash
+Stock photography, WordPress.org
 License: Creative Commons Zero
-Source: https://unsplash.com/photos/v4ZUGlrdVAA
+Source: https://wordpress.org/photos/photo/10461ffffc/
 
 == Changelog ==
 
 = 1.8.10 =
-* New: Introduce an admin notice about theme deprecation and migration to [Go](https://wordpress.org/themes/go). @props [evanherman](https://github.com/EvanHerman)
+* New: Introduce an admin notice about theme deprecation and migration to [Go](https://wordpress.org/themes/go). @EvanHerman
+* Fix: Fix the post ID error in the gutenberg compatibility file. @EvanHerman
+* Tweak: Update bundled image to https://wordpress.org/photos/photo/10461ffffc/. @EvanHerman
 
 = 1.8.9 =
 * New: Add `Tested up to` and `Requires PHP` headers to style.css @props [evanherman](https://github.com/EvanHerman)
