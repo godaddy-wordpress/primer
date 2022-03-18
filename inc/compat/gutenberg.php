@@ -73,6 +73,12 @@ function primer_block_editor_body_classes( $classes ) {
 
 	global $post;
 
+	if ( ! isset( $post->ID ) ) {
+
+		return;
+
+	}
+
 	return $classes . ' ' . primer_get_layout( $post->ID );
 
 }
