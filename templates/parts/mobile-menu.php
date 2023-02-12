@@ -2,8 +2,6 @@
 /**
  * Display the mobile menu
  *
- * @todo Should this not use a <button> instead of a <div>?
- *
  * @package Primer
  * @since   1.0.0
  */

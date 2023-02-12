@@ -54,9 +54,9 @@ function primer_editor_frame_styles() {
 	wp_localize_script(
 		Primer_Customizer::$stylesheet . '-editor-frame',
 		'primerEditorFrame',
-		[
+		array(
 			'layouts' => array_keys( $primer_customizer_layouts->__get( 'layouts' ) ),
-		]
+		)
 	);
 
 }
@@ -72,6 +72,12 @@ add_action( 'enqueue_block_editor_assets', 'primer_editor_frame_styles' );
 function primer_block_editor_body_classes( $classes ) {
 
 	global $post;
+
+	if ( ! isset( $post->ID ) ) {
+
+		return;
+
+	}
 
 	return $classes . ' ' . primer_get_layout( $post->ID );
 

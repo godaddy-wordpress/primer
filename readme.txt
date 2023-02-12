@@ -2,9 +2,9 @@
 Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
 Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
-Tested up to:      5.0
+Tested up to:      5.4
 Requires PHP:      5.6.0
-Stable tag:        1.8.7
+Stable tag:        1.8.10
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,11 +59,28 @@ Genericons icon font, Copyright 2013 Automattic, Inc.
 License: GPL-2.0 (or later)
 Source: https://genericons.com/
 
-Stock photography, Unsplash
+Stock photography, WordPress.org
 License: Creative Commons Zero
-Source: https://unsplash.com/photos/v4ZUGlrdVAA
+Source: https://wordpress.org/photos/photo/10461ffffc/
 
 == Changelog ==
+
+= 1.8.10 =
+* New: Introduce an admin notice about theme deprecation and migration to [Go](https://wordpress.org/themes/go). @EvanHerman
+* Fix: Fix the post ID error in the gutenberg compatibility file. @EvanHerman
+* Tweak: Update bundled image to https://wordpress.org/photos/photo/10461ffffc/. @EvanHerman
+
+= 1.8.9 =
+* New: Add `Tested up to` and `Requires PHP` headers to style.css @props [evanherman](https://github.com/EvanHerman)
+* Fix: Fixed mobile pagination visibility. @props [evanherman](https://github.com/EvanHerman)
+* Fix: Fixed the hero image on WooCommerce templates. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Update node dependencies. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Update PHP linting for improved coding standards. @props [jrtashjian](https://github.com/jrtashjian)/[evanherman](https://github.com/EvanHerman)
+* Tweak: Migrated build process to CircleCI. @props [evanherman](https://github.com/EvanHerman)
+
+= 1.8.8 =
+* Fix: Repaired the undefined `$` error thrown in `assets/js/admin/layouts.js` breaking the block editor. @props [evanherman](https://github.com/EvanHerman)
+* Remove: Unnecessary `console.log()` from `assets/js/admin/editor-frame.js`. @props [evanherman](https://github.com/EvanHerman)
 
 = 1.8.7 =
 * New: Introduce compatibility for Google Accelerated Mobile Pages. @props [westonruter](https://github.com/westonruter)

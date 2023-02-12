@@ -4,7 +4,9 @@
  * Author: GoDaddy
  * Author URI: https://www.godaddy.com/
  * Description: Primer is a powerful theme that brings clarity to your content in a fresh design.
- * Version: 1.8.7
+ * Version: 1.8.10
+ * Tested up to: 5.4
+ * Requires PHP: 5.6.0
  * License: GPL-2.0
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: primer
@@ -92,7 +94,8 @@ a:hover {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted; }
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; }
 
 b,
 strong {
@@ -147,8 +150,7 @@ figure {
 
 hr {
   -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
   overflow: visible; }
 
@@ -196,8 +198,7 @@ fieldset {
 
 legend {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
@@ -210,8 +211,7 @@ textarea {
 [type="checkbox"],
 [type="radio"] {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0; }
 
 [type="number"]::-webkit-inner-spin-button,
@@ -321,7 +321,6 @@ pre {
   overflow: auto;
   padding: 1em;
   border: 1px solid rgba(37, 37, 37, 0.1);
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
 
 code, kbd, tt, var {
@@ -333,7 +332,6 @@ code {
   padding: 0.125rem 0.25rem;
   background-color: rgba(225, 225, 225, 0.5);
   border: 1px solid rgba(37, 37, 37, 0.1);
-  -webkit-border-radius: 2px;
   border-radius: 2px; }
 
 pre code {
@@ -357,16 +355,14 @@ big {
 --------------------------------------------------------------*/
 html {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+          box-sizing: border-box; }
 
 *,
 *:before,
 *:after {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit; }
+          box-sizing: inherit; }
 
 body {
   background: #f5f5f5;
@@ -478,7 +474,6 @@ textarea,
 .select2-container .select2-choice {
   color: rgba(37, 37, 37, 0.5);
   border: 1px solid rgba(37, 37, 37, 0.1);
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 0.75rem;
   resize: none;
@@ -549,7 +544,6 @@ input[type="reset"],
 input[type="submit"] {
   display: inline-block;
   border: none;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   background-color: #ff6663;
   color: #ffffff;
@@ -617,7 +611,6 @@ a {
 # Blocks
 --------------------------------------------------------------*/
 .wp-block-button__link {
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   font-size: 16px;
   font-size: 1rem;
@@ -689,29 +682,22 @@ a {
   background: #f5f5f5;
   border: none;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -moz-box-orient: vertical;
-  -moz-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 1em 1em 1.1em; }
   @media (max-width: 599px) {
     .wp-block-latest-posts.is-grid li {
       margin-left: 0; } }
   .wp-block-latest-posts.is-grid li a {
     -webkit-box-shadow: none;
-    box-shadow: none;
+            box-shadow: none;
     -webkit-box-flex: 1;
-    -webkit-flex: 1 1 auto;
-    -moz-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto; }
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto; }
     .wp-block-latest-posts.is-grid li a:hover {
       opacity: 0.6; }
     .wp-block-latest-posts.is-grid li a::after {
@@ -721,10 +707,8 @@ a {
 
 .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-date {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-  -moz-box-flex: 0;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   margin-top: 10px; }
 
 .has-drop-cap:not(:focus)::first-letter {
@@ -800,49 +784,40 @@ a {
       margin-left: -1em; } }
   [class^="wp-block-"].alignfull,
   [class^="wp-block-"].alignfull img {
-    max-width: -webkit-calc( 100% + 7.50em);
     max-width: calc( 100% + 7.50em); }
     @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
       [class^="wp-block-"].alignfull,
       [class^="wp-block-"].alignfull img {
-        max-width: -webkit-calc( 100% + 4.75em);
         max-width: calc( 100% + 4.75em); } }
     @media only screen and (max-width: 40.063em) {
       [class^="wp-block-"].alignfull,
       [class^="wp-block-"].alignfull img {
-        max-width: -webkit-calc( 100% + 2em);
         max-width: calc( 100% + 2em); } }
 
 [class^="wp-block-"].alignwide {
   margin-right: -1.6875em;
   margin-left: -1.6875em;
-  width: -webkit-calc( 100% + 3.375em);
   width: calc( 100% + 3.375em); }
   @media only screen and (max-width: 61.063em) {
     [class^="wp-block-"].alignwide {
       margin-right: -1.1875em;
       margin-left: -1.1875em;
-      width: -webkit-calc( 100% + 2.375em);
       width: calc( 100% + 2.375em); } }
   @media only screen and (max-width: 40.063em) {
     [class^="wp-block-"].alignwide {
       margin-right: -0.5em;
       margin-left: -0.5em;
-      width: -webkit-calc( 100% + 1em);
       width: calc( 100% + 1em); } }
   [class^="wp-block-"].alignwide,
   [class^="wp-block-"].alignwide img {
-    max-width: -webkit-calc( 100% + 7.50em);
     max-width: calc( 100% + 7.50em); }
     @media only screen and (min-width: 40.063em) and (max-width: 61.063em) {
       [class^="wp-block-"].alignwide,
       [class^="wp-block-"].alignwide img {
-        max-width: -webkit-calc( 100% + 4.75em);
         max-width: calc( 100% + 4.75em); } }
     @media only screen and (max-width: 40.063em) {
       [class^="wp-block-"].alignwide,
       [class^="wp-block-"].alignwide img {
-        max-width: -webkit-calc( 100% + 2em);
         max-width: calc( 100% + 2em); } }
 
 /*--------------------------------------------------------------
@@ -927,7 +902,7 @@ a {
           position: absolute;
           right: -999em;
           -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
+                  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
           .main-navigation ul ul ul {
             right: -999em;
             top: 0; }
@@ -982,8 +957,7 @@ a {
     border-top: 7px solid transparent;
     border-right: 7px solid #ffffff;
     -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+            transform: translateY(-50%);
     display: none; }
     @media only screen and (min-width: 61.063em) {
       .main-navigation .sub-menu .menu-item-has-children > a::after {
@@ -1016,7 +990,6 @@ a {
       width: 100%;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
     .main-navigation .search-form input[type="submit"] {
-      -webkit-background-size: 17px 17px;
       background-size: 17px;
       display: block;
       height: 21px;
@@ -1053,11 +1026,9 @@ body.no-max-width .main-navigation {
   z-index: 15;
   outline: none; }
   body.admin-bar .menu-toggle {
-    padding-top: -webkit-calc(6% + 32px);
     padding-top: calc(6% + 32px); }
     @media only screen and (max-width: 782px) {
       body.admin-bar .menu-toggle {
-        padding-top: -webkit-calc(6% + 46px);
         padding-top: calc(6% + 46px); } }
   @media only screen and (min-width: 61.063em) {
     .menu-toggle {
@@ -1066,25 +1037,21 @@ body.no-max-width .main-navigation {
     background-color: #ffffff;
     margin: 0.43rem 0 0.43rem .86rem;
     -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
+            transform: rotate(0deg);
     -webkit-transition: .15s ease-in-out;
     transition: .15s ease-in-out;
     -webkit-transform-origin: right center;
-    -ms-transform-origin: right center;
-    transform-origin: right center;
+            transform-origin: right center;
     height: 0.45rem; }
   .menu-toggle.open div:nth-child(1) {
     -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg); }
+            transform: rotate(45deg); }
   .menu-toggle.open div:nth-child(2) {
     width: 0%;
     opacity: 0; }
   .menu-toggle.open div:nth-child(3) {
     -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
+            transform: rotate(-45deg); }
 
 .navigation.pagination {
   clear: both;
@@ -1094,7 +1061,6 @@ body.no-max-width .main-navigation {
     .navigation.pagination .nav-links .page-numbers {
       display: inline-block;
       border: none;
-      -webkit-border-radius: 3px;
       border-radius: 3px;
       line-height: 1;
       margin: 0 0.25em;
@@ -1115,8 +1081,11 @@ body.no-max-width .main-navigation {
       color: #252525; }
     .navigation.pagination .nav-links {
       float: left; }
-      .navigation.pagination .nav-links .page-numbers {
-        display: none; } }
+      .navigation.pagination .nav-links .page-numbers:not(.prev):not(.next) {
+        display: none; }
+      .navigation.pagination .nav-links .page-numbers.next {
+        margin-left: 0;
+        padding-left: 0; } }
 
 .site-main .comment-navigation, .site-main
 .post-navigation {
@@ -1210,10 +1179,9 @@ object {
   overflow: hidden; }
   .screen-reader-text:focus {
     background-color: #fff;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
     -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
     color: #21759b;
     display: block;
@@ -1885,12 +1853,11 @@ body.no-max-width .site-content {
   .site-header.video-header video#wp-custom-header-video,
   .site-header.video-header amp-video#wp-custom-header-video > video {
     -o-object-fit: cover;
-    object-fit: cover; }
+       object-fit: cover; }
 
 .site-header {
   position: relative;
   background-color: #0b3954;
-  -webkit-background-size: cover;
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -2170,7 +2137,6 @@ body.no-max-width .site-info-wrapper .site-info {
     transition: 200ms opacity;
     color: #f5f5f5;
     background-color: #252525;
-    -webkit-border-radius: 3px;
     border-radius: 3px; }
     .social-menu a:visited {
       color: #f5f5f5; }
@@ -2315,11 +2281,9 @@ body.no-max-width .site-info-wrapper .site-info {
       padding: 0 2rem 2rem; }
   .widget_search .search-field {
     width: 100%;
-    -webkit-border-radius: 0;
     border-radius: 0;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
+            box-sizing: border-box; }
     .widget_search .search-field::-webkit-search-cancel-button {
       z-index: 1; }
   .widget_search .search-submit {
@@ -2456,8 +2420,6 @@ body.no-max-width .site-info-wrapper .site-info {
     width: 100%; }
   .comments-area .comment-form-cookies-consent {
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     line-height: 16px; }
@@ -2496,17 +2458,13 @@ body.no-max-width .site-info-wrapper .site-info {
         float: left; }
     .comment-list li.bypostauthor {
       display: block;
-      padding: 0.5em 0.5em 0.5em -webkit-calc(0.5em + 32px);
       padding: 0.5em 0.5em 0.5em calc(0.5em + 32px);
-      -webkit-border-radius: 5px;
       border-radius: 5px;
       border: 3px solid rgba(255, 102, 99, 0.2); }
 
 .comment-meta .avatar {
   float: right;
-  margin-right: -webkit-calc(-1em - 32px);
   margin-right: calc(-1em - 32px);
-  -webkit-border-radius: 3px;
   border-radius: 3px; }
   @media only screen and (max-width: 40.063em) {
     .comment-meta .avatar {
@@ -2555,7 +2513,6 @@ body.no-max-width .site-info-wrapper .site-info {
 .woocommerce-page span.onsale,
 .woocommerce-page ul.products li.product .onsale {
   padding: 2px 8px;
-  -webkit-border-radius: 0;
   border-radius: 0;
   margin: 0;
   min-height: auto;
@@ -2645,7 +2602,7 @@ body.single-product span.onsale {
     display: inline-block;
     background: inherit;
     -webkit-box-shadow: none;
-    box-shadow: none;
+            box-shadow: none;
     max-height: 250px;
     overflow-y: auto; }
 
@@ -2691,7 +2648,7 @@ ul.cart_list li.mini_cart_item a:nth-child(2) {
     z-index: 999;
     border: none;
     -webkit-box-shadow: none;
-    box-shadow: none; }
+            box-shadow: none; }
     .woocommerce.widget_shopping_cart .cart_list li a.remove:hover {
       background: red !important; }
 
@@ -2730,17 +2687,12 @@ li.primer-wc-cart-menu .primer-wc-cart-sub-menu {
 
 .wp-block-columns.is-next-steps {
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px 30px; }
   .wp-block-columns.is-next-steps .wp-block-column:last-child {
-    -webkit-flex-basis: -webkit-calc(30% - 20px);
     -ms-flex-preferred-size: calc(30% - 20px);
-    flex-basis: calc(30% - 20px); }
+        flex-basis: calc(30% - 20px); }

@@ -30,6 +30,8 @@
 
 	<?php
 
+	wp_body_open();
+
 	/**
 	 * Fires inside the `<body>` element.
 	 *

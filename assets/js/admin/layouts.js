@@ -49,7 +49,7 @@ function toggleEditorWidth( pageWidth ) {
 
 	pageWidth = pageWidth.indexOf( 'wide' ) >= 0 ? 'wide' : ( pageWidth.indexOf( 'narrow' ) >= 0 || pageWidth.indexOf( 'three-column' ) >= 0 ? 'narrow' : 'default' );
 
-	$( 'body.gutenberg-editor-page' )
+	jQuery( 'body.gutenberg-editor-page' )
 		.removeClass( 'primer-gutenberg-default primer-gutenberg-wide primer-gutenberg-narrow' )
 		.addClass( 'primer-gutenberg-' + pageWidth );
 

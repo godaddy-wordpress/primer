@@ -163,7 +163,7 @@ function primer_add_primary_nav_sub_menu_buttons( $item_output, $item, $depth ) 
 
 	$item_output .= "\n";
 
-	// @todo Why not a <button>?
+	// @note Why not a <button>?
 	$expand_attrs = ' class="expand" role="button" tabindex="0"';
 
 	// Add toggle behavior in AMP.
@@ -345,11 +345,9 @@ add_action( 'primer_site_info', 'primer_privacy_policy_link', 7 );
  * @link   https://developer.wordpress.org/reference/hooks/excerpt_length/
  * @since  1.0.0
  *
- * @param  int $number The number of words. Default is `55`.
- *
  * @return int Return the maximum number of words to use for excerpts.
  */
-function primer_excerpt_length( $number ) {
+function primer_excerpt_length() {
 
 	return 20;
 
